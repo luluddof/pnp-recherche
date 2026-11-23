@@ -1,0 +1,46 @@
+xor 30 30 SAT {'A:PC3': True, 'B:LP+WS': True, 'C:BPdec': True}
+xor 30 30 SAT {'A:PC3': True, 'B:LP+WS': True, 'C:BPdec': True}
+xor 30 30 SAT {'A:PC3': True, 'B:LP+WS': True, 'C:BPdec': True}
+xor 30 30 SAT {'A:PC3': True, 'B:LP+WS': True, 'C:BPdec': False}
+xor 30 30 SAT {'A:PC3': True, 'B:LP+WS': True, 'C:BPdec': True}
+xor 30 30 SAT {'A:PC3': True, 'B:LP+WS': True, 'C:BPdec': False}
+xor 30 30 UNSAT {'A:PC3': True, 'A:PC4-ref': True, 'B:clusterLP': False, 'C:BPdec': False, 'D:spectral': False}
+xor 30 30 UNSAT {'A:PC3': True, 'A:PC4-ref': True, 'B:clusterLP': False, 'C:BPdec': False, 'D:spectral': False}
+xor 30 30 UNSAT {'A:PC3': True, 'A:PC4-ref': True, 'B:clusterLP': False, 'C:BPdec': False, 'D:spectral': False}
+xor 30 30 UNSAT {'A:PC3': True, 'A:PC4-ref': True, 'B:clusterLP': False, 'C:BPdec': False, 'D:spectral': False}
+xor 60 60 SAT {'A:PC3': True, 'B:LP+WS': True, 'C:BPdec': True}
+xor 60 60 SAT {'A:PC3': True, 'B:LP+WS': True, 'C:BPdec': True}
+xor 60 60 SAT {'A:PC3': True, 'B:LP+WS': True, 'C:BPdec': True}
+xor 60 60 SAT {'A:PC3': True, 'B:LP+WS': True, 'C:BPdec': False}
+xor 60 60 SAT {'A:PC3': True, 'B:LP+WS': True, 'C:BPdec': True}
+xor 60 60 UNSAT {'A:PC3': True, 'B:basicLP': False, 'C:BPdec': False, 'D:spectral': False}
+xor 60 60 UNSAT {'A:PC3': True, 'B:basicLP': False, 'C:BPdec': False, 'D:spectral': False}
+xor 60 60 UNSAT {'A:PC3': True, 'B:basicLP': False, 'C:BPdec': False, 'D:spectral': False}
+xor 60 60 UNSAT {'A:PC3': True, 'B:basicLP': False, 'C:BPdec': False, 'D:spectral': False}
+xor 60 60 UNSAT {'A:PC3': True, 'B:basicLP': False, 'C:BPdec': False, 'D:spectral': False}
+xor 90 90 SAT {'B:LP+WS': True, 'C:BPdec': True}
+xor 90 90 SAT {'B:LP+WS': True, 'C:BPdec': True}
+xor 90 90 SAT {'B:LP+WS': True, 'C:BPdec': True}
+xor 90 90 SAT {'B:LP+WS': True, 'C:BPdec': True}
+xor 90 90 SAT {'B:LP+WS': True, 'C:BPdec': True}
+xor 90 90 UNSAT {'B:basicLP': False, 'C:BPdec': False, 'D:spectral': False}
+xor 90 90 UNSAT {'B:basicLP': False, 'C:BPdec': False, 'D:spectral': False}
+xor 90 90 UNSAT {'B:basicLP': False, 'C:BPdec': False, 'D:spectral': False}
+xor 90 90 UNSAT {'B:basicLP': False, 'C:BPdec': False, 'D:spectral': False}
+xor 90 90 UNSAT {'B:basicLP': False, 'C:BPdec': False, 'D:spectral': False}
+=== SUMMARY xor
+xor      size=  30 A:PC3        SAT 6/6     UNSAT 4/4
+xor      size=  30 A:PC4-ref    SAT -       UNSAT 4/4
+xor      size=  30 B:LP+WS      SAT 6/6     UNSAT -
+xor      size=  30 B:clusterLP  SAT -       UNSAT 0/4
+xor      size=  30 C:BPdec      SAT 4/6     UNSAT 0/4
+xor      size=  30 D:spectral   SAT -       UNSAT 0/4
+xor      size=  60 A:PC3        SAT 5/5     UNSAT 5/5
+xor      size=  60 B:LP+WS      SAT 5/5     UNSAT -
+xor      size=  60 B:basicLP    SAT -       UNSAT 0/5
+xor      size=  60 C:BPdec      SAT 4/5     UNSAT 0/5
+xor      size=  60 D:spectral   SAT -       UNSAT 0/5
+xor      size=  90 B:LP+WS      SAT 5/5     UNSAT -
+xor      size=  90 B:basicLP    SAT -       UNSAT 0/5
+xor      size=  90 C:BPdec      SAT 5/5     UNSAT 0/5
+xor      size=  90 D:spectral   SAT -       UNSAT 0/5

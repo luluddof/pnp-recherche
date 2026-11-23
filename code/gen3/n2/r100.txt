@@ -1,0 +1,5 @@
+n=100 m=1000 a15=1 a14=1.58 B12=1.18e+03 B3=1.57e+03 spec_ok=False core=713 ncov=15929 nbad=8044 minsz=2 medsz=10 lp=107 need=590 cov_ok=False kdim=900 gmin=8 gavg=31.6 tsp=0.3 tcy=0.732 tlp=9.7
+n=100 m=2000 a15=2 a14=3.17 B12=1.59e+03 B3=2.24e+03 spec_ok=False core=1792 ncov=65750 nbad=32824 minsz=2 medsz=8 lp=348 need=797 cov_ok=False kdim=1900 gmin=4 gavg=40 tsp=0.392 tcy=1.42 tlp=37.2
+n=100 m=4000 a15=4 a14=6.34 B12=2.32e+03 B3=3.04e+03 spec_ok=False core=3550 ncov=213380 nbad=106625 minsz=2 medsz=6 lp=753 need=1.16e+03 cov_ok=False kdim=3900 gmin=2 gavg=36.2 tsp=1 tcy=1.85 tlp=43.9
+n=100 m=7400 a15=7.4 a14=11.7 B12=3e+03 B3=4.05e+03 spec_ok=True core=4747 ncov=510051 nbad=254390 minsz=2 medsz=6 lp=1.29e+03 need=1.5e+03 cov_ok=False kdim=7300 gmin=2 gavg=39 tsp=3.75 tcy=4 tlp=26.9
+n=100 m=12000 a15=12 a14=19 B12=4.07e+03 B3=5.13e+03 spec_ok=True core=5014 ncov=919113 nbad=459699 minsz=2 medsz=6 lp=1.32e+03 need=2.03e+03 cov_ok=False kdim=11900 gmin=2 gavg=31.4 tsp=6.1 tcy=5.96 tlp=1.42

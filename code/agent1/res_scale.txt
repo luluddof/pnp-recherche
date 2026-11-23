@@ -1,0 +1,8 @@
+200 SAT B True C False
+200 SAT B True C False
+200 SAT B True C False
+200 SAT B True C False
+n 200 SAT 4 UNSAT 6 unknown 0 tB 1.2 tC 0.3
+400 SAT B True C True
+400 SAT B True C False
+400 SAT B True C True

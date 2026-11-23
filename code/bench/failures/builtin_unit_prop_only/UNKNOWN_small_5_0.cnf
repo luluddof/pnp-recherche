@@ -1,0 +1,7 @@
+c small:5:0 truth=SAT outcome=UNKNOWN 
+p cnf 5 5
+1 2 3 0
+3 -1 2 0
+4 -3 -1 0
+-3 -2 5 0
+-3 -2 4 0

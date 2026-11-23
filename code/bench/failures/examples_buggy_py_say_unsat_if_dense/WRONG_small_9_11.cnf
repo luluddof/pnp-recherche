@@ -1,0 +1,11 @@
+c small:9:11 truth=SAT outcome=WRONG SAT with assignment that falsifies a clause
+p cnf 9 9
+-8 -1 5 0
+4 2 -8 0
+-6 4 -3 0
+-2 -4 3 0
+9 1 -2 0
+9 3 6 0
+-3 -1 -9 0
+3 1 -5 0
+9 -4 -8 0

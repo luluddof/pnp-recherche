@@ -1,0 +1,15 @@
+(a) PC degree of Tseitin (3-regular, random) over F_2 and F_3
+  |V|=6 edges=9 F_2: PC degree = 1
+  |V|=6 edges=9 F_3: PC degree = 4
+  |V|=8 edges=12 F_2: PC degree = 1
+  |V|=8 edges=12 F_3: PC degree = 4
+  |V|=10 edges=15 F_2: PC degree = 1
+  |V|=10 edges=15 F_3: PC degree = 4
+(b) Pseudo-expectation values on a Smolensky error polynomial (F_3)
+  |V|=8: no F_3 PC refutation in degree 3; dim P_D=299, dim V_D=8, pseudo-expectations form an affine space of dim 290
+  values of L(error) over valid pseudo-expectations: {'free'}
+  |V|=10: no F_3 PC refutation in degree 3; dim P_D=576, dim V_D=10, pseudo-expectations form an affine space of dim 565
+  values of L(error) over valid pseudo-expectations: {'free'}
+(c) Real-field horn: best uniform error of degree-d real polynomial for MOD_2 / MOD_3 on m bits
+  MOD_2, m=24: [(2, np.float64(0.5)), (4, np.float64(0.5)), (8, np.float64(0.5)), (12, np.float64(0.5)), (16, np.float64(0.5)), (20, np.float64(0.5)), (23, np.float64(0.5))]
+  MOD_3, m=24: [(2, np.float64(0.5)), (4, np.float64(0.5)), (8, np.float64(0.5)), (12, np.float64(0.5)), (16, np.float64(0.4995)), (20, np.float64(0.1831)), (23, np.float64(0.0211))]

@@ -1,0 +1,3 @@
+n=50 m=1414 a15=4 a14=5.91 B12=977 B3=924 spec_ok=False core=1105 ncov=85750 nbad=42614 minsz=2 medsz=6 lp=344 need=488 cov_ok=False kdim=1364 gmin=2 gavg=20.3 tsp=0.123 tcy=0.424 tlp=11.7
+n=50 m=2616 a15=7.4 a14=10.9 B12=1.4e+03 B3=1.26e+03 spec_ok=False core=1257 ncov=191313 nbad=95963 minsz=2 medsz=6 lp=568 need=702 cov_ok=False kdim=2566 gmin=2 gavg=18.6 tsp=0.294 tcy=0.838 tlp=13.8
+n=50 m=3535 a15=10 a14=14.8 B12=1.46e+03 B3=1.46e+03 spec_ok=True core=1272 ncov=272191 nbad=136010 minsz=2 medsz=6 lp=616 need=732 cov_ok=False kdim=3485 gmin=2 gavg=17.5 tsp=0.434 tcy=1.18 tlp=3.04

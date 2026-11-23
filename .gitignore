@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+*.o
+# binaires compilés
+code/gen0/look
+code/gen0/geo
+code/step3b/xdpll
+code/step3d/howell

@@ -1,0 +1,1 @@
+n=200 m=20930 a15=7.4 a14=12.57 B12=7906 B3=1.314e+04 spec_ok=False core=16603 ncov=346674 nbad=173403 minsz=2 medsz=6 lp=1030 need=3953 cov_ok=False kdim=None gmin=None gavg=None tsp=46.2 tcy=6.068 tlp=88.42

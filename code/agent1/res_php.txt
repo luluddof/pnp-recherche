@@ -1,0 +1,24 @@
+php 3 12 UNSAT {'A:PC3': True, 'A:PC4-ref': True, 'B:clusterLP': False, 'C:BPdec': False}
+php 4 20 UNSAT {'A:PC3': False, 'A:PC4-ref': False, 'B:clusterLP': False, 'C:BPdec': False}
+php 5 30 UNSAT {'A:PC3': False, 'A:PC4-ref': False, 'B:clusterLP': False, 'C:BPdec': False}
+php 6 42 UNSAT {'A:PC3': False, 'B:basicLP': False, 'C:BPdec': False}
+php 7 56 UNSAT {'A:PC3': False, 'B:basicLP': False, 'C:BPdec': False}
+=== SUMMARY php
+php      size=   3 A:PC3        SAT -       UNSAT 1/1
+php      size=   3 A:PC4-ref    SAT -       UNSAT 1/1
+php      size=   3 B:clusterLP  SAT -       UNSAT 0/1
+php      size=   3 C:BPdec      SAT -       UNSAT 0/1
+php      size=   4 A:PC3        SAT -       UNSAT 0/1
+php      size=   4 A:PC4-ref    SAT -       UNSAT 0/1
+php      size=   4 B:clusterLP  SAT -       UNSAT 0/1
+php      size=   4 C:BPdec      SAT -       UNSAT 0/1
+php      size=   5 A:PC3        SAT -       UNSAT 0/1
+php      size=   5 A:PC4-ref    SAT -       UNSAT 0/1
+php      size=   5 B:clusterLP  SAT -       UNSAT 0/1
+php      size=   5 C:BPdec      SAT -       UNSAT 0/1
+php      size=   6 A:PC3        SAT -       UNSAT 0/1
+php      size=   6 B:basicLP    SAT -       UNSAT 0/1
+php      size=   6 C:BPdec      SAT -       UNSAT 0/1
+php      size=   7 A:PC3        SAT -       UNSAT 0/1
+php      size=   7 B:basicLP    SAT -       UNSAT 0/1
+php      size=   7 C:BPdec      SAT -       UNSAT 0/1

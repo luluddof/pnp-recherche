@@ -1,0 +1,1 @@
+n=50 m=1414 a15=3.999 a14=5.914 B12=977 B3=924 spec_ok=False core=1105 ncov=85750 nbad=42614 minsz=2 medsz=6 lp=346.1 need=488.5 cov_ok=False kdim=None gmin=None gavg=None tsp=0.2963 tcy=1.009 tlp=128.1

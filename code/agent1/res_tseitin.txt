@@ -1,0 +1,67 @@
+tseitin 10 15 UNSAT {'A:PC3': True, 'A:PC4-ref': True, 'B:clusterLP': False, 'C:BPdec': False, 'D:spectral': False}
+tseitin 10 15 UNSAT {'A:PC3': True, 'A:PC4-ref': True, 'B:clusterLP': False, 'C:BPdec': False, 'D:spectral': False}
+tseitin 10 15 UNSAT {'A:PC3': True, 'A:PC4-ref': True, 'B:clusterLP': False, 'C:BPdec': False, 'D:spectral': False}
+tseitin 10 15 UNSAT {'A:PC3': True, 'A:PC4-ref': True, 'B:clusterLP': False, 'C:BPdec': False, 'D:spectral': False}
+tseitin 10 15 SAT {'A:PC3': True, 'B:LP+WS': True, 'C:BPdec': True}
+tseitin 10 15 SAT {'A:PC3': True, 'B:LP+WS': True, 'C:BPdec': True}
+tseitin 10 15 SAT {'A:PC3': True, 'B:LP+WS': True, 'C:BPdec': True}
+tseitin 10 15 SAT {'A:PC3': True, 'B:LP+WS': True, 'C:BPdec': True}
+tseitin 20 30 UNSAT {'A:PC3': True, 'A:PC4-ref': True, 'B:clusterLP': False, 'C:BPdec': False, 'D:spectral': False}
+tseitin 20 30 UNSAT {'A:PC3': True, 'A:PC4-ref': True, 'B:clusterLP': False, 'C:BPdec': False, 'D:spectral': False}
+tseitin 20 30 UNSAT {'A:PC3': True, 'A:PC4-ref': True, 'B:clusterLP': False, 'C:BPdec': False, 'D:spectral': False}
+tseitin 20 30 UNSAT {'A:PC3': True, 'A:PC4-ref': True, 'B:clusterLP': False, 'C:BPdec': False, 'D:spectral': False}
+tseitin 20 30 SAT {'A:PC3': True, 'B:LP+WS': True, 'C:BPdec': True}
+tseitin 20 30 SAT {'A:PC3': True, 'B:LP+WS': True, 'C:BPdec': True}
+tseitin 20 30 SAT {'A:PC3': True, 'B:LP+WS': True, 'C:BPdec': True}
+tseitin 20 30 SAT {'A:PC3': True, 'B:LP+WS': True, 'C:BPdec': True}
+tseitin 30 45 UNSAT {'A:PC3': True, 'B:basicLP': False, 'C:BPdec': False, 'D:spectral': False}
+tseitin 30 45 UNSAT {'A:PC3': True, 'B:basicLP': False, 'C:BPdec': False, 'D:spectral': False}
+tseitin 30 45 UNSAT {'A:PC3': True, 'B:basicLP': False, 'C:BPdec': False, 'D:spectral': False}
+tseitin 30 45 UNSAT {'A:PC3': True, 'B:basicLP': False, 'C:BPdec': False, 'D:spectral': False}
+tseitin 30 45 SAT {'A:PC3': True, 'B:LP+WS': True, 'C:BPdec': True}
+tseitin 30 45 SAT {'A:PC3': True, 'B:LP+WS': True, 'C:BPdec': True}
+tseitin 30 45 SAT {'A:PC3': True, 'B:LP+WS': True, 'C:BPdec': True}
+tseitin 30 45 SAT {'A:PC3': True, 'B:LP+WS': True, 'C:BPdec': True}
+tseitin 40 60 UNSAT {'A:PC3': True, 'B:basicLP': False, 'C:BPdec': False, 'D:spectral': False}
+tseitin 40 60 UNSAT {'A:PC3': True, 'B:basicLP': False, 'C:BPdec': False, 'D:spectral': False}
+tseitin 40 60 UNSAT {'A:PC3': True, 'B:basicLP': False, 'C:BPdec': False, 'D:spectral': False}
+tseitin 40 60 UNSAT {'A:PC3': True, 'B:basicLP': False, 'C:BPdec': False, 'D:spectral': False}
+tseitin 40 60 SAT {'A:PC3': True, 'B:LP+WS': True, 'C:BPdec': True}
+tseitin 40 60 SAT {'A:PC3': True, 'B:LP+WS': True, 'C:BPdec': True}
+tseitin 40 60 SAT {'A:PC3': True, 'B:LP+WS': True, 'C:BPdec': True}
+tseitin 40 60 SAT {'A:PC3': True, 'B:LP+WS': True, 'C:BPdec': True}
+tseitin 60 90 UNSAT {'B:basicLP': False, 'C:BPdec': False, 'D:spectral': False}
+tseitin 60 90 UNSAT {'B:basicLP': False, 'C:BPdec': False, 'D:spectral': False}
+tseitin 60 90 UNSAT {'B:basicLP': False, 'C:BPdec': False, 'D:spectral': False}
+tseitin 60 90 UNSAT {'B:basicLP': False, 'C:BPdec': False, 'D:spectral': False}
+tseitin 60 90 SAT {'B:LP+WS': True, 'C:BPdec': True}
+tseitin 60 90 SAT {'B:LP+WS': True, 'C:BPdec': True}
+tseitin 60 90 SAT {'B:LP+WS': True, 'C:BPdec': True}
+tseitin 60 90 SAT {'B:LP+WS': True, 'C:BPdec': True}
+=== SUMMARY tseitin
+tseitin  size=  10 A:PC3        SAT 4/4     UNSAT 4/4
+tseitin  size=  10 A:PC4-ref    SAT -       UNSAT 4/4
+tseitin  size=  10 B:LP+WS      SAT 4/4     UNSAT -
+tseitin  size=  10 B:clusterLP  SAT -       UNSAT 0/4
+tseitin  size=  10 C:BPdec      SAT 4/4     UNSAT 0/4
+tseitin  size=  10 D:spectral   SAT -       UNSAT 0/4
+tseitin  size=  20 A:PC3        SAT 4/4     UNSAT 4/4
+tseitin  size=  20 A:PC4-ref    SAT -       UNSAT 4/4
+tseitin  size=  20 B:LP+WS      SAT 4/4     UNSAT -
+tseitin  size=  20 B:clusterLP  SAT -       UNSAT 0/4
+tseitin  size=  20 C:BPdec      SAT 4/4     UNSAT 0/4
+tseitin  size=  20 D:spectral   SAT -       UNSAT 0/4
+tseitin  size=  30 A:PC3        SAT 4/4     UNSAT 4/4
+tseitin  size=  30 B:LP+WS      SAT 4/4     UNSAT -
+tseitin  size=  30 B:basicLP    SAT -       UNSAT 0/4
+tseitin  size=  30 C:BPdec      SAT 4/4     UNSAT 0/4
+tseitin  size=  30 D:spectral   SAT -       UNSAT 0/4
+tseitin  size=  40 A:PC3        SAT 4/4     UNSAT 4/4
+tseitin  size=  40 B:LP+WS      SAT 4/4     UNSAT -
+tseitin  size=  40 B:basicLP    SAT -       UNSAT 0/4
+tseitin  size=  40 C:BPdec      SAT 4/4     UNSAT 0/4
+tseitin  size=  40 D:spectral   SAT -       UNSAT 0/4
+tseitin  size=  60 B:LP+WS      SAT 4/4     UNSAT -
+tseitin  size=  60 B:basicLP    SAT -       UNSAT 0/4
+tseitin  size=  60 C:BPdec      SAT 4/4     UNSAT 0/4
+tseitin  size=  60 D:spectral   SAT -       UNSAT 0/4

@@ -1,0 +1,128 @@
+rand 30 30 UNSAT {'A:PC3': True, 'A:PC4-ref': True, 'B:clusterLP': False, 'C:BPdec': False, 'D:spectral': False}
+rand 30 30 UNSAT {'A:PC3': False, 'A:PC4-ref': True, 'B:clusterLP': False, 'C:BPdec': False, 'D:spectral': False}
+rand 30 30 SAT {'A:PC3': True, 'B:LP+WS': True, 'C:BPdec': True}
+rand 30 30 SAT {'A:PC3': True, 'B:LP+WS': True, 'C:BPdec': True}
+rand 30 30 SAT {'A:PC3': False, 'B:LP+WS': True, 'C:BPdec': True}
+rand 30 30 UNSAT {'A:PC3': True, 'A:PC4-ref': True, 'B:clusterLP': False, 'C:BPdec': False, 'D:spectral': False}
+rand 30 30 SAT {'A:PC3': True, 'B:LP+WS': True, 'C:BPdec': False}
+rand 30 30 SAT {'A:PC3': True, 'B:LP+WS': True, 'C:BPdec': True}
+rand 30 30 SAT {'A:PC3': True, 'B:LP+WS': True, 'C:BPdec': True}
+rand 30 30 UNSAT {'A:PC3': True, 'A:PC4-ref': True, 'B:clusterLP': False, 'C:BPdec': False, 'D:spectral': False}
+rand 30 30 UNSAT {'A:PC3': True, 'A:PC4-ref': True, 'B:clusterLP': False, 'C:BPdec': False, 'D:spectral': False}
+rand 30 30 SAT {'A:PC3': True, 'B:LP+WS': True, 'C:BPdec': True}
+rand 30 30 UNSAT {'A:PC3': True, 'A:PC4-ref': True, 'B:clusterLP': False, 'C:BPdec': False, 'D:spectral': False}
+rand 30 30 SAT {'A:PC3': True, 'B:LP+WS': True, 'C:BPdec': True}
+rand 30 30 SAT {'A:PC3': False, 'B:LP+WS': True, 'C:BPdec': True}
+rand 30 30 SAT {'A:PC3': True, 'B:LP+WS': True, 'C:BPdec': True}
+rand 30 30 SAT {'A:PC3': False, 'B:LP+WS': True, 'C:BPdec': True}
+rand 30 30 SAT {'A:PC3': True, 'B:LP+WS': True, 'C:BPdec': False}
+rand 30 30 SAT {'A:PC3': True, 'B:LP+WS': True, 'C:BPdec': False}
+rand 30 30 SAT {'A:PC3': False, 'B:LP+WS': True, 'C:BPdec': True}
+rand 50 50 UNSAT {'A:PC3': False, 'B:basicLP': False, 'C:BPdec': False, 'D:spectral': False}
+rand 50 50 UNSAT {'A:PC3': False, 'B:basicLP': False, 'C:BPdec': False, 'D:spectral': False}
+rand 50 50 SAT {'A:PC3': True, 'B:LP+WS': True, 'C:BPdec': True}
+rand 50 50 UNSAT {'A:PC3': False, 'B:basicLP': False, 'C:BPdec': False, 'D:spectral': False}
+rand 50 50 UNSAT {'A:PC3': False, 'B:basicLP': False, 'C:BPdec': False, 'D:spectral': False}
+rand 50 50 SAT {'A:PC3': False, 'B:LP+WS': True, 'C:BPdec': False}
+rand 50 50 SAT {'A:PC3': True, 'B:LP+WS': True, 'C:BPdec': True}
+rand 50 50 UNSAT {'A:PC3': False, 'B:basicLP': False, 'C:BPdec': False, 'D:spectral': False}
+rand 50 50 SAT {'A:PC3': False, 'B:LP+WS': True, 'C:BPdec': True}
+rand 50 50 SAT {'A:PC3': False, 'B:LP+WS': True, 'C:BPdec': True}
+rand 50 50 UNSAT {'A:PC3': False, 'B:basicLP': False, 'C:BPdec': False, 'D:spectral': False}
+rand 50 50 UNSAT {'A:PC3': False, 'B:basicLP': False, 'C:BPdec': False, 'D:spectral': False}
+rand 50 50 SAT {'A:PC3': True, 'B:LP+WS': True, 'C:BPdec': False}
+rand 50 50 SAT {'A:PC3': True, 'B:LP+WS': True, 'C:BPdec': False}
+rand 50 50 SAT {'A:PC3': False, 'B:LP+WS': True, 'C:BPdec': False}
+rand 50 50 SAT {'A:PC3': True, 'B:LP+WS': True, 'C:BPdec': True}
+rand 50 50 UNSAT {'A:PC3': False, 'B:basicLP': False, 'C:BPdec': False, 'D:spectral': False}
+rand 50 50 SAT {'A:PC3': False, 'B:LP+WS': True, 'C:BPdec': True}
+rand 50 50 SAT {'A:PC3': True, 'B:LP+WS': True, 'C:BPdec': True}
+rand 50 50 SAT {'A:PC3': True, 'B:LP+WS': True, 'C:BPdec': True}
+rand 75 75 UNSAT {'B:basicLP': False, 'C:BPdec': False, 'D:spectral': False}
+rand 75 75 SAT {'B:LP+WS': True, 'C:BPdec': False}
+rand 75 75 SAT {'B:LP+WS': True, 'C:BPdec': False}
+rand 75 75 SAT {'B:LP+WS': True, 'C:BPdec': False}
+rand 75 75 UNSAT {'B:basicLP': False, 'C:BPdec': False, 'D:spectral': False}
+rand 75 75 SAT {'B:LP+WS': True, 'C:BPdec': True}
+rand 75 75 SAT {'B:LP+WS': True, 'C:BPdec': False}
+rand 75 75 SAT {'B:LP+WS': True, 'C:BPdec': True}
+rand 75 75 UNSAT {'B:basicLP': False, 'C:BPdec': False, 'D:spectral': False}
+rand 75 75 SAT {'B:LP+WS': True, 'C:BPdec': False}
+rand 75 75 SAT {'B:LP+WS': True, 'C:BPdec': True}
+rand 75 75 UNSAT {'B:basicLP': False, 'C:BPdec': False, 'D:spectral': False}
+rand 75 75 UNSAT {'B:basicLP': False, 'C:BPdec': False, 'D:spectral': False}
+rand 75 75 SAT {'B:LP+WS': True, 'C:BPdec': True}
+rand 75 75 SAT {'B:LP+WS': True, 'C:BPdec': True}
+rand 75 75 UNSAT {'B:basicLP': False, 'C:BPdec': False, 'D:spectral': False}
+rand 75 75 SAT {'B:LP+WS': True, 'C:BPdec': True}
+rand 75 75 SAT {'B:LP+WS': True, 'C:BPdec': True}
+rand 75 75 SAT {'B:LP+WS': True, 'C:BPdec': False}
+rand 75 75 UNSAT {'B:basicLP': False, 'C:BPdec': False, 'D:spectral': False}
+rand 100 100 SAT {'B:LP+WS': True, 'C:BPdec': True}
+rand 100 100 SAT {'B:LP+WS': True, 'C:BPdec': True}
+rand 100 100 UNSAT {'B:basicLP': False, 'C:BPdec': False, 'D:spectral': False}
+rand 100 100 UNSAT {'B:basicLP': False, 'C:BPdec': False, 'D:spectral': False}
+rand 100 100 SAT {'B:LP+WS': True, 'C:BPdec': True}
+rand 100 100 SAT {'B:LP+WS': True, 'C:BPdec': False}
+rand 100 100 UNSAT {'B:basicLP': False, 'C:BPdec': False, 'D:spectral': False}
+rand 100 100 SAT {'B:LP+WS': True, 'C:BPdec': False}
+rand 100 100 UNSAT {'B:basicLP': False, 'C:BPdec': False, 'D:spectral': False}
+rand 100 100 SAT {'B:LP+WS': True, 'C:BPdec': False}
+rand 100 100 UNSAT {'B:basicLP': False, 'C:BPdec': False, 'D:spectral': False}
+rand 100 100 UNSAT {'B:basicLP': False, 'C:BPdec': False, 'D:spectral': False}
+rand 100 100 SAT {'B:LP+WS': True, 'C:BPdec': True}
+rand 100 100 SAT {'B:LP+WS': True, 'C:BPdec': False}
+rand 100 100 UNSAT {'B:basicLP': False, 'C:BPdec': False, 'D:spectral': False}
+rand 100 100 UNSAT {'B:basicLP': False, 'C:BPdec': False, 'D:spectral': False}
+rand 100 100 SAT {'B:LP+WS': True, 'C:BPdec': False}
+rand 100 100 UNSAT {'B:basicLP': False, 'C:BPdec': False, 'D:spectral': False}
+rand 100 100 UNSAT {'B:basicLP': False, 'C:BPdec': False, 'D:spectral': False}
+rand 100 100 UNSAT {'B:basicLP': False, 'C:BPdec': False, 'D:spectral': False}
+rand 150 150 SAT {'B:LP+WS': True, 'C:BPdec': False}
+rand 150 150 SAT {'B:LP+WS': True, 'C:BPdec': False}
+rand 150 150 SAT {'B:LP+WS': True, 'C:BPdec': True}
+rand 150 150 SAT {'B:LP+WS': True, 'C:BPdec': False}
+rand 150 150 UNSAT {'B:basicLP': False, 'C:BPdec': False, 'D:spectral': False}
+rand 150 150 SAT {'B:LP+WS': True, 'C:BPdec': True}
+rand 150 150 UNSAT {'B:basicLP': False, 'C:BPdec': False, 'D:spectral': False}
+rand 150 150 SAT {'B:LP+WS': True, 'C:BPdec': False}
+rand 150 150 SAT {'B:LP+WS': True, 'C:BPdec': True}
+rand 150 150 SAT {'B:LP+WS': True, 'C:BPdec': True}
+rand 200 200 UNSAT {'B:basicLP': False, 'C:BPdec': False, 'D:spectral': False}
+rand 200 200 UNSAT {'B:basicLP': False, 'C:BPdec': False, 'D:spectral': False}
+rand 200 200 SAT {'B:LP+WS': True, 'C:BPdec': False}
+rand 200 200 SAT {'B:LP+WS': True, 'C:BPdec': True}
+rand 200 200 UNSAT {'B:basicLP': False, 'C:BPdec': False, 'D:spectral': False}
+rand 200 200 SAT {'B:LP+WS': True, 'C:BPdec': True}
+rand 200 200 UNSAT {'B:basicLP': False, 'C:BPdec': False, 'D:spectral': False}
+rand 200 200 UNSAT {'B:basicLP': False, 'C:BPdec': False, 'D:spectral': False}
+rand 200 200 SAT {'B:LP+WS': True, 'C:BPdec': True}
+rand 200 200 SAT {'B:LP+WS': False, 'C:BPdec': False}
+=== SUMMARY rand
+rand     size=  30 A:PC3        SAT 10/14   UNSAT 5/6
+rand     size=  30 A:PC4-ref    SAT -       UNSAT 6/6
+rand     size=  30 B:LP+WS      SAT 14/14   UNSAT -
+rand     size=  30 B:clusterLP  SAT -       UNSAT 0/6
+rand     size=  30 C:BPdec      SAT 11/14   UNSAT 0/6
+rand     size=  30 D:spectral   SAT -       UNSAT 0/6
+rand     size=  50 A:PC3        SAT 7/12    UNSAT 0/8
+rand     size=  50 B:LP+WS      SAT 12/12   UNSAT -
+rand     size=  50 B:basicLP    SAT -       UNSAT 0/8
+rand     size=  50 C:BPdec      SAT 8/12    UNSAT 0/8
+rand     size=  50 D:spectral   SAT -       UNSAT 0/8
+rand     size=  75 B:LP+WS      SAT 13/13   UNSAT -
+rand     size=  75 B:basicLP    SAT -       UNSAT 0/7
+rand     size=  75 C:BPdec      SAT 7/13    UNSAT 0/7
+rand     size=  75 D:spectral   SAT -       UNSAT 0/7
+rand     size= 100 B:LP+WS      SAT 9/9     UNSAT -
+rand     size= 100 B:basicLP    SAT -       UNSAT 0/11
+rand     size= 100 C:BPdec      SAT 4/9     UNSAT 0/11
+rand     size= 100 D:spectral   SAT -       UNSAT 0/11
+rand     size= 150 B:LP+WS      SAT 8/8     UNSAT -
+rand     size= 150 B:basicLP    SAT -       UNSAT 0/2
+rand     size= 150 C:BPdec      SAT 4/8     UNSAT 0/2
+rand     size= 150 D:spectral   SAT -       UNSAT 0/2
+rand     size= 200 B:LP+WS      SAT 4/5     UNSAT -
+rand     size= 200 B:basicLP    SAT -       UNSAT 0/5
+rand     size= 200 C:BPdec      SAT 3/5     UNSAT 0/5
+rand     size= 200 D:spectral   SAT -       UNSAT 0/5

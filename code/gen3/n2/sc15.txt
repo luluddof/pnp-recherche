@@ -1,0 +1,3 @@
+n=300 m=10392 m/n^1.5=2.00 core=7213 nbad=16379 minsz=2 medsz=8 clauses_in_badcovers=8878 need=3241 trivialLPmax~4439 t=0.5s
+n=1000 m=63245 m/n^1.5=2.00 core=29198 nbad=61778 minsz=2 medsz=10 clauses_in_badcovers=41619 need=15009 trivialLPmax~20810 t=3.3s
+n=3000 m=328633 m/n^1.5=2.00 core=96554 nbad=195073 minsz=2 medsz=10 clauses_in_badcovers=151881 need=59250 trivialLPmax~75940 t=13.3s

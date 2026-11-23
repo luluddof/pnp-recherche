@@ -1,0 +1,16 @@
+k=1 n= 40  formules=40  SAT=28  candidat correct=15/40 ( 38%)  temps candidat moyen=0.000s  noeuds DPLL moyens=128 | SAT trouves=15/28 UNSAT prouves=0/12
+k=1 n= 60  formules=40  SAT=27  candidat correct= 7/40 ( 18%)  temps candidat moyen=0.000s  noeuds DPLL moyens=962 | SAT trouves=7/27 UNSAT prouves=0/13
+k=1 n= 80  formules=40  SAT=20  candidat correct= 5/40 ( 12%)  temps candidat moyen=0.000s  noeuds DPLL moyens=6182 | SAT trouves=5/20 UNSAT prouves=0/20
+k=1 n=100  formules=40  SAT=25  candidat correct= 2/40 (  5%)  temps candidat moyen=0.000s  noeuds DPLL moyens=37810 | SAT trouves=2/25 UNSAT prouves=0/15
+k=1 n=120  formules=40  SAT=25  candidat correct= 2/40 (  5%)  temps candidat moyen=0.000s  noeuds DPLL moyens=205134 | SAT trouves=2/25 UNSAT prouves=0/15
+k=2 n= 40  formules=40  SAT=28  candidat correct=23/40 ( 58%)  temps candidat moyen=0.002s  noeuds DPLL moyens=128 | SAT trouves=22/28 UNSAT prouves=1/12
+k=2 n= 60  formules=40  SAT=27  candidat correct=17/40 ( 42%)  temps candidat moyen=0.004s  noeuds DPLL moyens=962 | SAT trouves=17/27 UNSAT prouves=0/13
+k=2 n= 80  formules=40  SAT=20  candidat correct= 7/40 ( 18%)  temps candidat moyen=0.008s  noeuds DPLL moyens=6182 | SAT trouves=7/20 UNSAT prouves=0/20
+k=2 n=100  formules=40  SAT=25  candidat correct= 3/40 (  8%)  temps candidat moyen=0.016s  noeuds DPLL moyens=37810 | SAT trouves=3/25 UNSAT prouves=0/15
+k=2 n=120  formules=40  SAT=25  candidat correct= 5/40 ( 12%)  temps candidat moyen=0.022s  noeuds DPLL moyens=205134 | SAT trouves=5/25 UNSAT prouves=0/15
+k=3 n= 30  formules=30  SAT=21  candidat correct=30/30 (100%)  temps candidat moyen=0.011s  noeuds DPLL moyens=43 | SAT trouves=21/21 UNSAT prouves=9/9
+k=3 n= 40  formules=30  SAT=21  candidat correct=27/30 ( 90%)  temps candidat moyen=0.057s  noeuds DPLL moyens=131 | SAT trouves=20/21 UNSAT prouves=7/9
+k=3 n= 50  formules=30  SAT=18  candidat correct=23/30 ( 77%)  temps candidat moyen=0.088s  noeuds DPLL moyens=360 | SAT trouves=15/18 UNSAT prouves=8/12
+k=3 n= 60  formules=30  SAT=20  candidat correct=18/30 ( 60%)  temps candidat moyen=0.151s  noeuds DPLL moyens=931 | SAT trouves=17/20 UNSAT prouves=1/10
+k=3 n= 70  formules=30  SAT=21  candidat correct=16/30 ( 53%)  temps candidat moyen=0.238s  noeuds DPLL moyens=1353 | SAT trouves=16/21 UNSAT prouves=0/9
+k=3 n= 80  formules=30  SAT=13  candidat correct= 7/30 ( 23%)  temps candidat moyen=0.461s  noeuds DPLL moyens=6466 | SAT trouves=7/13 UNSAT prouves=0/17

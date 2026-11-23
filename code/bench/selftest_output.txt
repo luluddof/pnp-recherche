@@ -1,0 +1,189 @@
+ground-truth cross-check (brute vs CaDiCaL vs construction): OK
+
+candidate=builtin:unit_prop_only suite=quick timeout=2.0s
+family         size      n  cnt satOK unsOK  unk  tmo WRONG  err skip  mean_t(s)
+--------------------------------------------------------------------------------
+small             4    4.0   22     0     0   22    0     0    0    0   2.88e-05
+small             5    5.0   22     0     0   22    0     0    0    0   2.90e-05
+small             6    6.0   22     0     0   22    0     0    0    0   2.57e-05
+small             7    7.0   22     0     0   22    0     0    0    0   2.87e-05
+small             8    8.0   22     0     0   22    0     0    0    0   2.77e-05
+small             9    9.0   22     0     0   22    0     0    0    0   3.30e-05
+small            10   10.0   22     0     0   22    0     0    0    0   3.03e-05
+rand3sat         10   10.0    5     0     0    5    0     0    0    0   3.29e-05
+rand3sat         20   20.0    5     0     0    5    0     0    0    0   5.25e-05
+rand3sat         30   30.0    5     0     0    5    0     0    0    0   9.02e-05
+rand3sat         40   40.0    5     0     0    5    0     0    0    0   1.03e-04
+rand3sat         60   60.0    5     0     0    5    0     0    0    0   1.57e-04
+rand3sat         80   80.0    5     0     0    5    0     0    0    0   1.23e-04
+rand3sat        120  120.0    5     0     0    5    0     0    0    0   1.74e-04
+planted3sat      10   10.0    5     0     0    5    0     0    0    0   2.56e-05
+planted3sat      20   20.0    5     0     0    5    0     0    0    0   4.60e-05
+planted3sat      30   30.0    5     0     0    5    0     0    0    0   6.10e-05
+planted3sat      40   40.0    5     0     0    5    0     0    0    0   5.06e-04
+planted3sat      60   60.0    5     0     0    5    0     0    0    0   9.90e-05
+planted3sat      80   80.0    5     0     0    5    0     0    0    0   1.26e-04
+planted3sat     120  120.0    5     0     0    5    0     0    0    0   1.99e-04
+tseitin           4    6.0    3     0     0    3    0     0    0    0   1.40e-03
+tseitin           6    9.0    3     0     0    3    0     0    0    0   2.21e-05
+tseitin           8   12.0    3     0     0    3    0     0    0    0   2.70e-05
+tseitin          10   15.0    3     0     0    3    0     0    0    0   3.47e-05
+tseitin          14   21.0    3     0     0    3    0     0    0    0   3.62e-05
+tseitin          20   30.0    3     0     0    3    0     0    0    0   4.89e-05
+tseitin          30   45.0    3     0     0    3    0     0    0    0   5.12e-05
+tseitin_even      4    6.0    3     0     0    3    0     0    0    0   2.73e-05
+tseitin_even      6    9.0    3     0     0    3    0     0    0    0   2.72e-05
+tseitin_even      8   12.0    3     0     0    3    0     0    0    0   2.85e-05
+tseitin_even     10   15.0    3     0     0    3    0     0    0    0   3.20e-05
+tseitin_even     14   21.0    3     0     0    3    0     0    0    0   3.81e-05
+tseitin_even     20   30.0    3     0     0    3    0     0    0    0   4.06e-05
+tseitin_even     30   45.0    3     0     0    3    0     0    0    0   5.09e-05
+php               2    6.0    1     0     0    1    0     0    0    0   2.06e-05
+php               3   12.0    1     0     0    1    0     0    0    0   2.17e-05
+php               4   20.0    1     0     0    1    0     0    0    0   2.92e-05
+php               5   30.0    1     0     0    1    0     0    0    0   3.62e-05
+php               6   42.0    1     0     0    1    0     0    0    0   4.78e-05
+php               7   56.0    1     0     0    1    0     0    0    0   8.32e-05
+xor3_sat          8    8.0    3     0     0    3    0     0    0    0   2.68e-05
+xor3_sat         12   12.0    3     0     0    3    0     0    0    0   4.15e-05
+xor3_sat         16   16.0    3     0     0    3    0     0    0    0   4.03e-05
+xor3_sat         24   24.0    3     0     0    3    0     0    0    0   4.60e-05
+xor3_sat         32   32.0    3     0     0    3    0     0    0    0   4.94e-05
+xor3_sat         48   48.0    3     0     0    3    0     0    0    0   1.05e-04
+xor3_unsat        8    8.0    3     0     0    3    0     0    0    0   3.46e-05
+xor3_unsat       12   12.0    3     0     0    3    0     0    0    0   4.31e-05
+xor3_unsat       16   16.0    3     0     0    3    0     0    0    0   5.14e-05
+xor3_unsat       24   24.0    3     0     0    3    0     0    0    0   6.16e-05
+xor3_unsat       32   32.0    3     0     0    3    0     0    0    0   7.03e-05
+xor3_unsat       48   48.0    3     0     0    3    0     0    0    0   6.60e-05
+planted_xor3      8    8.0    3     0     0    3    0     0    0    0   3.42e-05
+planted_xor3     12   12.0    3     0     0    3    0     0    0    0   3.27e-05
+planted_xor3     16   16.0    3     0     0    3    0     0    0    0   4.98e-05
+planted_xor3     24   24.0    3     0     0    3    0     0    0    0   4.74e-05
+planted_xor3     32   32.0    3     0     0    3    0     0    0    0   5.61e-05
+planted_xor3     48   48.0    3     0     0    3    0     0    0    0   7.01e-05
+
+family        loglog_slope    R2 last_local exp_rate/var  R2exp  flags
+small                 0.10  0.18      -0.80        0.017   0.24  
+rand3sat              0.68  0.92       0.85        0.013   0.70  
+planted3sat           0.80  0.48       1.12        0.014   0.31  
+tseitin              -0.92  0.20       0.12       -0.027   0.07  
+tseitin_even          0.33  0.92       0.56        0.017   0.96  
+php                   0.58  0.85       1.93        0.028   0.98  
+xor3_sat              0.62  0.82       1.87        0.029   0.89  
+xor3_unsat            0.39  0.90      -0.15        0.015   0.70  
+planted_xor3          0.41  0.87       0.55        0.018   0.85  
+
+TOTAL: SAT_OK=0  UNSAT_OK=0  UNKNOWN=326  TIMEOUT=0  WRONG=0  ERROR=0
+wall time 1.2s; failing instances saved in /tmp/claude-0/-home-user/2d12e629-e6d2-542b-bfc0-8b766f57383f/scratchpad/bench/failures/builtin_unit_prop_only
+
+candidate=builtin:brute_force suite=quick timeout=2.0s
+family         size      n  cnt satOK unsOK  unk  tmo WRONG  err skip  mean_t(s)
+--------------------------------------------------------------------------------
+small             4    4.0   22    16     6    0    0     0    0    0   2.82e-05
+small             5    5.0   22    17     5    0    0     0    0    0   1.28e-04
+small             6    6.0   22    16     6    0    0     0    0    0   8.39e-05
+small             7    7.0   22    17     5    0    0     0    0    0   1.59e-04
+small             8    8.0   22    14     8    0    0     0    0    0   3.22e-04
+small             9    9.0   22    15     7    0    0     0    0    0   5.46e-04
+small            10   10.0   22    12    10    0    0     0    0    0   1.32e-03
+rand3sat         10   10.0    5     4     1    0    0     0    0    0   1.14e-03
+rand3sat         20   20.0    5     5     0    0    0     0    0    0   1.02e+00
+rand3sat         30   30.0    2     0     0    0    2     0    0    3   2.00e+00
+rand3sat         40   None    0     0     0    0    0     0    0    5          -
+rand3sat         60   None    0     0     0    0    0     0    0    5          -
+rand3sat         80   None    0     0     0    0    0     0    0    5          -
+rand3sat        120   None    0     0     0    0    0     0    0    5          -
+planted3sat      10   10.0    5     5     0    0    0     0    0    0   4.71e-04
+planted3sat      20   20.0    5     3     0    0    2     0    0    0   1.37e+00
+planted3sat      30   30.0    2     0     0    0    2     0    0    3   2.00e+00
+planted3sat      40   None    0     0     0    0    0     0    0    5          -
+planted3sat      60   None    0     0     0    0    0     0    0    5          -
+planted3sat      80   None    0     0     0    0    0     0    0    5          -
+planted3sat     120   None    0     0     0    0    0     0    0    5          -
+tseitin           4    6.0    3     0     3    0    0     0    0    0   1.27e-04
+tseitin           6    9.0    3     0     3    0    0     0    0    0   9.99e-04
+tseitin           8   12.0    3     0     3    0    0     0    0    0   8.52e-03
+tseitin          10   15.0    3     0     3    0    0     0    0    0   6.49e-02
+tseitin          14   21.0    2     0     0    0    2     0    0    1   2.00e+00
+tseitin          20   None    0     0     0    0    0     0    0    3          -
+tseitin          30   None    0     0     0    0    0     0    0    3          -
+tseitin_even      4    6.0    3     3     0    0    0     0    0    0   3.48e-05
+tseitin_even      6    9.0    3     3     0    0    0     0    0    0   2.80e-05
+tseitin_even      8   12.0    3     3     0    0    0     0    0    0   1.17e-04
+tseitin_even     10   15.0    3     3     0    0    0     0    0    0   1.16e-03
+tseitin_even     14   21.0    3     3     0    0    0     0    0    0   3.40e-02
+tseitin_even     20   30.0    2     0     0    0    2     0    0    1   2.00e+00
+tseitin_even     30   None    0     0     0    0    0     0    0    3          -
+php               2    6.0    1     0     1    0    0     0    0    0   8.74e-05
+php               3   12.0    1     0     1    0    0     0    0    0   6.59e-03
+php               4   20.0    1     0     0    0    1     0    0    0   2.00e+00
+php               5   None    0     0     0    0    0     0    0    1          -
+php               6   None    0     0     0    0    0     0    0    1          -
+php               7   None    0     0     0    0    0     0    0    1          -
+xor3_sat          8    8.0    3     3     0    0    0     0    0    0   2.05e-04
+xor3_sat         12   12.0    3     3     0    0    0     0    0    0   3.63e-03
+xor3_sat         16   16.0    3     3     0    0    0     0    0    0   4.54e-02
+xor3_sat         24   24.0    3     1     0    0    2     0    0    0   1.74e+00
+xor3_sat         32   32.0    2     0     0    0    2     0    0    1   2.00e+00
+xor3_sat         48   None    0     0     0    0    0     0    0    3          -
+xor3_unsat        8    8.0    3     0     3    0    0     0    0    0   7.18e-04
+xor3_unsat       12   12.0    3     0     3    0    0     0    0    0   2.16e-02
+xor3_unsat       16   16.0    3     0     3    0    0     0    0    0   1.43e-01
+xor3_unsat       24   24.0    2     0     0    0    2     0    0    1   2.00e+00
+xor3_unsat       32   None    0     0     0    0    0     0    0    3          -
+xor3_unsat       48   None    0     0     0    0    0     0    0    3          -
+planted_xor3      8    8.0    3     3     0    0    0     0    0    0   1.01e-04
+planted_xor3     12   12.0    3     3     0    0    0     0    0    0   5.98e-03
+planted_xor3     16   16.0    3     3     0    0    0     0    0    0   6.01e-02
+planted_xor3     24   24.0    3     1     0    0    2     0    0    0   1.73e+00
+planted_xor3     32   32.0    2     0     0    0    2     0    0    1   2.00e+00
+planted_xor3     48   None    0     0     0    0    0     0    0    3          -
+
+family        loglog_slope    R2 last_local exp_rate/var  R2exp  flags
+small                 3.67  0.90       8.42        0.564   0.92  
+rand3sat              7.12  0.92       1.67        0.374   0.82  TIMEOUTS
+planted3sat           8.02  0.89       0.93        0.418   0.78  TIMEOUTS
+tseitin               7.71  0.98      10.19        0.647   1.00  TIMEOUTS
+tseitin_even          7.18  0.88      11.43        0.498   0.98  TIMEOUTS EXP-FIT-BETTER
+php                   8.22  0.97      11.19        0.717   1.00  TIMEOUTS
+xor3_sat              7.12  0.97       0.49        0.389   0.89  TIMEOUTS
+xor3_unsat            7.18  1.00       6.50        0.475   0.94  TIMEOUTS
+planted_xor3          7.41  0.96       0.51        0.398   0.85  TIMEOUTS
+
+TOTAL: SAT_OK=159  UNSAT_OK=71  UNKNOWN=0  TIMEOUT=21  WRONG=0  ERROR=0
+wall time 53.7s; failing instances saved in /tmp/claude-0/-home-user/2d12e629-e6d2-542b-bfc0-8b766f57383f/scratchpad/bench/failures/builtin_brute_force
+
+# minimize unit_prop_only  preserve_truth=False keep_width=False families=None truth=None
+c minimized from small:4:0 (n=4, m=4); outcome=UNKNOWN (); truth=SAT; preserve_truth=False keep_width=False; 25 candidate calls, 0.0s
+p cnf 2 1
+1 -2 0
+
+# minimize unit_prop_only  preserve_truth=True keep_width=False families=tseitin truth=None
+c minimized from tseitin:4:0 (n=6, m=16); outcome=UNKNOWN (); truth=UNSAT; preserve_truth=True keep_width=False; 131 candidate calls, 0.0s
+p cnf 2 4
+1 -2 0
+-1 2 0
+2 1 0
+-2 -1 0
+
+# minimize unit_prop_only  preserve_truth=True keep_width=False families=small truth=unsat
+c minimized from small:4:15 (n=4, m=16); outcome=UNKNOWN (); truth=UNSAT; preserve_truth=True keep_width=False; 204 candidate calls, 0.0s
+p cnf 2 4
+1 2 0
+-2 -1 0
+1 -2 0
+-1 2 0
+
+# minimize unit_prop_only  preserve_truth=True keep_width=True families=small truth=unsat
+c minimized from small:4:15 (n=4, m=16); outcome=UNKNOWN (); truth=UNSAT; preserve_truth=True keep_width=True; 194 candidate calls, 0.0s
+p cnf 4 8
+-1 -2 3 0
+4 1 2 0
+1 -4 -3 0
+-2 -3 -1 0
+1 -2 4 0
+-1 -4 2 0
+4 -1 2 0
+-4 1 3 0
+

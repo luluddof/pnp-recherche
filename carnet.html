@@ -1,0 +1,243 @@
+<title>Carnet P vs NP</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap">
+<style>
+/* Layout : carnet de laboratoire — une colonne de lecture, des tableaux-registres, un verdict par ligne */
+:root{
+  --bg:#f6f7f9; --surface:#ffffff; --fg:#1b2330; --muted:#5b6678; --line:#dde2ea;
+  --accent:#2f5bd3; --accent-soft:#e7edfb;
+  --bad:#b4372f; --bad-soft:#fbeceb; --good:#1f7a4d; --good-soft:#e5f4ec; --wait:#8a5a00; --wait-soft:#fbf1dc;
+  --f-display:"Space Grotesk",system-ui,sans-serif; --f-body:"IBM Plex Sans",system-ui,sans-serif; --f-mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#11151c; --surface:#181e27; --fg:#e4e8ef; --muted:#9aa5b6; --line:#2a3342;
+  --accent:#86a6ff; --accent-soft:#1f2a45;
+  --bad:#ff8a80; --bad-soft:#3a1f1e; --good:#6fd3a0; --good-soft:#173328; --wait:#f0c060; --wait-soft:#3a2f17; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#11151c; --surface:#181e27; --fg:#e4e8ef; --muted:#9aa5b6; --line:#2a3342;
+  --accent:#86a6ff; --accent-soft:#1f2a45;
+  --bad:#ff8a80; --bad-soft:#3a1f1e; --good:#6fd3a0; --good-soft:#173328; --wait:#f0c060; --wait-soft:#3a2f17; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:16px;line-height:1.6;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 4rem}
+main{max-width:980px;margin:0 auto;display:flex;flex-direction:column;gap:3rem}
+header.top{padding-block:3rem 0;display:flex;flex-direction:column;gap:.75rem}
+.eyebrow{font-family:var(--f-mono);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+h1{font-family:var(--f-display);font-size:clamp(2rem,5vw,3rem);line-height:1.1;margin:0;text-wrap:balance}
+h2{font-family:var(--f-display);font-size:1.5rem;margin:0;text-wrap:balance}
+h3{font-family:var(--f-display);font-size:1.1rem;margin:0}
+p{margin:0;max-width:68ch}
+.lede{font-size:1.1rem;color:var(--muted)}
+section{display:flex;flex-direction:column;gap:1rem}
+.formula{font-family:var(--f-mono);font-size:.92em;white-space:nowrap}
+.status{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1rem}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:1rem;display:flex;flex-direction:column;gap:.35rem;min-width:0}
+.stat b{font-family:var(--f-display);font-size:1.6rem;font-variant-numeric:tabular-nums}
+.stat span{color:var(--muted);font-size:.9rem}
+.callout{border-left:3px solid var(--accent);background:var(--accent-soft);padding:1rem 1.25rem;border-radius:0 8px 8px 0;display:flex;flex-direction:column;gap:.5rem}
+.callout p{max-width:none}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:.93rem}
+th,td{text-align:left;vertical-align:top;padding:.65rem .8rem;border-bottom:1px solid var(--line)}
+th{font-family:var(--f-mono);font-weight:500;font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:var(--bg)}
+tr:last-child td{border-bottom:0}
+td.num{font-family:var(--f-mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+td code,p code,li code{font-family:var(--f-mono);font-size:.86em}
+.chip{display:inline-block;font-family:var(--f-mono);font-size:.72rem;font-weight:500;padding:.15rem .5rem;border-radius:999px;white-space:nowrap}
+.chip.bad{background:var(--bad-soft);color:var(--bad)}
+.chip.good{background:var(--good-soft);color:var(--good)}
+.chip.wait{background:var(--wait-soft);color:var(--wait)}
+.chip.proof{background:var(--accent-soft);color:var(--accent)}
+.news{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:1.1rem;display:flex;flex-direction:column;gap:.5rem;min-width:0}
+.card .date{font-family:var(--f-mono);font-size:.78rem;color:var(--muted)}
+.card p{font-size:.95rem}
+ul{margin:0;padding-left:1.2rem;display:flex;flex-direction:column;gap:.35rem;max-width:72ch}
+.timeline{display:grid;grid-template-columns:auto 1fr;gap:.4rem 1rem;font-size:.95rem}
+.timeline .y{font-family:var(--f-mono);color:var(--accent);font-variant-numeric:tabular-nums}
+nav.toc{display:flex;flex-wrap:wrap;gap:.5rem}
+nav.toc a{font-family:var(--f-mono);font-size:.8rem;color:var(--accent);text-decoration:none;border:1px solid var(--line);background:var(--surface);padding:.3rem .65rem;border-radius:999px}
+nav.toc a:hover,nav.toc a:focus-visible{border-color:var(--accent);outline:none}
+a{color:var(--accent)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.sources li{font-size:.9rem}
+footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);padding-top:1.25rem}
+</style>
+
+<main>
+<header class="top">
+  <div class="eyebrow">Carnet de recherche · commencé le 23 novembre 2026</div>
+  <h1>Carnet P vs NP</h1>
+  <p class="lede">Toutes les voies explorées pour chercher un algorithme polynomial pour 3-SAT (direction P&nbsp;=&nbsp;NP), avec leurs résultats, la cause de chaque échec et l'actualité du problème.</p>
+  <nav class="toc" aria-label="Sections">
+    <a href="#bilan">Bilan</a><a href="#actualite">Actualité 2026</a><a href="#gen0">Génération 0</a><a href="#gen1">Génération 1</a><a href="#gen2">Génération 2</a><a href="#gen3">Génération 3</a><a href="#pistes">Pistes restantes</a><a href="#histoire">Histoire</a><a href="#sources">Sources</a>
+  </nav>
+</header>
+
+<section id="bilan">
+  <h2>Bilan</h2>
+  <div class="status">
+    <div class="stat"><b>15</b><span>voies de recherche explorées (et 2 outils construits)</span></div>
+    <div class="stat"><b>15</b><span>échecs expliqués par une mesure ou un théorème</span></div>
+    <div class="stat"><b>1</b><span>observation annexe à vérifier (problème de Hurwitz)</span></div>
+    <div class="stat"><b>0</b><span>preuve de P = NP ou de P ≠ NP</span></div>
+  </div>
+  <div class="callout">
+    <h3>Le vrai obstacle</h3>
+    <p>Trouver des solutions de 3-SAT est assez facile en pratique. Le difficile est de <strong>prouver qu'une formule aléatoire est insatisfaisable</strong> avec seulement environ 4,26&nbsp;×&nbsp;n clauses. Aucune méthode testée ne le fait dès n&nbsp;=&nbsp;50. La méthode spectrale demande au moins <span class="formula">m ≈ 7,4 · n^1,5</span> clauses. Réussir avec <span class="formula">m = O(n)</span> réfuterait l'hypothèse de Feige.</p>
+  </div>
+  <div class="callout">
+    <h3>Leçon commune</h3>
+    <p>Chaque outil aide seulement si la formule a la structure qu'il sait utiliser : XOR pour l'élimination de Gauss, cliques pour les plans de coupe. 3-SAT aléatoire n'a aucune de ces structures. Un algorithme qui prouve P&nbsp;=&nbsp;NP doit trouver une structure cachée dans ces formules.</p>
+  </div>
+  <div class="callout">
+    <h3>Le code n'est pas la difficulté</h3>
+    <p>L'algorithme universel de Levin (1973) trouve déjà les solutions en temps polynomial <em>si</em> P&nbsp;=&nbsp;NP. La partie ouverte est la <strong>preuve</strong>. Des tests ne peuvent que trouver des contre-exemples.</p>
+  </div>
+</section>
+
+<section id="actualite">
+  <h2>Actualité 2026</h2>
+  <p>P vs NP reste ouvert : le Clay Institute le liste toujours comme non résolu. Mais l'automne 2026 apporte des résultats importants, trouvés par des IA. Ces informations viennent de la recherche web : le réseau de cette session bloque la lecture directe des articles.</p>
+  <div class="news">
+    <article class="card">
+      <div class="date">26 octobre 2026 · Anthropic</div>
+      <h3>Algorithme 2^o(n) pour 3-SAT</h3>
+      <p>Trouvé le 16 octobre par un modèle Claude de recherche interne, sans aide humaine. Il est déterministe et il compte aussi les solutions, en temps <span class="formula">2^O(m/√log m)</span>. Méthode : la formule devient un réseau de tenseurs. Une récursion sur une grille réécrit les paires de tests d'égalité avec l'<strong>identité des huit carrés</strong> (Degen 1818, octonions). Chaque niveau multiplie l'exposant par ρ = 11/12, ou 1/√2 avec l'algèbre de Heisenberg. <strong>Réfute l'ETH.</strong></p>
+      <span class="chip wait">annoncé · vérification Lean · revue en cours</span>
+    </article>
+    <article class="card">
+      <div class="date">17–25 octobre 2026 · OpenAI</div>
+      <h3>« The Exponential Time Hypothesis Is False »</h3>
+      <p>Compte les solutions d'une k-CNF en temps <span class="formula">2^O(n log log n / √log n)</span>, et <span class="formula">2^O(n/√log n)</span> à densité bornée. Méthode : contraction de tenseurs et interpolation.</p>
+      <span class="chip wait">annoncé · revue en cours</span>
+    </article>
+    <article class="card">
+      <div class="date">Ce que cela change</div>
+      <h3>Pas encore P = NP</h3>
+      <p>Le temps <span class="formula">2^(n/√log n)</span> reste plus que polynomial, et le gain est seulement asymptotique : une analyse l'estime au-delà de n ≈ 10^126. Mais une hypothèse que beaucoup croyaient vraie est tombée.</p>
+      <span class="chip proof">piste N1 ouverte</span>
+    </article>
+    <article class="card">
+      <div class="date">17 novembre 2026 · blog CACM</div>
+      <h3>Emanuele Viola</h3>
+      <p>Les résultats de l'IA ne prouvent pas P&nbsp;=&nbsp;NP, mais ils donnent des algorithmes plus rapides là où on n'en attendait pas. Viola pense que P&nbsp;=&nbsp;NP (c'est une opinion, pas un résultat).</p>
+    </article>
+    <article class="card">
+      <div class="date">Octobre 2026 · Chan et Xu</div>
+      <h3>Feige quantique réfuté</h3>
+      <p>Réfutation forte de 3-SAT <em>quantique</em> aléatoire à densité constante, en temps polynomial classique. La version classique de l'hypothèse de Feige reste ouverte.</p>
+      <span class="chip proof">piste N2 ouverte</span>
+    </article>
+    <article class="card">
+      <div class="date">2024–2026 · autres progrès</div>
+      <h3>Complexité classique</h3>
+      <p>Williams (STOC 2025) : le temps t se simule en espace <span class="formula">O(√(t log t))</span>. Res(⊕) : bornes seulement pour des versions limitées. Circuits algébriques de profondeur constante : bornes super-polynomiales (JACM 2025).</p>
+    </article>
+  </div>
+  <p>Autres problèmes du millénaire : preuves <em>annoncées</em> pour l'hypothèse de Riemann généralisée (Alpöge, avec l'aide de Claude) et pour Navier-Stokes (OpenAI, puis Buckmaster et Alpöge). Le Clay Institute indique « solution claimed; prize pending ».</p>
+</section>
+
+<section id="gen0">
+  <h2>Génération 0 · premières tentatives</h2>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Voie</th><th>Idée</th><th>Résultat</th><th>Cause</th><th>Verdict</th></tr></thead>
+    <tbody>
+      <tr><td>Regard en avant de profondeur k</td><td>Propagation + littéraux qui échouent, sans retour en arrière. Temps <span class="formula">O(n^(k+2))</span>.</td><td>k = 3 : 9/9 UNSAT prouvées à n = 30, puis 0/17 à n = 80</td><td>Une réponse UNSAT est une preuve par résolution de largeur ≈ k + 3. Ben-Sasson–Wigderson (2001) : largeur Ω(n).</td><td><span class="chip proof">éliminé par théorème</span></td></tr>
+      <tr><td>Géométrie des solutions</td><td>Beaucoup d'îles de solutions ⇒ difficile ?</td><td>XORSAT (dans P) : 416 îles. 3-SAT : 4 îles.</td><td>L'hypothèse est fausse : la géométrie seule ne mesure pas la difficulté.</td><td><span class="chip bad">réfuté par mesure</span></td></tr>
+      <tr><td>Polymorphismes</td><td>Algèbre universelle (Schaefer)</td><td>3-SAT : aucun polymorphisme. 2-SAT : majorité. XORSAT : x⊕y⊕z.</td><td>« Aucun polymorphisme ⇒ NP-complet » ne donne pas « ⇒ hors de P ». Argument circulaire.</td><td><span class="chip proof">circulaire</span></td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="gen1">
+  <h2>Génération 1 · exploration large (5 sous-agents)</h2>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Direction</th><th>Résultat principal</th><th>Cause de l'échec</th><th>Verdict</th></tr></thead>
+    <tbody>
+      <tr><td>Algorithmes polynomiaux forts</td><td>PC sur GF(2), LP, propagation de croyances, méthode spectrale. 0 % des UNSAT aléatoires prouvées dès n = 50. Seuil spectral mesuré : <span class="formula">7,4 · n^1,5</span>.</td><td>PC : degré Ω(n). SOS : degré Ω(n) (Grigoriev, Schoenebeck). Spectral : n^1,5.</td><td><span class="chip proof">éliminé par théorèmes</span></td></tr>
+      <tr><td>Bornes sur les circuits</td><td>Tailles exactes pour n = 4 identiques à la table de Knuth. 10 mesures, meilleure corrélation 0,64.</td><td>Mesures limitées à O(n), ou fausses (AND, MAJ), ou « naturelles » (Razborov–Rudich).</td><td><span class="chip bad">échec</span></td></tr>
+      <tr><td>Complexité des preuves</td><td>Résolution exponentielle sur PHP, Tseitin et formules aléatoires. Attaque d'AC0[p]-Frege.</td><td>Il manque un objet qui a un ordre (ℝ) et une approximation des portes MOD (F_p).</td><td><span class="chip bad">échec</span></td></tr>
+      <tr><td>Méta-complexité</td><td>Écart à combler : 3,1 N contre N^(1+ε).</td><td>Barrière de localité (2020).</td><td><span class="chip bad">échec</span></td></tr>
+      <tr><td>Algèbre et GCT</td><td>BLP+AIP décident 2-SAT, XORSAT et Horn, pas 3-SAT.</td><td>Modèles limités. Rothvoss (2014) : le couplage est dans P sans petit LP. Obstructions d'occurrence impossibles (2016).</td><td><span class="chip bad">échec</span></td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="gen2">
+  <h2>Génération 2 · briques simples vers P = NP</h2>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Étape</th><th>Question</th><th>Résultat</th><th>Verdict</th></tr></thead>
+    <tbody>
+      <tr><td>1 · Banc de test</td><td>Outil commun : 9 familles de formules, vraies réponses vérifiées 3 fois, minimiseur de contre-exemples.</td><td>Prêt. Exemple : plus petit contre-exemple UNSAT de largeur 3 pour la propagation seule = 4 variables, 8 clauses.</td><td><span class="chip good">outil prêt</span></td></tr>
+      <tr><td>2 · Cahier des charges</td><td>Quelles familles d'algorithmes sont déjà éliminées ?</td><td>14 familles, 13 conditions, 5 directions non éliminées.</td><td><span class="chip good">prêt</span></td></tr>
+      <tr><td>3a · Variables d'extension</td><td>Ajouter des variables (XOR, AND, OR, BVA) change-t-il la croissance ?</td><td>Toutes les variantes à ±15 % de la base, environ <span class="formula">2^(n/21)</span> jusqu'à n = 200. Le contrôle aléatoire fait aussi bien.</td><td><span class="chip bad">exponentiel</span></td></tr>
+      <tr><td>3b · Parités</td><td>Brancher sur x ⊕ y au lieu de x ?</td><td>Même base que DPLL (≈ 1,04^n). Sur Tseitin : 2^(n/2) → ≈ 2n.</td><td><span class="chip bad">exponentiel</span></td></tr>
+      <tr><td>3c · Plans de coupe</td><td>CBC, HiGHS, Gomory sur 3-SAT aléatoire</td><td>≈ e^(0,1 n), plus lent que CDCL. Contrôle PHP : résolu immédiatement.</td><td><span class="chip bad">exponentiel</span></td></tr>
+      <tr><td>3d · Anneaux Z_m</td><td>Z₄ ou Z₆ donnent-ils un degré plus petit ?</td><td>Réduction modulo p : deg(Z_m) ≥ deg(GF(p)). Mêmes degrés mesurés pour tous les anneaux.</td><td><span class="chip proof">éliminé par preuve</span></td></tr>
+    </tbody>
+  </table></div>
+  <p>Limites : 3a et 3c mesurent les preuves que les solveurs <em>trouvent</em>, pas les plus courtes possibles. 3b va seulement jusqu'à n = 60, avec des parités de 2 ou 3 variables.</p>
+</section>
+
+<section id="gen3">
+  <h2>Génération 3 · voies inspirées par l'actualité (terminée)</h2>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Voie</th><th>Question</th><th>État</th></tr></thead>
+    <tbody>
+      <tr><td>N1 · Facteur ρ de l'algorithme de Claude</td><td>Identité des huit carrés vérifiée sur 4 096 cas. Plancher prouvé : <span class="formula">ρ ≥ 1/2</span>, donc cette méthode donne au mieux <span class="formula">2^O(m/log m)</span>. Pour aller plus loin, il faut changer la géométrie de la récursion. Observation à vérifier : les pièces de l'annexe B donneraient <span class="formula">P(N) ≤ N^(√2+o(1))</span>, mieux que la borne <span class="formula">N^1,62</span> de Hrubeš pour une variante du problème de Hurwitz.</td><td><span class="chip bad">limite prouvée</span> <span class="chip wait">observation à vérifier</span></td></tr>
+      <tr><td>N2 · Certificats de Feige-Kim-Ofek</td><td>Des certificats courts existent à m ≈ n^1,4. Peut-on les trouver en temps polynomial ? Non : les couvertures trouvables sont des cycles courts, utiles seulement si m = Ω(n^1,5). Il faudrait des dépendances creuses de taille ≈ n^0,2 sur GF(2), et aucune méthode polynomiale ne les trouve.</td><td><span class="chip bad">égale le spectral, sans le battre</span></td></tr>
+      <tr><td>N3 · Entiers Z et rationnels Q</td><td>Le Nullstellensatz sur Z ou Q fait-il mieux que sur les corps finis ? Non : deg(Z) ≥ deg(Q) = deg(GF(p)) pour presque tout p. Sur 130 formules, aucune différence entre GF(2), GF(3), Q et Z.</td><td><span class="chip proof">éliminé par preuve</span></td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="pistes">
+  <h2>Pistes restantes</h2>
+  <ul>
+    <li><strong>Extensions structurées</strong> : chercher des définitions qui raccourcissent une preuve connue, au lieu de définitions gloutonnes.</li>
+    <li><strong>Parités longues</strong> : brancher sur des parités d'environ log n variables, avec n &gt; 64.</li>
+    <li><strong>Transfert quantique → classique</strong> : comprendre pourquoi la réfutation de Chan et Xu ne s'applique pas à 3-SAT classique.</li>
+    <li><strong>Lire les articles d'octobre 2026</strong> : il faut autoriser ces sites dans le réseau de l'outil de lecture web de la session.</li>
+  </ul>
+</section>
+
+<section id="histoire">
+  <h2>Histoire du problème</h2>
+  <div class="timeline">
+    <span class="y">1971</span><span>Cook : NP-complétude de SAT. Levin (1973) l'obtient de façon indépendante.</span>
+    <span class="y">1972</span><span>Karp : 21 problèmes NP-complets.</span>
+    <span class="y">1975</span><span>Baker, Gill et Solovay : barrière de la relativisation.</span>
+    <span class="y">1985</span><span>Razborov : bornes exponentielles pour les circuits monotones. Haken : résolution exponentielle sur les tiroirs.</span>
+    <span class="y">1997</span><span>Razborov et Rudich : barrière des preuves naturelles.</span>
+    <span class="y">2001</span><span>Mulmuley et Sohoni : Geometric Complexity Theory. Ben-Sasson et Wigderson : largeur de résolution.</span>
+    <span class="y">2008</span><span>Aaronson et Wigderson : barrière de l'algébrisation.</span>
+    <span class="y">2011</span><span>Williams : NEXP ⊄ ACC⁰.</span>
+    <span class="y">2016</span><span>Bürgisser, Ikenmeyer et Panova : limites des obstructions d'occurrence en GCT.</span>
+    <span class="y">2025</span><span>Williams : temps t en espace √(t log t).</span>
+    <span class="y">2026</span><span>ETH réfutée (annonces d'OpenAI et d'Anthropic). P vs NP reste ouvert.</span>
+  </div>
+</section>
+
+<section id="sources">
+  <h2>Sources</h2>
+  <ul class="sources">
+    <li><a href="https://cacm.acm.org/blogcacm/what-happened-in-fall-2026-ai-and-p-vs-np/" target="_blank" rel="noopener">Viola — What Happened in Fall 2026: AI and P vs NP (CACM)</a></li>
+    <li><a href="https://hexagonmath.org/pdf/2610.00577v1" target="_blank" rel="noopener">Claude (Anthropic) — A 2^{o(n)} Time Algorithm for 3-SAT</a></li>
+    <li><a href="https://www.alphaxiv.org/abs/2610.exponential-time-hypothesis-refutation" target="_blank" rel="noopener">OpenAI — The Exponential Time Hypothesis Is False</a></li>
+    <li><a href="https://www.cs.cmu.edu/~odonnell/some_eth_false_exposition.pdf" target="_blank" rel="noopener">O'Donnell — Some exposition of The Exponential Time Hypothesis Is False</a></li>
+    <li><a href="https://arxiv.org/html/2611.00517v1" target="_blank" rel="noopener">Limits and Constants of OpenAI's Claimed ETH Refutation</a></li>
+    <li><a href="https://arxiv.org/html/2610.41622v1" target="_blank" rel="noopener">Lowered crossover points of Anthropic's subexponential 3-SAT algorithm</a></li>
+    <li><a href="https://arxiv.org/pdf/2610.05430" target="_blank" rel="noopener">Chan, Xu — Strong Refutation for Random Quantum 3-SAT at Constant Density</a></li>
+    <li><a href="https://arxiv.org/pdf/2109.04415" target="_blank" rel="noopener">Algorithms and Certificates for Boolean CSP Refutation: Smoothed is no harder than Random</a></li>
+    <li><a href="https://www.arxiv.org/abs/2502.17779" target="_blank" rel="noopener">Williams — Simulating Time With Square-Root Space</a></li>
+    <li><a href="https://eccc.weizmann.ac.il/report/2026/018/download" target="_blank" rel="noopener">ECCC 2026/018 — Res(⊕) lower bounds (état de l'art)</a></li>
+    <li><a href="https://www.scottaaronson.com/papers/pnp.pdf" target="_blank" rel="noopener">Aaronson — P =? NP (synthèse)</a></li>
+    <li><a href="https://terrytao.wordpress.com/2026/11/20/unforced-euler-singularity-unforced-navier-stokes-singularity-and-the-generalized-riemann-hypothesis/" target="_blank" rel="noopener">Tao — Navier-Stokes et hypothèse de Riemann généralisée</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/Millennium_Prize_Problems" target="_blank" rel="noopener">Millennium Prize Problems (Wikipedia)</a></li>
+  </ul>
+</section>
+
+<footer>Les informations sur l'actualité viennent d'extraits de recherche web, pas d'une lecture complète des articles. Les programmes et les données sont dans le dossier de travail de la session (pnp-recherche/code).</footer>
+</main>

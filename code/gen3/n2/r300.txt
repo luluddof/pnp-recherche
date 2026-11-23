@@ -1,0 +1,2 @@
+n=300 m=10392 a15=2 a14=3.54 B12=6.44e+03 B3=1.45e+04 spec_ok=False core=7227 ncov=66518 nbad=33327 minsz=2 medsz=8 lp=629 need=3.22e+03 cov_ok=False kdim=None gmin=None gavg=None tsp=16.8 tcy=2.29 tlp=18.7
+n=300 m=38451 a15=7.4 a14=13.1 B12=1.27e+04 B3=2.65e+04 spec_ok=False core=32906 ncov=587048 nbad=293801 minsz=2 medsz=6 lp=1.34e+03 need=6.37e+03 cov_ok=False kdim=None gmin=None gavg=None tsp=50.9 tcy=5.35 tlp=0.735
