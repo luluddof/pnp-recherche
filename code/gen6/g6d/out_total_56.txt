@@ -1,0 +1,7 @@
+l=5 d=1 mode=total status=1 obj=32.000 dual_bound=24.0 total_bad=32 per_dir=[8, 4, 8, 8, 4] exact_ok=True frac=0.4000 subcubeLB_total=20
+l=5 d=2 mode=total status=1 obj=14.000 dual_bound=8.0 total_bad=14 per_dir=[2, 3, 2, 3, 4] exact_ok=True frac=0.1750 subcubeLB_total=7
+l=5 d=3 mode=total status=0 obj=4.000 dual_bound=3.9999999999999076 total_bad=4 per_dir=[0, 0, 0, 2, 2] exact_ok=True frac=0.0500 subcubeLB_total=3
+l=5 d=4 mode=total status=0 obj=1.000 dual_bound=1.0 total_bad=1 per_dir=[0, 0, 0, 0, 1] exact_ok=True frac=0.0125 subcubeLB_total=1
+l=6 d=1 mode=total status=1 obj=91.000 dual_bound=50.0 total_bad=91 per_dir=[17, 15, 17, 17, 10, 15] exact_ok=True frac=0.4740 subcubeLB_total=48
+l=6 d=2 mode=total status=1 obj=58.000 dual_bound=7.0 total_bad=58 per_dir=[7, 2, 10, 13, 10, 16] exact_ok=True frac=0.3021 subcubeLB_total=16
+l=6 d=3 mode=total status=1 obj=21.000 dual_bound=3.0 total_bad=21 per_dir=[0, 2, 0, 5, 10, 4] exact_ok=True frac=0.1094 subcubeLB_total=6

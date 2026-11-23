@@ -1,0 +1,1 @@
+l=5 d=2 mode=total status=1 obj=15.000 dual_bound=13.0 total_bad=15 per_dir=[0, 0, 4, 4, 7] exact_ok=True frac=0.1875 subcubeLB_total=7

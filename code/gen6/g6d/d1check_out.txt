@@ -1,0 +1,9 @@
+l=2: bad per direction [0, 1]  (2^(l-2)=1)  rho_max=0.25  common-E LB rho>=0.250  matrix ranks [0, 1]
+l=3: bad per direction [0, 2, 2]  (2^(l-2)=2)  rho_max=0.25  common-E LB rho>=0.125  matrix ranks [0, 2, 2]
+l=4: bad per direction [0, 4, 4, 4]  (2^(l-2)=4)  rho_max=0.25  common-E LB rho>=0.312  matrix ranks [0, 4, 4, 4]
+l=5: bad per direction [0, 8, 8, 8, 8]  (2^(l-2)=8)  rho_max=0.25  common-E LB rho>=0.188  matrix ranks [0, 8, 8, 8, 8]
+l=6: bad per direction [0, 16, 16, 16, 16, 16]  (2^(l-2)=16)  rho_max=0.25  common-E LB rho>=0.344  matrix ranks [0, 16, 16, 16, 16, 16]
+l=7: bad per direction [0, 32, 32, 32, 32, 32, 32]  (2^(l-2)=32)  rho_max=0.25  common-E LB rho>=0.227
+l=8: bad per direction [0, 64, 64, 64, 64, 64, 64, 64]  (2^(l-2)=64)  rho_max=0.25  common-E LB rho>=0.363
+l=9: bad per direction [0, 128, 128, 128, 128, 128, 128, 128, 128]  (2^(l-2)=128)  rho_max=0.25  common-E LB rho>=0.254
+l=10: bad per direction [0, 256, 256, 256, 256, 256, 256, 256, 256, 256]  (2^(l-2)=256)  rho_max=0.25  common-E LB rho>=0.377
