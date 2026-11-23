@@ -1,0 +1,19 @@
+n m method Q_n==0 identity log2(cert_gates)
+8 34 brute True True 18.31
+8 34 ve True True 17.61
+10 43 brute True True 20.46
+10 43 ve True True 18.98
+12 51 brute True True 22.96
+12 51 ve True True 19.94
+14 60 brute True True 25.09
+14 60 ve True True 22.56
+16 68 brute True True 26.94
+16 68 ve True True 23.35
+18 77 ve True True 25.64
+20 85 ve True True 25.85
+24 102 ve False False 28.14
+28 119 ve False False 31.63
+32 136 ve True True 33.48
+# Notes: n>22 not pre-filtered for UNSAT; n=24,28 samples were SAT (Q_n != 0 => no certificate, as expected).
+# Run stopped at n=40 (timeout). Slopes: brute ~1.08 bits/var, VE (min-degree) ~0.66 bits/var (n=8..32), incl. n*d interpolation overhead.
+# Identity 1 = clause part + sum_k (y_k^2-y_k) D_k verified at random point mod 2^61-1 (PIT) for every UNSAT instance.

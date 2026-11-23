@@ -71,7 +71,7 @@ footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);padd
   <h1>Carnet P vs NP</h1>
   <p class="lede">Toutes les voies explorées pour chercher un algorithme polynomial pour 3-SAT (direction P&nbsp;=&nbsp;NP), avec leurs résultats, la cause de chaque échec et l'actualité du problème.</p>
   <nav class="toc" aria-label="Sections">
-    <a href="#bilan">Bilan</a><a href="#actualite">Actualité 2026</a><a href="#gen0">Génération 0</a><a href="#gen1">Génération 1</a><a href="#gen2">Génération 2</a><a href="#gen3">Génération 3</a><a href="#pistes">Pistes restantes</a><a href="#histoire">Histoire</a><a href="#sources">Sources</a>
+    <a href="#bilan">Bilan</a><a href="#actualite">Actualité 2026</a><a href="#gen0">Génération 0</a><a href="#gen1">Génération 1</a><a href="#gen2">Génération 2</a><a href="#gen3">Génération 3</a><a href="#gen4">Génération 4</a><a href="#pistes">Pistes restantes</a><a href="#histoire">Histoire</a><a href="#sources">Sources</a>
   </nav>
 </header>
 
@@ -80,7 +80,7 @@ footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);padd
   <div class="status">
     <div class="stat"><b>15</b><span>voies de recherche explorées (et 2 outils construits)</span></div>
     <div class="stat"><b>15</b><span>échecs expliqués par une mesure ou un théorème</span></div>
-    <div class="stat"><b>1</b><span>observation annexe à vérifier (problème de Hurwitz)</span></div>
+    <div class="stat"><b>2</b><span>résultats annexes établis (Hurwitz, système IPS), pas sur P vs NP</span></div>
     <div class="stat"><b>0</b><span>preuve de P = NP ou de P ≠ NP</span></div>
   </div>
   <div class="callout">
@@ -189,6 +189,19 @@ footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);padd
       <tr><td>N1 · Facteur ρ de l'algorithme de Claude</td><td>Identité des huit carrés vérifiée sur 4 096 cas. Plancher prouvé : <span class="formula">ρ ≥ 1/2</span>, donc cette méthode donne au mieux <span class="formula">2^O(m/log m)</span>. Pour aller plus loin, il faut changer la géométrie de la récursion. Observation à vérifier : les pièces de l'annexe B donneraient <span class="formula">P(N) ≤ N^(√2+o(1))</span>, mieux que la borne <span class="formula">N^1,62</span> de Hrubeš pour une variante du problème de Hurwitz.</td><td><span class="chip bad">limite prouvée</span> <span class="chip wait">observation à vérifier</span></td></tr>
       <tr><td>N2 · Certificats de Feige-Kim-Ofek</td><td>Des certificats courts existent à m ≈ n^1,4. Peut-on les trouver en temps polynomial ? Non : les couvertures trouvables sont des cycles courts, utiles seulement si m = Ω(n^1,5). Il faudrait des dépendances creuses de taille ≈ n^0,2 sur GF(2), et aucune méthode polynomiale ne les trouve.</td><td><span class="chip bad">égale le spectral, sans le battre</span></td></tr>
       <tr><td>N3 · Entiers Z et rationnels Q</td><td>Le Nullstellensatz sur Z ou Q fait-il mieux que sur les corps finis ? Non : deg(Z) ≥ deg(Q) = deg(GF(p)) pour presque tout p. Sur 130 formules, aucune différence entre GF(2), GF(3), Q et Z.</td><td><span class="chip proof">éliminé par preuve</span></td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="gen4">
+  <h2>Génération 4 · autonomie</h2>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Voie</th><th>Résultat</th><th>Verdict</th></tr></thead>
+    <tbody>
+      <tr><td>G4a · Problème de Hurwitz</td><td>Les pièces de l'annexe B de l'article de Claude donnent <span class="formula">P(N) ≤ N^√2 · polylog N</span>, donc une composition de sommes de carrés avec <span class="formula">N^(√2+o(1))</span> termes. Meilleure borne publiée connue : <span class="formula">N^1,62</span> (Hrubeš, 2024). Preuve courte : rangs ≤ (2h+1)·p(2h) et p(2h) ≈ p(h)^√2 (Hardy-Ramanujan). Vérifié en calcul exact pour h ≤ 6. Asymptotique seulement. Pas un progrès sur P vs NP.</td><td><span class="chip good">vérifié</span> <span class="chip wait">à faire relire par des experts</span></td></tr>
+      <tr><td>G4d · Système de preuve</td><td>L'algorithme de comptage donne des réfutations <strong>IPS</strong> (Ideal Proof System) de taille <span class="formula">2^O(n/√log n)</span> pour 3-SAT aléatoire, contre <span class="formula">2^Ω(n)</span> pour PC, Nullstellensatz et SOS. Des réfutations polynomiales demanderaient une hypothèse de type VP = VNP.</td><td><span class="chip good">corollaire établi</span></td></tr>
+      <tr><td>G4b · Géométrie de récursion</td><td>Autres géométries pour dépasser <span class="formula">2^(m/log m)</span>.</td><td><span class="chip wait">en cours</span></td></tr>
+      <tr><td>G4c · OpenAI et Claude</td><td>Comparer et combiner les deux méthodes.</td><td><span class="chip wait">en cours</span></td></tr>
     </tbody>
   </table></div>
 </section>

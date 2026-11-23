@@ -125,10 +125,25 @@ Articles disponibles en texte (pour les sous-agents) : article de Claude, expos�
 
 | Voie | Question | État |
 |---|---|---|
-| G4a | Vérifier l'observation P(N) ≤ N^(√2+o(1)) (variante du problème de Hurwitz) | en cours |
+| G4a | Vérifier l'observation P(N) ≤ N^(√2+o(1)) (variante du problème de Hurwitz) | ✅ **Vérifiée** (sous réserve des lemmes 9 et 10 de l'article de Claude). Voir ci-dessous. Dossier : `code/gen4/g4a/` |
 | G4b | Autres géométries de récursion pour l'algorithme de Claude | en cours |
 | G4c | Méthode d'OpenAI : comparaison et combinaison avec celle de Claude | en cours |
-| G4d | Quel système de preuve correspond à l'algorithme de comptage ? | en cours |
+| G4d | Quel système de preuve correspond à l'algorithme de comptage ? | ✅ **IPS** (Ideal Proof System, Grochow-Pitassi) sur Q. Toute 3-CNF insatisfaisable a une réfutation IPS de taille 2^(O(m/√log m)) ; pour 3-SAT aléatoire (m = O(n)) : **2^(O(n/√log n))**. Cela sépare quantitativement IPS de PC, Nullstellensatz et SOS (2^Ω(n)) sur ces formules. Aucune voie trouvée vers Frege ou Extended Frege. Corollaire direct, mais aucune borne 2^o(n) antérieure trouvée pour un système standard à densité constante. Pour des réfutations **polynomiales**, il faudrait une hypothèse de type VP = VNP. Expérience : certificat construit et vérifié pour n = 8 à 32. Dossier : `code/gen4/g4d/` |
+
+### Résultat G4a : un corollaire sur le problème de Hurwitz (apparemment non publié)
+
+**Ce n'est pas un progrès sur P vs NP.** C'est un résultat annexe, sur une question d'algèbre classique.
+
+- **Énoncé :** P(N) ≤ N^√2 · (log N)^O(1). Conséquence : pour la variante du problème de Hurwitz (Σa_i²)(Σb_j²) = Σ_{k≤s} f_k f'_k (formes bilinéaires sur Q), on a s ≤ N^(√2+o(1)). Sur C, cela donne une formule de composition avec 2·N^(√2+o(1)) carrés.
+- **Meilleure borne publiée connue :** O(N^1,62) (Hrubeš, CCC 2024).
+- **Preuve (complète dans `code/gen4/g4a/proof.md`) :**
+  1. Si Σ A_s = d·[x=v][y=u] avec d ≠ 0, alors P ≤ Σ_s min(rang_lignes(A_s), rang_colonnes(A_s)).
+  2. Les 4h+1 pièces de l'annexe B (algèbre de Heisenberg, indexées par les partitions de h) satisfont Σ A_s = h!·[X=V][Y=U] exactement (lemmes 9 et 10).
+  3. Chaque pièce passe par des espaces de poids : min(rangs) ≤ Σ_{w≤2h} p(w) ≤ (2h+1)·p(2h).
+  4. Hardy-Ramanujan : p(2h) = p(h)^√2 · Θ(h^(√2−1)). Avec M = p(h), on obtient P(M) ≤ M^√2 · polylog(M).
+- **Vérifications :** calcul exact en entiers pour h = 2 à 6 (la somme des pièces égale h!·croisement en tous les points ; rangs exacts proches des bornes).
+- **Limite :** asymptotique seulement. La borne bat N^1,62 seulement pour N ≥ environ 2^71.
+- **Nouveauté :** l'article de Claude ne tire pas cette conclusion (son annexe G cite seulement N^(11/6) et N^1,62). Les recherches web n'ont rien trouvé de mieux que N^1,62. **À faire vérifier par des experts** avant toute annonce.
 
 ## 4 bis. Pistes restantes pour chercher plus loin
 
