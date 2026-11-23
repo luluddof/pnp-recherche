@@ -174,6 +174,17 @@ Articles disponibles en texte (pour les sous-agents) : article de Claude, expos�
 - **Relecture adverse (G5b) :** mathématiquement **confirmé** avec un code indépendant (identité exacte pour h = 1 à 6, rangs exacts identiques, identité de composition vérifiée symboliquement pour h = 3 et 4).
 - **Portée exacte :** améliore la variante « produit de formes bilinéaires » sur Q (caractéristique 0), et σ_C(N) ≤ 2·N^(√2+o(1)) sur C. N'améliore **pas** : la caractéristique positive fixée (division par h!), les sommes de carrés sur R, les formules entières.
 
+## 4 quater. Génération 6 (en cours) : problèmes ouverts précis, comme étapes
+
+Stratégie : résoudre d'abord des problèmes ouverts plus petits, cités dans les articles de 2026. Chaque résultat positif passe ensuite par une relecture adverse.
+
+| Voie | Problème ouvert | État |
+|---|---|---|
+| G6a | Limits §9 : schéma « produit de clauses » avec √n groupes sur un expanseur (2^Õ(√n)) — construire ou prouver impossible | en cours |
+| G6b | Identité à d directions (d = 3) pour les diagonales d'une boîte, avec un gain meilleur que les grilles | en cours |
+| G6c | Article de Claude : enlever le facteur log log n de la borne en n | en cours |
+| G6d | Méthode d'OpenAI avec une erreur différente en chaque point | en cours |
+
 ## 4 bis. Pistes restantes pour chercher plus loin
 
 | Piste | Pourquoi elle reste ouverte | Première expérience simple |
