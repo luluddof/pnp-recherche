@@ -1,0 +1,6 @@
+HighsMipSolverData::transformNewIntegerFeasibleSolution tmpSolver.run();
+k=4 gain<=0.200: best rank fraction 0.5000 by cube Q4
+k=4 gain<=0.250: best rank fraction 0.3750 by cube Q4
+k=4 gain<=0.333: best rank fraction 0.2500 by [6,4] #2
+k=4 gain<=0.400: best rank fraction 0.2500 by [5,4] #1
+k=4 gain<=0.500: best rank fraction 0.1250 by cube Q4

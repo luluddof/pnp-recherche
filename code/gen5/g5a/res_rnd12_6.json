@@ -1,0 +1,1 @@
+{"name": "random [12,6] code w/ all-ones", "K": 64, "D": 12, "rows": [[0, 32, true, 32, true], [1, 32, true, 32, true], [2, 32, true, 32, true], [3, 32, true, 32, true], [4, 16, true, 16, true], [5, 8, true, 12, false], [6, 8, true, 8, true], [7, 4, true, 4, true], [8, 2, true, 2, true], [9, 1, true, 1, true]]}

@@ -1,0 +1,28 @@
+HighsMipSolverData::transformNewIntegerFeasibleSolution tmpSolver.run();
+HighsMipSolverData::transformNewIntegerFeasibleSolution tmpSolver.run();
+HighsMipSolverData::transformNewIntegerFeasibleSolution tmpSolver.run();
+HighsMipSolverData::transformNewIntegerFeasibleSolution tmpSolver.run();
+HighsMipSolverData::transformNewIntegerFeasibleSolution tmpSolver.run();
+HighsMipSolverData::transformNewIntegerFeasibleSolution tmpSolver.run();
+HighsMipSolverData::transformNewIntegerFeasibleSolution tmpSolver.run();
+HighsMipSolverData::transformNewIntegerFeasibleSolution tmpSolver.run();
+HighsMipSolverData::transformNewIntegerFeasibleSolution tmpSolver.run();
+HighsMipSolverData::transformNewIntegerFeasibleSolution tmpSolver.run();
+HighsMipSolverData::transformNewIntegerFeasibleSolution tmpSolver.run();
+HighsMipSolverData::transformNewIntegerFeasibleSolution tmpSolver.run();
+HighsMipSolverData::transformNewIntegerFeasibleSolution tmpSolver.run();
+HighsMipSolverData::transformNewIntegerFeasibleSolution tmpSolver.run();
+HighsMipSolverData::transformNewIntegerFeasibleSolution tmpSolver.run();
+HighsMipSolverData::transformNewIntegerFeasibleSolution tmpSolver.run();
+HighsMipSolverData::transformNewIntegerFeasibleSolution tmpSolver.run();
+HighsMipSolverData::transformNewIntegerFeasibleSolution tmpSolver.run();
+HighsMipSolverData::transformNewIntegerFeasibleSolution tmpSolver.run();
+HighsMipSolverData::transformNewIntegerFeasibleSolution tmpSolver.run();
+HighsMipSolverData::transformNewIntegerFeasibleSolution tmpSolver.run();
+HighsMipSolverData::transformNewIntegerFeasibleSolution tmpSolver.run();
+HighsMipSolverData::transformNewIntegerFeasibleSolution tmpSolver.run();
+k=5 gain<=0.200: best rank fraction 0.3750 by cube Q5
+k=5 gain<=0.250: best rank fraction 0.3750 by cube Q5
+k=5 gain<=0.333: best rank fraction 0.2500 by [6,5] #0
+k=5 gain<=0.400: best rank fraction 0.2188 by cube Q5
+k=5 gain<=0.500: best rank fraction 0.1250 by [6,5] #0

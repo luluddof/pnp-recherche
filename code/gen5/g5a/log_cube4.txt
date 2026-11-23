@@ -1,0 +1,7 @@
+
+== cube Q_4 (product): K=16, D=4
+  d  gain=d/D  alpha_LB(*=proven max)  TI_rank_UB(*=proven TI-opt)  [fraction of K]
+   0  0.000       8* (0.500)      8* (0.500)
+   1  0.250       5* (0.312)      6* (0.375)
+   2  0.500       2* (0.125)      2* (0.125)
+   3  0.750       1* (0.062)      1* (0.062)

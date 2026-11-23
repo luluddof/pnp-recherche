@@ -1,0 +1,18 @@
+HighsMipSolverData::transformNewIntegerFeasibleSolution tmpSolver.run();
+HighsMipSolverData::transformNewIntegerFeasibleSolution tmpSolver.run();
+HighsMipSolverData::transformNewIntegerFeasibleSolution tmpSolver.run();
+HighsMipSolverData::transformNewIntegerFeasibleSolution tmpSolver.run();
+HighsMipSolverData::transformNewIntegerFeasibleSolution tmpSolver.run();
+
+== random [12,6] code w/ all-ones: K=64, D=12
+  d  gain=d/D  alpha_LB(*=proven max)  TI_rank_UB(*=proven TI-opt)  [fraction of K]
+   0  0.000      32* (0.500)     32* (0.500)
+   1  0.083      32* (0.500)     32* (0.500)
+   2  0.167      32* (0.500)     32* (0.500)
+   3  0.250      32* (0.500)     32* (0.500)
+   4  0.333      16* (0.250)     16* (0.250)
+   5  0.417       8* (0.125)     12  (0.188)
+   6  0.500       8* (0.125)      8* (0.125)
+   7  0.583       4* (0.062)      4* (0.062)
+   8  0.667       2* (0.031)      2* (0.031)
+   9  0.750       1* (0.016)      1* (0.016)

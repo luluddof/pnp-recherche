@@ -10,6 +10,20 @@ Les programmes et les données sont dans le dossier `code/`.
 
 ---
 
+## Bilan après 5 générations (23 novembre 2026)
+
+- **P vs NP n'est pas résolu.** Aucune voie ne mène à un algorithme polynomial pour 3-SAT.
+- **20 voies explorées** par 26 sous-agents, plus 2 outils (banc de test, cahier des charges) et 1 relecture adverse.
+- **L'obstacle central :** prouver qu'une formule 3-SAT aléatoire est insatisfaisable avec m = O(n) clauses. Toutes les méthodes testées demandent m ≈ n^1,5, ou un temps exponentiel.
+- **Le mur des algorithmes de 2026 :** les algorithmes d'OpenAI et de Claude (2^(n/√log n)) utilisent tous les deux une structure produit. Dans ce cadre, on ne descend pas sous environ 2^(n/log n) (G4b, G4c, G5a).
+- **Seul résultat mathématique « nouveau » trouvé :** la borne P(N) ≤ N^√2 sur une variante du problème de Hurwitz. Elle est correcte, mais **déjà publiée** par d'autres en novembre 2026.
+- **Questions ouvertes les plus concrètes :**
+  1. Le schéma « produit de clauses » avec √n groupes sur un expanseur (papier Limits, §9). Il donnerait 2^Õ(√n), toujours pas polynomial.
+  2. Une identité à d directions pour les diagonales d'une boîte de dimension d, avec ρ_d < ρ₂^(log₂ d) (G4b).
+  3. Des erreurs différentes en chaque point dans la méthode d'OpenAI (G4c, G5a).
+
+---
+
 ## 0. Faits de base à retenir
 
 | Fait | Source |
@@ -129,7 +143,13 @@ Articles disponibles en texte (pour les sous-agents) : article de Claude, expos�
 | G4b | Autres géométries de récursion pour l'algorithme de Claude | ❌ Aucune géométrie n'atteint 2^(n^(1−ε)). **Lemme 1 (dans le modèle) :** pour réécrire une fraction constante des bits, il faut élever K au carré. **Théorème 1 (esquisse, vérifiée par programmation dynamique) :** dans le modèle à deux partitions, le temps est au moins 2^(Ω(m/log m)). Boîtes de dimension d (spéculatif) : au mieux 2^(m/2^(O(√log m))). Pour aller plus loin, il faudrait des gadgets qui touchent 3 parties ou plus, ou une récursion sur des instances qui ne sont pas des cliques. Dossier : `code/gen4/g4b/` |
 
 **Génération 5 :**
-- G5a = structure non produit sur des expanseurs (la piste des « Limits » pour 2^Õ(√n)) : en cours.
+- G5a = structure non produit sur des expanseurs (la piste des « Limits » pour 2^Õ(√n)) : ❌ pour le mécanisme d'OpenAI ; question ouverte pour l'autre.
+  - **Question ouverte citée** (Limits, §9) : un schéma sur un expanseur avec √n groupes, largeur O(√n), ordre de Taylor O(√n) et peu de mesures par groupe donnerait 2^Õ(√n). « From below, one must show that measurements cannot absorb the cut. »
+  - **Lemme A :** l'erreur de rang minimal est une complétion de rang minimal de l'échange C sur les paires éloignées.
+  - **Lemme B :** rang ≥ plus grand anticode de diamètre < D − d ≥ K/(1 + N_d). Cela généralise le lemme de G4c à toute structure d'indices.
+  - **Corollaire (prouvé) :** sur un code bon, un expanseur ou un 2-design, le rang est ≥ K/2, sauf si le gain dépasse une constante. L'interpolation demande de la localité, le contraire de l'expansion. Expériences MILP : le cube (structure produit) est toujours le meilleur.
+  - **Reste ouvert :** la voie « produit de clauses » avec √n groupes (le problème ouvert du papier Limits), des erreurs différentes en chaque point, et l'optimalité générale du cube.
+  - Dossier : `code/gen5/g5a/`.
 - G5b = relecture adverse : ✅ terminée.
   - G4a (Hurwitz) : **correct mais déjà publié** (Siemaszko, Zenodo, 7 novembre 2026 ; Debnath, novembre 2026).
   - Lemme de G4c : **correct**, mais c'est une observation courte et élémentaire. Le cas symétrique découle de résultats connus (Aspnes-Beigel-Furst-Rudich, 1994). « √log n est optimal pour la méthode d'OpenAI » est vrai seulement sous des hypothèses précises (erreur E commune, un point par coordonnée, ℓ ≤ log n/log log n).
