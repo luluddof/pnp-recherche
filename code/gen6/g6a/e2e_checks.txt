@@ -1,0 +1,14 @@
+== e2e cut-measure clause-dependent: #F=977, H(0) mod p=977, Hermite-recovered=977, q=6
+   t=1: H(t)=7911198917723/47775744000 (brute) == design evaluation; s=4 rho=8 reading-tuples=256 per-group readings=[16, 2, 8]
+   t=2: H(t)=-6014210231/123018750 (brute) == design evaluation; s=4 rho=7 reading-tuples=128 per-group readings=[4, 8, 4]
+   t=3: H(t)=115352413/40960000 (brute) == design evaluation; s=4 rho=6 reading-tuples=64 per-group readings=[8, 8, 1]
+   t=4: H(t)=-13770390731/759375 (brute) == design evaluation; s=4 rho=6 reading-tuples=64 per-group readings=[4, 8, 2]
+   t=5: H(t)=-1733275678153733/644972544 (brute) == design evaluation; s=4 rho=8 reading-tuples=256 per-group readings=[4, 4, 16]
+   t=6: H(t)=-21059169208/125 (brute) == design evaluation; s=4 rho=7 reading-tuples=128 per-group readings=[8, 2, 8]
+== e2e global-sum: #F=977, H(0) mod p=977, Hermite-recovered=977, q=6
+   t=1: H(t)=-241040373140736851334449233355520785479231065359630148659413441698779/142657607172096 (brute) == design evaluation; s=4 rho=11 reading-tuples=3072 per-group readings=[12, 16, 16]
+   t=2: H(t)=-207797282281260844616181729503520307913830845358749004795205939062077629/2125764 (brute) == design evaluation; s=4 rho=11 reading-tuples=3072 per-group readings=[16, 12, 16]
+   t=3: H(t)=-54058264076238836791965813118201868376514474496364007597057306044458917766884859/268435456 (brute) == design evaluation; s=4 rho=10 reading-tuples=2048 per-group readings=[16, 16, 8]
+   t=4: H(t)=-3269539948971983022500922065036455578875780376124048209261495393520554431658760856/531441 (brute) == design evaluation; s=4 rho=9 reading-tuples=1536 per-group readings=[12, 16, 8]
+   t=5: H(t)=-73804674736982815754645846853654024889087399234035678590798226380047876710590067391765077563/3962711310336 (brute) == design evaluation; s=4 rho=11 reading-tuples=3072 per-group readings=[12, 16, 16]
+   t=6: H(t)=-417465059705156484808735499461809687576032036688648620532110096887778437438144082023/32 (brute) == design evaluation; s=4 rho=6 reading-tuples=480 per-group readings=[5, 8, 12]

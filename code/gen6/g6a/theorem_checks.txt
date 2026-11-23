@@ -1,0 +1,80 @@
+== cut-measure, variable-uniform: n=24 |X|=8 R=2 q=18  sum_t(Edef-rho)_+=0.00 <= nR=48  max nullity-sum over omegas=48
+    {'t': 1, 's': 6, 'g': 4, 'rho': 12, 'mu': 4, 'w_ub': 3, 'q': 18, 'split': 18, 'Edef': 3.36, 'lb': 2.0}
+    {'t': 2, 's': 6, 'g': 4, 'rho': 13, 'mu': 4, 'w_ub': 3, 'q': 18, 'split': 19, 'Edef': 4.88, 'lb': 4.0}
+    {'t': 3, 's': 6, 'g': 4, 'rho': 16, 'mu': 4, 'w_ub': 3, 'q': 18, 'split': 21, 'Edef': 4.42, 'lb': 4.0}
+    {'t': 4, 's': 6, 'g': 4, 'rho': 18, 'mu': 4, 'w_ub': 3, 'q': 18, 'split': 21, 'Edef': 4.0, 'lb': 3.0}
+    {'t': 5, 's': 6, 'g': 4, 'rho': 10, 'mu': 4, 'w_ub': 2, 'q': 18, 'split': 18, 'Edef': 3.09, 'lb': 2.0}
+    {'t': 6, 's': 6, 'g': 4, 'rho': 16, 'mu': 4, 'w_ub': 3, 'q': 18, 'split': 23, 'Edef': 4.07, 'lb': 3.0}
+    {'t': 7, 's': 6, 'g': 4, 'rho': 17, 'mu': 4, 'w_ub': 3, 'q': 18, 'split': 21, 'Edef': 3.09, 'lb': 2.0}
+    {'t': 8, 's': 6, 'g': 4, 'rho': 13, 'mu': 3, 'w_ub': 3, 'q': 18, 'split': 22, 'Edef': 4.34, 'lb': 4.0}
+== cut-measure, clause-dependent: n=24 |X|=8 R=2 q=18  sum_t(Edef-rho)_+=0.00 <= nR=48  max nullity-sum over omegas=48
+    {'t': 1, 's': 6, 'g': 4, 'rho': 11, 'mu': 4, 'w_ub': 2, 'q': 18, 'split': 19, 'Edef': 2.67, 'lb': 1.0}
+    {'t': 2, 's': 6, 'g': 4, 'rho': 15, 'mu': 4, 'w_ub': 3, 'q': 18, 'split': 18, 'Edef': 2.7, 'lb': 1.0}
+    {'t': 3, 's': 6, 'g': 4, 'rho': 12, 'mu': 4, 'w_ub': 3, 'q': 18, 'split': 21, 'Edef': 4.71, 'lb': 4.0}
+    {'t': 4, 's': 6, 'g': 4, 'rho': 16, 'mu': 4, 'w_ub': 3, 'q': 18, 'split': 22, 'Edef': 3.25, 'lb': 2.0}
+    {'t': 5, 's': 6, 'g': 4, 'rho': 14, 'mu': 4, 'w_ub': 3, 'q': 18, 'split': 22, 'Edef': 3.21, 'lb': 2.0}
+    {'t': 6, 's': 6, 'g': 4, 'rho': 15, 'mu': 4, 'w_ub': 2, 'q': 18, 'split': 18, 'Edef': 3.24, 'lb': 2.0}
+    {'t': 7, 's': 6, 'g': 4, 'rho': 14, 'mu': 4, 'w_ub': 3, 'q': 18, 'split': 21, 'Edef': 3.31, 'lb': 2.0}
+    {'t': 8, 's': 6, 'g': 4, 'rho': 12, 'mu': 4, 'w_ub': 3, 'q': 18, 'split': 19, 'Edef': 2.85, 'lb': 2.0}
+== global-sum (1 all-ones row/group + leftovers): n=24 |X|=8 R=2 q=18  sum_t(Edef-rho)_+=0.00 <= nR=48  max nullity-sum over omegas=40
+    {'t': 1, 's': 6, 'g': 4, 'rho': 21, 'mu': 4, 'w_ub': 3, 'q': 18, 'split': 20, 'Edef': 3.18, 'lb': 2.0}
+    {'t': 2, 's': 6, 'g': 4, 'rho': 14, 'mu': 4, 'w_ub': 3, 'q': 18, 'split': 20, 'Edef': 3.57, 'lb': 3.0}
+    {'t': 3, 's': 6, 'g': 4, 'rho': 17, 'mu': 4, 'w_ub': 3, 'q': 18, 'split': 20, 'Edef': 3.7, 'lb': 3.0}
+    {'t': 4, 's': 6, 'g': 4, 'rho': 19, 'mu': 4, 'w_ub': 3, 'q': 18, 'split': 22, 'Edef': 3.3, 'lb': 2.0}
+    {'t': 5, 's': 6, 'g': 4, 'rho': 14, 'mu': 4, 'w_ub': 3, 'q': 18, 'split': 18, 'Edef': 3.02, 'lb': 2.0}
+    {'t': 6, 's': 6, 'g': 4, 'rho': 13, 'mu': 4, 'w_ub': 3, 'q': 18, 'split': 19, 'Edef': 3.59, 'lb': 3.0}
+    {'t': 7, 's': 6, 'g': 4, 'rho': 14, 'mu': 4, 'w_ub': 3, 'q': 18, 'split': 18, 'Edef': 3.28, 'lb': 2.0}
+    {'t': 8, 's': 6, 'g': 4, 'rho': 15, 'mu': 4, 'w_ub': 3, 'q': 18, 'split': 19, 'Edef': 3.95, 'lb': 3.0}
+== random dense deformation, minimal R_{t,h}: n=24 |X|=8 R=2 q=18  sum_t(Edef-rho)_+=0.00 <= nR=48  max nullity-sum over omegas=0
+    {'t': 1, 's': 6, 'g': 4, 'rho': 24, 'mu': 4, 'w_ub': 3, 'q': 18, 'split': 17, 'Edef': 5.41, 'lb': 5.0}
+    {'t': 2, 's': 6, 'g': 4, 'rho': 24, 'mu': 4, 'w_ub': 3, 'q': 18, 'split': 20, 'Edef': 3.14, 'lb': 2.0}
+    {'t': 3, 's': 6, 'g': 4, 'rho': 24, 'mu': 4, 'w_ub': 3, 'q': 18, 'split': 21, 'Edef': 2.57, 'lb': 0.29}
+    {'t': 4, 's': 6, 'g': 4, 'rho': 24, 'mu': 4, 'w_ub': 3, 'q': 18, 'split': 20, 'Edef': 3.59, 'lb': 3.0}
+    {'t': 5, 's': 6, 'g': 4, 'rho': 24, 'mu': 4, 'w_ub': 3, 'q': 18, 'split': 18, 'Edef': 4.35, 'lb': 4.0}
+    {'t': 6, 's': 6, 'g': 4, 'rho': 24, 'mu': 4, 'w_ub': 3, 'q': 18, 'split': 23, 'Edef': 3.01, 'lb': 2.0}
+    {'t': 7, 's': 6, 'g': 4, 'rho': 24, 'mu': 4, 'w_ub': 3, 'q': 18, 'split': 21, 'Edef': 3.31, 'lb': 2.0}
+    {'t': 8, 's': 6, 'g': 4, 'rho': 24, 'mu': 4, 'w_ub': 3, 'q': 18, 'split': 22, 'Edef': 3.28, 'lb': 2.0}
+== cut-measure, variable-uniform: n=30 |X|=10 R=2 q=18  sum_t(Edef-rho)_+=0.00 <= nR=60  max nullity-sum over omegas=60
+    {'t': 1, 's': 6, 'g': 5, 'rho': 22, 'mu': 5, 'w_ub': 4, 'q': 18, 'split': 27, 'Edef': 3.67, 'lb': 2.0}
+    {'t': 2, 's': 6, 'g': 5, 'rho': 24, 'mu': 5, 'w_ub': 4, 'q': 18, 'split': 28, 'Edef': 4.89, 'lb': 4.0}
+    {'t': 3, 's': 6, 'g': 5, 'rho': 17, 'mu': 5, 'w_ub': 3, 'q': 18, 'split': 25, 'Edef': 5.55, 'lb': 5.0}
+    {'t': 4, 's': 6, 'g': 5, 'rho': 24, 'mu': 5, 'w_ub': 4, 'q': 18, 'split': 28, 'Edef': 3.54, 'lb': 1.0}
+    {'t': 5, 's': 6, 'g': 5, 'rho': 17, 'mu': 5, 'w_ub': 4, 'q': 18, 'split': 25, 'Edef': 5.26, 'lb': 4.0}
+    {'t': 6, 's': 6, 'g': 5, 'rho': 21, 'mu': 5, 'w_ub': 4, 'q': 18, 'split': 25, 'Edef': 5.09, 'lb': 4.0}
+    {'t': 7, 's': 6, 'g': 5, 'rho': 16, 'mu': 5, 'w_ub': 3, 'q': 18, 'split': 27, 'Edef': 5.45, 'lb': 4.0}
+    {'t': 8, 's': 6, 'g': 5, 'rho': 19, 'mu': 5, 'w_ub': 3, 'q': 18, 'split': 26, 'Edef': 6.0, 'lb': 5.0}
+    {'t': 9, 's': 6, 'g': 5, 'rho': 22, 'mu': 5, 'w_ub': 4, 'q': 18, 'split': 27, 'Edef': 5.06, 'lb': 4.0}
+    {'t': 10, 's': 6, 'g': 5, 'rho': 23, 'mu': 5, 'w_ub': 4, 'q': 18, 'split': 26, 'Edef': 4.96, 'lb': 4.0}
+== cut-measure, clause-dependent: n=30 |X|=10 R=2 q=18  sum_t(Edef-rho)_+=0.00 <= nR=60  max nullity-sum over omegas=60
+    {'t': 1, 's': 6, 'g': 5, 'rho': 18, 'mu': 5, 'w_ub': 4, 'q': 18, 'split': 27, 'Edef': 3.51, 'lb': 1.0}
+    {'t': 2, 's': 6, 'g': 5, 'rho': 25, 'mu': 5, 'w_ub': 4, 'q': 18, 'split': 28, 'Edef': 3.69, 'lb': 1.0}
+    {'t': 3, 's': 6, 'g': 5, 'rho': 21, 'mu': 5, 'w_ub': 4, 'q': 18, 'split': 25, 'Edef': 4.64, 'lb': 3.0}
+    {'t': 4, 's': 6, 'g': 5, 'rho': 20, 'mu': 5, 'w_ub': 4, 'q': 18, 'split': 27, 'Edef': 7.03, 'lb': 6.0}
+    {'t': 5, 's': 6, 'g': 5, 'rho': 24, 'mu': 5, 'w_ub': 4, 'q': 18, 'split': 27, 'Edef': 3.76, 'lb': 2.0}
+    {'t': 6, 's': 6, 'g': 5, 'rho': 20, 'mu': 5, 'w_ub': 4, 'q': 18, 'split': 26, 'Edef': 5.05, 'lb': 4.0}
+    {'t': 7, 's': 6, 'g': 5, 'rho': 25, 'mu': 5, 'w_ub': 4, 'q': 18, 'split': 28, 'Edef': 4.47, 'lb': 3.0}
+    {'t': 8, 's': 6, 'g': 5, 'rho': 21, 'mu': 5, 'w_ub': 4, 'q': 18, 'split': 27, 'Edef': 4.81, 'lb': 4.0}
+    {'t': 9, 's': 6, 'g': 5, 'rho': 24, 'mu': 5, 'w_ub': 4, 'q': 18, 'split': 25, 'Edef': 7.32, 'lb': 7.0}
+    {'t': 10, 's': 6, 'g': 5, 'rho': 19, 'mu': 5, 'w_ub': 4, 'q': 18, 'split': 26, 'Edef': 4.34, 'lb': 3.0}
+== global-sum (1 all-ones row/group + leftovers): n=30 |X|=10 R=2 q=18  sum_t(Edef-rho)_+=0.00 <= nR=60  max nullity-sum over omegas=50
+    {'t': 1, 's': 6, 'g': 5, 'rho': 28, 'mu': 5, 'w_ub': 4, 'q': 18, 'split': 29, 'Edef': 5.15, 'lb': 4.0}
+    {'t': 2, 's': 6, 'g': 5, 'rho': 23, 'mu': 5, 'w_ub': 4, 'q': 18, 'split': 26, 'Edef': 5.28, 'lb': 4.0}
+    {'t': 3, 's': 6, 'g': 5, 'rho': 26, 'mu': 5, 'w_ub': 4, 'q': 18, 'split': 28, 'Edef': 4.25, 'lb': 3.0}
+    {'t': 4, 's': 6, 'g': 5, 'rho': 25, 'mu': 5, 'w_ub': 4, 'q': 18, 'split': 29, 'Edef': 3.61, 'lb': 1.0}
+    {'t': 5, 's': 6, 'g': 5, 'rho': 22, 'mu': 5, 'w_ub': 4, 'q': 18, 'split': 28, 'Edef': 3.92, 'lb': 2.0}
+    {'t': 6, 's': 6, 'g': 5, 'rho': 27, 'mu': 5, 'w_ub': 4, 'q': 18, 'split': 28, 'Edef': 3.6, 'lb': 1.0}
+    {'t': 7, 's': 6, 'g': 5, 'rho': 26, 'mu': 5, 'w_ub': 4, 'q': 18, 'split': 26, 'Edef': 4.76, 'lb': 3.0}
+    {'t': 8, 's': 6, 'g': 5, 'rho': 25, 'mu': 5, 'w_ub': 4, 'q': 18, 'split': 25, 'Edef': 4.36, 'lb': 3.0}
+    {'t': 9, 's': 6, 'g': 5, 'rho': 21, 'mu': 5, 'w_ub': 4, 'q': 18, 'split': 27, 'Edef': 4.3, 'lb': 3.0}
+    {'t': 10, 's': 6, 'g': 5, 'rho': 24, 'mu': 5, 'w_ub': 4, 'q': 18, 'split': 24, 'Edef': 4.92, 'lb': 4.0}
+== random dense deformation, minimal R_{t,h}: n=30 |X|=10 R=2 q=18  sum_t(Edef-rho)_+=0.00 <= nR=60  max nullity-sum over omegas=0
+    {'t': 1, 's': 6, 'g': 5, 'rho': 30, 'mu': 5, 'w_ub': 4, 'q': 18, 'split': 27, 'Edef': 3.75, 'lb': 2.0}
+    {'t': 2, 's': 6, 'g': 5, 'rho': 30, 'mu': 5, 'w_ub': 4, 'q': 18, 'split': 29, 'Edef': 4.06, 'lb': 2.0}
+    {'t': 3, 's': 6, 'g': 5, 'rho': 30, 'mu': 5, 'w_ub': 4, 'q': 18, 'split': 28, 'Edef': 3.56, 'lb': 1.0}
+    {'t': 4, 's': 6, 'g': 5, 'rho': 30, 'mu': 5, 'w_ub': 4, 'q': 18, 'split': 26, 'Edef': 4.98, 'lb': 4.0}
+    {'t': 5, 's': 6, 'g': 5, 'rho': 30, 'mu': 5, 'w_ub': 4, 'q': 18, 'split': 29, 'Edef': 4.09, 'lb': 2.0}
+    {'t': 6, 's': 6, 'g': 5, 'rho': 30, 'mu': 5, 'w_ub': 4, 'q': 18, 'split': 30, 'Edef': 5.1, 'lb': 4.0}
+    {'t': 7, 's': 6, 'g': 5, 'rho': 30, 'mu': 5, 'w_ub': 4, 'q': 18, 'split': 30, 'Edef': 5.01, 'lb': 4.0}
+    {'t': 8, 's': 6, 'g': 5, 'rho': 30, 'mu': 5, 'w_ub': 4, 'q': 18, 'split': 26, 'Edef': 4.32, 'lb': 3.0}
+    {'t': 9, 's': 6, 'g': 5, 'rho': 30, 'mu': 5, 'w_ub': 4, 'q': 18, 'split': 29, 'Edef': 3.81, 'lb': 2.0}
+    {'t': 10, 's': 6, 'g': 5, 'rho': 30, 'mu': 5, 'w_ub': 4, 'q': 18, 'split': 28, 'Edef': 4.49, 'lb': 3.0}
