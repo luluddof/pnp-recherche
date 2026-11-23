@@ -1,0 +1,50 @@
+h=5 M=7 Lemma10=True identity=True sum_min=465 all_ranks_within_bounds=True
+   s=-10 row    1<=    1 col   49<= 2617 True
+   s= -9 row    2<=    2 col   49<= 2020 True
+   s= -8 row    4<=    4 col   49<= 1552 True
+   s= -7 row    7<=    7 col   49<= 1182 True
+   s= -6 row   12<=   12 col   49<=  896 True
+   s= -5 row   18<=   19 col   49<=  672 True
+   s= -4 row   27<=   30 col   49<=  501 True
+   s= -3 row   40<=   45 col   49<=  369 True
+   s= -2 row   48<=   67 col   49<=  270 True
+   s= -1 row   46<=   97 col   49<=  194 True
+   s=  0 row   49<=  139 col   49<=  139 True
+   s=  1 row   49<=  194 col   49<=   97 True
+   s=  2 row   49<=  270 col   48<=   67 True
+   s=  3 row   49<=  369 col   39<=   45 True
+   s=  4 row   49<=  501 col   30<=   30 True
+   s=  5 row   49<=  672 col   19<=   19 True
+   s=  6 row   49<=  896 col   12<=   12 True
+   s=  7 row   49<= 1182 col    7<=    7 True
+   s=  8 row   49<= 1552 col    4<=    4 True
+   s=  9 row   49<= 2020 col    2<=    2 True
+   s= 10 row   49<= 2617 col    1<=    1 True
+   nonzero pieces s: [-10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+h=6 M=11 Lemma10=True identity=True sum_min=1139 all_ranks_within_bounds=True
+   s=-12 row    1<=    1 col  121<= 7143 True
+   s=-11 row    2<=    2 col  121<= 5624 True
+   s=-10 row    4<=    4 col  121<= 4411 True
+   s= -9 row    7<=    7 col  121<= 3439 True
+   s= -8 row   12<=   12 col  121<= 2669 True
+   s= -7 row   19<=   19 col  121<= 2057 True
+   s= -6 row   29<=   30 col  121<= 1578 True
+   s= -5 row   42<=   45 col  121<= 1200 True
+   s= -4 row   62<=   67 col  121<=  908 True
+   s= -3 row   89<=   97 col  121<=  680 True
+   s= -2 row  116<=  139 col  121<=  506 True
+   s= -1 row  116<=  195 col  121<=  372 True
+   s=  0 row  121<=  272 col  121<=  272 True
+   s=  1 row  121<=  372 col  121<=  195 True
+   s=  2 row  121<=  506 col  118<=  139 True
+   s=  3 row  121<=  680 col   93<=   97 True
+   s=  4 row  121<=  908 col   67<=   67 True
+   s=  5 row  121<= 1200 col   45<=   45 True
+   s=  6 row  121<= 1578 col   30<=   30 True
+   s=  7 row  121<= 2057 col   19<=   19 True
+   s=  8 row  121<= 2669 col   12<=   12 True
+   s=  9 row  121<= 3439 col    7<=    7 True
+   s= 10 row  121<= 4411 col    4<=    4 True
+   s= 11 row  121<= 5624 col    2<=    2 True
+   s= 12 row  121<= 7143 col    1<=    1 True
+   nonzero pieces s: [-12, -11, -10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]

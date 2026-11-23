@@ -128,11 +128,16 @@ Articles disponibles en texte (pour les sous-agents) : article de Claude, expos�
 | G4a | Vérifier l'observation P(N) ≤ N^(√2+o(1)) (variante du problème de Hurwitz) | ✅ **Vérifiée** (sous réserve des lemmes 9 et 10 de l'article de Claude). Voir ci-dessous. Dossier : `code/gen4/g4a/` |
 | G4b | Autres géométries de récursion pour l'algorithme de Claude | ❌ Aucune géométrie n'atteint 2^(n^(1−ε)). **Lemme 1 (dans le modèle) :** pour réécrire une fraction constante des bits, il faut élever K au carré. **Théorème 1 (esquisse, vérifiée par programmation dynamique) :** dans le modèle à deux partitions, le temps est au moins 2^(Ω(m/log m)). Boîtes de dimension d (spéculatif) : au mieux 2^(m/2^(O(√log m))). Pour aller plus loin, il faudrait des gadgets qui touchent 3 parties ou plus, ou une récursion sur des instances qui ne sont pas des cliques. Dossier : `code/gen4/g4b/` |
 
-**Génération 5 (en cours) :** G5a = structure non produit sur des expanseurs (la piste des « Limits » pour 2^Õ(√n)) ; G5b = relecture adverse indépendante des résultats G4a (Hurwitz) et du lemme de G4c.
+**Génération 5 :**
+- G5a = structure non produit sur des expanseurs (la piste des « Limits » pour 2^Õ(√n)) : en cours.
+- G5b = relecture adverse : ✅ terminée.
+  - G4a (Hurwitz) : **correct mais déjà publié** (Siemaszko, Zenodo, 7 novembre 2026 ; Debnath, novembre 2026).
+  - Lemme de G4c : **correct**, mais c'est une observation courte et élémentaire. Le cas symétrique découle de résultats connus (Aspnes-Beigel-Furst-Rudich, 1994). « √log n est optimal pour la méthode d'OpenAI » est vrai seulement sous des hypothèses précises (erreur E commune, un point par coordonnée, ℓ ≤ log n/log log n).
+  - Dossier : `code/gen5/g5b/`.
 | G4c | Méthode d'OpenAI : comparaison et combinaison avec celle de Claude | ❌ pour aller plus loin. **Même idée** dans les deux articles : développer un « échange croisé » sur une structure produit (Claude : 2 directions, lignes ou colonnes, ρ = 1/√2 ; OpenAI : ℓ directions, interpolation d'Hermite + erreur de petit rang). Les deux donnent α = 1/2, donc 2^(n/√log n). 3 combinaisons testées : aucune ne change α. **Lemme nouveau (non relu) :** si l'erreur E est la même en tous les points, rang(E) ≥ taille d'une boule de Hamming de rayon (ℓ−d−1)/2. Donc α = 1/2 est optimal pour la méthode d'OpenAI (vérifié numériquement pour ℓ ≤ 100). **Mur commun :** une structure produit d'au plus log n coordonnées ne descend pas sous 2^(n/log n). Piste : une structure **non produit**, par exemple sur des expanseurs avec √n groupes (donnerait 2^Õ(√n)). Dossier : `code/gen4/g4c/` |
 | G4d | Quel système de preuve correspond à l'algorithme de comptage ? | ✅ **IPS** (Ideal Proof System, Grochow-Pitassi) sur Q. Toute 3-CNF insatisfaisable a une réfutation IPS de taille 2^(O(m/√log m)) ; pour 3-SAT aléatoire (m = O(n)) : **2^(O(n/√log n))**. Cela sépare quantitativement IPS de PC, Nullstellensatz et SOS (2^Ω(n)) sur ces formules. Aucune voie trouvée vers Frege ou Extended Frege. Corollaire direct, mais aucune borne 2^o(n) antérieure trouvée pour un système standard à densité constante. Pour des réfutations **polynomiales**, il faudrait une hypothèse de type VP = VNP. Expérience : certificat construit et vérifié pour n = 8 à 32. Dossier : `code/gen4/g4d/` |
 
-### Résultat G4a : un corollaire sur le problème de Hurwitz (apparemment non publié)
+### Résultat G4a : un corollaire sur le problème de Hurwitz (correct, mais déjà publié par d'autres)
 
 **Ce n'est pas un progrès sur P vs NP.** C'est un résultat annexe, sur une question d'algèbre classique.
 
@@ -145,7 +150,9 @@ Articles disponibles en texte (pour les sous-agents) : article de Claude, expos�
   4. Hardy-Ramanujan : p(2h) = p(h)^√2 · Θ(h^(√2−1)). Avec M = p(h), on obtient P(M) ≤ M^√2 · polylog(M).
 - **Vérifications :** calcul exact en entiers pour h = 2 à 6 (la somme des pièces égale h!·croisement en tous les points ; rangs exacts proches des bornes).
 - **Limite :** asymptotique seulement. La borne bat N^1,62 seulement pour N ≥ environ 2^71.
-- **Nouveauté :** l'article de Claude ne tire pas cette conclusion (son annexe G cite seulement N^(11/6) et N^1,62). Les recherches web n'ont rien trouvé de mieux que N^1,62. **À faire vérifier par des experts** avant toute annonce.
+- **Nouveauté : NON.** La relecture adverse (G5b) a trouvé que ce résultat est **déjà publié** : J. P. Siemaszko (7 novembre 2026, Zenodo, DOI 10.5281/zenodo.24024689), repris par L. Debnath (dépôt GitHub puterfaction/hurwitz-sqrt2, novembre 2026). Les deux le tirent aussi du théorème B de l'article de Claude.
+- **Relecture adverse (G5b) :** mathématiquement **confirmé** avec un code indépendant (identité exacte pour h = 1 à 6, rangs exacts identiques, identité de composition vérifiée symboliquement pour h = 3 et 4).
+- **Portée exacte :** améliore la variante « produit de formes bilinéaires » sur Q (caractéristique 0), et σ_C(N) ≤ 2·N^(√2+o(1)) sur C. N'améliore **pas** : la caractéristique positive fixée (division par h!), les sommes de carrés sur R, les formules entières.
 
 ## 4 bis. Pistes restantes pour chercher plus loin
 
