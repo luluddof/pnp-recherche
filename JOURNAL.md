@@ -185,6 +185,15 @@ Stratégie : résoudre d'abord des problèmes ouverts plus petits, cités dans l
 | G6c | Article de Claude : enlever le facteur log log n de la borne en n | ⚠️ Non résolu, mais la question est réduite. **Prop. R (prouvée) :** le coût dépend du log de la densité **moyenne** m/n, pas du degré maximal. La question devient : **Q1** — existe-t-il une sparsification qui préserve le comptage, en 2^(O(n/√log n)) morceaux de densité moyenne 2^O(k) ? Rééquilibrer ε ou brancher sur les variables de grand degré ne suffit pas (prouvé). **Prop. L :** les sparsifieurs « par parties, sans nouvelles variables » ont besoin d'une densité ≥ 1/(19ε) (sur des cliques disjointes). Échappatoire possible : des variables d'extension. **Q2** (ouverte) : des tests de parité avec O(n·2^O(k)) incidences au total. Dossier : `code/gen6/g6c/` |
 | G6d | Méthode d'OpenAI avec une erreur différente en chaque point | ⚠️ **Ouvert, avec une piste positive.** **Lemme (prouvé) :** pour tout ensemble S de s directions, Σ rang(E_k) ≥ (N_S − d)·2^(ℓ−s) (argument du déterminant sur un bloc). Conséquence : le cadre ne descend jamais sous ≈ 2^(n (log log n)³/log n). **Les erreurs par point aident vraiment :** famille explicite de degré 1 avec ρ = 1/4 (contre → 1/2 avec une erreur commune), vérifiée exactement pour ℓ = 2 à 10. **Question ouverte précise :** existe-t-il des familles avec ρ = 2^(−Θ(d)) uniformément en ℓ ? Cela donnerait #SAT en 2^(O(n (log log n)³/log n)), **mieux que 2^(n/√log n)**. MILP : valeurs (ℓ−d)·2^(ℓ−d−1) pour les petits cas, mais le motif se casse à (5,2). Dossier : `code/gen6/g6d/` |
 
+## 4 quinquies. Génération 7 (en cours)
+
+| Voie | Objectif | État |
+|---|---|---|
+| G7a | Construire des familles à erreurs par point avec ρ = 2^(−Θ(d)) : **accélérer l'algorithme d'OpenAI** au-delà de 2^(n/√log n) | en cours |
+| G7b | Étendre le résultat G6a (Limits §9) au modèle de coût « programmation dynamique » | en cours |
+| G7c | Rédiger une note mathématique propre sur le résultat G6a, pour une relecture par des experts humains | en cours |
+| G7d | Question Q1 : sparsification qui garde le comptage avec une densité moyenne bornée (enlever log log n) | en cours |
+
 ## 4 bis. Pistes restantes pour chercher plus loin
 
 | Piste | Pourquoi elle reste ouverte | Première expérience simple |
