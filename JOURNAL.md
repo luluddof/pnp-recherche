@@ -182,7 +182,7 @@ Stratégie : résoudre d'abord des problèmes ouverts plus petits, cités dans l
 |---|---|---|
 | G6a | Limits §9 : schéma « produit de clauses » avec √n groupes sur un expanseur (2^Õ(√n)) — construire ou prouver impossible | en cours |
 | G6b | Identité à d directions (d = 3) pour les diagonales d'une boîte, avec un gain meilleur que les grilles | en cours |
-| G6c | Article de Claude : enlever le facteur log log n de la borne en n | en cours |
+| G6c | Article de Claude : enlever le facteur log log n de la borne en n | ⚠️ Non résolu, mais la question est réduite. **Prop. R (prouvée) :** le coût dépend du log de la densité **moyenne** m/n, pas du degré maximal. La question devient : **Q1** — existe-t-il une sparsification qui préserve le comptage, en 2^(O(n/√log n)) morceaux de densité moyenne 2^O(k) ? Rééquilibrer ε ou brancher sur les variables de grand degré ne suffit pas (prouvé). **Prop. L :** les sparsifieurs « par parties, sans nouvelles variables » ont besoin d'une densité ≥ 1/(19ε) (sur des cliques disjointes). Échappatoire possible : des variables d'extension. **Q2** (ouverte) : des tests de parité avec O(n·2^O(k)) incidences au total. Dossier : `code/gen6/g6c/` |
 | G6d | Méthode d'OpenAI avec une erreur différente en chaque point | en cours |
 
 ## 4 bis. Pistes restantes pour chercher plus loin
