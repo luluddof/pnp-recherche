@@ -1,0 +1,58 @@
+distinct vertex representations: 48  support sizes: [5, 5, 5, 5, 6, 6, 6, 6, 6, 6]
+best 2-partitions by multinomial grouped figure:
+  exp=0.7387 mult=0.9459 cA=[0.0, 4.0, 0.0] cB=[4.0, 2.58, 4.0]
+  exp=0.7387 mult=0.9459 cA=[4.0, 0.0, 0.0] cB=[2.58, 4.0, 4.0]
+  exp=0.7387 mult=0.9459 cA=[4.0, 4.0, 0.0] cB=[2.58, 2.58, 4.0]
+  exp=0.7387 mult=0.9459 cA=[0.0, 4.0, 0.0] cB=[4.0, 2.58, 4.0]
+  exp=0.7387 mult=0.9459 cA=[4.0, 0.0, 0.0] cB=[2.58, 4.0, 4.0]
+  exp=0.7387 mult=0.9459 cA=[4.0, 0.0, 4.0] cB=[2.58, 4.0, 2.58]
+  exp=0.7387 mult=0.9459 cA=[0.0, 4.0, 0.0] cB=[4.0, 2.58, 4.0]
+  exp=0.7387 mult=0.9459 cA=[4.0, 0.0, 0.0] cB=[2.58, 4.0, 4.0]
+exact 2-piece grouped figure (eigen count) for top 30 by multinomial:
+  grp=0.9141 diag=True exp=0.7387 mult=0.9459
+  grp=0.9141 diag=True exp=0.7387 mult=0.9459
+  grp=0.9141 diag=True exp=0.7387 mult=0.9459
+  grp=0.9141 diag=True exp=0.7387 mult=0.9459
+  grp=0.9141 diag=True exp=0.7387 mult=0.9459
+  grp=0.9141 diag=True exp=0.7387 mult=0.9459
+  grp=0.9141 diag=True exp=0.7387 mult=0.9459
+  grp=0.9141 diag=True exp=0.7387 mult=0.9459
+  grp=0.9141 diag=True exp=0.7387 mult=0.9459
+  grp=0.9141 diag=True exp=0.7387 mult=0.9459
+  grp=0.9141 diag=True exp=0.7387 mult=0.9459
+  grp=0.9141 diag=True exp=0.7387 mult=0.9459
+  grp=0.9141 diag=True exp=0.7387 mult=0.9459
+  grp=0.9141 diag=True exp=0.7387 mult=0.9459
+  grp=0.9141 diag=True exp=0.7387 mult=0.9459
+  grp=0.9141 diag=True exp=0.7387 mult=0.9459
+  grp=0.9141 diag=True exp=0.7387 mult=0.9459
+  grp=0.9141 diag=True exp=0.7387 mult=0.9459
+  grp=0.9141 diag=True exp=0.7387 mult=0.9459
+  grp=0.9141 diag=True exp=0.7387 mult=0.9459
+  grp=0.9141 diag=True exp=0.7387 mult=0.9459
+  grp=0.9141 diag=True exp=0.7387 mult=0.9459
+  grp=0.9141 diag=True exp=0.7387 mult=0.9459
+  grp=0.9141 diag=True exp=0.7387 mult=0.9459
+  grp=0.9141 diag=True exp=0.7387 mult=0.9459
+  grp=0.9141 diag=True exp=0.7387 mult=0.9459
+  grp=0.9141 diag=True exp=0.7387 mult=0.9459
+  grp=0.9141 diag=True exp=0.7387 mult=0.9459
+  grp=0.9141 diag=True exp=0.7387 mult=0.9459
+  grp=0.9141 diag=True exp=0.7387 mult=0.9459
+BEST exact grouped 2-piece: 0.9140555424399603 q= [0.         0.56308509 0.43691491] diagonalizable: True
+best by multinomial (3-4 pieces):
+  mult=0.9584 exp=0.7018 costs=[[2.81, 2.81, 4.0], [0.0, 4.0, 0.0], [4.0, 0.0, 0.0]]
+  mult=0.9584 exp=0.7018 costs=[[0.0, 0.0, 4.0], [2.81, 4.0, 2.81], [4.0, 0.0, 0.0]]
+  mult=0.9584 exp=0.7018 costs=[[0.0, 0.0, 4.0], [4.0, 2.81, 2.81], [0.0, 4.0, 0.0]]
+  mult=0.9584 exp=0.7018 costs=[[2.81, 2.81, 4.0], [0.0, 4.0, 0.0], [4.0, 0.0, 0.0]]
+  mult=0.9584 exp=0.7018 costs=[[0.0, 0.0, 4.0], [2.81, 4.0, 2.81], [4.0, 0.0, 0.0]]
+  mult=0.9584 exp=0.7018 costs=[[0.0, 0.0, 4.0], [4.0, 2.81, 2.81], [0.0, 4.0, 0.0]]
+best by single-block exp figure:
+  exp=0.5000 mult=1.0000 costs=[[0.0, 0.0, 4.0], [2.0, 2.0, 2.0], [4.0, 4.0, 0.0], [2.0, 2.0, 2.0]]
+  exp=0.5000 mult=1.0000 costs=[[4.0, 0.0, 4.0], [0.0, 4.0, 0.0], [2.0, 2.0, 2.0], [2.0, 2.0, 2.0]]
+  exp=0.5000 mult=1.0000 costs=[[4.0, 0.0, 4.0], [0.0, 4.0, 0.0], [2.0, 2.0, 2.0], [2.0, 2.0, 2.0]]
+  exp=0.5000 mult=1.0000 costs=[[0.0, 4.0, 4.0], [2.0, 2.0, 2.0], [2.0, 2.0, 2.0], [4.0, 0.0, 0.0]]
+exact k=2 type-class pieces:
+  base mult=0.9584: k=2 pieces=6 exp(k=2)=0.7018 rigorous bound=0.9475  costs=[[0.0, 8.0, 0.0], [3.7, 7.45, 4.95], [4.95, 4.95, 1.0], [5.61, 5.61, 8.0], [7.45, 3.7, 4.95], [8.0, 0.0, 0.0]]
+  base mult=0.9584: k=2 pieces=6 exp(k=2)=0.7018 rigorous bound=0.9475  costs=[[0.0, 0.0, 8.0], [3.7, 4.95, 7.45], [4.95, 1.0, 4.95], [5.61, 8.0, 5.61], [7.45, 4.95, 3.7], [8.0, 0.0, 0.0]]
+  base mult=0.9584: k=2 pieces=6 exp(k=2)=0.7018 rigorous bound=0.9475  costs=[[0.0, 0.0, 8.0], [4.95, 3.7, 7.45], [1.0, 4.95, 4.95], [8.0, 5.61, 5.61], [4.95, 7.45, 3.7], [0.0, 8.0, 0.0]]
