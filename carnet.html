@@ -71,7 +71,7 @@ footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);padd
   <h1>Carnet P vs NP</h1>
   <p class="lede">Toutes les voies explorées pour chercher un algorithme polynomial pour 3-SAT (direction P&nbsp;=&nbsp;NP), avec leurs résultats, la cause de chaque échec et l'actualité du problème.</p>
   <nav class="toc" aria-label="Sections">
-    <a href="#bilan">Bilan</a><a href="#actualite">Actualité 2026</a><a href="#gen0">Génération 0</a><a href="#gen1">Génération 1</a><a href="#gen2">Génération 2</a><a href="#gen3">Génération 3</a><a href="#gen4">Génération 4</a><a href="#pistes">Pistes restantes</a><a href="#histoire">Histoire</a><a href="#sources">Sources</a>
+    <a href="#bilan">Bilan</a><a href="#actualite">Actualité 2026</a><a href="#gen0">Génération 0</a><a href="#gen1">Génération 1</a><a href="#gen2">Génération 2</a><a href="#gen3">Génération 3</a><a href="#gen4">Génération 4</a><a href="#gen6">Génération 6</a><a href="#pistes">Pistes restantes</a><a href="#histoire">Histoire</a><a href="#sources">Sources</a>
   </nav>
 </header>
 
@@ -80,7 +80,7 @@ footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);padd
   <div class="status">
     <div class="stat"><b>20</b><span>voies de recherche explorées (et 2 outils construits)</span></div>
     <div class="stat"><b>26</b><span>sous-agents lancés, dont 1 relecteur adverse</span></div>
-    <div class="stat"><b>0</b><span>résultat nouveau confirmé (le résultat sur Hurwitz était déjà publié)</span></div>
+    <div class="stat"><b>1</b><span>résultat nouveau confirmé (négatif : Limits §9), pas sur P vs NP</span></div>
     <div class="stat"><b>0</b><span>preuve de P = NP ou de P ≠ NP</span></div>
   </div>
   <div class="callout">
@@ -208,6 +208,23 @@ footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);padd
       <tr><td>G5a · Structure non produit</td><td>Prouvé : sur un expanseur, un bon code ou un 2-design, l'erreur de la méthode d'OpenAI a un rang ≥ K/2. L'interpolation demande de la localité, le contraire de l'expansion. Le cube (structure produit) reste le meilleur dans les expériences. La voie « produit de clauses » avec √n groupes reste ouverte.</td><td><span class="chip bad">impossible pour OpenAI</span> <span class="chip wait">autre voie ouverte</span></td></tr>
       <tr><td>G5b · Relecture adverse</td><td>Résultat sur Hurwitz : correct, mais déjà publié. Lemme de G4c : correct, mais court et élémentaire ; le cas symétrique découle d'un résultat de 1994 (Aspnes-Beigel-Furst-Rudich).</td><td><span class="chip good">terminée</span></td></tr>
       <tr><td>G4c · OpenAI et Claude</td><td>Même idée dans les deux articles : développer un échange croisé sur une structure produit. Les deux donnent <span class="formula">2^(n/√log n)</span>, et 3 combinaisons ne changent rien. Lemme nouveau (non relu) : l'erreur de petit rang d'OpenAI a un rang au moins égal à une boule de Hamming, donc son √log n est optimal. Mur commun : une structure produit ne descend pas sous <span class="formula">2^(n/log n)</span>. Piste : une structure non produit (expanseurs).</td><td><span class="chip bad">mur identifié</span></td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="gen6">
+  <h2>Génération 6 · problèmes ouverts précis</h2>
+  <div class="callout">
+    <h3>Premier résultat nouveau confirmé</h3>
+    <p>L'article « Limits and Constants » (§9) demandait si un schéma sur un expanseur avec √n groupes pouvait compter les solutions de 3-SAT en <span class="formula">2^Õ(√n)</span>. <strong>Réponse : non</strong>, si les groupes ont une taille Õ(√n). En un point, le coût dépasse environ <span class="formula">sep(F)/√s</span>. Dans le modèle de coût produit, la borne inférieure passe de <span class="formula">2^Ω(√n)</span> à <span class="formula">2^Ω(n^(2/3))</span>. Preuve confirmée ligne par ligne par un relecteur adverse ; aucune publication antérieure trouvée. C'est un résultat négatif : il ferme une voie vers des algorithmes plus rapides. Le modèle de programmation dynamique reste ouvert.</p>
+  </div>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Voie</th><th>Résultat</th><th>Verdict</th></tr></thead>
+    <tbody>
+      <tr><td>G6a · Limits §9</td><td>Lemme du déterminant témoin, théorèmes A et B. Le schéma du §9 ne peut pas exister sur un expanseur.</td><td><span class="chip good">confirmé</span> <span class="chip good">nouveau</span></td></tr>
+      <tr><td>G6b · Identité à 3 directions</td><td>Plancher <span class="formula">ρ_d ≥ 1/d</span> : une boîte de dimension d ne bat jamais la grille. Recherche à λ = 1 : meilleur ρ₃ = 0,914.</td><td><span class="chip good">confirmé (avec conditions)</span></td></tr>
+      <tr><td>G6c · Facteur log log n</td><td>Le coût dépend de la densité moyenne, pas du degré maximal. Question réduite à Q1 (sparsification de densité moyenne bornée) et Q2 (tests de parité plus économiques).</td><td><span class="chip wait">réduit, ouvert</span></td></tr>
+      <tr><td>G6d · Erreur par point (OpenAI)</td><td>Une erreur différente en chaque point permet-elle de passer le mur √log n ?</td><td><span class="chip wait">en cours</span></td></tr>
     </tbody>
   </table></div>
 </section>
