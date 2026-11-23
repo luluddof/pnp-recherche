@@ -1,0 +1,30 @@
+value printed = log2(time)/m (brute force ~ 3), /L = best number of levels
+
+scheme                                              log2m=   40  log2m=  100  log2m=  300  log2m= 1000
+grid, rho=11/12, squaring (paper main)              2.94e+00/L1    2.61e+00/L3    2.27e+00/L4    1.90e+00/L6  
+grid, rho=1/sqrt2, squaring (App. B)                2.31e+00/L1    1.29e+00/L3    8.18e-01/L4    4.09e-01/L6  
+grid, rho=1/2 floor, squaring                       1.69e+00/L1    5.57e-01/L3    2.12e-01/L4    5.29e-02/L6  
+3-box, product pieces rho_3=1/sqrt2, cube           2.44e+00/L1    2.31e+00/L1    1.63e+00/L2    8.16e-01/L4  
+3-box, FLOOR rho_3=1/4 (spec.), cube                1.07e+00/L1    9.38e-01/L1    2.34e-01/L2    1.47e-02/L4  
+6-box, FLOOR rho_6=1/32 (spec.), ^6                 3.00e+00/L0    2.81e-01/L1    2.81e-01/L1    8.79e-03/L2  
+const growth K*2, rho=1/2, phi<=bound (proved)      3.00e+00/L0    3.00e+00/L0    3.00e+00/L0    3.00e+00/L0  
+growth K^1.5, rho=1/2, phi<=bound (proved)          2.25e+00/L2    2.20e+00/L4    2.20e+00/L7    2.20e+00/L8  
+HYPOTHETICAL const growth K*2, rho=1/2, phi=1       1.60e-02/L9    3.39e-08/L29   8.10e-28/L96   1.54e-97/L329
+
+reference curves, value = log2(time)/m:
+m/log m                                             2.50e-02       1.00e-02       3.33e-03       1.00e-03     
+m/(log m)^2                                         6.25e-04       1.00e-04       1.11e-05       1.00e-06     
+m/2^sqrt(log m)                                     1.25e-02       9.77e-04       6.11e-06       3.02e-10     
+m^{0.9}  (target 2^{n^{1-eps}})                     6.25e-02       9.77e-04       9.31e-10       7.89e-31     
+
+Theorem 1 (two-partition model): max total log-gain vs log2(1/rho)*log2(X/x0)
+  X=log2 K_top=  12: DP max gain =   1.25   doubling gives   1.00
+  X=log2 K_top=  24: DP max gain =   2.36   doubling gives   2.00
+  X=log2 K_top=  48: DP max gain =   3.39   doubling gives   3.00
+  X=log2 K_top=  96: DP max gain =   4.24   doubling gives   4.00
+
+Speculative d-box at floor rho_d=2^{1-d}: log2(1/e) vs sqrt(X)
+  X=   64: log2(1/e)=   5.42   sqrt(X)=  8.00   log2(X)= 6.00
+  X=  256: log2(1/e)=  14.19   sqrt(X)= 16.00   log2(X)= 8.00
+  X= 1024: log2(1/e)=  31.00   sqrt(X)= 32.00   log2(X)=10.00
+  X= 4096: log2(1/e)=  64.19   sqrt(X)= 64.00   log2(X)=12.00
