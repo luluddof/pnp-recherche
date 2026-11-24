@@ -40,7 +40,6 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 |---|---|---|---|
 | G18a | 🔄 **Précision réelle des noyaux 2-adiques** | L'analyse d'OpenAI paie 40 bits là où 10 suffisent (14 contre 4 sur un paquet creux). Le gain dépasse-t-il une constante ? Effet sur l'exposant. | G17a |
 | G18b | 🔄 **Évaluateur qui paie 2^rang** | OpenAI paie (2D+1)^lignes pour l'erreur. Un évaluateur moins cher donne-t-il n·√(loglog n)/√log n ? Vérifier l'estimation de G17c. | G17c |
-| G18d | 🔄 **Limite de l'interpolation à plusieurs niveaux** | Récurrence exacte de l'annexe D ; exposant optimal à k niveaux ; borne inférieure pour la famille récursive 2-adique. Le mur est-il à n/√log n ou à n/log n ? | G17c, G17a |
 | G18e | 🔄 **Borne de rang dans le modèle DF** | Prouvé 2^(M/4^u), atteint 2^(M/√u). Meilleure borne, ou meilleur schéma ; minimums exacts pour u = 2, 3. | G14b, G17a |
 | G18f | 🔄 **Termes intriqués, λ = 2** (question E1) | Seule piste vers 2^(n^(1−ε)). Calcul à λ = 2 ou question réduite ; E1 est-elle une question de rang asymptotique d'un tenseur explicite ? | G9d, G14e |
 | G18g | 🔄 **Problème de Hurwitz et Naslund** | P(N) ≤ N^(1+o(1)) ou P(N) ≥ N^(1+ε) ? Variante exacte utile à l'algorithme ; état de l'art 2026 ; une tentative originale. | N1, G4a, G5b |
@@ -49,7 +48,7 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 Dossiers de travail de la génération 18 : `scratchpad/gen18/g18a` à `g18i`.
 
-**État (24/11, 10 h 45 UTC) :** les neuf agents se sont arrêtés à cause de la limite d'utilisation, presque au début. Relance en deux vagues. **En marche :** G18a, G18b, G18d, G18e, G18f. **Terminé :** G18c. **À relancer :** G18g, G18h, G18i.
+**État (24/11, 10 h 45 UTC) :** les neuf agents se sont arrêtés à cause de la limite d'utilisation, presque au début. Relance en deux vagues. **En marche :** G18a, G18b, G18e, G18f, G18h. **Terminés :** G18c, G18d. **À relancer :** G18g, G18i.
 
 Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g18d` (erreur de numéro au lancement ; la génération est bien la 17).
 
@@ -95,6 +94,15 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 | Théorème 4 avec le coût de la prépublication | Refaire le théorème du temps de calcul avec la charge réelle (2D+1)^lignes et la base de la prépublication. La borne reste-t-elle Ω(n(loglog n)²/√log n), ou tombe-t-elle à Ω(n√(loglog n/log n)) ? | G17c, Q2 et Q5 |
 | Borne pour l'interpolation à plusieurs niveaux (annexe D) | Notre borne est vide pour l'annexe D. Existe-t-il une borne pour les modes 2-adiques et la récursion ? C'est la vraie question pour l'échelon 2. | G17c, Q3 |
 
+**Nouvelles pistes issues de G18c et G18d (24/11) :**
+
+| Piste | Question précise | Origine |
+|---|---|---|
+| Noyau à profil de rang 2-adique sous-linéaire | Seul levier non constant dans la route d'OpenAI. Le noyau de Cauchy a un profil linéaire en le poids. Existe-t-il un autre noyau (non Cauchy, plusieurs variables) avec un profil sous-linéaire ? | G18d |
+| Conjecture C1 et formule de Smith des blocs de Cauchy | Prouver les invariants 2^((a−i+1)+2k+2v₂(k!)) et l'égalité rang d'aplatissement = nombre de monômes de modes. Rend l'énumération optimale parmi les développements aveugles. | G18d |
+| Gain constant sur l'annexe D | Modes 4 fois redondants (facteur 2), effilage optimal (1/√3) : écrire l'algorithme amélioré et vérifier le gain total (≈ 1/5 de l'exposant, non vérifié). | G18d |
+| Pièces à D directions avec ρ(D) < D^(−1/2) | Loi commune des deux algorithmes : gain = D^(−1/2). Le plancher 1/D donnerait n/log n. | G18c |
+
 ## 3. En attente
 
 | Piste | Raison de l'attente |
@@ -112,6 +120,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Résultat |
 |---|---|
+| ⚠️ **Limite de l'interpolation récursive** (G18d) | n/√log n dans toutes les familles analysées. La récursion ne compose pas les gains : la racine domine. La profondeur achète seulement √loglog. Gain constant possible (modes 4 fois redondants). Borne inférieure seulement « au niveau de la conception » ; famille générale : ouvert. Conjecture C1 (formule de Smith des blocs de Cauchy). `code/gen18/g18d/notes.md` |
 | ❌ **Hybride des deux algorithmes de 2026** (G18c) | Aucun gain sur six substitutions. Les deux algorithmes suivent la même loi heuristique : gain = (nombre de directions)^(−1/2). Un vrai gain demande des pièces à D directions avec ρ(D) < D^(−1/2) (plancher 1/D → échelon 2). `code/gen18/g18c/notes.md` |
 | ❌ **Les deux points ouverts de l'article 2** (G17e) | Aucun n'est fermé. Écart log ℓ : ouvert dans la fenêtre ; optimum à 1,1–2,3 fois la borne sur de petits cas ; l'argument à deux moitiés n'aide pas ; nouveaux lemmes (dualité de quadrature, élagage). Degré par annulation : générique mais pas forcé ; un exemple d'annulation existe. `code/gen17/g17e/notes.md` |
 | ⚠️ **Relecture adverse de G14b** (G17a) | Reconstruction de l'annexe D fidèle. Théorème A confirmé mais très faible. Théorème B en partie : axiome du modèle VT réfuté. Nouveau lemme : précision Θ(M·D_t/u) optimale pour la reconstruction boîte noire. Potentiel « réel mais modeste » : pas une barrière. `code/gen17/g17a/rapport.md` |

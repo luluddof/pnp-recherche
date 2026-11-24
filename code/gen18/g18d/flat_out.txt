@@ -1,0 +1,21 @@
+## (1) crossing-block Smith valuations, other nodes / zeta
+a=5 t=3 zeta=1 match_formula(+v2(zeta))=True vals[:8]=[6, 8, 12, 14, 20, 22, 26, 28]
+a=5 t=-1 zeta=1 match_formula(+v2(zeta))=True vals[:8]=[6, 8, 12, 14, 20, 22, 26, 28]
+a=5 t=6 zeta=3 match_formula(+v2(zeta))=True vals[:8]=[5, 5, 7, 7, 11, 11, 13, 13]
+a=5 t=2 zeta=5 match_formula(+v2(zeta))=True vals[:8]=[5, 5, 7, 7, 11, 11, 13, 13]
+a=5 t=12 zeta=7 match_formula(+v2(zeta))=True vals[:8]=[4, 4, 4, 4, 6, 6, 6, 6]
+a=4 t=1 zeta=2 match_formula(+v2(zeta))=True vals[:8]=[6, 8, 12, 14, 20, 22, 26, 28]
+a=4 t=1 zeta=4 match_formula(+v2(zeta))=True vals[:8]=[7, 9, 13, 15, 21, 23, 27, 29]
+a=5 t=-4 zeta=1 match_formula(+v2(zeta))=True vals[:8]=[4, 4, 4, 4, 6, 6, 6, 6]
+## (2) flattening of one packet tensor across groups; #invariants < p  vs  #mode monomials of weight < p
+a=2 i=0 L=4 size=16  (flattening rank mod 2^p)/(Smith-mode monomials)/(paper-mode monomials): p=2:1/1/1 p=4:3/3/3 p=6:5/5/7 p=8:8/8/18 p=10:10/16/41 p=12:13/25/86 p=16:16/54/352 p=20:16/100/1255 p=24:16/176/4080 p=32:16/441/35089 p=40:16/930/245371
+     first invariants: [0, 3, 3, 5, 5, 6, 7, 7, 8, 8, 10, 10, 10, 12, 12, 14]
+a=2 i=1 L=4 size=16  (flattening rank mod 2^p)/(Smith-mode monomials)/(paper-mode monomials): p=2:1/1/1 p=4:5/5/9 p=6:11/15/43 p=8:15/35/169 p=10:16/70/586 p=12:16/126/1844 p=16:16/330/14901 p=20:16/715/98687 p=24:16/1365/564427 p=32:16/3876/13367355 p=40:16/8855/230871424
+     first invariants: [0, 2, 2, 2, 2, 4, 4, 4, 4, 4, 4, 6, 6, 6, 6, 8]
+a=3 i=0 L=8 size=256  (flattening rank mod 2^p)/(Smith-mode monomials)/(paper-mode monomials): p=2:1/1/1 p=4:1/1/1 p=6:3/3/5 p=8:5/5/9 p=10:8/8/20 p=12:14/14/39 p=16:33/33/141 p=20:62/74/455 p=24:102/150/1355 p=32:187/507/10026 p=40:245/1435/61895
+     first invariants: [0, 4, 4, 6, 6, 8, 9, 9, 10, 10, 10, 10, 10, 10, 12, 12, 12, 13, 13, 13, 13, 13, 13, 14, 14, 14, 14, 14, 14, 15, 15, 15, 15, 16, 16, 16, 16, 16, 16, 17]
+a=3 i=1 L=8 size=256  (flattening rank mod 2^p)/(Smith-mode monomials)/(paper-mode monomials): p=2:1/1/1 p=4:5/5/5 p=6:9/9/13 p=8:19/19/47 p=10:35/55/133 p=12:65/105/351 p=16:140/336/2202 p=20:202/940/11713 p=24:241/2345/55498 p=32:256/10950/961588 p=40:256/39700/12840003
+     first invariants: [0, 3, 3, 3, 3, 5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 9, 9, 9, 9, 10, 10, 10, 10, 10]
+a=3 i=2 L=8 size=256  (flattening rank mod 2^p)/(Smith-mode monomials)/(paper-mode monomials): p=2:1/1/1 p=4:9/9/17 p=6:37/45/133 p=8:93/165/785 p=10:163/495/3943 p=12:219/1287/17619 p=16:255/6435/273233 p=20:256/24310/3311378 p=24:256/75582/33409956 p=32:256/490314/2264432133 p=40:256/2220075/102768872879
+     first invariants: [0, 2, 2, 2, 2, 2, 2, 2, 2, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 6, 6, 6]
+exit 0
