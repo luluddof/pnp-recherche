@@ -44,7 +44,7 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
-| G25-B1 | 🔄 **Brainstorming : constructions** | 8 à 12 idées nouvelles (algèbre, codes de rang, information quantique, dessins combinatoires…) pour passer sous le cercle ; un premier test pour chacune. | consigne de l'auteur |
+| G25-B1 | ✅ **Brainstorming : constructions** (fini) | 12 idées, 7 tuées par calcul ; rien près du cercle. Restes : profil à saut convexe (2 %), familles au bord en ε (1,5 %), catalyseurs (1 %). La barrière de Cardy s'étendrait aux familles c → ∞ (argument non relu). `code/gen25/b1/notes.md` | consigne de l'auteur |
 | G25-B2 | ✅ **Brainstorming : techniques de preuve** (fini) | 13 idées. Prouvé : N² ≤ p‖R‖_op + q‖Fl2 C‖_op. Top 3 : conjecture d'étalement (donnerait 2θ + T ≥ 4, donc ρ ≥ 2/3 comme mur) ; modèle à blocs ; angle de Friedrichs. `code/gen25/b2/notes.md` | consigne de l'auteur |
 | G25-B3 | ✅ **Brainstorming : autres routes** (fini) | 10 idées ; top 3 : sparsification pour la décision seule (enlèverait le facteur loglog en n) ; quotient par grappes ; hypercliques récents comme gadgets à 3 directions. `code/gen25/b3/notes.md` | consigne de l'auteur |
 | G25-B4 | ✅ **Brainstorming : rang inférieur** (fini) | « Meilleures pièces à chaque taille » : ne gagne rien (λ ≥ 10⁴ dans l'algorithme). Gains réels dans la comptabilité de la récursion : base de balayage + constantes exactes (seuil log₂ m* : 1,37·10⁵ → 2,4·10⁴) ; annexe D : 4·10¹⁰ → 1,6·10⁶. Reste astronomique. `code/gen25/b4/notes.md` | consigne de l'auteur |
