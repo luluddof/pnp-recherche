@@ -44,7 +44,6 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
-| G24a | 🔄 **Pièces de Hrubeš lues de façon non symétrique** | Technique de la littérature jamais essayée (record publié 1,62). Profil (rang par lignes, rang par colonnes) de chaque pièce ; courbe de compromis exacte contre le cercle ; un hybride avec la graduation de l'annexe B. | G22a |
 | G24b | 🔄 **Constructions à plusieurs canaux sur le bord de Voronoï** | Recherche exacte sur deux et trois copies de A1 ; argument de filtration au niveau des taux. Fermer le dernier cas ouvert des algèbres de sommets (écart 2,799 – 3,030). | G23c |
 | G24c | 🔄 **Distance pour q ≥ 2 et près de p·q ≈ N²** | Étendre le théorème A (indépendant de N) à q ≥ 2 ; premières données près de la réalisabilité (N = 4, 5, 6) : croissance additive ou en p·q ? | G23d |
 | G24d | 🔄 **Décider les petits cas ouverts par SAT** | Modèle ST : (18,18) à N = 12, (28,28) à N = 16, valeurs exactes pour N = 9 à 16 ; problème général sur GF(2) : (3,3) et (5,2) à N = 4. Encodages avec brisure de symétrie ; preuves DRAT. | G22b-bis, G21b |
@@ -181,6 +180,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Résultat |
 |---|---|
+| ❌ **Pièces de Hrubeš, lecture non symétrique** (G24a) | Courbe exacte θ = 1 + 2H(b), T = 1 + 2H(0,110 − b) : strictement hors du cercle partout. Limites prouvées du cadre de Clifford : θ, T ≥ 1 et max(θ, T) ≥ 1,5. L'hybride avec l'annexe B ne gagne rien. `code/gen24/g24a/notes.md` |
 | ❌ **Ansatz de groupe dans le modèle monomial** (G23a) | Aucune famille invariante par un groupe ne passe sous la somme directe N²/8 (N = 16, 27, 32, 64). Obstruction prouvée (non relue) : l'ansatz ZT force une forme anisotrope, donc des blocs de taille ≤ 4 (Chevalley-Warning). Le point Q8 est un accident de la taille 8. `code/gen23/g23a/notes.md` |
 | ⚠️ **Loi de distance pour q = 1** (G23d) | c(N;1,1) = 4 non prouvé ; prouvé : c(N;1,1) ≤ 8,081 pour tout N, et c(N;p,1) ≤ 11,7·p + O(√p) (indépendant de N). Rien pour q ≥ 2. `code/gen23/g23d/notes.md` |
 | ✅ **Lean : borne du modèle monomial** (G23e) | `lean/PnpLean/Outils/Intercalate.lean` : lemme clé, comptage, compromis réel. Niveau L (modèle ST). |

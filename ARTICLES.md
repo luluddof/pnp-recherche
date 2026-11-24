@@ -170,6 +170,7 @@ Ce fichier liste **tout ce qui peut entrer dans un article**, présent ou futur.
 | Familles structurées pour le compromis (Cayley-Dickson jusqu'à N = 256, Clifford, groupes, Paley, tournois) | Résultat négatif : exposant 2. La mesure « le défaut des sédénions a un rang Θ(N²) » est un fait exact, une remarque. | `code/gen22/g22c/notes.md` |
 | Barrière de Cardy (G22e) et règle de sélection de Voronoï (G23c) : √2 optimal pour toute algèbre de sommets fixe, y compris avec regraduation ; théorème abstrait corrigé ; carte des échappatoires | Résultat négatif partiel, propre, non relu. Le théorème A (élémentaire) et la remarque « pas de barrière combinatoire au-delà de la droite » pourraient former une section d'un article sur la construction de Claude, après relecture. Pas un article seul. | `code/gen22/g22e/notes.md` |
 | Ansatz de groupe dans le modèle monomial (G23a) : forme close du point Q8 ; obstruction d'anisotropie (Chevalley-Warning) | Résultat négatif propre, non relu. La forme close du point Q8 (lien avec SU(3,2) et F₄) et l'obstruction pourraient compléter la note B2. Pas un article seul. | `code/gen23/g23a/notes.md` |
+| Pièces de Hrubeš lues de façon non symétrique (G24a) : courbe exacte, limites du cadre de Clifford ; petite erreur de compte dans Hrubeš (704 contre 768 à N = 64) | Résultat négatif propre ; la courbe exacte et les limites (L1), (L2) pourraient être une section de la note B2 (« les constructions connues vues sur le compromis »). Pas un article seul. | `code/gen24/g24a/notes.md` |
 | Question E1 (termes intriqués) | Non tranchée en général. La partie prouvée est dans B2. Le plus petit cas ouvert (N = 3) ne montre aucun gain, mais c'est un résultat numérique, pas une preuve. | `code/gen18/g18f/notes.md`, `code/gen19/g19c/notes.md` |
 | Corollaire sur le problème de Hurwitz (borne N^√2) | **Déjà publié** par d'autres (Siemaszko, Debnath). | `JOURNAL.md`, résultat G4a |
 | Conséquence pour l'arbre de Steiner | **Déjà revendiquée** par Wu et Wang (arXiv:2611.02548). | `code/gen9/g9e/` |
@@ -182,6 +183,7 @@ Ce fichier liste **tout ce qui peut entrer dans un article**, présent ou futur.
 | Date | Changement |
 |---|---|
 | 24/11/2026 | Création du registre après la génération 18. Articles 1, 2, 3 ; candidats B1 à B4. |
+| 24/11/2026 | G24a : pièces de Hrubeš (négatif), partie C. |
 | 24/11/2026 | G23a : résultat négatif (ansatz de groupe), partie C. Génération 23 terminée. |
 | 24/11/2026 | G23d : bornes analytiques indépendantes de N pour q = 1 ajoutées au candidat B2. |
 | 24/11/2026 | G23e : la borne du modèle monomial (ST) est vérifiée par Lean ; bibliothèque B4 : 20 énoncés. |
