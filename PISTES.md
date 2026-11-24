@@ -45,7 +45,6 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
 | G24d | 🔄 **Décider les petits cas ouverts par SAT** | Modèle ST : (18,18) à N = 12, (28,28) à N = 16, valeurs exactes pour N = 9 à 16 ; problème général sur GF(2) : (3,3) et (5,2) à N = 4. Encodages avec brisure de symétrie ; preuves DRAT. | G22b-bis, G21b |
-| G24e | 🔄 **(N, N) est-il réalisable ? Rendre exacts (5,5) à N = 5 et (6,6) à N = 6** | G24c les trouve réalisables numériquement (b(5) = 5, b(6) = 6 ?). Exact ou seulement au bord ? Puis (7,7) à N = 7 (G20b : non trouvé), N = 8 à 10 avec le nouveau solveur. | G24c, G20b |
 | G24g | 🔄 **Lemme d'échange fort pour q petit** | rang(Échange − K) ≥ N²/2 − c·r·N pour K de rang de Schmidt r ? Données exactes : r = 2 donne la même valeur que r = 1 à N = 4, 5. Fermerait la fenêtre du module de classe (E0 = 2, 3) et renforcerait le compromis près de l'extrémité. | G24f, G19b |
 
 Dossiers de travail de la génération 18 : `scratchpad/gen18/g18a` à `g18i`.
@@ -167,7 +166,6 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Question précise | Origine |
 |---|---|---|
-| **(N, N) est-il réalisable ?** | Réalisable (au bord) pour N ≤ 6 ; numériquement non à N = 7 ((7,7) : 30 départs, résidu 6,0, G20b) et à N = 9 (b(9) ≈ 14, G20b). En cours : G24e. Rendre exact (6,6) à N = 6 ; tester (7,7) à N = 7 et (8,8) à N = 8 dans le problème général (pas seulement le modèle monomial) ; comprendre le saut à N = 9. Si b(N) = N^(1+o(1)) : ρ ≤ 0,683 (progrès sur l'algorithme de Claude). Sinon : où est la vraie courbe ? | G24c, G20b |
 
 ## 3. En attente
 
@@ -186,6 +184,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Résultat |
 |---|---|
+| ❌ **(N, N) réalisable ?** (G24e) | Non au-delà de 8 (numérique) : (7,7) à N = 7 non réalisable ; saut net après N = 8 (motif de Hurwitz). (5,5) à N = 5 et (6,6) à N = 6 : seulement au bord. Bornes exactes inchangées. `code/gen24/g24e/notes.md` |
 | ⚠️ **Fenêtre du module de classe** (G24f) | Aucune construction sous 2√2. Bande E0 = 1 fermée par une preuve (4ρ ≥ 4 ; lemme d'échange = théorème 3 de G19b). Reste ouvert : E0 ≥ 2 avec H < 0,83·E0 ; il faudrait le lemme d'échange avec un terme de rang de Schmidt r (c'est notre théorème C dans une autre forme). Heuristique : toute la fenêtre à 4ρ ≥ 4. `code/gen24/g24f/notes.md` |
 | ⚠️ **Plusieurs canaux, algèbres de sommets** (G24b) | Fermé pour A1^n et (A1+A1)^n avec étiquettes dans V′ (nouvelle borne N² ≤ rang F). Nouveau cas ouvert : étiquettes dans le module de classe V_{α/2+L}, borne 2,674 < 2√2, aucune construction. `code/gen24/g24b/notes.md` |
 | ⚠️ **Distance pour q ≥ 2** (G24c) | Borne indépendante de N seulement pour une sous-classe (c ≤ 13p + 4q) ; lemme L2 manquant. Données : (6,6) réalisable numériquement à N = 6 (b(6) = 6 ?). Question décisive : (N, N) reste-t-il réalisable ? Si oui, la droite est la vérité et ρ ≤ 0,683. `code/gen24/g24c/notes.md` |
