@@ -14,7 +14,6 @@ Légende : 🔄 en cours · 🆕 pas encore explorée · ⏸️ en attente · �
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
 | G8a | 🔄 **Terminer Limits §9** | (a) Modèle DP corrigé : enlever l'hypothèse de régularité. (b) La borne n^(2/3) du modèle produit est-elle optimale ? | G6a, G7b |
-| G8b | 🔄 **Compter les ensembles indépendants** (Q1′) | Compter les ensembles indépendants d'un graphe de degré moyen d en temps 2^(O(n/d)) | G7d |
 | G8d | 🔄 **Turán sur l'hypercube** | Prouver ρ(∞, d) ≥ poly(1/d) dans la méthode d'OpenAI (√log n optimal) | G7a |
 
 ## 2. Pas encore explorées
@@ -25,7 +24,7 @@ Légende : 🔄 en cours · 🆕 pas encore explorée · ⏸️ en attente · �
 | 🆕 **Problème de Naslund / Hurwitz** | Prouver P(N) ≥ N^(1+ε) ; équivaut à un plancher ρ > 1/2 dans l'algorithme de Claude | Très difficile (circuits non commutatifs) | N1, G5b |
 | 🆕 **Gadgets à 3 parties ou plus** | Seule voie pour passer 2^(m/log m) dans le cadre de Claude | Difficile, aucune idée concrète | G4b |
 | 🆕 **Récursion sur des instances non cliques** | Autre façon de sortir du modèle à deux partitions | Difficile | G4b |
-| 🆕 **Tests de parité économiques (Q2)** | Tests avec O(n·2^O(k)) incidences au total dans l'annexe D de Claude | Technique | G6c |
+| ❌ **Tests de parité économiques (Q2)** — fausse sur la famille de référence (G8b, lemme CA) | Tests avec O(n·2^O(k)) incidences au total dans l'annexe D de Claude | Technique | G6c |
 | 🆕 **Erreurs par point, cas non commutatif** | Étendre le lemme de G6d au-delà de la classe commutative | Moyenne | G6d, G7a |
 | 🆕 **Forme parité et contraction de tenseurs (Limits)** | Analyser les limites de ces deux voies d'OpenAI, non couvertes par Limits ni par notre note | Difficile | G4c, G6a |
 | 🆕 **Sparsification avec variables d'extension** | Échappatoire à la proposition L de G6c | Moyenne | G6c, G7d |
@@ -34,6 +33,8 @@ Légende : 🔄 en cours · 🆕 pas encore explorée · ⏸️ en attente · �
 | 🆕 **Lemme 4 en Lean** | Graphes aléatoires | Très difficile (peu de choses dans Mathlib) | G9L |
 
 | 🆕 **Formes closes aux niveaux profonds (suite de G8c)** | La valeur des sous-appels de l'algorithme de Claude sur une entrée « épinglée » a une forme close calculable en temps polynomial au niveau 1 (vérifié). Si cela reste vrai aux niveaux profonds, Extended Frege réfuterait toute 3-CNF creuse insatisfaisable en taille 2^(δn). Vérifier aussi l'hypothèse (S) : degré ≤ 1 en chaque table de poids | Moyenne à difficile | G8c |
+
+| 🆕 **Q1\* (suite de G8b)** | Compter les ensembles indépendants de tout graphe à n·polylog(n) arêtes en temps 2^O(n/√log n) ; enlèverait le facteur log log n de l'algorithme de Claude | Difficile ; aucune borne inférieure connue ne bloque | G8b |
 
 ## 3. En attente
 

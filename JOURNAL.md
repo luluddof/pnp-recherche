@@ -10,6 +10,42 @@ Les programmes et les données sont dans le dossier `code/`.
 
 ---
 
+## ⚠️ Niveau de fiabilité de chaque résultat (à lire avant tout le reste)
+
+Ce journal est un **résumé**. Un résumé ne permet pas de vérifier une preuve. Le tableau ci-dessous dit, pour chaque résultat, ce qui a réellement été vérifié.
+
+**Échelle :**
+- **L** = prouvé en Lean (vrai pour **tout** n ; vérification indépendante de nos raisonnements).
+- **P+** = preuve complète écrite **et** refaite par un relecteur. Attention : nos relecteurs sont des agents Claude, donc **pas indépendants** (même modèle, souvent mêmes définitions).
+- **P** = preuve écrite dans des notes de travail, **non relue**.
+- **E** = esquisse ou argument incomplet.
+- **N** = seulement des tests numériques. Un test sur n = 12 à 30 ou ℓ = 2 à 10 **détecte des erreurs, mais ne prouve rien** pour les grandes valeurs.
+- Aucun résultat n'a encore été relu par un **expert humain**.
+
+| Résultat | Énoncé (portée exacte) | Niveau | Où est la preuve |
+|---|---|---|---|
+| G6a lemme 1, fait R, lemme 3, théorème A | Énoncés déterministes de la note | **L** + P+ | `lean/PnpLean/*.lean`, note §3 |
+| G6a théorème B | Vrai si le lemme 2 est vrai | **L** (conditionnel) + P+ | idem |
+| G6a lemme 2 (anti-concentration) | Constante c₀ = (1−e⁻²)/4 | P+ | note §3.3 |
+| G6a lemme 4 (3-SAT aléatoire) | sep(F) ≥ cn avec forte probabilité | P+ | note §3.7 |
+| G6a corollaire C | **Seulement dans le modèle de coût produit**, pour F lui-même (pas F\*) ; rien sur la programmation dynamique, les tenseurs ou les parités | P+ | note §3.8 |
+| G7b prop. O1 | Le modèle DP de Dias-Lima est dégénéré | P+ (confirmé par G8R sur le texte source) | `code/gen7/g7b/notes.md` |
+| G7b théorèmes C à F, corollaire G | Modèle DP corrigé, **sous hypothèse de régularité** | P | idem |
+| G4a Hurwitz P(N) ≤ N^√2 | Correct, **déjà publié par d'autres** | P+ | `code/gen4/g4a/proof.md` |
+| G6b ρ_d ≥ 1/d | Dans un modèle restreint, sous 2 conditions | P+ | rapport G6r |
+| G4d réfutations IPS 2^O(n/√log n) | Corollaire de l'article de Claude (non relu par des pairs) | E | `code/gen4/g4d/` |
+| G6c prop. R, prop. L | Prop. L seulement pour une classe restreinte de sparsifieurs | P | `code/gen6/g6c/` |
+| G6d lemme sur les erreurs par point | — | P | `code/gen6/g6d/notes.md` |
+| G7a famille « par morceaux », barrière A | Classe commutative seulement | P (+ N pour ℓ ≤ 10) | `code/gen7/g7a/notes.md` |
+| G7d lemme S, prop. E | Classes restreintes de réductions | E | `code/gen7/g7d/` |
+| G8b lemme CA, échec de Q2 | Tests construits sur les clauses d'arêtes seulement | P (+ N) | `code/gen8/g8b/` |
+| G8c réfutations EF | **Conditionnel** à l'hypothèse (S) non vérifiée | E | `code/gen8/g8c/` |
+| G4b, G4c, G5a (murs des méthodes de 2026) | Chaque mur vaut **seulement dans le modèle étudié** | E à P | `code/gen4/`, `code/gen5/` |
+
+**Ce qu'il faut faire pour qu'un résultat devienne fiable :** une preuve complète dans un document autonome (pas un renvoi vers du code), puis une relecture par un expert humain. Aujourd'hui, seule la note sur G6a remplit la première condition.
+
+---
+
 ## Bilan après 5 générations (23 novembre 2026)
 
 - **P vs NP n'est pas résolu.** Aucune voie ne mène à un algorithme polynomial pour 3-SAT.
@@ -234,6 +270,7 @@ Simplification proposée : l'hypothèse M ≥ n peut être supprimée.
 **Génération 8 (en cours) :** G8a (terminer Limits §9), G8b (compter les ensembles indépendants), G8c (réfutations Extended Frege / TC⁰-Frege), G8d (Turán sur l'hypercube). Liste complète des pistes : `PISTES.md`.
 
 - **G8c ✅ (conditionnel) :** aucune borne 2^o(n) prouvée en EF, TC⁰-Frege ou Frege. Observation nouvelle : pour δ fixé, la récursion de Claude a une profondeur constante ; Count(F) est une formule arithmétique de profondeur constante c(δ,Δ) et de taille 2^(δn)·poly(n). Énoncé conditionnel : sous l'hypothèse (S) (degré ≤ 1 en chaque table de poids, à vérifier) et des preuves EF de taille s de Pin_F(b), EF réfute F en taille 2s + poly(n)·2^(δn). Point ouvert : les formes closes des sous-appels aux niveaux profonds (vérifié au niveau 1 : 2 000 cas + les 4 096 cas de l'identité des huit carrés). Dossier : `code/gen8/g8c/`.
+- **G8b ❌ (avec résultats) :** Q1′ (compter les ensembles indépendants en 2^O(n/d)) est nécessaire mais pas suffisante ; la bonne cible est **Q1\*** : compter les ensembles indépendants de tout graphe à n·polylog(n) arêtes en 2^O(n/√log n). Prouvé : le réseau direct est pire (U = Θ(nd)) ; **la voie des tests de parité (Q2) est fausse** sur la famille de référence (lemme CA). Aucune borne inférieure ne bloque Q1\* depuis la réfutation de l'ETH. Expériences (n ≤ 110) : travail ≈ 0,22·n·log₂²d/d. Dossier : `code/gen8/g8b/`.
 
 ## 4 bis. Pistes restantes pour chercher plus loin
 
