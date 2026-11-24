@@ -57,8 +57,7 @@ theorem lagrangeΛ_spec (pts : Finset ℚ) (f : ℚ[X]) (hf : f.natDegree < pts.
   have h' := congrArg (eval 0) h
   rw [Lagrange.interpolate_apply, eval_finsetSum] at h'
   rw [h']
-  simp only [lagrangeΛ, LinearMap.coe_mk, AddHom.coe_mk, hermiteData, Function.iterate_zero, id,
-    eval_mul, eval_C]
+  simp only [lagrangeΛ, LinearMap.coe_mk, AddHom.coe_mk, hermiteData, id, eval_mul, eval_C]
   exact Finset.sum_coe_sort pts (fun t => eval t f * eval 0 (Lagrange.basis pts id t))
 
 /-- The fully measured group `ℚ^{S_γ}`, as the range of the coordinate projection. -/
@@ -89,11 +88,11 @@ variable (I : κ → Finset (Fin n))
 same fully measured design at every point. -/
 noncomputable def trivialScheme (R : ℕ) (grp : Fin n → G) (α : κ → G) : Scheme I G where
   R := R
-  P := fun o j => C (if j = o.var then 1 else 0)
-  P_deg := fun o j => by simp
+  P := fun o j => if j = o.var then 1 else 0
+  P_deg := fun o j => by split_ifs <;> simp
   P_zero := fun o => by
     funext j
-    simp [Pi.single_apply]
+    by_cases h : j = o.var <;> simp [h]
   pts := trivPts (M I * R + 1)
   zero_not_mem := zero_notMem_trivPts _
   q := fun _ => 0
@@ -127,11 +126,9 @@ theorem trivialScheme_a (t : ℚ) (γ : G) :
 
 /-- `ρ_t = n`: every group is fully measured. -/
 theorem trivialScheme_ρ (t : ℚ) : (trivialScheme I R grp α).ρ t = n := by
-  have h := (trivialScheme I R grp α).sum_a t
-  rw [← h]
-  unfold Scheme.ρ
-  refine Finset.sum_congr rfl fun γ _ => ?_
-  exact finrank_coordSub grp γ
+  calc (trivialScheme I R grp α).ρ t = ∑ γ, (trivialScheme I R grp α).a t γ :=
+        Finset.sum_congr rfl fun γ _ => finrank_coordSub grp γ
+    _ = n := (trivialScheme I R grp α).sum_a t
 
 /-- The trivial scheme is variable-uniform. -/
 theorem trivialScheme_uniform : (trivialScheme I R grp α).Uniform := by
@@ -143,10 +140,10 @@ theorem trivialScheme_uniform : (trivialScheme I R grp α).Uniform := by
 `ρ_t = n`, and Lemma 1 holds trivially. -/
 theorem trivialScheme_deficiency_le (ω : WitnessMap I) (t : ℚ) :
     (trivialScheme I R grp α).deficiency ω t ≤ (trivialScheme I R grp α).ρ t := by
-  rw [trivialScheme_ρ]
-  have h := (trivialScheme I R grp α).sum_a t
-  rw [← h]
-  exact Finset.sum_le_sum fun γ _ => Nat.sub_le _ _
+  calc (trivialScheme I R grp α).deficiency ω t
+      ≤ ∑ γ, (trivialScheme I R grp α).a t γ := Finset.sum_le_sum fun γ _ => Nat.sub_le _ _
+    _ = n := (trivialScheme I R grp α).sum_a t
+    _ = (trivialScheme I R grp α).ρ t := (trivialScheme_ρ R grp α t).symm
 
 end Params
 
@@ -170,7 +167,7 @@ theorem card_blockGrp_fiber_le (s : ℕ) (hs : n ≤ s * s) (γ : Fin s) :
     (fun j => (⟨(j : ℕ) % s, Nat.mod_lt _ hpos⟩ : Fin s)) (fun _ _ => Finset.mem_univ _)
     (by
       intro i hi j hj hij
-      simp only [Finset.coe_filter, Finset.mem_univ, true_and, Set.mem_setOf_eq] at hi hj
+      simp only [Finset.mem_coe, Finset.mem_filter, Finset.mem_univ, true_and] at hi hj
       have h1 : (i : ℕ) / s = (j : ℕ) / s := by
         have := congrArg Fin.val (hi.trans hj.symm)
         simpa [blockGrp] using this
@@ -179,27 +176,55 @@ theorem card_blockGrp_fiber_le (s : ℕ) (hs : n ≤ s * s) (γ : Fin s) :
       rw [← Nat.div_add_mod (i : ℕ) s, ← Nat.div_add_mod (j : ℕ) s, h1, h2])
   simpa using h
 
+/-- If `s ≤ n`, the first block has exactly `s` elements. -/
+theorem card_blockGrp_fiber_zero (s : ℕ) (hpos : 0 < s) (hs : n ≤ s * s) (hsn : s ≤ n) :
+    (Finset.univ.filter (fun j : Fin n => blockGrp s hs j = ⟨0, hpos⟩)).card = s := by
+  refine le_antisymm (card_blockGrp_fiber_le s hs _) ?_
+  have h := Finset.card_le_card_of_injOn (s := (Finset.univ : Finset (Fin s)))
+    (t := Finset.univ.filter (fun j : Fin n => blockGrp s hs j = ⟨0, hpos⟩))
+    (fun i => (⟨(i : ℕ), lt_of_lt_of_le i.2 hsn⟩ : Fin n))
+    (fun i _ => by
+      simp only [Finset.mem_coe, Finset.mem_filter, Finset.mem_univ, true_and]
+      apply Fin.ext
+      simp [blockGrp, Nat.div_eq_of_lt i.2])
+    (fun i _ j _ hij => Fin.ext (by simpa using congrArg Fin.val hij))
+  simpa using h
+
 /-- **Trivial scheme, `√n` form** (paper, Proposition of §6). For every CNF `I` on `n` variables,
 every `R`, and every `s` with `n ≤ s * s` (e.g. `s = ⌈√n⌉`), there is a scheme with `s` groups
 such that at every point: all groups have size `≤ s` (so `s_t ≤ s`), `q_t = 0`, `ρ_t = n`.
 It has `M R + 1` recovery points, degree bound `R`, and is variable-uniform. -/
-theorem exists_trivial_scheme_sqrt (I : κ → Finset (Fin n)) (R s : ℕ) (hs : n ≤ s * s) :
+theorem exists_trivial_scheme_sqrt (I : κ → Finset (Fin n)) (R s : ℕ) (hpos : 0 < s)
+    (hs : n ≤ s * s) :
     ∃ S : Scheme I (Fin s), S.R = R ∧ S.pts.card = M I * R + 1 ∧ S.Uniform ∧
       ∀ t, S.s t ≤ s ∧ S.q t = 0 ∧ S.ρ t = n := by
-  rcases Nat.eq_zero_or_pos s with h0 | hpos
-  · -- `s = 0` forces `n = 0`; any clause assignment is impossible only if `κ` is nonempty,
-    -- but then `Fin 0` has no element: treat `κ` empty / nonempty uniformly via `n = 0`.
-    subst h0
-    have hn : n = 0 := by omega
-    subst hn
-    refine ⟨trivialScheme I R (fun j => j.elim0) (fun e => ?_), rfl, card_trivPts _,
-      trivialScheme_uniform _ _ _, fun t => ⟨?_, rfl, trivialScheme_ρ _ _ _ t⟩⟩
-    · sorry
-    · simp [Scheme.s]
-  · refine ⟨trivialScheme I R (blockGrp s hs) (fun _ => ⟨0, hpos⟩), rfl, card_trivPts _,
-      trivialScheme_uniform _ _ _, fun t => ⟨?_, rfl, trivialScheme_ρ _ _ _ t⟩⟩
-    unfold Scheme.s
+  refine ⟨trivialScheme I R (blockGrp s hs) (fun _ => ⟨0, hpos⟩), rfl, card_trivPts _,
+    trivialScheme_uniform _ _ _, fun t => ⟨?_, rfl, trivialScheme_ρ _ _ _ t⟩⟩
+  unfold Scheme.s
+  exact Finset.sup_le fun γ _ => card_blockGrp_fiber_le s hs γ
+
+/-- Same statement with the exact value `s_t = s` when `1 ≤ s ≤ n ≤ s * s`
+(the paper's `s = ⌈√n⌉`, `n ≥ 1`). -/
+theorem exists_trivial_scheme_sqrt_eq (I : κ → Finset (Fin n)) (R s : ℕ) (hpos : 0 < s)
+    (hs : n ≤ s * s) (hsn : s ≤ n) :
+    ∃ S : Scheme I (Fin s), S.R = R ∧ S.pts.card = M I * R + 1 ∧ S.Uniform ∧
+      ∀ t, S.s t = s ∧ S.q t = 0 ∧ S.ρ t = n := by
+  refine ⟨trivialScheme I R (blockGrp s hs) (fun _ => ⟨0, hpos⟩), rfl, card_trivPts _,
+    trivialScheme_uniform _ _ _, fun t => ⟨le_antisymm ?_ ?_, rfl, trivialScheme_ρ _ _ _ t⟩⟩
+  · unfold Scheme.s
     exact Finset.sup_le fun γ _ => card_blockGrp_fiber_le s hs γ
+  · have h := Finset.le_sup (f := (trivialScheme I R (blockGrp s hs) (fun _ => ⟨0, hpos⟩)).a t)
+      (Finset.mem_univ (⟨0, hpos⟩ : Fin s))
+    rw [trivialScheme_a, card_blockGrp_fiber_zero s hpos hs hsn] at h
+    exact h
+
+/-- Concrete choice `s = ⌊√n⌋ + 1` (which is `≥ ⌈√n⌉`, with equality unless `n` is a perfect
+square): a scheme with `⌊√n⌋ + 1` groups of size `≤ ⌊√n⌋ + 1`, `q_t = 0`, `ρ_t = n`. -/
+theorem exists_trivial_scheme_nat_sqrt (I : κ → Finset (Fin n)) (R : ℕ) :
+    ∃ S : Scheme I (Fin (Nat.sqrt n + 1)), S.R = R ∧ S.pts.card = M I * R + 1 ∧ S.Uniform ∧
+      ∀ t, S.s t ≤ Nat.sqrt n + 1 ∧ S.q t = 0 ∧ S.ρ t = n :=
+  exists_trivial_scheme_sqrt I R (Nat.sqrt n + 1) (Nat.succ_pos _)
+    (Nat.lt_succ_sqrt n).le
 
 end ClauseScheme
 
@@ -207,3 +232,5 @@ end ClauseScheme
 #print axioms ClauseScheme.trivialScheme_ρ
 #print axioms ClauseScheme.trivialScheme_uniform
 #print axioms ClauseScheme.exists_trivial_scheme_sqrt
+#print axioms ClauseScheme.exists_trivial_scheme_sqrt_eq
+#print axioms ClauseScheme.exists_trivial_scheme_nat_sqrt

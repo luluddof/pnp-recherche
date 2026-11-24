@@ -1,0 +1,4 @@
+(l,d)=(5,2) mode=P: N_m=7 asym=7 subcube-lemma=7; #residuals=123
+  ranks=(1, 1, 2, 2, 2) sum=8: residual 5.14e-12 max|entry|=1.8e+01 numeric rank P_k=[1, 1, 2, 2, 2] -> FEASIBLE  [2s]
+  ranks=(0, 2, 2, 2, 2) sum=8: residual 2.13e-13 max|entry|=6.4e+00 numeric rank P_k=[0, 2, 2, 2, 2] -> FEASIBLE  [3s]
+  ranks=(1, 1, 1, 2, 2) sum=7: residual 1.36e-01 max|entry|=1.1e+02 numeric rank P_k=[1, 1, 1, 2, 2] -> not found  [6s]

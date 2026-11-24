@@ -1,0 +1,2 @@
+(l,d)=(4,1) mode=P: N_m=6  asym bound=(6, (1, 1))  subcube-lemma LB=8
+  total=7 ranks=(1, 2, 2, 2): not found (res 5.8e-01)

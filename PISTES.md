@@ -26,14 +26,13 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
-| G14a | 🔄 **Erreurs par point sur un corps fini** | Le théorème de l'article 2 utilise une somme de carrés positive, qui échoue sur les corps finis : chercher des contre-exemples et un algorithme plus rapide pour compter modulo p (donc décider) | G11b, G9b |
+| G14a | 🔄 **Échappatoires restantes de l'article 2** (piste « corps fini » FERMÉE : le théorème vaut sur tout corps, G13a) | Borne de degré D < nd (permise par O'Donnell) ; effondrement de rang par L, R′ ; autres décompositions | G13a |
+| G15L | 🔄 **Lean : théorème de l'article 2 sur tout corps** | `Article2/EnCours/AnyField.lean`, forme à deux paramètres (ma, mc) | G13a |
 | G14b | 🔄 **Limites de la contraction de tenseurs d'OpenAI** | La voie la plus forte de la prépublication, jamais analysée : modèle abstrait et borne inférieure | G4c, G9d |
 | G14c | 🔄 **Un modèle de coût DP valide** | Modèle sur le graphe des lignes, non dégénéré, qui résiste à l'élimination ligne par ligne ; borne inférieure | G7b, G10a |
 | G14d | 🔄 **Compléter le théorème de l'article 2** | Multiplicités inégales (y a-t-il une échappatoire ?), écart d'un facteur log ℓ, asymptotique rigoureuse | G11b |
 | G14e | 🔄 **Termes « intriqués » (non produits)** | Plus petit cas (grille 2×3, λ = 1) : l'intrication aide-t-elle ? | G9d |
 | G14f | 🔄 **Noyau de Q1\* : graphes bipartis** | Encodages (somme sur un côté, caractères) et obstruction | G9c |
-| G14g | 🔄 **Lean : conséquences de l'article 2 et restes de l'article 1** | Forme max/moyenne, enlever l'hypothèse n ≤ M | G13b, G10e |
-| G13a | 🔄 **Relecture adverse + nouveauté du théorème de G11b** | Σ rang(E_k) ≥ N_m : chaque étape, le corps, le cadre exact, la conséquence sur le temps, la littérature | G11b |
 
 **Consigne de l'utilisateur (24/11) :** dès que les générations 8 et 9 sont terminées, lancer une **génération 10** sur les pistes « pas encore explorées » (section 2) et « en attente » (section 3).
 
@@ -70,7 +69,7 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 | Piste | Raison de l'attente |
 |---|---|
 | ⏸️ **Version 3 de l'article 1** | **EN ATTENTE — décision de l'auteur (24/11) : ne pas faire la version 3 avant le retour de F. Dias**, à qui la version 2 a été envoyée pour vérification. Contenu préparé pour la version 3 (à compléter avec ses remarques) : (1) section Lean mise à jour : théorème principal prouvé sans hypothèse (G10e) ; (2) corrections de G10f : facteur b superflu, dire que la borne de Dias-Lima est meilleure pour les petits groupes, précisions de l'annexe A, 4 attributions à adoucir ; (3) théorème sep(F\*) ≥ c·n\* et son corollaire, si la relecture G11a le confirme ; (4) nouveaux chemins Lean (`lean/PnpLean/Article1/`) |
-| ⏸️ **Rédaction de l'article 2** (erreurs par point) | Condition de l'auteur : un **résultat final**. **G11b en annonce un (24/11)** : Σ rang(E_k) ≥ N_m, donc √log n optimal dans le cadre des erreurs par point. À confirmer par G13a (relecture, nouveauté) et G13b (Lean) avant toute rédaction |
+| ⏸️ **Rédaction de l'article 2** (erreurs par point) | Condition de l'auteur : un résultat final. **État (24/11) : théorème prouvé en Lean (ℚ), confirmé par relecture adverse, valable sur tout corps (P+), nouveauté : semble nouveau (technique classique).** Réserves à écrire : vaut dans un modèle de coût ; ne couvre pas la contraction de tenseurs ni D < nd ni L/R′ ni les multiplicités inégales (G14a, G14d en cours). **En attente de l'accord de l'auteur pour rédiger.** |
 | ⏸️ **Note « plus long chemin / plus long cycle en 2^o(n) sur les graphes creux »** (candidat article 4) | Preuve confirmée par G10c ; conditionnel aux prépublications ; doit citer Wu-Wang (arXiv 2611.02548) ; résultat modeste. Décision de l'auteur |
 | ⏸️ **Relecture de l'article 1 par un expert humain** | **En cours : l'auteur a envoyé la version 2 à F. Dias (24/11).** Attendre sa réponse. |
 
@@ -81,6 +80,8 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | Piste | Résultat |
 |---|---|
+| ✅ Relecture + nouveauté du théorème de l'article 2 (G13a) | Confirmé ; vaut sur tout corps ; semble nouveau |
+| ✅ Lean : compléments (G14g) | Article 1 sans l'hypothèse n ≤ M ; schéma trivial ; conséquences finies de l'article 2 |
 | ✅ **Pré-version 3 (brouillon)** (G12W) | `resultats/brouillons/pre-v3/` : 41 pages, marqué DRAFT ; section F\*, section Lean à jour, section « Scope of the claims » avec 8 questions ; à faire vérifier par une autre IA (voir `LISEZ-MOI.md`) |
 | ✅ Cas général des erreurs par point (G11c) | Lemme Q_{d+2} étendu ; la classe commutative n'est pas optimale (11 contre 12 à (4,1), numérique) |
 | ✅ **Lean : théorème principal candidat de l'article 2** (G13b) | `sum_rank_ge_N` : Σ rang(E_k) ≥ N(ℓ, m), prouvé sur ℚ sans hypothèse ajoutée |
@@ -114,6 +115,7 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 | ❌ A – Meilleures pièces par espaces gradués à croissance lente (G9a) | Comptage de rang : α ≥ 1/2, donc ρ ≥ 1/√2 dans le cadre de l'annexe B ; la localité se casse si on restreint les modes |
 | ❌ D – Gadgets à 3 parties, multiplication rapide de matrices, conjecture du rang asymptotique, instances non cliques, réutilisation des égalités (G9d) | Gain constant au mieux ; « loi harmonique » : tout schéma à termes produits reste à 2^Ω(m/log m) (esquisse, dans le modèle) |
 | ❌ B – Décider au lieu de compter (G9b) | Les meilleures pièces ne marchent qu'en grande caractéristique ; sur GF(2) le meilleur ρ connu est 0,811 > 1/√2 ; Valiant-Vazirani et le hachage n'aident pas |
+| ❌ Erreurs par point sur un corps fini (piste 1 de la génération 14) | Le théorème de l'article 2 vaut sur tout corps (G13a) : pas de faille |
 | ❌ Géométries de récursion (grilles, boîtes de dimension d) | 2^Ω(m/log m) dans le modèle (G4b, G6b) |
 | ❌ Structures non produit pour OpenAI (expanseurs, codes) | Rang ≥ K/2 (G5a) |
 | ❌ Combinaisons OpenAI + Claude | Même mur 2^(n/log n) (G4c) |

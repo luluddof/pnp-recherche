@@ -17,6 +17,10 @@ remark after it): the rows of `Φ^ω` indexed by variables that never occur are 
   `Scheme.theoremB_unconditional'`, `Scheme.theoremB_bounded_unconditional'`,
   `Scheme.exists_pointA'`, `Scheme.theoremA'` : the results of `TheoremB.lean`, `Lemma2.lean`
   and `TheoremA.lean` **without** the hypothesis `hM : n ≤ M I`.
+
+## (b) The trivial scheme of the paper's §6
+
+See `PnpLean/Article1/TrivialScheme.lean` (separate file, also sorry-free).
 -/
 
 open Polynomial Matrix Module

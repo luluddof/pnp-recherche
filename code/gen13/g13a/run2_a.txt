@@ -1,0 +1,14 @@
+(l,d)=(3,1) mode=P: N_m=1  asym bound=(2, (1, 0))  subcube-lemma LB=3
+  total=2 ranks=(0, 1, 1): not found (res 4.9e-01)
+  total=2 ranks=(0, 0, 2): not found (res 5.0e-01)
+  total=3 ranks=(1, 1, 1): FEASIBLE res=4.5e-15; J rebuilt: rank P_k=[1, 1, 1] (sum 3), rank Q_k=[4, 4, 4]; injectivity (ma,mc,dimA,rank,relmin sv)=[(1, 0, 2, 2, 0.0841)]
+(l,d)=(3,2) mode=P: N_m=1  asym bound=(1, (0, 0))  subcube-lemma LB=1
+  total=0 ranks=(0, 0, 0): not found (res 1.4e-01)
+  total=1 ranks=(0, 0, 1): FEASIBLE res=2.6e-15; J rebuilt: rank P_k=[0, 0, 1] (sum 1), rank Q_k=[4, 4, 4]; injectivity (ma,mc,dimA,rank,relmin sv)=[(0, 0, 1, 1, 1.0)]
+(l,d)=(4,2) mode=P: N_m=1  asym bound=(2, (1, 0))  subcube-lemma LB=3
+  total=2 ranks=(0, 0, 1, 1): not found (res 2.0e-01)
+  total=2 ranks=(0, 0, 0, 2): not found (res 1.9e-01)
+  total=3 ranks=(0, 1, 1, 1): FEASIBLE res=2.0e-14; J rebuilt: rank P_k=[0, 1, 1, 1] (sum 3), rank Q_k=[8, 8, 8, 8]; injectivity (ma,mc,dimA,rank,relmin sv)=[(1, 0, 2, 2, 0.107)]
+(l,d)=(4,3) mode=P: N_m=1  asym bound=(1, (0, 0))  subcube-lemma LB=1
+  total=0 ranks=(0, 0, 0, 0): not found (res 5.6e-02)
+  total=1 ranks=(0, 0, 0, 1): FEASIBLE res=8.9e-15; J rebuilt: rank P_k=[0, 0, 0, 1] (sum 1), rank Q_k=[8, 8, 8, 8]; injectivity (ma,mc,dimA,rank,relmin sv)=[(0, 0, 1, 1, 1.0)]

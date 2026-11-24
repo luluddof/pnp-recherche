@@ -1,0 +1,1 @@
+(l,d)=(4,1) mode=PQ: N_m=6  asym bound=(6, (1, 1))  subcube-lemma LB=8
