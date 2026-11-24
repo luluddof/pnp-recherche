@@ -43,6 +43,17 @@ cd lean && lake exe cache get && lake build PnpLean.Outils
 | `four_bad_edges` | Sur le cube Q_{d+2}, au moins 4 mauvaises arêtes. | Sur ℚ |
 | `card_subcube` | Un sous-cube a 2^(ℓ−\|S\|) points. | — |
 
+### 4. Compromis de rang
+
+| Nom | Énoncé | Limite |
+|---|---|---|
+| `swap_rank_tradeoff` | Échange avec spectateur E⊗G⊗W → G⊗E⊗W (dimensions m, n, Q). Si A + B = échange, rang A ≤ r et rang du réalignement de B ≤ b, alors pour tout k ≤ m : k·Q·n ≤ r + k²·Q·b et k·n·Q ≤ b·Q + k²·r ; énoncés miroirs pour k ≤ n ; b < m·n ⇒ Q ≤ r. | Tout corps ; décompositions exactes (pas au sens « bord ») |
+| `swap_rank_product` | Pour m = n = M et 1 ≤ b < M² : 2·Q·M² ≤ 9·r·b. | Tout corps |
+| `df_flattening_min` | Si une matrice 2^W × 2^W non singulière est une somme de N termes, chacun produit sur les groupes d'une direction de tables qui lisent seulement les bits de leur groupe, alors 2^\|W\| ≤ Σ_k 2^(c_k), avec c = Σ_g min(e1(g), e2(g)). | Tout corps |
+| `det_ne_zero_of_sub_one_mem` | Une matrice ≡ 1 modulo un idéal propre a un déterminant non nul. | Tout anneau commutatif |
+
+**Antériorité de `swap_rank_tradeoff` :** l'objet est le problème 12 de Naslund (arXiv:1701.04475) ; le cas k = 1 est noté par Karam (arXiv:2310.11356). Le résultat est probablement du niveau « folklore » ; la preuve vérifiée par machine semble nouvelle.
+
 ## Non inclus, et pourquoi
 
 - **`UAvg` (moyennes uniformes)** : Mathlib a déjà `Finset.expect` (notation 𝔼). Notre définition `uavg` fait double emploi. Seuls les deux résultats qui s'appuient dessus sont listés.

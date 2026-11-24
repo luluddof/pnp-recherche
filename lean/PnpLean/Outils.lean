@@ -5,6 +5,8 @@ import PnpLean.Article2.QdPlus2
 import PnpLean.Article2.AnyField
 import PnpLean.Article2.MultiPoint
 import PnpLean.Article2.OutputLevel
+import PnpLean.Article3.DFRank
+import PnpLean.Outils.SwapRank
 
 /-!
 # PnpLean.Outils — reusable tools
@@ -96,6 +98,26 @@ alias four_bad_edges := QdPlus2.qd2_lemma
 /-- Number of points of a subcube: `2 ^ (ℓ - |S|)`. -/
 alias card_subcube := PerPoint.card_subcube
 
+/-! ## 4. Rank trade-offs: the swap operator, and direction-factored identities -/
+
+/-- **Rank versus operator-Schmidt rank for the swap with a spectator, any field.**
+`swapW K m n Q` is the swap `E ⊗ G ⊗ W → G ⊗ E ⊗ W` (dimensions `m, n, Q`).  If
+`A + B = swapW`, `rank A ≤ r` and the realignment of `B` has rank `≤ b`, then for every `k ≤ m`:
+`k*Q*n ≤ r + k*k*Q*b` and `k*n*Q ≤ b*Q + k*k*r`; the mirror statements hold for `k ≤ n`; and
+`b < m*n → Q ≤ r`. -/
+alias swap_rank_tradeoff := SwapRank.swap_rank_osr_tradeoff
+
+/-- **Product form:** for `m = n = M` and `1 ≤ b < M²`: `2*Q*M² ≤ 9*(r*b)`. -/
+alias swap_rank_product := SwapRank.swap_rank_osr_product
+
+/-- **Number of terms of a direction-factored identity.**  If a nonsingular `2^W × 2^W` matrix
+is a sum of `N` terms, each a product over the groups of one direction of tables that read only
+the bits of their group, then `2^|W| ≤ ∑ k, 2^(c k)` with `c = ∑ g, min (e₁ g) (e₂ g)`. -/
+alias df_flattening_min := DFRank.df_flattening_min
+
+/-- **A matrix congruent to `1` modulo a proper ideal has nonzero determinant.** -/
+alias det_ne_zero_of_sub_one_mem := DFRank.det_ne_zero_of_sub_one_mem
+
 end PnpOutils
 
 #print axioms PnpOutils.pow_dvd_det_of_nullity
@@ -111,3 +133,7 @@ end PnpOutils
 #print axioms PnpOutils.card_subcube
 #print axioms PnpOutils.rank_eval_zero_le
 #print axioms PnpOutils.rank_submatrix_le_sum_rank
+#print axioms PnpOutils.swap_rank_tradeoff
+#print axioms PnpOutils.swap_rank_product
+#print axioms PnpOutils.df_flattening_min
+#print axioms PnpOutils.det_ne_zero_of_sub_one_mem
