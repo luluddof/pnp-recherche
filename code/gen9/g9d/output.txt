@@ -1,0 +1,41 @@
+A1 eight-square: R+C=2*crossing OK; (row,col) ranks  R: (np.int64(8), np.int64(64))  C: (np.int64(64), np.int64(8))  crossing: (np.int64(64), np.int64(64))
+   restriction x=v=0: rank crossing|= 8  R|= 8  C|= 8
+A2 triangle <2,2,2>: flattening ranks (A|BC),(B|AC),(C|AB) = [np.int64(4), np.int64(4), np.int64(4)] = n^2 each; plain bits/edge L=1.00; any cut crossed by 2L=2.00 bits; rank-one hyperedge needs >= log2 R(MM)  (n=2: log2 7=2.807 > 2L)
+A2 triangle <3,3,3>: flattening ranks (A|BC),(B|AC),(C|AB) = [np.int64(9), np.int64(9), np.int64(9)] = n^2 each; plain bits/edge L=1.58; any cut crossed by 2L=3.17 bits; rank-one hyperedge needs >= log2 R(MM)  (n=2: log2 7=2.807 > 2L)
+
+B1 product-piece model (any unbalanced grid allowed): u(K)=1/e(K), DP over all splits
+   harmonic law at the floor: u(gh) <= u(g)+u(h)  =>  u = O(log K)
+   rho=1/2 (floor)      X=24: u=    3.81 u/X=0.159 split=8/24 | X=64: u=   10.24 u/X=0.160 split=32/64 | X=256: u=   40.95 u/X=0.160 split=64/256 | X=1024: u=  163.79 u/X=0.160 split=64/1024 |
+   rho=1/sqrt2 (App.B)  X=24: u=    1.85 u/X=0.077 split=12/24 | X=64: u=    3.02 u/X=0.047 split=24/64 | X=256: u=    6.05 u/X=0.024 split=96/256 | X=1024: u=   12.11 u/X=0.012 split=480/1024 |
+   rho=11/12            X=24: u=    1.13 u/X=0.047 split=12/24 | X=64: u=    1.28 u/X=0.020 split=32/64 | X=256: u=    1.52 u/X=0.006 split=128/256 | X=1024: u=    1.81 u/X=0.002 split=512/1024 |
+   (X = log2 K.  u/X bounded => e >= Omega(1/log K) => time 2^{Omega(m/log m)}; best split is balanced)
+
+B2 fast MM.  Bottom level on K0 nodes: 3 groups, trace(W_A W_B W_C), dimension 2^{2S/9}:
+   e0 = 2*omega/9  (AKK single-network lower bound 4/9; rank-one floor 1/2; brute force 1)
+   omega=2 (=ARC)   e0=0.4444 (x0.444 vs brute)   log2m=40: log2T/m=0.9601  log2m=100: log2T/m=0.6124  log2m=1000: log2T/m=0.2165
+   omega=2.371339   e0=0.5270 (x0.527 vs brute)   log2m=40: log2T/m=1.1356  log2m=100: log2T/m=0.7039  log2m=1000: log2T/m=0.2489
+   Strassen         e0=0.6239 (x0.624 vs brute)   log2m=40: log2T/m=1.3417  log2m=100: log2T/m=0.8113  log2m=1000: log2T/m=0.2868
+   naive            e0=0.6667 (x0.667 vs brute)   log2m=40: log2T/m=1.4328  log2m=100: log2T/m=0.8587  log2m=1000: log2T/m=0.3036
+   triangle gadget INSIDE a level (3 edges of L bits -> one rank-one hyperedge of omega*L bits):
+     omega=2.0: 3 parts kept separate: 0.667 per bit but instance is a 3-uniform hypergraph (leaves class); after any merge of 2 parts: omega*L/(2L) = 1.000 >= 1  (no gain)
+     omega=2.371339: 3 parts kept separate: 0.790 per bit but instance is a 3-uniform hypergraph (leaves class); after any merge of 2 parts: omega*L/(2L) = 1.186 >= 1  (no gain)
+   slice-type triangle pieces f(a)g(b,c): slice rank(MM) >= subrank = n^{2-o(1)} => rho_triangle = 1-o(1)
+
+B3 general two-direction model, NON-product terms: what the provable floor still allows
+   X=32: floor e=1.326e-04  -log2(e)/X=0.403  best split a=2
+   X=64: floor e=2.024e-09  -log2(e)/X=0.451  best split a=2
+   X=128: floor e=4.712e-19  -log2(e)/X=0.476  best split a=2
+   X=256: floor e=2.555e-38  -log2(e)/X=0.488  best split a=2
+   X=512: floor e=7.507e-77  -log2(e)/X=0.494  best split a=2
+   variant with brute-force part tables (both directions forced): log2(1/e) vs sqrt(X)
+   X=64: floor e=1.222e-04  log2(1/e)=13.00  sqrt(X)=8.0  2*sqrt(X)=16.0  split a=14
+   X=256: floor e=1.863e-09  log2(1/e)=29.00  sqrt(X)=16.0  2*sqrt(X)=32.0  split a=30
+   X=1024: floor e=4.337e-19  log2(1/e)=61.00  sqrt(X)=32.0  2*sqrt(X)=64.0  split a=None
+   variant with recursive part evaluation (row terms of negligible cost):
+   constant g=2: per-level factor 1/g+1/4=0.750, e ~ K^-0.415 -> time 2^(m^0.792)
+   constant g=3: per-level factor 1/g+1/4=0.583, e ~ K^-0.491 -> time 2^(m^0.755)
+   constant g=4: per-level factor 1/g+1/4=0.500, e ~ K^-0.500 -> time 2^(m^0.750)
+   constant g=5: per-level factor 1/g+1/4=0.450, e ~ K^-0.496 -> time 2^(m^0.752)
+   constant g=6: per-level factor 1/g+1/4=0.417, e ~ K^-0.489 -> time 2^(m^0.756)
+   constant g=8: per-level factor 1/g+1/4=0.375, e ~ K^-0.472 -> time 2^(m^0.764)
+   constant g=16: per-level factor 1/g+1/4=0.312, e ~ K^-0.420 -> time 2^(m^0.790)

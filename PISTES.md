@@ -28,7 +28,6 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 |---|---|---|---|
 | G9b | 🔄 **B – Décider au lieu de compter** | Compter modulo 2 (Valiant-Vazirani) ; identités sur GF(2) et GF(3) | Idée du 24/11 |
 | G9c | 🔄 **C – Q1\*** | Compter les ensembles indépendants d'un graphe presque creux en 2^O(n/√log n) ; idées : hybride, autre encodage, identité de l'étoile | G8b |
-| G9d | 🔄 **D – Sortir de la structure produit** | Gadgets à 3 parties (rang du tenseur triangle, multiplication de matrices), instances non cliques, conjecture du rang asymptotique | G4b |
 
 **Consigne de l'utilisateur (24/11) :** dès que les générations 8 et 9 sont terminées, lancer une **génération 10** sur les pistes « pas encore explorées » (section 2) et « en attente » (section 3).
 
@@ -58,6 +57,8 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 | 🆕 **Relecture et nouveauté de G9e** | Vérifier la preuve (encodage CNF, identité Σ p^cc) et lire les articles voisins (arXiv 2611.00994, 2611.02548, 2611.02650, dépôt eth-hamiltonicity) pour savoir si Steiner / plus long chemin sont déjà revendiqués | Facile à moyenne | G9e |
 
 | 🆕 **Pièces hors du cadre « un seul espace gradué »** | Seule façon restante d'obtenir ρ < 1/√2 : des pièces qui ne passent pas par les composantes graduées d'un seul espace (ou des profils de croissance non concaves). Lié au problème de Hurwitz : P(N) ≤ N^(1+ε) | Très difficile | G9a |
+
+| 🆕 **Termes non produits (« intriqués »)** | Seule hypothèse non testée du mur 2^(m/log m). Il faut E1 : décomposition jointe d'un tenseur de grille 4×h (termes colonnes ≤ (1/2+o(1))·S bits, termes lignes de rang 2^o(S)) et E2 : évaluation récursive des parties fusionnées. Aucune borne connue n'exclut 2^(S^(1−ε)) dans la classe générale | Très difficile ; c'est la question centrale pour la marche 3 | G9d |
 
 ## 3. En attente
 
@@ -94,6 +95,7 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 | ❌ Anneaux Z_m, Z, Q | Réduction modulo p (preuve) |
 | ❌ Certificats de Feige-Kim-Ofek trouvables en temps polynomial | Égalent seulement le seuil spectral n^1,5 |
 | ❌ A – Meilleures pièces par espaces gradués à croissance lente (G9a) | Comptage de rang : α ≥ 1/2, donc ρ ≥ 1/√2 dans le cadre de l'annexe B ; la localité se casse si on restreint les modes |
+| ❌ D – Gadgets à 3 parties, multiplication rapide de matrices, conjecture du rang asymptotique, instances non cliques, réutilisation des égalités (G9d) | Gain constant au mieux ; « loi harmonique » : tout schéma à termes produits reste à 2^Ω(m/log m) (esquisse, dans le modèle) |
 | ❌ Géométries de récursion (grilles, boîtes de dimension d) | 2^Ω(m/log m) dans le modèle (G4b, G6b) |
 | ❌ Structures non produit pour OpenAI (expanseurs, codes) | Rang ≥ K/2 (G5a) |
 | ❌ Combinaisons OpenAI + Claude | Même mur 2^(n/log n) (G4c) |
