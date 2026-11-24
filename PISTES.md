@@ -50,6 +50,8 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 Dossiers de travail de la génération 18 : `scratchpad/gen18/g18a` à `g18i`.
 
+**État (24/11, 10 h 45 UTC) :** les neuf agents se sont arrêtés à cause de la limite d'utilisation, presque au début. Relance en deux vagues. **Vague 1 (relancée) :** G18a, G18b, G18c, G18d, G18f. **Vague 2 (à relancer quand la vague 1 finit) :** G18e, G18g, G18h, G18i.
+
 Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g18d` (erreur de numéro au lancement ; la génération est bien la 17).
 
 **Consigne de l'utilisateur (24/11) :** dès que les générations 8 et 9 sont terminées, lancer une **génération 10** sur les pistes « pas encore explorées » (section 2) et « en attente » (section 3).
