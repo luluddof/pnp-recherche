@@ -57,6 +57,12 @@ La réduction de la classe commutative (rang E_k = nombre de mauvaises arêtes),
 
 ---
 
+## Compatibilité avec la version 2 de l'article 1
+
+La version 2 de l'article (envoyée en relecture le 24 novembre 2026) cite `lean/PnpLean/` et la commande `lake build PnpLean.TheoremA`. Les fichiers `PnpLean/WitnessDet.lean`, `Scheme.lean`, `TheoremB.lean` et `TheoremA.lean` sont de simples renvois vers `PnpLean/Article1/`, pour que cette commande marche toujours. L'état exact du dépôt pour la version 2 porte l'étiquette git `article1-v2`.
+
+---
+
 ## Ajouter un article
 
 Créer `PnpLean/ArticleN/` (vérifié) et `PnpLean/ArticleN/EnCours/` (travail en cours), puis ajouter une section ici. Ajouter la cible vérifiée dans `PnpLean.lean`.
