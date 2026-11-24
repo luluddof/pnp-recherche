@@ -46,6 +46,7 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 |---|---|---|---|
 | G24b | 🔄 **Constructions à plusieurs canaux sur le bord de Voronoï** | Recherche exacte sur deux et trois copies de A1 ; argument de filtration au niveau des taux. Fermer le dernier cas ouvert des algèbres de sommets (écart 2,799 – 3,030). | G23c |
 | G24d | 🔄 **Décider les petits cas ouverts par SAT** | Modèle ST : (18,18) à N = 12, (28,28) à N = 16, valeurs exactes pour N = 9 à 16 ; problème général sur GF(2) : (3,3) et (5,2) à N = 4. Encodages avec brisure de symétrie ; preuves DRAT. | G22b-bis, G21b |
+| G24e | 🔄 **(N, N) est-il réalisable ? Rendre exacts (5,5) à N = 5 et (6,6) à N = 6** | G24c les trouve réalisables numériquement (b(5) = 5, b(6) = 6 ?). Exact ou seulement au bord ? Puis (7,7) à N = 7 (G20b : non trouvé), N = 8 à 10 avec le nouveau solveur. | G24c, G20b |
 
 Dossiers de travail de la génération 18 : `scratchpad/gen18/g18a` à `g18i`.
 
@@ -166,7 +167,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Question précise | Origine |
 |---|---|---|
-| **(N, N) est-il réalisable ?** | Réalisable (au bord) pour N ≤ 6 ; numériquement non à N = 9 (b(9) ≈ 14, G20b). Rendre exact (6,6) à N = 6 ; tester (7,7) à N = 7 et (8,8) à N = 8 dans le problème général (pas seulement le modèle monomial) ; comprendre le saut à N = 9. Si b(N) = N^(1+o(1)) : ρ ≤ 0,683 (progrès sur l'algorithme de Claude). Sinon : où est la vraie courbe ? | G24c, G20b |
+| **(N, N) est-il réalisable ?** | Réalisable (au bord) pour N ≤ 6 ; numériquement non à N = 7 ((7,7) : 30 départs, résidu 6,0, G20b) et à N = 9 (b(9) ≈ 14, G20b). En cours : G24e. Rendre exact (6,6) à N = 6 ; tester (7,7) à N = 7 et (8,8) à N = 8 dans le problème général (pas seulement le modèle monomial) ; comprendre le saut à N = 9. Si b(N) = N^(1+o(1)) : ρ ≤ 0,683 (progrès sur l'algorithme de Claude). Sinon : où est la vraie courbe ? | G24c, G20b |
 
 ## 3. En attente
 
