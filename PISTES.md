@@ -41,7 +41,6 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
 | G19b | 🔄 **Paires réalisables exactes et profil en escalier** | Frontière exacte (p, q) pour N = 2, 3, 4 ; droite ou cercle ? P(3) = 3 ou 4 ? Lien entre le profil en escalier (G18h) et la courbe T(θ) (G18g). | G18g, G18h |
-| G19c | 🔄 **Le coin ouvert des termes intriqués à N = 3** | r minimal pour « trois étoiles + rang r » sur la grille 2×3, avec un optimiseur étalonné. | G18f |
 
 Dossiers de travail de la génération 18 : `scratchpad/gen18/g18a` à `g18i`.
 
@@ -73,7 +72,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | 🆕 **Pièces hors du cadre « un seul espace gradué »** | Seule façon restante d'obtenir ρ < 1/√2 : des pièces qui ne passent pas par les composantes graduées d'un seul espace (ou des profils de croissance non concaves). Lié au problème de Hurwitz : P(N) ≤ N^(1+ε) | Très difficile | G9a |
 
-| **Termes intriqués, E1 : le coin ouvert (G18f)** | Grille 2×3 : P_N = (rang ≤ N^(2−δ)) + trois étoiles de liaison N² ? Calcul à N = 3 (≈ 1 h avec un bon optimiseur : ALS ou Gauss-Newton), puis N = 4 (1 à 3 jours). Côté preuve : une inégalité entre le rang par lignes et le total des bits de liaison d'un seul terme de colonnes. Relecture adverse du théorème F à faire. | Très difficile | G18f |
+| **Termes intriqués, E1 : ce qui reste après G19c** | Le plus petit cas (trois étoiles + rang r, N = 3) ne montre aucun gain : seuil = valeur produit (N(N−1)/2)³. Reste : une preuve de ce seuil ; N = 4 (≈ 10 h de calcul) ; d'autres formes (plus de trois étoiles, liaisons plus grandes, corps ℂ) ; les grilles g, h ≥ 3 (seulement un plancher ≈ 1/2). Sans idée structurelle nouvelle, piste à mettre en veille. | Très difficile | G18f, G19c |
 
 | 🆕 **Pièces sur un corps fini fixe avec ρ < 1/√2** | Seule liberté propre à la décision. Sur GF(2) : meilleur connu 0,811 (classe restreinte) ; recherche exhaustive à λ = 2 non terminée | Difficile | G9b |
 
@@ -131,6 +130,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Résultat |
 |---|---|
+| ❌ **Termes intriqués, le coin ouvert à N = 3** (G19c) | Aucun gain (numérique, étalonné). Seuil r* = 27 = (N(N−1)/2)³ : la valeur du point produit. r = 26 : 0 succès sur 6. Le « gain » à N = 2 est un accident. Même seuil produit sur trois cas à dimensions mixtes. `code/gen19/g19c/notes.md` |
 | ✅ **Lean : théorème A″** (G19d) | `lean/PnpLean/Article3/DFRank.lean` : A″ sous trois formes, plus la forme modulo un idéal propre. Niveau L. Reste sur papier : lemme de restriction, constante 1/√π, lien avec l'annexe D. |
 | ✅ **Relecture et antériorité du théorème F et du théorème 2** (G19e) | Les deux sont justes et sont un seul théorème (théorème C, échange avec spectateur) : r ≥ kQ(n − kb), constante exacte 2/9, plus (c) b < mn ⇒ r ≥ Q (nouveau). Flanders inutile. Quatre errata dans G18f. P(3) = 4 sur F₂. Antériorité : problème 12 de Naslund ; cas k = 1 connu (Karam) ; probablement du niveau « folklore ». Ce théorème ne peut jamais passer la droite. `code/gen19/g19e/notes.md` |
 | ⚠️ **Charges non uniformes sur une instance difficile** (G19a) | L'ouverture « Hamming 1 » est fermée sur les expanseurs (inégalité de séparateur : coût ≥ 2^(φ′M)). Théorème E : log₂ N ≥ min_i M_i/(2u) − u pour tout étiquetage. Mais l'aplatissement ne peut pas donner M/√u en général (étiquetage circulaire : A″ = M/u exactement). Ouvert : le « paquet en escalier ». `code/gen19/g19a/notes.md` |

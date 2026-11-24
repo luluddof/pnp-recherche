@@ -147,7 +147,7 @@ Ce fichier liste **tout ce qui peut entrer dans un article**, présent ou futur.
 | Dictionnaire commun des deux algorithmes de 2026 ; loi « gain = 1/√D » ; six hybrides sans gain | Loi heuristique, pas un théorème. Calculs sur de très petits cas. Utile comme section d'exposé dans l'article 3, pas seul. | `code/gen18/g18c/notes.md` |
 | Diagnostic du plancher 1/√2 (hypothèse (V), profil de croissance) | Aucun objet construit, aucun plancher nouveau prouvé. C'est une carte pour la recherche. | `code/gen18/g18h/notes.md` |
 | Reformulation du problème de Hurwitz-Naslund (droite contre cercle) | Aucune borne améliorée. La partie prouvée est dans B2. | `code/gen18/g18g/notes.md` |
-| Question E1 (termes intriqués) | Non tranchée. La partie prouvée est dans B2. | `code/gen18/g18f/notes.md` |
+| Question E1 (termes intriqués) | Non tranchée en général. La partie prouvée est dans B2. Le plus petit cas ouvert (N = 3) ne montre aucun gain, mais c'est un résultat numérique, pas une preuve. | `code/gen18/g18f/notes.md`, `code/gen19/g19c/notes.md` |
 | Corollaire sur le problème de Hurwitz (borne N^√2) | **Déjà publié** par d'autres (Siemaszko, Debnath). | `JOURNAL.md`, résultat G4a |
 | Conséquence pour l'arbre de Steiner | **Déjà revendiquée** par Wu et Wang (arXiv:2611.02548). | `code/gen9/g9e/` |
 | Pistes fermées (algorithmes locaux, LP, SOS, anneaux Z_m, certificats FKO, etc.) | Résultats négatifs attendus ou connus. | `PISTES.md`, section 5 |
