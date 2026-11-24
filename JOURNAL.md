@@ -30,7 +30,8 @@ Ce journal est un **résumé**. Un résumé ne permet pas de vérifier une preuv
 | G6a lemme 4 (3-SAT aléatoire) | sep(F) ≥ cn avec forte probabilité | P+ | note §3.7 |
 | G6a corollaire C | **Seulement dans le modèle de coût produit**, pour F lui-même (pas F\*) ; rien sur la programmation dynamique, les tenseurs ou les parités | P+ | note §3.8 |
 | G7b prop. O1 | Le modèle DP de Dias-Lima est dégénéré | P+ (confirmé par G8R sur le texte source) | `code/gen7/g7b/notes.md` |
-| G7b théorèmes C à F, corollaire G | Modèle DP corrigé, **sous hypothèse de régularité** | P | idem |
+| G8a prop. S | Résultat principal correct ; 2 constantes à corriger | P+ (en partie) | `code/gen10/g10a/` |
+| G7b théorèmes D, F, lemme E | Confirmés par G10a. **Théorème C : clause « de plus » réfutée (erreur de 1).** **Le modèle DP corrigé ne minore pas tous les évaluateurs** (seulement l'élimination par groupes entiers) | P+ (en partie) | idem |
 | G4a Hurwitz P(N) ≤ N^√2 | Correct, **déjà publié par d'autres** | P+ | `code/gen4/g4a/proof.md` |
 | G6b ρ_d ≥ 1/d | Dans un modèle restreint, sous 2 conditions | P+ | rapport G6r |
 | G4d réfutations IPS 2^O(n/√log n) | Corollaire de l'article de Claude (non relu par des pairs) | E | `code/gen4/g4d/` |
@@ -38,7 +39,7 @@ Ce journal est un **résumé**. Un résumé ne permet pas de vérifier une preuv
 | G6d lemme sur les erreurs par point | — | P | `code/gen6/g6d/notes.md` |
 | G7a famille « par morceaux », barrière A | Classe commutative seulement | P (+ N pour ℓ ≤ 10) | `code/gen7/g7a/notes.md` |
 | G7d lemme S, prop. E | Classes restreintes de réductions | E | `code/gen7/g7d/` |
-| G8a théorème B2, prop. S, lemme H | Modèle produit et modèle DP corrigé ; (a) et (b) restent ouverts | P | `code/gen8/g8a/notes.md` |
+| G8a théorème B2, lemme H | Confirmés par G10a | **P+** | `code/gen8/g8a/notes.md` |
 | G8d lemme Q_{d+2}, ρ ≥ 2^(−d)/(d+2) | Classe commutative, un point par direction | P (+ N pour d ≤ 3) | `code/gen8/g8d/notes.md` |
 | G9e conséquences de la chute de l'ETH (Steiner, plus long chemin…) | **Conditionnel** aux prépublications d'OpenAI et de Claude ; graphes creux ; comptage modulo p seulement | P (+ N sur 6 graphes) | `code/gen9/g9e/consequences.md` |
 | G9a obstruction A (α ≥ 1/2 dans le cadre de l'annexe B) | Pièces qui passent par les composantes graduées d'un seul espace | P (+ N) | `code/gen9/g9a/notes.md` |
@@ -297,6 +298,11 @@ Simplification proposée : l'hypothèse M ≥ n peut être supprimée.
   - (b) Annexe A : **chaque étape et chaque constante vérifiée** ; deux précisions mineures à ajouter (C_Δ ≥ 3 ; η indépendant de Δ).
   - (c) Bibliographie : **aucune entrée fausse** ; 15 entrées confirmées par recherche, 7 crues correctes de mémoire ; 4 attributions à adoucir (méthode du 4ᵉ moment = simple Hölder ; « introduits par Lipton et Tarjan » → « remontent au moins à » ; Bod93 ; GLR82).
   - **Nouveau (niveau P, non relu) : sep(F\*) ≥ c·n\* est prouvé** pour Δ ≥ 2, avec η\* = 2,418·10⁻⁴, par un lemme de transfert et un nouveau lemme de premier moment (la réduction naïve par contraction échoue). **Corollaire :** la borne 2^Ω(n\*^(2/3)) vaut aussi pour le schéma appliqué à F\*, ce qui rend la comparaison avec le théorème 8.3(a) de Dias-Lima **directe**. Réserve : F\* est pris selon la description de Dias-Lima, non vérifiée dans la prépublication d'OpenAI. Dossier : `code/gen10/g10f/`.
+- **G10a ✅ Relecture adverse de G8a et G7b** (preuves refaites, code indépendant) :
+  - G8a : **théorème B2 confirmé** (c₃ = 0,0772 ; demande b ≥ 2). **Proposition S : en partie** — le résultat principal (s = n^(2/3)) est correct ; 2 erreurs de constantes ((iii) fausse pour s proche de n ; « r ≤ 6s » demande s ≥ 3b ln n) ; c'est une configuration et non un schéma ; « barrière pour la méthode » est une description juste ; « ne dépasse pas n^(2/3) » vaut pour l'exposant seulement (facteur √log). **Lemme H confirmé** (6 360 vérifications). Corollaire H1 : en partie (vaut pour une décomposition W-optimale, pas pour « toute » décomposition). Proposition P : en partie (esquisse ; l'affirmation n^(3/4) non vérifiée).
+  - G7b : **théorème C : borne principale confirmée, mais la clause « de plus » est RÉFUTÉE** (erreur de 1 : il faut τ + 1 − s − |Z| et non τ + 2 ; contre-exemple avec n = 6). **Théorèmes D, F et lemme E confirmés.** Corollaire G : en partie (hérite de l'erreur de 1, sans effet asymptotique ; doit préciser la décomposition W-optimale).
+  - **Le modèle DP corrigé est seulement en partie valide :** 2^(W_t) minore seulement l'élimination « par groupes entiers ». Un éliminateur ligne par ligne fait mieux (exemples exacts : 12 contre 6, 15 contre 7, 16 contre 10). Le 2^(w_t) de l'article de Dias-Lima résiste à ce découpage, pas W_t.
+  - Dossier : `code/gen10/g10a/`.
 - **G9W ✅ Article, version 2 :** `resultats/article/main.tex` et le PDF (26 pages). Titre : « Measurement Rows Absorb at Most a √s Factor of the Cut: A Determinant Bound for Clause-Product Interpolation Schemes ». Auteur : Lucas Requena. Les 10 corrections obligatoires du rapport G8R sont traitées. Changements mathématiques : hypothèse M ≥ n supprimée (deg det Φ ≤ n_occ·R ≤ MR ; Lean garde n ≤ M, écart signalé) ; corollaire partie 3 : 2^(min(n/6, …)) ; remarque « équilibrée » avec γ ≤ 1/6. Tests refaits : les 4 scripts passent ; Σ(E def − ρ)₊ = 0 dans les 12 exécutions (l'étape de moyenne n'est pas réellement testée) ; 18 vérifications du relecteur. Vérifié par le coordinateur : compilation sans erreur, en-tête, résumé, section IA, bibliographie (2 identifiants ajoutés). **Non relu :** une note de bas de page sur le théorème 7.1(ii), l'annexe A, les références classiques (citées de mémoire).
 
 ## 4 bis. Pistes restantes pour chercher plus loin

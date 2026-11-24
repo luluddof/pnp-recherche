@@ -26,7 +26,6 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
-| G10a | 🔄 **Relecture adverse de G8a et G7b** | Théorème B2, prop. S, lemme H ; modèle DP corrigé | G8a, G7b |
 | G10b | 🔄 **Relecture + Lean des lemmes « erreurs par point »** | Lemme de G6d, lemme Q_{d+2} de G8d (base d'un article 2) | G6d, G8d |
 | G10c | 🔄 **Relecture + nouveauté de G9e** | Steiner, plus long chemin : preuve et articles voisins | G9e |
 | G10d | 🔄 **Relecture de G9c** | Théorèmes A et B sur le comptage des ensembles indépendants | G9c |
@@ -51,8 +50,8 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 
 | 🆕 **Dépasser n^(2/3) dans le modèle produit** | La méthode du déterminant témoin est limitée à n^(2/3) (prop. S de G8a). Il faut une contrainte nouvelle qui couple les points ou qui utilise la structure polynomiale. Ou construire un schéma de coût n^(2/3) : il a besoin de Ω(n^(2/3)) points | Difficile | G8a |
+| 🆕 **Un modèle DP valide** | Le modèle corrigé de G7b (largeur W_t) ne minore que l'élimination par groupes entiers (G10a) ; il faut un modèle qui résiste au découpage ligne par ligne, par exemple une largeur sur le graphe des lignes | Moyenne | G10a |
 | 🆕 **Borne de Rado pour le modèle DP corrigé** | nullité ≥ max_S(\|S\| − dim Σ U_ω(v)) contient le lemme 1 et le lemme H ; pourrait enlever l'hypothèse de régularité | Moyenne | G8a |
-| 🆕 **Relecture adverse de G8a** (théorème B2, prop. S, lemme H) | Niveau P pour l'instant | Facile à lancer | G8a |
 
 | 🆕 **Compromis (I′) et (II) pour la méthode d'OpenAI** | (I′) ρ(Cδ², δ) ≥ δ^(−a) ; (II) ρ(ℓ₁+ℓ₂, d₁+d₂) ≥ ρ(ℓ₁,d₁)·ρ(ℓ₂,d₂). Ensemble : √log n optimal à (log n)^o(1) près | Difficile | G8d |
 
@@ -76,12 +75,12 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | Piste | Raison de l'attente |
 |---|---|
-| ⏸️ **Relecture adverse de G7b** (modèle DP trop généreux, prop. O1) | Le rapport G8R confirme déjà la prop. O1 sur le texte source ; relecture complète à faire avec G8a |
 
 ## 4. Terminées (résultats)
 
 | Piste | Résultat |
 |---|---|
+| ✅ Relecture adverse de G8a et G7b (G10a) | B2, lemme H, théorèmes D et F confirmés ; prop. S correcte à 2 constantes près ; une clause du théorème C réfutée ; le modèle DP corrigé n'est que partiellement valide |
 | ✅ Relecture des points non relus de l'article (G10f) | Note 7.1(ii) correcte (2 corrections d'équité) ; annexe A vérifiée ; bibliographie sans entrée fausse |
 | ✅ **Article en français** (G9F) | `resultats/article/main_fr.tex` + PDF (28 pages) ; traduction fidèle, contrôle automatique des comptes (théorèmes, équations, références) |
 | ✅ **Article, version 2** (G9W) | `resultats/article/` : 26 pages, LaTeX + PDF ; les 10 corrections obligatoires du rapport G8R sont traitées ; hypothèse M ≥ n supprimée sur papier (Lean garde n ≤ M) |
