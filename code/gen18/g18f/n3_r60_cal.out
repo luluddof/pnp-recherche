@@ -1,0 +1,2 @@
+   start 0: f=5.7080e+02 nit=700 [83s]
+r=60 terms=[(9, 1, 9), (9, 9, 1), (1, 9, 9)] (max term cost 6.34 bits; log2 r + cost = 12.25 of 9.51): best residual^2=5.708e+02; lowest minima [570.8045] starts=1 [83s]

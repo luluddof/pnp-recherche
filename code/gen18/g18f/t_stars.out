@@ -1,0 +1,4 @@
+r=3 terms=[(4, 1, 4), (4, 4, 1), (1, 4, 4)] (max term cost 4.00 bits; log2 r + cost = 5.58 of 6): best residual^2=1.778e-14; lowest minima [0.] starts=1 [15s]
+r=2 terms=[(4, 1, 4), (4, 4, 1), (1, 4, 4)] (max term cost 4.00 bits; log2 r + cost = 5.00 of 6): best residual^2=3.746e-16; lowest minima [0.] starts=1 [18s]
+r=1 terms=[(4, 1, 4), (4, 4, 1), (1, 4, 4)] (max term cost 4.00 bits; log2 r + cost = 4.00 of 6): best residual^2=8.102e-16; lowest minima [0.] starts=1 [22s]
+r=0 terms=[(4, 1, 4), (4, 4, 1), (1, 4, 4)] (max term cost 4.00 bits; log2 r + cost = 4.00 of 6): best residual^2=2.500e+01; lowest minima [25.0008 25.0468 26.0121 26.0974 27.    ] starts=10 [157s]

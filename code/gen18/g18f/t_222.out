@@ -1,0 +1,5 @@
+r=6 terms=[(2, 2, 2)] (max term cost 3.00 bits; log2 r + cost = 5.58 of 6): best residual^2=4.016e+01; lowest minima [40.1573 40.4108 40.4203 40.5141 40.7326] starts=16 [87s]
+r=5 terms=[(2, 2, 2)] (max term cost 3.00 bits; log2 r + cost = 5.32 of 6): best residual^2=4.180e+01; lowest minima [41.8008 42.931  43.0106 43.1539 43.2984] starts=16 [168s]
+r=4 terms=[(2, 2, 2)] (max term cost 3.00 bits; log2 r + cost = 5.00 of 6): best residual^2=4.409e+01; lowest minima [44.0901 44.1428 44.2933 44.5655 46.0082] starts=16 [248s]
+r=3 terms=[(2, 2, 2)] (max term cost 3.00 bits; log2 r + cost = 4.58 of 6): best residual^2=4.704e+01; lowest minima [47.0446 47.0584 47.0674 47.4867 47.8063] starts=16 [321s]
+r=2 terms=[(2, 2, 2)] (max term cost 3.00 bits; log2 r + cost = 4.00 of 6): best residual^2=4.820e+01; lowest minima [48.2001 50.0001 50.0001 50.0001 50.0003] starts=16 [382s]

@@ -1,0 +1,16 @@
+N=2 s=1: SR_0|12(Pv)=4 = SR_(b,c)|rest(v)=4  (generic value min(N^2, s N^2)=4)
+N=2 s=2: SR_0|12(Pv)=4 = SR_(b,c)|rest(v)=4  (generic value min(N^2, s N^2)=4)
+N=2 s=3: SR_0|12(Pv)=4 = SR_(b,c)|rest(v)=4  (generic value min(N^2, s N^2)=4)
+N=2 rank(w)=1: rank Lambda_P(w) = 4 (= rho*N^2 = 4)
+N=2 rank(w)=2: rank Lambda_P(w) = 8 (= rho*N^2 = 8)
+N=2 rank(w)=3: rank Lambda_P(w) = 12 (= rho*N^2 = 12)
+N=3 s=1: SR_0|12(Pv)=9 = SR_(b,c)|rest(v)=9  (generic value min(N^2, s N^2)=9)
+N=3 s=2: SR_0|12(Pv)=9 = SR_(b,c)|rest(v)=9  (generic value min(N^2, s N^2)=9)
+N=3 s=3: SR_0|12(Pv)=9 = SR_(b,c)|rest(v)=9  (generic value min(N^2, s N^2)=9)
+N=3 rank(w)=1: rank Lambda_P(w) = 9 (= rho*N^2 = 9)
+N=3 rank(w)=2: rank Lambda_P(w) = 18 (= rho*N^2 = 18)
+N=3 rank(w)=3: rank Lambda_P(w) = 27 (= rho*N^2 = 27)
+hexagon N=2: b -> proven min r: {1: 16, 2: 8, 3: 5, 4: 4, 5: 4, 6: 3, 7: 3, 8: 2, 9: 2, 10: 2, 11: 2, 12: 1, 13: 1, 14: 1, 15: 1, 16: 0}
+hexagon N=4: b -> proven min r: {1: 1024, 2: 512, 4: 256, 8: 128, 16: 64, 32: 32, 64: 16, 128: 8, 200: 4, 255: 1, 256: 0}
+known points N=2 (r;b): (28;1) ok True  (10;7) True  (1;16) True   [B=identity: r=(N^6-N^3)/2]
+crossing: N=2 b=1 -> 1 (point (1,1) exists: tight);  N=3: [2, 1, 1]  N=4: [3, 2, 2, 1, 1, 1, 1, 1]  N=8 b=8: 2

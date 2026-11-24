@@ -39,11 +39,10 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
 | G18S | 🔄 **Relecture adverse de G18e** | G18e annonce le théorème A′ : N ≥ 2^(0,399·M/√u) dans le modèle DF, donc 2^Θ(M/√u) avec la borne supérieure de l'annexe D. C'était la condition manquante pour l'article 3. Juste ? Charges non uniformes ? Énoncé prêt pour Lean. | G18e (`code/gen18/g18e/`) |
-| G18f | 🔄 **Termes intriqués, λ = 2** (question E1) | Seule piste vers 2^(n^(1−ε)). Calcul à λ = 2 ou question réduite ; E1 est-elle une question de rang asymptotique d'un tenseur explicite ? | G9d, G14e |
 
 Dossiers de travail de la génération 18 : `scratchpad/gen18/g18a` à `g18i`.
 
-**État (24/11, 10 h 45 UTC) :** les neuf agents se sont arrêtés à cause de la limite d'utilisation, presque au début. Relance en deux vagues. **En marche :** G18f, G18S. **Terminés :** G18a, G18b (confirmé par G18R), G18c, G18d, G18e (à relire), G18g, G18h, G18i.
+**État (24/11, 10 h 45 UTC) :** les neuf agents se sont arrêtés à cause de la limite d'utilisation, presque au début. Relance en deux vagues. **En marche :** G18S. **Terminés :** G18a, G18b (confirmé par G18R), G18c, G18d, G18e (à relire), G18f, G18g, G18h, G18i.
 
 Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g18d` (erreur de numéro au lancement ; la génération est bien la 17).
 
@@ -71,7 +70,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | 🆕 **Pièces hors du cadre « un seul espace gradué »** | Seule façon restante d'obtenir ρ < 1/√2 : des pièces qui ne passent pas par les composantes graduées d'un seul espace (ou des profils de croissance non concaves). Lié au problème de Hurwitz : P(N) ≤ N^(1+ε) | Très difficile | G9a |
 
-| 🆕 **Termes « intriqués » : question E1 précise** | Un développement avec 2^o(S) termes et κ_r + κ_c < 1, qui couvre plusieurs rectangles (g ou h ≥ 3). Plus petits cas (2×3, λ = 1) : aucun gain (numérique) ; λ = 1 ne peut pas trancher. Il faut λ ≥ 2 ou une idée structurelle | Très difficile ; calculs lourds | G9d, G14e |
+| **Termes intriqués, E1 : le coin ouvert (G18f)** | Grille 2×3 : P_N = (rang ≤ N^(2−δ)) + trois étoiles de liaison N² ? Calcul à N = 3 (≈ 1 h avec un bon optimiseur : ALS ou Gauss-Newton), puis N = 4 (1 à 3 jours). Côté preuve : une inégalité entre le rang par lignes et le total des bits de liaison d'un seul terme de colonnes. Relecture adverse du théorème F à faire. | Très difficile | G18f |
 
 | 🆕 **Pièces sur un corps fini fixe avec ρ < 1/√2** | Seule liberté propre à la décision. Sur GF(2) : meilleur connu 0,811 (classe restreinte) ; recherche exhaustive à λ = 2 non terminée | Difficile | G9b |
 
@@ -123,6 +122,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Résultat |
 |---|---|
+| ⚠️ **Termes intriqués, question E1** (G18f) | Non tranchée. Théorème F (papier, non relu) : r ≥ s·Q·(M − b·s) ; négatif pour un croisement (ferme le point ouvert de G14e) et pour 2×3 hors d'un coin. E1 n'est pas une question de rang asymptotique. Le calcul λ = 2 n'est pas fait (jours de calcul). Plus petit cas ouvert : P_N = (rang ≤ N^(2−δ)) + trois étoiles. `code/gen18/g18f/notes.md` |
 | ❌ **Réfutation des 3-CNF aléatoires** (G18i) | L'obstacle central ne bouge pas. Carte temps contre densité mise à jour : les algorithmes de 2026 sont les meilleurs seulement pour Δ ≤ c·log n (2^(O(n/√(Δ log n)))). Énoncé candidat : réfutations IPS de taille 2^(O(km/√log m)) (une étape non contrôlée). Rien pour Extended Frege. `code/gen18/g18i/notes.md` |
 | ✅ **Évaluateur modulo 3 pour la route d'interpolation** (G18b, relu par G18R) | Théorème conditionnel confirmé (P+) : décision aléatoire et #F mod 3 pour les 3-CNF à occurrences bornées en 2^((12,6+o(1))·n·lnln n/√ln n), un facteur loglog sous la route d'interpolation de la prépublication. Dominé par le résultat principal de la prépublication : résultat sur la méthode seulement. Complète l'article 2 (borne supérieure loglog contre borne inférieure √loglog pour une charge constante). `code/gen18/g18b/`, `code/gen18/g18r/` |
 | ⚠️ **Problème de Hurwitz et Naslund** (G18g) | Aucune borne améliorée. Reformulation : la variante utile est « paires réalisables (p, q) », pas les sommes de carrés ; 4ρ* = sup_θ (θ + T(θ)). Borne élémentaire p·q ≥ 3N²/16. Notre ancienne « équivalence » avec P(N) ≥ N^(1+ε) est corrigée : un plancher ρ > 1/2 suit d'une borne déséquilibrée p·q ≥ N^(2+ε) en un seul θ. `code/gen18/g18g/notes.md` |

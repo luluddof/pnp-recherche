@@ -1,0 +1,2 @@
+r=28: best residual^2=5.539e-19; lowest minima [0.     9.2193]  starts=2 [5s]
+   exact-rank check: sigma_r, sigma_{r+1} = 2.003293809796038 2.3497811888293627e-10  |x|= 3.8090953124596947

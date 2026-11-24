@@ -1,0 +1,4 @@
+r=20 terms=[(1, 1, 1)] (max term cost 0.00 bits; log2 r + cost = 4.32 of 6): best residual^2=1.871e+01; lowest minima [18.7074 18.7312 19.8496 19.8503 19.8516] starts=30 [129s]
+r=16 terms=[(1, 1, 1)] (max term cost 0.00 bits; log2 r + cost = 4.00 of 6): best residual^2=2.622e+01; lowest minima [26.2162 26.3315 27.5951 28.0416 28.2058] starts=30 [248s]
+r=15 terms=[(1, 1, 1)] (max term cost 0.00 bits; log2 r + cost = 3.91 of 6): best residual^2=2.800e+01; lowest minima [28.0001 28.0003 29.4963 29.5388 29.742 ] starts=30 [349s]
+r=12 terms=[(1, 1, 1)] (max term cost 0.00 bits; log2 r + cost = 3.58 of 6): best residual^2=3.508e+01; lowest minima [35.0819 35.0992 35.3002 36.236  36.3917] starts=30 [407s]
