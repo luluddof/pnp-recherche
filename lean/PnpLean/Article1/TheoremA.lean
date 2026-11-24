@@ -1,4 +1,4 @@
-import PnpLean.TheoremB
+import PnpLean.Article1.TheoremB
 
 /-!
 # Theorem A (variable-uniform deformations: no absorption), unconditional

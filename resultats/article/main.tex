@@ -1169,12 +1169,12 @@ Mathlib~\cite{Mathlib}. The sources are in the directory \texttt{lean/} of the r
 \end{center}
 The toolchain is Lean \texttt{v4.37.0-rc1}, and the Mathlib commit is \texttt{e62b985f}, as
 pinned in the file \texttt{lake-manifest.json}. The four source files \texttt{WitnessDet},
-\texttt{Scheme}, \texttt{TheoremB} and \texttt{TheoremA} (in \texttt{lean/PnpLean/}) contain
+\texttt{Scheme}, \texttt{TheoremB} and \texttt{TheoremA} (in \texttt{lean/PnpLean/Article1/}) contain
 no \texttt{sorry} and declare no axiom. To reproduce:
 \begin{verbatim}
-  cd lean && lake exe cache get && lake build PnpLean.TheoremA
+  cd lean && lake exe cache get && lake build PnpLean.Article1.TheoremA
 \end{verbatim}
-The target \texttt{PnpLean.TheoremA} imports the other three files. We ran the build
+The target \texttt{PnpLean.Article1.TheoremA} imports the other three files. We ran the build
 command with these versions (the Mathlib cache being already present) and it completed
 successfully. We then ran the command \texttt{\#print axioms} on ten declarations of
 Table~\ref{tab:lean}:

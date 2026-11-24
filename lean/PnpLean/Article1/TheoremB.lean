@@ -1,4 +1,4 @@
-import PnpLean.Scheme
+import PnpLean.Article1.Scheme
 
 /-!
 # Theorem B (conditional on Lemma 2), with Lemma 3 proved

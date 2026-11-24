@@ -257,6 +257,8 @@ Fichier : `lean/PnpLean/WitnessDet.lean` (234 lignes, Lean 4.37.0-rc1 + Mathlib)
 
 **Non formalisé dans la première version :** le passage du schéma de la note (polynômes P_o, carte témoin ω) à ces matrices (fait ensuite par G9L, voir ci-dessus). C'est une traduction directe, mais elle reste vérifiée seulement à la main. Les lemmes 2 à 4 (probabilités, séparateurs, 3-SAT aléatoire) ne sont pas formalisés.
 
+**Réorganisation du 24 novembre :** les fichiers Lean sont classés par article. `lean/PnpLean/Article1/` (WitnessDet, Scheme, TheoremB, TheoremA : vérifiés) ; `Article1/EnCours/` (UAvg, Anticonc : lemme 2, en cours) ; `Article2/EnCours/PerPoint.lean` (lemme du déterminant par bloc pour les erreurs par point). Guide : `lean/README.md`. Cible : `lake build PnpLean.Article1.TheoremA`. Les deux versions de l'article citent les nouveaux chemins.
+
 ## 4 septies. Relecture indépendante de la note (G8R) et génération 8
 
 **Rapport G8R** (`resultats/rapport_relecture_G8R.md`) : **révision majeure**. Les mathématiques tiennent (toutes les preuves refaites ligne par ligne ; c₀ = 0,21617, c₃ = 0,033967). Corrections obligatoires principales :

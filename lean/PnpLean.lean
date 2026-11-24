@@ -1,1 +1,1 @@
-import PnpLean.Basic
+import PnpLean.Article1.TheoremA

@@ -1,4 +1,4 @@
-import PnpLean.WitnessDet
+import PnpLean.Article1.WitnessDet
 
 /-!
 # Clause-product interpolation schemes (Definition 5.1 of `note_limits_s9.md`)
