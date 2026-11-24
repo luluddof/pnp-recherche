@@ -1,0 +1,26 @@
+N=8 d=3 seed=1: #IS=1150  one-side=True clause=True fourier_err=0.00e+00 holant_classes=True
+   cut |L1|=1: rank F = 2, rank C = 2, #traces N(T)&L1 = 2, #traces on L2 = 34, 2^h = 2
+   cut |L1|=2: rank F = 4, rank C = 4, #traces N(T)&L1 = 4, #traces on L2 = 25, 2^h = 4
+   cut |L1|=3: rank F = 7, rank C = 7, #traces N(T)&L1 = 7, #traces on L2 = 20, 2^h = 8
+   cut |L1|=4: rank F = 13, rank C = 13, #traces N(T)&L1 = 14, #traces on L2 = 15, 2^h = 16
+N=10 d=3 seed=2: #IS=6545  one-side=True clause=True fourier_err=0.00e+00 holant_classes=True
+   cut |L1|=1: rank F = 2, rank C = 2, #traces N(T)&L1 = 2, #traces on L2 = 108, 2^h = 2
+   cut |L1|=2: rank F = 4, rank C = 4, #traces N(T)&L1 = 4, #traces on L2 = 90, 2^h = 4
+   cut |L1|=3: rank F = 8, rank C = 8, #traces N(T)&L1 = 8, #traces on L2 = 73, 2^h = 8
+   cut |L1|=5: rank F = 24, rank C = 24, #traces N(T)&L1 = 24, #traces on L2 = 28, 2^h = 32
+N=10 d=4 seed=3: #IS=3748  one-side=True clause=True fourier_err=0.00e+00 holant_classes=True
+   cut |L1|=1: rank F = 2, rank C = 2, #traces N(T)&L1 = 2, #traces on L2 = 67, 2^h = 2
+   cut |L1|=2: rank F = 4, rank C = 4, #traces N(T)&L1 = 4, #traces on L2 = 53, 2^h = 4
+   cut |L1|=3: rank F = 8, rank C = 8, #traces N(T)&L1 = 8, #traces on L2 = 38, 2^h = 8
+   cut |L1|=5: rank F = 20, rank C = 20, #traces N(T)&L1 = 24, #traces on L2 = 22, 2^h = 32
+N=12 d=4 seed=4: #IS=18974  one-side=True clause=True fourier_err=0.00e+00 holant_classes=True
+   cut |L1|=1: rank F = 2, rank C = 2, #traces N(T)&L1 = 2, #traces on L2 = 168, 2^h = 2
+   cut |L1|=2: rank F = 4, rank C = 4, #traces N(T)&L1 = 4, #traces on L2 = 133, 2^h = 4
+   cut |L1|=3: rank F = 8, rank C = 8, #traces N(T)&L1 = 8, #traces on L2 = 109, 2^h = 8
+   cut |L1|=6: rank F = 35, rank C = 35, #traces N(T)&L1 = 46, #traces on L2 = 44, 2^h = 64
+Gottlieb / zero-pattern ranks: m, s, s' : rank DISJ, rank 2^{|X cap Y|}, rank(random same support); C(m,min), C(s+s',s)
+   m=8 s=2 s'=2: 28 28 28 ; C(m,min)=28  C(s+s',s)=6
+   m=8 s=2 s'=4: 28 28 28 ; C(m,min)=28  C(s+s',s)=15
+   m=9 s=2 s'=4: 36 36 36 ; C(m,min)=36  C(s+s',s)=15
+   m=9 s=3 s'=3: 84 84 84 ; C(m,min)=84  C(s+s',s)=20
+   m=10 s=2 s'=5: 45 45 45 ; C(m,min)=45  C(s+s',s)=21
