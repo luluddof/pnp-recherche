@@ -40,13 +40,13 @@ Légende : 🔄 en cours · 🆕 pas encore explorée · ⏸️ en attente · �
 |---|---|
 | ⏸️ **Réécriture de la note** selon le rapport G8R (révision majeure) | Attendre G8a pour intégrer son résultat (G9L est terminé) |
 | ⏸️ **Relecture adverse de G7b** (modèle DP trop généreux, prop. O1) | Le rapport G8R confirme déjà la prop. O1 sur le texte source ; relecture complète à faire avec G8a |
-| ⏸️ **Auteur humain de la note** | arXiv demande un auteur humain responsable |
 
 ## 4. Terminées (résultats)
 
 | Piste | Résultat |
 |---|---|
 | ✅ Limits §9, modèle produit (G6a) | Réponse négative, 2^Ω(n^(2/3)) ; confirmée par relecture adverse ; note rédigée |
+| ✅ Auteur humain de la note | **Lucas Requena** (avec une mention claire du travail fait par les agents IA) |
 | ✅ Lemme 1 en Lean (G8L) | Prouvé sans `sorry` |
 | ✅ Partie déterministe en Lean (G9L) | Schéma, lemme 1 complet, fait R, lemme 3, théorème A (sans condition), théorème B (avec le lemme 2 en hypothèse) ; sans `sorry` |
 | ✅ Hurwitz P(N) ≤ N^√2 (G4a) | Correct, mais déjà publié par d'autres |
