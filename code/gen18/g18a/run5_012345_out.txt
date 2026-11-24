@@ -1,0 +1,2 @@
+a=3 L=8 packets=[[0, 1, 2, 3, 4, 5]] M=6 N=90 rank=87/91 log2[sat:ST]=-1 exh=False u=3: formula(loss_i, exact D.9 need, paper bound)={0: (126, 195, 577), 1: (36, 70, 385), 2: (6, 17, 289)} witness g={0: 66, 1: 24, 2: 6} | uniform need: BB=26 sat(ST)=25 ST=25  [282.5s]
+a=3 L=8 packets=[[0, 1, 2, 3, 4, 5]] M=6 N=90 rank=87/91 log2[sat:ST]=-1 exh=False u=2: formula(loss_i, exact D.9 need, paper bound)={0: (162, 231, 769), 1: (36, 61, 481)} witness g={0: 104, 1: 28} | uniform need: BB=64 sat(ST)=58 ST=58  [327.6s]

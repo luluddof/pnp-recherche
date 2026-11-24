@@ -38,7 +38,6 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
-| G18a | 🔄 **Précision réelle des noyaux 2-adiques** | L'analyse d'OpenAI paie 40 bits là où 10 suffisent (14 contre 4 sur un paquet creux). Le gain dépasse-t-il une constante ? Effet sur l'exposant. | G17a |
 | G18R | 🔄 **Relecture adverse de G18b** | G18b annonce un gain d'un facteur loglog n sur la route d'interpolation (décision / #F mod 3, occurrences bornées), par un évaluateur modulo 3. Esquisse. La caractéristique 3 casse-t-elle un lemme de la prépublication ? Test complet indépendant. | G18b (`code/gen18/g18b/`) |
 | G18S | 🔄 **Relecture adverse de G18e** | G18e annonce le théorème A′ : N ≥ 2^(0,399·M/√u) dans le modèle DF, donc 2^Θ(M/√u) avec la borne supérieure de l'annexe D. C'était la condition manquante pour l'article 3. Juste ? Charges non uniformes ? Énoncé prêt pour Lean. | G18e (`code/gen18/g18e/`) |
 | G18f | 🔄 **Termes intriqués, λ = 2** (question E1) | Seule piste vers 2^(n^(1−ε)). Calcul à λ = 2 ou question réduite ; E1 est-elle une question de rang asymptotique d'un tenseur explicite ? | G9d, G14e |
@@ -48,7 +47,7 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 Dossiers de travail de la génération 18 : `scratchpad/gen18/g18a` à `g18i`.
 
-**État (24/11, 10 h 45 UTC) :** les neuf agents se sont arrêtés à cause de la limite d'utilisation, presque au début. Relance en deux vagues. **En marche :** G18a, G18f, G18g, G18h, G18i, G18R, G18S. **Terminés :** G18b (à relire), G18c, G18d, G18e (à relire).
+**État (24/11, 10 h 45 UTC) :** les neuf agents se sont arrêtés à cause de la limite d'utilisation, presque au début. Relance en deux vagues. **En marche :** G18f, G18g, G18h, G18i, G18R, G18S. **Terminés :** G18a, G18b (à relire), G18c, G18d, G18e (à relire).
 
 Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g18d` (erreur de numéro au lancement ; la génération est bien la 17).
 
@@ -120,6 +119,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Résultat |
 |---|---|
+| ❌ **Précision 2-adique des vrais noyaux** (G18a) | Pas de gain au-delà d'une constante. Rang plein ⇒ même précision que la boîte noire (17 cas). Le « 4 contre 14 » de G17a est un effet de nœud de coupe sur peu de paquets. Constante de l'exposant : facteur 2 à 3,5 possible (κ = 24 → 2 à 5,9). Numérique seulement. `code/gen18/g18a/notes.md` |
 | ⚠️ **Limite de l'interpolation récursive** (G18d) | n/√log n dans toutes les familles analysées. La récursion ne compose pas les gains : la racine domine. La profondeur achète seulement √loglog. Gain constant possible (modes 4 fois redondants). Borne inférieure seulement « au niveau de la conception » ; famille générale : ouvert. Conjecture C1 (formule de Smith des blocs de Cauchy). `code/gen18/g18d/notes.md` |
 | ❌ **Hybride des deux algorithmes de 2026** (G18c) | Aucun gain sur six substitutions. Les deux algorithmes suivent la même loi heuristique : gain = (nombre de directions)^(−1/2). Un vrai gain demande des pièces à D directions avec ρ(D) < D^(−1/2) (plancher 1/D → échelon 2). `code/gen18/g18c/notes.md` |
 | ❌ **Les deux points ouverts de l'article 2** (G17e) | Aucun n'est fermé. Écart log ℓ : ouvert dans la fenêtre ; optimum à 1,1–2,3 fois la borne sur de petits cas ; l'argument à deux moitiés n'aide pas ; nouveaux lemmes (dualité de quadrature, élagage). Degré par annulation : générique mais pas forcé ; un exemple d'annulation existe. `code/gen17/g17e/notes.md` |
