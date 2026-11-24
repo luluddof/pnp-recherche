@@ -1,0 +1,6 @@
+u=2 slots{00,01}   : M=2 N=2 directions used [0, 1] (counts [1, 1])  max rank across groups = 1  sum == I over Z: True
+u=2 slots{00,11,01}: M=3 N=4 directions used [0, 1] (counts [2, 2])  max rank across groups = 1  sum == I over Z: True
+u=2 full packet    : M=4 N=7 directions used [0, 1] (counts [6, 1])  max rank across groups = 1  sum == I over Z: True
+u=3 three pairs    : M=3 N=4 directions used [0, 2] (counts [2, 2])  max rank across groups = 1  sum == I over Z: True
+u=3 four pairs     : M=4 N=7 directions used [0, 2] (counts [1, 6])  max rank across groups = 1  sum == I over Z: True
+ALL VERIFIED

@@ -17,7 +17,7 @@ Légende : 🔄 en cours · 🆕 pas encore explorée · ⏸️ en attente · �
 |---|---|---|---|
 | **1** | Schémas « produit de clauses » (question du §9 de Dias-Lima) | Version 2 envoyée à F. Dias ; pré-version 3 en brouillon | Borne 2^Ω(n^(2/3)) dans le **modèle de coût produit** ; rien sur la programmation dynamique (sauf : modèle dégénéré), ni sur les autres voies |
 | **2** | Erreurs par point dans la voie « interpolation » d'OpenAI | **En attente** (accord de l'auteur requis ; attendre G14a et G14d, puis la validation de l'article 1). Théorème prouvé en Lean sur tout corps | Σ_k rang(E_k) ≥ N(ℓ, m) pour un point par direction ; √log n optimal **dans le modèle de coût de l'exposé d'O'Donnell** ; **État des échappatoires :** corps finis : fermé (Lean) ; multiplicités inégales : fermé (**Lean**, G16L) ; effondrement de rang par L/R′ : fermé sur papier (G14a, non relu) ; degré réduit D < nd : fermé en partie (reste : degré certifié par annulation). Ne couvre pas : la contraction de tenseurs (futur article 3), l'algorithme de Claude **Ajout possible (G18b/G18R) :** borne supérieure en loglog n par un évaluateur modulo 3, contre borne inférieure en √loglog n pour une charge constante. |
-| **3** (futur) | Limites de la voie « contraction de tenseurs » d'OpenAI (annexe D) | **Idée seulement, pas assez pour un article (G17a, 24/11)** : théorème A confirmé mais très faible ; théorème B en partie (axiome du modèle VT réfuté) ; un lemme propre (précision optimale en boîte noire) ; il manque une borne de rang 2^(M/√u) dans le modèle DF | Visé : le √log est optimal pour la famille des « effilages » dépendant de la valuation ; borne d'aplatissement dans le modèle DF. Ne couvrirait pas : d'autres règles de reconstruction, plusieurs niveaux, l'algorithme de Claude |
+| **3** (futur) | Limites de la voie « contraction de tenseurs » d'OpenAI (annexe D) | **Résultat central obtenu (G18e + G18S, 24/11) : théorème A″, N ≥ 2^(0,564·M/√u), niveau P+, prêt pour Lean.** Avant (G17a) : idée seulement : théorème A confirmé mais très faible ; théorème B en partie (axiome du modèle VT réfuté) ; un lemme propre (précision optimale en boîte noire) ; il manque une borne de rang 2^(M/√u) dans le modèle DF | Visé : le √log est optimal pour la famille des « effilages » dépendant de la valuation ; borne d'aplatissement dans le modèle DF. Ne couvrirait pas : d'autres règles de reconstruction, plusieurs niveaux, l'algorithme de Claude |
 
 Avec les trois articles, les trois voies de la prépublication d'OpenAI seraient étudiées. Aucun ne dit rien sur P vs NP ni sur la validité de la prépublication.
 
@@ -38,11 +38,11 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
-| G18S | 🔄 **Relecture adverse de G18e** | G18e annonce le théorème A′ : N ≥ 2^(0,399·M/√u) dans le modèle DF, donc 2^Θ(M/√u) avec la borne supérieure de l'annexe D. C'était la condition manquante pour l'article 3. Juste ? Charges non uniformes ? Énoncé prêt pour Lean. | G18e (`code/gen18/g18e/`) |
+| — | *Aucun agent en cours. La génération 18 est terminée (24/11).* | | |
 
 Dossiers de travail de la génération 18 : `scratchpad/gen18/g18a` à `g18i`.
 
-**État (24/11, 10 h 45 UTC) :** les neuf agents se sont arrêtés à cause de la limite d'utilisation, presque au début. Relance en deux vagues. **En marche :** G18S. **Terminés :** G18a, G18b (confirmé par G18R), G18c, G18d, G18e (à relire), G18f, G18g, G18h, G18i.
+**État (24/11) :** la génération 18 est terminée : onze rapports (G18a à G18i, relecteurs G18R et G18S).
 
 Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g18d` (erreur de numéro au lancement ; la génération est bien la 17).
 
@@ -105,6 +105,13 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 | Opérateurs presque commutants à croissance exponentielle | Familles N×N sur un espace gradué avec log dim ~ E (pas √E) et une fenêtre H = o(E₀). Sans l'hypothèse (V), le compte donne ρ ≥ 2^(−α). | G18h |
 | Identité de localité à D directions | Une identité sur un espace avec log dim ~ E^((D−1)/D). Donnerait ρ(D) ≈ D^(−(D−1)/D) (spéculatif). Petits cas : D = 3 : 1/2 ; D = 4 : 3/8. | G18h, G18c |
 
+**Nouvelles pistes issues de G18S (24/11) :**
+
+| Piste | Question précise | Origine |
+|---|---|---|
+| **Charges non uniformes dans le modèle DF** | Avec des charges sur les classes de paires à distance de Hamming 1, N = 2^(M/u) est atteint : c'est le plancher 1/u (l'échelon 2). Possible seulement sur des réseaux à petits séparateurs équilibrés. Question : peut-on forcer de telles charges sur une instance difficile (expanseur), par un prétraitement, une autre mise en paquets, ou un autre étiquetage ? Ou prouver que (D.6) l'interdit. | G18S |
+| Lean : théorème A″ | Énoncé prêt (corps K, fils, groupes par direction, det ≠ 0 ⇒ 2^|W| ≤ Σ_k 2^(…)). Résultat central du futur article 3. | G18S |
+
 ## 3. En attente
 
 | Piste | Raison de l'attente |
@@ -122,6 +129,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Résultat |
 |---|---|
+| ✅ **Borne de rang dans le modèle DF** (G18e, relu par G18S) | Théorème A′ confirmé (P+), forme plus forte A″ : N ≥ 2^((0,564−o(1))·M/√u) pour des charges presque uniformes. Avec la borne supérieure de l'annexe D : 2^Θ(M/√u). « √log est optimal » est un théorème (côté inférieur) dans une famille précise. **Faux pour des charges non uniformes : N = 2^(M/u) est alors atteint.** Énoncé prêt pour Lean. `code/gen18/g18e/`, `code/gen18/g18s/` |
 | ⚠️ **Termes intriqués, question E1** (G18f) | Non tranchée. Théorème F (papier, non relu) : r ≥ s·Q·(M − b·s) ; négatif pour un croisement (ferme le point ouvert de G14e) et pour 2×3 hors d'un coin. E1 n'est pas une question de rang asymptotique. Le calcul λ = 2 n'est pas fait (jours de calcul). Plus petit cas ouvert : P_N = (rang ≤ N^(2−δ)) + trois étoiles. `code/gen18/g18f/notes.md` |
 | ❌ **Réfutation des 3-CNF aléatoires** (G18i) | L'obstacle central ne bouge pas. Carte temps contre densité mise à jour : les algorithmes de 2026 sont les meilleurs seulement pour Δ ≤ c·log n (2^(O(n/√(Δ log n)))). Énoncé candidat : réfutations IPS de taille 2^(O(km/√log m)) (une étape non contrôlée). Rien pour Extended Frege. `code/gen18/g18i/notes.md` |
 | ✅ **Évaluateur modulo 3 pour la route d'interpolation** (G18b, relu par G18R) | Théorème conditionnel confirmé (P+) : décision aléatoire et #F mod 3 pour les 3-CNF à occurrences bornées en 2^((12,6+o(1))·n·lnln n/√ln n), un facteur loglog sous la route d'interpolation de la prépublication. Dominé par le résultat principal de la prépublication : résultat sur la méthode seulement. Complète l'article 2 (borne supérieure loglog contre borne inférieure √loglog pour une charge constante). `code/gen18/g18b/`, `code/gen18/g18r/` |

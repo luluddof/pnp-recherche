@@ -1,0 +1,14 @@
+1419 instances, 204 with A'' > A' (vertex cuts)
+u=2 wires=((0, 1), (0, 3), (1, 3))  ThmA 1 A' 1 A'' 2  N=3: ['UNSAT']
+u=2 wires=((0, 1), (1, 2), (2, 0))  ThmA 1 A' 1 A'' 2  N=3: ['UNSAT']
+u=2 wires=((0, 2), (2, 3), (3, 0))  ThmA 1 A' 1 A'' 2  N=3: ['UNSAT']
+u=2 wires=((0, 1), (0, 3), (3, 1))  ThmA 1 A' 1 A'' 2  N=3: ['UNSAT']
+u=2 wires=((1, 0), (1, 2), (2, 0))  ThmA 1 A' 1 A'' 2  N=3: ['UNSAT']
+u=2 wires=((0, 2), (0, 3), (3, 2))  ThmA 1 A' 1 A'' 2  N=3: ['UNSAT']
+u=2 wires=((1, 2), (1, 3), (2, 3))  ThmA 1 A' 1 A'' 2  N=3: ['UNSAT']
+u=2 wires=((0, 1), (0, 2), (1, 2))  ThmA 1 A' 1 A'' 2  N=3: ['UNSAT']
+u=2 wires=((0, 3), (1, 0), (3, 1))  ThmA 1 A' 1 A'' 2  N=3: ['UNSAT']
+u=2 wires=((2, 1), (2, 3), (3, 1))  ThmA 1 A' 1 A'' 2  N=3: ['UNSAT']
+u=2 wires=((0, 2), (1, 0), (1, 2))  ThmA 1 A' 1 A'' 2  N=3: ['UNSAT']
+u=2 wires=((2, 1), (3, 1), (3, 2))  ThmA 1 A' 1 A'' 2  N=3: ['UNSAT']
+tested 129 instances at N = 2^A'' - 1: SAT found in 0

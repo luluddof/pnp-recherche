@@ -1,0 +1,5 @@
+u=3: M=8  A' majority cut: log2 N >= 4 = 0.5000 M  (formula M*C(u-1,(u-1)/2)/2^(u-1) = 4; *sqrt(u)/M = 0.866)   Thm A: 2
+u=5: M=32  A' majority cut: log2 N >= 12 = 0.3750 M  (formula M*C(u-1,(u-1)/2)/2^(u-1) = 12; *sqrt(u)/M = 0.839)   Thm A: 2
+u=7: M=128  A' majority cut: log2 N >= 40 = 0.3125 M  (formula M*C(u-1,(u-1)/2)/2^(u-1) = 40; *sqrt(u)/M = 0.827)   Thm A: 2
+u=9: M=512  A' majority cut: log2 N >= 140 = 0.2734 M  (formula M*C(u-1,(u-1)/2)/2^(u-1) = 140; *sqrt(u)/M = 0.820)   Thm A: 2
+u=11: M=2048  A' majority cut: log2 N >= 504 = 0.2461 M  (formula M*C(u-1,(u-1)/2)/2^(u-1) = 504; *sqrt(u)/M = 0.816)   Thm A: 2

@@ -1,0 +1,17 @@
+u=1 both slots: M=2 proved N >= 4
+   N=3: (0, 0, 0):UNSAT 0.0s
+   N=4: (0, 0, 0, 0):SAT(verified) 0.0s
+u=2 slots{00,01}: M=2 proved N >= 2
+   N=1: (0,):UNSAT 0.1s; (1,):UNSAT 0.0s
+   N=2: (0, 0):UNSAT 0.0s; (0, 1):SAT(verified) 0.0s
+u=2 slots{00,11}: M=2 proved N >= 4
+   N=3: (0, 0, 0):UNSAT 0.0s; (0, 0, 1):UNSAT 0.0s; (0, 1, 1):UNSAT 0.0s; (1, 1, 1):UNSAT 0.0s
+   N=4: (0, 0, 0, 0):SAT(verified) 0.0s
+u=2 slots{00,11,01}: M=3 proved N >= 4
+   N=3: (0, 0, 0):UNSAT 0.0s; (0, 0, 1):UNSAT 0.0s; (0, 1, 1):UNSAT 0.0s; (1, 1, 1):UNSAT 0.0s
+   N=4: (0, 0, 0, 0):UNSAT 0.2s; (0, 0, 0, 1):UNSAT 0.2s; (0, 0, 1, 1):SAT(verified) 0.0s
+u=3 three pairs: M=3 proved N >= 2
+   N=1: (0,):UNSAT 0.0s; (1,):UNSAT 0.0s; (2,):UNSAT 0.0s
+   N=2: (0, 0):UNSAT 0.0s; (0, 1):UNSAT 0.0s; (0, 2):UNSAT 0.0s; (1, 1):UNSAT 0.0s; (1, 2):UNSAT 0.0s; (2, 2):UNSAT 0.0s
+   N=3: (0, 0, 0):UNSAT 0.0s; (0, 0, 1):UNSAT 0.0s; (0, 0, 2):UNSAT 0.0s; (0, 1, 1):UNSAT 0.0s; (0, 1, 2):UNSAT 0.0s; (0, 2, 2):UNSAT 0.0s; (1, 1, 1):UNSAT 0.0s; (1, 1, 2):UNSAT 0.0s; (1, 2, 2):UNSAT 0.0s; (2, 2, 2):UNSAT 0.0s
+   N=4: (0, 0, 0, 0):UNSAT 0.1s; (0, 0, 0, 1):UNSAT 0.1s; (0, 0, 0, 2):UNSAT 0.1s; (0, 0, 1, 1):SAT(verified) 0.0s

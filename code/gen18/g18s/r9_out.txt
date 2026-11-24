@@ -1,0 +1,4 @@
+u=2, 2 wires per direction: M=4 crossing counts M_i=[2, 2]  ThmA 0 A' 1 A'' 2 (= min M_i: True)  GF(2): N=3: UNSAT; N=4: SAT(0, 0, 0, 0) verified=True
+u=3, 1 wire per direction: M=3 crossing counts M_i=[1, 1, 1]  ThmA 0 A' 1 A'' 1 (= min M_i: True)  GF(2): N=1: UNSAT; N=2: SAT(0, 0) verified=True
+u=3, 1 wire per direction (spread): M=3 crossing counts M_i=[1, 1, 1]  ThmA 0 A' 1 A'' 1 (= min M_i: True)  GF(2): N=1: UNSAT; N=2: SAT(0, 0) verified=True
+u=2, M=(3,2): M=5 crossing counts M_i=[3, 2]  ThmA 0 A' 1 A'' 2 (= min M_i: True)  GF(2): N=3: UNSAT; N=4: SAT(1, 1, 1, 1) verified=True

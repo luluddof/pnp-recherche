@@ -1,0 +1,4 @@
+mod 2: True
+over Z with kappa = 1: False  max entry of sum: 4  #entries where sum != I: 139
+supports (number of nonzero entries) of the 5 terms: [56, 70, 70, 70, 36]
+signs kappa in {+-1}^5 giving an exact identity over Z: None

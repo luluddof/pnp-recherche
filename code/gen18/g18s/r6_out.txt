@@ -1,0 +1,14 @@
+u=1: (a) label-class vertex cuts: max = 2/4 = 0.50000
+u=1: (b) row/column-separate label-class vertex cuts: max = 2/4 = 0.50000
+u=1: (c) all oriented class selections: max = 2/4 = 0.50000   [C(2u,u)/4^u = 0.50000]
+u=2: (a) label-class vertex cuts: max = 4/16 = 0.25000
+u=2: (b) row/column-separate label-class vertex cuts: max = 4/16 = 0.25000
+u=2: (c) all oriented class selections: max = 6/16 = 0.37500   [C(2u,u)/4^u = 0.37500]
+u=3: (a) label-class vertex cuts: max = 16/64 = 0.25000
+u=3: (b) row/column-separate label-class vertex cuts: max = 16/64 = 0.25000
+u=3: (c) all oriented class selections: max = 20/64 = 0.31250   [C(2u,u)/4^u = 0.31250]
+u=1: (d) LP optimum = 2.000000/4 = 0.500000   C(2u,u)/4^u = 0.500000
+u=2: (d) LP optimum = 6.000000/16 = 0.375000   C(2u,u)/4^u = 0.375000
+u=3: (d) LP optimum = 20.000000/64 = 0.312500   C(2u,u)/4^u = 0.312500
+u=4: (d) LP optimum = 70.000000/256 = 0.273438   C(2u,u)/4^u = 0.273438
+u=5: (d) LP optimum = 252.000000/1024 = 0.246094   C(2u,u)/4^u = 0.246094

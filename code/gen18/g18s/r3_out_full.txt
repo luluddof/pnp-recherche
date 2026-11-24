@@ -1,0 +1,4 @@
+u=2 full packet: M=4 proved N >= 4
+   N=3: (0, 0, 0):UNSAT 0.1s; (0, 0, 1):UNSAT 0.1s; (0, 1, 1):UNSAT 0.1s; (1, 1, 1):UNSAT 0.2s
+   N=4: (0, 0, 0, 0):UNSAT 0.5s; (0, 0, 0, 1):UNSAT 0.7s; (0, 0, 1, 1):UNSAT 0.9s; (0, 1, 1, 1):UNSAT 0.7s; (1, 1, 1, 1):UNSAT 0.5s
+   N=5: (0, 0, 0, 0, 0):UNSAT 18.7s; (0, 0, 0, 0, 1):UNSAT 36.5s; (0, 0, 0, 1, 1):TIMEOUT 100s; (0, 0, 1, 1, 1):TIMEOUT 100s; (0, 1, 1, 1, 1):UNSAT 19.9s; (1, 1, 1, 1, 1):UNSAT 16.0s

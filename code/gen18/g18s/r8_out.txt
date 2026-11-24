@@ -1,0 +1,13 @@
+u=2 full packet N=5 dirs=(0, 0, 0, 0, 0): UNSAT  24.5s
+u=2 full packet N=5 dirs=(0, 0, 0, 0, 1): UNSAT  55.2s
+u=2 full packet N=5 dirs=(0, 0, 0, 1, 1): TIMEOUT 110s
+u=2 full packet N=6 dirs=(0, 0, 0, 0, 0, 0): TIMEOUT 110s
+u=2 full packet N=6 dirs=(0, 0, 0, 0, 0, 1): TIMEOUT 110s
+u=2 full packet N=6 dirs=(0, 0, 0, 0, 1, 1): TIMEOUT 110s
+u=2 full packet N=6 dirs=(0, 0, 0, 1, 1, 1): TIMEOUT 110s
+u=3 four pairs N=5 dirs=(0, 0, 0, 1, 2): TIMEOUT 110s
+u=3 four pairs N=5 dirs=(0, 0, 1, 1, 2): SAT (verified) 0.1s
+u=3 four pairs N=5 dirs=(0, 0, 0, 0, 1): UNSAT  17.4s
+u=3 four pairs N=5 dirs=(0, 1, 1, 1, 2): TIMEOUT 110s
+u=3 four pairs N=5 dirs=(0, 1, 2, 2, 2): TIMEOUT 110s
+u=3 four pairs N=5 dirs=(0, 0, 0, 1, 1): TIMEOUT 110s

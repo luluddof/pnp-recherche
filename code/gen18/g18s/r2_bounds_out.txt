@@ -1,0 +1,7 @@
+u=1 both slots: M=2  log2 N >=  ThmA 2  A'(vertex cuts) 2  A''(oriented subsets) 2   arg A'' (1, 2)
+u=2 slots{00,01}: M=2  log2 N >=  ThmA 1  A'(vertex cuts) 1  A''(oriented subsets) 1   arg A'' (0, 1)
+u=2 slots{00,11}: M=2  log2 N >=  ThmA 2  A'(vertex cuts) 2  A''(oriented subsets) 2   arg A'' (1, 2)
+u=2 slots{00,11,01}: M=3  log2 N >=  ThmA 2  A'(vertex cuts) 2  A''(oriented subsets) 2   arg A'' (1, 2, 0)
+u=2 full packet: M=4  log2 N >=  ThmA 2  A'(vertex cuts) 2  A''(oriented subsets) 2   arg A'' (0, 0, 1, 2)
+u=3 three pairs: M=3  log2 N >=  ThmA 1  A'(vertex cuts) 1  A''(oriented subsets) 1   arg A'' (0, 0, 1)
+u=3 four pairs: M=4  log2 N >=  ThmA 1  A'(vertex cuts) 2  A''(oriented subsets) 2   arg A'' (1, 1, 1, 2)
