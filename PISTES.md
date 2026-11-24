@@ -22,23 +22,26 @@ Légende : 🔄 en cours · 🆕 pas encore explorée · ⏸️ en attente · �
 
 Priorité recommandée : pistes A et B, puis Q1\*.
 
-## 1. En cours (génération 8)
+## 1. En cours (générations 8 et 9)
 
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
+| G9a | 🔄 **A – Meilleures pièces algébriques** | Espaces gradués à croissance plus lente (α < 1/2), pour ρ < 1/√2 et un algorithme plus rapide que celui de Claude | N1, G4a |
+| G9b | 🔄 **B – Décider au lieu de compter** | Compter modulo 2 (Valiant-Vazirani) ; identités sur GF(2) et GF(3) | Idée du 24/11 |
+| G9c | 🔄 **C – Q1\*** | Compter les ensembles indépendants d'un graphe presque creux en 2^O(n/√log n) ; idées : hybride, autre encodage, identité de l'étoile | G8b |
+| G9d | 🔄 **D – Sortir de la structure produit** | Gadgets à 3 parties (rang du tenseur triangle, multiplication de matrices), instances non cliques, conjecture du rang asymptotique | G4b |
+| G9e | 🔄 **E – Conséquences de la chute de l'ETH** | Nouveaux algorithmes plus rapides pour d'autres problèmes, avec le suivi exact des réductions | Article de Claude §7 |
+| G9W | 🔄 **Version 2 de l'article** (LaTeX + PDF) | Réécriture selon le rapport G8R | G7c, G8R |
 | G8d | 🔄 **Turán sur l'hypercube** | Prouver ρ(∞, d) ≥ poly(1/d) dans la méthode d'OpenAI (√log n optimal) | G7a |
+
+**Consigne de l'utilisateur (24/11) :** dès que les générations 8 et 9 sont terminées, lancer une **génération 10** sur les pistes « pas encore explorées » (section 2) et « en attente » (section 3).
 
 ## 2. Pas encore explorées
 
 | Piste | Question précise | Difficulté | Origine |
 |---|---|---|---|
-| 🆕 **A – Meilleures pièces algébriques (ρ < 1/√2)** | Trouver des espaces gradués avec log dim ~ E^α, α < 1/2 (question de l'annexe H de l'article de Claude) ; donnerait 2^(m/(log m)^(1−α)), plus rapide que l'algorithme publié ; plancher ρ = 1/2 | Moyenne ; recherche par ordinateur possible | N1, G4a |
-| 🆕 **B – Décider au lieu de compter** | Compter modulo 2 suffit pour décider (Valiant-Vazirani). Les identités sur GF(2) donnent-elles un meilleur gain que sur Q ? Le plancher ρ ≥ 1/2 reste vrai sur tout corps | Inconnue : jamais étudiée par nos agents | Nouvelle idée (24/11) |
-| 🆕 **E – Exploiter la chute de l'ETH** | Des bornes inférieures de plus de 800 articles supposaient l'ETH ; chercher des algorithmes plus rapides pour d'autres problèmes NP-complets | Moyenne ; à côté du chemin principal | Article de Claude §1 |
 | 🆕 **Lemme 4 pondéré pour F\*** | Prouver la borne de séparateur pour la formule F\* de la prépublication et pour les feuilles de la sparsification, pour comparer avec le théorème 8.3 de Dias-Lima | Moyenne | Rapport G8R |
 | 🆕 **Problème de Naslund / Hurwitz** | Prouver P(N) ≥ N^(1+ε) ; équivaut à un plancher ρ > 1/2 dans l'algorithme de Claude | Très difficile (circuits non commutatifs) | N1, G5b |
-| 🆕 **Gadgets à 3 parties ou plus** | Seule voie pour passer 2^(m/log m) dans le cadre de Claude | Difficile, aucune idée concrète | G4b |
-| 🆕 **Récursion sur des instances non cliques** | Autre façon de sortir du modèle à deux partitions | Difficile | G4b |
 | ❌ **Tests de parité économiques (Q2)** — fausse sur la famille de référence (G8b, lemme CA) | Tests avec O(n·2^O(k)) incidences au total dans l'annexe D de Claude | Technique | G6c |
 | 🆕 **Erreurs par point, cas non commutatif** | Étendre le lemme de G6d au-delà de la classe commutative | Moyenne | G6d, G7a |
 | 🆕 **Forme parité et contraction de tenseurs (Limits)** | Analyser les limites de ces deux voies d'OpenAI, non couvertes par Limits ni par notre note | Difficile | G4c, G6a |
@@ -49,7 +52,6 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | 🆕 **Formes closes aux niveaux profonds (suite de G8c)** | La valeur des sous-appels de l'algorithme de Claude sur une entrée « épinglée » a une forme close calculable en temps polynomial au niveau 1 (vérifié). Si cela reste vrai aux niveaux profonds, Extended Frege réfuterait toute 3-CNF creuse insatisfaisable en taille 2^(δn). Vérifier aussi l'hypothèse (S) : degré ≤ 1 en chaque table de poids | Moyenne à difficile | G8c |
 
-| 🆕 **Q1\* (suite de G8b)** | Compter les ensembles indépendants de tout graphe à n·polylog(n) arêtes en temps 2^O(n/√log n) ; enlèverait le facteur log log n de l'algorithme de Claude | Difficile ; aucune borne inférieure connue ne bloque | G8b |
 
 | 🆕 **Dépasser n^(2/3) dans le modèle produit** | La méthode du déterminant témoin est limitée à n^(2/3) (prop. S de G8a). Il faut une contrainte nouvelle qui couple les points ou qui utilise la structure polynomiale. Ou construire un schéma de coût n^(2/3) : il a besoin de Ω(n^(2/3)) points | Difficile | G8a |
 | 🆕 **Borne de Rado pour le modèle DP corrigé** | nullité ≥ max_S(\|S\| − dim Σ U_ω(v)) contient le lemme 1 et le lemme H ; pourrait enlever l'hypothèse de régularité | Moyenne | G8a |
