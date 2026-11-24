@@ -1,0 +1,1602 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[margin=2.6cm]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\sep}{\operatorname{sep}}
+\newcommand{\sepw}{\operatorname{sep}_{\theta}}
+\newcommand{\dfc}{\operatorname{def}}
+\newcommand{\tw}{\operatorname{tw}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\Gr}{\Gamma}
+\newcommand{\nocc}{n_{\mathrm{occ}}}
+\newcommand{\Nbar}{\overline{N}}
+\newcommand{\DL}{DL}
+
+\title{Measurement Rows Absorb at Most a \texorpdfstring{$\sqrt{s}$}{sqrt(s)} Factor of the Cut:\\
+A Determinant Bound for Clause-Product Interpolation Schemes}
+\author{Lucas Requena\\[2pt]
+{\small Computer Science student}\\
+{\small \texttt{l.requena@outlook.fr}}}
+\date{November 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Dias and Lima (arXiv:2611.00517) abstract the clause-product form of the interpolation
+algorithm in OpenAI's claimed refutation of the Exponential Time Hypothesis (ETH) as a
+\emph{scheme}: at each evaluation point the variables are partitioned into groups of size at
+most $s$, and a clause may see the other groups only through linear \emph{measurement rows}.
+They prove a cost of $2^{\Omega(\sqrt n)}$ on expanding formulas and leave open, in their
+Section~9, whether measurements can ``absorb the cut''. We show that measurements absorb at
+most a $\sqrt{s}$ factor of it: at some point, the number of rows plus the Taylor order
+exceeds a constant times $\sep(F)/\sqrt{s}$, where $\sep(F)$ is the balanced-separator number
+of the primal graph. For deformations that depend only on the variable, the factor
+$\sqrt s$ disappears. The proof uses an $n\times n$ determinant built from one occurrence
+per variable, and an anticoncentration bound. Consequently, on bounded-occurrence formulas
+with linear separators and on random 3-CNF of density above $3$, every scheme applied to the
+formula itself costs $2^{\Omega(n^{2/3})}$ in the product-type cost model. We also observe
+that the DP-type cost model is degenerate: a trivial scheme has charge
+$2^{\lceil\sqrt n\rceil}$ on every formula. The deterministic part of the proof is
+machine-checked in Lean~4. The results were obtained with AI tools, have not yet been
+reviewed by human experts, and say nothing about the preprint's sharper routes, about ETH,
+or about P versus NP.
+\end{abstract}
+
+\section{Introduction}\label{sec:intro}
+
+The Exponential Time Hypothesis (ETH) of Impagliazzo and Paturi~\cite{IP01} states that 3-SAT
+on $n$ variables needs time $2^{\delta n}$ for some $\delta>0$. In October 2026 an OpenAI
+preprint~\cite{OpenAI} claimed a deterministic algorithm that counts the satisfying assignments
+of a $k$-CNF formula in time $2^{O_k(n\log\log n/\sqrt{\log n})}$, which would refute ETH. An
+exposition was written by O'Donnell~\cite{ODonnell}, and a second preprint, by Anthropic's
+Claude~\cite{Claude}, announced a $2^{o(n)}$-time algorithm for 3-SAT. We do not assess the
+correctness of either preprint, and we do not study the second one.
+
+Dias and Lima~\cite{DL} analysed the OpenAI preprint. Among other things, they isolate the
+\emph{clause-product form} of its interpolation algorithm and abstract it as a
+\emph{clause-product interpolation scheme} (their Definition~5.1, reproduced in
+Section~\ref{sec:setting}). In a cost model that charges what the preprint's evaluation pays,
+they prove that every such scheme costs $2^{\Omega(\sqrt{\tw})}$ on formulas of primal
+treewidth $\tw$, hence $2^{\Omega(\sqrt n)}$ on expanding formulas. The preprint's own
+clause-product design costs $2^{O(n(\log\log n)^2/\sqrt{\log n})}$ on bounded-occurrence
+formulas, so a gap remains. In their Section~9, Dias and Lima explain that their technique
+cannot go beyond $2^{\tilde O(\sqrt n)}$, and they state what is needed to narrow the gap from
+below: ``one must show that measurements cannot absorb the cut''. They make a pairwise
+observation for groups with one measurement row (a $2\times2$ minor) and write that ``turning
+this into a bound for groups with several measurement rows is open''.
+
+\paragraph{Our result.} We give such a bound. Let $F$ be a CNF formula on $n$ variables in
+which every variable occurs at most $b$ times, and let $\sep(F)$ be the minimum size of a set
+of variables whose removal leaves components of at most $2n/3$ vertices in the primal graph.
+In the notation of Definition~5.1 of~\cite{DL}, let $s_t$ be the largest group size at the
+point $t$, let $\rho_t$ be the total number of independent measurement rows, and let $q_t$ be
+the Taylor order. Theorem~\ref{thm:general} states that every scheme for $F$ has a point $t$
+with
+\begin{equation}\label{eq:intro}
+\rho_t+q_t+1\;>\;\min\Bigl(c_b\,\frac{\sep(F)}{\sqrt{s_t}},\ \frac{2n}{3}-s_t\Bigr),
+\qquad c_b=\frac{(1-e^{-2})(b-1)}{4\sqrt2\,b^2},\quad c_3=\frac{1-e^{-2}}{18\sqrt2}=0.03396\ldots
+\end{equation}
+If the deformation of an occurrence depends only on its variable and not on its clause,
+Theorem~\ref{thm:uniform} gives the same statement with $\sep(F)$ in place of
+$c_b\sep(F)/\sqrt{s_t}$. So when $\sep(F)=\Omega(n)$, a scheme needs about one measurement row
+(or one unit of Taylor order) per $\sqrt{s_t}$ cut variables in general, and one per cut
+variable in the variable-uniform case. We do not know whether the factor $\sqrt{s_t}$ can
+really be gained by a clause-dependent design; this is open.
+
+\paragraph{Contributions.}
+\begin{enumerate}
+\item \textbf{A witness-determinant lemma} (Lemma~\ref{lem:det}). Choose one occurrence of
+ each variable and form the $n\times n$ polynomial matrix whose rows are the chosen
+ deformation vectors. Its determinant is a nonzero polynomial of degree at most $nR$, and its
+ order of vanishing at an evaluation point is at least a combinatorial \emph{deficiency} of
+ the design at that point minus the number of measurement rows. The $2\times2$ minor of
+ \cite[Section~9]{DL} is a $2\times 2$ minor of this matrix; the full determinant handles any
+ number of rows per group.
+\item \textbf{Variable-uniform deformations gain nothing from measurements}
+ (Theorem~\ref{thm:uniform}): some point has $\rho_t+q_t+1>\min(\sep(F),2n/3-s_t)$.
+\item \textbf{General deformations gain at most a $\sqrt{s}$ factor}
+ (Theorem~\ref{thm:general}), by averaging the determinant lemma over random choices of
+ occurrences and bounding the expected deficiency from below with an anticoncentration
+ inequality with explicit constant (Lemmas~\ref{lem:anti} and~\ref{lem:expdef}).
+\item \textbf{Consequences} (Corollary~\ref{cor:main}) for bounded-occurrence formulas with
+ $\sep(F)\ge cn$ and for random 3-CNF with $m=\Delta n$ clauses, $\Delta>3$: the design
+ described in \cite[Section~9]{DL} (group size, Taylor order and number of rows all
+ $\tilde O(\sqrt n)$) does not exist, and in the product-type cost model of
+ \cite[Section~5.2]{DL} every scheme applied to the formula itself costs
+ $2^{\Omega(n^{2/3})}$; variable-uniform schemes cost $2^{\Omega(n)}$.
+\item \textbf{The DP-type cost model is degenerate} (Proposition~\ref{prop:dp}). In the second
+ cost model of \cite[Section~5.2]{DL}, a trivial scheme (constant deformation, fully measured
+ groups of size $\lceil\sqrt n\rceil$) has charge $2^{\lceil\sqrt n\rceil}$ on every formula.
+ So the bound $2^{\Omega(\sqrt n)}$ of~\cite{DL} is tight in that model for a trivial reason,
+ no technique can prove more in it, and the question of Section~9 is meaningful only in a
+ model that charges rows, such as the product-type model.
+\item \textbf{Machine verification} (Section~\ref{sec:lean}). The determinant lemma, the
+ Hermite counting step, the averaging step, the separator lemma, Theorem~\ref{thm:uniform},
+ and the deduction of Theorem~\ref{thm:general} from the expected-deficiency lemma are
+ formalised in Lean~4 with Mathlib. The expected-deficiency lemma itself, the lemma on random
+ 3-CNF and the corollary are proved on paper only.
+\item \textbf{Computational checks} (Section~\ref{sec:checks}) on small instances, which can
+ detect errors but prove nothing asymptotic.
+\end{enumerate}
+
+\paragraph{What this paper does not show.}
+\begin{itemize}
+\item The cost statements are confined to the \emph{product-type} cost model
+ of~\cite[Section~5.2]{DL}. They are lower bounds on the charges of that model, and they are
+ statements about running time only to the extent that these charges are paid. In the
+ DP-type model nothing beyond $2^{\lceil\sqrt n\rceil}$ can be proved
+ (Proposition~\ref{prop:dp}).
+\item The results concern a scheme applied to $F$ \emph{itself}. The preprint applies its
+ scheme to a bounded-occurrence formula $F^\star$ obtained from $F$ by variable copies, and
+ to the leaves of a sparsification. Theorem~8.3 of~\cite{DL} covers these; our
+ Corollary~\ref{cor:main} does not, because we have not proved $\sep(F^\star)=\Omega(n^\star)$
+ for those formulas.
+\item The results say nothing about the preprint's parity form or its tensor contraction,
+ which are outside Definition~5.1 (see \cite[Section~5.1]{DL}), nothing about the algorithm
+ of~\cite{Claude}, and nothing about the truth of ETH.
+\item The results have no bearing on P versus NP. They are barriers for one abstraction of
+ one algorithmic route, not for a problem.
+\item We give no upper bound. Whether some design attains $\rho_t\approx n/\sqrt{s_t}$, and
+ hence whether $n^{2/3}$ is the right exponent in the product-type model, is open.
+\item No human expert has reviewed this work yet (Section~\ref{sec:ai}).
+\end{itemize}
+
+\paragraph{The idea in plain terms.}
+At an evaluation point the variables are split into groups. A clause assigned to one group
+may read the variables of another group only through that group's measurement rows. Pick, for
+every variable $v$, one clause containing it, and look at the linear form that this clause
+reads in place of $x_v$. At $T=0$ this form is $x_v$ itself, so the $n$ forms are
+independent and their determinant is $1$. At an evaluation point $t$, consider one group $S$
+with $a$ variables. The forms attached to clauses of other groups can only contribute, on the
+coordinates of $S$, vectors from the row space of $S$. So if fewer than $a$ of the chosen
+clauses are assigned to $S$, and $S$ has few rows, the $n$ forms become dependent at $t$: the
+determinant vanishes there, to an order that counts the missing dimensions. The determinant
+has degree at most $MR$, where $M$ is the number of occurrences, so its orders of vanishing
+at the evaluation points sum to at most $MR$. On the other hand, a recovery rule that is
+exact for all polynomials of degree $MR$ must use more than $MR$ pieces of Hermite data in
+total. Hence at some point the missing dimensions, the \emph{deficiency}, must be paid for
+by rows or by Taylor order.
+
+How large is the deficiency? If the deformation depends only on the variable, every clause
+containing $v$ reads the same form, and a variable whose clauses are assigned to two groups
+is constrained everywhere; the deficiency is then the number of such \emph{split} variables,
+and these form a separator of the primal graph. If the deformation depends on the clause, a
+design may hope that the chosen clauses happen to fill every group exactly. But the choice of
+clauses is ours: choosing them at random, the number of chosen clauses assigned to a group
+fluctuates by about the square root of its variance, and these fluctuations add up to at
+least (number of split variables)$/\sqrt{s}$. This is where the $\sqrt s$ comes from. It is a
+loss of the proof technique, and we do not know whether it reflects a real possibility.
+
+\paragraph{Organisation.} Section~\ref{sec:related} discusses related work and compares our
+bounds with those of~\cite{DL}. Section~\ref{sec:setting} reproduces the definitions
+of~\cite{DL} and fixes notation. Section~\ref{sec:results} states the results and
+Section~\ref{sec:proofs} proves them. Section~\ref{sec:dp} treats the DP-type model.
+Sections~\ref{sec:lean} and~\ref{sec:checks} describe the Lean formalisation and the
+computational checks. Section~\ref{sec:ai} describes how the work was done, and
+Section~\ref{sec:concl} concludes with open problems. Appendix~\ref{app:random} reproduces,
+for completeness, the proofs of two facts about random 3-CNF taken from~\cite{DL}.
+
+\section{Related work}\label{sec:related}
+
+\paragraph{ETH and the 2026 preprints.} ETH was formulated by Impagliazzo and
+Paturi~\cite{IP01}, and the sparsification lemma of Impagliazzo, Paturi and Zane~\cite{IPZ01}
+transfers it to many problems. The OpenAI preprint~\cite{OpenAI} claims subexponential
+deterministic counting for $k$-CNF. According to~\cite{DL}, its headline bound is proved by a
+contraction of Boolean tensor networks, and its body develops an interpolation algorithm in
+two forms, a clause-product form and a parity form. O'Donnell~\cite{ODonnell} wrote an
+exposition of the preprint. A separate preprint by Anthropic's Claude~\cite{Claude} announces a
+$2^{o(n)}$-time algorithm for 3-SAT. Our results concern neither the tensor contraction, nor
+the parity form, nor the algorithm of~\cite{Claude}.
+
+\paragraph{Dias and Lima.} Our starting point is~\cite{DL}. All our definitions of schemes
+and cost models are theirs. We use or compare with the following results of~\cite{DL}.
+\begin{itemize}
+\item \emph{Lemma~6.2 (vanishing product).} The product $\prod_o c_o(T)$ of the own
+ coefficients has degree at most $MR$ and equals $1$ at $T=0$, so at some point $t$ at most
+ $q_t$ occurrences lose their own variable. Our Lemma~\ref{lem:hermite} uses the same
+ argument, applied to the polynomial $\prod_{t}(T-t)^{q_t+1}$; the argument is theirs. Our
+ Lemma~\ref{lem:det} replaces the product of the $M$ diagonal entries $c_o$ by the
+ determinant of an $n\times n$ matrix, of degree at most $nR$.
+\item \emph{Theorem~7.1(ii).} At the point of their Lemma~6.2, deleting at most
+ $q_t+b\,\mu_ts_t$ edges of the incidence graph leaves every component inside one group,
+ where $\mu_t$ is the number of measured groups. If $s_t\le 2n/3$, the variables incident to
+ the deleted edges form a $2/3$-separator of the primal graph\footnote{If $u,v$ are adjacent
+ in the primal graph and neither is incident to a deleted edge, they share a clause $e$ and
+ both edges $(e,u),(e,v)$ survive, so $u,v$ lie in the same component after the deletion,
+ hence in the same group.}, so this gives
+ \[
+ q_t+b\,\mu_t s_t\ \ge\ \sep(F).
+ \]
+ This bound charges \emph{measured groups}: a measured group of size $s_t$ may absorb all of
+ its roughly $bs_t$ foreign occurrences, whatever its number of rows. Since
+ $\rho_t\ge\mu_t$, it implies $\rho_t\ge(\sep(F)-q_t)/(bs_t)$. Our
+ Theorem~\ref{thm:general} charges \emph{rows} and gives
+ $\rho_t>c_b\sep(F)/\sqrt{s_t}-q_t-1$ when $c_b\sep(F)/\sqrt{s_t}\le 2n/3-s_t$. In short:
+ $\mu_ts_t\gtrsim n$ in~\cite{DL}, against $\rho_t\sqrt{s_t}\gtrsim n$ here, on formulas with
+ $\sep(F)=\Omega(n)$ and at possibly different points $t$.
+\item \emph{Theorem~8.1 (treewidth barrier) and Lemma~8.2.} In the cost model, every DP-type,
+ hence every product-type, scheme on $F$ costs at least
+ $2^{\min(\sqrt{(\tw+1)/2}-1,\,(\tw+1)/2,\,\lfloor n/2\rfloor)}$ with $\tw$ the primal
+ treewidth, and random 3-CNF with $\Delta>3$ has linear primal treewidth w.h.p. A graph of
+ treewidth $\tw$ has a separator of at most $\tw+1$ vertices leaving components of at most
+ $n/2$ vertices~\cite{RS86,Bod93}, so $\sep(F)\le\tw+1$, and Theorem~8.1 of~\cite{DL}
+ applies to the families of our Corollary~\ref{cor:main}. It gives $2^{\Omega(\sqrt n)}$ for
+ a scheme applied to $F$ itself. This is the fair comparison for our
+ $2^{\Omega(n^{2/3})}$, which holds in the product-type model only.
+ Our Lemma~\ref{lem:random} adapts the proof of their Lemma~8.2 from treewidth to
+ $2/3$-separators and uses the two facts of their Appendix~A.
+\item \emph{Theorem~8.3 (random 3-CNF).} W.h.p. the clause-product scheme costs
+ $2^{\Omega_\Delta(\sqrt n)}$ when applied (a) to the preprint's bounded-occurrence formula
+ $F^\star$ and (b) to the leaves of its sparsification. Our results do \emph{not} improve
+ this theorem: we treat $F$ itself, and we have not established the separator hypothesis for
+ $F^\star$ or for the leaves.
+\end{itemize}
+Table~\ref{tab:compare} in Section~\ref{sec:results} summarises the comparison.
+
+\paragraph{Tools.} The fact that the determinant of a polynomial matrix vanishes at a point
+to order at least the dimension of the kernel there is classical; it follows from the local
+Smith form~\cite{GLR82} and is a matrix analogue of the multiplicity lemmas of the polynomial
+method~\cite{DKSS13}. We include the short proof. Anticoncentration of sums of independent
+random variables goes back to Littlewood and Offord~\cite{LO43}, Erd\H{o}s~\cite{Erd45},
+Kolmogorov~\cite{Kol58} and Rogozin~\cite{Rog61}. The lower bound
+$\E|Z|\ge(\E Z^2)^{3/2}/(\E Z^4)^{1/2}$ that we use is the fourth-moment method, which goes
+back to Littlewood~\cite{Lit30}; see Berger~\cite{Ber97}. Balanced separators were introduced
+by Lipton and Tarjan~\cite{LT79}; their relation to treewidth is due to Robertson and
+Seymour~\cite{RS86}, see also~\cite{Bod93}. Expansion of random CNF formulas is the standard
+source of lower bounds in proof complexity~\cite{CS88,BSW01,BSI10}; as in~\cite{DL}, we use
+only two elementary properties of random 3-CNF, proved in Appendix~\ref{app:random}.
+
+\paragraph{Barriers for methods.} Like those of~\cite{DL}, our results are barriers for a
+method in a restricted model, in the spirit of the limits of the laser method for matrix
+multiplication~\cite{AFL15,AVW18}. They are not lower bounds for a problem.
+
+\paragraph{Novelty.} We are not aware of a prior proof of
+Theorems~\ref{thm:uniform} and~\ref{thm:general}. This assessment rests on searches made
+with AI tools, not on a systematic survey, and the source~\cite{DL} is itself a few weeks
+old. We welcome corrections.
+
+\section{Setting and notation}\label{sec:setting}
+
+Sections~\ref{sec:def}--\ref{sec:question} reproduce material from~\cite{DL}; indented
+passages are quotations. Section~\ref{sec:ournot} introduces our own notation.
+
+\subsection{Clause-product interpolation schemes}\label{sec:def}
+
+Each clause $e$ has a satisfaction polynomial $\varphi_e$, equal to $1$ when the clause is
+satisfied and $0$ otherwise, so that
+$\#F=\sum_{x\in\{0,1\}^n}\prod_e\varphi_e(x)$ \cite[(1)]{DL}. The deformed sum is
+\begin{equation}\tag{DL.2}\label{eq:H}
+H(T)=\sum_{x\in\{0,1\}^n}\ \prod_e\varphi_e\bigl(\langle P_{e,v}(T),x\rangle\bigr)_{v\in e},
+\end{equation}
+which is equation~(2) of~\cite{DL}. The following is quoted from \cite[Section~5]{DL}, with
+their equation~(3) renumbered~\eqref{eq:three}.
+
+\begin{quote}
+Let $F$ be a CNF over $x_1,\dots,x_n$ with clauses of at most $k$ literals, $I_e$ the variable
+set of clause $e$, and $O=\{(e,v):v\in I_e\}$ its occurrences, $M=|O|$. Let $b$ bound the
+number of occurrences of a variable. The incidence graph $G_F$ joins each clause to its
+variables; the primal graph $\mathrm{Pr}(F)$ joins two variables that share a clause.
+
+\textbf{Definition 5.1} (Clause-product interpolation scheme). A scheme for $F$ consists of
+the following.
+\begin{itemize}
+\item[(a)] \emph{Deformation.} For each occurrence $o=(e,v)$ a vector $P_o(T)\in\Q[T]^n$ of
+ degree at most $R$ with $P_o(0)=e_v$; $H(T)$ as in (2). Its own coefficient is
+ $c_o(T)=(P_o(T))_v$, a polynomial of degree at most $R$ with $c_o(0)=1$. Since
+ $\deg\varphi_e=|I_e|$, $\deg H\le MR$.
+\item[(b)] \emph{Recovery.} A finite set $X\subset\Q\setminus\{0\}$, orders $q_t\ge0$ for
+ $t\in X$, and a linear functional $\Lambda$ on Hermite data
+ $(f^{(j)}(t))_{t\in X,\,j\le q_t}$ with $\Lambda(f)=f(0)$ for every $f\in\Q[T]$ of degree at
+ most $MR$.
+\item[(c)] \emph{Designs.} For each $t\in X$: a partition of $[n]$ into groups
+ $S_{t,1},S_{t,2},\dots$; a group $\alpha_t(e)$ for each clause; a subspace
+ $\cR_{t,h}\subseteq\Q^{S_{t,h}}$ (the span of the measurement rows) for each group, such
+ that for every clause $e$, every $v\in I_e$ and every group $h\ne\alpha_t(e)$,
+ \begin{equation}\tag{DL.3}\label{eq:three}
+ P_{e,v}(t)\big|_{S_{t,h}}\in\cR_{t,h}.
+ \end{equation}
+ Write $s_t=\max_h|S_{t,h}|$, $\rho_t=\sum_h\dim\cR_{t,h}$, and $\mu_t$ for the number of
+ measured groups ($\cR_{t,h}\neq0$). The interaction graph $\cI_t$ has the groups as
+ vertices; for each clause $e$ the groups
+ $\{\alpha_t(e)\}\cup\{h\ne\alpha_t(e):P_{e,v}(t)|_{S_{t,h}}\ne0\text{ for some }v\in I_e\}$
+ form a clique. Let $w_t=\tw(\cI_t)$.
+\end{itemize}
+The clause-product form of the preprint's interpolation algorithm (its Sections 2.1--2.8) is
+an instance, with $\cR_{t,h}$ the row space of its integer measurement matrix $C_{t,h}$ and
+$\Lambda$ Hermite interpolation with $q_t=\lceil 3nR/|X|\rceil$ (Section 2.5 of [the
+preprint]). We say that $o=(e,v)$ loses its own variable at $t$ if $c_o(t)=0$.
+\end{quote}
+
+Here $e_v$ is the $v$-th unit vector of $\Q^n$, and $P_{e,v}(t)|_{S_{t,h}}$ is the restriction
+of the vector $P_{e,v}(t)\in\Q^n$ to the coordinates in $S_{t,h}$. We always assume $n\ge1$.
+Our results use only the following parts of the definition: the vectors $P_o$ with
+$\deg P_o\le R$ and $P_o(0)=e_v$; the exactness of $\Lambda$ on all polynomials of degree at
+most $MR$; and condition~\eqref{eq:three}. The polynomial $H$, the signs of the literals and
+the clause width play no role in the proofs.
+
+\subsection{Cost models}\label{sec:cost}
+
+The following is quoted from \cite[Section~5.2]{DL}.
+
+\begin{quote}
+We charge each point $t$ at least
+\[
+\kappa(t)\ \ge\ \max\Bigl(2^{s_t},\ 2^{w_t},\ \tbinom{n}{\min(q_t,\lfloor n/2\rfloor)}\Bigr)
+\qquad\text{(DP-type evaluation)},
+\]
+and, for the preprint's product-type evaluation, additionally $\kappa(t)\ge2^{\rho_t}$. A
+scheme runs in time at most $T$ in this model if $\max_{t\in X}\kappa(t)\le T$. All our lower
+bounds hold in this model; they are statements about running time only to the extent that the
+model's charges are paid.
+\end{quote}
+
+Dias and Lima then justify the charges. For the preprint's evaluation, which enumerates each
+group's assignments, every tuple of measurement readings and the Taylor data, the charges are
+paid. They show $w_t\le\mu_t\le\rho_t$, so ``the product-type model implies the DP-type
+one''. About the DP-type model they write:
+
+\begin{quote}
+The DP-type model is meant for an evaluation that still counts inside each group by
+enumeration, as the preprint does, but sums over measurement readings by dynamic programming
+instead of enumerating all tuples. [\dots] Any elimination order over the readings creates a
+table indexed by at least $\tw(G_{\mathcal M})+1\ge w_t$ readings, and a nonzero measurement
+row takes at least two values on Boolean inputs, so it costs at least $2^{w_t}$. An evaluator
+that also counted inside groups by dynamic programming would not pay $2^{s_t}$, and our model
+does not cover it.
+\end{quote}
+
+Here $G_{\mathcal M}$ is a graph on the measured groups defined in~\cite{DL} (the torso of
+$\cI_t$ on the measured groups); we do not need it.
+
+We call \emph{DP-type charge} of a scheme the number
+$\max_{t\in X}\max\bigl(2^{s_t},2^{w_t},\binom{n}{\min(q_t,\lfloor n/2\rfloor)}\bigr)$, and
+\emph{product-type charge} the maximum of the DP-type charge and $\max_{t\in X}2^{\rho_t}$.
+``A scheme costs at least $C$ in the product-type model'' means that its product-type charge
+is at least $C$. All the caveats of~\cite{DL} apply to our statements: they bound the charges
+of the model, and an evaluator that does not pay $2^{s_t}$ or $2^{\rho_t}$ is not covered.
+
+\subsection{The question of Section 9 of Dias and Lima}\label{sec:question}
+
+The following is quoted from \cite[Section~9, ``The gap'']{DL}; there $\rho(n)$ denotes the
+preprint's exponent $n(\log\log n)^2/\sqrt{\log n}$, which is unrelated to $\rho_t$.
+
+\begin{quote}
+On expanding inputs of bounded density, the clause-product scheme is confined between
+$2^{\Omega(\sqrt n)}$ (Theorem 8.3) and the preprint's $2^{O(\rho(n))}$, in the cost model.
+Our lower-bound technique cannot exceed $2^{\tilde O(\sqrt n)}$: its only constraint is
+$(w+1)s+q\gtrsim\tw$, which $s=w=q=\sqrt n$ satisfies. Narrowing the gap needs one of two new
+ingredients. From above, a design on an expander with $\sqrt n$ groups, $O(\sqrt n)$
+interaction width, Taylor order $O(\sqrt n)$ and $O(1)$ or polylogarithmically many rows per
+measured group would bring the scheme to $2^{\tilde O(\sqrt n)}$. From below, one must show
+that measurements cannot absorb the cut. A measured group of dimension one can absorb two
+foreign occurrences $(e,v),(e',v')$ with $v\ne v'$ at $t$ only if the $2\times2$ minor
+$c_{e,v}(t)c_{e',v'}(t)-p_{e,v,v'}(t)p_{e',v',v}(t)$ vanishes; that polynomial equals $1$ at
+$T=0$, so each such pair is absorbed at no more than $2R$ points. (Occurrences of the same
+variable can be absorbed together at no cost.) Turning this into a bound for groups with
+several measurement rows is open.
+\end{quote}
+
+The symbol $p_{e,v,v'}$ is not defined in~\cite{DL}; we read it as the coordinate
+$(P_{e,v}(T))_{v'}$. Three remarks on our reading of this passage.
+
+\emph{(1) It states a direction, not a formal question.} We interpret the target ``from
+above'' as a scheme with $s_t$, $q_t$ and $\rho_t$ all at most $\sqrt n\log^{\ell}n$ at every
+point, for some fixed $\ell$: with $\sqrt n$ groups and polylogarithmically many rows per
+group, $\rho_t=\tilde O(\sqrt n)$, and the cost $2^{\tilde O(\sqrt n)}$ requires
+$s_t=\tilde O(\sqrt n)$ in both cost models because $2^{s_t}$ is charged. This last point
+depends entirely on the charge $2^{s_t}$, hence on the caveat quoted in
+Section~\ref{sec:cost}.
+
+\emph{(2) The $2\times2$ minor is a pairwise observation.} If $v,v'\in S_{t,h}$,
+$\dim\cR_{t,h}=1$ and both clauses $e,e'$ are assigned to other groups, then
+\eqref{eq:three} puts the restrictions of $P_{e,v}(t)$ and $P_{e',v'}(t)$ to $S_{t,h}$ on
+one line, so the $2\times2$ matrix of their coordinates $v,v'$ is singular. In~\cite{DL}
+this is not turned into a bound, even for one row per group.
+
+\emph{(3) The parenthetical sentence explains our construction.} Occurrences of the same
+variable can be absorbed together, so only one occurrence per variable can be used in a
+determinant. This is why we work with \emph{witness maps}, which select one occurrence of
+each variable. The $2\times2$ matrix of (2) is the minor of our witness matrix on rows and
+columns $v,v'$, for a witness map that selects $(e,v)$ and $(e',v')$.
+
+\subsection{Our notation}\label{sec:ournot}
+
+Table~\ref{tab:notation} lists the notation. We write $\Gr(F)$ for the primal graph (written
+$\mathrm{Pr}(F)$ in~\cite{DL}), $\PP$ for probability and $\E$ for expectation, and
+$(y)_+=\max(y,0)$. For a variable $v$, let $O_v=\{(e,v):v\in I_e\}$ be its set of occurrences
+and $d_v=|O_v|$. So $M=\sum_vd_v$. Let $\nocc$ be the number of variables with $d_v\ge1$;
+clearly $\nocc\le\min(n,M)$.
+
+Fix a scheme and a point $t\in X$. When $t$ is fixed we write $S_h=S_{t,h}$, $a_h=|S_h|$ and
+$r_h=\dim\cR_{t,h}$, so that $\sum_ha_h=n$, $\sum_hr_h=\rho_t$ and $a_h\le s_t$.
+
+\begin{definition}[Witness maps, witness matrix]\label{def:witness}
+A \emph{witness map} $\omega$ assigns to every variable $v$ with $d_v\ge1$ one of its
+occurrences $\omega(v)\in O_v$. The \emph{witness matrix} $\Phi^\omega(T)$ is the $n\times n$
+matrix over $\Q[T]$ whose row $v$ is $P_{\omega(v)}(T)$ if $d_v\ge1$, and the constant vector
+$e_v$ if $d_v=0$.
+\end{definition}
+
+\begin{definition}[Home groups, deficiency]\label{def:def}
+Let $t\in X$ and let $\omega$ be a witness map. The \emph{home group} $h^\omega_t(v)$ of a
+variable $v$ is $\alpha_t(e)$ if $\omega(v)=(e,v)$; if $d_v=0$, it is the group that
+contains $v$. Put $I^\omega_{t,h}=\{v:h^\omega_t(v)=h\}$ and $N^\omega_{t,h}=|I^\omega_{t,h}|$.
+The \emph{deficiency} at $t$ is
+\[
+\dfc^\omega_t=\sum_h\bigl(a_h-N^\omega_{t,h}\bigr)_+ .
+\]
+\end{definition}
+
+Every variable has exactly one home group, so $\sum_hN^\omega_{t,h}=n$.
+
+\begin{definition}[Split variables]\label{def:split}
+A variable $v$ is \emph{split at $t$} if it occurs in two clauses $e,e'$ with
+$\alpha_t(e)\ne\alpha_t(e')$. Let $\Sigma_t$ be the set of split variables; every
+$v\in\Sigma_t$ has $d_v\ge2$. A variable $v\notin\Sigma_t$ has a home group $h_t(v)$ that
+does not depend on $\omega$: if $d_v\ge1$ it is the common value of $\alpha_t(e)$ over the
+clauses $e\ni v$, and if $d_v=0$ it is the group that contains $v$. Put
+$J_{t,h}=\{v\notin\Sigma_t:h_t(v)=h\}$. The sets $J_{t,h}$ partition $[n]\setminus\Sigma_t$.
+\end{definition}
+
+\begin{definition}[Separators]\label{def:sep}
+A set $Y\subseteq[n]$ is a \emph{$2/3$-separator} of $F$ if every connected component of
+$\Gr(F)-Y$ has at most $2n/3$ vertices. Let $\sep(F)$ be the minimum size of a
+$2/3$-separator. Let $\theta(d)=2(d-1)/d^2$, and
+\[
+\sepw(F)=\min\Bigl\{\sum_{v\in Y}\theta(d_v)\ :\ Y\text{ a }2/3\text{-separator of }F
+\text{ with }d_v\ge2\text{ for all }v\in Y\Bigr\},
+\]
+with $\sepw(F)=+\infty$ if there is no such $Y$, and the convention $\min(+\infty,y)=y$.
+\end{definition}
+
+The function $\theta$ is decreasing on $d\ge2$, because
+$\frac{d}{dd}\frac{d-1}{d^2}=\frac{2-d}{d^3}\le0$. Hence, if $d_v\le b$ for all $v$ with
+$b\ge2$,
+\begin{equation}\label{eq:sepw}
+\sepw(F)\ \ge\ \theta(b)\,\sep(F)=\frac{2(b-1)}{b^2}\,\sep(F).
+\end{equation}
+
+\paragraph{Random witness maps.} The set of witness maps is the product
+$\prod_{v:d_v\ge1}O_v$. A \emph{uniformly random witness map} is a uniform element of this
+finite set; equivalently, the choices $\omega(v)$ are independent and $\omega(v)$ is uniform
+on $O_v$. For $t\in X$, a variable $v$ and a group $h$, let
+\[
+\pi_{t,v,h}=\PP\bigl(h^\omega_t(v)=h\bigr)=
+\begin{cases}
+|\{e\ni v:\alpha_t(e)=h\}|/d_v&\text{if }d_v\ge1,\\
+1\text{ if }v\in S_{t,h},\ 0\text{ otherwise}&\text{if }d_v=0,
+\end{cases}
+\]
+and $\Nbar_{t,h}=\E N^\omega_{t,h}=\sum_v\pi_{t,v,h}$. Since $\sum_h\pi_{t,v,h}=1$,
+$\sum_h\Nbar_{t,h}=n$. We drop the index $t$ when the point is fixed. The two constants of
+the paper are
+\[
+c_0=\frac{1-e^{-2}}{4}=0.21616\ldots,\qquad
+c_b=\frac{c_0}{2\sqrt2}\,\theta(b)=\frac{c_0\,(b-1)}{\sqrt2\,b^2}\quad(b\ge2).
+\]
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{3.1cm}>{\raggedright\arraybackslash}p{9.6cm}l@{}}
+\toprule
+Symbol & Meaning & Source\\
+\midrule
+$n$, $M$, $b$ & number of variables, of occurrences; bound on occurrences per variable & \cite{DL}\\
+$O_v$, $d_v$, $\nocc$ & occurrences of $v$; their number; number of $v$ with $d_v\ge1$ & here\\
+$\Gr(F)$ & primal graph ($\mathrm{Pr}(F)$ in~\cite{DL}) & \cite{DL}\\
+$P_o(T)$, $R$, $c_o(T)$ & deformation vector, degree bound, own coefficient & \cite{DL}\\
+$X$, $q_t$, $\Lambda$ & evaluation points, Taylor orders, recovery functional & \cite{DL}\\
+$S_{t,h}$, $\alpha_t$, $\cR_{t,h}$ & groups, clause assignment, measurement subspaces & \cite{DL}\\
+$a_h$, $r_h$, $g_t$ & $|S_{t,h}|$, $\dim\cR_{t,h}$, number of groups at $t$ & here\\
+$s_t$, $\rho_t$, $\mu_t$, $w_t$ & $\max_ha_h$, $\sum_hr_h$, number of measured groups, $\tw(\cI_t)$ & \cite{DL}\\
+$\kappa(t)$ & cost charged at the point $t$ & \cite{DL}\\
+$\omega$, $\Phi^\omega(T)$ & witness map, witness matrix & Def.~\ref{def:witness}\\
+$h^\omega_t(v)$, $I^\omega_{t,h}$, $N^\omega_{t,h}$ & home group; variables with home group $h$; their number & Def.~\ref{def:def}\\
+$\dfc^\omega_t$ & deficiency $\sum_h(a_h-N^\omega_{t,h})_+$ & Def.~\ref{def:def}\\
+$\pi_{t,v,h}$, $\Nbar_{t,h}$ & $\PP(h^\omega_t(v)=h)$, $\E N^\omega_{t,h}$ for uniform $\omega$ & here\\
+$\Sigma_t$, $h_t(v)$, $J_{t,h}$ & split variables; home group of a non-split variable; its fibres & Def.~\ref{def:split}\\
+$\sep(F)$, $\theta(d)$, $\sepw(F)$ & separator number; weight $2(d-1)/d^2$; weighted separator number & Def.~\ref{def:sep}\\
+$c_0$, $c_b$ & $(1-e^{-2})/4$; $c_0(b-1)/(\sqrt2b^2)$ & here\\
+\bottomrule
+\end{tabular}
+\caption{Notation. The number of measured groups $\mu_t$ of~\cite{DL} appears only in
+Section~\ref{sec:related} and Section~\ref{sec:dp}.}\label{tab:notation}
+\end{table}
+
+\section{Main results}\label{sec:results}
+
+Throughout, $F$ is a CNF formula on $n\ge1$ variables and a \emph{scheme} is a clause-product
+interpolation scheme for $F$ in the sense of Definition~5.1 of~\cite{DL}
+(Section~\ref{sec:def}). No cost model is used before Corollary~\ref{cor:main}.
+
+\begin{lemma}[Hermite counting]\label{lem:hermite}
+In every scheme, $\sum_{t\in X}(q_t+1)\ge MR+1$. In particular $X\ne\emptyset$.
+\end{lemma}
+
+\begin{lemma}[Witness determinant]\label{lem:det}
+For every scheme and every witness map $\omega$,
+\[
+\sum_{t\in X}\bigl(\dfc^\omega_t-\rho_t\bigr)_+\ \le\ \sum_{t\in X}\dim\ker\Phi^\omega(t)
+\ \le\ \deg\det\Phi^\omega\ \le\ \nocc R\ \le\ \min(n,M)\,R .
+\]
+More precisely, for every $t\in X$,
+$\dim\ker\Phi^\omega(t)\ge\sum_h\bigl(a_h-r_h-N^\omega_{t,h}\bigr)_+\ge\dfc^\omega_t-\rho_t$.
+\end{lemma}
+
+Figure~\ref{fig:blocks} shows the structure behind Lemma~\ref{lem:det}.
+
+\begin{figure}[t]
+\[
+\Phi^\omega(t)\;=\;
+\begin{array}{r|ccc}
+ & \text{columns } S_{1} & \text{columns } S_{2} & \text{columns } S_{3}\\ \hline
+\text{rows } I^\omega_{t,1} & \text{free} & \in\cR_{t,2} & \in\cR_{t,3}\\
+\text{rows } I^\omega_{t,2} & \in\cR_{t,1} & \text{free} & \in\cR_{t,3}\\
+\text{rows } I^\omega_{t,3} & \in\cR_{t,1} & \in\cR_{t,2} & \text{free}
+\end{array}
+\]
+\caption{Block structure of the witness matrix at a point $t$, for three groups. Rows are
+indexed by variables, sorted by home group; columns are sorted by group. By
+condition~\eqref{eq:three}, a row whose home group is not $h$ has its restriction to the
+columns $S_h$ inside $\cR_{t,h}$. The column block $S_h$ therefore has rank at most
+$\min(a_h,\,N^\omega_{t,h}+r_h)$. Note that $N^\omega_{t,h}$, the number of rows with home
+group $h$, need not equal $a_h=|S_h|$.}\label{fig:blocks}
+\end{figure}
+
+\begin{lemma}[Anticoncentration]\label{lem:anti}
+Let $B$ be a sum of finitely many independent Bernoulli random variables, with variance $V$,
+and let $a\in\mathbb R$. Then $\E|B-a|\ge c_0\min(V,\sqrt V)$, where $c_0=(1-e^{-2})/4$.
+\end{lemma}
+
+\begin{lemma}[Expected deficiency]\label{lem:expdef}
+Let $\omega$ be a uniformly random witness map. For every scheme and every $t\in X$,
+\[
+\E\,\dfc^\omega_t\ \ge\ \max\Bigl(\frac12\sum_h\bigl|\Nbar_{t,h}-a_h\bigr|,\ \
+\frac{c_0}{2\sqrt{2s_t}}\sum_{v\in\Sigma_t}\theta(d_v)\Bigr).
+\]
+\end{lemma}
+
+\begin{lemma}[Split variables form a separator]\label{lem:split}
+For every scheme and every $t\in X$, at least one of the following holds:
+\begin{enumerate}
+\item[\textup{(1)}] $|J_{t,h}|\le 2n/3$ for every group $h$. Then $\Sigma_t$ is a
+ $2/3$-separator of $F$; in particular $|\Sigma_t|\ge\sep(F)$ and
+ $\sum_{v\in\Sigma_t}\theta(d_v)\ge\sepw(F)$.
+\item[\textup{(2)}] $|J_{t,h_0}|>2n/3$ for some group $h_0$. Then
+ $\frac12\sum_h|\Nbar_{t,h}-a_h|>\frac{2n}{3}-s_t$.
+\end{enumerate}
+\end{lemma}
+
+\begin{theorem}[Variable-uniform deformations: no absorption]\label{thm:uniform}
+Suppose that the deformation is variable-uniform, that is, $P_{e,v}=P_{e',v}$ for all clauses
+$e,e'$ containing $v$. Then some $t\in X$ satisfies
+\[
+\rho_t+q_t+1\ >\ \min\Bigl(\sep(F),\ \frac{2n}{3}-s_t\Bigr).
+\]
+\end{theorem}
+
+\begin{theorem}[General deformations: at most a $\sqrt s$ factor]\label{thm:general}
+Every scheme for $F$ has a point $t\in X$ with
+\[
+\rho_t+q_t+1\ >\ \min\Bigl(\frac{c_0}{2\sqrt2}\cdot\frac{\sepw(F)}{\sqrt{s_t}},\ \
+\frac{2n}{3}-s_t\Bigr).
+\]
+This holds for arbitrary clause-dependent deformations, partitions, assignments $\alpha_t$
+and subspaces $\cR_{t,h}$. If every variable occurs at most $b$ times, $b\ge2$, then some
+$t\in X$ satisfies
+\[
+\rho_t+q_t+1\ >\ \min\Bigl(c_b\,\frac{\sep(F)}{\sqrt{s_t}},\ \frac{2n}{3}-s_t\Bigr),
+\qquad c_b=\frac{c_0\,(b-1)}{\sqrt2\,b^2},\quad c_3=\frac{1-e^{-2}}{18\sqrt2}=0.03396\ldots
+\]
+\end{theorem}
+
+The constant $c_0$ is not optimised (Remark~\ref{rem:const}).
+
+\begin{lemma}[Random 3-CNF]\label{lem:random}
+Fix $\Delta>3$. Let $F$ be a random 3-CNF on $n$ variables with $m=\Delta n$ independent
+clauses ($\Delta n$ is assumed to be an integer), each on three distinct uniformly random variables with random signs. There are
+constants $0<\eta'_\Delta\le\eta_\Delta\le1/9$ such that, with probability tending to $1$
+as $n\to\infty$, $\sep(F)\ge\eta_\Delta n$ and $\sepw(F)\ge\eta'_\Delta n$.
+\end{lemma}
+
+This is the model of \cite[Appendix~A]{DL}; the proof adapts that of \cite[Lemma~8.2]{DL}.
+
+\begin{corollary}\label{cor:main}
+Let $F$ belong to one of the following families.
+\begin{itemize}
+\item[\textup{(i)}] Every variable occurs at most $b$ times and $\sep(F)\ge cn$, for fixed
+ $b\ge2$ and $c>0$. Put $\gamma=c_bc$.
+\item[\textup{(ii)}] $F$ is a random 3-CNF as in Lemma~\ref{lem:random}, on the event of
+ that lemma (which has probability $1-o(1)$). Put
+ $\gamma=\frac{c_0}{2\sqrt2}\eta'_\Delta$ and $c=\eta_\Delta$.
+\end{itemize}
+In both cases $\gamma\le1/6$ and $c\le1$. There is $n_0$, depending only on $\gamma$ and, in
+part~1, on $\ell$, such that for $n\ge n_0$ the following hold for every scheme for $F$.
+\begin{enumerate}
+\item \textup{(The design of \cite[Section~9]{DL} does not exist.)} Let $\ell\ge0$ be fixed.
+ If $s_t\le\sqrt n\log^{\ell}n$ for all $t\in X$, then some $t\in X$ has
+ \[\rho_t+q_t+1>\gamma\,n^{3/4}/\log^{\ell/2}n .\]
+ In particular, no scheme has $s_t,\ q_t,\ \rho_t\le\sqrt n\log^{\ell}n$ for all $t\in X$.
+ This statement involves no cost model.
+\item \textup{(Product-type cost.)} The product-type charge of the scheme is at least
+ $2^{(\gamma n^{2/3}-1)/2}=2^{\Omega(n^{2/3})}$.
+\item \textup{(Variable-uniform schemes.)} If the deformation is variable-uniform, the
+ product-type charge is at least $2^{\min(n/6,\ (\min(c,1/2)\,n-1)/2)}=2^{\Omega(n)}$. In
+ family~\textup{(i)}, this part does not need the bound $b$ on occurrences.
+\end{enumerate}
+\end{corollary}
+
+In all three parts the scheme is applied to $F$ itself. For family~(ii) this means: to the
+random formula, not to the bounded-occurrence formula $F^\star$ that the preprint derives
+from it, and not to sparsification leaves.
+
+\begin{remark}[Balanced designs]\label{rem:balanced}
+Let $F$ be as in Corollary~\ref{cor:main} and let $t$ be the point given by
+Theorem~\ref{thm:general}. Suppose that, at this particular $t$, $s_t\le n/2$, and that the
+design has $g_t$ groups with $s_t\le Kn/g_t$ for some $K\ge1$. Then
+$q_t+1\ge\frac{\gamma}{2\sqrt K}\sqrt{ng_t}$, or the average number of rows per group
+satisfies $\rho_t/g_t>\frac{\gamma}{2K}\sqrt{s_t}$. The proof is in
+Section~\ref{sec:proofcor}. The statement concerns one point $t$, not every point, and it
+needs $s_t\le n/2$ so that the first term of the minimum in Theorem~\ref{thm:general} is the
+smaller one.
+\end{remark}
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{2.5cm}>{\raggedright\arraybackslash}p{3.7cm}>{\raggedright\arraybackslash}p{2.1cm}>{\raggedright\arraybackslash}p{6.2cm}@{}}
+\toprule
+Result & Scheme applied to & Model & Bound\\
+\midrule
+\cite[Thm~7.1(ii)]{DL} & any $F$ with $s_t\le 2n/3$ & none & $q_t+b\,\mu_ts_t\ge\sep(F)$ at some $t$ \newline(measured groups charged)\\[2pt]
+\cite[Thm~8.1]{DL} & any $F$ & DP-type & cost $\ge2^{E}$, \newline $E=\min(\sqrt{(\tw+1)/2}-1,\,(\tw+1)/2,\,\lfloor n/2\rfloor)$\\[2pt]
+\cite[Thm~8.3]{DL} & $F^\star$ and sparsification leaves, random 3-CNF, $\Delta>3$ & DP-type & cost $\ge2^{\Omega_\Delta(\sqrt n)}$ w.h.p.\\[2pt]
+Prop.~\ref{prop:dp} & any $F$ & DP-type & a trivial scheme has charge $2^{\lceil\sqrt n\rceil}$ (upper bound)\\[2pt]
+Thm~\ref{thm:uniform} & any $F$, variable-uniform & none & $\rho_t+q_t+1>\min(\sep(F),\,2n/3-s_t)$ \newline at some $t$\\[2pt]
+Thm~\ref{thm:general} & any $F$ with $d_v\le b$ & none & $\rho_t+q_t+1>\min(c_b\sep(F)/\sqrt{s_t},\,2n/3-s_t)$ \newline at some $t$ (rows charged)\\[2pt]
+Cor.~\ref{cor:main}(2) & $F$ itself, families (i), (ii) & product-type & cost $\ge2^{\Omega(n^{2/3})}$\\[2pt]
+Cor.~\ref{cor:main}(3) & $F$ itself, variable-uniform & product-type & cost $\ge2^{\Omega(n)}$\\
+\bottomrule
+\end{tabular}
+\caption{Comparison with the bounds of~\cite{DL}. The first line is our reading of
+\cite[Thm~7.1(ii)]{DL} on separators (Section~\ref{sec:related}). ``DP-type'' bounds also hold
+in the product-type model, which charges more. The lines for~\cite{DL} and for this paper
+concern different formulas in the case of Theorem~8.3 ($F^\star$ and leaves there, $F$
+here).}\label{tab:compare}
+\end{table}
+
+\section{Proofs}\label{sec:proofs}
+
+\subsection{Proof of Lemma~\ref{lem:hermite} (Hermite counting)}
+
+The argument is that of \cite[Lemma~6.2]{DL}, applied to a different polynomial. Suppose
+$\sum_{t\in X}(q_t+1)\le MR$, and let $f(T)=\prod_{t\in X}(T-t)^{q_t+1}$ (so $f=1$ if
+$X=\emptyset$). Then $\deg f\le MR$. For every $t\in X$ and $j\le q_t$ we have
+$f^{(j)}(t)=0$, because $(T-t)^{q_t+1}$ divides $f$. So the Hermite data of $f$ are all zero
+and, $\Lambda$ being linear, $\Lambda(f)=0$. But
+$f(0)=\prod_{t\in X}(-t)^{q_t+1}\ne0$ because $0\notin X$. This contradicts the exactness
+$\Lambda(f)=f(0)$ required in part~(b) of the definition. Hence
+$\sum_{t\in X}(q_t+1)\ge MR+1\ge1$, and $X\ne\emptyset$. \qed
+
+\subsection{Proof of Lemma~\ref{lem:det} (witness determinant)}
+
+Fix a scheme and a witness map $\omega$, and write $\Phi=\Phi^\omega$.
+
+\paragraph{Step 1: $\det\Phi$ is a nonzero polynomial of degree at most $\nocc R$.} If
+$d_v\ge1$, row $v$ of $\Phi(0)$ is $P_{\omega(v)}(0)=e_v$, because $\omega(v)$ is an
+occurrence of $v$. If $d_v=0$, row $v$ is $e_v$ by definition. So $\Phi(0)$ is the identity
+matrix and $\det\Phi(0)=1$; in particular $\det\Phi\ne0$. By the Leibniz formula, $\det\Phi$
+is a signed sum of products of $n$ entries, one in each row. The entries of a row $v$ with
+$d_v\ge1$ have degree at most $R$, and the entries of a row with $d_v=0$ are constants. So
+every product has degree at most $\nocc R$, and $\deg\det\Phi\le\nocc R\le\min(n,M)R$.
+
+\paragraph{Step 2: rank bound at a point.} Fix $t\in X$ and a group $h$. Let $B_h$ be the
+$n\times a_h$ matrix formed by the columns of $\Phi(t)$ indexed by $S_h$. Let $v$ be a
+variable with $h^\omega_t(v)\ne h$. We claim that row $v$ of $B_h$ lies in $\cR_{t,h}$.
+\begin{itemize}
+\item If $d_v\ge1$ and $\omega(v)=(e,v)$, then $\alpha_t(e)=h^\omega_t(v)\ne h$, and row $v$
+ of $B_h$ is $P_{e,v}(t)|_{S_h}$, which lies in $\cR_{t,h}$ by~\eqref{eq:three}.
+\item If $d_v=0$, then $h^\omega_t(v)$ is the group containing $v$, so $v\notin S_h$, and
+ row $v$ of $B_h$ is $e_v|_{S_h}=0\in\cR_{t,h}$.
+\end{itemize}
+So the row space of $B_h$ is contained in the sum of $\cR_{t,h}$ and the span of the
+$N^\omega_{t,h}$ rows indexed by $I^\omega_{t,h}$. Since $B_h$ has $a_h$ columns,
+\[
+\rank B_h\ \le\ \min\bigl(a_h,\ r_h+N^\omega_{t,h}\bigr).
+\]
+The groups partition the columns of $\Phi(t)$, so the column space of $\Phi(t)$ is the sum
+of the column spaces of the $B_h$, and $\rank\Phi(t)\le\sum_h\rank B_h$. With
+$\sum_ha_h=n$ this gives
+\[
+\dim\ker\Phi(t)=n-\rank\Phi(t)\ \ge\ \sum_h\Bigl(a_h-\min\bigl(a_h,r_h+N^\omega_{t,h}\bigr)\Bigr)
+=\sum_h\bigl(a_h-r_h-N^\omega_{t,h}\bigr)_+ .
+\]
+For real $y$ and $r\ge0$ we have $(y-r)_+\ge y_+-r$. Applying this with
+$y=a_h-N^\omega_{t,h}$ and $r=r_h$ and summing over $h$,
+\[
+\dim\ker\Phi(t)\ \ge\ \sum_h\bigl(a_h-N^\omega_{t,h}\bigr)_+-\sum_hr_h=\dfc^\omega_t-\rho_t .
+\]
+As $\dim\ker\Phi(t)\ge0$, also $\dim\ker\Phi(t)\ge(\dfc^\omega_t-\rho_t)_+$.
+
+\paragraph{Step 3: order of vanishing.} Fix $t\in X$ and let $k=\dim\ker\Phi(t)$. Choose an
+invertible matrix $U\in\Q^{n\times n}$ whose first $k$ columns form a basis of
+$\ker\Phi(t)$. The matrix $\Phi(T)U$ has entries in $\Q[T]$, and its first $k$ columns
+vanish at $T=t$. So every entry of these columns is divisible by $T-t$. Factoring $T-t$ out
+of each of these $k$ columns gives $\det(\Phi(T)U)=(T-t)^k\det M(T)$ for a matrix $M(T)$
+over $\Q[T]$. Since $\det(\Phi U)=\det U\cdot\det\Phi$ and $\det U$ is a nonzero constant,
+$(T-t)^{k}$ divides $\det\Phi$.
+
+\paragraph{Step 4: conclusion.} The polynomials $(T-t)^{\dim\ker\Phi(t)}$, $t\in X$, are
+pairwise coprime and each divides $\det\Phi$. So their product divides $\det\Phi$, which is
+nonzero by Step~1. Comparing degrees,
+$\sum_{t\in X}\dim\ker\Phi(t)\le\deg\det\Phi\le\nocc R$. Together with Step~2 this proves the
+lemma. \qed
+
+\begin{remark}\label{rem:mn}
+Only $\deg\det\Phi^\omega\le MR$ is used below. This holds for every formula because
+$\nocc\le M$; no assumption such as ``every variable occurs'' or $M\ge n$ is needed.
+\end{remark}
+
+\subsection{Proof of Lemma~\ref{lem:anti} (anticoncentration)}
+
+Write $B=\sum_{v}\beta_v$ with independent $\beta_v\sim\mathrm{Bernoulli}(p_v)$, so
+$V=\sum_vp_v(1-p_v)$. If $V=0$ there is nothing to prove. Let $B'=\sum_v\beta'_v$ be an
+independent copy of $B$. By the triangle inequality $|B-B'|\le|B-a|+|B'-a|$, so
+\begin{equation}\label{eq:sym}
+\E|B-a|\ \ge\ \tfrac12\,\E|D|,\qquad D=B-B'=\sum_v\xi_v,\quad \xi_v=\beta_v-\beta'_v .
+\end{equation}
+The $\xi_v$ are independent, take values in $\{-1,0,1\}$, and are symmetric:
+$\PP(\xi_v=1)=\PP(\xi_v=-1)=p_v(1-p_v)$. Put $\tau_v=\PP(\xi_v\ne0)=2p_v(1-p_v)$. Then
+$\E\xi_v=0$, $\E\xi_v^2=\E\xi_v^4=\tau_v$, and $\sum_v\tau_v=2V$. In particular
+$\E D^2=\sum_v\tau_v=2V$.
+
+\paragraph{(i) A bound for all $V$.} Let $K=\{v:\xi_v\ne0\}$. Conditionally on $K$, the
+values $(\xi_v)_{v\in K}$ are independent uniform signs, because the $\xi_v$ are independent
+and symmetric. If $|K|=j\ge1$, then $\PP(D=0\mid K)$ is $0$ for odd $j$ and
+$\binom{j}{j/2}2^{-j}\le\frac12$ for even $j$. Hence $\PP(D\ne0\mid K)\ge\frac12$ whenever
+$K\ne\emptyset$. Also
+\[
+\PP(K\ne\emptyset)=1-\prod_v(1-\tau_v)\ \ge\ 1-e^{-\sum_v\tau_v}=1-e^{-2V}.
+\]
+Since $D$ is an integer, $|D|\ge1$ when $D\ne0$, so
+$\E|D|\ge\PP(D\ne0)\ge\frac12(1-e^{-2V})$, and by~\eqref{eq:sym},
+\begin{equation}\label{eq:smallV}
+\E|B-a|\ \ge\ \tfrac14\bigl(1-e^{-2V}\bigr).
+\end{equation}
+
+\paragraph{(ii) A bound for $V\ge1$.} Expanding $D^4$ and using independence and
+$\E\xi_v=\E\xi_v^3=0$, only the terms $\xi_v^4$ and $\xi_u^2\xi_v^2$ ($u\ne v$) have nonzero
+expectation, and each unordered pair $\{u,v\}$ appears $\binom42=6$ times:
+\[
+\E D^4=\sum_v\tau_v+3\sum_{u\ne v}\tau_u\tau_v\ \le\ 2V+3(2V)^2=2V+12V^2 .
+\]
+By H\"older's inequality with exponents $3/2$ and $3$,
+$\E D^2=\E\bigl(|D|^{2/3}|D|^{4/3}\bigr)\le(\E|D|)^{2/3}(\E D^4)^{1/3}$, hence
+\[
+\E|D|\ \ge\ \frac{(\E D^2)^{3/2}}{(\E D^4)^{1/2}}\ \ge\ \frac{(2V)^{3/2}}{(2V+12V^2)^{1/2}} .
+\]
+For $V\ge1$ we have $2V+12V^2\le14V^2$, so $\E|D|\ge\frac{2\sqrt2}{\sqrt{14}}\sqrt V
+=\sqrt{4/7}\,\sqrt V$, and by~\eqref{eq:sym}
+$\E|B-a|\ge\frac{1}{\sqrt7}\sqrt V\ge0.377\sqrt V\ge c_0\sqrt V$.
+
+\paragraph{Conclusion.} The function $V\mapsto1-e^{-2V}$ is concave and vanishes at $0$, so
+$(1-e^{-2V})/V$ is decreasing on $V>0$. For $0<V\le1$ this gives
+$1-e^{-2V}\ge(1-e^{-2})V$, and~\eqref{eq:smallV} yields
+$\E|B-a|\ge\frac{1-e^{-2}}{4}V=c_0V$. For $V\ge1$, (ii) gives $\E|B-a|\ge c_0\sqrt V$. Since
+$\min(V,\sqrt V)$ equals $V$ for $V\le1$ and $\sqrt V$ for $V\ge1$, the lemma follows. \qed
+
+\begin{remark}[On the constant]\label{rem:const}
+The value of $c_0$ is forced by step~(i) at $V=1$; step~(ii) gives $0.377$. We made no
+attempt to optimise it. In the numerical experiment of Section~\ref{sec:checks} the smallest
+observed ratio $\E|B-a|/\min(V,\sqrt V)$ was $0.7397$.
+\end{remark}
+
+\subsection{Proof of Lemma~\ref{lem:expdef} (expected deficiency)}
+
+Fix $t\in X$ and drop it from the notation; write $s=s_t$ and $N_h=N^\omega_{t,h}$. Recall
+$\sum_hN_h=n=\sum_ha_h$. So $\sum_h(a_h-N_h)=0$, the positive and negative parts of the
+numbers $a_h-N_h$ have the same sum, and
+\[
+\dfc^\omega_t=\sum_h(a_h-N_h)_+=\frac12\sum_h|N_h-a_h|,\qquad\text{hence}\qquad
+\E\,\dfc^\omega_t=\frac12\sum_h\E|N_h-a_h| .
+\]
+
+\paragraph{First bound.} By Jensen's inequality,
+$\E|N_h-a_h|\ge|\E N_h-a_h|=|\Nbar_h-a_h|$. Summing over $h$ gives the first term of the
+maximum.
+
+\paragraph{Structure of $N_h$.} For a fixed group $h$,
+$N_h=\sum_v\mathbf 1[h^\omega_t(v)=h]$. The home group of $v$ depends only on $\omega(v)$
+(and is deterministic if $d_v=0$), and the $\omega(v)$ are independent. So $N_h$ is a sum of
+independent Bernoulli variables with parameters $\pi_{v,h}$, with mean $\Nbar_h$ and variance
+\[
+V_h=\sum_v\pi_{v,h}(1-\pi_{v,h})\ \le\ \Nbar_h .
+\]
+
+\paragraph{Second bound, one group.} We claim that
+\begin{equation}\label{eq:onegroup}
+\E|N_h-a_h|\ \ge\ \frac{c_0}{\sqrt{2s}}\,V_h\qquad\text{for every group }h.
+\end{equation}
+Note that $s\ge1$ and $a_h\le s$.
+
+\emph{Case $\Nbar_h\le2s$.} Then $V_h\le2s$. If $V_h\le1$, then
+$\min(V_h,\sqrt{V_h})=V_h\ge V_h/\sqrt{2s}$ because $\sqrt{2s}\ge1$. If $V_h\ge1$, then
+$\min(V_h,\sqrt{V_h})=\sqrt{V_h}=V_h/\sqrt{V_h}\ge V_h/\sqrt{2s}$. In both subcases
+Lemma~\ref{lem:anti}, applied to $B=N_h$ and $a=a_h$, gives~\eqref{eq:onegroup}.
+
+\emph{Case $\Nbar_h>2s$.} Then $a_h\le s<\Nbar_h/2$, so
+$\E|N_h-a_h|\ge\Nbar_h-a_h>\Nbar_h/2\ge V_h/2$. Since $s\ge1$,
+$c_0/\sqrt{2s}\le c_0/\sqrt2<1/2$, and~\eqref{eq:onegroup} follows.
+
+\paragraph{Summing over groups.} Since $\sum_h\pi_{v,h}=1$,
+\[
+\sum_hV_h=\sum_v\Bigl(1-\sum_h\pi_{v,h}^2\Bigr),
+\]
+and every term of the outer sum is nonnegative. Let $v\in\Sigma_t$ and $d=d_v\ge2$. Then
+$\pi_{v,h}=k_h/d$, where $k_h$ is the number of clauses containing $v$ that are assigned to
+$h$; the $k_h$ are nonnegative integers with sum $d$, and at least two of them are positive.
+Let $k_{h_1}$ be a largest one; then $1\le k_{h_1}\le d-1$ and
+$\sum_{h\ne h_1}k_h^2\le\bigl(\sum_{h\ne h_1}k_h\bigr)^2=(d-k_{h_1})^2$. The function
+$k\mapsto k^2+(d-k)^2$ is convex, so on $1\le k\le d-1$ it is at most its value
+$(d-1)^2+1$ at the endpoints. Therefore $\sum_hk_h^2\le(d-1)^2+1$ and
+\[
+1-\sum_h\pi_{v,h}^2\ \ge\ 1-\frac{(d-1)^2+1}{d^2}=\frac{2(d-1)}{d^2}=\theta(d_v).
+\]
+Keeping only the split variables, $\sum_hV_h\ge\sum_{v\in\Sigma_t}\theta(d_v)$.
+With~\eqref{eq:onegroup},
+\[
+\E\,\dfc^\omega_t=\frac12\sum_h\E|N_h-a_h|\ \ge\ \frac{c_0}{2\sqrt{2s}}\sum_hV_h
+\ \ge\ \frac{c_0}{2\sqrt{2s}}\sum_{v\in\Sigma_t}\theta(d_v),
+\]
+which is the second term of the maximum. \qed
+
+\subsection{Proof of Lemma~\ref{lem:split} (split variables form a separator)}
+
+Fix $t\in X$.
+
+\paragraph{Components of $\Gr(F)-\Sigma_t$.} Let $u,v\notin\Sigma_t$ be adjacent in
+$\Gr(F)$. They share a clause $e$, so $d_u,d_v\ge1$, and since neither is split,
+$h_t(u)=\alpha_t(e)=h_t(v)$ by Definition~\ref{def:split}. Hence $h_t$ is constant on every
+connected component of $\Gr(F)-\Sigma_t$: every component is contained in one set $J_{t,h}$.
+(Variables with $d_v=0$ are isolated vertices of $\Gr(F)$; their home group is the group
+that contains them, by the convention of Definition~\ref{def:split}.)
+
+\paragraph{Case (1).} If $|J_{t,h}|\le2n/3$ for every $h$, every component of
+$\Gr(F)-\Sigma_t$ has at most $2n/3$ vertices, so $\Sigma_t$ is a $2/3$-separator and
+$|\Sigma_t|\ge\sep(F)$. Every split variable has $d_v\ge2$, so $\Sigma_t$ is admissible in
+the definition of $\sepw(F)$ and $\sum_{v\in\Sigma_t}\theta(d_v)\ge\sepw(F)$.
+
+\paragraph{Case (2).} Suppose $|J_{t,h_0}|>2n/3$. Let $v\in J_{t,h_0}$. If $d_v\ge1$, all
+clauses containing $v$ are assigned to $h_0$, so $\pi_{v,h_0}=1$. If $d_v=0$, then
+$v\in S_{t,h_0}$ and $\pi_{v,h_0}=1$ by definition. Hence
+$\Nbar_{h_0}\ge|J_{t,h_0}|>2n/3$, while $a_{h_0}\le s_t$. Since
+$\sum_h\Nbar_h=n=\sum_ha_h$, the numbers $\Nbar_h-a_h$ sum to zero, and
+\[
+\frac12\sum_h\bigl|\Nbar_h-a_h\bigr|=\sum_h\bigl(\Nbar_h-a_h\bigr)_+\ \ge\ \Nbar_{h_0}-a_{h_0}
+\ >\ \frac{2n}{3}-s_t .
+\]
+The two cases are exhaustive. \qed
+
+\subsection{Proof of Theorem~\ref{thm:uniform} (variable-uniform deformations)}
+
+Assume $P_{e,v}=P_v$ for every clause $e\ni v$. Then $\Phi^\omega$ does not depend on the
+witness map: its row $v$ is $P_v(T)$ if $d_v\ge1$ and $e_v$ if $d_v=0$. Write $\Phi$ for
+this matrix. (The deformation then substitutes the linear form $\langle\Phi_v(T),x\rangle$
+for $x_v$ in every clause.)
+
+\paragraph{Rank bound.} Fix $t\in X$ and a group $h$, and let $B_h$ be the block of columns
+$S_h$ of $\Phi(t)$. We claim that row $v$ of $B_h$ lies in $\cR_{t,h}$ for every
+$v\notin J_{t,h}$. There are three cases.
+\begin{itemize}
+\item[(a)] $v\in\Sigma_t$. Then $v$ occurs in clauses assigned to two different groups, so
+ it occurs in some clause $e$ with $\alpha_t(e)\ne h$.
+\item[(b)] $v\notin\Sigma_t$, $d_v\ge1$ and $h_t(v)\ne h$. Then every clause $e\ni v$ has
+ $\alpha_t(e)=h_t(v)\ne h$.
+\item[(c)] $d_v=0$ and $h_t(v)\ne h$. Then $v\notin S_h$, and row $v$ of $B_h$ is
+ $e_v|_{S_h}=0\in\cR_{t,h}$.
+\end{itemize}
+In cases (a) and (b), condition~\eqref{eq:three} applied to the occurrence $(e,v)$ gives
+\[
+P_v(t)|_{S_h}=P_{e,v}(t)|_{S_h}\in\cR_{t,h};
+\]
+this is where variable-uniformity is used. We now argue as in Step~2 of the proof of
+Lemma~\ref{lem:det}, with $J_{t,h}$ in place of $I^\omega_{t,h}$. We get
+$\rank B_h\le\min(a_h,r_h+|J_{t,h}|)$ and
+\begin{equation}\label{eq:Dt}
+\dim\ker\Phi(t)\ \ge\ \sum_h\bigl(a_h-r_h-|J_{t,h}|\bigr)_+\ \ge\ D_t-\rho_t,
+\qquad D_t:=\sum_h\bigl(a_h-|J_{t,h}|\bigr)_+ .
+\end{equation}
+
+\paragraph{A good point.} Steps~1, 3 and~4 of the proof of Lemma~\ref{lem:det} apply to
+$\Phi$. With~\eqref{eq:Dt} and Lemma~\ref{lem:hermite} they give
+\[
+\sum_{t\in X}(D_t-\rho_t)_+\ \le\ \sum_{t\in X}\dim\ker\Phi(t)\ \le\ \nocc R\ \le\ MR
+\ <\ \sum_{t\in X}(q_t+1).
+\]
+So there is $t\in X$ with $(D_t-\rho_t)_+<q_t+1$, that is, $D_t<\rho_t+q_t+1$. Fix this $t$.
+
+\paragraph{Lower bound on $D_t$.} Apply the case distinction of Lemma~\ref{lem:split}.
+
+\emph{Case (1).} $\Sigma_t$ is a $2/3$-separator. Since the $J_{t,h}$ partition
+$[n]\setminus\Sigma_t$,
+\[
+D_t\ \ge\ \sum_h\bigl(a_h-|J_{t,h}|\bigr)=n-(n-|\Sigma_t|)=|\Sigma_t|\ \ge\ \sep(F).
+\]
+
+\emph{Case (2).} $|J_{t,h_0}|>2n/3$ for some $h_0$. Then $\sum_{h\ne h_0}|J_{t,h}|<n/3$, and
+\[
+D_t=n-\sum_h\min\bigl(a_h,|J_{t,h}|\bigr)\ \ge\ n-a_{h_0}-\sum_{h\ne h_0}|J_{t,h}|
+\ >\ \frac{2n}{3}-s_t .
+\]
+In both cases $\rho_t+q_t+1>D_t\ge\min(\sep(F),2n/3-s_t)$, with strict inequality. \qed
+
+\subsection{Proof of Theorem~\ref{thm:general} (general deformations)}
+
+\paragraph{Averaging the determinant lemma.} Let $\omega$ be a uniformly random witness map
+and write $\E\,\dfc_t=\E\,\dfc^\omega_t$. For each $t$ the function $y\mapsto(y-\rho_t)_+$ is
+convex, so by Jensen's inequality $(\E\,\dfc_t-\rho_t)_+\le\E(\dfc^\omega_t-\rho_t)_+$.
+Summing over $t$, and using Lemma~\ref{lem:det} for every $\omega$, Remark~\ref{rem:mn} and
+Lemma~\ref{lem:hermite},
+\[
+\sum_{t\in X}\bigl(\E\,\dfc_t-\rho_t\bigr)_+\ \le\ \E\sum_{t\in X}\bigl(\dfc^\omega_t-\rho_t\bigr)_+
+\ \le\ \nocc R\ \le\ MR\ <\ \sum_{t\in X}(q_t+1).
+\]
+Hence there is a point $t\in X$ with $(\E\,\dfc_t-\rho_t)_+<q_t+1$, that is,
+\begin{equation}\label{eq:goodpoint}
+\E\,\dfc_t\ <\ \rho_t+q_t+1 .
+\end{equation}
+
+\paragraph{Lower bound at that point.} Apply Lemma~\ref{lem:split} at this $t$.
+
+\emph{Case (1).} Then $\sum_{v\in\Sigma_t}\theta(d_v)\ge\sepw(F)$; in particular
+$\sepw(F)<+\infty$. The second bound of Lemma~\ref{lem:expdef} gives
+\[
+\E\,\dfc_t\ \ge\ \frac{c_0}{2\sqrt{2s_t}}\,\sepw(F)=\frac{c_0}{2\sqrt2}\cdot\frac{\sepw(F)}{\sqrt{s_t}} .
+\]
+
+\emph{Case (2).} The first bound of Lemma~\ref{lem:expdef} and Lemma~\ref{lem:split}(2) give
+$\E\,\dfc_t>2n/3-s_t$.
+
+In both cases $\E\,\dfc_t$ is at least the minimum in the theorem; recall the convention
+that this minimum is $2n/3-s_t$ when $\sepw(F)=+\infty$. With~\eqref{eq:goodpoint} this
+gives the first statement.
+
+\paragraph{Bounded occurrences.} Suppose $d_v\le b$ for all $v$, with $b\ge2$.
+Then~\eqref{eq:sepw} gives $\sepw(F)\ge\theta(b)\sep(F)$, and
+\[
+\frac{c_0}{2\sqrt2}\cdot\frac{2(b-1)}{b^2}=c_b,\qquad
+c_3=\frac{1-e^{-2}}{4}\cdot\frac{2}{9\sqrt2}=\frac{1-e^{-2}}{18\sqrt2}=0.03396\ldots
+\]
+This gives the second statement. \qed
+
+\subsection{Proof of Lemma~\ref{lem:random} (random 3-CNF)}
+
+We use two properties of the random formula, which are Lemmas~A.1 and~A.2 of~\cite{DL};
+their proofs are reproduced in Appendix~\ref{app:random}. With probability $1-o(1)$:
+\begin{itemize}
+\item[(A1)] for every set $S$ of variables with $n/3\le|S|\le2n/3$, at least $m/3$ clauses
+ contain both a variable of $S$ and a variable outside $S$;
+\item[(A2)] for every $j\ge1$, every set of $j$ variables meets at most $C_\Delta j\log(en/j)$
+ clauses, where $C_\Delta=3e^2\Delta$.
+\end{itemize}
+Assume that (A1) and (A2) hold.
+
+\paragraph{Bound on $\sep(F)$.} Let $Y$ be a $2/3$-separator with $|Y|\le n/9$. The
+components of $\Gr(F)-Y$ have at most $2n/3$ vertices each and at least $8n/9$ vertices in
+total. Choose a union $A$ of components as follows. If some component has at least $n/3$
+vertices, let $A$ be that component. Otherwise every component has fewer than $n/3$
+vertices; add components one at a time until the union has at least $n/3$ vertices, and let
+$A$ be this union, which has fewer than $2n/3$ vertices. In both cases $n/3\le|A|\le2n/3$.
+
+Let $e$ be a clause that contains a variable of $A$ and a variable outside $A$. If $e$
+contained no variable of $Y$, its variables would be pairwise adjacent in $\Gr(F)-Y$, hence
+in one component, which is impossible because $A$ is a union of components. So every such
+clause contains a variable of $Y$. By (A1) there are at least $m/3>0$ such clauses; in
+particular $Y\ne\emptyset$. By (A2) with $j=|Y|\ge1$,
+\[
+\frac{\Delta n}{3}=\frac m3\ \le\ C_\Delta\,|Y|\log\frac{en}{|Y|} .
+\]
+With $y=|Y|/n\in(0,1/9]$ this reads $\Delta/(3C_\Delta)\le y\log(e/y)$. The function
+$y\mapsto y\log(e/y)$ is increasing on $(0,1]$ and tends to $0$ as $y\to0$. So there is a
+constant $y^*_\Delta\in(0,1/9]$ such that $y\log(e/y)<\Delta/(3C_\Delta)$ for all
+$0<y<y^*_\Delta$, and therefore $y\ge y^*_\Delta$. Put $\eta_\Delta=y^*_\Delta\le1/9$. We
+have shown that every $2/3$-separator has more than $n/9$ or at least $\eta_\Delta n$
+vertices. Hence $\sep(F)\ge\eta_\Delta n$.
+
+\paragraph{Bound on $\sepw(F)$.} Every clause has exactly three distinct variables, so
+$\sum_vd_v=M=3\Delta n$, and for every integer $D\ge1$ at most $3\Delta n/D$ variables have
+$d_v>D$. Take $D=\lceil6\Delta/\eta_\Delta\rceil\ge2$, so that $3\Delta n/D\le\eta_\Delta n/2$.
+Let $Y$ be a $2/3$-separator with $d_v\ge2$ for all $v\in Y$. Then $|Y|\ge\eta_\Delta n$, so
+$Y$ contains at least $\eta_\Delta n/2$ variables with $2\le d_v\le D$, and each of them has
+$\theta(d_v)\ge\theta(D)$ because $\theta$ is decreasing on $d\ge2$. Hence
+$\sum_{v\in Y}\theta(d_v)\ge\frac{\eta_\Delta}{2}\theta(D)\,n$. Put
+$\eta'_\Delta=\frac{\eta_\Delta}{2}\theta(D)$. Since $\theta\le\frac12$ on $d\ge2$,
+$\eta'_\Delta\le\eta_\Delta/4$. If there is no such $Y$, $\sepw(F)=+\infty$. In both cases
+$\sepw(F)\ge\eta'_\Delta n$. \qed
+
+\subsection{Proof of Corollary~\ref{cor:main} and of Remark~\ref{rem:balanced}}
+\label{sec:proofcor}
+
+\paragraph{A common inequality.} In family~(i), the second statement of
+Theorem~\ref{thm:general} and $\sep(F)\ge cn$ give a point $t\in X$ with
+\begin{equation}\label{eq:star}
+\rho_t+q_t+1\ >\ \min\Bigl(\frac{\gamma n}{\sqrt{s_t}},\ \frac{2n}{3}-s_t\Bigr),
+\end{equation}
+with $\gamma=c_bc$. In family~(ii), the first statement of Theorem~\ref{thm:general} and
+$\sepw(F)\ge\eta'_\Delta n$ give~\eqref{eq:star} with
+$\gamma=\frac{c_0}{2\sqrt2}\eta'_\Delta$. In family~(i), $c\le1$ because $\sep(F)\le n$, and
+$c_b\le c_0/(4\sqrt2)<0.04$ because $(b-1)/b^2\le1/4$. In family~(ii),
+$\eta'_\Delta\le\eta_\Delta\le1/9$. So $\gamma\le1/6$ and $c\le1$ in both cases.
+
+\paragraph{Part 1.} Suppose $s_t\le\sqrt n\log^\ell n$ for all $t\in X$, and let $t$ be the
+point of~\eqref{eq:star}. Then
+$\gamma n/\sqrt{s_t}\ge\gamma n^{3/4}/\log^{\ell/2}n$ and
+$2n/3-s_t\ge2n/3-\sqrt n\log^\ell n$. For $n$ large (depending on $\gamma$ and $\ell$) the
+second quantity is at least $n/2\ge\gamma n^{3/4}/\log^{\ell/2}n$, so
+$\rho_t+q_t+1>\gamma n^{3/4}/\log^{\ell/2}n$. For $n$ large this exceeds
+$2\sqrt n\log^\ell n+1$, so $\rho_t$ and $q_t$ cannot both be at most $\sqrt n\log^\ell n$.
+
+\paragraph{Part 2.} For $1\le j\le n/2$ we have
+$\binom nj=\prod_{i=0}^{j-1}\frac{n-i}{j-i}\ge(n/j)^j\ge2^j$, and $\binom n0=2^0$. So, at
+every point $t$, the product-type charge is at least
+\begin{equation}\label{eq:charge}
+\max\bigl(2^{s_t},\ 2^{\rho_t},\ 2^{\min(q_t,\lfloor n/2\rfloor)}\bigr).
+\end{equation}
+Let $t$ be the point of~\eqref{eq:star} and let $n\ge216$. If $s_t\ge n^{2/3}$, the charge
+is at least $2^{n^{2/3}}$. Otherwise $s_t<n^{2/3}\le n/6$, so $2n/3-s_t>n/2$ and
+$\gamma n/\sqrt{s_t}>\gamma n^{2/3}$; as $\gamma n^{2/3}\le n/2$, \eqref{eq:star} gives
+$\rho_t+q_t+1>\gamma n^{2/3}$, hence $\max(\rho_t,q_t)>(\gamma n^{2/3}-1)/2$. If
+$\rho_t>(\gamma n^{2/3}-1)/2$, the charge is at least $2^{\rho_t}$. If
+$q_t>(\gamma n^{2/3}-1)/2$, then, since $(\gamma n^{2/3}-1)/2\le\lfloor n/2\rfloor$, the
+charge is at least $2^{\min(q_t,\lfloor n/2\rfloor)}\ge2^{(\gamma n^{2/3}-1)/2}$. As
+$\gamma<1$, in all cases the charge is at least $2^{(\gamma n^{2/3}-1)/2}$.
+
+\paragraph{Part 3.} Theorem~\ref{thm:uniform} gives a point $t$ with
+$\rho_t+q_t+1>\min(\sep(F),2n/3-s_t)$, and $\sep(F)\ge cn$ in both families (by
+Lemma~\ref{lem:random} in family~(ii)); the bound $b$ is not used. If $s_t\ge n/6$, the
+charge~\eqref{eq:charge} is at least $2^{n/6}$. Otherwise $2n/3-s_t>n/2$, so
+$\rho_t+q_t+1>c'n$ with $c'=\min(c,1/2)$, and $\max(\rho_t,q_t)>(c'n-1)/2$. Since
+$(c'n-1)/2\le\lfloor n/2\rfloor$, \eqref{eq:charge} is at least $2^{(c'n-1)/2}$, as in
+Part~2. So the charge is at least $2^{\min(n/6,(c'n-1)/2)}$.
+
+\paragraph{Remark~\ref{rem:balanced}.} Let $t$ be the point of~\eqref{eq:star} and suppose
+$s_t\le n/2$ and $s_t\le Kn/g_t$. Since $\gamma\le1/6$ and $s_t\ge1$,
+$\gamma n/\sqrt{s_t}\le n/6\le2n/3-s_t$, so~\eqref{eq:star} reads
+$\rho_t+q_t+1>\gamma n/\sqrt{s_t}\ge\frac{\gamma}{\sqrt K}\sqrt{ng_t}$. If
+$q_t+1<\frac{\gamma}{2\sqrt K}\sqrt{ng_t}$, then
+$\rho_t>\frac{\gamma}{2\sqrt K}\sqrt{ng_t}$, and dividing by $g_t$,
+$\rho_t/g_t>\frac{\gamma}{2\sqrt K}\sqrt{n/g_t}\ge\frac{\gamma}{2\sqrt K}\sqrt{s_t/K}
+=\frac{\gamma}{2K}\sqrt{s_t}$. \qed
+
+\section{The DP-type model is degenerate}\label{sec:dp}
+
+The DP-type model of \cite[Section~5.2]{DL} charges $2^{s_t}$, $2^{w_t}$ and the Taylor
+factor, but not $2^{\rho_t}$ (Section~\ref{sec:cost}). The following observation shows that
+its charge is small on every formula, for a trivial scheme.
+
+\begin{proposition}[A trivial scheme in the DP-type model]\label{prop:dp}
+Let $F$ be any CNF formula on $n\ge1$ variables and let $R\ge0$. There is a scheme for $F$ in
+the sense of Definition~5.1 of~\cite{DL}, with degree bound $R$, such that at every point
+$t\in X$
+\[
+s_t=\lceil\sqrt n\,\rceil,\qquad w_t\le\lceil\sqrt n\,\rceil-1,\qquad q_t=0,\qquad\rho_t=n .
+\]
+Its DP-type charge is exactly $2^{\lceil\sqrt n\,\rceil}$, and its product-type charge is
+$2^n$.
+\end{proposition}
+
+\begin{proof}
+\emph{(a) Deformation.} Put $P_o(T)=e_v$, a constant vector, for every occurrence $o=(e,v)$.
+Then $\deg P_o=0\le R$ and $P_o(0)=e_v$. The polynomial $H$ of~\eqref{eq:H} is the constant
+$\#F$, and $\deg H\le MR$.
+
+\emph{(b) Recovery.} Let $X=\{1,2,\dots,MR+1\}\subset\Q\setminus\{0\}$ and $q_t=0$ for all
+$t\in X$. The Hermite data of $f$ are the values $(f(t))_{t\in X}$. Let
+$\Lambda\bigl((y_t)_{t\in X}\bigr)=\sum_{t\in X}y_t\,L_t(0)$, where
+$L_t(T)=\prod_{u\in X\setminus\{t\}}\frac{T-u}{t-u}$ is the Lagrange basis. This is a linear
+functional, and $\Lambda(f)=f(0)$ for every polynomial $f$ of degree at most $|X|-1=MR$, by
+Lagrange interpolation.
+
+\emph{(c) Designs.} Let $s=\lceil\sqrt n\,\rceil$ and $g=\lceil n/s\rceil$. At every $t\in X$
+use the same design: the groups $S_1,\dots,S_g$ are consecutive blocks of $[n]$, the first
+$g-1$ of size $s$ and the last of size at most $s$; $\alpha_t(e)$ is an arbitrary group; and
+$\cR_{t,h}=\Q^{S_h}$ for every $h$. Condition~\eqref{eq:three} holds because every vector of
+$\Q^{S_h}$ lies in $\cR_{t,h}$.
+
+\emph{Parameters.} Since $1\le s\le n$, the first group has exactly $s$ elements, so $s_t=s$.
+Since $n/s\le n/\sqrt n=\sqrt n\le s$ and $s$ is an integer, $g\le s$. The interaction graph
+$\cI_t$ has $g$ vertices, so $w_t=\tw(\cI_t)\le g-1\le s-1$. Finally
+$\rho_t=\sum_h|S_h|=n$ and $\binom{n}{\min(q_t,\lfloor n/2\rfloor)}=\binom n0=1$. The DP-type
+charge is $\max(2^{s},2^{w_t},1)=2^{s}$, and the product-type charge is
+$\max(2^s,2^{n})=2^n$.
+\end{proof}
+
+\paragraph{Consequences.}
+\begin{enumerate}
+\item \emph{The bound of~\cite{DL} is tight in the DP-type model, for a trivial reason.} For
+ every formula, the smallest DP-type charge of a scheme is at most
+ $2^{\lceil\sqrt n\,\rceil}$. With \cite[Theorem~8.1]{DL}, on any family with primal
+ treewidth at least $cn$ it is $2^{\Theta(\sqrt n)}$: for $n$ large the exponent lies
+ between $\sqrt{(cn+1)/2}-1$ and $\lceil\sqrt n\,\rceil$. The theorems of~\cite{DL} are lower
+ bounds and remain correct. What Proposition~\ref{prop:dp} shows is that no argument, by any
+ technique, can prove more than $2^{\lceil\sqrt n\,\rceil}$ in that model. The sentence of
+ \cite[Section~9]{DL} that ``our lower-bound technique cannot exceed
+ $2^{\tilde O(\sqrt n)}$'' is therefore a property of the model and not only of the
+ technique.
+\item \emph{The gap of \cite[Section~9]{DL} is not open in the DP-type model.} The cost
+ target $2^{\tilde O(\sqrt n)}$ ``from above'' is met there by the trivial scheme, with
+ $\sqrt n$ rows per group instead of polylogarithmically many. The question whether
+ measurements can absorb the cut is meaningful only in a model that charges rows. The
+ product-type model does, and there Corollary~\ref{cor:main} applies; the trivial scheme has
+ product-type charge $2^n$, consistently with Theorem~\ref{thm:uniform}.
+\item \emph{Why the model under-charges.} The charge $2^{w_t}$ counts two values per measured
+ group, whatever its number of rows; this is the justification quoted in
+ Section~\ref{sec:cost}. In the trivial scheme a group is fully measured, and its reading
+ determines its whole assignment, so it takes $2^{|S_h|}$ values. A dynamic programme over
+ readings would then be a dynamic programme over assignments of blocks of variables, which
+ the charge $2^{w_t}$ does not price. A repaired DP-type model must weight a group by its
+ number of rows; see Section~\ref{sec:concl}.
+\end{enumerate}
+
+\section{Machine verification}\label{sec:lean}
+
+The deterministic part of the argument is formalised in Lean~4~\cite{Lean4} with
+Mathlib~\cite{Mathlib}. The sources are in the directory \texttt{lean/} of the repository
+\begin{center}
+\url{https://github.com/luluddof/pnp-recherche}
+\end{center}
+The toolchain is Lean \texttt{v4.37.0-rc1}, and the Mathlib commit is \texttt{e62b985f}, as
+pinned in the file \texttt{lake-manifest.json}. The four source files \texttt{WitnessDet},
+\texttt{Scheme}, \texttt{TheoremB} and \texttt{TheoremA} (in \texttt{lean/PnpLean/}) contain
+no \texttt{sorry} and declare no axiom. To reproduce:
+\begin{verbatim}
+  cd lean && lake exe cache get && lake build PnpLean.TheoremA
+\end{verbatim}
+The target \texttt{PnpLean.TheoremA} imports the other three files. We ran the build
+command with these versions (the Mathlib cache being already present) and it completed
+successfully. We then ran the command \texttt{\#print axioms} on ten declarations of
+Table~\ref{tab:lean}:
+\begin{center}
+\texttt{sum\_nullity\_le}, \texttt{deficiency\_le\_nullity\_add}, \texttt{lemma1},
+\texttt{factR}, \texttt{avg\_lemma1},\\ \texttt{exists\_point}, \texttt{lemma3},
+\texttt{theoremB}, \texttt{theoremB\_bounded}, \texttt{theoremA}.
+\end{center}
+For each of them it reported exactly the three standard axioms \texttt{propext},
+\texttt{Classical.choice} and \texttt{Quot.sound}.
+
+\begin{table}[tb]
+\centering
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{3.6cm}>{\raggedright\arraybackslash}p{6.1cm}>{\raggedright\arraybackslash}p{4.9cm}@{}}
+\toprule
+Statement of this paper & Lean declaration & Status\\
+\midrule
+Lemma~\ref{lem:hermite} (Hermite counting) & \texttt{Scheme.factR} & formalised\\[2pt]
+Lemma~\ref{lem:det}, Step 1 & \texttt{det\_ne\_zero\_of\_eval\_zero}, \newline\texttt{natDegree\_det\_le} & formalised with the bound $nR$ (not $\nocc R$)\\[2pt]
+Lemma~\ref{lem:det}, Step 2 & \texttt{deficiency\_le\_nullity\_add}, \newline\texttt{Scheme.deficiency\_sub\_le\_nullity} & formalised\\[2pt]
+Lemma~\ref{lem:det}, Steps 3--4 & \texttt{pow\_dvd\_det\_of\_nullity}, \newline\texttt{sum\_nullity\_le} & formalised\\[2pt]
+Lemma~\ref{lem:det} & \texttt{Scheme.lemma1} & formalised with the bound $nR$\\[2pt]
+Averaging step of Theorem~\ref{thm:general}, and~\eqref{eq:goodpoint} & \texttt{Scheme.avg\_lemma1}, \newline\texttt{Scheme.exists\_point} & formalised; \texttt{exists\_point} assumes $n\le M$\\[2pt]
+Lemma~\ref{lem:split} & \texttt{Scheme.lemma3} & formalised, as the disjunction ``$\Sigma_t$ is a $2/3$-separator, or $\frac12\sum_h|\Nbar_{t,h}-a_h|>2n/3-s_t$''\\[2pt]
+Theorem~\ref{thm:uniform} & \texttt{Scheme.theoremA} & formalised, unconditionally, assuming $n\le M$\\[2pt]
+Theorem~\ref{thm:general} & \texttt{Scheme.theoremB}, \newline\texttt{Scheme.theoremB\_bounded} & formalised \emph{conditionally}: Lemma~\ref{lem:expdef} is an explicit hypothesis \texttt{Lemma2Hyp}; assumes $n\le M$\\
+\midrule
+Lemma~\ref{lem:anti}, Lemma~\ref{lem:expdef} & --- & \textbf{not formalised} (paper proof only)\\[2pt]
+Uniform average $=$ independent uniform choices & --- & \textbf{not formalised} (argued on paper, Section~\ref{sec:ournot})\\[2pt]
+Bound $\nocc R\le MR$ without $n\le M$ (Remark~\ref{rem:mn}) & --- & \textbf{not formalised}\\[2pt]
+Lemma~\ref{lem:random}, Corollary~\ref{cor:main}, Remark~\ref{rem:balanced}, Proposition~\ref{prop:dp}, Appendix~\ref{app:random} & --- & \textbf{not formalised}\\
+\bottomrule
+\end{tabular}
+\caption{What is and is not machine-checked. Declarations without the prefix
+\texttt{Scheme.} are in the namespace \texttt{WitnessDet}; the others are in
+\texttt{ClauseScheme.Scheme}. The Lean names \texttt{lemma1}, \texttt{lemma3},
+\texttt{theoremA}, \texttt{theoremB}, \texttt{factR} follow an earlier numbering of the
+results.}\label{tab:lean}
+\end{table}
+
+
+\paragraph{What the Lean theorems say.} In \texttt{Scheme.theoremB}, the expectation
+$\E\,\dfc_t$ is defined as the arithmetic mean of $\dfc^\omega_t$ over the finite type of all
+witness maps, and \texttt{Lemma2Hyp c0} is the statement of Lemma~\ref{lem:expdef} for that
+mean, with a constant $c_0\ge0$ left as a parameter. The theorem states: if $n\le M$, if
+\texttt{Lemma2Hyp c0} holds, and if $W$ is a real number such that
+$W\le\sum_{v\in Y}\theta(d_v)$ for every $2/3$-separator $Y$ whose variables all have
+$d_v\ge2$, then some $t\in X$ has
+$\min\bigl(\frac{c_0}{2\sqrt2}W/\sqrt{s_t},\,2n/3-s_t\bigr)<\rho_t+q_t+1$. So the machine
+check covers the logical skeleton of Theorem~\ref{thm:general} (determinant, Hermite
+counting, averaging, separator lemma, case analysis and constants) and \emph{not} its
+probabilistic ingredient. \texttt{Scheme.theoremA} states Theorem~\ref{thm:uniform} with no
+unproved hypothesis other than $n\le M$.
+
+\paragraph{Differences between the Lean definitions and those of the paper.}
+\begin{enumerate}
+\item \emph{Formula.} A formula is given only by its clause variable sets
+ $I:\kappa\to\mathrm{Finset}(\mathrm{Fin}\ n)$ for a finite type $\kappa$ of clauses. Signs,
+ the polynomials $\varphi_e$ and $H$ do not appear. The structure \texttt{Scheme} records
+ what the proofs use: the vectors $P_o$ with entries of degree at most $R$ and
+ $P_o(0)=e_v$; a set $X$ of rationals not containing $0$; orders $q$; and a linear functional
+ $\Lambda$ on the Hermite data, exact on every polynomial of degree at most $MR$. This is a
+ weaker set of hypotheses than Definition~5.1, so the Lean theorems apply to every scheme of
+ the paper.
+\item \emph{Groups.} The groups are indexed by one fixed finite type $G$ at all points, and
+ the partition at $t$ is a map from variables to $G$; empty groups are allowed. A scheme of
+ the paper is encoded by taking $G$ large enough and giving unused labels the empty group
+ and the zero subspace. The design data are functions of all $t\in\Q$, but
+ condition~\eqref{eq:three} is required only for $t\in X$.
+\item \emph{Measurement subspaces.} $\cR_{t,h}$ is a subspace of $\Q^n$ whose vectors vanish
+ outside $S_{t,h}$, instead of a subspace of $\Q^{S_{t,h}}$; condition~\eqref{eq:three} is
+ stated for the vector $P_{e,v}(t)$ with its coordinates outside $S_{t,h}$ set to zero.
+\item \emph{Separators.} \texttt{IsSep I Y} says that for every $v\notin Y$, the set of
+ vertices reachable from $v$ in the primal graph with all edges touching $Y$ removed has at
+ most $2n/3$ elements. This is equivalent to Definition~\ref{def:sep}. The numbers
+ $\sep(F)$ and $\sepw(F)$ are not defined; the theorems take an arbitrary lower bound
+ (\texttt{sepLB}, respectively $W$) valid for every separator, which gives the statements
+ of the paper on taking the best lower bound.
+\item \emph{Hypothesis $n\le M$.} The Lean statements of \texttt{exists\_point},
+ \texttt{theoremA}, \texttt{theoremB} and \texttt{theoremB\_bounded} assume $n\le M$ and use
+ $\deg\det\Phi^\omega\le nR\le MR$. The paper removes this hypothesis through the sharper
+ bound $\deg\det\Phi^\omega\le\nocc R$ (Step~1 of the proof of Lemma~\ref{lem:det}); this
+ one-line sharpening is not formalised.
+\item \emph{Arithmetic.} Deficiencies and positive parts are truncated subtractions of
+ natural numbers; $s_t$ is the supremum of $a_h$ over $G$; in \texttt{theoremB\_bounded} the
+ bound on occurrences satisfies $b\ge2$.
+\end{enumerate}
+The correspondence between the Lean statements and the statements of the paper was checked
+by reading, by AI agents and not by a human expert; a mismatch between a Lean definition and
+its intended meaning is the main residual risk of this section.
+
+\section{Computational checks}\label{sec:checks}
+
+We ran four small scripts. They test the algebra and the inequalities on small instances.
+\textbf{Such checks can only detect errors; they prove nothing, and in particular nothing
+about the asymptotic statements.} The scripts are in the repository cited in
+Section~\ref{sec:lean}, in \texttt{code/gen6/g6a/} and \texttt{code/gen6/g6r/}. We report
+only what we observed when re-running unmodified copies of them for this version, with
+Python~3.13.18, sympy~1.14.0 and networkx~3.7, on a Linux machine (single thread).
+Table~\ref{tab:checks} gives the commands, run from the repository root.
+
+\begin{table}[htbp]
+\centering
+\small
+\begin{tabular}{@{}llr@{}}
+\toprule
+Check & Command & Time\\
+\midrule
+C1 & \texttt{cd code/gen6/g6a \&\& python3 run\_checks.py theorem} & 6 s\\
+C2 & \texttt{cd code/gen6/g6a \&\& python3 run\_checks.py e2e} & 19 s\\
+C3 & \texttt{cd code/gen6/g6a \&\& python3 anticonc\_check.py} & 0.5 s\\
+C4 & \texttt{cd code/gen6/g6r \&\& python3 lemma1\_check.py} & 125 s\\
+\bottomrule
+\end{tabular}
+\caption{Commands for the computational checks. C1 needs networkx; C2 and C4 need
+sympy. All scripts use fixed seeds.}\label{tab:checks}
+\end{table}
+
+\paragraph{C1: Lemma~\ref{lem:det} and the bound of Lemma~\ref{lem:expdef}.}
+\emph{Instances.} Random formulas with $n$ variables and $n$ clauses in which every variable
+occurs in exactly three clauses, for $(n,|X|,R)=(24,8,2)$, $(30,10,2)$ and $(36,9,3)$, with
+$X=\{1,\dots,|X|\}$ and groups of size $6$ in a random partition at each point. Four families
+of designs: cut-and-measure with a variable-uniform deformation; cut-and-measure with a
+clause-dependent deformation; a ``global-sum'' design; a random dense deformation with the
+smallest admissible $\cR_{t,h}$. This makes $12$ runs.
+
+\emph{What is asserted.} Condition~\eqref{eq:three}, exactly over $\Q$. For four random
+witness maps per run: $\dim\ker\Phi^\omega(t)\ge\dfc^\omega_t-\rho_t$ at every point, and
+$\sum_t\dim\ker\Phi^\omega(t)\le nR$, with exact ranks over $\Q$. At every point, that
+$\E\,\dfc_t$ is at least the bound of Lemma~\ref{lem:expdef} with $c_0$ replaced by $0.216$;
+here $\E\,\dfc_t$ is computed from the exact distribution of each $N_h$ in floating-point
+arithmetic. Finally $\sum_t(\E\,\dfc_t-\rho_t)_+\le nR$.
+
+\emph{What we observed.} All assertions passed in the $12$ runs. In the order of the four families, the largest value of
+$\sum_t\dim\ker\Phi^\omega(t)$ over the four witness maps was $48$, $48$, $40$, $0$ for
+$n=24$ (where $nR=48$); $60$, $60$, $50$, $0$ for $n=30$ (where $nR=60$); and $108$, $108$,
+$99$, $0$ for $n=36$ (where $nR=108$). So the bound $nR$ of Lemma~\ref{lem:det} was attained by the
+cut-and-measure designs. Over all points of all runs, $\E\,\dfc_t$ ranged from $2.57$ to
+$8.46$ and $\rho_t$ from $10$ to $36$.
+
+\emph{Limits of this check.} In every one of the $12$ runs, $\rho_t$ exceeded $\E\,\dfc_t$
+at every point (by at least $6.9$), so $\sum_t(\E\,\dfc_t-\rho_t)_+=0$. \textbf{The
+averaging step of Theorem~\ref{thm:general} is therefore never really exercised}: the
+inequality $\sum_t(\E\,\dfc_t-\rho_t)_+\le nR$ holds trivially in these runs. These designs
+have $\rho_t$ between $0.4n$ and $n$ and are far from the regime of
+Theorem~\ref{thm:general}; they test neither the tightness of the $\sqrt s$ factor nor the
+final inequalities of Theorems~\ref{thm:uniform} and~\ref{thm:general}. A stored output
+file in the repository (\texttt{theorem\_checks.txt}) contains only the configurations
+$n=24$ and $n=30$; in our run the configuration $n=36$ completed normally, and the output
+for $n=24$ and $n=30$ was identical to the stored file.
+
+\paragraph{C2: end-to-end recovery.} One formula with $n=12$ (three occurrences per
+variable), three groups of four variables, $R=1$, $X=\{1,\dots,6\}$, $q_t=6$ (so
+$\sum_t(q_t+1)=42>MR=36$), and two design families. The script computes $H(T)$ by brute
+force modulo the prime $2^{61}-1$, recovers $H(0)$ from the Hermite data, and at each point
+compares a product-type evaluation (enumeration of tuples of measurement readings, counting
+inside groups) with the brute-force value of $H(t)$ in exact rational arithmetic.
+\emph{Observed:} $\#F=977$; $H(0)=977$ and the Hermite-recovered value is $977$ for both
+designs; the product-type evaluation equals $H(t)$ at all $6$ points for both designs, with
+between $64$ and $3072$ tuples of readings. This checks the code and the meaning of
+Definition~5.1 on one instance; it does not test our theorems.
+
+\paragraph{C3: anticoncentration.} $4000$ random sums of at most $40$ independent Bernoulli
+variables; for each, the minimum over integers $a$ of $\E|B-a|$ divided by
+$\min(V,\sqrt V)$, in floating-point arithmetic. \emph{Observed:} the smallest ratio is
+$0.7397$, against $c_0\approx0.2162$ in Lemma~\ref{lem:anti}. This is a sanity check on
+random instances, not a proof and not a search for worst cases.
+
+\paragraph{C4: an independent test of Lemma~\ref{lem:det}.} The script builds random schemes
+with $n=9$, $7$ clauses of three variables, $R=2$, $4$ points, $3$ groups and one random
+measurement row per group, by solving the linear constraints~\eqref{eq:three} for the
+coefficients of the deformation (sympy, exact arithmetic). For each scheme and six random
+witness maps it asserts $P_o(0)=e_v$, $\det\Phi^\omega(0)=1$, $\deg\det\Phi^\omega\le nR$,
+$\dim\ker\Phi^\omega(t)\ge\dfc^\omega_t-\rho_t$, that the multiplicity of the root $t$ of
+$\det\Phi^\omega$ is at least $\dim\ker\Phi^\omega(t)$, and
+$\sum_t(\dfc^\omega_t-\rho_t)_+\le nR$. \emph{Observed:} of the six seeds $0,\dots,5$, three
+(seeds $0$, $4$, $5$) produced no scheme, because the linear system was infeasible, and the
+script returned nothing for them. For seeds $1$, $2$, $3$ all assertions passed, on
+$3\times6=18$ witness maps in total. In these three schemes $\rho_t=3$ at every point, and
+the largest value of $\sum_t(\dfc^\omega_t-\rho_t)_+$ was $1$, $3$ and $1$, against $nR=18$.
+The test is therefore weak: it is far from the equality case.
+
+\paragraph{What is not checked numerically.} Lemma~\ref{lem:split},
+Lemma~\ref{lem:random}, Corollary~\ref{cor:main} and Proposition~\ref{prop:dp} were not
+checked numerically for this version, and no run exhibits a point with
+$\E\,\dfc_t>\rho_t$.
+
+\section{Methodology and use of AI tools}\label{sec:ai}
+
+We state plainly how this work was produced.
+
+\paragraph{AI-generated mathematics.} The results of this paper were found, proved, written
+up and reviewed by AI agents, instances of Claude (Anthropic), working under the direction of
+the author, who supervised the workflow and decided what to publish. The author did not
+write the proofs.
+
+\paragraph{Reviews, and their limits.} A first agent produced the determinant argument,
+proofs and test scripts. A second agent carried out an adversarial review of each lemma and
+wrote the independent test C4. A third agent wrote a referee report on an earlier version of
+this text; that report found the proofs correct as far as it could check, and required the
+changes of scope that are now in the paper: the DP-type model is degenerate rather than
+``open'' (Section~\ref{sec:dp}), the comparison is with \cite[Theorem~8.1 and Lemma~8.2]{DL}
+and not with their Theorem~8.3, and the computational section was corrected. This version
+was then written by a further agent, which re-derived the proofs and re-ran the checks.
+\textbf{These reviews are not independent of the provers}: all agents are instances of the
+same family of models and may share blind spots. They do not replace review by human
+experts.
+
+\paragraph{Machine verification.} To reduce this risk, the deterministic part of the
+argument was formalised in Lean~4 (Section~\ref{sec:lean}). The formal proofs were also
+written by AI agents, but they are checked by the Lean kernel. The probabilistic part
+(Lemmas~\ref{lem:anti} and~\ref{lem:expdef}), the lemma on random 3-CNF, the corollary and
+Proposition~\ref{prop:dp} are not formalised.
+
+\paragraph{No human expert review.} At the time of writing, \textbf{no human expert has
+reviewed this work}. The author is a computer science student. Readers should treat the
+results accordingly, and corrections are welcome at the address on the first page.
+
+\paragraph{Sources and novelty.} The definitions and the question are quoted from the text
+of~\cite{DL}. Among the works cited, the agents read \cite{DL} in full; the
+preprints~\cite{OpenAI,Claude} and the exposition~\cite{ODonnell} are cited for context
+only, and the present paper does not rely on their content beyond what~\cite{DL} reports.
+The classical references were supplied by the AI agents from their knowledge of the
+literature and were not re-read for this paper. The novelty assessment rests on searches made by AI
+agents, not on a systematic survey.
+
+\paragraph{Responsibility.} The author takes responsibility for the content of this paper,
+including any error that remains.
+
+\section{Conclusion and open problems}\label{sec:concl}
+
+Dias and Lima asked for a proof that measurements cannot absorb the cut in clause-product
+interpolation schemes. We proved a quantitative form of this statement: at some evaluation
+point, the number of measurement rows plus the Taylor order exceeds
+$c_b\sep(F)/\sqrt{s_t}$, or the groups are too large; and for variable-uniform deformations
+the factor $\sqrt{s_t}$ disappears. On bounded-occurrence formulas with linear separators,
+and on random 3-CNF of density above $3$, the design described in \cite[Section~9]{DL} does
+not exist, and every scheme applied to the formula itself has product-type charge
+$2^{\Omega(n^{2/3})}$. We also observed that the DP-type model cannot certify more than
+$2^{\lceil\sqrt n\rceil}$ on any formula.
+
+These are modest negative results about one abstraction of one route of one preprint. They
+do not concern the preprint's parity form or tensor contraction, they are lower bounds on
+the charges of a model and not on running time, and they have no bearing on ETH or on
+P versus NP.
+
+\paragraph{Open problems.}
+\begin{enumerate}
+\item \emph{Tightness of the $\sqrt s$ factor.} Is there a formula with
+ $\sep(F)=\Omega(n)$ and a scheme with $\rho_t+q_t=O(n/\sqrt{s_t})$ at every point and
+ $s_t=o(n)$? By Theorem~\ref{thm:uniform} its deformation must depend on the clause. The
+ factor comes only from the fluctuations of a random witness map, and a different choice of
+ witnesses, or a different minor, might remove it. If it can be removed, the product-type
+ bound becomes $2^{\Omega(n)}$; if it cannot, the truth could be as low as
+ $2^{\tilde\Theta(n^{2/3})}$.
+ No upper bound better than the preprint's is known to us in the product-type model.
+\item \emph{The preprint's actual inputs.} Prove $\sep(F^\star)=\Omega(n^\star)$, or its
+ weighted analogue, for the bounded-occurrence formula $F^\star$ built with Tovey's
+ cycles~\cite{Tov84}, and for the leaves of the sparsification. This would extend
+ Corollary~\ref{cor:main} to the setting of \cite[Theorem~8.3]{DL}. We have not done it.
+\item \emph{A meaningful DP-type model.} By Proposition~\ref{prop:dp} the DP-type charge
+ must be repaired before the question can be asked in it. A natural candidate replaces
+ $2^{w_t}$ by $2^{W_t}$, where $W_t$ is the minimum, over tree decompositions of the graph
+ on measured groups used in~\cite{DL}, of the largest total number of rows in a bag. Is
+ $\max(s_t,W_t,q_t)\ge n^{1/2+\delta}$ at some point, on formulas with linear separators?
+ This is open. Partial results in this direction exist in the project repository; they are
+ conditional and unreviewed, and we do not claim them here.
+\item \emph{Formalisation.} Formalise Lemmas~\ref{lem:anti} and~\ref{lem:expdef}, so that
+ Theorem~\ref{thm:general} is machine-checked without hypothesis, and remove the hypothesis
+ $n\le M$ from the Lean statements.
+\item \emph{Constants.} Improve $c_0$; the experiments suggest that
+ Lemma~\ref{lem:anti} is far from sharp.
+\item \emph{Beyond Definition~5.1.} Do similar limits hold for the parity form or the tensor
+ contraction of the preprint? As explained in \cite[Section~5.1]{DL}, these break the link
+ between the number of occurrences and the degree of exact recovery, on which
+ Lemma~\ref{lem:hermite} and our comparison of degrees rest. Our method does not apply to
+ them as it stands.
+\end{enumerate}
+
+\appendix
+\section{Two properties of random 3-CNF (after Dias and Lima)}\label{app:random}
+
+For completeness we reproduce the proofs of the two facts used in the proof of
+Lemma~\ref{lem:random}. They are Lemmas~A.1 and~A.2 of~\cite{DL}, and the proofs follow
+theirs. $F$ has $n$ variables and $m=\Delta n$ independent clauses, each on three distinct
+uniformly random variables with random signs; $\log$ is the natural logarithm, and ``with
+high probability'' means with probability tending to $1$ as $n\to\infty$.
+
+\begin{lemma}[{\cite[Lemma~A.1]{DL}}]\label{lem:A1}
+If $\Delta>3$, then with high probability, for every set $S$ of variables with
+$n/3\le|S|\le2n/3$, at least $m/3$ clauses contain both a variable of $S$ and a variable
+outside $S$.
+\end{lemma}
+
+\begin{proof}
+Fix $S$ with $|S|=\alpha n$, $\alpha\in[1/3,2/3]$. The variable set of a clause is a uniform
+$3$-subset of $[n]$, so it lies inside $S$ with probability
+$\binom{|S|}{3}/\binom n3\le\alpha^3$, and inside the complement of $S$ with probability at
+most $(1-\alpha)^3$. The function $\alpha^3+(1-\alpha)^3$ is convex, so on $[1/3,2/3]$ it is
+at most its value $1/27+8/27=1/3$ at the endpoints. Hence each clause, independently,
+contains a variable of $S$ and a variable outside $S$ with probability at least $2/3$, and
+the number of such clauses stochastically dominates a binomial variable
+$\mathrm{Bin}(m,2/3)$. By the Chernoff--Hoeffding bound~\cite[Theorem~1]{Hoe63},
+\[
+\PP\bigl(\mathrm{Bin}(m,2/3)\le m/3\bigr)\ \le\ \exp\bigl(-m\,\mathrm{KL}(1/3\,\|\,2/3)\bigr)
+=2^{-m/3},
+\]
+because $\mathrm{KL}(1/3\,\|\,2/3)=\frac13\ln\frac12+\frac23\ln2=\frac13\ln2$. There are at
+most $2^n$ sets $S$, so the probability that some $S$ fails is at most
+$2^{n-\Delta n/3}$, which tends to $0$ because $\Delta>3$.
+\end{proof}
+
+\begin{lemma}[{\cite[Lemma~A.2]{DL}}]\label{lem:A2}
+Let $C_\Delta=3e^2\Delta$. With high probability, for every $1\le j\le n$, every set of $j$
+variables meets at most $C_\Delta\,j\log(en/j)$ clauses.
+\end{lemma}
+
+\begin{proof}
+Fix a set $S$ of $j$ variables and let $L_S$ be the number of pairs (clause, variable of $S$
+in that clause). The number of clauses that meet $S$ is at most $L_S$. For one clause, the
+number of its variables in $S$ is hypergeometric: three draws without replacement from $n$
+variables, $j$ of which are in $S$. By a theorem of Hoeffding~\cite[Theorem~4]{Hoe63}, its
+moment generating function is at most that of $\mathrm{Bin}(3,j/n)$. The clauses are
+independent, so for every $\lambda>0$,
+\[
+\E e^{\lambda L_S}\ \le\ \bigl(1+\tfrac jn(e^\lambda-1)\bigr)^{3m}\ \le\ \exp\bigl(\mu(e^\lambda-1)\bigr),
+\qquad \mu=\frac{3mj}{n}=3\Delta j .
+\]
+By Markov's inequality with $\lambda=\ln(x/\mu)$, for every $x>\mu$,
+\[
+\PP(L_S\ge x)\ \le\ \exp\bigl(-x\ln(x/\mu)+x-\mu\bigr)\ \le\ \Bigl(\frac{e\mu}{x}\Bigr)^{x}.
+\]
+Take $x=C_\Delta\,j\log(en/j)$. Since $j\le n$, $\log(en/j)\ge1$, so $x\ge C_\Delta j>\mu$ and
+$e\mu/x=1/(e\log(en/j))\le1/e$. Hence
+$\PP(L_S\ge x)\le e^{-x}=(en/j)^{-C_\Delta j}$. There are $\binom nj\le(en/j)^j$ sets of size
+$j$, so the probability that some set of size $j$ fails is at most
+$(en/j)^{-(C_\Delta-1)j}\le(en/j)^{-2j}$. For $j\le\sqrt n$ this is at most $(e^2n)^{-j}$, and
+for $j>\sqrt n$ it is at most $e^{-2j}$. Summing over $1\le j\le n$ gives at most
+$2/(e^2n)+2e^{-2\sqrt n}$, which tends to $0$.
+\end{proof}
+
+\begin{thebibliography}{99}
+
+\bibitem{AVW18} J. Alman, V. Vassilevska Williams. Limits on all known (and some unknown)
+ approaches to matrix multiplication. \emph{FOCS} 2018.
+
+\bibitem{AFL15} A. Ambainis, Y. Filmus, F. Le Gall. Fast matrix multiplication: limitations
+ of the Coppersmith--Winograd method. \emph{STOC} 2015.
+
+\bibitem{BSI10} E. Ben-Sasson, R. Impagliazzo. Random CNF's are hard for the polynomial
+ calculus. \emph{Comput. Complexity} 19, 2010.
+
+\bibitem{BSW01} E. Ben-Sasson, A. Wigderson. Short proofs are narrow---resolution made
+ simple. \emph{J. ACM} 48(2), 2001.
+
+\bibitem{Ber97} B. Berger. The fourth moment method. \emph{SIAM J. Comput.} 26(4), 1997.
+
+\bibitem{Bod93} H. L. Bodlaender. A tourist guide through treewidth. \emph{Acta Cybernetica}
+ 11, 1993.
+
+\bibitem{CS88} V. Chv\'atal, E. Szemer\'edi. Many hard examples for resolution.
+ \emph{J. ACM} 35(4), 1988.
+
+\bibitem{Claude} Anthropic (Claude). A $2^{o(n)}$ time algorithm for 3-SAT. Preprint,
+ Hexagon 2610.00577v1, 26 October 2026.
+
+\bibitem{DL} F. Dias, Y. Lima. Limits and constants of OpenAI's claimed ETH refutation.
+ arXiv:2611.00517v1 [cs.CC], 31 October 2026.
+
+\bibitem{DKSS13} Z. Dvir, S. Kopparty, S. Saraf, M. Sudan. Extensions to the method of
+ multiplicities, with applications to Kakeya sets and mergers. \emph{SIAM J. Comput.} 42(6),
+ 2013.
+
+\bibitem{Erd45} P. Erd\H{o}s. On a lemma of Littlewood and Offord. \emph{Bull. Amer. Math.
+ Soc.} 51, 1945.
+
+\bibitem{GLR82} I. Gohberg, P. Lancaster, L. Rodman. \emph{Matrix Polynomials}. Academic
+ Press, 1982.
+
+\bibitem{Hoe63} W. Hoeffding. Probability inequalities for sums of bounded random variables.
+ \emph{J. Amer. Statist. Assoc.} 58(301), 1963.
+
+\bibitem{IP01} R. Impagliazzo, R. Paturi. On the complexity of $k$-SAT. \emph{J. Comput.
+ System Sci.} 62(2), 2001.
+
+\bibitem{IPZ01} R. Impagliazzo, R. Paturi, F. Zane. Which problems have strongly exponential
+ complexity? \emph{J. Comput. System Sci.} 63(4), 2001.
+
+\bibitem{Kol58} A. Kolmogorov. Sur les propri\'et\'es des fonctions de concentrations de
+ M.~P.~L\'evy. \emph{Ann. Inst. H. Poincar\'e} 16, 1958.
+
+\bibitem{LT79} R. J. Lipton, R. E. Tarjan. A separator theorem for planar graphs.
+ \emph{SIAM J. Appl. Math.} 36(2), 1979.
+
+\bibitem{Lit30} J. E. Littlewood. On bounded bilinear forms in an infinite number of
+ variables. \emph{Quart. J. Math.} 1, 1930.
+
+\bibitem{LO43} J. E. Littlewood, A. C. Offord. On the number of real roots of a random
+ algebraic equation (III). \emph{Rec. Math. [Mat. Sbornik] N.S.} 12(54), 1943.
+
+\bibitem{Mathlib} The mathlib Community. The Lean mathematical library. \emph{CPP} 2020.
+
+\bibitem{Lean4} L. de Moura, S. Ullrich. The Lean 4 theorem prover and programming language.
+ \emph{CADE} 2021.
+
+\bibitem{ODonnell} R. O'Donnell. Some exposition of ``The Exponential Time Hypothesis Is
+ False''. Manuscript, 2026.
+ \url{https://www.cs.cmu.edu/~odonnell/some_eth_false_exposition.pdf}
+
+\bibitem{OpenAI} OpenAI. The exponential time hypothesis is false. Preprint, 17 October 2026,
+ revised 25 October 2026.
+
+\bibitem{RS86} N. Robertson, P. D. Seymour. Graph minors. II. Algorithmic aspects of
+ tree-width. \emph{J. Algorithms} 7(3), 1986.
+
+\bibitem{Rog61} B. A. Rogozin. On the increase of dispersion of sums of independent random
+ variables. \emph{Theory Probab. Appl.} 6(1), 1961.
+
+\bibitem{Tov84} C. A. Tovey. A simplified NP-complete satisfiability problem.
+ \emph{Discrete Appl. Math.} 8, 1984.
+
+\end{thebibliography}
+
+\end{document}

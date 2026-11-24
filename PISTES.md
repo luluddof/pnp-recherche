@@ -29,7 +29,6 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 | G9b | 🔄 **B – Décider au lieu de compter** | Compter modulo 2 (Valiant-Vazirani) ; identités sur GF(2) et GF(3) | Idée du 24/11 |
 | G9c | 🔄 **C – Q1\*** | Compter les ensembles indépendants d'un graphe presque creux en 2^O(n/√log n) ; idées : hybride, autre encodage, identité de l'étoile | G8b |
 | G9d | 🔄 **D – Sortir de la structure produit** | Gadgets à 3 parties (rang du tenseur triangle, multiplication de matrices), instances non cliques, conjecture du rang asymptotique | G4b |
-| G9W | 🔄 **Version 2 de l'article** (LaTeX + PDF) | Réécriture selon le rapport G8R | G7c, G8R |
 
 **Consigne de l'utilisateur (24/11) :** dès que les générations 8 et 9 sont terminées, lancer une **génération 10** sur les pistes « pas encore explorées » (section 2) et « en attente » (section 3).
 
@@ -64,13 +63,19 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | Piste | Raison de l'attente |
 |---|---|
-| ⏸️ **Réécriture de la note** selon le rapport G8R (révision majeure) | Attendre G8a pour intégrer son résultat (G9L est terminé) |
+| ⏸️ **Relecture de l'article par un expert humain** | Auteurs naturels à contacter : Dias et Lima. Décision de l'auteur. |
+| ⏸️ **Points nouveaux de la version 2, non relus** | Note de bas de page sur le théorème 7.1(ii) de Dias-Lima ; annexe A (preuves des lemmes A.1/A.2 de Dias-Lima reprises) ; références classiques citées de mémoire |
+| ⏸️ **sep(F\*) ≥ c·n\*** | Laissé comme problème ouvert dans l'article |
+
+| Piste | Raison de l'attente |
+|---|---|
 | ⏸️ **Relecture adverse de G7b** (modèle DP trop généreux, prop. O1) | Le rapport G8R confirme déjà la prop. O1 sur le texte source ; relecture complète à faire avec G8a |
 
 ## 4. Terminées (résultats)
 
 | Piste | Résultat |
 |---|---|
+| ✅ **Article, version 2** (G9W) | `resultats/article/` : 26 pages, LaTeX + PDF ; les 10 corrections obligatoires du rapport G8R sont traitées ; hypothèse M ≥ n supprimée sur papier (Lean garde n ≤ M) |
 | ✅ Limits §9, modèle produit (G6a) | Réponse négative, 2^Ω(n^(2/3)) ; confirmée par relecture adverse ; note rédigée |
 | ✅ Auteur humain de la note | **Lucas Requena**, étudiant en informatique (« Computer Science student »), contact : l.requena@outlook.fr (avec une mention claire du travail fait par les agents IA) |
 | ✅ Lemme 1 en Lean (G8L) | Prouvé sans `sorry` |
