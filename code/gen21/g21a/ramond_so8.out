@@ -1,0 +1,15 @@
+8 real symmetric anticommuting 16x16 gamma matrices: Clifford relations verified exactly
+R + C = 2 [x=v][y=u] exactly.  rr(R), rc(R) = 8 64   rr(C), rc(C) = 64 8
+=> feasible pair (p,q) = (rr(R), rc(C)) = (8, 8) at N = 8 (Hurwitz point); as PIECES (Def. 7): log2 rr + log2 rc = 9 of 12 bits (rho = 3/4)
+Ramond n=8, so(8) currents (N=28, H=2), labels = ground space (N'=16): sum_s A_s == d [x=v][y=u] exactly: True, d = {-4}
+all 28 currents (28 x 16 rectangular crossing, N N' = 448)
+   piece s=-1: rr = 16, rc = 448
+   piece s= 0: rr = 128, rc = 128
+   piece s= 1: rr = 448, rc = 16
+   thresholds: (rr(A_-1), rc(A_0+A_1)) = (16, 112);  (rr(A_-1+A_0), rc(A_1)) = (112, 16)
+first 16 currents (square N = 16, N^2 = 256)
+   piece s=-1: rr = 16, rc = 224
+   piece s= 0: rr = 128, rc = 128
+   piece s= 1: rr = 224, rc = 16
+   thresholds: (rr(A_-1), rc(A_0+A_1)) = (16, 112);  (rr(A_-1+A_0), rc(A_1)) = (112, 16)
+window dimensions: weight 0: 16, weights <=1: 144, weights <=2: 720

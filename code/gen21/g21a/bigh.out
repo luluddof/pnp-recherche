@@ -1,0 +1,24 @@
+n=8 V=NS M=NS:  h, lam, exact ratio, leading prediction sqrt(2 + n/(48u)), u = h - n/48
+   h=  20.0 lam=   29.6 E0=  20.0  ratio=1.4543  pred=1.4172
+   h=  40.0 lam=   43.0 E0=  40.0  ratio=1.4445  pred=1.4157
+   h=  80.0 lam=   62.2 E0=  80.0  ratio=1.4370  pred=1.4150
+   h= 120.0 lam=   76.9 E0= 120.0  ratio=1.4335  pred=1.4147
+   h= 160.0 lam=   89.3 E0= 160.0  ratio=1.4313  pred=1.4146
+n=8 V=NS M=Ramond:  h, lam, exact ratio, leading prediction sqrt(2 + n/(48u)), u = h - n/48
+   h=  20.0 lam=   29.6 E0=  20.0  ratio=1.4686  pred=1.4172
+   h=  40.0 lam=   43.0 E0=  40.0  ratio=1.4515  pred=1.4157
+   h=  80.0 lam=   62.2 E0=  80.0  ratio=1.4405  pred=1.4150
+   h= 120.0 lam=   76.9 E0= 120.0  ratio=1.4358  pred=1.4147
+   h= 160.0 lam=   89.3 E0= 160.0  ratio=1.4330  pred=1.4146
+n=16 V=NS M=NS:  h, lam, exact ratio, leading prediction sqrt(2 + n/(48u)), u = h - n/48
+   h=  20.0 lam=   42.9 E0=  20.0  ratio=1.4471  pred=1.4202
+   h=  40.0 lam=   62.0 E0=  40.0  ratio=1.4383  pred=1.4172
+   h=  80.0 lam=   89.2 E0=  80.0  ratio=1.4319  pred=1.4157
+   h= 120.0 lam=  110.1 E0= 120.0  ratio=1.4291  pred=1.4152
+   h= 160.0 lam=  127.8 E0= 160.0  ratio=1.4273  pred=1.4150
+n=16 V=NS M=Ramond:  h, lam, exact ratio, leading prediction sqrt(2 + n/(48u)), u = h - n/48
+   h=  20.0 lam=   42.9 E0=  19.0  ratio=1.4516  pred=1.4202
+   h=  40.0 lam=   62.0 E0=  39.0  ratio=1.4405  pred=1.4172
+   h=  80.0 lam=   89.2 E0=  79.0  ratio=1.4330  pred=1.4157
+   h= 120.0 lam=  110.1 E0= 119.0  ratio=1.4298  pred=1.4152
+   h= 160.0 lam=  127.8 E0= 159.0  ratio=1.4279  pred=1.4150

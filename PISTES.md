@@ -27,6 +27,8 @@ Avec les trois articles, les trois voies de la prépublication d'OpenAI seraient
 
 **Précision d'échelle (G21c, 24/11) :** les deux prépublications donnent 2^(O(m/√log m)) en le nombre de clauses m. En le nombre de variables n, la borne générale est 2^(O(n·loglog n/√log n)) ; elle est 2^(O(n/√log n)) seulement à densité bornée. Dans ce fichier, « n/√log n » et « n/log n » se lisent à densité bornée (ou en m).
 
+**Échelons intermédiaires (G21a, 24/11) :** avec un gain ρ par niveau, le temps de l'algorithme de Claude est 2^(O(m/(log m)^α′)), α′ = log₂(1/ρ). ρ = 1/√2 donne la puissance 0,5 (échelon 1) ; ρ = 2/3 donnerait 0,585 ; ρ = 1/2 donnerait 1 (échelon 2). Tout ρ < 1/√2 est donc un progrès sur la puissance du logarithme, pas seulement sur une constante.
+
 | Marche | Temps | État |
 |---|---|---|
 | 0 | 2^(0,39 n) | Record avant octobre 2026 |
@@ -42,7 +44,6 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
-| G21a | 🔄 **Modules à espace fondamental dégénéré** (modèle Fable) | Construire l'objet qui ferait baisser ρ sous 1/√2 : secteur de Ramond, modules tordus, modes zéro ; profil affine avec ordonnée à l'origine (cible ρ = 2/3 ou mieux). Ou un théorème d'obstruction. | G20c, G18h |
 | G21b | 🔄 **Caractéristique p** | Pour la décision, on peut travailler sur F_p. La frontière sur F_2, F_3 est-elle meilleure que sur ℚ ? Fock p-restreint, Frobenius, non-rigidité sur les corps finis (Dvir-Edelman). | G9b, G18b, G20c |
 | G21d | 🔄 **Équation au-delà des méthodes de rang** | À N = 3, trouver un témoin algébrique que l'échange n'est pas dans le joint J(2,2) ; reformulation symétrique à trois aplatissements ; se généralise-t-il ? | G20d |
 
@@ -131,7 +132,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Question précise | Origine |
 |---|---|---|
-| **Profil non concave « rampe – plateau – rampe » (après G21e)** | La borne ρ ≥ 2/3 de G20c suppose la concavité. Sans elle, les contraintes de dimension permettent ρ → 1/2, avec un profil plat sur [h, 3h]. Objet candidat : un module gradué avec un grand espace de plus bas poids près de 3h. Question décisive : la localité (lemme 9) et les bases duales entières (lemme 10) du papier de Claude valent-elles pour de tels modules ? En cours : G21a. | G20c, G21e |
+| **Profil à plateau (après G21e et G21a)** | Les contraintes de dimension permettent ρ → 1/2 (G21e), mais l'objet qu'il faut est un seul module cyclique avec dim ≈ N^(1+o(1)) sur [E0, E0 + H] : aussi fort que P(N) = N^(1+o(1)) (problème de Hurwitz-Naslund). Ni construit, ni exclu. Restes non testés : familles non unitaires avec c < 0 ; étiquettes de poids mixtes ; algèbres non libres (W-algèbres, affines à niveau fractionnaire). | G21e, G21a |
 
 ## 3. En attente
 
@@ -150,6 +151,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Résultat |
 |---|---|
+| ❌ **Modules à espace fondamental dégénéré** (G21a, modèle Fable) | Aucune construction. Un espace fondamental est une perte pure (ρ ≥ 1/2 + L_M(0)/(4λ)). Neuf candidats (Fock, tordus, NS, Ramond, symplectiques), tous au-dessus du cercle ; Ramond : 1,4279 contre 1,4142. Le lemme de localité s'étend aux modules ; c'est le profil qui échoue. Un plateau demande un module cyclique aussi fort que P(N) = N^(1+o(1)). Précision : le temps est 2^(O(m/(log m)^α′)) avec α′ = log₂(1/ρ). `code/gen21/g21a/notes.md` |
 | ✅ **Relecture du théorème B et de la borne 2/3** (G21e) | Théorème B confirmé (P+), deux corrections de portée (compositions non locales hors classe ; « exactement 1/4 » seulement comme barrière). Borne ρ ≥ 2/3 : vraie seulement avec la concavité, qui est une hypothèse. **Sans concavité, les contraintes de dimension permettent ρ → 1/2** (profil rampe – plateau – rampe). Question décisive : les lemmes 9 et 10 du papier de Claude valent-ils pour des modules à grand espace de plus bas poids ? `code/gen21/g21e/notes.md` |
 | ❌ **L'échelon 2 par d'autres problèmes ouverts** (G21c) | Aucune route. Fermé : conjecture du rang asymptotique et ω = 2 (théorème R : constante seulement) ; le log de Marx est une quantité de routage sans lien avec l'échelon 2 (T2, T3) ; k-Clique est le pire cas des algorithmes de 2026. Positif conditionnel : CSP en s^(O(tw/√log tw)) sur les expanseurs de degré borné (T1, esquisse). Correction : les bornes de 2026 sont en m ; en n elles ont un facteur loglog n. `code/gen21/g21c/notes.md` |
 | ⚠️ **Pièces à D = 3 directions** (G20a) | Aucun signe que D = 3 bat D^(−1/2) au-delà du plus petit cas : exposants 0,40 → 0,50 → 0,65 pour N = 2, 3, 4 (sphère : 0,577 ; plancher : 0,333). La frontière des triplets est nécessaire mais pas suffisante. Théorème G (généralise le théorème C, non relu) : exposant 1/4 seulement au point équilibré. Solveur non fiable à l'intérieur. `code/gen20/g20a/notes.md` |

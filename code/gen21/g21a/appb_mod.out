@@ -1,0 +1,28 @@
+h=3 E0=3 gamma=0: N=3 states, N'=3 labels, budget B=2E0+2h=12; sum_s A_s == h! [x=v][y=u] exactly: True  (0.1s)
+ s0: rr(R_s0) rc(C_s0) [window bounds P(E0+h+s0-1), P(E0+h-s0), capped at N N'] 
+   -6:0,9[0,9]  -5:1,8[1,9]  -4:2,9[2,9]  -3:4,9[4,9]  -2:6,9[7,9]  -1:8,9[9,9]  0:7,9[9,9]  1:9,9[9,9]  2:9,9[9,9]  3:9,6[9,7]  4:9,4[9,4]  5:9,2[9,2]  6:8,1[9,1]  7:9,0[9,0]
+   all exact ranks <= window dimensions: True;  min over s0 of rr*rc = 0 ; N*N' = 9;  balanced max(rr,rc) = 8
+h=3 E0=3 gamma=1: N=3 states, N'=3 labels, budget B=2E0+2h=12; sum_s A_s == h! [x=v][y=u] exactly: True  (0.1s)
+ s0: rr(R_s0) rc(C_s0) [window bounds P(E0+h+s0-1), P(E0+h-s0), capped at N N'] 
+   -6:0,9[0,9]  -5:1,9[1,9]  -4:2,9[2,9]  -3:4,9[4,9]  -2:7,9[7,9]  -1:8,9[9,9]  0:7,9[9,9]  1:9,9[9,9]  2:9,9[9,9]  3:9,7[9,7]  4:9,4[9,4]  5:9,2[9,2]  6:9,1[9,1]  7:9,0[9,0]
+   all exact ranks <= window dimensions: True;  min over s0 of rr*rc = 0 ; N*N' = 9;  balanced max(rr,rc) = 9
+h=3 E0=2 gamma=1: N=3 states, N'=2 labels, budget B=2E0+2h=10; sum_s A_s == h! [x=v][y=u] exactly: True  (0.0s)
+ s0: rr(R_s0) rc(C_s0) [window bounds P(E0+h+s0-1), P(E0+h-s0), capped at N N'] 
+   -5:0,6[0,6]  -4:1,6[1,6]  -3:2,6[2,6]  -2:4,5[4,6]  -1:5,6[6,6]  0:4,5[6,6]  1:6,6[6,6]  2:6,6[6,6]  3:6,4[6,4]  4:6,2[6,2]  5:6,1[6,1]  6:6,0[6,0]
+   all exact ranks <= window dimensions: True;  min over s0 of rr*rc = 0 ; N*N' = 6;  balanced max(rr,rc) = 5
+h=3 E0=4 gamma=2: N=3 states, N'=5 labels, budget B=2E0+2h=14; sum_s A_s == h! [x=v][y=u] exactly: True  (0.2s)
+ s0: rr(R_s0) rc(C_s0) [window bounds P(E0+h+s0-1), P(E0+h-s0), capped at N N'] 
+   -7:0,15[0,15]  -6:1,15[1,15]  -5:2,15[2,15]  -4:4,15[4,15]  -3:7,15[7,15]  -2:12,15[12,15]  -1:15,15[15,15]  0:14,15[15,15]  1:15,15[15,15]  2:15,15[15,15]  3:15,12[15,12]  4:15,7[15,7]  5:15,4[15,4]  6:15,2[15,2]  7:15,1[15,1]  8:15,0[15,0]
+   all exact ranks <= window dimensions: True;  min over s0 of rr*rc = 0 ; N*N' = 15;  balanced max(rr,rc) = 15
+h=3 E0=5 gamma=0: N=3 states, N'=7 labels, budget B=2E0+2h=16; sum_s A_s == h! [x=v][y=u] exactly: True  (0.2s)
+ s0: rr(R_s0) rc(C_s0) [window bounds P(E0+h+s0-1), P(E0+h-s0), capped at N N'] 
+   -8:0,21[0,21]  -7:1,21[1,21]  -6:2,21[2,21]  -5:4,21[4,21]  -4:7,21[7,21]  -3:12,21[12,21]  -2:16,21[19,21]  -1:20,21[21,21]  0:20,21[21,21]  1:21,20[21,21]  2:21,20[21,21]  3:21,19[21,19]  4:21,12[21,12]  5:21,7[21,7]  6:21,4[21,4]  7:21,2[21,2]  8:21,1[21,1]  9:21,0[21,0]
+   all exact ranks <= window dimensions: True;  min over s0 of rr*rc = 0 ; N*N' = 21;  balanced max(rr,rc) = 21
+h=4 E0=4 gamma=1: N=5 states, N'=5 labels, budget B=2E0+2h=16; sum_s A_s == h! [x=v][y=u] exactly: True  (0.5s)
+ s0: rr(R_s0) rc(C_s0) [window bounds P(E0+h+s0-1), P(E0+h-s0), capped at N N'] 
+   -8:0,25[0,25]  -7:1,25[1,25]  -6:2,25[2,25]  -5:4,25[4,25]  -4:7,25[7,25]  -3:12,25[12,25]  -2:18,25[19,25]  -1:23,25[25,25]  0:22,25[25,25]  1:25,25[25,25]  2:25,25[25,25]  3:25,19[25,19]  4:25,12[25,12]  5:25,7[25,7]  6:25,4[25,4]  7:25,2[25,2]  8:25,1[25,1]  9:25,0[25,0]
+   all exact ranks <= window dimensions: True;  min over s0 of rr*rc = 0 ; N*N' = 25;  balanced max(rr,rc) = 25
+h=2 E0=6 gamma=3: N=2 states, N'=11 labels, budget B=2E0+2h=16; sum_s A_s == h! [x=v][y=u] exactly: True  (0.1s)
+ s0: rr(R_s0) rc(C_s0) [window bounds P(E0+h+s0-1), P(E0+h-s0), capped at N N'] 
+   -8:0,22[0,22]  -7:1,22[1,22]  -6:2,22[2,22]  -5:4,22[4,22]  -4:7,22[7,22]  -3:11,22[12,22]  -2:16,22[19,22]  -1:21,22[22,22]  0:21,22[22,22]  1:22,22[22,22]  2:22,21[22,22]  3:22,17[22,19]  4:22,11[22,12]  5:22,7[22,7]  6:22,4[22,4]  7:22,2[22,2]  8:22,1[22,1]  9:22,0[22,0]
+   all exact ranks <= window dimensions: True;  min over s0 of rr*rc = 0 ; N*N' = 22;  balanced max(rr,rc) = 22

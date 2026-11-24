@@ -1,0 +1,15 @@
+g(b) = d/db[b log Z] for one tower of weight D (modes D, D+1, ...), grid b in [0.01, 20]; a local exponent < 1/2 needs g > 0
+  boson D=0.5: max g = -4.086e-04, min g = -3.462e-01, all strictly negative: True
+  boson D=1: max g = -3.916e-08, min g = -2.722e+00, all strictly negative: True
+  boson D=1.5: max g = -2.714e-12, min g = -4.649e+00, all strictly negative: True
+  boson D=2: max g = -1.699e-16, min g = -6.338e+00, all strictly negative: True
+  boson D=3: max g = -5.254e-25, min g = -9.269e+00, all strictly negative: True
+  boson D=5: max g = -3.720e-42, min g = -1.406e+01, all strictly negative: True
+  boson D=8: max g = -5.212e-68, min g = -1.971e+01, all strictly negative: True
+  fermion D=0.5: max g = -4.086e-04, min g = -1.243e-01, all strictly negative: True
+  fermion D=1: max g = -3.916e-08, min g = -3.457e-01, all strictly negative: True
+  fermion D=1.5: max g = -2.714e-12, min g = -6.886e-01, all strictly negative: True
+  fermion D=2: max g = -1.657e-16, min g = -1.029e+00, all strictly negative: True
+  fermion D=3: max g = -5.166e-25, min g = -1.702e+00, all strictly negative: True
+  fermion D=5: max g = -3.683e-42, min g = -3.019e+00, all strictly negative: True
+  fermion D=8: max g = -5.179e-68, min g = -4.923e+00, all strictly negative: True
