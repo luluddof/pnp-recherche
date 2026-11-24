@@ -75,7 +75,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | 🆕 **Fermer l'écart d'un facteur log ℓ (article 2)** | Construction non symétrique en poids qui remplit les bandes, ou preuve qu'il n'en existe pas | Moyenne à difficile | G14d |
 
-| 🔄 Relecture adverse de G14b (contraction de tenseurs) | En cours : G17a (section 1). La relecture de G14a est faite : G17d (section 4). |
+| 🔄 Relecture adverse de G14b (contraction de tenseurs) | En cours : G17a (section 1). La relecture de G14a est faite : G17d (section 4). | G14b |
 | 🆕 **Degré certifié par annulation (article 2)** | Dernière échappatoire ouverte : 1_F comme produit de o(n) facteurs creux (polynômes probabilistes) | Difficile | G14a |
 
 **Nouvelles pistes issues de G17c (24/11) :**
