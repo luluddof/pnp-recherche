@@ -26,6 +26,7 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
+| G12W | 🔄 **Pré-version 3 (brouillon, pas l'article officiel)** | Essai séparé dans `resultats/brouillons/pre-v3/`, à faire vérifier par une autre IA pour la portée ; l'article officiel (version 2) ne change pas | Demande de l'auteur (24/11) |
 | G11a | 🔄 **Relecture adverse du théorème sep(F\*)** | Prépare la version 3 de l'article 1 (qui attend le retour de F. Dias) | G10f |
 | G11b | 🔄 **Article 2, résultat final : compromis (I′) et (II)** | Prouver l'optimalité de √log n dans la classe commutative, ou trouver une construction qui la contredit | G8d |
 | G11c | 🔄 **Article 2 : cas non commutatif** | Étendre le lemme Q_{d+2} et la réduction « rang = mauvaises arêtes » au cas général | G6d, G10b |
