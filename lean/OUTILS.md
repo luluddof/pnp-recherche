@@ -52,6 +52,10 @@ cd lean && lake exe cache get && lake build PnpLean.Outils
 | `df_flattening_min` | Si une matrice 2^W × 2^W non singulière est une somme de N termes, chacun produit sur les groupes d'une direction de tables qui lisent seulement les bits de leur groupe, alors 2^\|W\| ≤ Σ_k 2^(c_k), avec c = Σ_g min(e1(g), e2(g)). | Tout corps |
 | `det_ne_zero_of_sub_one_mem` | Une matrice ≡ 1 modulo un idéal propre a un déterminant non nul. | Tout anneau commutatif |
 
+| `intercalate_key_lemma` | Coloriage de [N]² dont chaque classe est une permutation partielle, et dont chaque intercalate (sous-matrice 2×2 dont une diagonale est d'une seule couleur) a l'autre diagonale d'une seule couleur, de l'autre palette. Alors une classe de taille h force au moins h(h−1)/2 couleurs utilisées de l'autre palette. | — |
+| `intercalate_counting` | Dans ce cadre : N² ≤ q·g*(p) + p·g*(q), où p, q sont les nombres de couleurs utilisées de chaque palette et g*(t) le plus grand g ≤ N avec g(g−1)/2 ≤ t. | — |
+| `intercalate_tradeoff` | Si q ≤ p : N² ≤ 2·p·(√(2q) + 1). Dans le « modèle monomial » du compromis de l'échange, c'est une borne au-delà de la droite p·q ≥ (2/9)N². | Forme réelle |
+
 **Antériorité de `swap_rank_tradeoff` :** l'objet est le problème 12 de Naslund (arXiv:1701.04475) ; le cas k = 1 est noté par Karam (arXiv:2310.11356). Le résultat est probablement du niveau « folklore » ; la preuve vérifiée par machine semble nouvelle.
 
 ## Non inclus, et pourquoi

@@ -7,6 +7,7 @@ import PnpLean.Article2.MultiPoint
 import PnpLean.Article2.OutputLevel
 import PnpLean.Article3.DFRank
 import PnpLean.Outils.SwapRank
+import PnpLean.Outils.Intercalate
 
 /-!
 # PnpLean.Outils — reusable tools
@@ -118,6 +119,19 @@ alias df_flattening_min := DFRank.df_flattening_min
 /-- **A matrix congruent to `1` modulo a proper ideal has nonzero determinant.** -/
 alias det_ne_zero_of_sub_one_mem := DFRank.det_ne_zero_of_sub_one_mem
 
+/-- **Intercalate matrices with two palettes (key lemma).**  A colouring of `[N]²` whose colour
+classes are partial permutations and in which every intercalate is bichromatic (palette `true` on
+one diagonal, `false` on the other): a class of size `h` forces at least `h(h-1)/2` used colours of
+the other palette. -/
+alias intercalate_key_lemma := Intercalate.key_lemma
+
+/-- **Counting:** `N² ≤ q·g*(p) + p·g*(q)` with `p`, `q` the numbers of used colours of each
+palette and `g*(t)` the largest `g ≤ N` with `g(g-1)/2 ≤ t`. -/
+alias intercalate_counting := Intercalate.counting
+
+/-- **Trade-off (real form):** if `q ≤ p` then `N² ≤ 2·p·(√(2q) + 1)`. -/
+alias intercalate_tradeoff := Intercalate.tradeoff_real
+
 end PnpOutils
 
 #print axioms PnpOutils.pow_dvd_det_of_nullity
@@ -137,3 +151,6 @@ end PnpOutils
 #print axioms PnpOutils.swap_rank_product
 #print axioms PnpOutils.df_flattening_min
 #print axioms PnpOutils.det_ne_zero_of_sub_one_mem
+#print axioms PnpOutils.intercalate_key_lemma
+#print axioms PnpOutils.intercalate_counting
+#print axioms PnpOutils.intercalate_tradeoff

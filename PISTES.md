@@ -45,7 +45,6 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
 | G23a | 🔄 **Ansatz de groupe dans le modèle monomial** | Le point (8,8) à N = 8 est invariant par Q8 et atteint la borne du modèle. Encodage par orbites (SAT) pour les groupes d'ordre 16, 27, 32, 64 ; une famille sous N^√2 serait un nouveau record pour le problème général. | G22b-bis |
-| G23e | 🔄 **Lean : lemme clé et comptage du modèle monomial** | Énoncés de G23b (coloriage, palette, intercalates ; C(h,2) ≤ couleurs de l'autre palette ; N² ≤ q·g*(p) + p·g*(q)). Combinatoire finie. | G23b |
 | G23d | 🔄 **Prouver la loi de distance pour q = 1** | Prouver c(N;1,1) = 4 pour tout N, puis d²(N;p,1) = N² − m² − 2j ; premier outil prouvé au-delà des méthodes de rang. | G22d |
 
 Dossiers de travail de la génération 18 : `scratchpad/gen18/g18a` à `g18i`.
@@ -180,6 +179,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Résultat |
 |---|---|
+| ✅ **Lean : borne du modèle monomial** (G23e) | `lean/PnpLean/Outils/Intercalate.lean` : lemme clé, comptage, compromis réel. Niveau L (modèle ST). |
 | ❌ **Creux des algèbres de sommets, vrai rang** (G23c) | Aucune valeur sous 2√2 avec le vrai rang. Règle de sélection (ξ intérieur) et dichotomie (ξ sur le bord) prouvées sur papier : elles tuent les creux pour toute algèbre fixe. Reste ouvert : constructions à plusieurs canaux dans des familles de puissances tensorielles (écart 2,799 – 3,030). `code/gen23/g23c/notes.md` |
 | ✅ **Relecture du modèle monomial** (G23b) | Tout confirmé (P+) ; hypothèse inutile retirée ; énumérations exhaustives sans échec ; les optimums exacts à N = 5 sont hors du modèle. `code/gen23/g23b/notes.md` |
 | ✅ **Modèle monomial** (G22b, G22b-bis) | Correspondance exacte avec les matrices d'intercalates de HWY (formules entières de sommes de carrés). **Borne dans le modèle au-delà de la droite : p²·q ≳ N⁴/8 ; point équilibré ≥ N^(4/3)/2** (papier, non relu). Meilleur connu dans le modèle : exposant 2. Le modèle n'est pas exclu pour battre √2 (4/3 < √2). `code/gen22/g22b/notes.md` |
