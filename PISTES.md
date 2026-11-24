@@ -22,10 +22,16 @@ Légende : 🔄 en cours · 🆕 pas encore explorée · ⏸️ en attente · �
 
 Priorité recommandée : pistes A et B, puis Q1\*.
 
-## 1. En cours (génération 9)
+## 1. En cours (génération 10)
 
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
+| G10a | 🔄 **Relecture adverse de G8a et G7b** | Théorème B2, prop. S, lemme H ; modèle DP corrigé | G8a, G7b |
+| G10b | 🔄 **Relecture + Lean des lemmes « erreurs par point »** | Lemme de G6d, lemme Q_{d+2} de G8d (base d'un article 2) | G6d, G8d |
+| G10c | 🔄 **Relecture + nouveauté de G9e** | Steiner, plus long chemin : preuve et articles voisins | G9e |
+| G10d | 🔄 **Relecture de G9c** | Théorèmes A et B sur le comptage des ensembles indépendants | G9c |
+| G10e | 🔄 **Lean : lemme 2 et identité de moyenne** | Pour que le théorème B ne dépende plus d'une hypothèse | G9L |
+| G10f | 🔄 **sep(F\*) et points non relus de l'article** | Note sur le théorème 7.1(ii), annexe A, bibliographie ; borne de séparateur pour F\* | G8R, G9W |
 
 **Consigne de l'utilisateur (24/11) :** dès que les générations 8 et 9 sont terminées, lancer une **génération 10** sur les pistes « pas encore explorées » (section 2) et « en attente » (section 3).
 
@@ -78,6 +84,7 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | Piste | Résultat |
 |---|---|
+| ✅ **Article en français** (G9F) | `resultats/article/main_fr.tex` + PDF (28 pages) ; traduction fidèle, contrôle automatique des comptes (théorèmes, équations, références) |
 | ✅ **Article, version 2** (G9W) | `resultats/article/` : 26 pages, LaTeX + PDF ; les 10 corrections obligatoires du rapport G8R sont traitées ; hypothèse M ≥ n supprimée sur papier (Lean garde n ≤ M) |
 | ✅ Limits §9, modèle produit (G6a) | Réponse négative, 2^Ω(n^(2/3)) ; confirmée par relecture adverse ; note rédigée |
 | ✅ Auteur humain de la note | **Lucas Requena**, étudiant en informatique (« Computer Science student »), contact : l.requena@outlook.fr (avec une mention claire du travail fait par les agents IA) |
