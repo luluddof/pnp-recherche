@@ -1,0 +1,96 @@
+== Part 1: literal DP-type model. Trivial design (P_o = e_v, full measurement, q_t = 0)
+  n=12 |X|=37 q_t=0 |Z_t|=0  s=4 g=3 rho=12  w_t=tw(I_t)=2  literal exponent max(s,w)=4  ceil(sqrt n)=4  | tw(Pr F): exact=5 mmd+lb=5; Thm 8.1 exponent >= 0.73  | reading-weighted W_t=12 (>= tw(PrF)+1-s: True)
+  n=16 |X|=49 q_t=0 |Z_t|=0  s=4 g=4 rho=16  w_t=tw(I_t)=3  literal exponent max(s,w)=4  ceil(sqrt n)=4  | tw(Pr F): exact=6 mmd+lb=5; Thm 8.1 exponent >= 0.73  | reading-weighted W_t=16 (>= tw(PrF)+1-s: True)
+  n=20 |X|=61 q_t=0 |Z_t|=0  s=5 g=4 rho=20  w_t=tw(I_t)=3  literal exponent max(s,w)=5  ceil(sqrt n)=5  | tw(Pr F): exact=None mmd+lb=5; Thm 8.1 exponent >= 0.73  | reading-weighted W_t=20 (>= tw(PrF)+1-s: True)
+  n=24 |X|=73 q_t=0 |Z_t|=0  s=5 g=5 rho=24  w_t=tw(I_t)=4  literal exponent max(s,w)=5  ceil(sqrt n)=5  | tw(Pr F): exact=None mmd+lb=5; Thm 8.1 exponent >= 0.73  | reading-weighted W_t=24 (>= tw(PrF)+1-s: True)
+  n=30 |X|=91 q_t=0 |Z_t|=0  s=6 g=5 rho=30  w_t=tw(I_t)=4  literal exponent max(s,w)=6  ceil(sqrt n)=6  | tw(Pr F): exact=None mmd+lb=6; Thm 8.1 exponent >= 0.87  | reading-weighted W_t=30 (>= tw(PrF)+1-s: True)
+
+== Part 2: Theorem D (single point) and Lemma E / Theorem F (per-group, per-bag) on G6a designs
+  -- cut-measure, variable-uniform: n=24 |X|=8 R=2 q=18: sum|Z_t|=144<=MR=144; sum E N_t=4.51; sum(|Z|+EN)<= (M+n)R=192; good points (|Z|+EN<2(q+1)): [1, 2, 3, 4, 5, 6, 7, 8]; min Lemma-E slack=1.883; nullity sums=[48, 48, 48]<=nR=48; mmd+ lb tw(PrF)=5
+     measured groups: non-surplus 18/31, V_h/a_h over non-surplus measured: min=0.333 mean=0.401
+     t=1 |Z|=18 E N=0.26 rho=12 w_t=3 W_t=12 W^a_t=24 s=6  Gamma_t(c0/2-weighted)=0.50  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.75
+     t=2 |Z|=18 E N=0.56 rho=13 w_t=3 W_t=13 W^a_t=24 s=6  Gamma_t(c0/2-weighted)=0.50  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.75
+     t=3 |Z|=15 E N=0.06 rho=16 w_t=3 W_t=16 W^a_t=24 s=6  Gamma_t(c0/2-weighted)=0.31  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.50
+     t=4 |Z|=9 E N=0.03 rho=18 w_t=3 W_t=18 W^a_t=24 s=6  Gamma_t(c0/2-weighted)=0.32  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.50
+     t=5 |Z|=24 E N=0.65 rho=10 w_t=2 W_t=9 W^a_t=18 s=6  Gamma_t(c0/2-weighted)=0.34  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.50
+     t=6 |Z|=21 E N=0.33 rho=16 w_t=3 W_t=16 W^a_t=24 s=6  Gamma_t(c0/2-weighted)=0.53  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.75
+     t=7 |Z|=12 E N=0.01 rho=17 w_t=3 W_t=17 W^a_t=24 s=6  Gamma_t(c0/2-weighted)=0.35  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.50
+     t=8 |Z|=27 E N=2.61 rho=13 w_t=3 W_t=13 W^a_t=18 s=6  Gamma_t(c0/2-weighted)=0.16  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.33
+  -- cut-measure, clause-dependent: n=24 |X|=8 R=2 q=18: sum|Z_t|=144<=MR=144; sum E N_t=1.08; sum(|Z|+EN)<= (M+n)R=192; good points (|Z|+EN<2(q+1)): [1, 2, 3, 4, 5, 6, 7, 8]; min Lemma-E slack=1.392; nullity sums=[48, 48, 48]<=nR=48; mmd+ lb tw(PrF)=5
+     measured groups: non-surplus 20/32, V_h/a_h over non-surplus measured: min=0.185 mean=0.387
+     t=1 |Z|=22 E N=0.63 rho=11 w_t=2 W_t=10 W^a_t=18 s=6  Gamma_t(c0/2-weighted)=0.50  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.75
+     t=2 |Z|=17 E N=0.08 rho=15 w_t=3 W_t=15 W^a_t=24 s=6  Gamma_t(c0/2-weighted)=0.52  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.75
+     t=3 |Z|=20 E N=0.12 rho=12 w_t=3 W_t=12 W^a_t=24 s=6  Gamma_t(c0/2-weighted)=0.11  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.25
+     t=4 |Z|=17 E N=0.03 rho=16 w_t=3 W_t=16 W^a_t=24 s=6  Gamma_t(c0/2-weighted)=0.34  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.50
+     t=5 |Z|=16 E N=0.06 rho=14 w_t=3 W_t=14 W^a_t=24 s=6  Gamma_t(c0/2-weighted)=0.51  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.75
+     t=6 |Z|=12 E N=0.05 rho=15 w_t=2 W_t=13 W^a_t=18 s=6  Gamma_t(c0/2-weighted)=0.30  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.75
+     t=7 |Z|=21 E N=0.08 rho=14 w_t=3 W_t=14 W^a_t=24 s=6  Gamma_t(c0/2-weighted)=0.55  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.75
+     t=8 |Z|=19 E N=0.04 rho=12 w_t=3 W_t=12 W^a_t=24 s=6  Gamma_t(c0/2-weighted)=0.29  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.50
+  -- global-sum: n=24 |X|=8 R=2 q=18: sum|Z_t|=0<=MR=144; sum E N_t=0.92; sum(|Z|+EN)<= (M+n)R=192; good points (|Z|+EN<2(q+1)): [1, 2, 3, 4, 5, 6, 7, 8]; min Lemma-E slack=2.367; nullity sums=[40, 40, 40]<=nR=48; mmd+ lb tw(PrF)=5
+     measured groups: non-surplus 18/32, V_h/a_h over non-surplus measured: min=0.222 mean=0.374
+     t=1 |Z|=0 E N=0.00 rho=21 w_t=3 W_t=21 W^a_t=24 s=6  Gamma_t(c0/2-weighted)=0.51  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.75
+     t=2 |Z|=0 E N=0.09 rho=14 w_t=3 W_t=14 W^a_t=24 s=6  Gamma_t(c0/2-weighted)=0.32  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.50
+     t=3 |Z|=0 E N=0.00 rho=17 w_t=3 W_t=17 W^a_t=24 s=6  Gamma_t(c0/2-weighted)=0.35  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.50
+     t=4 |Z|=0 E N=0.00 rho=19 w_t=3 W_t=19 W^a_t=24 s=6  Gamma_t(c0/2-weighted)=0.35  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.50
+     t=5 |Z|=0 E N=0.51 rho=14 w_t=3 W_t=14 W^a_t=24 s=6  Gamma_t(c0/2-weighted)=0.29  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.50
+     t=6 |Z|=0 E N=0.13 rho=13 w_t=3 W_t=13 W^a_t=24 s=6  Gamma_t(c0/2-weighted)=0.30  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.50
+     t=7 |Z|=0 E N=0.15 rho=14 w_t=3 W_t=14 W^a_t=24 s=6  Gamma_t(c0/2-weighted)=0.48  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.75
+     t=8 |Z|=0 E N=0.02 rho=15 w_t=3 W_t=15 W^a_t=24 s=6  Gamma_t(c0/2-weighted)=0.29  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.50
+  -- random dense: n=24 |X|=8 R=2 q=18: sum|Z_t|=3<=MR=144; sum E N_t=0.00; sum(|Z|+EN)<= (M+n)R=192; good points (|Z|+EN<2(q+1)): [1, 2, 3, 4, 5, 6, 7, 8]; min Lemma-E slack=5.816; nullity sums=[0, 0, 0]<=nR=48; mmd+ lb tw(PrF)=5
+     measured groups: non-surplus 18/32, V_h/a_h over non-surplus measured: min=0.185 mean=0.377
+     t=1 |Z|=3 E N=0.00 rho=24 w_t=3 W_t=24 W^a_t=24 s=6  Gamma_t(c0/2-weighted)=0.26  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.50
+     t=2 |Z|=0 E N=0.00 rho=24 w_t=3 W_t=24 W^a_t=24 s=6  Gamma_t(c0/2-weighted)=0.30  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.50
+     t=3 |Z|=0 E N=0.00 rho=24 w_t=3 W_t=24 W^a_t=24 s=6  Gamma_t(c0/2-weighted)=0.71  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=1.00
+     t=4 |Z|=0 E N=0.00 rho=24 w_t=3 W_t=24 W^a_t=24 s=6  Gamma_t(c0/2-weighted)=0.33  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.50
+     t=5 |Z|=0 E N=0.00 rho=24 w_t=3 W_t=24 W^a_t=24 s=6  Gamma_t(c0/2-weighted)=0.30  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.50
+     t=6 |Z|=0 E N=0.00 rho=24 w_t=3 W_t=24 W^a_t=24 s=6  Gamma_t(c0/2-weighted)=0.33  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.50
+     t=7 |Z|=0 E N=0.00 rho=24 w_t=3 W_t=24 W^a_t=24 s=6  Gamma_t(c0/2-weighted)=0.34  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.50
+     t=8 |Z|=0 E N=0.00 rho=24 w_t=3 W_t=24 W^a_t=24 s=6  Gamma_t(c0/2-weighted)=0.34  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.50
+  -- cut-measure, variable-uniform: n=30 |X|=10 R=2 q=18: sum|Z_t|=180<=MR=180; sum E N_t=4.99; sum(|Z|+EN)<= (M+n)R=240; good points (|Z|+EN<2(q+1)): [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; min Lemma-E slack=2.827; nullity sums=[60, 60, 60]<=nR=60; mmd+ lb tw(PrF)=6
+     measured groups: non-surplus 29/50, V_h/a_h over non-surplus measured: min=0.185 mean=0.409
+     t=1 |Z|=15 E N=0.00 rho=22 w_t=4 W_t=22 W^a_t=30 s=6  Gamma_t(c0/2-weighted)=0.51  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.60
+     t=2 |Z|=12 E N=0.05 rho=24 w_t=4 W_t=24 W^a_t=30 s=6  Gamma_t(c0/2-weighted)=0.51  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.60
+     t=3 |Z|=24 E N=0.21 rho=17 w_t=3 W_t=14 W^a_t=24 s=6  Gamma_t(c0/2-weighted)=0.30  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.40
+     t=4 |Z|=12 E N=0.00 rho=24 w_t=4 W_t=24 W^a_t=30 s=6  Gamma_t(c0/2-weighted)=0.73  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.80
+     t=5 |Z|=24 E N=0.57 rho=17 w_t=4 W_t=17 W^a_t=30 s=6  Gamma_t(c0/2-weighted)=0.51  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.60
+     t=6 |Z|=15 E N=0.05 rho=21 w_t=4 W_t=21 W^a_t=30 s=6  Gamma_t(c0/2-weighted)=0.52  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.60
+     t=7 |Z|=33 E N=2.05 rho=16 w_t=3 W_t=13 W^a_t=24 s=6  Gamma_t(c0/2-weighted)=0.32  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.40
+     t=8 |Z|=21 E N=2.02 rho=19 w_t=3 W_t=17 W^a_t=24 s=6  Gamma_t(c0/2-weighted)=0.34  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.60
+     t=9 |Z|=15 E N=0.02 rho=22 w_t=4 W_t=22 W^a_t=30 s=6  Gamma_t(c0/2-weighted)=0.70  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.80
+     t=10 |Z|=9 E N=0.02 rho=23 w_t=4 W_t=23 W^a_t=30 s=6  Gamma_t(c0/2-weighted)=0.31  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.40
+  -- cut-measure, clause-dependent: n=30 |X|=10 R=2 q=18: sum|Z_t|=180<=MR=180; sum E N_t=0.64; sum(|Z|+EN)<= (M+n)R=240; good points (|Z|+EN<2(q+1)): [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; min Lemma-E slack=1.893; nullity sums=[60, 60, 60]<=nR=60; mmd+ lb tw(PrF)=6
+     measured groups: non-surplus 33/50, V_h/a_h over non-surplus measured: min=0.111 mean=0.429
+     t=1 |Z|=22 E N=0.10 rho=18 w_t=4 W_t=18 W^a_t=30 s=6  Gamma_t(c0/2-weighted)=0.71  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.80
+     t=2 |Z|=16 E N=0.00 rho=25 w_t=4 W_t=25 W^a_t=30 s=6  Gamma_t(c0/2-weighted)=0.75  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.80
+     t=3 |Z|=16 E N=0.02 rho=21 w_t=4 W_t=21 W^a_t=30 s=6  Gamma_t(c0/2-weighted)=0.70  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.80
+     t=4 |Z|=21 E N=0.31 rho=20 w_t=4 W_t=20 W^a_t=30 s=6  Gamma_t(c0/2-weighted)=0.43  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.40
+     t=5 |Z|=17 E N=0.02 rho=24 w_t=4 W_t=24 W^a_t=30 s=6  Gamma_t(c0/2-weighted)=0.53  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.60
+     t=6 |Z|=19 E N=0.09 rho=20 w_t=4 W_t=20 W^a_t=30 s=6  Gamma_t(c0/2-weighted)=0.52  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.60
+     t=7 |Z|=17 E N=0.00 rho=25 w_t=4 W_t=25 W^a_t=30 s=6  Gamma_t(c0/2-weighted)=0.53  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.60
+     t=8 |Z|=22 E N=0.03 rho=21 w_t=4 W_t=21 W^a_t=30 s=6  Gamma_t(c0/2-weighted)=0.51  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.60
+     t=9 |Z|=13 E N=0.00 rho=24 w_t=4 W_t=24 W^a_t=30 s=6  Gamma_t(c0/2-weighted)=0.47  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.60
+     t=10 |Z|=17 E N=0.06 rho=19 w_t=4 W_t=19 W^a_t=30 s=6  Gamma_t(c0/2-weighted)=0.51  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.60
+  -- global-sum: n=30 |X|=10 R=2 q=18: sum|Z_t|=0<=MR=180; sum E N_t=0.32; sum(|Z|+EN)<= (M+n)R=240; good points (|Z|+EN<2(q+1)): [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; min Lemma-E slack=2.059; nullity sums=[50, 50, 50]<=nR=60; mmd+ lb tw(PrF)=6
+     measured groups: non-surplus 34/50, V_h/a_h over non-surplus measured: min=0.259 mean=0.435
+     t=1 |Z|=0 E N=0.00 rho=28 w_t=4 W_t=28 W^a_t=30 s=6  Gamma_t(c0/2-weighted)=0.50  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.60
+     t=2 |Z|=0 E N=0.01 rho=23 w_t=4 W_t=23 W^a_t=30 s=6  Gamma_t(c0/2-weighted)=0.69  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.80
+     t=3 |Z|=0 E N=0.01 rho=26 w_t=4 W_t=26 W^a_t=30 s=6  Gamma_t(c0/2-weighted)=0.53  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.60
+     t=4 |Z|=0 E N=0.02 rho=25 w_t=4 W_t=25 W^a_t=30 s=6  Gamma_t(c0/2-weighted)=0.74  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.80
+     t=5 |Z|=0 E N=0.24 rho=22 w_t=4 W_t=22 W^a_t=30 s=6  Gamma_t(c0/2-weighted)=0.71  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.80
+     t=6 |Z|=0 E N=0.00 rho=27 w_t=4 W_t=27 W^a_t=30 s=6  Gamma_t(c0/2-weighted)=0.73  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.80
+     t=7 |Z|=0 E N=0.00 rho=26 w_t=4 W_t=26 W^a_t=30 s=6  Gamma_t(c0/2-weighted)=0.52  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.60
+     t=8 |Z|=0 E N=0.00 rho=25 w_t=4 W_t=25 W^a_t=30 s=6  Gamma_t(c0/2-weighted)=0.49  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.60
+     t=9 |Z|=0 E N=0.02 rho=21 w_t=4 W_t=21 W^a_t=30 s=6  Gamma_t(c0/2-weighted)=0.50  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.60
+     t=10 |Z|=0 E N=0.00 rho=24 w_t=4 W_t=24 W^a_t=30 s=6  Gamma_t(c0/2-weighted)=0.50  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.60
+  -- random dense: n=30 |X|=10 R=2 q=18: sum|Z_t|=4<=MR=180; sum E N_t=0.00; sum(|Z|+EN)<= (M+n)R=240; good points (|Z|+EN<2(q+1)): [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; min Lemma-E slack=5.796; nullity sums=[0, 0, 0]<=nR=60; mmd+ lb tw(PrF)=6
+     measured groups: non-surplus 31/50, V_h/a_h over non-surplus measured: min=0.259 mean=0.452
+     t=1 |Z|=4 E N=0.00 rho=30 w_t=4 W_t=30 W^a_t=30 s=6  Gamma_t(c0/2-weighted)=0.53  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.60
+     t=2 |Z|=0 E N=0.00 rho=30 w_t=4 W_t=30 W^a_t=30 s=6  Gamma_t(c0/2-weighted)=0.75  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.80
+     t=3 |Z|=0 E N=0.00 rho=30 w_t=4 W_t=30 W^a_t=30 s=6  Gamma_t(c0/2-weighted)=0.72  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.80
+     t=4 |Z|=0 E N=0.00 rho=30 w_t=4 W_t=30 W^a_t=30 s=6  Gamma_t(c0/2-weighted)=0.32  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.40
+     t=5 |Z|=0 E N=0.00 rho=30 w_t=4 W_t=30 W^a_t=30 s=6  Gamma_t(c0/2-weighted)=0.56  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.60
+     t=6 |Z|=0 E N=0.00 rho=30 w_t=4 W_t=30 W^a_t=30 s=6  Gamma_t(c0/2-weighted)=0.31  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.40
+     t=7 |Z|=0 E N=0.00 rho=30 w_t=4 W_t=30 W^a_t=30 s=6  Gamma_t(c0/2-weighted)=0.55  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.60
+     t=8 |Z|=0 E N=0.00 rho=30 w_t=4 W_t=30 W^a_t=30 s=6  Gamma_t(c0/2-weighted)=0.51  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.60
+     t=9 |Z|=0 E N=0.00 rho=30 w_t=4 W_t=30 W^a_t=30 s=6  Gamma_t(c0/2-weighted)=0.53  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.60
+     t=10 |Z|=0 E N=0.00 rho=30 w_t=4 W_t=30 W^a_t=30 s=6  Gamma_t(c0/2-weighted)=0.71  W_t>=Gamma_t-EN ok; frac vars in (ns, V>=.15a) measured groups=0.80
