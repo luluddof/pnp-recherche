@@ -41,6 +41,11 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
 | G20a | 🔄 **Pièces à D = 3 directions au-delà du plus petit cas** | La loi « gain = D^(−1/2) » est-elle battue pour D = 3 à N = 3, 4 ? Compromis de rang à trois coupes ; frontière des triplets réalisables ; solveur étalonné. | G18h, G18g, G19c |
+| G21a | 🔄 **Modules à espace fondamental dégénéré** (modèle Fable) | Construire l'objet qui ferait baisser ρ sous 1/√2 : secteur de Ramond, modules tordus, modes zéro ; profil affine avec ordonnée à l'origine (cible ρ = 2/3 ou mieux). Ou un théorème d'obstruction. | G20c, G18h |
+| G21b | 🔄 **Caractéristique p** | Pour la décision, on peut travailler sur F_p. La frontière sur F_2, F_3 est-elle meilleure que sur ℚ ? Fock p-restreint, Frobenius, non-rigidité sur les corps finis (Dvir-Edelman). | G9b, G18b, G20c |
+| G21c | 🔄 **L'échelon 2 par d'autres problèmes ouverts** | k-Clique en N^(O(k/log k)) ; Marx « Can you beat treewidth? » ; conjecture du rang asymptotique de Strassen et ω = 2 (Björklund-Kaski, Pratt) ; théorèmes conditionnels exacts. | nouvelle |
+| G21d | 🔄 **Équation au-delà des méthodes de rang** | À N = 3, trouver un témoin algébrique que l'échange n'est pas dans le joint J(2,2) ; reformulation symétrique à trois aplatissements ; se généralise-t-il ? | G20d |
+| G21e | 🔄 **Relecture adverse du théorème B (barrière) et de la borne ρ ≥ 2/3** | Deux affirmations non relues qui dirigent maintenant le projet. | G20d, G20c |
 
 Dossiers de travail de la génération 18 : `scratchpad/gen18/g18a` à `g18i`.
 
