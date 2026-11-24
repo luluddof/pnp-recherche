@@ -48,12 +48,13 @@ Pas encore d'article. Sources : `code/gen6/g6d/`, `code/gen7/g7a/`, `code/gen8/g
 |---|---|---|
 | `PerPoint.lean` | `sum_nullity_le_of_det_ne_zero`, `sum_rank_ge`, `sum_rank_error_ge`, **`g6d_determinant_lemma`** | Lemme du déterminant par bloc : pour J de degré ≤ d avec J(0) = X^{⊗ℓ}, et J(t) = K_t + E_t avec K_t « faiblement agréable » dans une direction de S : Σ_{t∈T} rang(E_t) ≥ (\|T\| − d)·2^(ℓ−\|S\|). Vaut dans le cas général (non commutatif). |
 | `QdPlus2.lean` | `two_splittings`, `four_le_card_bad`, **`qd2_lemma`** | Lemme Q_{d+2} : sur le cube de dimension d+2, avec des polynômes de sommet de degré ≤ d valant 1 en 0 et des points τ distincts non nuls, il y a au moins 4 mauvaises arêtes. |
+| `SqrtLog.lean` | **`sum_rank_ge_N`**, `core`, `N_eq` | **Théorème principal (candidat) de l'article 2 :** pour J de degré ≤ d avec J(0) = X^{⊗ℓ}, des points τ_k distincts non nuls (un par direction) et J(τ_k) = K_k + E_k avec K_k[x,y] = 0 si x_k ≠ y_k : si 2m + d + 1 ≤ ℓ, alors N(ℓ, m) ≤ Σ_k rang(E_k), avec N(ℓ, m) = Σ_{j≤m} Σ_{i≤j} C(ℓ, i). Sur ℚ. |
 
-Cible : `lake build PnpLean.Article2.QdPlus2`. `PerPoint.lean` importe `PnpLean.Article1.WitnessDet` (même argument de déterminant).
+Cibles : `lake build PnpLean.Article2.SqrtLog` et `PnpLean.Article2.QdPlus2`. `PerPoint.lean` importe `PnpLean.Article1.WitnessDet` (même argument de déterminant).
 
 ### Non formalisé
 
-La réduction de la classe commutative (rang E_k = nombre de mauvaises arêtes), les corollaires (a) et (b) de G6d, la borne ρ_moy ≥ 2^(−d)/(d+2), la restriction du lemme Q_{d+2} à un sous-cube d'un cube plus grand, et le lien avec l'algorithme d'OpenAI lui-même.
+Les conséquences asymptotiques du théorème principal (seuil sur d, temps de calcul dans le modèle de coût), la version à plusieurs points par direction, la réduction de la classe commutative (rang E_k = nombre de mauvaises arêtes), les corollaires (a) et (b) de G6d, la borne ρ_moy ≥ 2^(−d)/(d+2), la restriction du lemme Q_{d+2} à un sous-cube d'un cube plus grand, et le lien avec l'algorithme d'OpenAI lui-même.
 
 ---
 
