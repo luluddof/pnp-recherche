@@ -163,6 +163,7 @@ Ce fichier liste **tout ce qui peut entrer dans un article**, présent ou futur.
 | Pièces adaptées à l'instance ; mesures d'expansion des 3-CNF aléatoires | Résultat négatif attendu. La proposition R (le croisement restreint reste un échange complet) est une remarque utile pour la portée de l'article 3 ou de la note B2. | `code/gen20/g20e/notes.md` |
 | Valeurs exactes de l'annexe B de Claude à N fini (triviale pour N ≤ 256 ; exposant < 1,6 seulement vers N ≈ 6·10¹¹) | Fait exact et utile comme remarque sur la portée pratique de l'algorithme de Claude ; pas un résultat seul. Peut entrer dans une section de la note B2. | `code/gen20/g20b/notes.md` |
 | Théorème abstrait de l'annexe B pour les modules, et neuf familles de modules (Fock, tordus, Neveu-Schwarz, Ramond, symplectiques) | Résultat négatif : tous au-dessus du cercle. Le théorème abstrait (axiomes A1 à A4) et la pénalité d'espace fondamental sont propres, mais reposent sur des faits standards non refaits. Le contrôle exact « Ramond n = 8 = identité des huit carrés » est une remarque. | `code/gen21/g21a/notes.md` |
+| Caractéristique p : la récursion de Claude sur F_{p^k} pour la décision ; annexe B p-restreinte ; Frobenius ; Dvir-Edelman | Résultat négatif : même cercle. La réparation de l'annexe B en caractéristique p (base duale modulo p, d = 1) est propre et vérifiée sur quatre cas, mais elle ne donne aucun gain : une remarque. | `code/gen21/g21b/notes.md` |
 | Question E1 (termes intriqués) | Non tranchée en général. La partie prouvée est dans B2. Le plus petit cas ouvert (N = 3) ne montre aucun gain, mais c'est un résultat numérique, pas une preuve. | `code/gen18/g18f/notes.md`, `code/gen19/g19c/notes.md` |
 | Corollaire sur le problème de Hurwitz (borne N^√2) | **Déjà publié** par d'autres (Siemaszko, Debnath). | `JOURNAL.md`, résultat G4a |
 | Conséquence pour l'arbre de Steiner | **Déjà revendiquée** par Wu et Wang (arXiv:2611.02548). | `code/gen9/g9e/` |
@@ -175,6 +176,7 @@ Ce fichier liste **tout ce qui peut entrer dans un article**, présent ou futur.
 | Date | Changement |
 |---|---|
 | 24/11/2026 | Création du registre après la génération 18. Articles 1, 2, 3 ; candidats B1 à B4. |
+| 24/11/2026 | G21b : résultat négatif (caractéristique p), ajouté à la partie C. |
 | 24/11/2026 | G21a : résultat négatif (modules), ajouté à la partie C. |
 | 24/11/2026 | G21e : la barrière du candidat B2 passe au niveau P+ ; la borne 2/3 de G20c est limitée au cas concave. |
 | 24/11/2026 | G21c : nouveau candidat B5 (largeur arborescente après 2026 ; limites de la conjecture du rang asymptotique), classé « remarques » pour le moment. |

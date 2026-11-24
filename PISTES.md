@@ -44,7 +44,6 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
-| G21b | 🔄 **Caractéristique p** | Pour la décision, on peut travailler sur F_p. La frontière sur F_2, F_3 est-elle meilleure que sur ℚ ? Fock p-restreint, Frobenius, non-rigidité sur les corps finis (Dvir-Edelman). | G9b, G18b, G20c |
 | G21d | 🔄 **Équation au-delà des méthodes de rang** | À N = 3, trouver un témoin algébrique que l'échange n'est pas dans le joint J(2,2) ; reformulation symétrique à trois aplatissements ; se généralise-t-il ? | G20d |
 
 Dossiers de travail de la génération 18 : `scratchpad/gen18/g18a` à `g18i`.
@@ -151,6 +150,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Résultat |
 |---|---|
+| ❌ **Caractéristique p** (G21b) | Rien de nouveau. La récursion de Claude tourne bien sur F_{p^k} pour la décision (deux étapes réparées), mais l'annexe B sur F_p donne le même cercle (le facteur 1 − 1/p se simplifie). Frobenius : aucun gain. Dvir-Edelman ne s'applique pas au croisement. Aucun petit cas décidé n'est meilleur sur F_p. Seul reste : (3,3) à N = 4 sur GF(2), non décidé. `code/gen21/g21b/notes.md` |
 | ❌ **Modules à espace fondamental dégénéré** (G21a, modèle Fable) | Aucune construction. Un espace fondamental est une perte pure (ρ ≥ 1/2 + L_M(0)/(4λ)). Neuf candidats (Fock, tordus, NS, Ramond, symplectiques), tous au-dessus du cercle ; Ramond : 1,4279 contre 1,4142. Le lemme de localité s'étend aux modules ; c'est le profil qui échoue. Un plateau demande un module cyclique aussi fort que P(N) = N^(1+o(1)). Précision : le temps est 2^(O(m/(log m)^α′)) avec α′ = log₂(1/ρ). `code/gen21/g21a/notes.md` |
 | ✅ **Relecture du théorème B et de la borne 2/3** (G21e) | Théorème B confirmé (P+), deux corrections de portée (compositions non locales hors classe ; « exactement 1/4 » seulement comme barrière). Borne ρ ≥ 2/3 : vraie seulement avec la concavité, qui est une hypothèse. **Sans concavité, les contraintes de dimension permettent ρ → 1/2** (profil rampe – plateau – rampe). Question décisive : les lemmes 9 et 10 du papier de Claude valent-ils pour des modules à grand espace de plus bas poids ? `code/gen21/g21e/notes.md` |
 | ❌ **L'échelon 2 par d'autres problèmes ouverts** (G21c) | Aucune route. Fermé : conjecture du rang asymptotique et ω = 2 (théorème R : constante seulement) ; le log de Marx est une quantité de routage sans lien avec l'échelon 2 (T2, T3) ; k-Clique est le pire cas des algorithmes de 2026. Positif conditionnel : CSP en s^(O(tw/√log tw)) sur les expanseurs de degré borné (T1, esquisse). Correction : les bornes de 2026 sont en m ; en n elles ont un facteur loglog n. `code/gen21/g21c/notes.md` |

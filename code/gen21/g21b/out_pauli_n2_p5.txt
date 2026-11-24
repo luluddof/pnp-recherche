@@ -1,0 +1,4 @@
+n=2 N=4 GF(5) q=1: least p = 6
+n=2 N=4 GF(5) q=2: least p = 10
+n=2 N=4 GF(5) q=3: least p = 7
+n=2 N=4 GF(5) q=4: least p = 4
