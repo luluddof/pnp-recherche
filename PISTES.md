@@ -26,7 +26,6 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
-| G10b | 🔄 **Relecture + Lean des lemmes « erreurs par point »** | Lemme de G6d, lemme Q_{d+2} de G8d (base d'un article 2) | G6d, G8d |
 | G10c | 🔄 **Relecture + nouveauté de G9e** | Steiner, plus long chemin : preuve et articles voisins | G9e |
 | G10d | 🔄 **Relecture de G9c** | Théorèmes A et B sur le comptage des ensembles indépendants | G9c |
 | G10e | 🔄 **Lean : lemme 2 et identité de moyenne** | Pour que le théorème B ne dépende plus d'une hypothèse | G9L |
@@ -71,6 +70,7 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 |---|---|
 | ⏸️ **Version 3 de l'article** | À faire en une fois quand G10e (Lean, lemme 2) est terminé : (1) corrections de G10f (facteur b superflu ; dire que la borne de Dias-Lima est meilleure pour les petits groupes ; précisions de l'annexe A ; 4 attributions à adoucir) ; (2) le théorème sep(F\*) ≥ c·n\* et son corollaire, **après relecture adverse** ; (3) mise à jour de la section Lean |
 | ⏸️ **Relecture adverse du théorème sep(F\*)** (G10f) | Niveau P pour l'instant |
+| ⏸️ **Rédaction de l'article 2** (erreurs par point) | Les deux lemmes centraux sont relus et en Lean. Manque : un résultat final sur l'optimalité de √log n (pistes (I′) et (II)), ou accepter une note de résultats partiels. Décision de l'auteur |
 | ⏸️ **Relecture de l'article par un expert humain** | Auteurs naturels à contacter : Dias et Lima. Décision de l'auteur. |
 
 | Piste | Raison de l'attente |
@@ -80,6 +80,7 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | Piste | Résultat |
 |---|---|
+| ✅ Relecture + Lean des lemmes « erreurs par point » (G10b) | Lemme de G6d et lemme Q_{d+2} confirmés et **prouvés en Lean** (`lean/PnpLean/Article2/`) ; la conséquence (c) de G6d n'est pas prouvée en général |
 | ✅ Relecture adverse de G8a et G7b (G10a) | B2, lemme H, théorèmes D et F confirmés ; prop. S correcte à 2 constantes près ; une clause du théorème C réfutée ; le modèle DP corrigé n'est que partiellement valide |
 | ✅ Relecture des points non relus de l'article (G10f) | Note 7.1(ii) correcte (2 corrections d'équité) ; annexe A vérifiée ; bibliographie sans entrée fausse |
 | ✅ **Article en français** (G9F) | `resultats/article/main_fr.tex` + PDF (28 pages) ; traduction fidèle, contrôle automatique des comptes (théorèmes, équations, références) |

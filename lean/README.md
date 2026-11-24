@@ -6,7 +6,7 @@ Lean 4.37.0-rc1 + Mathlib. Chaque dossier correspond à un article.
 cd lean && lake exe cache get && lake build
 ```
 
-Cette commande compile tout ce qui est **vérifié** (le dossier `Article1/`). Les dossiers `EnCours/` contiennent du travail non terminé : ils ne font pas partie de la cible par défaut.
+Cette commande compile tout ce qui est **vérifié** (les dossiers `Article1/` et `Article2/`). Les dossiers `EnCours/` contiennent du travail non terminé : ils ne font pas partie de la cible par défaut.
 
 **Règle :** un fichier hors de `EnCours/` ne contient ni `sorry`, ni `admit`, ni `axiom`, ni `native_decide`. Ses théorèmes dépendent seulement des axiomes standards de Lean (`propext`, `Classical.choice`, `Quot.sound`).
 
@@ -42,15 +42,20 @@ Le lemme d'anti-concentration et le lemme d'espérance du déficit (en cours), l
 
 ## Article 2 (en préparation) — erreurs par point dans la méthode d'interpolation d'OpenAI
 
-Pas encore d'article. Sources : `code/gen6/g6d/`, `code/gen7/g7a/`, `code/gen8/g8d/`.
+Pas encore d'article. Sources : `code/gen6/g6d/`, `code/gen7/g7a/`, `code/gen8/g8d/` ; relecture : G10b.
 
-### En cours : `PnpLean/Article2/EnCours/`
+### Vérifié : `PnpLean/Article2/`
 
-| Fichier | Contenu | État |
+| Fichier | Contenu | Énoncé |
 |---|---|---|
-| `PerPoint.lean` | `sum_nullity_le_of_det_ne_zero`, `sum_rank_ge`, `sum_rank_error_ge` : version abstraite du lemme du déterminant par bloc (Σ_t rang(E_t) ≥ (\|T\| − d)·m) | Compile sans `sorry` ; **pas encore relu** ; le lien avec le cadre d'OpenAI n'est pas formalisé |
+| `PerPoint.lean` | `sum_nullity_le_of_det_ne_zero`, `sum_rank_ge`, `sum_rank_error_ge`, **`g6d_determinant_lemma`** | Lemme du déterminant par bloc : pour J de degré ≤ d avec J(0) = X^{⊗ℓ}, et J(t) = K_t + E_t avec K_t « faiblement agréable » dans une direction de S : Σ_{t∈T} rang(E_t) ≥ (\|T\| − d)·2^(ℓ−\|S\|). Vaut dans le cas général (non commutatif). |
+| `QdPlus2.lean` | `two_splittings`, `four_le_card_bad`, **`qd2_lemma`** | Lemme Q_{d+2} : sur le cube de dimension d+2, avec des polynômes de sommet de degré ≤ d valant 1 en 0 et des points τ distincts non nuls, il y a au moins 4 mauvaises arêtes. |
 
-Ce fichier importe `PnpLean.Article1.WitnessDet` (même argument de déterminant).
+Cible : `lake build PnpLean.Article2.QdPlus2`. `PerPoint.lean` importe `PnpLean.Article1.WitnessDet` (même argument de déterminant).
+
+### Non formalisé
+
+La réduction de la classe commutative (rang E_k = nombre de mauvaises arêtes), les corollaires (a) et (b) de G6d, la borne ρ_moy ≥ 2^(−d)/(d+2), la restriction du lemme Q_{d+2} à un sous-cube d'un cube plus grand, et le lien avec l'algorithme d'OpenAI lui-même.
 
 ---
 

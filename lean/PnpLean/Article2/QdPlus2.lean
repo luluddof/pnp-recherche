@@ -1,4 +1,4 @@
-import PnpLean.Article2.EnCours.PerPoint
+import PnpLean.Article2.PerPoint
 
 /-!
 # The `Q_{d+2}` lemma (commutative class, one point per direction)

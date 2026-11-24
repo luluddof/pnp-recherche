@@ -36,11 +36,13 @@ Ce journal est un **résumé**. Un résumé ne permet pas de vérifier une preuv
 | G6b ρ_d ≥ 1/d | Dans un modèle restreint, sous 2 conditions | P+ | rapport G6r |
 | G4d réfutations IPS 2^O(n/√log n) | Corollaire de l'article de Claude (non relu par des pairs) | E | `code/gen4/g4d/` |
 | G6c prop. R, prop. L | Prop. L seulement pour une classe restreinte de sparsifieurs | P | `code/gen6/g6c/` |
-| G6d lemme sur les erreurs par point | — | P | `code/gen6/g6d/notes.md` |
+| G6d lemme du déterminant par bloc (général) | Confirmé par G10b ; la conséquence (c) n'est pas prouvée hors de la classe commutative | **L** + P+ | `lean/PnpLean/Article2/PerPoint.lean` |
+| G6d conséquences (a), (b) | (b) dépend du modèle de coût | P+ | `code/gen6/g6d/notes.md` |
 | G7a famille « par morceaux », barrière A | Classe commutative seulement | P (+ N pour ℓ ≤ 10) | `code/gen7/g7a/notes.md` |
 | G7d lemme S, prop. E | Classes restreintes de réductions | E | `code/gen7/g7d/` |
 | G8a théorème B2, lemme H | Confirmés par G10a | **P+** | `code/gen8/g8a/notes.md` |
-| G8d lemme Q_{d+2}, ρ ≥ 2^(−d)/(d+2) | Classe commutative, un point par direction | P (+ N pour d ≤ 3) | `code/gen8/g8d/notes.md` |
+| G8d lemme Q_{d+2} | Classe commutative, un point par direction ; confirmé par G10b | **L** + P+ | `lean/PnpLean/Article2/QdPlus2.lean` |
+| G8d corollaire ρ ≥ 2^(−d)/(d+2) | idem | P+ | `code/gen8/g8d/notes.md` |
 | G9e conséquences de la chute de l'ETH (Steiner, plus long chemin…) | **Conditionnel** aux prépublications d'OpenAI et de Claude ; graphes creux ; comptage modulo p seulement | P (+ N sur 6 graphes) | `code/gen9/g9e/consequences.md` |
 | G9a obstruction A (α ≥ 1/2 dans le cadre de l'annexe B) | Pièces qui passent par les composantes graduées d'un seul espace | P (+ N) | `code/gen9/g9a/notes.md` |
 | G9d loi harmonique, analyse des triangles | Dans un modèle de coût ; termes produits seulement | E | `code/gen9/g9d/g9d_model.py` |
@@ -303,6 +305,11 @@ Simplification proposée : l'hypothèse M ≥ n peut être supprimée.
   - G7b : **théorème C : borne principale confirmée, mais la clause « de plus » est RÉFUTÉE** (erreur de 1 : il faut τ + 1 − s − |Z| et non τ + 2 ; contre-exemple avec n = 6). **Théorèmes D, F et lemme E confirmés.** Corollaire G : en partie (hérite de l'erreur de 1, sans effet asymptotique ; doit préciser la décomposition W-optimale).
   - **Le modèle DP corrigé est seulement en partie valide :** 2^(W_t) minore seulement l'élimination « par groupes entiers ». Un éliminateur ligne par ligne fait mieux (exemples exacts : 12 contre 6, 15 contre 7, 16 contre 10). Le 2^(w_t) de l'article de Dias-Lima résiste à ce découpage, pas W_t.
   - Dossier : `code/gen10/g10a/`.
+- **G10b ✅ Relecture et Lean des lemmes « erreurs par point » (base de l'article 2) :**
+  - **Lemme du déterminant de G6d : confirmé**, dans le cas général (non commutatif) ; τ ≠ 0 n'est pas nécessaire ; plusieurs points par direction sont permis. Conséquence (a) confirmée (ℓ ≥ d+1) ; (b) confirmée à l'arrondi près (ρ ≤ 1/4) ; **(c) non prouvée en général** (« les rangs s'additionnent sur des blocs disjoints » est faux ; vrai seulement dans la classe commutative).
+  - **Lemme Q_{d+2} de G8d : confirmé** pour tout d et tous τ distincts non nuls (classe commutative, un point par direction), avec un argument plus court. Corollaire ρ_moy ≥ 2^(−d)/(d+2) confirmé.
+  - **Lean (vérifié par le coordinateur, sans sorry) :** `lean/PnpLean/Article2/PerPoint.lean` (`g6d_determinant_lemma`) et `QdPlus2.lean` (`qd2_lemma`), 522 lignes. Non formalisé : la réduction de la classe commutative, les corollaires, le lien avec l'algorithme d'OpenAI.
+  - Dossier : `code/gen10/g10b/`.
 - **G9W ✅ Article, version 2 :** `resultats/article/main.tex` et le PDF (26 pages). Titre : « Measurement Rows Absorb at Most a √s Factor of the Cut: A Determinant Bound for Clause-Product Interpolation Schemes ». Auteur : Lucas Requena. Les 10 corrections obligatoires du rapport G8R sont traitées. Changements mathématiques : hypothèse M ≥ n supprimée (deg det Φ ≤ n_occ·R ≤ MR ; Lean garde n ≤ M, écart signalé) ; corollaire partie 3 : 2^(min(n/6, …)) ; remarque « équilibrée » avec γ ≤ 1/6. Tests refaits : les 4 scripts passent ; Σ(E def − ρ)₊ = 0 dans les 12 exécutions (l'étape de moyenne n'est pas réellement testée) ; 18 vérifications du relecteur. Vérifié par le coordinateur : compilation sans erreur, en-tête, résumé, section IA, bibliographie (2 identifiants ajoutés). **Non relu :** une note de bas de page sur le théorème 7.1(ii), l'annexe A, les références classiques (citées de mémoire).
 
 ## 4 bis. Pistes restantes pour chercher plus loin
