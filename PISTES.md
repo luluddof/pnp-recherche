@@ -48,6 +48,12 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 | G25-B2 | 🔄 **Brainstorming : techniques de preuve** | Idées pour dépasser la droite hors de la classe de la barrière (Schur-Weyl, géométrie, entropie, SDP, rigidité…). | consigne de l'auteur |
 | G25-B3 | ✅ **Brainstorming : autres routes** (fini) | 10 idées ; top 3 : sparsification pour la décision seule (enlèverait le facteur loglog en n) ; quotient par grappes ; hypercliques récents comme gadgets à 3 directions. `code/gen25/b3/notes.md` | consigne de l'auteur |
 | G25-B4 | ✅ **Brainstorming : rang inférieur** (fini) | « Meilleures pièces à chaque taille » : ne gagne rien (λ ≥ 10⁴ dans l'algorithme). Gains réels dans la comptabilité de la récursion : base de balayage + constantes exactes (seuil log₂ m* : 1,37·10⁵ → 2,4·10⁴) ; annexe D : 4·10¹⁰ → 1,6·10⁶. Reste astronomique. `code/gen25/b4/notes.md` | consigne de l'auteur |
+| G25-P1 | 🔄 **Sparsification pour la décision seule** (idée B3) | Les obstructions L et E portent-elles sur la décision ? Construction à ε = 1/log n, ou obstruction dans une classe naturelle. Donnerait 3-SAT (décision) en 2^(O(n/√log n)) à toute densité. | B3 |
+| G25-P2 | 🔄 **Théorème A explicite de Claude, avec base par balayage** (idées B4 I2, I3, I8, I4) | Lemme de balayage prouvé et testé ; récurrence de Hoeffding exacte ; constantes explicites ; seuils contre 2^n et PPSZ. | B4 |
+| G25-P3 | 🔄 **Annexe D d'OpenAI avec constantes explicites** (idée B4 I6) | ε maximal légal (au lieu de 2^(−17)), effilage LP, modes de Smith, précision optimale ; chaque changement justifié lemme par lemme. | B4, G18a, G18d |
+| G25-P4 | 🔄 **Triangularisation pour fermer la fenêtre du module de classe** | La famille {E_m} de G24f se triangularise-t-elle (lemme T de G24g) ? Si oui, toute la fenêtre H = 0 se ferme. | G24f, G24g |
+| G25-P5 | 🔄 **Algorithmes d'hypercliques de novembre 2026** (idée B3) | Fischer (2611.03880), Chan-Itakura-Ma-Yu (2611.06813) : leur identité est-elle un gadget « à 3 directions » qui battrait D^(−1/2) ? | B3 |
+| G25-P6 | 🔄 **Lean : lemme de triangularisation T** | Relecture de la preuve, puis Lean ; corollaire r = 1 sur tout corps. | G24g |
 
 Dossiers de travail de la génération 18 : `scratchpad/gen18/g18a` à `g18i`.
 
