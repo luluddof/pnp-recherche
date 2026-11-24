@@ -44,7 +44,7 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
-| G21d | 🔄 **Équation au-delà des méthodes de rang** | À N = 3, trouver un témoin algébrique que l'échange n'est pas dans le joint J(2,2) ; reformulation symétrique à trois aplatissements ; se généralise-t-il ? | G20d |
+| — | *Aucun agent en cours. La génération 21 est terminée (24/11).* | | |
 
 Dossiers de travail de la génération 18 : `scratchpad/gen18/g18a` à `g18i`.
 
@@ -123,9 +123,8 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Question précise | Origine |
 |---|---|---|
-| Témoin au-delà des méthodes de rang, à N = 3 | Calculer l'équation GL₃-covariante de plus bas degré des sommes avec p = q = 2 qui ne s'annule pas sur l'échange ; est-ce un mineur d'un aplatissement général (Young) ? | G20d |
-| Barrière pour les aplatissements de Young | Étendre le théorème B aux applications linéaires générales (annulation entre blocs), ou trouver un contre-exemple (qui prouverait ρ > 1/2). | G20d |
-| Relecture adverse du théorème B | Lemme de moyenne de Haar ; hypothèse caractéristique 0 ; classe B exacte. | G20d |
+| Borne inférieure au-delà de la droite (après G21d) | Pas par des équations de bas degré ni par des aplatissements (exclus jusqu'au degré 7 à N = 3). Routes restantes : une quantité analytique (distance exacte 2 à N = 3 ; structure des points les plus proches) ; une version « au bord » des arguments spectral et de Segre. Aucune n'a de premier pas concret. | G20d, G21d |
+| Barrière pour les aplatissements de Young | G21d : à N = 3, aucun des 168 aplatissements de Koszul/Young ne donne une équation de J(2,2). Reste : un théorème général (étendre le théorème B aux Φ linéaires générales). | G20d, G21d |
 
 **Nouvelle cible issue de G20c (24/11) :**
 
@@ -150,6 +149,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Résultat |
 |---|---|
+| ❌ **Équation au-delà des méthodes de rang** (G21d) | Aucun témoin. À N = 3 : aucune équation de J(2,2) en degré ≤ 6, aucun aplatissement de Koszul/Young (168 testés), aucune équation séparante en degré 7. Séparer l'échange est un phénomène de degré ≥ 8. Distance² de l'échange à J(2,2) = 2 (numérique). Reformulation symétrique à trois aplatissements. `code/gen21/g21d/notes.md` |
 | ❌ **Caractéristique p** (G21b) | Rien de nouveau. La récursion de Claude tourne bien sur F_{p^k} pour la décision (deux étapes réparées), mais l'annexe B sur F_p donne le même cercle (le facteur 1 − 1/p se simplifie). Frobenius : aucun gain. Dvir-Edelman ne s'applique pas au croisement. Aucun petit cas décidé n'est meilleur sur F_p. Seul reste : (3,3) à N = 4 sur GF(2), non décidé. `code/gen21/g21b/notes.md` |
 | ❌ **Modules à espace fondamental dégénéré** (G21a, modèle Fable) | Aucune construction. Un espace fondamental est une perte pure (ρ ≥ 1/2 + L_M(0)/(4λ)). Neuf candidats (Fock, tordus, NS, Ramond, symplectiques), tous au-dessus du cercle ; Ramond : 1,4279 contre 1,4142. Le lemme de localité s'étend aux modules ; c'est le profil qui échoue. Un plateau demande un module cyclique aussi fort que P(N) = N^(1+o(1)). Précision : le temps est 2^(O(m/(log m)^α′)) avec α′ = log₂(1/ρ). `code/gen21/g21a/notes.md` |
 | ✅ **Relecture du théorème B et de la borne 2/3** (G21e) | Théorème B confirmé (P+), deux corrections de portée (compositions non locales hors classe ; « exactement 1/4 » seulement comme barrière). Borne ρ ≥ 2/3 : vraie seulement avec la concavité, qui est une hypothèse. **Sans concavité, les contraintes de dimension permettent ρ → 1/2** (profil rampe – plateau – rampe). Question décisive : les lemmes 9 et 10 du papier de Claude valent-ils pour des modules à grand espace de plus bas poids ? `code/gen21/g21e/notes.md` |

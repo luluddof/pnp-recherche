@@ -1,0 +1,49 @@
+   restart 0 2.0000e+00 max|coef| 5.1 nit 3000
+   restart 1 2.0000e+00 max|coef| 18.1 nit 3000
+   restart 2 2.0000e+00 max|coef| 4.1 nit 3000
+   restart 3 2.0000e+00 max|coef| 10.1 nit 3000
+   restart 4 2.0000e+00 max|coef| 7.8 nit 3000
+   restart 5 2.0000e+00 max|coef| 11.0 nit 3000
+   restart 6 2.0000e+00 max|coef| 52.8 nit 2141
+   restart 7 2.0000e+00 max|coef| 7.6 nit 3000
+   restart 8 2.0001e+00 max|coef| 6.3 nit 3000
+   restart 9 2.0000e+00 max|coef| 15.3 nit 3000
+   restart 10 2.0000e+00 max|coef| 59.7 nit 3000
+   restart 11 2.0001e+00 max|coef| 40.2 nit 3000
+   restart 12 2.0000e+00 max|coef| 68.7 nit 2930
+   restart 13 2.0000e+00 max|coef| 16.3 nit 3000
+   restart 14 2.0000e+00 max|coef| 4.1 nit 3000
+   restart 15 2.0000e+00 max|coef| 28.9 nit 3000
+   restart 16 2.0000e+00 max|coef| 9.2 nit 3000
+   restart 17 2.0001e+00 max|coef| 6.6 nit 3000
+   restart 18 2.0001e+00 max|coef| 5.8 nit 3000
+   restart 19 2.0000e+00 max|coef| 11.2 nit 3000
+N=3 (p,q)=(2,2) target=swap ||T||^2=9.0 restarts=20 best tails (value, max|coef|): [(2.0, 5.1), (2.0, 68.7), (2.0, 28.9), (2.0, 59.7), (2.0, 52.8), (2.0, 18.1), (2.0, 16.3), (2.0, 4.1)] time=7s
+   restart 0 3.9626e-01 max|coef| 9.4 nit 3000
+   restart 1 9.7548e-02 max|coef| 1.2 nit 163
+   restart 2 1.6836e-01 max|coef| 7.2 nit 3000
+   restart 3 1.1436e-01 max|coef| 2.8 nit 1681
+   restart 4 2.8426e-01 max|coef| 10.5 nit 3000
+   restart 5 9.0210e-02 max|coef| 3.2 nit 915
+N=3 (p,q)=(2,2) target=randJ ||T||^2=9.0 restarts=6 best tails (value, max|coef|): [(0.09021, 3.2), (0.09755, 1.2), (0.1144, 2.8), (0.1684, 7.2), (0.2843, 10.5), (0.3963, 9.4)] time=2s
+   restart 0 4.7403e-01 max|coef| 26.5 nit 3000
+   restart 1 4.4312e-01 max|coef| 1.3 nit 165
+   restart 2 3.4063e-01 max|coef| 7.6 nit 3000
+   restart 3 3.0622e-01 max|coef| 2.9 nit 1817
+   restart 4 5.2624e-01 max|coef| 14.0 nit 3000
+   restart 5 3.4224e-01 max|coef| 3.2 nit 1053
+N=3 (p,q)=(2,2) target=generic ||T||^2=9.0 restarts=6 best tails (value, max|coef|): [(0.3062, 2.9), (0.3406, 7.6), (0.3422, 3.2), (0.4431, 1.3), (0.474, 26.5), (0.5262, 14.0)] time=1s
+   restart 0 2.6482e-26 max|coef| 3.3 nit 220
+   restart 1 2.1974e-26 max|coef| 4.1 nit 221
+   restart 2 4.7224e-27 max|coef| 4.9 nit 282
+   restart 3 4.2777e-27 max|coef| 0.9 nit 18
+   restart 4 1.5883e-27 max|coef| 3.9 nit 257
+   restart 5 1.5737e-26 max|coef| 3.2 nit 206
+N=3 (p,q)=(3,1) target=swap ||T||^2=9.0 restarts=6 best tails (value, max|coef|): [(1.588e-27, 3.9), (4.278e-27, 0.9), (4.722e-27, 4.9), (1.574e-26, 3.2), (2.197e-26, 4.1), (2.648e-26, 3.3)] time=0s
+   restart 0 3.0000e+00 max|coef| 81.9 nit 1468
+   restart 1 3.0000e+00 max|coef| 61.5 nit 1515
+   restart 2 3.0000e+00 max|coef| 59.8 nit 1848
+   restart 3 3.0000e+00 max|coef| 37.0 nit 1240
+   restart 4 3.0000e+00 max|coef| 208.4 nit 1570
+   restart 5 3.0000e+00 max|coef| 119.6 nit 2317
+N=3 (p,q)=(2,1) target=swap ||T||^2=9.0 restarts=6 best tails (value, max|coef|): [(3.0, 59.8), (3.0, 37.0), (3.0, 61.5), (3.0, 119.6), (3.0, 81.9), (3.0, 208.4)] time=1s
