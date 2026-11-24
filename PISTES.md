@@ -39,6 +39,12 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
 | G17a | 🔄 **Relecture adverse de G14b** (contraction de tenseurs) | Reconstruction de l'annexe D, modèles DF et VT, théorèmes A et B : le potentiel est-il réel ? | G14b |
+| G17b | 🔄 **Article 1 contre le préprint d'OpenAI lui-même** | Nos hypothèses (F\* « une copie par occurrence », feuilles de la sparsification, définition 5.1, modèles de coût) correspondent-elles au texte réel du préprint ? Liste de corrections pour la v3. | préprint disponible depuis G14b |
+| G17c | 🔄 **Article 2 contre le préprint d'OpenAI lui-même** | Le cadre du théorème (J(0) = X^{⊗ℓ}, directions, partie « agréable » + erreur de petit rang, modèle de coût H1–H4) est-il celui du préprint, ou seulement celui de l'exposé d'O'Donnell ? Définition exacte du « cadre X ». | G6d, G14d |
+| G17d | 🔄 **Relecture adverse de G14a, puis Lean** | Théorème au niveau de la sortie (effondrement par L, R′) et degré réduit : justes ? L'hypothèse « mineurs non singuliers » cache-t-elle la difficulté ? Si juste : `Article2/EnCours/OutputLevel.lean`. | G14a |
+| G17e | 🔄 **Les deux points ouverts de l'article 2** | (A) L'écart O(log ℓ) entre la borne et la construction : optimums exacts à petite taille, argument à deux moitiés (blocs 01 et 10). (B) Degré certifié par annulation : deg P = Θ(nd) est-il forcé ? | G14d, G14a |
+
+Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g18d` (erreur de numéro au lancement ; la génération est bien la 17).
 
 **Consigne de l'utilisateur (24/11) :** dès que les générations 8 et 9 sont terminées, lancer une **génération 10** sur les pistes « pas encore explorées » (section 2) et « en attente » (section 3).
 
