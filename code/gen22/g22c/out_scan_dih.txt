@@ -1,0 +1,10 @@
+dihedral_struct f=1 4 q 4 p 12 scale 4/1 N^2 16 0.1s
+dihedral_struct f=1 6 q 6 p 24 scale 3/1 N^2 36 0.1s
+dihedral_struct f=1 8 q 8 p 52 scale 4/1 N^2 64 0.1s
+dihedral_struct f=1 10 q 10 p 76 scale 5/1 N^2 100 0.1s
+dihedral_struct f=1 12 q 12 p 120 scale 6/1 N^2 144 0.1s
+dihedral_struct f=1 16 q 16 p 220 scale 8/1 N^2 256 0.2s
+dihedral_struct f=1 20 q 20 p 352 scale 10/1 N^2 400 6.1s
+dihedral_struct f=1 24 q 24 p 516 scale 12/1 N^2 576 12.8s
+dihedral_struct f=1 32 q 32 p 940 scale 16/1 N^2 1024 35.8s
+dihedral_struct f=1 48 q 48 p 2172 scale 24/1 N^2 2304 135.8s

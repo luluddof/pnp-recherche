@@ -1,0 +1,10 @@
+it 13 best 254 0s
+it 14 best 253 0s
+it 207 best 252 3s
+it 254 best 251 3s
+it 713 best 250 9s
+it 2264 best 249 29s
+it 4175 best 247 52s
+it 15450 best 246 279s
+it 15541 best 245 282s
+FINAL 4 rand best 245 exactQ (245, 'Q') iters 18892

@@ -1,0 +1,1 @@
+FINAL 4 cd best 100 exactQ (100, 'Q') iters 19108

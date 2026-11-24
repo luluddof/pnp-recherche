@@ -44,9 +44,7 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
-| G22a | 🔄 **Lire la littérature sur Hurwitz et Naslund, en entier** | Naslund (problème 12), Karam, Hrubeš-Wigderson-Yehudayoff 2011, Hrubeš 2024, Zhang-Zhu, Siemaszko, Debnath. Dictionnaire exact des variantes ; record par variante ; techniques que nous n'avons pas essayées ; nouveauté du théorème C. | jamais fait |
 | G22b | 🔄 **Anatomie des petites solutions exactes → un principe de construction** (modèle Fable) | Les solutions exactes pour N ≤ 8 ont toutes la « forme d'appariement » (permutations partielles signées). Formule exacte du rang par la structure en cycles et les holonomies de signes ; borne extrémale pour cette forme ; famille pour N = 9 à 16. | G19b, G20b |
-| G22c | 🔄 **Familles structurées à grande taille (N jusqu'à 100), rangs exacts** | Cayley-Dickson au-delà de 8 (sédénions), tables de groupes avec cocycles, familles affines sur les corps finis avec signes de Paley, tournois. L'optimisation aveugle s'arrêtait à N ≈ 10. | G20b |
 | G22d | 🔄 **Borne inférieure par un invariant analytique (distance)** | À N = 3 l'échange est à distance² = 2 de J(2,2). Loi exacte de la distance ; version quantitative du théorème C ; excès au-delà des méthodes de rang ; certificat. | G21d |
 | G22e | 🔄 **Barrière de Cardy pour les constructions de type algèbre de sommets** | Prouver que √2 est optimal pour toute construction d'une classe précise (croissance modulaire) ; ou trouver où le théorème échoue (algèbres non unitaires, non rationnelles). | G21a |
 
@@ -155,6 +153,8 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Résultat |
 |---|---|
+| ✅ **Littérature Hurwitz-Naslund lue** (G22a) | Notre problème = problème 12 de Naslund = question 1.2 de Karam = largeur de HWY = PT-rank de Rossman-Zhu. Record : √2 (annexe B) ; publié : 1,62 (Hrubeš). **Le théorème C n'est dans aucun article lu ; la question du compromis (p, q) est nouvelle.** Techniques non essayées : comptage d'intercalates de HWY, pièces de Hrubeš, caractéristique 2. `code/gen22/g22a/notes.md` |
+| ❌ **Familles structurées jusqu'à N = 256** (G22c) | Aucune ne bat l'exposant 2 ni la somme directe (N²/8). Sédénions : défaut de rang Θ(N²). Groupes, Paley, tournois : N² − O(N). `code/gen22/g22c/notes.md` |
 | ❌ **Équation au-delà des méthodes de rang** (G21d) | Aucun témoin. À N = 3 : aucune équation de J(2,2) en degré ≤ 6, aucun aplatissement de Koszul/Young (168 testés), aucune équation séparante en degré 7. Séparer l'échange est un phénomène de degré ≥ 8. Distance² de l'échange à J(2,2) = 2 (numérique). Reformulation symétrique à trois aplatissements. `code/gen21/g21d/notes.md` |
 | ❌ **Caractéristique p** (G21b) | Rien de nouveau. La récursion de Claude tourne bien sur F_{p^k} pour la décision (deux étapes réparées), mais l'annexe B sur F_p donne le même cercle (le facteur 1 − 1/p se simplifie). Frobenius : aucun gain. Dvir-Edelman ne s'applique pas au croisement. Aucun petit cas décidé n'est meilleur sur F_p. Seul reste : (3,3) à N = 4 sur GF(2), non décidé. `code/gen21/g21b/notes.md` |
 | ❌ **Modules à espace fondamental dégénéré** (G21a, modèle Fable) | Aucune construction. Un espace fondamental est une perte pure (ρ ≥ 1/2 + L_M(0)/(4λ)). Neuf candidats (Fock, tordus, NS, Ramond, symplectiques), tous au-dessus du cercle ; Ramond : 1,4279 contre 1,4142. Le lemme de localité s'étend aux modules ; c'est le profil qui échoue. Un plateau demande un module cyclique aussi fort que P(N) = N^(1+o(1)). Précision : le temps est 2^(O(m/(log m)^α′)) avec α′ = log₂(1/ρ). `code/gen21/g21a/notes.md` |

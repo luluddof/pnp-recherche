@@ -1,0 +1,14 @@
+elab2_struct CD 2 q 2 p 2 scale 2/1 N^2 4 0.0s
+elab2_struct clifford 2 q 2 p 2 scale 2/1 N^2 4 0.0s
+elab2_struct CD 4 q 4 p 4 scale 2/1 N^2 16 0.0s
+elab2_struct clifford 4 q 4 p 4 scale 2/1 N^2 16 0.0s
+elab2_struct CD 8 q 8 p 8 scale 2/1 N^2 64 0.0s
+elab2_struct clifford 8 q 8 p 40 scale 4/1 N^2 64 0.0s
+elab2_struct CD 16 q 16 p 100 scale 2/1 N^2 256 0.1s
+elab2_struct clifford 16 q 16 p 96 scale 4/1 N^2 256 0.1s
+elab2_struct CD 32 q 32 p 494 scale 2/1 N^2 1024 0.3s
+elab2_struct clifford 32 q 32 p 704 scale 8/1 N^2 1024 0.2s
+elab2_struct CD 64 q 64 p 2176 scale 2/1 N^2 4096 2.6s
+elab2_struct clifford 64 q 64 p 1792 scale 8/1 N^2 4096 1.9s
+elab2_struct CD 128 q 128 p 9122 scale 2/1 N^2 16384 13.6s
+elab2_struct clifford 128 q 128 p 16384 scale -1/1 N^2 16384 10.8s

@@ -1,0 +1,14 @@
+elab2_struct,CD,2,2,2,2/1
+elab2_struct,clifford,2,2,2,2/1
+elab2_struct,CD,4,4,4,2/1
+elab2_struct,clifford,4,4,4,2/1
+elab2_struct,CD,8,8,8,2/1
+elab2_struct,clifford,8,8,40,4/1
+elab2_struct,CD,16,16,100,2/1
+elab2_struct,clifford,16,16,96,4/1
+elab2_struct,CD,32,32,494,2/1
+elab2_struct,clifford,32,32,704,8/1
+elab2_struct,CD,64,64,2176,2/1
+elab2_struct,clifford,64,64,1792,8/1
+elab2_struct,CD,128,128,9122,2/1
+elab2_struct,clifford,128,128,16384,-1/1
