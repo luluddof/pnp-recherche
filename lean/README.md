@@ -22,21 +22,19 @@ Article : `resultats/article/main.tex` (anglais) et `main_fr.tex` (français).
 |---|---|---|
 | `WitnessDet.lean` | `sum_nullity_le` : Σ_t dim ker Φ(t) ≤ nR ; `deficiency_le_nullity_add` : borne de rang par blocs | Cœur du lemme du déterminant témoin |
 | `Scheme.lean` | Structure `Scheme` (définition 5.1 de Dias-Lima), `lemma1`, `factR` | Lemme du déterminant témoin (complet), comptage de Hermite |
-| `TheoremB.lean` | `avg_lemma1`, `exists_point`, `lemma3`, `theoremB`, `theoremB_bounded` | Lemme du séparateur ; théorème principal, **avec le lemme d'espérance du déficit en hypothèse** (`Lemma2Hyp`) |
-| `TheoremA.lean` | `theoremA` | Théorème pour les déformations uniformes en la variable, **sans condition** |
+| `TheoremB.lean` | `avg_lemma1`, `exists_point`, `lemma3`, `theoremB`, `theoremB_bounded` | Lemme du séparateur ; théorème principal avec le lemme d'espérance du déficit en hypothèse (`Lemma2Hyp`) |
+| `TheoremA.lean` | `theoremA` | Théorème pour les déformations uniformes en la variable, sans condition |
+| `UAvg.lean` | Moyennes uniformes sur des produits finis ; `uavg_pi_mul` (indépendance) | Outil pour les lemmes probabilistes, sans théorie de la mesure |
+| `Anticonc.lean` | `bernoulli_anticonc` : c₀·min(V, √V) ≤ E\|X − a\| avec c₀ = (1 − e⁻²)/4 ; symétrisation, 2ᵉ et 4ᵉ moments, Hölder | Lemme d'anti-concentration |
+| `Lemma2.lean` | `avg_home_ind`, `avg_Icard`, `half_sum_abs_le_Edef`, `anticonc_le_Edef`, **`lemma2`**, **`theoremB_unconditional`**, `theoremB_bounded_unconditional` | Lemme d'espérance du déficit ; **théorème principal sans hypothèse sur le lemme 2** |
 
-Cible : `lake build PnpLean.Article1.TheoremA`
+Cible : `lake build PnpLean.Article1.Lemma2` (et `PnpLean.Article1.TheoremA`).
 
-### En cours : `PnpLean/Article1/EnCours/`
-
-| Fichier | But | État |
-|---|---|---|
-| `UAvg.lean` | Moyennes uniformes sur des produits finis (pour l'identité « moyenne sur les cartes témoins = choix indépendants ») | Compile ; non relié au théorème principal |
-| `Anticonc.lean` | Anti-concentration (lemme d'espérance du déficit), pour enlever l'hypothèse `Lemma2Hyp` | **Ne compile pas encore** |
+**État :** tous les énoncés **déterministes et probabilistes finis** de l'article sont vérifiés : lemme du déterminant témoin, comptage de Hermite, anti-concentration, espérance du déficit, lemme du séparateur, les deux théorèmes. Hypothèses restantes de `theoremB_unconditional` : `n ≤ M` (l'article l'enlève sur papier) et `hW` (W minore le nombre de séparation pondéré : c'est une définition).
 
 ### Non formalisé
 
-Le lemme d'anti-concentration et le lemme d'espérance du déficit (en cours), le lemme sur les 3-CNF aléatoires, le corollaire asymptotique, la proposition sur le modèle de type PD.
+Le lemme sur les 3-CNF aléatoires (sep(F) ≥ c·n avec forte probabilité), le corollaire asymptotique, la proposition sur le modèle de type PD.
 
 ---
 

@@ -1,5 +1,5 @@
 import PnpLean.Article1.TheoremB
-import PnpLean.Article1.EnCours.Anticonc
+import PnpLean.Article1.Anticonc
 
 /-!
 # Lemma 2 (expected deficiency) and the unconditional Theorem B

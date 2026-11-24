@@ -1,4 +1,4 @@
-import PnpLean.Article1.EnCours.UAvg
+import PnpLean.Article1.UAvg
 
 /-!
 # Anticoncentration of sums of independent Bernoulli variables (finite form)

@@ -25,8 +25,8 @@ Ce journal est un **résumé**. Un résumé ne permet pas de vérifier une preuv
 | Résultat | Énoncé (portée exacte) | Niveau | Où est la preuve |
 |---|---|---|---|
 | G6a lemme 1, fait R, lemme 3, théorème A | Énoncés déterministes de la note | **L** + P+ | `lean/PnpLean/*.lean`, note §3 |
-| G6a théorème B | Vrai si le lemme 2 est vrai | **L** (conditionnel) + P+ | idem |
-| G6a lemme 2 (anti-concentration) | Constante c₀ = (1−e⁻²)/4 | P+ | note §3.3 |
+| G6a théorème B | **Sans hypothèse** depuis G10e | **L** + P+ | `lean/PnpLean/Article1/Lemma2.lean` |
+| G6a lemme 2 (anti-concentration, espérance du déficit) | Constante c₀ = (1−e⁻²)/4 | **L** + P+ | `lean/PnpLean/Article1/Anticonc.lean`, `Lemma2.lean` |
 | G6a lemme 4 (3-SAT aléatoire) | sep(F) ≥ cn avec forte probabilité | P+ | note §3.7 |
 | G6a corollaire C | **Seulement dans le modèle de coût produit**, pour F lui-même (pas F\*) ; rien sur la programmation dynamique, les tenseurs ou les parités | P+ | note §3.8 |
 | G7b prop. O1 | Le modèle DP de Dias-Lima est dégénéré | P+ (confirmé par G8R sur le texte source) | `code/gen7/g7b/notes.md` |
@@ -43,7 +43,7 @@ Ce journal est un **résumé**. Un résumé ne permet pas de vérifier une preuv
 | G8a théorème B2, lemme H | Confirmés par G10a | **P+** | `code/gen8/g8a/notes.md` |
 | G8d lemme Q_{d+2} | Classe commutative, un point par direction ; confirmé par G10b | **L** + P+ | `lean/PnpLean/Article2/QdPlus2.lean` |
 | G8d corollaire ρ ≥ 2^(−d)/(d+2) | idem | P+ | `code/gen8/g8d/notes.md` |
-| G9e conséquences de la chute de l'ETH (Steiner, plus long chemin…) | **Conditionnel** aux prépublications d'OpenAI et de Claude ; graphes creux ; comptage modulo p seulement | P (+ N sur 6 graphes) | `code/gen9/g9e/consequences.md` |
+| G9e conséquences de la chute de l'ETH | **Conditionnel** aux prépublications ; confirmé par G10c ; **Steiner déjà revendiqué par Wu-Wang (arXiv 2611.02548)** ; plus long chemin/cycle : pas de revendication trouvée | P+ | `code/gen9/g9e/consequences.md` |
 | G9a obstruction A (α ≥ 1/2 dans le cadre de l'annexe B) | Pièces qui passent par les composantes graduées d'un seul espace | P (+ N) | `code/gen9/g9a/notes.md` |
 | G9d loi harmonique, analyse des triangles | Dans un modèle de coût ; termes produits seulement | E | `code/gen9/g9d/g9d_model.py` |
 | G9b ρ = 0,811 sur GF(2), lemme de la trace | Petite classe de pièces (puissances tensorielles à un bit) | P (+ N) | `code/gen9/g9b/notes.md` |
@@ -310,6 +310,8 @@ Simplification proposée : l'hypothèse M ≥ n peut être supprimée.
   - **Lemme Q_{d+2} de G8d : confirmé** pour tout d et tous τ distincts non nuls (classe commutative, un point par direction), avec un argument plus court. Corollaire ρ_moy ≥ 2^(−d)/(d+2) confirmé.
   - **Lean (vérifié par le coordinateur, sans sorry) :** `lean/PnpLean/Article2/PerPoint.lean` (`g6d_determinant_lemma`) et `QdPlus2.lean` (`qd2_lemma`), 522 lignes. Non formalisé : la réduction de la classe commutative, les corollaires, le lien avec l'algorithme d'OpenAI.
   - Dossier : `code/gen10/g10b/`.
+- **G10e ✅ Lean : le théorème B est maintenant prouvé SANS hypothèse sur le lemme 2** (vérifié par le coordinateur ; fichiers promus dans `lean/PnpLean/Article1/`) : `UAvg.lean` (moyennes uniformes sur des produits finis, indépendance), `Anticonc.lean` (`bernoulli_anticonc` : c₀·min(V, √V) ≤ E|X − a| avec c₀ = (1 − e⁻²)/4 ; symétrisation, 2ᵉ et 4ᵉ moments, Hölder ; forme finie, sans théorie de la mesure), `Lemma2.lean` (`avg_home_ind`, `avg_Icard`, `lemma2 : Lemma2Hyp c0`, **`theoremB_unconditional`**, `theoremB_bounded_unconditional`). Total Lean des deux articles : 2 497 lignes, 0 `sorry`. Reste hors de Lean pour l'article 1 : le lemme sur les 3-CNF aléatoires, le corollaire asymptotique, la proposition sur le modèle PD.
+- **G10c ✅ Relecture et nouveauté de G9e** (code indépendant : ≈ 570 000 vérifications de l'identité de comptage, 1 400 formules comptées) : la conséquence principale est **mathématiquement confirmée** (identité, taille de l'encodage sans perte de log m, analyse d'erreur, exposants). **Nouveauté : l'arbre de Steiner est DÉJÀ REVENDIQUÉ** (arXiv 2611.02548, Wu-Wang, 2 novembre 2026 : comptage exact et déterministe, plus fort, à partir du théorème d'OpenAI). **Plus long chemin / cycle de longueur ℓ (non induits) : aucune revendication trouvée** ; le dépôt eth-hamiltonicity les liste comme « conjecturés ». Gain honnête : premier 2^o(n) pour le plus long chemin/cycle sur les graphes à m = O(n), conditionnel, aléatoire, avec une perte log log. Dossier : `code/gen10/g10c/`.
 - **G9W ✅ Article, version 2 :** `resultats/article/main.tex` et le PDF (26 pages). Titre : « Measurement Rows Absorb at Most a √s Factor of the Cut: A Determinant Bound for Clause-Product Interpolation Schemes ». Auteur : Lucas Requena. Les 10 corrections obligatoires du rapport G8R sont traitées. Changements mathématiques : hypothèse M ≥ n supprimée (deg det Φ ≤ n_occ·R ≤ MR ; Lean garde n ≤ M, écart signalé) ; corollaire partie 3 : 2^(min(n/6, …)) ; remarque « équilibrée » avec γ ≤ 1/6. Tests refaits : les 4 scripts passent ; Σ(E def − ρ)₊ = 0 dans les 12 exécutions (l'étape de moyenne n'est pas réellement testée) ; 18 vérifications du relecteur. Vérifié par le coordinateur : compilation sans erreur, en-tête, résumé, section IA, bibliographie (2 identifiants ajoutés). **Non relu :** une note de bas de page sur le théorème 7.1(ii), l'annexe A, les références classiques (citées de mémoire).
 
 ## 4 bis. Pistes restantes pour chercher plus loin

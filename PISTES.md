@@ -26,9 +26,7 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
-| G10c | 🔄 **Relecture + nouveauté de G9e** | Steiner, plus long chemin : preuve et articles voisins | G9e |
 | G10d | 🔄 **Relecture de G9c** | Théorèmes A et B sur le comptage des ensembles indépendants | G9c |
-| G10e | 🔄 **Lean : lemme 2 et identité de moyenne** | Pour que le théorème B ne dépende plus d'une hypothèse | G9L |
 
 **Consigne de l'utilisateur (24/11) :** dès que les générations 8 et 9 sont terminées, lancer une **génération 10** sur les pistes « pas encore explorées » (section 2) et « en attente » (section 3).
 
@@ -41,8 +39,6 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 | 🆕 **Erreurs par point, cas non commutatif** | Étendre le lemme de G6d au-delà de la classe commutative | Moyenne | G6d, G7a |
 | 🆕 **Forme parité et contraction de tenseurs (Limits)** | Analyser les limites de ces deux voies d'OpenAI, non couvertes par Limits ni par notre note | Difficile | G4c, G6a |
 | 🆕 **Sparsification avec variables d'extension** | Échappatoire à la proposition L de G6c | Moyenne | G6c, G7d |
-| 🆕 **Égalité « moyenne sur les cartes témoins = choix indépendants » en Lean** | Comptage sur un produit | Facile | G9L |
-| 🆕 **Lemme 2 en Lean** | Anti-concentration avec constante explicite | Difficile (probabilités) | G9L |
 | 🆕 **Lemme 4 en Lean** | Graphes aléatoires | Très difficile (peu de choses dans Mathlib) | G9L |
 
 | 🆕 **Formes closes aux niveaux profonds (suite de G8c)** | La valeur des sous-appels de l'algorithme de Claude sur une entrée « épinglée » a une forme close calculable en temps polynomial au niveau 1 (vérifié). Si cela reste vrai aux niveaux profonds, Extended Frege réfuterait toute 3-CNF creuse insatisfaisable en taille 2^(δn). Vérifier aussi l'hypothèse (S) : degré ≤ 1 en chaque table de poids | Moyenne à difficile | G8c |
@@ -54,7 +50,6 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | 🆕 **Compromis (I′) et (II) pour la méthode d'OpenAI** | (I′) ρ(Cδ², δ) ≥ δ^(−a) ; (II) ρ(ℓ₁+ℓ₂, d₁+d₂) ≥ ρ(ℓ₁,d₁)·ρ(ℓ₂,d₂). Ensemble : √log n optimal à (log n)^o(1) près | Difficile | G8d |
 
-| 🆕 **Relecture et nouveauté de G9e** | Vérifier la preuve (encodage CNF, identité Σ p^cc) et lire les articles voisins (arXiv 2611.00994, 2611.02548, 2611.02650, dépôt eth-hamiltonicity) pour savoir si Steiner / plus long chemin sont déjà revendiqués | Facile à moyenne | G9e |
 
 | 🆕 **Pièces hors du cadre « un seul espace gradué »** | Seule façon restante d'obtenir ρ < 1/√2 : des pièces qui ne passent pas par les composantes graduées d'un seul espace (ou des profils de croissance non concaves). Lié au problème de Hurwitz : P(N) ≤ N^(1+ε) | Très difficile | G9a |
 
@@ -68,9 +63,10 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | Piste | Raison de l'attente |
 |---|---|
-| ⏸️ **Version 3 de l'article** | À faire en une fois quand G10e (Lean, lemme 2) est terminé : (1) corrections de G10f (facteur b superflu ; dire que la borne de Dias-Lima est meilleure pour les petits groupes ; précisions de l'annexe A ; 4 attributions à adoucir) ; (2) le théorème sep(F\*) ≥ c·n\* et son corollaire, **après relecture adverse** ; (3) mise à jour de la section Lean |
+| ⏸️ **Version 3 de l'article** | **Prête à lancer** (G10e est terminé) : (1) corrections de G10f (facteur b superflu ; dire que la borne de Dias-Lima est meilleure pour les petits groupes ; précisions de l'annexe A ; 4 attributions à adoucir) ; (2) le théorème sep(F\*) ≥ c·n\* et son corollaire, **après relecture adverse** ; (3) mise à jour de la section Lean |
 | ⏸️ **Relecture adverse du théorème sep(F\*)** (G10f) | Niveau P pour l'instant |
 | ⏸️ **Rédaction de l'article 2** (erreurs par point) | Les deux lemmes centraux sont relus et en Lean. Manque : un résultat final sur l'optimalité de √log n (pistes (I′) et (II)), ou accepter une note de résultats partiels. Décision de l'auteur |
+| ⏸️ **Note « plus long chemin / plus long cycle en 2^o(n) sur les graphes creux »** (candidat article 4) | Preuve confirmée par G10c ; conditionnel aux prépublications ; doit citer Wu-Wang (arXiv 2611.02548) ; résultat modeste. Décision de l'auteur |
 | ⏸️ **Relecture de l'article par un expert humain** | Auteurs naturels à contacter : Dias et Lima. Décision de l'auteur. |
 
 | Piste | Raison de l'attente |
@@ -80,6 +76,8 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | Piste | Résultat |
 |---|---|
+| ✅ **Lean : théorème B sans hypothèse** (G10e) | Lemme 2 (anti-concentration, espérance du déficit) et identité de moyenne prouvés ; `theoremB_unconditional` |
+| ✅ Relecture + nouveauté de G9e (G10c) | Preuve confirmée ; Steiner déjà revendiqué (Wu-Wang) ; plus long chemin/cycle : semble nouveau |
 | ✅ Relecture + Lean des lemmes « erreurs par point » (G10b) | Lemme de G6d et lemme Q_{d+2} confirmés et **prouvés en Lean** (`lean/PnpLean/Article2/`) ; la conséquence (c) de G6d n'est pas prouvée en général |
 | ✅ Relecture adverse de G8a et G7b (G10a) | B2, lemme H, théorèmes D et F confirmés ; prop. S correcte à 2 constantes près ; une clause du théorème C réfutée ; le modèle DP corrigé n'est que partiellement valide |
 | ✅ Relecture des points non relus de l'article (G10f) | Note 7.1(ii) correcte (2 corrections d'équité) ; annexe A vérifiée ; bibliographie sans entrée fausse |
