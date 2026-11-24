@@ -183,7 +183,7 @@ theorem pzero_le (s : Finset ι) :
     set P0 := uavg (fun ω : (∀ i, Θ i) => if D ξ s ω = 0 then (1 : ℝ) else 0)
     set Pm := uavg (fun ω : (∀ i, Θ i) => if D ξ s ω = -1 then (1 : ℝ) else 0)
     set Pp := uavg (fun ω : (∀ i, Θ i) => if D ξ s ω = 1 then (1 : ℝ) else 0)
-    set Π := ∏ i ∈ s, (1 - τ i)
+    set Pr := ∏ i ∈ s, (1 - τ i)
     have hsum : P0 + Pm + Pp ≤ 1 := by
       have h1 : uavg (fun ω : (∀ i, Θ i) => (if D ξ s ω = 0 then (1 : ℝ) else 0)
           + (if D ξ s ω = -1 then (1 : ℝ) else 0) + (if D ξ s ω = 1 then (1 : ℝ) else 0))
@@ -199,12 +199,12 @@ theorem pzero_le (s : Finset ι) :
       rwa [uavg_add, uavg_add, uavg_const] at h1
     have hτ0 := H.τ_nonneg a
     have hτ1 := H.hτ a
-    have hΠ : 0 ≤ Π := Finset.prod_nonneg fun i _ => by linarith [H.hτ i]
+    have hPr : 0 ≤ Pr := Finset.prod_nonneg fun i _ => by linarith [H.hτ i]
     have hmp : τ a / 2 * (Pm + Pp) ≤ τ a / 2 * (1 - P0) :=
       mul_le_mul_of_nonneg_left (by linarith) (by linarith)
-    have h3 : (1 - 3 * τ a / 2) * P0 ≤ (1 - 3 * τ a / 2) * ((1 + Π) / 2) :=
+    have h3 : (1 - 3 * τ a / 2) * P0 ≤ (1 - 3 * τ a / 2) * ((1 + Pr) / 2) :=
       mul_le_mul_of_nonneg_left ih (by linarith)
-    nlinarith [mul_nonneg hτ0 hΠ]
+    nlinarith [mul_nonneg hτ0 hPr]
 
 /-- Step (i): `𝔼 |D| ≥ P(D ≠ 0) ≥ (1 - ∏ (1 - τ_i)) / 2`. -/
 theorem abs_lower :
@@ -243,7 +243,10 @@ theorem holder :
     rw [← h2]
     refine uavg_cs (fun ω => by positivity) (fun ω => by positivity) (fun ω => ?_)
     have : |(D ξ univ ω : ℝ)| ^ 2 = (D ξ univ ω : ℝ) ^ 2 := sq_abs _
-    exact le_of_eq (by rw [← this]; ring)
+    refine le_of_eq ?_
+    calc (|(D ξ univ ω : ℝ)| ^ 3) ^ 2 = (|(D ξ univ ω : ℝ)| ^ 2) ^ 3 := by ring
+      _ = ((D ξ univ ω : ℝ) ^ 2) ^ 3 := by rw [this]
+      _ = (D ξ univ ω : ℝ) ^ 2 * (D ξ univ ω : ℝ) ^ 4 := by ring
   rcases hT0.eq_or_lt with h0 | hpos
   · rw [← h0]; simp
   · -- T⁴ ≤ A1² A3² ≤ A1² T A4
@@ -273,7 +276,9 @@ noncomputable def c0 : ℝ := (1 - Real.exp (-2)) / 4
 
 theorem c0_pos : 0 < c0 := by
   unfold c0
-  have : Real.exp (-2) < 1 := by rw [Real.exp_lt_one]; norm_num
+  have : Real.exp (-2) < 1 := by
+    have := Real.exp_lt_exp.2 (show (-2 : ℝ) < 0 by norm_num)
+    rwa [Real.exp_zero] at this
   linarith
 
 theorem c0_le : c0 ≤ 1 / 4 := by
@@ -341,6 +346,7 @@ theorem symmetrization (a : ℝ) :
     simp only [D, bξ, bX, pairEquiv, Equiv.coe_fn_mk]
     push_cast
     rw [Finset.sum_sub_distrib]
+    rfl
   rw [uavg_congr e,
     uavg_equiv pairEquiv (fun p : (∀ i, Ω i) × (∀ i, Ω i) => |bX β p.1 - bX β p.2|)]
   have h1 : uavg (fun p : (∀ i, Ω i) × (∀ i, Ω i) => |bX β p.1 - bX β p.2|)
@@ -372,7 +378,7 @@ theorem bernoulli_anticonc (a : ℝ) :
     have h1 := H.abs_lower
     have hprod : ∏ i, (1 - 2 * (bp β i * (1 - bp β i))) ≤ Real.exp (-(2 * V)) := by
       rw [← hT, ← Finset.sum_neg_distrib, Real.exp_sum]
-      refine Finset.prod_le_prod (fun i _ => ?_) (fun i _ => Real.one_sub_le_exp_neg _)
+      refine Finset.prod_le_prod₀ (fun i _ => ?_) (fun i _ => Real.one_sub_le_exp_neg _)
       nlinarith [sq_nonneg (bp β i - 1 / 2)]
     have hconv : Real.exp (-(2 * V)) ≤ 1 - (1 - Real.exp (-2)) * V := by
       have := convexOn_exp.2 (Set.mem_univ (0 : ℝ)) (Set.mem_univ (-2 : ℝ))

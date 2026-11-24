@@ -31,7 +31,6 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 | G10c | 🔄 **Relecture + nouveauté de G9e** | Steiner, plus long chemin : preuve et articles voisins | G9e |
 | G10d | 🔄 **Relecture de G9c** | Théorèmes A et B sur le comptage des ensembles indépendants | G9c |
 | G10e | 🔄 **Lean : lemme 2 et identité de moyenne** | Pour que le théorème B ne dépende plus d'une hypothèse | G9L |
-| G10f | 🔄 **sep(F\*) et points non relus de l'article** | Note sur le théorème 7.1(ii), annexe A, bibliographie ; borne de séparateur pour F\* | G8R, G9W |
 
 **Consigne de l'utilisateur (24/11) :** dès que les générations 8 et 9 sont terminées, lancer une **génération 10** sur les pistes « pas encore explorées » (section 2) et « en attente » (section 3).
 
@@ -39,7 +38,6 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | Piste | Question précise | Difficulté | Origine |
 |---|---|---|---|
-| 🆕 **Lemme 4 pondéré pour F\*** | Prouver la borne de séparateur pour la formule F\* de la prépublication et pour les feuilles de la sparsification, pour comparer avec le théorème 8.3 de Dias-Lima | Moyenne | Rapport G8R |
 | 🆕 **Problème de Naslund / Hurwitz** | Prouver P(N) ≥ N^(1+ε) ; équivaut à un plancher ρ > 1/2 dans l'algorithme de Claude | Très difficile (circuits non commutatifs) | N1, G5b |
 | ❌ **Tests de parité économiques (Q2)** — fausse sur la famille de référence (G8b, lemme CA) | Tests avec O(n·2^O(k)) incidences au total dans l'annexe D de Claude | Technique | G6c |
 | 🆕 **Erreurs par point, cas non commutatif** | Étendre le lemme de G6d au-delà de la classe commutative | Moyenne | G6d, G7a |
@@ -72,9 +70,9 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | Piste | Raison de l'attente |
 |---|---|
+| ⏸️ **Version 3 de l'article** | À faire en une fois quand G10e (Lean, lemme 2) est terminé : (1) corrections de G10f (facteur b superflu ; dire que la borne de Dias-Lima est meilleure pour les petits groupes ; précisions de l'annexe A ; 4 attributions à adoucir) ; (2) le théorème sep(F\*) ≥ c·n\* et son corollaire, **après relecture adverse** ; (3) mise à jour de la section Lean |
+| ⏸️ **Relecture adverse du théorème sep(F\*)** (G10f) | Niveau P pour l'instant |
 | ⏸️ **Relecture de l'article par un expert humain** | Auteurs naturels à contacter : Dias et Lima. Décision de l'auteur. |
-| ⏸️ **Points nouveaux de la version 2, non relus** | Note de bas de page sur le théorème 7.1(ii) de Dias-Lima ; annexe A (preuves des lemmes A.1/A.2 de Dias-Lima reprises) ; références classiques citées de mémoire |
-| ⏸️ **sep(F\*) ≥ c·n\*** | Laissé comme problème ouvert dans l'article |
 
 | Piste | Raison de l'attente |
 |---|---|
@@ -84,6 +82,7 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | Piste | Résultat |
 |---|---|
+| ✅ Relecture des points non relus de l'article (G10f) | Note 7.1(ii) correcte (2 corrections d'équité) ; annexe A vérifiée ; bibliographie sans entrée fausse |
 | ✅ **Article en français** (G9F) | `resultats/article/main_fr.tex` + PDF (28 pages) ; traduction fidèle, contrôle automatique des comptes (théorèmes, équations, références) |
 | ✅ **Article, version 2** (G9W) | `resultats/article/` : 26 pages, LaTeX + PDF ; les 10 corrections obligatoires du rapport G8R sont traitées ; hypothèse M ≥ n supprimée sur papier (Lean garde n ≤ M) |
 | ✅ Limits §9, modèle produit (G6a) | Réponse négative, 2^Ω(n^(2/3)) ; confirmée par relecture adverse ; note rédigée |
