@@ -1,0 +1,4 @@
+n=2 E0s=1 ha=0 hb=1 dims A,B,M=4,8,6 channels=3
+  N=1  min residual 3.581e-10  maxabs 7.3e-01 (5.1s)
+  N=2  min residual 1.263e-10  maxabs 9.1e-01 (10.7s)
+  N=3  min residual 1.732e+00  maxabs 1.8e+00 (0.5s)

@@ -160,7 +160,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Question précise | Origine |
 |---|---|---|
-| **Étiquettes dans un module de classe (après G24b)** | Réseau A1 regradué, étiquettes dans V_{α/2+L} : borne d'aplatissement 2,674 < 2√2 = 2,828 (non exacte : à une copie elle permet N = 2, le vrai maximum est 1). Calculer le vrai maximum N à 2, 3 copies ; borne de filtration par nombre de copies excitées. Seule fenêtre restante sous 2√2 dans les algèbres de sommets. | G24b |
+| **Étiquettes dans un module de classe (après G24f)** | Bande E0 = 1 fermée (4ρ ≥ 4). Ouvert : E0 ≥ 2, H < 0,83·E0. Le lemme manquant est une forme forte de notre théorème C : rang(Échange − K) ≥ N²/2 − c·r·N pour K de rang de Schmidt r. Il fermerait E0 = 2 et 3. | G24b, G24f |
 
 **Question décisive issue de G24c (24/11) :**
 
@@ -185,6 +185,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Résultat |
 |---|---|
+| ⚠️ **Fenêtre du module de classe** (G24f) | Aucune construction sous 2√2. Bande E0 = 1 fermée par une preuve (4ρ ≥ 4 ; lemme d'échange = théorème 3 de G19b). Reste ouvert : E0 ≥ 2 avec H < 0,83·E0 ; il faudrait le lemme d'échange avec un terme de rang de Schmidt r (c'est notre théorème C dans une autre forme). Heuristique : toute la fenêtre à 4ρ ≥ 4. `code/gen24/g24f/notes.md` |
 | ⚠️ **Plusieurs canaux, algèbres de sommets** (G24b) | Fermé pour A1^n et (A1+A1)^n avec étiquettes dans V′ (nouvelle borne N² ≤ rang F). Nouveau cas ouvert : étiquettes dans le module de classe V_{α/2+L}, borne 2,674 < 2√2, aucune construction. `code/gen24/g24b/notes.md` |
 | ⚠️ **Distance pour q ≥ 2** (G24c) | Borne indépendante de N seulement pour une sous-classe (c ≤ 13p + 4q) ; lemme L2 manquant. Données : (6,6) réalisable numériquement à N = 6 (b(6) = 6 ?). Question décisive : (N, N) reste-t-il réalisable ? Si oui, la droite est la vérité et ρ ≤ 0,683. `code/gen24/g24c/notes.md` |
 | ❌ **Pièces de Hrubeš, lecture non symétrique** (G24a) | Courbe exacte θ = 1 + 2H(b), T = 1 + 2H(0,110 − b) : strictement hors du cercle partout. Limites prouvées du cadre de Clifford : θ, T ≥ 1 et max(θ, T) ≥ 1,5. L'hybride avec l'annexe B ne gagne rien. `code/gen24/g24a/notes.md` |

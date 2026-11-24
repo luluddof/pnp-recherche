@@ -1,0 +1,20 @@
+n=1 E0s=2 ha=0 hb=0 dims A,B,M=2,2,4 channels=2
+  N=1  min residual 4.441e-15  maxabs 1.4e+00 (0.0s)
+  N=2  min residual 4.251e-16  maxabs 2.1e+00 (0.0s)
+  N=3  min residual 2.236e+00  maxabs 1.3e+01 (4.2s)
+  N=4  min residual 3.464e+00  maxabs 7.2e+00 (11.5s)
+n=1 E0s=1 ha=0 hb=1 dims A,B,M=2,2,3 channels=1
+  N=1  min residual 7.772e-16  maxabs 1.3e+00 (0.1s)
+  N=2  min residual 1.414e+00  maxabs 3.2e+00 (0.7s)
+  N=3  min residual 2.646e+00  maxabs 3.9e+00 (0.8s)
+  N=4  min residual 3.742e+00  maxabs 2.3e+00 (1.7s)
+n=1 E0s=2 ha=1 hb=1 dims A,B,M=2,2,4 channels=2
+  N=1  min residual 2.220e-16  maxabs 1.4e+00 (0.1s)
+  N=2  min residual 2.572e-15  maxabs 3.6e+00 (0.1s)
+  N=3  min residual 2.236e+00  maxabs 9.3e+00 (4.4s)
+  N=4  min residual 3.464e+00  maxabs 1.7e+00 (9.6s)
+n=1 E0s=2 ha=0 hb=1 dims A,B,M=2,2,4 channels=1
+  N=1  min residual 8.882e-16  maxabs 1.3e+00 (0.1s)
+  N=2  min residual 1.414e+00  maxabs 2.9e+00 (0.7s)
+  N=3  min residual 2.646e+00  maxabs 3.3e+00 (0.7s)
+  N=4  min residual 3.742e+00  maxabs 6.4e+00 (2.0s)
