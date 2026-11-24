@@ -40,7 +40,6 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
-| G19a | 🔄 **Charges non uniformes sur une instance difficile** | Avec des charges sur les classes à distance de Hamming 1, N = 2^(M/u) (échelon 2). Possible sur un expanseur ? Inégalité de séparateur ; régime intermédiaire. | G18S |
 | G19b | 🔄 **Paires réalisables exactes et profil en escalier** | Frontière exacte (p, q) pour N = 2, 3, 4 ; droite ou cercle ? P(3) = 3 ou 4 ? Lien entre le profil en escalier (G18h) et la courbe T(θ) (G18g). | G18g, G18h |
 | G19c | 🔄 **Le coin ouvert des termes intriqués à N = 3** | r minimal pour « trois étoiles + rang r » sur la grille 2×3, avec un optimiseur étalonné. | G18f |
 | G19d | 🔄 **Lean : théorème A″** | `lean/PnpLean/Article3/EnCours/DFRank.lean`. Résultat central du futur article 3. | G18S |
@@ -115,7 +114,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Question précise | Origine |
 |---|---|---|
-| **Charges non uniformes dans le modèle DF** | Avec des charges sur les classes de paires à distance de Hamming 1, N = 2^(M/u) est atteint : c'est le plancher 1/u (l'échelon 2). Possible seulement sur des réseaux à petits séparateurs équilibrés. Question : peut-on forcer de telles charges sur une instance difficile (expanseur), par un prétraitement, une autre mise en paquets, ou un autre étiquetage ? Ou prouver que (D.6) l'interdit. | G18S |
+| **Le « paquet en escalier » (reste de la piste des charges non uniformes, G19a)** | Étiquetage circulaire : u faisceaux entre classes antipodales sur le 2u-cycle. Encadrement prouvé : φ′M/(2u) − u ≤ log₂ N ≤ min_i M_i. Quel est N ? u = 2 est le problème de Hurwitz ; u = 3 à 3 fils : N = 4 dans le sous-modèle GF(2). Une identité à 2^(o(M)) termes sur un expanseur serait l'échelon 2 ; une borne 2^Ω(M) fermerait la piste. Il faut une méthode autre que l'aplatissement. | G19a |
 | Lean : théorème A″ | Énoncé prêt (corps K, fils, groupes par direction, det ≠ 0 ⇒ 2^|W| ≤ Σ_k 2^(…)). Résultat central du futur article 3. | G18S |
 
 ## 3. En attente
@@ -135,6 +134,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Résultat |
 |---|---|
+| ⚠️ **Charges non uniformes sur une instance difficile** (G19a) | L'ouverture « Hamming 1 » est fermée sur les expanseurs (inégalité de séparateur : coût ≥ 2^(φ′M)). Théorème E : log₂ N ≥ min_i M_i/(2u) − u pour tout étiquetage. Mais l'aplatissement ne peut pas donner M/√u en général (étiquetage circulaire : A″ = M/u exactement). Ouvert : le « paquet en escalier ». `code/gen19/g19a/notes.md` |
 | ✅ **Borne de rang dans le modèle DF** (G18e, relu par G18S) | Théorème A′ confirmé (P+), forme plus forte A″ : N ≥ 2^((0,564−o(1))·M/√u) pour des charges presque uniformes. Avec la borne supérieure de l'annexe D : 2^Θ(M/√u). « √log est optimal » est un théorème (côté inférieur) dans une famille précise. **Faux pour des charges non uniformes : N = 2^(M/u) est alors atteint.** Énoncé prêt pour Lean. `code/gen18/g18e/`, `code/gen18/g18s/` |
 | ⚠️ **Termes intriqués, question E1** (G18f) | Non tranchée. Théorème F (papier, non relu) : r ≥ s·Q·(M − b·s) ; négatif pour un croisement (ferme le point ouvert de G14e) et pour 2×3 hors d'un coin. E1 n'est pas une question de rang asymptotique. Le calcul λ = 2 n'est pas fait (jours de calcul). Plus petit cas ouvert : P_N = (rang ≤ N^(2−δ)) + trois étoiles. `code/gen18/g18f/notes.md` |
 | ❌ **Réfutation des 3-CNF aléatoires** (G18i) | L'obstacle central ne bouge pas. Carte temps contre densité mise à jour : les algorithmes de 2026 sont les meilleurs seulement pour Δ ≤ c·log n (2^(O(n/√(Δ log n)))). Énoncé candidat : réfutations IPS de taille 2^(O(km/√log m)) (une étape non contrôlée). Rien pour Extended Frege. `code/gen18/g18i/notes.md` |

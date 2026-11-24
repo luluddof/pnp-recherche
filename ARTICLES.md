@@ -84,8 +84,12 @@ Ce fichier liste **tout ce qui peut entrer dans un article**, présent ou futur.
 | Proposition B′ (borne au niveau de la conception), lemme T | P | `code/gen18/g18d/notes.md` |
 | Invariants de Smith des blocs de Cauchy : 2^((a−i+1)+2k+2v₂(k!)) | N (23 cas exacts) ; conjecture C1 | `code/gen18/g18d/notes.md` |
 | Gain constant possible sur l'annexe D (modes 4 fois redondants, effilage 1/√3) | E, non vérifié | `code/gen18/g18d/notes.md` |
+| Les contraintes de charge viennent de la conception (lemme D.3, (D.6)), pas de l'instance | lecture de la source | `code/gen19/g19a/notes.md` |
+| Inégalité de séparateur : sur un expanseur, les charges « Hamming 1 » coûtent ≥ 2^(φ′M) | P | `code/gen19/g19a/notes.md` |
+| Théorème E : log₂ N ≥ min_i M_i/(2u) − u pour tout étiquetage | P | `code/gen19/g19a/notes.md` |
+| Limite de la méthode : sur l'étiquetage circulaire, A″ = M/u exactement ; l'aplatissement ne donne pas M/√u en général | P + N | `code/gen19/g19a/notes.md` |
 
-**Ce qui manque.** La vérification Lean de A″. Une borne pour les charges non uniformes sur les instances difficiles (G19a en cours). Les schémas à plusieurs niveaux et la re-sommation non énumérative. La borne supérieure de l'annexe D n'est pas vérifiée.
+**Ce qui manque.** La vérification Lean de A″ (G19d en cours). Une borne 2^Ω(M/√u) pour les étiquetages non uniformes : G19a prouve seulement M/(2u) − u, et montre que l'aplatissement ne peut pas faire mieux en général (problème ouvert du « paquet en escalier »). Les schémas à plusieurs niveaux et la re-sommation non énumérative. La borne supérieure de l'annexe D n'est pas vérifiée.
 
 ---
 
@@ -153,3 +157,4 @@ Ce fichier liste **tout ce qui peut entrer dans un article**, présent ou futur.
 | Date | Changement |
 |---|---|
 | 24/11/2026 | Création du registre après la génération 18. Articles 1, 2, 3 ; candidats B1 à B4. |
+| 24/11/2026 | G19a : quatre éléments ajoutés à l'article 3 (origine des charges, inégalité de séparateur, théorème E, limite de l'aplatissement). |

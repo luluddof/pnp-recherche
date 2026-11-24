@@ -1,0 +1,5 @@
+/tmp/claude-0/-home-user-pnp-recherche/2d12e629-e6d2-542b-bfc0-8b766f57383f/scratchpad/gen19/g19a/c2_worst.py:6: SyntaxWarning: invalid escape sequence '\ '
+  mode 'pm': types in {+-1}^u (every wire cut by every direction, m_i = 1);  mode 'tern': types in {-1,0,1}^u \ 0."""
+mode=pm u=3 types=4: uniform weights V/m = 0.5000   (1/u=0.3333, 0.564/sqrt u=0.3256, 1/sqrt u=0.5774)
+  [   17s] best V/min m = 0.3333  (u*best=1.000, sqrt(u)*best=0.577)  support: (1, -1, -1):0.333; (1, -1, 1):0.333; (1, 1, -1):0.333
+RESULT mode=pm u=3: min found V/min_i m_i = 0.3333; u*V = 1.000; sqrt(u)*V = 0.577

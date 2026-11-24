@@ -1,0 +1,30 @@
+u=2 p=[1. 0.]: LP value 0.500000  formula 0.500000  OK
+u=2 p=[0. 1.]: LP value 0.500000  formula 0.500000  OK
+u=2 p=[0.4 0.6]: LP value 0.500000  formula 0.500000  OK
+u=2 p=[0.897 0.103]: LP value 0.500000  formula 0.500000  OK
+u=2 p=[0.252 0.748]: LP value 0.500000  formula 0.500000  OK
+u=2 p=[0.667 0.333]: LP value 0.500000  formula 0.500000  OK
+u=3 p=[1. 0. 0.]: LP value 0.333333  formula 0.333333  OK
+u=3 p=[0. 1. 0.]: LP value 0.333333  formula 0.333333  OK
+u=3 p=[0. 0. 1.]: LP value 0.500000  formula 0.500000  OK
+u=3 p=[0.159 0.178 0.663]: LP value 0.443908  formula 0.443908  OK
+u=3 p=[0.648 0.352 0.   ]: LP value 0.333356  formula 0.333356  OK
+u=3 p=[0.665 0.021 0.314]: LP value 0.385586  formula 0.385586  OK
+u=3 p=[0.429 0.429 0.143]: LP value 0.357143  formula 0.357143  OK
+u=4 p=[1. 0. 0. 0.]: LP value 0.250000  formula 0.250000  OK
+u=4 p=[0. 1. 0. 0.]: LP value 0.250000  formula 0.250000  OK
+u=4 p=[0. 0. 1. 0.]: LP value 0.375000  formula 0.375000  OK
+u=4 p=[0. 0. 0. 1.]: LP value 0.375000  formula 0.375000  OK
+u=4 p=[0.182 0.676 0.076 0.066]: LP value 0.267734  formula 0.267734  OK
+u=4 p=[0.554 0.014 0.05  0.382]: LP value 0.304065  formula 0.304065  OK
+u=4 p=[0.23  0.515 0.123 0.133]: LP value 0.281930  formula 0.281930  OK
+u=4 p=[0.267 0.4   0.267 0.067]: LP value 0.291667  formula 0.291667  OK
+u=5 p=[1. 0. 0. 0. 0.]: LP value 0.200000  formula 0.200000  OK
+u=5 p=[0. 1. 0. 0. 0.]: LP value 0.200000  formula 0.200000  OK
+u=5 p=[0. 0. 1. 0. 0.]: LP value 0.300000  formula 0.300000  OK
+u=5 p=[0. 0. 0. 1. 0.]: LP value 0.300000  formula 0.300000  OK
+u=5 p=[0. 0. 0. 0. 1.]: LP value 0.375000  formula 0.375000  OK
+u=5 p=[0.347 0.323 0.061 0.04  0.229]: LP value 0.250142  formula 0.250142  OK
+u=5 p=[0.082 0.129 0.159 0.187 0.444]: LP value 0.312165  formula 0.312165  OK
+u=5 p=[0.029 0.28  0.215 0.362 0.114]: LP value 0.277670  formula 0.277670  OK
+u=5 p=[0.161 0.323 0.323 0.161 0.032]: LP value 0.254032  formula 0.254032  OK

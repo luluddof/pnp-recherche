@@ -1,0 +1,7 @@
+staircase u=2: V = 0.500000   1/u = 0.500000
+staircase u=3: V = 0.333333   1/u = 0.333333
+staircase u=4: V = 0.250000   1/u = 0.250000
+staircase u=5: V = 0.200000   1/u = 0.200000
+staircase u=6: V = 0.166667   1/u = 0.166667
+staircase u=7: V = 0.142857   1/u = 0.142857
+staircase u=8: V = 0.125000   1/u = 0.125000
