@@ -1,0 +1,11 @@
+1. min_N<=1200 E|X-X'|/sqrt(N) = 0.5 at N = 1 (claim >= 0.378)
+2. Lemma H  n=24 cut-measure uniform     : 360 (t,omega,A) checks pass, min slack 2, tight 0
+2. Lemma H  n=24 cut-measure clause-dep  : 360 (t,omega,A) checks pass, min slack 1, tight 0
+2. Lemma H  n=24 global-sum              : 360 (t,omega,A) checks pass, min slack 2, tight 0
+2. Lemma H  n=24 random dense            : 360 (t,omega,A) checks pass, min slack 0, tight 24
+2. Lemma H  n=30 cut-measure uniform     : 930 (t,omega,A) checks pass, min slack 3, tight 0
+2. Lemma H  n=30 cut-measure clause-dep  : 930 (t,omega,A) checks pass, min slack 4, tight 0
+2. Lemma H  n=30 global-sum              : 930 (t,omega,A) checks pass, min slack 0, tight 1
+2. Lemma H  n=30 random dense            : 930 (t,omega,A) checks pass, min slack 0, tight 31
+3. shadow n=3000 s=208 g=15: r_h=637, rho=9555, max s_t=255, mean def=91.8 (bound sqrt(6bs)/2*g=458.9), max (a-X)/sqrt(bs ln n)=0.722 (<9), sum N^w=0
+3. shadow n=8000 s=400 g=20: r_h=935, rho=18700, max s_t=464, mean def=175.6 (bound sqrt(6bs)/2*g=848.5), max (a-X)/sqrt(bs ln n)=0.732 (<9), sum N^w=0

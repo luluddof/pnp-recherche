@@ -13,7 +13,6 @@ Légende : 🔄 en cours · 🆕 pas encore explorée · ⏸️ en attente · �
 
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
-| G8a | 🔄 **Terminer Limits §9** | (a) Modèle DP corrigé : enlever l'hypothèse de régularité. (b) La borne n^(2/3) du modèle produit est-elle optimale ? | G6a, G7b |
 | G8d | 🔄 **Turán sur l'hypercube** | Prouver ρ(∞, d) ≥ poly(1/d) dans la méthode d'OpenAI (√log n optimal) | G7a |
 
 ## 2. Pas encore explorées
@@ -35,6 +34,10 @@ Légende : 🔄 en cours · 🆕 pas encore explorée · ⏸️ en attente · �
 | 🆕 **Formes closes aux niveaux profonds (suite de G8c)** | La valeur des sous-appels de l'algorithme de Claude sur une entrée « épinglée » a une forme close calculable en temps polynomial au niveau 1 (vérifié). Si cela reste vrai aux niveaux profonds, Extended Frege réfuterait toute 3-CNF creuse insatisfaisable en taille 2^(δn). Vérifier aussi l'hypothèse (S) : degré ≤ 1 en chaque table de poids | Moyenne à difficile | G8c |
 
 | 🆕 **Q1\* (suite de G8b)** | Compter les ensembles indépendants de tout graphe à n·polylog(n) arêtes en temps 2^O(n/√log n) ; enlèverait le facteur log log n de l'algorithme de Claude | Difficile ; aucune borne inférieure connue ne bloque | G8b |
+
+| 🆕 **Dépasser n^(2/3) dans le modèle produit** | La méthode du déterminant témoin est limitée à n^(2/3) (prop. S de G8a). Il faut une contrainte nouvelle qui couple les points ou qui utilise la structure polynomiale. Ou construire un schéma de coût n^(2/3) : il a besoin de Ω(n^(2/3)) points | Difficile | G8a |
+| 🆕 **Borne de Rado pour le modèle DP corrigé** | nullité ≥ max_S(\|S\| − dim Σ U_ω(v)) contient le lemme 1 et le lemme H ; pourrait enlever l'hypothèse de régularité | Moyenne | G8a |
+| 🆕 **Relecture adverse de G8a** (théorème B2, prop. S, lemme H) | Niveau P pour l'instant | Facile à lancer | G8a |
 
 ## 3. En attente
 

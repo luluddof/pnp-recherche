@@ -38,6 +38,7 @@ Ce journal est un **résumé**. Un résumé ne permet pas de vérifier une preuv
 | G6d lemme sur les erreurs par point | — | P | `code/gen6/g6d/notes.md` |
 | G7a famille « par morceaux », barrière A | Classe commutative seulement | P (+ N pour ℓ ≤ 10) | `code/gen7/g7a/notes.md` |
 | G7d lemme S, prop. E | Classes restreintes de réductions | E | `code/gen7/g7d/` |
+| G8a théorème B2, prop. S, lemme H | Modèle produit et modèle DP corrigé ; (a) et (b) restent ouverts | P | `code/gen8/g8a/notes.md` |
 | G8b lemme CA, échec de Q2 | Tests construits sur les clauses d'arêtes seulement | P (+ N) | `code/gen8/g8b/` |
 | G8c réfutations EF | **Conditionnel** à l'hypothèse (S) non vérifiée | E | `code/gen8/g8c/` |
 | G4b, G4c, G5a (murs des méthodes de 2026) | Chaque mur vaut **seulement dans le modèle étudié** | E à P | `code/gen4/`, `code/gen5/` |
@@ -271,6 +272,7 @@ Simplification proposée : l'hypothèse M ≥ n peut être supprimée.
 
 - **G8c ✅ (conditionnel) :** aucune borne 2^o(n) prouvée en EF, TC⁰-Frege ou Frege. Observation nouvelle : pour δ fixé, la récursion de Claude a une profondeur constante ; Count(F) est une formule arithmétique de profondeur constante c(δ,Δ) et de taille 2^(δn)·poly(n). Énoncé conditionnel : sous l'hypothèse (S) (degré ≤ 1 en chaque table de poids, à vérifier) et des preuves EF de taille s de Pin_F(b), EF réfute F en taille 2s + poly(n)·2^(δn). Point ouvert : les formes closes des sous-appels aux niveaux profonds (vérifié au niveau 1 : 2 000 cas + les 4 096 cas de l'identité des huit carrés). Dossier : `code/gen8/g8c/`.
 - **G8b ❌ (avec résultats) :** Q1′ (compter les ensembles indépendants en 2^O(n/d)) est nécessaire mais pas suffisante ; la bonne cible est **Q1\*** : compter les ensembles indépendants de tout graphe à n·polylog(n) arêtes en 2^O(n/√log n). Prouvé : le réseau direct est pire (U = Θ(nd)) ; **la voie des tests de parité (Q2) est fausse** sur la famille de référence (lemme CA). Aucune borne inférieure ne bloque Q1\* depuis la réfutation de l'ETH. Expériences (n ≤ 110) : travail ≈ 0,22·n·log₂²d/d. Dossier : `code/gen8/g8b/`.
+- **G8a ⚠️ (niveau P, non relu) :** ni (a) ni (b) n'est fermé. **Théorème B2** (témoin adverse) : K = max_t(ρ_t+q_t+1) > min(n/4, c_b·sep(F)/√|X|) ; donc un schéma qui atteint n^(2/3) a besoin de |X| = Ω(n^(2/3)) points et de plans qui changent d'un point à l'autre. **Proposition S (barrière) :** la méthode du déterminant témoin ne peut pas dépasser n^(2/3) ; la perte √s est intrinsèque à la méthode. Aucun schéma réel de coût n^(2/3) trouvé (les familles testées retombent à Θ(n)). Modèle DP corrigé : **lemme H** (les régions en surplus portent leur surplus sur leur frontière) et corollaire H1 ; l'hypothèse de régularité n'est pas enlevée ; proposition P (barrière par point) seulement esquissée. Piste suivante : la borne de Rado. Tests : 5 160 vérifications du lemme H (n = 24 et 30), qui détectent des erreurs mais ne prouvent rien. Dossier : `code/gen8/g8a/`.
 
 ## 4 bis. Pistes restantes pour chercher plus loin
 
