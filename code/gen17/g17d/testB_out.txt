@@ -1,0 +1,8 @@
+Test A (averaging identity, q=2,3, l<=4): OK
+Test B: runs 149 violations 0 refined-bound tight in 50
+Test A (averaging identity, q=2,3, l<=4): OK
+Test B: runs 150 violations 0 refined-bound tight in 37
+Test A (averaging identity, q=2,3, l<=4): OK
+Test B: runs 148 violations 0 refined-bound tight in 42
+Test A (averaging identity, q=2,3, l<=4): OK
+Test B: runs 148 violations 0 refined-bound tight in 43

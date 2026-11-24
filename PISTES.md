@@ -39,7 +39,6 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
 | G17a | 🔄 **Relecture adverse de G14b** (contraction de tenseurs) | Reconstruction de l'annexe D, modèles DF et VT, théorèmes A et B : le potentiel est-il réel ? | G14b |
-| G17d | 🔄 **Relecture adverse de G14a, puis Lean** | Théorème au niveau de la sortie (effondrement par L, R′) et degré réduit : justes ? L'hypothèse « mineurs non singuliers » cache-t-elle la difficulté ? Si juste : `Article2/EnCours/OutputLevel.lean`. | G14a |
 | G17e | 🔄 **Les deux points ouverts de l'article 2** | (A) L'écart O(log ℓ) entre la borne et la construction : optimums exacts à petite taille, argument à deux moitiés (blocs 01 et 10). (B) Degré certifié par annulation : deg P = Θ(nd) est-il forcé ? | G14d, G14a |
 
 Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g18d` (erreur de numéro au lancement ; la génération est bien la 17).
@@ -76,7 +75,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | 🆕 **Fermer l'écart d'un facteur log ℓ (article 2)** | Construction non symétrique en poids qui remplit les bandes, ou preuve qu'il n'en existe pas | Moyenne à difficile | G14d |
 
-| 🆕 **Relecture adverse des théorèmes de G14a** (niveau sortie, degré réduit) et de G14b (contraction de tenseurs) | Niveau P ; à faire avant les articles 2 et 3 | Facile à lancer | G14a, G14b |
+| 🔄 Relecture adverse de G14b (contraction de tenseurs) | En cours : G17a (section 1). La relecture de G14a est faite : G17d (section 4). |
 | 🆕 **Degré certifié par annulation (article 2)** | Dernière échappatoire ouverte : 1_F comme produit de o(n) facteurs creux (polynômes probabilistes) | Difficile | G14a |
 
 **Nouvelles pistes issues de G17c (24/11) :**
@@ -103,9 +102,10 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Résultat |
 |---|---|
+| ✅ **Relecture adverse de G14a + Lean** (G17d) | Théorème au niveau de la sortie confirmé et formalisé (`Article2/OutputLevel.lean`) : rang de A(0)[budget] ≤ Σ rang E_k, tout corps, sans factorisation. L'hypothèse « mineur non singulier » est nécessaire en général (contre-exemple), mais se retire à coût 1/(2Δ−1) pour les matrices creuses (papier). Degré réduit confirmé. |
 | ⚠️ **Article 2 contre la prépublication d'OpenAI** (G17c) | Le cadre existe dans la prépublication (après traduction ; vérifié exactement pour Q ≤ 6). Nouveauté confirmée. **Mais** le coût de l'erreur diffère (tuples de mesures, pas n^rang), et l'annexe D échappe au cadre (modes 2-adiques, récursion). L'énoncé « perte optimale » vaut seulement dans le « cadre X » à un niveau sur un corps : `code/gen17/g17c/rapport.md` |
 | ✅ **Article 1 contre la prépublication d'OpenAI** (G17b) | Aucune hypothèse contredite. Règle de copie = §2.8 ; elle s'applique aux feuilles de la sparsification, pas à F. Définition 5.1 = généralisation fidèle. Coût réel = type produit. Le plan réel n'est pas uniforme en la variable. Sur le plan réel, le théorème B est vrai par q seul : il contraint les nouveaux plans à petits groupes. 7 corrections pour la v3 : `code/gen17/g17b/rapport.md` |
-| ✅ **Bibliothèque d'outils réutilisables** | `lean/PnpLean/Outils.lean` : 11 énoncés génériques vérifiés par Lean et absents de Mathlib. Reste : généraliser de ℚ à tout corps, remplacer `uavg` par `Finset.expect`, licence (décision de l'auteur). Voir `lean/OUTILS.md` |
+| ✅ **Bibliothèque d'outils réutilisables** | `lean/PnpLean/Outils.lean` : 13 énoncés génériques vérifiés par Lean et absents de Mathlib. Reste : généraliser de ℚ à tout corps, remplacer `uavg` par `Finset.expect`, licence (décision de l'auteur). Voir `lean/OUTILS.md` |
 | ✅ **Lean : théorème à plusieurs points** (G16L) | `MultiPoint.sum_rank_ge` : forme la plus forte du théorème de l'article 2 (borne doublée, tout corps, placement quelconque) |
 | ✅ Modèle DP valide (G14c) | Modèle « rang d'interface » : valide pour les DP à tables d'interface, non dégénéré ; borne 2^Ω(√n) seulement (non relu) |
 | ✅ Échappatoires de l'article 2 (G14a) | Corps finis : fermé ; L/R′ : fermé sur papier ; D < nd : en partie ; la caractéristique 2 gagne seulement une constante sur de petits cas |

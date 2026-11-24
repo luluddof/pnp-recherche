@@ -36,6 +36,8 @@ cd lean && lake exe cache get && lake build PnpLean.Outils
 | Nom | Énoncé | Limite |
 |---|---|---|
 | `sum_rank_ge_multipoint` | J de degré ≤ d avec J(0) = X^{⊗ℓ} ; points distincts non nuls τ_k de directions c(k) ; J(τ_k) = K_k + E_k avec K_k[x,y] = 0 si x et y diffèrent en c(k). Alors Σ_x max(0, N − d − 2μ(x)) ≤ Σ_k rang E_k. | Tout corps |
+| `rank_eval_zero_le` | A matrice de polynômes de forme quelconque ; préfacteurs f_u, g_v de valeur 1 en 0 ; deg(f_u·A_uv·g_v) < N. Si en N points distincts les préfacteurs annulent A(τ_k) − E_k, alors rang A(0) ≤ Σ_k rang E_k. | Tout corps |
+| `rank_submatrix_le_sum_rank` | Version avec étiquettes dans Q^ℓ et budgets : le rang d'une sous-matrice de A(0) est ≤ Σ_k rang E_k. | Tout corps |
 | `sum_rank_ge_N2` | Forme à deux paramètres, un point par direction. | Tout corps |
 | `sum_rank_ge_block` | Forme par blocs : (\|T\| − d)·2^(ℓ−\|S\|) ≤ Σ_t rang E_t. | Sur ℚ |
 | `four_bad_edges` | Sur le cube Q_{d+2}, au moins 4 mauvaises arêtes. | Sur ℚ |

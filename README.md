@@ -11,7 +11,7 @@ chercher un algorithme polynomial pour 3-SAT, et comprendre pourquoi chaque voie
 - `resultats/brouillons/pre-v3/` : **brouillon** d'une future version 3 (pas l'article officiel), fait pour une vérification de la portée par une IA indépendante. Voir `LISEZ-MOI.md` dans ce dossier.
 - `resultats/note_limits_s9.md` (version 1, remplacée par l'article) : note mathématique (en anglais) sur le seul résultat nouveau confirmé, une réponse négative à la question ouverte du §9 de Dias-Lima (arXiv:2611.00517). **Pas encore relue par des experts humains.**
 - `lean/` : vérifications Lean 4 + Mathlib, **classées par article** (`lean/README.md`). `PnpLean/Article1/` : partie déterministe de l'article 1, sans `sorry` (`cd lean && lake exe cache get && lake build`). `PnpLean/Article2/EnCours/` : travail en cours pour un futur article 2.
-- `lean/OUTILS.md` : **outils réutilisables** par d'autres chercheurs (11 énoncés génériques vérifiés par Lean, absents de Mathlib), rassemblés dans `lean/PnpLean/Outils.lean`.
+- `lean/OUTILS.md` : **outils réutilisables** par d'autres chercheurs (13 énoncés génériques vérifiés par Lean, absents de Mathlib), rassemblés dans `lean/PnpLean/Outils.lean`.
 - `PISTES.md` : toutes les pistes de recherche (en cours, pas encore explorées, fermées). **À consulter en premier pour savoir où on en est.**
 - `resultats/rapport_relecture_G8R.md` : rapport de relecture indépendant de la note (recommandation : révision majeure).
 - `JOURNAL.md` : toutes les voies explorées, les résultats, les causes des échecs, l'actualité 2026 et les pistes restantes.

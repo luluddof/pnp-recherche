@@ -7,4 +7,5 @@ import PnpLean.Article2.SqrtLog
 import PnpLean.Article2.Consequences
 import PnpLean.Article2.AnyField
 import PnpLean.Article2.MultiPoint
+import PnpLean.Article2.OutputLevel
 import PnpLean.Outils

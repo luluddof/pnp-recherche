@@ -4,6 +4,7 @@ import PnpLean.Article2.PerPoint
 import PnpLean.Article2.QdPlus2
 import PnpLean.Article2.AnyField
 import PnpLean.Article2.MultiPoint
+import PnpLean.Article2.OutputLevel
 
 /-!
 # PnpLean.Outils — reusable tools
@@ -68,6 +69,19 @@ are distinct and nonzero, each with a direction `c k`.  If `J(τ k) = K k + E k`
 `x (c k) = 1` (truncated subtraction in `ℕ`). -/
 alias sum_rank_ge_multipoint := MultiPoint.sum_rank_ge
 
+/-- **Rank at zero from errors at `N` points, any field, any shape.**  `A` is a matrix of
+polynomials, `f u` and `g v` are row and column prefactors with value `1` at `0`, and
+`f u * A u v * g v` has degree `< N`.  If at each of `N` distinct points `τ k` the prefactors kill
+`A(τ k) - E k` entrywise, then `rank A(0) ≤ ∑ k, rank (E k)`.  (Entrywise Lagrange
+interpolation.) -/
+alias rank_eval_zero_le := OutputLevel.rank_eval_zero_le
+
+/-- **Rank of a submatrix of `A(0)` from label-diagonal parts plus errors.**  Rows and columns
+carry labels in `Q^ℓ`; `A(τ k) = B k + E k` with `B k u v = 0` when the `k`-th labels differ;
+entry degrees `≤ d + p u + q v`.  For symbol sets `S k` and budgets `m₁ + m₂ + d < ℓ`, the
+submatrix of `A(0)` on the rows and columns within budget has rank `≤ ∑ k, rank (E k)`. -/
+alias rank_submatrix_le_sum_rank := OutputLevel.rank_submatrix_le_sum_rank
+
 /-- **Sum of ranks, one point per direction, two-parameter form, any field.** -/
 alias sum_rank_ge_N2 := AnyField.sum_rank_ge_N2
 
@@ -95,3 +109,5 @@ end PnpOutils
 #print axioms PnpOutils.sum_rank_ge_block
 #print axioms PnpOutils.four_bad_edges
 #print axioms PnpOutils.card_subcube
+#print axioms PnpOutils.rank_eval_zero_le
+#print axioms PnpOutils.rank_submatrix_le_sum_rank
