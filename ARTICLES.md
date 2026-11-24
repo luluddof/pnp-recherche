@@ -1,0 +1,155 @@
+# Registre des articles possibles
+
+Ce fichier liste **tout ce qui peut entrer dans un article**, présent ou futur. Il est mis à jour à chaque génération.
+
+**Règle de l'auteur (24 novembre 2026).** On attend la validation de l'article 1 (relecture de F. Dias) avant d'écrire en entier les articles suivants. La recherche, les relectures et Lean continuent.
+
+**Règle de ce registre.** Rien n'est inventé. Un résultat entre dans la partie A ou B seulement s'il existe, avec un fichier dans le dépôt. La partie C liste ce qui n'est **pas** assez pour un article, pour que personne ne le présente comme tel.
+
+**Niveaux de fiabilité** (comme dans `JOURNAL.md`) : **L** = vérifié par Lean ; **P+** = preuve refaite par un relecteur IA de la même famille (pas indépendant) ; **P** = preuve écrite, non relue ; **E** = esquisse ; **N** = calculs seulement. **Aucun résultat n'est relu par un expert humain.**
+
+**Limite commune.** Tous ces résultats parlent des méthodes de deux prépublications d'octobre 2026 (OpenAI, Claude/Anthropic), qui ne sont pas vérifiées. Aucun ne dit rien sur P contre NP.
+
+---
+
+## A. Articles en cours ou prévus
+
+### Article 1 — Schémas « produit de clauses » (réponse au §9 de Dias-Lima)
+
+| | |
+|---|---|
+| **État** | Version 2 envoyée à F. Dias. Version 3 **en attente** de son retour. |
+| **Fichiers** | `resultats/article/` (v2, anglais et français) ; `resultats/brouillons/pre-v3/` (brouillon) ; `lean/PnpLean/Article1/` |
+| **Résultat central** | Théorème B : ρ_t + q_t + 1 > min(c_b·sep(F)/√s_t, 2n/3 − s_t). Corollaire : coût 2^Ω(n^(2/3)) dans le modèle de type produit. **Niveau L** pour les deux théorèmes et tous leurs lemmes. |
+| **Sur papier seulement** | Lemme sur les 3-CNF aléatoires, corollaire asymptotique, section F\* (P+). |
+
+**Matière prête pour la version 3 :**
+
+| Élément | Niveau | Fichier |
+|---|---|---|
+| Les deux théorèmes sans l'hypothèse n ≤ M | L | `lean/PnpLean/Article1/Extras.lean` |
+| Lemme d'espérance du déficit, anti-concentration | L | `Lemma2.lean`, `Anticonc.lean` |
+| Schéma trivial du modèle de type PD | L | `TrivialScheme.lean` |
+| Section F\* (η\* = 2,418·10⁻⁴) | P+ | brouillon pré-v3, §6 |
+| 7 corrections tirées de la prépublication elle-même | lecture de la source | `code/gen17/g17b/rapport.md` |
+| Point de portée : sur le plan réel d'OpenAI le théorème B est vrai par q seul ; il contraint les nouveaux plans à petits groupes | lecture de la source | `code/gen17/g17b/rapport.md` |
+| Modèle « rang d'interface » pour les vrais programmes dynamiques (borne √n) | P, non relu | `code/gen14/g14c/notes.md` |
+
+### Article 2 — Erreurs par point dans la route d'interpolation d'OpenAI
+
+| | |
+|---|---|
+| **État** | Pas de texte. Rédaction en attente (validation de l'article 1). |
+| **Fichiers** | `lean/PnpLean/Article2/` ; `code/gen6/g6d/`, `code/gen11/g11b/`, `code/gen14/g14a/`, `code/gen14/g14d/`, `code/gen17/g17c/`, `code/gen17/g17d/`, `code/gen17/g17e/`, `code/gen18/g18b/`, `code/gen18/g18r/` |
+| **Résultat central** | Pour J(t) de degré ≤ d avec J(0) = X^{⊗ℓ} et J(τ_k) = K_k + E_k : Σ_k rang E_k ≥ Σ_x max(0, N − d − 2μ(x)). Tout corps, plusieurs points par direction. **Niveau L.** |
+
+**Matière disponible :**
+
+| Élément | Niveau | Fichier |
+|---|---|---|
+| Théorème à plusieurs points, tout corps | L | `MultiPoint.lean`, `AnyField.lean` |
+| Théorème au niveau de la sortie (effondrement par L, R′), degrés non uniformes | L (partie déterministe) ; P (moyenne sur S, lemme glouton 1/(2Δ−1)) | `OutputLevel.lean`, `code/gen17/g17d/` |
+| Lemme Q_{d+2} (4 mauvaises arêtes) | L | `QdPlus2.lean` |
+| Nouveauté : ni la prépublication, ni O'Donnell, ni Dias-Lima n'ont cette borne | lecture des sources | `code/gen17/g17c/rapport.md` |
+| Définition du « cadre X » (6 conditions) où « perte √log optimale » est un énoncé juste | lecture de la source | `code/gen17/g17c/rapport.md` |
+| Théorème du temps de calcul (hypothèses H1–H4), exposant Ω(n(loglog n)²/√log n) | P | `code/gen14/g14d/notes.md` |
+| Borne inférieure selon la charge B^(Mρ) : Ω(n√(loglog n/log n))·min(ln B, loglog n) | P+ (conditionnel à G14d) | `code/gen18/g18b/`, `code/gen18/g18r/` |
+| **Borne supérieure nouvelle :** évaluateur modulo 3, exposant (12,6 + o(1))·n·lnln n/√ln n, pour la décision aléatoire et #F mod 3 sur les 3-CNF à occurrences bornées | P+ (conditionnel aux §3–4 de la prépublication) | `code/gen18/g18b/`, `code/gen18/g18r/` |
+| Dualité de quadrature, lemme d'élagage | P | `code/gen17/g17e/notes.md` |
+
+**Ce qui manque.** L'écart O(log ℓ) entre la borne et la construction (ouvert). Le degré certifié par annulation (ouvert). Le théorème du temps de calcul refait avec le coût réel de la prépublication. L'écart √loglog n entre la borne supérieure et la borne inférieure pour une charge constante.
+
+**Portée à écrire.** La conclusion vaut dans un cadre à un niveau sur un corps. La route principale de la prépublication (annexe D) est hors de ce cadre.
+
+### Article 3 — Limites de la route « contraction de tenseurs » d'OpenAI (annexe D)
+
+| | |
+|---|---|
+| **État** | Pas de texte. Le résultat central existe depuis la génération 18. |
+| **Fichiers** | `code/gen14/g14b/`, `code/gen17/g17a/`, `code/gen18/g18a/`, `code/gen18/g18d/`, `code/gen18/g18e/`, `code/gen18/g18s/` ; Lean en cours (G19d) |
+| **Résultat central** | Théorème A″ : dans le modèle DF, log₂ N ≥ min_i ½·Σ_g |e1_i(g) − e2_i(g)|. Pour des charges presque uniformes : N ≥ 2^((0,564 − o(1))·M/√u). **Niveau P+.** Formalisation Lean lancée. |
+
+**Matière disponible :**
+
+| Élément | Niveau | Fichier |
+|---|---|---|
+| Reconstruction fidèle de l'annexe D ; modèle DF | P+ | `code/gen14/g14b/`, `code/gen17/g17a/` |
+| Théorème A (ancien, 2^(2M/4^u)) | P+ | `code/gen17/g17a/rapport.md` |
+| Théorèmes A′ et A″ | P+ | `code/gen18/g18e/`, `code/gen18/g18s/` |
+| Famille précise où « √log est optimal » est un théorème (côté inférieur) | P+ | `code/gen18/g18s/notes.md` |
+| Contre-exemple : avec des charges non uniformes, N = 2^(M/u) est atteint | P+ (petits cas exacts) | `code/gen18/g18s/notes.md` |
+| Précision Θ(M·D_t/u) optimale pour la reconstruction boîte noire (constante ≈ 12) | P+ | `code/gen17/g17a/rapport.md` |
+| La structure des noyaux n'ajoute rien à la précision (rang plein ⇒ même besoin) | N (17 cas) | `code/gen18/g18a/notes.md` |
+| Récurrence de l'annexe D : la racine domine ; la profondeur achète √loglog | P | `code/gen18/g18d/notes.md` |
+| Proposition B′ (borne au niveau de la conception), lemme T | P | `code/gen18/g18d/notes.md` |
+| Invariants de Smith des blocs de Cauchy : 2^((a−i+1)+2k+2v₂(k!)) | N (23 cas exacts) ; conjecture C1 | `code/gen18/g18d/notes.md` |
+| Gain constant possible sur l'annexe D (modes 4 fois redondants, effilage 1/√3) | E, non vérifié | `code/gen18/g18d/notes.md` |
+
+**Ce qui manque.** La vérification Lean de A″. Une borne pour les charges non uniformes sur les instances difficiles (G19a en cours). Les schémas à plusieurs niveaux et la re-sommation non énumérative. La borne supérieure de l'annexe D n'est pas vérifiée.
+
+---
+
+## B. Candidats à un autre article (matière réelle, mais incomplète)
+
+### B1 — Note « plus long chemin et plus long cycle en 2^(o(n)) sur les graphes creux »
+
+| | |
+|---|---|
+| **Résultat** | Conséquence des prépublications : algorithmes sous-exponentiels pour le plus long chemin et le plus long cycle sur les graphes creux. |
+| **Niveau** | P+ (preuve confirmée par G10c, environ 570 000 vérifications de l'identité de comptage). |
+| **Fichiers** | `code/gen9/g9e/consequences.md`, `code/gen10/g10c/` |
+| **Limites** | Conditionnel aux deux prépublications. Résultat modeste. La conséquence pour l'arbre de Steiner est déjà revendiquée par Wu et Wang (arXiv:2611.02548), à citer. |
+| **État** | En attente : décision de l'auteur. |
+
+### B2 — Compromis de rang pour l'opérateur d'échange (théorème 2 de G18g, théorème F de G18f)
+
+| | |
+|---|---|
+| **Résultat** | Si le croisement (l'opérateur d'échange) s'écrit R + C, avec un rang par lignes ≤ p pour R et un rang par colonnes ≤ q pour C, alors p ≥ k(N − kq), donc p·q ≥ 3N²/16. Forme générale pour une grille 2×h : r ≥ s·Q·(M − b·s). |
+| **Niveau** | P. Deux preuves indépendantes de la même forme ; relecture adverse et recherche d'antériorité en cours (G19e). |
+| **Fichiers** | `code/gen18/g18g/notes.md`, `code/gen18/g18f/notes.md` |
+| **Pourquoi c'est un candidat** | L'énoncé est court, sans SAT, et vaut sur tout corps. Il a deux conséquences : aucun gain par termes intriqués sur un seul croisement ; la courbe des paires réalisables est au-dessus d'une droite. |
+| **Risque principal** | **C'est peut-être un résultat déjà connu** (l'auteur de la preuve le dit lui-même). Sans le résultat de G19e, ce n'est pas un candidat sûr. |
+| **Ce qui manque** | La recherche d'antériorité. Une relecture. Lean (l'énoncé est fini). |
+
+### B3 — Réfutations algébriques sous-exponentielles et carte de la réfutation des 3-CNF aléatoires
+
+| | |
+|---|---|
+| **Résultat** | (a) Toute k-CNF insatisfaisable à m clauses a une réfutation IPS sur ℚ de taille 2^(O(km/√log m)). (b) Carte temps contre densité : les algorithmes de 2026 sont les meilleurs seulement pour Δ ≤ c·log n, avec 2^(O(n/√(Δ·log n))) (proposition A). |
+| **Niveau** | (a) E : une étape non contrôlée (la récursion est-elle un circuit arithmétique aveugle aux tables ?). (b) P pour la proposition A ; les références sont lues dans des résumés. |
+| **Fichiers** | `code/gen18/g18i/notes.md` |
+| **Limites** | Conditionnel à la prépublication de Claude. Nouveauté établie par une seule recherche. Rien pour Frege ni Extended Frege. |
+| **Ce qui manque** | Contrôler l'étape (a). Une vraie recherche d'antériorité. Sans cela : une remarque, pas un article. |
+
+### B4 — Bibliothèque Lean d'outils génériques
+
+| | |
+|---|---|
+| **Résultat** | 13 énoncés génériques vérifiés et absents de Mathlib : la dimension du noyau divise le déterminant d'une matrice de polynômes ; anti-concentration avec constante explicite (1 − e⁻²)/4 ; rang de A(0) ≤ Σ rang E_k. |
+| **Niveau** | L. |
+| **Fichiers** | `lean/PnpLean/Outils.lean`, `lean/OUTILS.md` |
+| **Nature** | Ce n'est pas un article de recherche. C'est une contribution possible à Mathlib, ou une courte note de formalisation. |
+| **Ce qui manque** | Généraliser de ℚ à tout corps ; remplacer `uavg` par `Finset.expect` ; **une licence** (décision de l'auteur). |
+
+---
+
+## C. Ce qui n'est PAS assez pour un article (à ne pas présenter comme tel)
+
+| Résultat | Pourquoi ce n'est pas un article | Fichier |
+|---|---|---|
+| Dictionnaire commun des deux algorithmes de 2026 ; loi « gain = 1/√D » ; six hybrides sans gain | Loi heuristique, pas un théorème. Calculs sur de très petits cas. Utile comme section d'exposé dans l'article 3, pas seul. | `code/gen18/g18c/notes.md` |
+| Diagnostic du plancher 1/√2 (hypothèse (V), profil de croissance) | Aucun objet construit, aucun plancher nouveau prouvé. C'est une carte pour la recherche. | `code/gen18/g18h/notes.md` |
+| Reformulation du problème de Hurwitz-Naslund (droite contre cercle) | Aucune borne améliorée. La partie prouvée est dans B2. | `code/gen18/g18g/notes.md` |
+| Question E1 (termes intriqués) | Non tranchée. La partie prouvée est dans B2. | `code/gen18/g18f/notes.md` |
+| Corollaire sur le problème de Hurwitz (borne N^√2) | **Déjà publié** par d'autres (Siemaszko, Debnath). | `JOURNAL.md`, résultat G4a |
+| Conséquence pour l'arbre de Steiner | **Déjà revendiquée** par Wu et Wang (arXiv:2611.02548). | `code/gen9/g9e/` |
+| Pistes fermées (algorithmes locaux, LP, SOS, anneaux Z_m, certificats FKO, etc.) | Résultats négatifs attendus ou connus. | `PISTES.md`, section 5 |
+
+---
+
+## D. Suivi
+
+| Date | Changement |
+|---|---|
+| 24/11/2026 | Création du registre après la génération 18. Articles 1, 2, 3 ; candidats B1 à B4. |

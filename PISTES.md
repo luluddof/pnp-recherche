@@ -11,6 +11,8 @@ Légende : 🔄 en cours · 🆕 pas encore explorée · ⏸️ en attente · �
 
 ## Plan des articles (décision de l'auteur, 24 novembre 2026)
 
+**Le détail de la matière de chaque article, et les autres candidats, sont dans `ARTICLES.md`.**
+
 **Règle : on attend la validation de l'article 1 (relecture de F. Dias) avant d'écrire en entier les articles suivants.** La recherche, les relectures et Lean peuvent continuer.
 
 | Article | Sujet | État | Portée |
@@ -38,7 +40,11 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
-| — | *Aucun agent en cours. La génération 18 est terminée (24/11).* | | |
+| G19a | 🔄 **Charges non uniformes sur une instance difficile** | Avec des charges sur les classes à distance de Hamming 1, N = 2^(M/u) (échelon 2). Possible sur un expanseur ? Inégalité de séparateur ; régime intermédiaire. | G18S |
+| G19b | 🔄 **Paires réalisables exactes et profil en escalier** | Frontière exacte (p, q) pour N = 2, 3, 4 ; droite ou cercle ? P(3) = 3 ou 4 ? Lien entre le profil en escalier (G18h) et la courbe T(θ) (G18g). | G18g, G18h |
+| G19c | 🔄 **Le coin ouvert des termes intriqués à N = 3** | r minimal pour « trois étoiles + rang r » sur la grille 2×3, avec un optimiseur étalonné. | G18f |
+| G19d | 🔄 **Lean : théorème A″** | `lean/PnpLean/Article3/EnCours/DFRank.lean`. Résultat central du futur article 3. | G18S |
+| G19e | 🔄 **Relecture adverse et antériorité du théorème F et du théorème 2** | Même inégalité trouvée deux fois. Juste ? Déjà connue (rang de la transposée partielle, Flanders) ? Énoncé commun prêt pour Lean. | G18f, G18g |
 
 Dossiers de travail de la génération 18 : `scratchpad/gen18/g18a` à `g18i`.
 
