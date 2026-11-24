@@ -1,0 +1,13 @@
+0 cost 6.54e-29
+residual 2-norm 1.017e-14 ; #res 272 #params 352 ; sigma_min(J) over first #res sing. values = 2.018e-16, sigma_max 9.797e+00
+max inconsistency of slopes across directions: 1.066e-14
+dir 0 B01 sing vals: [2.756e+01 1.593e+01 4.747e-15 1.598e-15 9.692e-16 5.187e-16 1.022e-16 8.528e-18]
+dir 0 B10 sing vals: [1.298e+01 5.181e+00 3.629e-15 1.021e-15 7.274e-16 1.326e-16 1.008e-16 5.296e-17]
+dir 1 B01 sing vals: [1.272e+01 9.422e+00 1.932e+00 1.054e-15 8.682e-16 2.097e-16 1.001e-16 3.671e-17]
+dir 1 B10 sing vals: [6.241e+01 2.509e+01 1.271e+01 3.928e-15 1.449e-15 9.598e-17 1.373e-17 1.275e-18]
+dir 2 B01 sing vals: [6.501e+01 2.639e+01 9.633e+00 6.080e-15 9.903e-16 5.182e-16 1.796e-16 1.163e-16]
+dir 2 B10 sing vals: [5.867e+01 2.298e+01 1.957e+01 1.829e-15 9.834e-16 6.029e-16 9.816e-17 2.264e-17]
+dir 3 B01 sing vals: [6.985e+01 4.155e+01 7.248e+00 5.501e-15 2.012e-15 8.367e-16 4.269e-16 1.138e-16]
+dir 3 B10 sing vals: [5.883e+01 4.090e+01 2.159e+01 4.724e-15 1.501e-15 3.915e-16 1.545e-16 2.172e-17]
+max deviation of N=-A1 X from Z_2^l-circulant: 2.764e+01  (|N|max 2.314e+01)
+N symmetric? max|N-N^T| = 2.314e+01

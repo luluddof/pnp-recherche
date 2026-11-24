@@ -1,0 +1,4 @@
+l=5 d=2 ranks=[2, 2, 2, 2, 3] params=704 residuals=736
+  start 0 cost 5.981e-06 maxabs 5.42e+01
+  start 1 cost 1.811e-06 maxabs 7.02e+01
+  start 2 cost 4.434e-06 maxabs 4.40e+01

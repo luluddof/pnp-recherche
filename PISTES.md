@@ -28,7 +28,6 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 |---|---|---|---|
 | G12W | 🔄 **Pré-version 3 (brouillon, pas l'article officiel)** | Essai séparé dans `resultats/brouillons/pre-v3/`, à faire vérifier par une autre IA pour la portée ; l'article officiel (version 2) ne change pas | Demande de l'auteur (24/11) |
 | G13a | 🔄 **Relecture adverse + nouveauté du théorème de G11b** | Σ rang(E_k) ≥ N_m : chaque étape, le corps, le cadre exact, la conséquence sur le temps, la littérature | G11b |
-| G11c | 🔄 **Article 2 : cas non commutatif** | Étendre le lemme Q_{d+2} et la réduction « rang = mauvaises arêtes » au cas général | G6d, G10b |
 
 **Consigne de l'utilisateur (24/11) :** dès que les générations 8 et 9 sont terminées, lancer une **génération 10** sur les pistes « pas encore explorées » (section 2) et « en attente » (section 3).
 
@@ -38,7 +37,7 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 |---|---|---|---|
 | 🆕 **Problème de Naslund / Hurwitz** | Prouver P(N) ≥ N^(1+ε) ; équivaut à un plancher ρ > 1/2 dans l'algorithme de Claude | Très difficile (circuits non commutatifs) | N1, G5b |
 | ❌ **Tests de parité économiques (Q2)** — fausse sur la famille de référence (G8b, lemme CA) | Tests avec O(n·2^O(k)) incidences au total dans l'annexe D de Claude | Technique | G6c |
-| 🆕 **Erreurs par point, cas non commutatif** | Étendre le lemme de G6d au-delà de la classe commutative | Moyenne | G6d, G7a |
+| 🆕 **Valeur exacte dans le cas général à petit (ℓ, d)** | T_gen(4,1) ∈ {10, 11} (certificat exact manquant) ; (5,2) non déterminé ; relecture des théorèmes A et B′ de G11c | Moyenne | G11c |
 | 🆕 **Forme parité et contraction de tenseurs (Limits)** | Analyser les limites de ces deux voies d'OpenAI, non couvertes par Limits ni par notre note | Difficile | G4c, G6a |
 | 🆕 **Sparsification avec variables d'extension** | Échappatoire à la proposition L de G6c | Moyenne | G6c, G7d |
 | 🆕 **Lemme 4 en Lean** | Graphes aléatoires | Très difficile (peu de choses dans Mathlib) | G9L |
@@ -76,6 +75,7 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | Piste | Résultat |
 |---|---|
+| ✅ Cas général des erreurs par point (G11c) | Lemme Q_{d+2} étendu ; la classe commutative n'est pas optimale (11 contre 12 à (4,1), numérique) |
 | ✅ **Lean : théorème principal candidat de l'article 2** (G13b) | `sum_rank_ge_N` : Σ rang(E_k) ≥ N(ℓ, m), prouvé sur ℚ sans hypothèse ajoutée |
 | ✅ Relecture du théorème sep(F\*) (G11a) | Confirmé ; la définition de F\* doit être énoncée comme hypothèse ; 6 corrections listées |
 | ✅ Relecture de G9c (G10d) | Théorèmes A et B confirmés (relativement à l'annexe D de Claude) ; 2 résumés d'obstructions à corriger |

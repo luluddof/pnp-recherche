@@ -1,0 +1,10 @@
+== commutative (4,1), tau=(1,1.7,2.9,4.3), exact profile 0,4,4,4
+FOUND [0, 4, 4, 4] [(0, 0), (2, 0), (4, 0), (6, 0)
+== commutative (4,1), tau=(1,1.7,2.9,4.3), exact profile 3,3,3,3
+== commutative (4,1), tau=(1,1.7,2.9,4.3), exact profile 2,3,3,3
+== commutative (4,1), tau=(1,1.7,2.9,4.3), exact profile 3,2,3,3
+== commutative (4,1), tau=(1,1.7,2.9,4.3), exact profile 3,3,2,3
+== commutative (4,1), tau=(1,1.7,2.9,4.3), exact profile 3,3,3,2
+== commutative (4,1), tau=(1,1.7,2.9,4.3), exact profile 2,2,3,4
+== commutative (4,1), tau=(1,1.7,2.9,4.3), exact profile 2,3,3,4
+FOUND [2, 3, 3, 4] [(2, 0), (4, 0), (6, 0), (8, 0)

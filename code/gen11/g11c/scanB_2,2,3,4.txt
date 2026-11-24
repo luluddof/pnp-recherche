@@ -1,0 +1,21 @@
+l=4 d=1 ranks=[2, 2, 3, 4] params=352 residuals=272
+  start 0 cost 5.718e-07 maxabs 2.01e+01
+  start 1 cost 6.073e-08 maxabs 1.63e+01
+  start 2 cost 1.260e-06 maxabs 2.64e+01
+  start 3 cost 1.569e-07 maxabs 1.38e+01
+  start 4 cost 1.671e-07 maxabs 3.40e+01
+  start 5 cost 7.174e-07 maxabs 1.59e+01
+  start 6 cost 5.347e-07 maxabs 3.25e+01
+  start 7 cost 9.002e-07 maxabs 2.02e+01
+  start 8 cost 2.975e-07 maxabs 3.67e+01
+  start 9 cost 9.606e-07 maxabs 2.34e+01
+  start 10 cost 7.830e-07 maxabs 2.39e+01
+  start 11 cost 6.906e-07 maxabs 2.63e+01
+  start 12 cost 5.449e-07 maxabs 1.97e+01
+  start 13 cost 3.853e-08 maxabs 9.98e+00
+  start 14 cost 5.037e-07 maxabs 2.53e+01
+  start 15 cost 6.787e-07 maxabs 2.75e+01
+  start 16 cost 9.814e-07 maxabs 2.10e+01
+  start 17 cost 9.779e-27 maxabs 5.81e+00
+best cost 9.779e-27 max|param| 5.81e+00
+verified (rank01,rank10) per direction: [(2, 2), (2, 2), (3, 3), (4, 4)]
