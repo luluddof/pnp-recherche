@@ -45,7 +45,6 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
 | G22b-bis | 🔄 **Le « modèle monomial » des petites solutions (suite de G22b sur Opus 5.5)** | G22b (Fable, arrêté par la limite Fable jusqu'au 26/11) a trouvé que les solutions exactes sont des matrices d'intercalates signées = formules entières de sommes de carrés [N, N, p+q]. Suite : théorème de correspondance ; borne de HWY Ω(N^(6/5)) dans ce modèle ; adapter le comptage d'intercalates au compromis p·q. | G22b, G22a |
-| G22d | 🔄 **Borne inférieure par un invariant analytique (distance)** | À N = 3 l'échange est à distance² = 2 de J(2,2). Loi exacte de la distance ; version quantitative du théorème C ; excès au-delà des méthodes de rang ; certificat. | G21d |
 
 Dossiers de travail de la génération 18 : `scratchpad/gen18/g18a` à `g18i`.
 
@@ -144,6 +143,12 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 | Regraduations à flot spectral et orbifolds | Chercher une algèbre où le vrai rang de l'appariement égale la dimension pleine dans une graduation dont le profil a un creux (route R1 : le réseau A1 regradué donne 2,8157 < 2√2 avec la borne lâche, 3,030 avec le vrai rang). | G22e |
 | Modèles minimaux non unitaires et secteurs tordus d'orbifolds | Balayer les paramètres de croissance (σ, κ) pour un module avec creux dont le vide croît aussi vite (route R2 : sl₂ donne 2,81 seul, 2,90 en vraie paire). | G22e |
 
+**Piste issue de G22d (24/11) :**
+
+| Piste | Question précise | Origine |
+|---|---|---|
+| Masse captée c(p, q) | Prouver c(N; 1, 1) = 4 pour tout N, puis la loi q = 1 (d² = N² − m² − 2j), puis une borne supérieure sur c(p, q). Une borne sous-linéaire en p·q donnerait un exposant au-delà de la droite ; une borne linéaire κ·p·q seulement une constante. | G22d |
+
 ## 3. En attente
 
 | Piste | Raison de l'attente |
@@ -161,6 +166,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Résultat |
 |---|---|
+| ⚠️ **Distance de l'échange à J(p, q)** (G22d) | La distance (masse captée c = N² − d², toujours entière) dépasse les méthodes de rang à tous les points calculés ; loi exacte pour q = 1 : d² = N² − m² − 2j. Théorème C quantitatif prouvé (faible). Pour gagner un exposant il faudrait c(p, q) sous-linéaire en p·q : non prouvé ; q = 1 est linéaire. `code/gen22/g22d/notes.md` |
 | ⚠️ **Barrière de Cardy** (G22e) | Théorème A (papier, non relu) : √2 est optimal pour toute algèbre de sommets fixe avec croissance √E. Pour les familles : ouvert. Échappement possible seulement avec un « creux » de L(E)/√E et un nombre de paires aussi grand que la borne lâche. Deux routes (regraduation du réseau A1 ; modules de sl₂) donnent 2,81 < 2√2 sous la borne lâche, mais 2,90 à 3,03 avec les vraies bornes. `code/gen22/g22e/notes.md` |
 | ✅ **Littérature Hurwitz-Naslund lue** (G22a) | Notre problème = problème 12 de Naslund = question 1.2 de Karam = largeur de HWY = PT-rank de Rossman-Zhu. Record : √2 (annexe B) ; publié : 1,62 (Hrubeš). **Le théorème C n'est dans aucun article lu ; la question du compromis (p, q) est nouvelle.** Techniques non essayées : comptage d'intercalates de HWY, pièces de Hrubeš, caractéristique 2. `code/gen22/g22a/notes.md` |
 | ❌ **Familles structurées jusqu'à N = 256** (G22c) | Aucune ne bat l'exposant 2 ni la somme directe (N²/8). Sédénions : défaut de rang Θ(N²). Groupes, Paley, tournois : N² − O(N). `code/gen22/g22c/notes.md` |

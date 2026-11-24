@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/tmp/claude-0/-home-user-pnp-recherche/2d12e629-e6d2-542b-bfc0-8b766f57383f/scratchpad/gen22/g22d/d2.py", line 56, in <module>
+    v, x, E, A, B = solve(T, N, p, q, z0, nfev)
+                    ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/claude-0/-home-user-pnp-recherche/2d12e629-e6d2-542b-bfc0-8b766f57383f/scratchpad/gen22/g22d/d2.py", line 39, in solve
+    s = least_squares(res, z0, jac=jac, args=(T,N,p,q), method='lm', max_nfev=nfev, xtol=1e-15, ftol=1e-15, gtol=1e-15)
+  File "/root/.local/lib/python3.13/site-packages/scipy/_lib/_util.py", line 662, in inner
+    return func(*args, **kwargs)
+  File "/root/.local/lib/python3.13/site-packages/scipy/optimize/_lsq/least_squares.py", line 952, in least_squares
+    raise ValueError("Method 'lm' doesn't work when the number of "
+                     "residuals is less than the number of variables.")
+ValueError: Method 'lm' doesn't work when the number of residuals is less than the number of variables.
