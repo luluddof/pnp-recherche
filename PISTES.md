@@ -38,7 +38,17 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
-| — | *Aucun agent en cours. La génération 17 est terminée (24/11).* | | |
+| G18a | 🔄 **Précision réelle des noyaux 2-adiques** | L'analyse d'OpenAI paie 40 bits là où 10 suffisent (14 contre 4 sur un paquet creux). Le gain dépasse-t-il une constante ? Effet sur l'exposant. | G17a |
+| G18b | 🔄 **Évaluateur qui paie 2^rang** | OpenAI paie (2D+1)^lignes pour l'erreur. Un évaluateur moins cher donne-t-il n·√(loglog n)/√log n ? Vérifier l'estimation de G17c. | G17c |
+| G18c | 🔄 **Hybride des deux algorithmes de 2026** | Dictionnaire commun ; pièces de Claude comme noyaux d'OpenAI, troncature 2-adique dans la récursion de Claude. Les gains se composent-ils ? | nouvelle |
+| G18d | 🔄 **Limite de l'interpolation à plusieurs niveaux** | Récurrence exacte de l'annexe D ; exposant optimal à k niveaux ; borne inférieure pour la famille récursive 2-adique. Le mur est-il à n/√log n ou à n/log n ? | G17c, G17a |
+| G18e | 🔄 **Borne de rang dans le modèle DF** | Prouvé 2^(M/4^u), atteint 2^(M/√u). Meilleure borne, ou meilleur schéma ; minimums exacts pour u = 2, 3. | G14b, G17a |
+| G18f | 🔄 **Termes intriqués, λ = 2** (question E1) | Seule piste vers 2^(n^(1−ε)). Calcul à λ = 2 ou question réduite ; E1 est-elle une question de rang asymptotique d'un tenseur explicite ? | G9d, G14e |
+| G18g | 🔄 **Problème de Hurwitz et Naslund** | P(N) ≤ N^(1+o(1)) ou P(N) ≥ N^(1+ε) ? Variante exacte utile à l'algorithme ; état de l'art 2026 ; une tentative originale. | N1, G4a, G5b |
+| G18h | 🔄 **Pièces hors du cadre « un seul espace gradué »** | Le plancher sur ρ est-il une vraie limite ? Retirer chaque hypothèse du cadre, une par une. | G9a, G9b |
+| G18i | 🔄 **Réfutation des 3-CNF aléatoires à densité constante** | Carte temps contre densité avec les algorithmes de 2026 ; lecture en complexité des preuves ; une idée nouvelle testée. | obstacle central |
+
+Dossiers de travail de la génération 18 : `scratchpad/gen18/g18a` à `g18i`.
 
 Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g18d` (erreur de numéro au lancement ; la génération est bien la 17).
 
