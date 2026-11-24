@@ -9,6 +9,18 @@ Légende : 🔄 en cours · 🆕 pas encore explorée · ⏸️ en attente · �
 
 ---
 
+## Plan des articles (décision de l'auteur, 24 novembre 2026)
+
+**Règle : on attend la validation de l'article 1 (relecture de F. Dias) avant d'écrire en entier les articles suivants.** La recherche, les relectures et Lean peuvent continuer.
+
+| Article | Sujet | État | Portée |
+|---|---|---|---|
+| **1** | Schémas « produit de clauses » (question du §9 de Dias-Lima) | Version 2 envoyée à F. Dias ; pré-version 3 en brouillon | Borne 2^Ω(n^(2/3)) dans le **modèle de coût produit** ; rien sur la programmation dynamique (sauf : modèle dégénéré), ni sur les autres voies |
+| **2** | Erreurs par point dans la voie « interpolation » d'OpenAI | **En attente** (accord de l'auteur requis ; attendre G14a et G14d, puis la validation de l'article 1). Théorème prouvé en Lean sur tout corps | Σ_k rang(E_k) ≥ N(ℓ, m) pour un point par direction ; √log n optimal **dans le modèle de coût de l'exposé d'O'Donnell** ; ne couvre pas : contraction de tenseurs, degré d'interpolation réduit (D < nd), effondrement de rang par L/R′, multiplicités inégales |
+| **3** (futur) | Limites de la voie « contraction de tenseurs » d'OpenAI (annexe D) | **Idée seulement** : résultats de G14b non relus, un seul niveau de récursion | Visé : le √log est optimal pour la famille des « effilages » dépendant de la valuation ; borne d'aplatissement dans le modèle DF. Ne couvrirait pas : d'autres règles de reconstruction, plusieurs niveaux, l'algorithme de Claude |
+
+Avec les trois articles, les trois voies de la prépublication d'OpenAI seraient étudiées. Aucun ne dit rien sur P vs NP ni sur la validité de la prépublication.
+
 ## 0. L'échelle vers P = NP (temps pour 3-SAT)
 
 | Marche | Temps | État |
