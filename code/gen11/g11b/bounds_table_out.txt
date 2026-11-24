@@ -1,0 +1,39 @@
+l d | LB rho_avg | UB rho (layered) | UB/LB | 4d^2/l
+10 5 (gamma=0.5) | 6.641e-03 | 4.395e-02 | 6.62 | 10.00
+10 7 (gamma=1.0) | 1.172e-03 | 9.766e-03 | 8.33 | 19.60
+10 8 (gamma=1.5) | 9.766e-05 | 1.953e-03 | 20.00 | 25.60
+20 8 (gamma=0.5) | 1.406e-03 | 2.218e-02 | 15.78 | 12.80
+20 11 (gamma=1.0) | 3.710e-04 | 4.621e-03 | 12.46 | 24.20
+20 13 (gamma=1.5) | 7.553e-05 | 1.087e-03 | 14.39 | 33.80
+50 14 (gamma=0.5) | 5.875e-04 | 1.155e-02 | 19.65 | 15.68
+50 20 (gamma=1.0) | 3.965e-05 | 1.199e-03 | 30.25 | 32.00
+50 24 (gamma=1.5) | 4.270e-06 | 1.639e-04 | 38.39 | 46.08
+100 21 (gamma=0.5) | 4.088e-04 | 7.111e-03 | 17.40 | 17.64
+100 30 (gamma=1.0) | 1.693e-05 | 6.047e-04 | 35.72 | 36.00
+100 37 (gamma=1.5) | 1.568e-06 | 5.232e-05 | 33.37 | 54.76
+400 49 (gamma=0.5) | 6.699e-05 | 1.751e-03 | 26.14 | 24.01
+400 69 (gamma=1.0) | 2.074e-06 | 8.582e-05 | 41.38 | 47.61
+400 85 (gamma=1.5) | 6.609e-08 | 3.667e-06 | 55.48 | 72.25
+1000 83 (gamma=0.5) | 2.348e-05 | 7.402e-04 | 31.52 | 27.56
+1000 118 (gamma=1.0) | 3.510e-07 | 2.088e-05 | 59.49 | 55.70
+1000 144 (gamma=1.5) | 8.043e-09 | 6.613e-07 | 82.22 | 82.94
+
+threshold degree for rho <= l^-C:  d_LB = least d not excluded by the theorem, d_UB = least d achieved by layered; sqrt((2C-1) l ln l)
+C=1.5 l=20: d_LB=4 d_UB=10 ratio=2.500  sqrt((2C-1) l ln l)=10.9
+C=1.5 l=50: d_LB=10 d_UB=18 ratio=1.800  sqrt((2C-1) l ln l)=19.8
+C=1.5 l=100: d_LB=18 d_UB=29 ratio=1.611  sqrt((2C-1) l ln l)=30.3
+C=1.5 l=400: d_LB=44 d_UB=67 ratio=1.523  sqrt((2C-1) l ln l)=69.2
+C=1.5 l=1000: d_LB=80 d_UB=115 ratio=1.438  sqrt((2C-1) l ln l)=117.5
+C=1.5 l=4000: d_LB=186 d_UB=254 ratio=1.366  sqrt((2C-1) l ln l)=257.6
+C=2 l=20: d_LB=8 d_UB=12 ratio=1.500  sqrt((2C-1) l ln l)=13.4
+C=2 l=50: d_LB=16 d_UB=23 ratio=1.438  sqrt((2C-1) l ln l)=24.2
+C=2 l=100: d_LB=26 d_UB=36 ratio=1.385  sqrt((2C-1) l ln l)=37.2
+C=2 l=400: d_LB=64 d_UB=83 ratio=1.297  sqrt((2C-1) l ln l)=84.8
+C=2 l=1000: d_LB=110 d_UB=142 ratio=1.291  sqrt((2C-1) l ln l)=144.0
+C=2 l=4000: d_LB=252 d_UB=312 ratio=1.238  sqrt((2C-1) l ln l)=315.5
+C=3 l=20: d_LB=12 d_UB=16 ratio=1.333  sqrt((2C-1) l ln l)=17.3
+C=3 l=50: d_LB=24 d_UB=30 ratio=1.250  sqrt((2C-1) l ln l)=31.3
+C=3 l=100: d_LB=38 d_UB=46 ratio=1.211  sqrt((2C-1) l ln l)=48.0
+C=3 l=400: d_LB=90 d_UB=108 ratio=1.200  sqrt((2C-1) l ln l)=109.5
+C=3 l=1000: d_LB=158 d_UB=184 ratio=1.165  sqrt((2C-1) l ln l)=185.8
+C=3 l=4000: d_LB=354 d_UB=404 ratio=1.141  sqrt((2C-1) l ln l)=407.3

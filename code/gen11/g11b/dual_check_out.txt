@@ -1,0 +1,44 @@
+Test 3: general matrix class (l=3,d=0,m=1): a(tau_k) K_k (aX)^T = 0 and Phi(0)=|a(0)|^2 in 20 random trials: True
+Test 3: general matrix class (l=4,d=1,m=1): a(tau_k) K_k (aX)^T = 0 and Phi(0)=|a(0)|^2 in 20 random trials: True
+Test 3: general matrix class (l=3,d=2,m=0): a(tau_k) K_k (aX)^T = 0 and Phi(0)=|a(0)|^2 in 20 random trials: True
+Test 2: (l,d)=(6,1) m=2 dim W_m=30: random bad sets of size dim-1 -> explicit certificate
+  trial 0: certificate valid (edge-consistent, zero on bad, vertex moments 1..d vanish)=True, sum y=-1.559e+00 (nonzero=True), primal feasible(mod p)=False
+  trial 1: certificate valid (edge-consistent, zero on bad, vertex moments 1..d vanish)=True, sum y=-4.314e+01 (nonzero=True), primal feasible(mod p)=False
+  trial 2: certificate valid (edge-consistent, zero on bad, vertex moments 1..d vanish)=True, sum y=-9.018e+00 (nonzero=True), primal feasible(mod p)=False
+Test 2: (l,d)=(7,2) m=2 dim W_m=38: random bad sets of size dim-1 -> explicit certificate
+  trial 0: certificate valid (edge-consistent, zero on bad, vertex moments 1..d vanish)=True, sum y=3.676e+01 (nonzero=True), primal feasible(mod p)=False
+  trial 1: certificate valid (edge-consistent, zero on bad, vertex moments 1..d vanish)=True, sum y=4.315e+03 (nonzero=True), primal feasible(mod p)=False
+Test 2: (l,d)=(6,3) m=1 dim W_m=8: random bad sets of size dim-1 -> explicit certificate
+  trial 0: certificate valid (edge-consistent, zero on bad, vertex moments 1..d vanish)=True, sum y=-2.941e-01 (nonzero=True), primal feasible(mod p)=False
+  trial 1: certificate valid (edge-consistent, zero on bad, vertex moments 1..d vanish)=True, sum y=-5.542e-01 (nonzero=True), primal feasible(mod p)=False
+  trial 2: certificate valid (edge-consistent, zero on bad, vertex moments 1..d vanish)=True, sum y=-5.756e+00 (nonzero=True), primal feasible(mod p)=False
+Test 1: layered configurations, rank of evaluation map vs dim W_m
+ l=3 d=1 m=0 dim W_m=1 #bad(layered)=6 rank=1 injective=True
+ l=3 d=2 m=0 dim W_m=1 #bad(layered)=3 rank=1 injective=True
+ l=4 d=1 m=1 dim W_m=6 #bad(layered)=16 rank=6 injective=True
+ l=4 d=2 m=0 dim W_m=1 #bad(layered)=8 rank=1 injective=True
+ l=4 d=3 m=0 dim W_m=1 #bad(layered)=4 rank=1 injective=True
+ l=5 d=1 m=1 dim W_m=7 #bad(layered)=40 rank=7 injective=True
+ l=5 d=2 m=1 dim W_m=7 #bad(layered)=25 rank=7 injective=True
+ l=5 d=3 m=0 dim W_m=1 #bad(layered)=10 rank=1 injective=True
+ l=5 d=4 m=0 dim W_m=1 #bad(layered)=5 rank=1 injective=True
+ l=6 d=1 m=2 dim W_m=30 #bad(layered)=96 rank=30 injective=True
+ l=6 d=2 m=1 dim W_m=8 #bad(layered)=60 rank=8 injective=True
+ l=6 d=3 m=1 dim W_m=8 #bad(layered)=36 rank=8 injective=True
+ l=6 d=4 m=0 dim W_m=1 #bad(layered)=12 rank=1 injective=True
+ l=6 d=5 m=0 dim W_m=1 #bad(layered)=6 rank=1 injective=True
+ l=7 d=1 m=2 dim W_m=38 #bad(layered)=224 rank=38 injective=True
+ l=7 d=2 m=2 dim W_m=38 #bad(layered)=147 rank=38 injective=True
+ l=7 d=3 m=1 dim W_m=9 #bad(layered)=84 rank=9 injective=True
+ l=7 d=4 m=1 dim W_m=9 #bad(layered)=49 rank=9 injective=True
+ l=7 d=5 m=0 dim W_m=1 #bad(layered)=14 rank=1 injective=True
+ l=8 d=1 m=3 dim W_m=140 #bad(layered)=512 rank=140 injective=True
+ l=8 d=2 m=2 dim W_m=47 #bad(layered)=336 rank=47 injective=True
+ l=8 d=3 m=2 dim W_m=47 #bad(layered)=224 rank=47 injective=True
+ l=8 d=4 m=1 dim W_m=10 #bad(layered)=112 rank=10 injective=True
+ l=8 d=5 m=1 dim W_m=10 #bad(layered)=64 rank=10 injective=True
+ l=9 d=1 m=3 dim W_m=187 #bad(layered)=1152 rank=187 injective=True
+ l=9 d=2 m=3 dim W_m=187 #bad(layered)=765 rank=187 injective=True
+ l=9 d=3 m=2 dim W_m=57 #bad(layered)=504 rank=57 injective=True
+ l=9 d=4 m=2 dim W_m=57 #bad(layered)=324 rank=57 injective=True
+ l=9 d=5 m=1 dim W_m=11 #bad(layered)=144 rank=11 injective=True

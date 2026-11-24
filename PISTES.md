@@ -22,12 +22,13 @@ Légende : 🔄 en cours · 🆕 pas encore explorée · ⏸️ en attente · �
 
 Priorité recommandée : pistes A et B, puis Q1\*.
 
-## 1. En cours (génération 11)
+## 1. En cours (générations 11 à 13)
 
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
 | G12W | 🔄 **Pré-version 3 (brouillon, pas l'article officiel)** | Essai séparé dans `resultats/brouillons/pre-v3/`, à faire vérifier par une autre IA pour la portée ; l'article officiel (version 2) ne change pas | Demande de l'auteur (24/11) |
-| G11b | 🔄 **Article 2, résultat final : compromis (I′) et (II)** | Prouver l'optimalité de √log n dans la classe commutative, ou trouver une construction qui la contredit | G8d |
+| G13a | 🔄 **Relecture adverse + nouveauté du théorème de G11b** | Σ rang(E_k) ≥ N_m : chaque étape, le corps, le cadre exact, la conséquence sur le temps, la littérature | G11b |
+| G13b | 🔄 **Lean : théorème de G11b** | `lean/PnpLean/Article2/EnCours/SqrtLog.lean` | G11b |
 | G11c | 🔄 **Article 2 : cas non commutatif** | Étendre le lemme Q_{d+2} et la réduction « rang = mauvaises arêtes » au cas général | G6d, G10b |
 
 **Consigne de l'utilisateur (24/11) :** dès que les générations 8 et 9 sont terminées, lancer une **génération 10** sur les pistes « pas encore explorées » (section 2) et « en attente » (section 3).
@@ -50,7 +51,6 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 | 🆕 **Un modèle DP valide** | Le modèle corrigé de G7b (largeur W_t) ne minore que l'élimination par groupes entiers (G10a) ; il faut un modèle qui résiste au découpage ligne par ligne, par exemple une largeur sur le graphe des lignes | Moyenne | G10a |
 | 🆕 **Borne de Rado pour le modèle DP corrigé** | nullité ≥ max_S(\|S\| − dim Σ U_ω(v)) contient le lemme 1 et le lemme H ; pourrait enlever l'hypothèse de régularité | Moyenne | G8a |
 
-| 🆕 **Compromis (I′) et (II) pour la méthode d'OpenAI** | (I′) ρ(Cδ², δ) ≥ δ^(−a) ; (II) ρ(ℓ₁+ℓ₂, d₁+d₂) ≥ ρ(ℓ₁,d₁)·ρ(ℓ₂,d₂). Ensemble : √log n optimal à (log n)^o(1) près | Difficile | G8d |
 
 
 | 🆕 **Pièces hors du cadre « un seul espace gradué »** | Seule façon restante d'obtenir ρ < 1/√2 : des pièces qui ne passent pas par les composantes graduées d'un seul espace (ou des profils de croissance non concaves). Lié au problème de Hurwitz : P(N) ≤ N^(1+ε) | Très difficile | G9a |
@@ -66,7 +66,7 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 | Piste | Raison de l'attente |
 |---|---|
 | ⏸️ **Version 3 de l'article 1** | **EN ATTENTE — décision de l'auteur (24/11) : ne pas faire la version 3 avant le retour de F. Dias**, à qui la version 2 a été envoyée pour vérification. Contenu préparé pour la version 3 (à compléter avec ses remarques) : (1) section Lean mise à jour : théorème principal prouvé sans hypothèse (G10e) ; (2) corrections de G10f : facteur b superflu, dire que la borne de Dias-Lima est meilleure pour les petits groupes, précisions de l'annexe A, 4 attributions à adoucir ; (3) théorème sep(F\*) ≥ c·n\* et son corollaire, si la relecture G11a le confirme ; (4) nouveaux chemins Lean (`lean/PnpLean/Article1/`) |
-| ⏸️ **Rédaction de l'article 2** (erreurs par point) | **Décision de l'auteur (24/11) : attendre un résultat final** (pas de note de résultats partiels). Résultat final visé : l'optimalité de √log n pour la méthode d'OpenAI (pistes (I′) et (II)), ou au contraire une construction qui bat √log n. Les deux lemmes centraux sont déjà relus et en Lean (`lean/PnpLean/Article2/`) |
+| ⏸️ **Rédaction de l'article 2** (erreurs par point) | Condition de l'auteur : un **résultat final**. **G11b en annonce un (24/11)** : Σ rang(E_k) ≥ N_m, donc √log n optimal dans le cadre des erreurs par point. À confirmer par G13a (relecture, nouveauté) et G13b (Lean) avant toute rédaction |
 | ⏸️ **Note « plus long chemin / plus long cycle en 2^o(n) sur les graphes creux »** (candidat article 4) | Preuve confirmée par G10c ; conditionnel aux prépublications ; doit citer Wu-Wang (arXiv 2611.02548) ; résultat modeste. Décision de l'auteur |
 | ⏸️ **Relecture de l'article 1 par un expert humain** | **En cours : l'auteur a envoyé la version 2 à F. Dias (24/11).** Attendre sa réponse. |
 
