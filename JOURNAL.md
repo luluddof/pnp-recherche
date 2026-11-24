@@ -194,6 +194,20 @@ Stratégie : résoudre d'abord des problèmes ouverts plus petits, cités dans l
 | G7c | Rédiger une note mathématique propre sur le résultat G6a, pour une relecture par des experts humains | ✅ **Note rédigée** : `resultats/note_limits_s9.md` (environ 6 pages, en anglais, Markdown + LaTeX). Elle contient aussi le lemme 4 (sep(F) ≥ c·n pour 3-SAT aléatoire de densité Δ > 3) et un séparateur pondéré pour les degrés non bornés. **Petites corrections trouvées :** le second terme du théorème B est 2n/3 − s_t (pas (2n/3 − s_t)/2) ; la constante exacte est c₃ = 2(1−e^(−2))/(36√2) ≈ 0,03397 ; c₀ = (1−e^(−2))/4 est prouvée, pas seulement vérifiée numériquement ; « équivalemment, √s lignes par groupe » vaut seulement pour des groupes équilibrés. |
 | G7d | Question Q1 : sparsification qui garde le comptage avec une densité moyenne bornée (enlever log log n) | ❌ Non résolu. **Q1 sans restriction est équivalente à l'objectif lui-même** (prouvé) : ce n'est donc pas une étape plus facile. **Lemme S (prouvé) :** ajouter des variables ou des clauses n'aide jamais ; découper les variables en copies redonne la borne en m, en pire. **Prop. E (comptage) :** pour presque tout graphe de degré moyen d, toute CNF (même avec variables auxiliaires) dont la projection donne ses ensembles indépendants a au moins nd/(8k') clauses ; mais elle ne couvre qu'un seul morceau. Obstruction explicite hors de portée (elle donnerait une borne inférieure de circuit ω(n)). **Nouvelle question concrète Q1′ :** compter les ensembles indépendants d'un graphe de degré moyen d en temps 2^(O(n/d)). Dossier : `code/gen7/g7d/` |
 
+## 4 sexies. Vérification Lean du lemme 1 (G8L) ✅
+
+Fichier : `lean/PnpLean/WitnessDet.lean` (234 lignes, Lean 4.37.0-rc1 + Mathlib). Compile sans erreur ; aucun `sorry`, `admit`, `axiom` ni `native_decide` ; `#print axioms` = [propext, Classical.choice, Quot.sound] (les axiomes standards). Vérifié par le coordinateur après le sous-agent.
+
+| Théorème Lean | Contenu |
+|---|---|
+| `det_ne_zero_of_eval_zero` | Φ(0) = I ⇒ det Φ ≠ 0 |
+| `natDegree_det_le` | entrées de degré ≤ R ⇒ deg det Φ ≤ nR |
+| `pow_dvd_det_of_nullity` | (X − t)^(dim ker Φ(t)) divise det Φ |
+| `sum_nullity_le` | **Σ_{t∈T} dim ker Φ(t) ≤ nR** pour tout ensemble fini T |
+| `deficiency_le_nullity_add` | borne de rang par blocs : Σ_γ (a_γ − \|I_γ\|)₊ ≤ dim ker A + Σ_γ dim R_γ (déficience − ρ ≤ dim ker) |
+
+**Non formalisé :** le passage du schéma de la note (polynômes P_o, carte témoin ω) à ces matrices. C'est une traduction directe, mais elle reste vérifiée seulement à la main. Les lemmes 2 à 4 (probabilités, séparateurs, 3-SAT aléatoire) ne sont pas formalisés.
+
 ## 4 bis. Pistes restantes pour chercher plus loin
 
 | Piste | Pourquoi elle reste ouverte | Première expérience simple |

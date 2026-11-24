@@ -7,6 +7,7 @@ chercher un algorithme polynomial pour 3-SAT, et comprendre pourquoi chaque voie
 échec est mesurée ou expliquée par un théorème.
 
 - `resultats/note_limits_s9.md` : note mathématique (en anglais) sur le seul résultat nouveau confirmé, une réponse négative à la question ouverte du §9 de Dias-Lima (arXiv:2611.00517). **Pas encore relue par des experts humains.**
+- `lean/PnpLean/WitnessDet.lean` : preuve Lean 4 + Mathlib du lemme 1 de la note (déterminant témoin et borne de rang), sans `sorry`. Vérifier avec `cd lean && lake exe cache get && lake env lean PnpLean/WitnessDet.lean`.
 - `JOURNAL.md` : toutes les voies explorées, les résultats, les causes des échecs, l'actualité 2026 et les pistes restantes.
 - `carnet.html` : la même chose sous forme de page.
 - `code/` : programmes et données de chaque génération de sous-agents.

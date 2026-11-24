@@ -125,4 +125,110 @@ theorem sum_nullity_le (Φ : Matrix (Fin n) (Fin n) ℚ[X]) (R : ℕ)
   simp only [natDegree_pow, natDegree_X_sub_C, mul_one] at hdeg
   exact hdeg.trans (natDegree_det_le Φ R hR)
 
+/-! ## Part 2: rank bound at a point -/
+
+theorem rank_add_le' {m : ℕ} (A B : Matrix (Fin m) (Fin n) ℚ) : (A + B).rank ≤ A.rank + B.rank := by
+  rw [← finrank_range_mulVecLin, ← finrank_range_mulVecLin, ← finrank_range_mulVecLin,
+    mulVecLin_add]
+  exact (Submodule.finrank_mono (LinearMap.range_add_le _ _)).trans
+    (Submodule.finrank_add_le_finrank_add_finrank _ _)
+
+theorem rank_sum_le {ι : Type*} (s : Finset ι) (B : ι → Matrix (Fin n) (Fin n) ℚ) :
+    (∑ i ∈ s, B i).rank ≤ ∑ i ∈ s, (B i).rank := by
+  classical
+  induction s using Finset.induction_on with
+  | empty => simp [rank_zero]
+  | insert a s ha ih =>
+    rw [Finset.sum_insert ha, Finset.sum_insert ha]
+    exact (rank_add_le' _ _).trans (Nat.add_le_add_left ih _)
+
+theorem nullity_add_rank (A : Matrix (Fin n) (Fin n) ℚ) : A.rank + nullity A = n := by
+  rw [← finrank_range_mulVecLin, nullity, LinearMap.finrank_range_add_finrank_ker]
+  simp
+
+/-- General form (no support hypothesis on `Rγ` needed). -/
+theorem deficiency_le_nullity_add_general {G : Type*} [Fintype G] [DecidableEq G]
+    (A : Matrix (Fin n) (Fin n) ℚ) (g h : Fin n → G) (Rγ : G → Submodule ℚ (Fin n → ℚ))
+    (hrow : ∀ γ v, h v ≠ γ → (fun j => if g j = γ then A v j else 0) ∈ Rγ γ) :
+    ∑ γ, ((Finset.univ.filter (fun j => g j = γ)).card
+          - (Finset.univ.filter (fun v => h v = γ)).card)
+      ≤ nullity A + ∑ γ, finrank ℚ (Rγ γ) := by
+  set a : G → ℕ := fun γ => (Finset.univ.filter (fun j => g j = γ)).card with ha
+  set I : G → ℕ := fun γ => (Finset.univ.filter (fun v => h v = γ)).card with hI
+  set r : G → ℕ := fun γ => finrank ℚ (Rγ γ) with hr
+  let D : G → Matrix (Fin n) (Fin n) ℚ := fun γ => diagonal (fun j => if g j = γ then 1 else 0)
+  let B : G → Matrix (Fin n) (Fin n) ℚ := fun γ => A * D γ
+  have hBapp : ∀ γ v j, B γ v j = if g j = γ then A v j else 0 := by
+    intro γ v j; simp [B, D, mul_diagonal]
+  have hsumD : ∑ γ, D γ = 1 := by
+    ext i j
+    simp only [D, Matrix.sum_apply, diagonal_apply]
+    by_cases hij : i = j
+    · subst hij; simp
+    · simp [hij]
+  have hsumB : ∑ γ, B γ = A := by
+    simp only [B, ← Matrix.mul_sum, hsumD, Matrix.mul_one]
+  -- rank of each block ≤ a γ
+  have hBa : ∀ γ, (B γ).rank ≤ a γ := by
+    intro γ
+    refine (rank_mul_le_right _ _).trans ?_
+    rw [rank_diagonal]
+    simp only [ha, ne_eq, ite_eq_right_iff, one_ne_zero, imp_false, not_not]
+    rw [Fintype.card_subtype]
+  -- rank of each block ≤ I γ + r γ
+  have hBI : ∀ γ, (B γ).rank ≤ I γ + r γ := by
+    intro γ
+    rw [← finrank_span_range_row]
+    let f : {v // h v = γ} → (Fin n → ℚ) := fun v => (B γ).row v
+    have hle : Submodule.span ℚ (Set.range (B γ).row) ≤
+        Submodule.span ℚ (Set.range f) ⊔ Rγ γ := by
+      rw [Submodule.span_le]
+      rintro _ ⟨v, rfl⟩
+      by_cases hv : h v = γ
+      · exact Submodule.mem_sup_left (Submodule.subset_span ⟨⟨v, hv⟩, rfl⟩)
+      · apply Submodule.mem_sup_right
+        have : (B γ).row v = fun j => if g j = γ then A v j else 0 := by
+          funext j; exact hBapp γ v j
+        rw [this]; exact hrow γ v hv
+    refine (Submodule.finrank_mono hle).trans
+      ((Submodule.finrank_add_le_finrank_add_finrank _ _).trans ?_)
+    refine Nat.add_le_add_right ?_ _
+    have := finrank_range_le_card (R := ℚ) f
+    rw [Fintype.card_subtype] at this
+    exact this
+  have hrank : A.rank ≤ ∑ γ, min (a γ) (I γ + r γ) := by
+    rw [← hsumB]
+    exact (rank_sum_le _ _).trans (Finset.sum_le_sum fun γ _ => le_min (hBa γ) (hBI γ))
+  have hn : ∑ γ, a γ = n := by
+    have := Finset.card_eq_sum_card_fiberwise (f := g) (s := Finset.univ) (t := Finset.univ)
+      (fun _ _ => Finset.mem_coe.2 (Finset.mem_univ _))
+    simpa [ha] using this.symm
+  have hnr := nullity_add_rank A
+  have hpt : ∀ γ, a γ - I γ ≤ (a γ - min (a γ) (I γ + r γ)) + r γ := by
+    intro γ; omega
+  calc ∑ γ, (a γ - I γ) ≤ ∑ γ, ((a γ - min (a γ) (I γ + r γ)) + r γ) :=
+        Finset.sum_le_sum fun γ _ => hpt γ
+    _ = (∑ γ, a γ - ∑ γ, min (a γ) (I γ + r γ)) + ∑ γ, r γ := by
+        rw [Finset.sum_add_distrib, Finset.sum_tsub_distrib _ (fun γ _ => min_le_left _ _)]
+    _ ≤ nullity A + ∑ γ, r γ := by
+        refine Nat.add_le_add_right ?_ _
+        omega
+
+/-- Faithful statement of the rank bound at a point (dim ker ≥ def − ρ).
+The support hypothesis `hsupp` is part of the setting but is not needed for the proof. -/
+theorem deficiency_le_nullity_add {G : Type*} [Fintype G] [DecidableEq G]
+    (A : Matrix (Fin n) (Fin n) ℚ) (g h : Fin n → G) (Rγ : G → Submodule ℚ (Fin n → ℚ))
+    (_hsupp : ∀ γ, ∀ x ∈ Rγ γ, ∀ j, g j ≠ γ → x j = 0)
+    (hrow : ∀ γ v, h v ≠ γ → (fun j => if g j = γ then A v j else 0) ∈ Rγ γ) :
+    ∑ γ, ((Finset.univ.filter (fun j => g j = γ)).card
+          - (Finset.univ.filter (fun v => h v = γ)).card)
+      ≤ nullity A + ∑ γ, finrank ℚ (Rγ γ) :=
+  deficiency_le_nullity_add_general A g h Rγ hrow
+
 end WitnessDet
+
+#print axioms WitnessDet.det_ne_zero_of_eval_zero
+#print axioms WitnessDet.natDegree_det_le
+#print axioms WitnessDet.pow_dvd_det_of_nullity
+#print axioms WitnessDet.sum_nullity_le
+#print axioms WitnessDet.deficiency_le_nullity_add
