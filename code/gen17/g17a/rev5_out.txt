@@ -1,0 +1,10 @@
+a=1 packets=[[0, 1], [0, 1]] M=4 N=12 profile=[8, 0]  (86 distinct kernel polynomials)
+   BB: rank 13; exact minimal (p_0,p_1) along p_0-p_1=[0]: [(19, 19)]
+   ST: rank 13; exact minimal (p_0,p_1) along p_0-p_1=[0]: [(19, 19)]
+a=1 packets=[[0, 1], [0, 1], [0, 1]] M=6 N=18 profile=[10, 0]  (375 distinct kernel polynomials)
+   BB: rank 19; exact minimal (p_0,p_1) along p_0-p_1=[0]: [(28, 28)]
+   ST: rank 19; exact minimal (p_0,p_1) along p_0-p_1=[0]: [(28, 28)]
+a=2 packets=[[0, 1, 2, 3]] M=4 N=28 profile=[8, 4, 0]  (242 distinct kernel polynomials)
+   BB: rank 29; exact minimal (p_0,p_1) along p_0-p_1=[0, 6, 12, 18]: [(28, 28), (28, 22), (28, 16), (29, 11)]
+   ST: rank 29; exact minimal (p_0,p_1) along p_0-p_1=[0, 6, 12, 18]: [(28, 28), (28, 22), (28, 16), (29, 11)]
+done

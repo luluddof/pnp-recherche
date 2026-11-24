@@ -1,0 +1,20 @@
+W1 product witness F_m (deg<=M(2L-1), F_m(0)=1, integral on all discs, ALL Taylor coefficients at node t divisible by 2^g_t):
+   level i -> (g_t, g_t/D_t, g_t/(D_t*M/u));  any recovery rule from Taylor data at nodes of levels <u needs p_t > g_t at some used node
+   a=2 u=1 M=3 h'=5: {0: (35, 8.75, 2.9166666666666665)}
+   a=2 u=2 M=4 h'=2: {0: (24, 6.0, 3.0), 1: (6, 3.0, 1.5)}
+   a=3 u=2 M=4 h'=3: {0: (78, 9.75, 4.875), 1: (21, 5.25, 2.625)}
+   a=3 u=3 M=6 h'=2: {0: (66, 8.25, 4.125), 1: (24, 6.0, 3.0), 2: (6, 3.0, 1.5)}
+   a=4 u=2 M=6 h'=4: {0: (216, 13.5, 4.5), 1: (60, 7.5, 2.5)}
+   a=4 u=3 M=6 h'=2: {0: (138, 8.625, 4.3125), 1: (52, 6.5, 3.25), 2: (14, 3.5, 1.75)}
+   a=4 u=4 M=8 h'=2: {0: (156, 9.75, 4.875), 1: (66, 8.25, 4.125), 2: (24, 6.0, 3.0), 3: (6, 3.0, 1.5)}
+   a=8 u=4: min_i c_i=1.7812 (level 3), c_0=4.9688;  bound p_t/D_t > ~1.781 M/u  (Theorem B's formula bound: 0.5 M/u, LP ~5.9 M/u, paper uses 24 M/u)
+   a=16 u=8: min_i c_i=1.9785 (level 7), c_0=5.9119;  bound p_t/D_t > ~1.979 M/u  (Theorem B's formula bound: 0.5 M/u, LP ~5.9 M/u, paper uses 24 M/u)
+   a=40 u=20: min_i c_i=2.0000 (level 19), c_0=6.0000;  bound p_t/D_t > ~2.000 M/u  (Theorem B's formula bound: 0.5 M/u, LP ~5.9 M/u, paper uses 24 M/u)
+   a=60 u=30: min_i c_i=2.0000 (level 29), c_0=6.0000;  bound p_t/D_t > ~2.000 M/u  (Theorem B's formula bound: 0.5 M/u, LP ~5.9 M/u, paper uses 24 M/u)
+   a=30 u=30: min_i c_i=0.5000 (level 29), c_0=6.0000;  bound p_t/D_t > ~0.500 M/u  (Theorem B's formula bound: 0.5 M/u, LP ~5.9 M/u, paper uses 24 M/u)
+W2 (D.12) a=2 level i=0: expansion correct mod 2^40 and coefficient valuation >= (a+1-v)+b(i+1-v): True; min over rows/tiles/b of (valuation - w_Z) = 2  (paper only uses >= 0; a-i = 2)
+W2 (D.12) a=2 level i=1: expansion correct mod 2^40 and coefficient valuation >= (a+1-v)+b(i+1-v): True; min over rows/tiles/b of (valuation - w_Z) = 1  (paper only uses >= 0; a-i = 1)
+W2 (D.12) a=3 level i=0: expansion correct mod 2^40 and coefficient valuation >= (a+1-v)+b(i+1-v): True; min over rows/tiles/b of (valuation - w_Z) = 3  (paper only uses >= 0; a-i = 3)
+W2 (D.12) a=3 level i=1: expansion correct mod 2^40 and coefficient valuation >= (a+1-v)+b(i+1-v): True; min over rows/tiles/b of (valuation - w_Z) = 2  (paper only uses >= 0; a-i = 2)
+W2 (D.12) a=3 level i=2: expansion correct mod 2^40 and coefficient valuation >= (a+1-v)+b(i+1-v): True; min over rows/tiles/b of (valuation - w_Z) = 1  (paper only uses >= 0; a-i = 1)
+W2 (D.12) a=4 level i=1: expansion correct mod 2^40 and coefficient valuation >= (a+1-v)+b(i+1-v): True; min over rows/tiles/b of (valuation - w_Z) = 3  (paper only uses >= 0; a-i = 3)

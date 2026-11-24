@@ -17,7 +17,7 @@ Légende : 🔄 en cours · 🆕 pas encore explorée · ⏸️ en attente · �
 |---|---|---|---|
 | **1** | Schémas « produit de clauses » (question du §9 de Dias-Lima) | Version 2 envoyée à F. Dias ; pré-version 3 en brouillon | Borne 2^Ω(n^(2/3)) dans le **modèle de coût produit** ; rien sur la programmation dynamique (sauf : modèle dégénéré), ni sur les autres voies |
 | **2** | Erreurs par point dans la voie « interpolation » d'OpenAI | **En attente** (accord de l'auteur requis ; attendre G14a et G14d, puis la validation de l'article 1). Théorème prouvé en Lean sur tout corps | Σ_k rang(E_k) ≥ N(ℓ, m) pour un point par direction ; √log n optimal **dans le modèle de coût de l'exposé d'O'Donnell** ; **État des échappatoires :** corps finis : fermé (Lean) ; multiplicités inégales : fermé (**Lean**, G16L) ; effondrement de rang par L/R′ : fermé sur papier (G14a, non relu) ; degré réduit D < nd : fermé en partie (reste : degré certifié par annulation). Ne couvre pas : la contraction de tenseurs (futur article 3), l'algorithme de Claude |
-| **3** (futur) | Limites de la voie « contraction de tenseurs » d'OpenAI (annexe D) | **Idée seulement** : résultats de G14b non relus, un seul niveau de récursion | Visé : le √log est optimal pour la famille des « effilages » dépendant de la valuation ; borne d'aplatissement dans le modèle DF. Ne couvrirait pas : d'autres règles de reconstruction, plusieurs niveaux, l'algorithme de Claude |
+| **3** (futur) | Limites de la voie « contraction de tenseurs » d'OpenAI (annexe D) | **Idée seulement, pas assez pour un article (G17a, 24/11)** : théorème A confirmé mais très faible ; théorème B en partie (axiome du modèle VT réfuté) ; un lemme propre (précision optimale en boîte noire) ; il manque une borne de rang 2^(M/√u) dans le modèle DF | Visé : le √log est optimal pour la famille des « effilages » dépendant de la valuation ; borne d'aplatissement dans le modèle DF. Ne couvrirait pas : d'autres règles de reconstruction, plusieurs niveaux, l'algorithme de Claude |
 
 Avec les trois articles, les trois voies de la prépublication d'OpenAI seraient étudiées. Aucun ne dit rien sur P vs NP ni sur la validité de la prépublication.
 
@@ -38,7 +38,6 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
-| G17a | 🔄 **Relecture adverse de G14b** (contraction de tenseurs) | Reconstruction de l'annexe D, modèles DF et VT, théorèmes A et B : le potentiel est-il réel ? | G14b |
 | G17e | 🔄 **Les deux points ouverts de l'article 2** | (A) L'écart O(log ℓ) entre la borne et la construction : optimums exacts à petite taille, argument à deux moitiés (blocs 01 et 10). (B) Degré certifié par annulation : deg P = Θ(nd) est-il forcé ? | G14d, G14a |
 
 Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g18d` (erreur de numéro au lancement ; la génération est bien la 17).
@@ -75,7 +74,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | 🆕 **Fermer l'écart d'un facteur log ℓ (article 2)** | Construction non symétrique en poids qui remplit les bandes, ou preuve qu'il n'en existe pas | Moyenne à difficile | G14d |
 
-| 🔄 Relecture adverse de G14b (contraction de tenseurs) | En cours : G17a (section 1). La relecture de G14a est faite : G17d (section 4). | G14b |
+| Contraction de tenseurs : borne de rang dans le modèle DF | Prouvé : 2^(M/4^u). Visé : 2^(M/√u). L'écart est exponentiel en u. Aussi : réalisabilité du témoin F_m par des noyaux du réseau ; incompressibilité de la somme sur β. C'est la condition pour un article 3. | G17a |
 | 🆕 **Degré certifié par annulation (article 2)** | Dernière échappatoire ouverte : 1_F comme produit de o(n) facteurs creux (polynômes probabilistes) | Difficile | G14a |
 
 **Nouvelles pistes issues de G17c (24/11) :**
@@ -102,6 +101,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Résultat |
 |---|---|
+| ⚠️ **Relecture adverse de G14b** (G17a) | Reconstruction de l'annexe D fidèle. Théorème A confirmé mais très faible. Théorème B en partie : axiome du modèle VT réfuté. Nouveau lemme : précision Θ(M·D_t/u) optimale pour la reconstruction boîte noire. Potentiel « réel mais modeste » : pas une barrière. `code/gen17/g17a/rapport.md` |
 | ✅ **Relecture adverse de G14a + Lean** (G17d) | Théorème au niveau de la sortie confirmé et formalisé (`Article2/OutputLevel.lean`) : rang de A(0)[budget] ≤ Σ rang E_k, tout corps, sans factorisation. L'hypothèse « mineur non singulier » est nécessaire en général (contre-exemple), mais se retire à coût 1/(2Δ−1) pour les matrices creuses (papier). Degré réduit confirmé. |
 | ⚠️ **Article 2 contre la prépublication d'OpenAI** (G17c) | Le cadre existe dans la prépublication (après traduction ; vérifié exactement pour Q ≤ 6). Nouveauté confirmée. **Mais** le coût de l'erreur diffère (tuples de mesures, pas n^rang), et l'annexe D échappe au cadre (modes 2-adiques, récursion). L'énoncé « perte optimale » vaut seulement dans le « cadre X » à un niveau sur un corps : `code/gen17/g17c/rapport.md` |
 | ✅ **Article 1 contre la prépublication d'OpenAI** (G17b) | Aucune hypothèse contredite. Règle de copie = §2.8 ; elle s'applique aux feuilles de la sparsification, pas à F. Définition 5.1 = généralisation fidèle. Coût réel = type produit. Le plan réel n'est pas uniforme en la variable. Sur le plan réel, le théorème B est vrai par q seul : il contraint les nouveaux plans à petits groupes. 7 corrections pour la v3 : `code/gen17/g17b/rapport.md` |

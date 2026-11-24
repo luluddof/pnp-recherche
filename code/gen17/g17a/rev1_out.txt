@@ -1,0 +1,19 @@
+R1  W: deg 2L-1, W(0)=I, W(t)=unit*shift_t, bit v2(t) flips, Lemma D.4 valuations, integrality on disc radius 2^-a: [True, True, True]
+R2  (D.10): -v2(E_t(0)) = D_t * sum_j j/2^j (q(i)-q(i+j)) for random valuation profiles: True
+R3  Thm B inequality max_i Lambda_i >= (2-1/L)M/(4u): violations = 0  smallest ratio seen: 2.0 (1, 1, [13])
+R3b LP: min over profiles of u*max_i Lambda_i (M=1), and paper taper (h=3/u), minimal taper (h=1/u):
+      a=  4 u=  2  LP*u= 3.2217  paper*u=  8.250  minimal-taper*u=  2.750  proved*u=0.4844
+      a=  8 u=  4  LP*u= 4.7894  paper*u= 14.906  minimal-taper*u=  4.969  proved*u=0.4990
+      a= 16 u=  8  LP*u= 5.5185  paper*u= 17.736  minimal-taper*u=  5.912  proved*u=0.5000
+      a= 24 u= 12  LP*u= 5.6830  paper*u= 17.978  minimal-taper*u=  5.993  proved*u=0.5000
+      a= 40 u= 20  LP*u= 5.8064  paper*u= 18.000  minimal-taper*u=  6.000  proved*u=0.5000
+      a= 60 u= 30  LP*u= 5.8696  paper*u= 18.000  minimal-taper*u=  6.000  proved*u=0.5000
+      a= 30 u= 30  LP*u= 4.5811  paper*u= 18.000  minimal-taper*u=  6.000  proved*u=0.5000
+R4  log2 #tuples vs prover floor sqrt(np)-n ; also with weights shifted by s (true divisibility b+1+a-i) and capped at D/2:
+      n=  2 p=  100 shift=0 cap=None:  log2=   43.14  floor=   12.14  Meinardus=   52.34
+      n=  4 p=  400 shift=0 cap=None:  log2=  131.98  floor=   36.00  Meinardus=  148.03
+      n=  4 p=  400 shift=6 cap=None:  log2=   88.24  floor=   36.00  Meinardus=  148.03
+      n=  4 p=  400 shift=0 cap=40:  log2=  131.74  floor=   36.00  Meinardus=  148.03
+      n=  8 p= 1600 shift=8 cap=64:  log2=  262.70  floor=  105.14  Meinardus=  418.68
+      n= 16 p=  256 shift=0 cap=None:  log2=  196.70  floor=   48.00  Meinardus=  236.84
+      n= 40 p=   30 shift=0 cap=None:  log2=   74.87  floor=   -5.36  Meinardus=  128.19
