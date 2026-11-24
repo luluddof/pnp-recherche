@@ -56,6 +56,10 @@ cd lean && lake exe cache get && lake build PnpLean.Outils
 | `intercalate_counting` | Dans ce cadre : N² ≤ q·g*(p) + p·g*(q), où p, q sont les nombres de couleurs utilisées de chaque palette et g*(t) le plus grand g ≤ N avec g(g−1)/2 ≤ t. | — |
 | `intercalate_tradeoff` | Si q ≤ p : N² ≤ 2·p·(√(2q) + 1). Dans le « modèle monomial » du compromis de l'échange, c'est une borne au-delà de la droite p·q ≥ (2/9)N². | Forme réelle |
 
+| `swap_triangular_rank` | Si un même couple (X, Y) inversible rend triangulaire supérieure chaque X·E_l·Y⁻¹, alors rang(Échange − Σ_l E_l ⊗ C_l) ≥ N(N−1)/2, quels que soient les C_l. | Tout corps |
+| `swap_one_kron_rank` | rang(Échange − E ⊗ C) ≥ N(N−1)/2. | Tout corps |
+| `swap_two_kron_rank` | **Deux produits ne font pas mieux qu'un seul :** rang(Échange − (E1 ⊗ C1 + E2 ⊗ C2)) ≥ N(N−1)/2. | Tout corps (preuve par la clôture algébrique) |
+
 **Antériorité de `swap_rank_tradeoff` :** l'objet est le problème 12 de Naslund (arXiv:1701.04475) ; le cas k = 1 est noté par Karam (arXiv:2310.11356). Le résultat est probablement du niveau « folklore » ; la preuve vérifiée par machine semble nouvelle.
 
 ## Non inclus, et pourquoi

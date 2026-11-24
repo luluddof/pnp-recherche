@@ -53,7 +53,6 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 | G25-P3 | 🔄 **Annexe D d'OpenAI avec constantes explicites** (idée B4 I6) | ε maximal légal (au lieu de 2^(−17)), effilage LP, modes de Smith, précision optimale ; chaque changement justifié lemme par lemme. | B4, G18a, G18d |
 | G25-P4 | 🔄 **Triangularisation pour fermer la fenêtre du module de classe** | La famille {E_m} de G24f se triangularise-t-elle (lemme T de G24g) ? Si oui, toute la fenêtre H = 0 se ferme. | G24f, G24g |
 | G25-P5 | 🔄 **Algorithmes d'hypercliques de novembre 2026** (idée B3) | Fischer (2611.03880), Chan-Itakura-Ma-Yu (2611.06813) : leur identité est-elle un gadget « à 3 directions » qui battrait D^(−1/2) ? | B3 |
-| G25-P6 | 🔄 **Lean : lemme de triangularisation T** | Relecture de la preuve, puis Lean ; corollaire r = 1 sur tout corps. | G24g |
 
 Dossiers de travail de la génération 18 : `scratchpad/gen18/g18a` à `g18i`.
 
@@ -194,6 +193,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Résultat |
 |---|---|
+| ✅ **Lean : lemme T et « 2 produits = 1 »** (G25-P6) | `lean/PnpLean/Outils/Triang.lean` : lemme T, lemme P, f(N,1) = f(N,2) = N(N−1)/2 sur tout corps. Niveau L. |
 | ✅ **Lemme d'échange fort** (G24g) | **Théorème 1 : f(N,2) = f(N,1) = N(N−1)/2 pour tout N, tout corps** (deux produits = un seul). Lemme de triangularisation T. r ≥ 3 ouvert. Critère pour fermer la fenêtre du module de classe : la famille de G24f se triangularise-t-elle ? `code/gen24/g24g/notes.md` |
 | ✅ **Petits cas par SAT** (G24d) | Nouveaux UNSAT avec preuves DRAT : ST (7,7) à N = 7, ST (10,10) à N = 9, GF(2) (3,3) et (5,2) à N = 4 (pas de gain en caractéristique 2). Encadrements ST pour N = 9 à 16. Grandes tailles non décidées. `code/gen24/g24d/notes.md` |
 | ❌ **(N, N) réalisable ?** (G24e) | Non au-delà de 8 (numérique) : (7,7) à N = 7 non réalisable ; saut net après N = 8 (motif de Hurwitz). (5,5) à N = 5 et (6,6) à N = 6 : seulement au bord. Bornes exactes inchangées. `code/gen24/g24e/notes.md` |

@@ -8,6 +8,7 @@ import PnpLean.Article2.OutputLevel
 import PnpLean.Article3.DFRank
 import PnpLean.Outils.SwapRank
 import PnpLean.Outils.Intercalate
+import PnpLean.Outils.Triang
 
 /-!
 # PnpLean.Outils — reusable tools
@@ -132,6 +133,18 @@ alias intercalate_counting := Intercalate.counting
 /-- **Trade-off (real form):** if `q ≤ p` then `N² ≤ 2·p·(√(2q) + 1)`. -/
 alias intercalate_tradeoff := Intercalate.tradeoff_real
 
+/-- **Triangularisation lemma.**  If one pair of invertible matrices `X, Y` makes every
+`X * E l * Y⁻¹` upper triangular, then `N(N-1)/2 ≤ rank (Swap - Σ l, E l ⊗ₖ C l)`, whatever the
+`C l` (any field). -/
+alias swap_triangular_rank := Triang.lemmaT
+
+/-- **One product:** `N(N-1)/2 ≤ rank (Swap - E ⊗ₖ C)`, any field. -/
+alias swap_one_kron_rank := Triang.swap_sub_kron_rank
+
+/-- **Two products do no better than one:** `N(N-1)/2 ≤ rank (Swap - (E1 ⊗ₖ C1 + E2 ⊗ₖ C2))`,
+any field. -/
+alias swap_two_kron_rank := Triang.swap_sub_two_kron_rank'
+
 end PnpOutils
 
 #print axioms PnpOutils.pow_dvd_det_of_nullity
@@ -154,3 +167,6 @@ end PnpOutils
 #print axioms PnpOutils.intercalate_key_lemma
 #print axioms PnpOutils.intercalate_counting
 #print axioms PnpOutils.intercalate_tradeoff
+#print axioms PnpOutils.swap_triangular_rank
+#print axioms PnpOutils.swap_one_kron_rank
+#print axioms PnpOutils.swap_two_kron_rank
