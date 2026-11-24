@@ -44,7 +44,7 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
-| G23a | 🔄 **Ansatz de groupe dans le modèle monomial** | Le point (8,8) à N = 8 est invariant par Q8 et atteint la borne du modèle. Encodage par orbites (SAT) pour les groupes d'ordre 16, 27, 32, 64 ; une famille sous N^√2 serait un nouveau record pour le problème général. | G22b-bis |
+| — | *Aucun agent en cours. La génération 23 est terminée (24/11).* | | |
 
 Dossiers de travail de la génération 18 : `scratchpad/gen18/g18a` à `g18i`.
 
@@ -151,7 +151,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Question précise | Origine |
 |---|---|---|
-| Ansatz de groupe d'ordre g^(3/2) dans le modèle monomial | Le point (8,8) à N = 8 est invariant par Q8 et atteint la borne du modèle. Un groupe d'ordre g^(3/2) avec des blocs 2+2 atteindrait la borne N^(4/3) (par exemple (128,128) à N = 64) : ce serait sous √2. Encodage direct ≈ 10⁹ clauses : il faut un encodage par orbites. Q8×Q8 échoue. | G22b-bis |
+| Modèle monomial après G23a | Les ansatz de groupe sont exclus (obstruction d'anisotropie). Reste : tableaux ST génériques sous N²/8 ((28,28) à N = 16 non décidé) ; ZT avec τ non linéaire à N = 64. Exposant du modèle : entre 4/3 (prouvé, Lean) et 2 (meilleur connu). | G22b-bis, G23a |
 | Relecture adverse de la borne du modèle monomial | Lemme clé (une couleur T de taille h force |S| ≥ h(h−1)/2) ; comptage ; usage du lemme 7.4 de HWY. | G22b-bis |
 | Décider N = 12 (18,18) et N = 16 (28,28) dans le modèle ST | SAT arrêté à 600 s. | G22b-bis |
 
@@ -178,6 +178,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Résultat |
 |---|---|
+| ❌ **Ansatz de groupe dans le modèle monomial** (G23a) | Aucune famille invariante par un groupe ne passe sous la somme directe N²/8 (N = 16, 27, 32, 64). Obstruction prouvée (non relue) : l'ansatz ZT force une forme anisotrope, donc des blocs de taille ≤ 4 (Chevalley-Warning). Le point Q8 est un accident de la taille 8. `code/gen23/g23a/notes.md` |
 | ⚠️ **Loi de distance pour q = 1** (G23d) | c(N;1,1) = 4 non prouvé ; prouvé : c(N;1,1) ≤ 8,081 pour tout N, et c(N;p,1) ≤ 11,7·p + O(√p) (indépendant de N). Rien pour q ≥ 2. `code/gen23/g23d/notes.md` |
 | ✅ **Lean : borne du modèle monomial** (G23e) | `lean/PnpLean/Outils/Intercalate.lean` : lemme clé, comptage, compromis réel. Niveau L (modèle ST). |
 | ❌ **Creux des algèbres de sommets, vrai rang** (G23c) | Aucune valeur sous 2√2 avec le vrai rang. Règle de sélection (ξ intérieur) et dichotomie (ξ sur le bord) prouvées sur papier : elles tuent les creux pour toute algèbre fixe. Reste ouvert : constructions à plusieurs canaux dans des familles de puissances tensorielles (écart 2,799 – 3,030). `code/gen23/g23c/notes.md` |
