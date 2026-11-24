@@ -9,6 +9,19 @@ Légende : 🔄 en cours · 🆕 pas encore explorée · ⏸️ en attente · �
 
 ---
 
+## 0. L'échelle vers P = NP (temps pour 3-SAT)
+
+| Marche | Temps | État |
+|---|---|---|
+| 0 | 2^(0,39 n) | Record avant octobre 2026 |
+| 1 | 2^(n/√log n) | Atteint par OpenAI et Claude (annoncé, non validé) |
+| 2 | 2^(n/log n) | Mur des méthodes actuelles (générations 4 à 6) |
+| 3 | 2^(n^(1−ε)) | Demande une idée nouvelle (hors structure produit) |
+| 4 | 2^(√n) | — |
+| 5 | Quasi-polynomial puis polynomial (= P = NP) | La plupart des experts pensent que cette marche n'existe pas |
+
+Priorité recommandée : pistes A et B, puis Q1\*.
+
 ## 1. En cours (génération 8)
 
 | Id | Piste | Question précise | Origine |
@@ -19,6 +32,9 @@ Légende : 🔄 en cours · 🆕 pas encore explorée · ⏸️ en attente · �
 
 | Piste | Question précise | Difficulté | Origine |
 |---|---|---|---|
+| 🆕 **A – Meilleures pièces algébriques (ρ < 1/√2)** | Trouver des espaces gradués avec log dim ~ E^α, α < 1/2 (question de l'annexe H de l'article de Claude) ; donnerait 2^(m/(log m)^(1−α)), plus rapide que l'algorithme publié ; plancher ρ = 1/2 | Moyenne ; recherche par ordinateur possible | N1, G4a |
+| 🆕 **B – Décider au lieu de compter** | Compter modulo 2 suffit pour décider (Valiant-Vazirani). Les identités sur GF(2) donnent-elles un meilleur gain que sur Q ? Le plancher ρ ≥ 1/2 reste vrai sur tout corps | Inconnue : jamais étudiée par nos agents | Nouvelle idée (24/11) |
+| 🆕 **E – Exploiter la chute de l'ETH** | Des bornes inférieures de plus de 800 articles supposaient l'ETH ; chercher des algorithmes plus rapides pour d'autres problèmes NP-complets | Moyenne ; à côté du chemin principal | Article de Claude §1 |
 | 🆕 **Lemme 4 pondéré pour F\*** | Prouver la borne de séparateur pour la formule F\* de la prépublication et pour les feuilles de la sparsification, pour comparer avec le théorème 8.3 de Dias-Lima | Moyenne | Rapport G8R |
 | 🆕 **Problème de Naslund / Hurwitz** | Prouver P(N) ≥ N^(1+ε) ; équivaut à un plancher ρ > 1/2 dans l'algorithme de Claude | Très difficile (circuits non commutatifs) | N1, G5b |
 | 🆕 **Gadgets à 3 parties ou plus** | Seule voie pour passer 2^(m/log m) dans le cadre de Claude | Difficile, aucune idée concrète | G4b |
