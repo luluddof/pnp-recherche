@@ -31,8 +31,9 @@ has degree `≤ (D - v) + d + μ x₁ ≤ D + d < N`, vanishes at the `N` points
 `Ψ(0) = b x₁ (0) ≠ 0`: contradiction.
 
 (This is the filtration argument of the notes `code/gen14/g14d/notes.md`, Theorem 1, in closed
-form: `W` is a complement of the space `V_D` of annihilators, because the lowest-order
-coefficient of an element of `V_D` of `X`-adic valuation `v` is supported on `v < μ x ≤ D - v`.)
+form: `W` meets the space `V_D` of annihilators trivially, because the lowest-order coefficient
+of an element of `V_D` of `X`-adic valuation `v` is supported on `v < μ x ≤ D - v`, whereas for
+an element of `W` it is supported on `μ x ≤ v`; and `dim W = ∑ x, max(0, N - d - 2 μ x)`.)
 
 The weaker "one-parameter" form `∑ x, (m + 1 - μ x) ≤ ∑ k, rank (E k)` for `2 m + d + 1 ≤ N`
 is `MultiPoint.sum_rank_ge_simple`; one point per direction is `MultiPoint.sum_rank_ge_one`;
@@ -408,7 +409,7 @@ theorem sum_rank_ge_one (ℓ d : ℕ) (J : Matrix (Fin ℓ → Bool) (Fin ℓ �
   have := sum_rank_ge ℓ d J hd h0 τ hτ hτ0 (fun k => k) K E hdec hnice
   simpa [mu_id] using this
 
-/-- Points indexed by . -/
+/-- Points indexed by `Fin N`. -/
 theorem sum_rank_ge_fin (ℓ d N : ℕ) (J : Matrix (Fin ℓ → Bool) (Fin ℓ → Bool) F[X])
     (hd : ∀ x y, (J x y).natDegree ≤ d) (h0 : J.map (eval 0) = XtensorF F ℓ)
     (τ : Fin N → F) (hτ : Function.Injective τ) (hτ0 : ∀ k, τ k ≠ 0) (c : Fin N → Fin ℓ)
@@ -421,8 +422,9 @@ theorem sum_rank_ge_fin (ℓ d N : ℕ) (J : Matrix (Fin ℓ → Bool) (Fin ℓ 
 /-! ### Theorem 2: the placement of the points gives no loophole -/
 
 /-- Truncated subtraction is superadditive: `|s| * n - ∑ a ≤ ∑ (n - a)`. -/
-theorem card_mul_sub_sum_le {α : Type*} [DecidableEq α] (s : Finset α) (n : ℕ) (a : α → ℕ) :
+theorem card_mul_sub_sum_le {α : Type*} (s : Finset α) (n : ℕ) (a : α → ℕ) :
     s.card * n - ∑ j ∈ s, a j ≤ ∑ j ∈ s, (n - a j) := by
+  classical
   induction s using Finset.induction_on with
   | empty => simp
   | insert i s hi ih =>

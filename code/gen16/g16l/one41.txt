@@ -1,0 +1,1 @@
+one-per-direction l=4 d=1 p=13: T=12 (limit 13) new=7 old=6

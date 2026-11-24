@@ -6,3 +6,4 @@ import PnpLean.Article2.QdPlus2
 import PnpLean.Article2.SqrtLog
 import PnpLean.Article2.Consequences
 import PnpLean.Article2.AnyField
+import PnpLean.Article2.MultiPoint

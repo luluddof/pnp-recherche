@@ -16,7 +16,7 @@ Légende : 🔄 en cours · 🆕 pas encore explorée · ⏸️ en attente · �
 | Article | Sujet | État | Portée |
 |---|---|---|---|
 | **1** | Schémas « produit de clauses » (question du §9 de Dias-Lima) | Version 2 envoyée à F. Dias ; pré-version 3 en brouillon | Borne 2^Ω(n^(2/3)) dans le **modèle de coût produit** ; rien sur la programmation dynamique (sauf : modèle dégénéré), ni sur les autres voies |
-| **2** | Erreurs par point dans la voie « interpolation » d'OpenAI | **En attente** (accord de l'auteur requis ; attendre G14a et G14d, puis la validation de l'article 1). Théorème prouvé en Lean sur tout corps | Σ_k rang(E_k) ≥ N(ℓ, m) pour un point par direction ; √log n optimal **dans le modèle de coût de l'exposé d'O'Donnell** ; **État des échappatoires :** corps finis : fermé (Lean) ; multiplicités inégales : fermé (G14d, relecture G16L en cours) ; effondrement de rang par L/R′ : fermé sur papier (G14a, non relu) ; degré réduit D < nd : fermé en partie (reste : degré certifié par annulation). Ne couvre pas : la contraction de tenseurs (futur article 3), l'algorithme de Claude |
+| **2** | Erreurs par point dans la voie « interpolation » d'OpenAI | **En attente** (accord de l'auteur requis ; attendre G14a et G14d, puis la validation de l'article 1). Théorème prouvé en Lean sur tout corps | Σ_k rang(E_k) ≥ N(ℓ, m) pour un point par direction ; √log n optimal **dans le modèle de coût de l'exposé d'O'Donnell** ; **État des échappatoires :** corps finis : fermé (Lean) ; multiplicités inégales : fermé (**Lean**, G16L) ; effondrement de rang par L/R′ : fermé sur papier (G14a, non relu) ; degré réduit D < nd : fermé en partie (reste : degré certifié par annulation). Ne couvre pas : la contraction de tenseurs (futur article 3), l'algorithme de Claude |
 | **3** (futur) | Limites de la voie « contraction de tenseurs » d'OpenAI (annexe D) | **Idée seulement** : résultats de G14b non relus, un seul niveau de récursion | Visé : le √log est optimal pour la famille des « effilages » dépendant de la valuation ; borne d'aplatissement dans le modèle DF. Ne couvrirait pas : d'autres règles de reconstruction, plusieurs niveaux, l'algorithme de Claude |
 
 Avec les trois articles, les trois voies de la prépublication d'OpenAI seraient étudiées. Aucun ne dit rien sur P vs NP ni sur la validité de la prépublication.
@@ -38,7 +38,7 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
-| G16L | 🔄 **Relecture + Lean du théorème à plusieurs points** (G14d) | Σ rang ≥ Σ_x max(0, N − d − 2μ(x)), tout corps ; placement équilibré optimal | G14d |
+| G17a | 🔄 **Relecture adverse de G14b** (contraction de tenseurs) | Reconstruction de l'annexe D, modèles DF et VT, théorèmes A et B : le potentiel est-il réel ? | G14b |
 
 **Consigne de l'utilisateur (24/11) :** dès que les générations 8 et 9 sont terminées, lancer une **génération 10** sur les pistes « pas encore explorées » (section 2) et « en attente » (section 3).
 
@@ -91,6 +91,7 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | Piste | Résultat |
 |---|---|
+| ✅ **Lean : théorème à plusieurs points** (G16L) | `MultiPoint.sum_rank_ge` : forme la plus forte du théorème de l'article 2 (borne doublée, tout corps, placement quelconque) |
 | ✅ Modèle DP valide (G14c) | Modèle « rang d'interface » : valide pour les DP à tables d'interface, non dégénéré ; borne 2^Ω(√n) seulement (non relu) |
 | ✅ Échappatoires de l'article 2 (G14a) | Corps finis : fermé ; L/R′ : fermé sur papier ; D < nd : en partie ; la caractéristique 2 gagne seulement une constante sur de petits cas |
 | ✅ Théorème à plusieurs points pour l'article 2 (G14d) | Borne doublée, tout corps ; pas d'échappatoire par placement ; écart log ℓ non fermé (non relu) |
