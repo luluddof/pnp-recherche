@@ -1,0 +1,2 @@
+tests=6000 violations=0 lower-tight=2778 upper-tight=2158
+example C=(1,-1): 3 values; rank 1; bounds 2..3

@@ -16,7 +16,7 @@ Légende : 🔄 en cours · 🆕 pas encore explorée · ⏸️ en attente · �
 | Article | Sujet | État | Portée |
 |---|---|---|---|
 | **1** | Schémas « produit de clauses » (question du §9 de Dias-Lima) | Version 2 envoyée à F. Dias ; pré-version 3 en brouillon | Borne 2^Ω(n^(2/3)) dans le **modèle de coût produit** ; rien sur la programmation dynamique (sauf : modèle dégénéré), ni sur les autres voies |
-| **2** | Erreurs par point dans la voie « interpolation » d'OpenAI | **En attente** (accord de l'auteur requis ; attendre G14a et G14d, puis la validation de l'article 1). Théorème prouvé en Lean sur tout corps | Σ_k rang(E_k) ≥ N(ℓ, m) pour un point par direction ; √log n optimal **dans le modèle de coût de l'exposé d'O'Donnell** ; **État des échappatoires :** corps finis : fermé (Lean) ; multiplicités inégales : fermé (**Lean**, G16L) ; effondrement de rang par L/R′ : fermé sur papier (G14a, non relu) ; degré réduit D < nd : fermé en partie (reste : degré certifié par annulation). Ne couvre pas : la contraction de tenseurs (futur article 3), l'algorithme de Claude |
+| **2** | Erreurs par point dans la voie « interpolation » d'OpenAI | **En attente** (accord de l'auteur requis ; attendre G14a et G14d, puis la validation de l'article 1). Théorème prouvé en Lean sur tout corps | Σ_k rang(E_k) ≥ N(ℓ, m) pour un point par direction ; √log n optimal **dans le modèle de coût de l'exposé d'O'Donnell** ; **État des échappatoires :** corps finis : fermé (Lean) ; multiplicités inégales : fermé (**Lean**, G16L) ; effondrement de rang par L/R′ : fermé sur papier (G14a, non relu) ; degré réduit D < nd : fermé en partie (reste : degré certifié par annulation). Ne couvre pas : la contraction de tenseurs (futur article 3), l'algorithme de Claude **Ajout possible (G18b/G18R) :** borne supérieure en loglog n par un évaluateur modulo 3, contre borne inférieure en √loglog n pour une charge constante. |
 | **3** (futur) | Limites de la voie « contraction de tenseurs » d'OpenAI (annexe D) | **Idée seulement, pas assez pour un article (G17a, 24/11)** : théorème A confirmé mais très faible ; théorème B en partie (axiome du modèle VT réfuté) ; un lemme propre (précision optimale en boîte noire) ; il manque une borne de rang 2^(M/√u) dans le modèle DF | Visé : le √log est optimal pour la famille des « effilages » dépendant de la valuation ; borne d'aplatissement dans le modèle DF. Ne couvrirait pas : d'autres règles de reconstruction, plusieurs niveaux, l'algorithme de Claude |
 
 Avec les trois articles, les trois voies de la prépublication d'OpenAI seraient étudiées. Aucun ne dit rien sur P vs NP ni sur la validité de la prépublication.
@@ -38,14 +38,13 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
-| G18R | 🔄 **Relecture adverse de G18b** | G18b annonce un gain d'un facteur loglog n sur la route d'interpolation (décision / #F mod 3, occurrences bornées), par un évaluateur modulo 3. Esquisse. La caractéristique 3 casse-t-elle un lemme de la prépublication ? Test complet indépendant. | G18b (`code/gen18/g18b/`) |
 | G18S | 🔄 **Relecture adverse de G18e** | G18e annonce le théorème A′ : N ≥ 2^(0,399·M/√u) dans le modèle DF, donc 2^Θ(M/√u) avec la borne supérieure de l'annexe D. C'était la condition manquante pour l'article 3. Juste ? Charges non uniformes ? Énoncé prêt pour Lean. | G18e (`code/gen18/g18e/`) |
 | G18f | 🔄 **Termes intriqués, λ = 2** (question E1) | Seule piste vers 2^(n^(1−ε)). Calcul à λ = 2 ou question réduite ; E1 est-elle une question de rang asymptotique d'un tenseur explicite ? | G9d, G14e |
 | G18i | 🔄 **Réfutation des 3-CNF aléatoires à densité constante** | Carte temps contre densité avec les algorithmes de 2026 ; lecture en complexité des preuves ; une idée nouvelle testée. | obstacle central |
 
 Dossiers de travail de la génération 18 : `scratchpad/gen18/g18a` à `g18i`.
 
-**État (24/11, 10 h 45 UTC) :** les neuf agents se sont arrêtés à cause de la limite d'utilisation, presque au début. Relance en deux vagues. **En marche :** G18f, G18i, G18R, G18S. **Terminés :** G18a, G18b (à relire), G18c, G18d, G18e (à relire), G18g, G18h.
+**État (24/11, 10 h 45 UTC) :** les neuf agents se sont arrêtés à cause de la limite d'utilisation, presque au début. Relance en deux vagues. **En marche :** G18f, G18i, G18S. **Terminés :** G18a, G18b (confirmé par G18R), G18c, G18d, G18e (à relire), G18g, G18h.
 
 Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g18d` (erreur de numéro au lancement ; la génération est bien la 17).
 
@@ -125,6 +124,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Résultat |
 |---|---|
+| ✅ **Évaluateur modulo 3 pour la route d'interpolation** (G18b, relu par G18R) | Théorème conditionnel confirmé (P+) : décision aléatoire et #F mod 3 pour les 3-CNF à occurrences bornées en 2^((12,6+o(1))·n·lnln n/√ln n), un facteur loglog sous la route d'interpolation de la prépublication. Dominé par le résultat principal de la prépublication : résultat sur la méthode seulement. Complète l'article 2 (borne supérieure loglog contre borne inférieure √loglog pour une charge constante). `code/gen18/g18b/`, `code/gen18/g18r/` |
 | ⚠️ **Problème de Hurwitz et Naslund** (G18g) | Aucune borne améliorée. Reformulation : la variante utile est « paires réalisables (p, q) », pas les sommes de carrés ; 4ρ* = sup_θ (θ + T(θ)). Borne élémentaire p·q ≥ 3N²/16. Notre ancienne « équivalence » avec P(N) ≥ N^(1+ε) est corrigée : un plancher ρ > 1/2 suit d'une borne déséquilibrée p·q ≥ N^(2+ε) en un seul θ. `code/gen18/g18g/notes.md` |
 | ⚠️ **Pièces hors du cadre** (G18h) | Aucune famille avec ρ < 1/√2. Mais le plancher 1/√2 vient de l'hypothèse (V) et de la forme du profil de croissance, pas de « un seul espace gradué ». Seul plancher prouvé en général : 1/2. Trois objets donneraient un gain (opérateurs presque commutants à croissance exponentielle ; profil en escalier ; identité à D directions). `code/gen18/g18h/notes.md` |
 | ❌ **Précision 2-adique des vrais noyaux** (G18a) | Pas de gain au-delà d'une constante. Rang plein ⇒ même précision que la boîte noire (17 cas). Le « 4 contre 14 » de G17a est un effet de nœud de coupe sur peu de paquets. Constante de l'exposant : facteur 2 à 3,5 possible (κ = 24 → 2 à 5,9). Numérique seulement. `code/gen18/g18a/notes.md` |

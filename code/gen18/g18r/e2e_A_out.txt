@@ -1,0 +1,10 @@
+{'n': 8, 'ncl': 3, 'r': 2, 'Q': 3, 'm': 3, 'shift': 3, 'h': 2, 'M': 9, 'degrow': 2, 'dH': 18, 'q': 6, 'J': 7, 'nsat': 160, 'pairs_per_node': 5281, 'truth': 8, 'got': 8, 'nsat_mod3': 1, 'ok': True, 'kernel_checks': 27, 'kernel_nonvac': 6, 'tuples': [([2, 0], [5, 3], [4, 1]), ([1, 1], [4, 4], [2, 2]), ([1, 1], [5, 3], [2, 3])], 'time': 28.8, 'degH': 8}
+{'n': 8, 'ncl': 3, 'r': 2, 'Q': 3, 'm': 3, 'shift': 2, 'h': 2, 'M': 9, 'degrow': 2, 'dH': 18, 'q': 6, 'J': 7, 'nsat': 168, 'pairs_per_node': 5281, 'truth': 0, 'got': 0, 'nsat_mod3': 0, 'ok': True, 'kernel_checks': 27, 'kernel_nonvac': 13, 'tuples': [([3, 1], [5, 3], [8, 3]), ([3, 2], [4, 4], [8, 4]), ([4, 1], [5, 3], [16, 2])], 'time': 39.3, 'degH': 12}
+{'n': 8, 'ncl': 3, 'r': 3, 'Q': 3, 'm': 3, 'shift': 3, 'h': 2, 'M': 9, 'degrow': 2, 'dH': 18, 'q': 6, 'J': 7, 'nsat': 168, 'pairs_per_node': 5281, 'truth': 6, 'got': 6, 'nsat_mod3': 0, 'ok': True, 'kernel_checks': 54, 'kernel_nonvac': 4, 'tuples': [([0, 3, 1], [1, 4, 3], [1, 8, 2]), ([0, 1, 3], [1, 3, 4], [1, 2, 8]), ([0, 2, 0], [2, 5, 1], [1, 4, 1])], 'time': 47.2, 'degH': 13}
+Traceback (most recent call last):
+  File "/tmp/claude-0/-home-user-pnp-recherche/2d12e629-e6d2-542b-bfc0-8b766f57383f/scratchpad/gen18/g18r/e2e.py", line 285, in <module>
+    for c in cfgs: run(**c)
+                   ~~~^^^^^
+  File "/tmp/claude-0/-home-user-pnp-recherche/2d12e629-e6d2-542b-bfc0-8b766f57383f/scratchpad/gen18/g18r/e2e.py", line 185, in run
+    Ug=np.array(list(itertools.product((0,1),repeat=len(S[g]))),dtype=np.int64).reshape(-1,len(S[g]))
+ValueError: cannot reshape array of size 0 into shape (0)

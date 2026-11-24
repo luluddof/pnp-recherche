@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/tmp/claude-0/-home-user-pnp-recherche/2d12e629-e6d2-542b-bfc0-8b766f57383f/scratchpad/gen18/g18r/e2e.py", line 285, in <module>
+    for c in cfgs: run(**c)
+                   ~~~^^^^^
+  File "/tmp/claude-0/-home-user-pnp-recherche/2d12e629-e6d2-542b-bfc0-8b766f57383f/scratchpad/gen18/g18r/e2e.py", line 185, in run
+    Ug=np.array(list(itertools.product((0,1),repeat=len(S[g]))),dtype=np.int64).reshape(-1,len(S[g]))
+ValueError: cannot reshape array of size 0 into shape (0)

@@ -1,0 +1,46 @@
+r=2 Q=3 m=3 shift=1 blocks=[[0], [1, 2, 3]] D=64 deg=2 badpairs=3 accidentally_good=0 max c_t/D=0.5625 (1/m=0.3333) time=0.0s
+    {'t': 0, 'ct': 36, 'frac': 0.5625, 'nice_nnz': 160, 'nonvac': [(1, 14), (1, 14)], 'rk_per_group': [18, 18], 'sum_rk': 36, 'rankE_F3span': 36}
+    {'t': 1, 'ct': 36, 'frac': 0.5625, 'nice_nnz': 160, 'nonvac': [(1, 14), (1, 14)], 'rk_per_group': [18, 18], 'sum_rk': 36, 'rankE_F3span': 36}
+    {'t': 2, 'ct': 36, 'frac': 0.5625, 'nice_nnz': 96, 'nonvac': [(1, 14), (1, 14)], 'rk_per_group': [18, 18], 'sum_rk': 36, 'rankE_F3span': 36}
+r=2 Q=3 m=3 shift=2 blocks=[[0, 1], [2, 3]] D=64 deg=2 badpairs=6 accidentally_good=0 max c_t/D=0.3750 (1/m=0.3333) time=0.0s
+    {'t': 0, 'ct': 24, 'frac': 0.375, 'nice_nnz': 208, 'nonvac': [(1, 20), (1, 20)], 'rk_per_group': [12, 12], 'sum_rk': 24, 'rankE_F3span': 15}
+    {'t': 1, 'ct': 24, 'frac': 0.375, 'nice_nnz': 208, 'nonvac': [(1, 20), (1, 20)], 'rk_per_group': [12, 12], 'sum_rk': 24, 'rankE_F3span': 15}
+    {'t': 2, 'ct': 24, 'frac': 0.375, 'nice_nnz': 144, 'nonvac': [(1, 20), (1, 20)], 'rk_per_group': [12, 12], 'sum_rk': 24, 'rankE_F3span': 24}
+r=2 Q=3 m=3 shift=3 blocks=[[0, 1, 2], [3]] D=64 deg=2 badpairs=3 accidentally_good=1 max c_t/D=0.0625 (1/m=0.3333) time=0.0s
+    {'t': 0, 'ct': 4, 'frac': 0.0625, 'nice_nnz': 192, 'nonvac': [(1, 30), (1, 30)], 'rk_per_group': [2, 2], 'sum_rk': 4, 'rankE_F3span': 1}
+    {'t': 1, 'ct': 4, 'frac': 0.0625, 'nice_nnz': 192, 'nonvac': [(1, 30), (1, 30)], 'rk_per_group': [2, 2], 'sum_rk': 4, 'rankE_F3span': 1}
+    {'t': 2, 'ct': 4, 'frac': 0.0625, 'nice_nnz': 192, 'nonvac': [(0, 30), (0, 30)], 'rk_per_group': [2, 2], 'sum_rk': 4, 'rankE_F3span': 4}
+== r=2 Q=3 m=3: best shift max c_t/D = 0.0625  <= 1/m ? True
+r=2 Q=4 m=3 shift=1 blocks=[[0], [1, 2, 3], [4]] D=256 deg=2 badpairs=8 accidentally_good=0 max c_t/D=0.4375 (1/m=0.3333) time=0.2s
+    {'t': 0, 'ct': 112, 'frac': 0.4375, 'nice_nnz': 1152, 'nonvac': [(1, 72), (1, 72)], 'rk_per_group': [56, 56], 'sum_rk': 112, 'rankE_F3span': 112}
+    {'t': 1, 'ct': 112, 'frac': 0.4375, 'nice_nnz': 1152, 'nonvac': [(1, 72), (1, 72)], 'rk_per_group': [56, 56], 'sum_rk': 112, 'rankE_F3span': 111}
+    {'t': 2, 'ct': 112, 'frac': 0.4375, 'nice_nnz': 960, 'nonvac': [(1, 72), (1, 72)], 'rk_per_group': [56, 56], 'sum_rk': 112, 'rankE_F3span': 112}
+    {'t': 3, 'ct': 112, 'frac': 0.4375, 'nice_nnz': 1056, 'nonvac': [(1, 72), (1, 72)], 'rk_per_group': [56, 56], 'sum_rk': 112, 'rankE_F3span': 112}
+r=2 Q=4 m=3 shift=2 blocks=[[0, 1], [2, 3, 4]] D=256 deg=2 badpairs=12 accidentally_good=2 max c_t/D=0.4219 (1/m=0.3333) time=0.2s
+    {'t': 0, 'ct': 108, 'frac': 0.421875, 'nice_nnz': 1024, 'nonvac': [(1, 74), (1, 74)], 'rk_per_group': [54, 54], 'sum_rk': 108, 'rankE_F3span': 72}
+    {'t': 1, 'ct': 108, 'frac': 0.421875, 'nice_nnz': 1184, 'nonvac': [(1, 74), (1, 74)], 'rk_per_group': [54, 54], 'sum_rk': 108, 'rankE_F3span': 72}
+    {'t': 2, 'ct': 108, 'frac': 0.421875, 'nice_nnz': 1088, 'nonvac': [(1, 74), (1, 74)], 'rk_per_group': [54, 54], 'sum_rk': 108, 'rankE_F3span': 108}
+    {'t': 3, 'ct': 108, 'frac': 0.421875, 'nice_nnz': 896, 'nonvac': [(1, 74), (1, 74)], 'rk_per_group': [54, 54], 'sum_rk': 108, 'rankE_F3span': 108}
+r=2 Q=4 m=3 shift=3 blocks=[[0, 1, 2], [3, 4]] D=256 deg=2 badpairs=12 accidentally_good=1 max c_t/D=0.1406 (1/m=0.3333) time=0.1s
+    {'t': 0, 'ct': 36, 'frac': 0.140625, 'nice_nnz': 1152, 'nonvac': [(1, 110), (1, 110)], 'rk_per_group': [18, 18], 'sum_rk': 36, 'rankE_F3span': 18}
+    {'t': 1, 'ct': 36, 'frac': 0.140625, 'nice_nnz': 1120, 'nonvac': [(1, 110), (1, 110)], 'rk_per_group': [18, 18], 'sum_rk': 36, 'rankE_F3span': 18}
+    {'t': 2, 'ct': 36, 'frac': 0.140625, 'nice_nnz': 992, 'nonvac': [(1, 110), (1, 110)], 'rk_per_group': [18, 18], 'sum_rk': 36, 'rankE_F3span': 33}
+    {'t': 3, 'ct': 36, 'frac': 0.140625, 'nice_nnz': 1024, 'nonvac': [(1, 110), (1, 110)], 'rk_per_group': [18, 18], 'sum_rk': 36, 'rankE_F3span': 33}
+== r=2 Q=4 m=3: best shift max c_t/D = 0.1406  <= 1/m ? True
+r=3 Q=3 m=3 shift=1 blocks=[[0], [1, 2, 3]] D=729 deg=2 badpairs=3 accidentally_good=0 max c_t/D=0.4444 (1/m=0.3333) time=0.8s
+    {'t': 0, 'ct': 324, 'frac': 0.4444444444444444, 'nice_nnz': 2592, 'nonvac': [(1, 135), (1, 135), (1, 135)], 'rk_per_group': [108, 108, 108], 'sum_rk': 324, 'rankE_F3span': 324}
+    {'t': 1, 'ct': 324, 'frac': 0.4444444444444444, 'nice_nnz': 2592, 'nonvac': [(1, 135), (1, 135), (1, 135)], 'rk_per_group': [108, 108, 108], 'sum_rk': 324, 'rankE_F3span': 324}
+    {'t': 2, 'ct': 324, 'frac': 0.4444444444444444, 'nice_nnz': 1296, 'nonvac': [(1, 135), (1, 135), (1, 135)], 'rk_per_group': [108, 108, 108], 'sum_rk': 324, 'rankE_F3span': 324}
+r=3 Q=3 m=3 shift=2 blocks=[[0, 1], [2, 3]] D=729 deg=2 badpairs=6 accidentally_good=0 max c_t/D=0.4444 (1/m=0.3333) time=0.9s
+    {'t': 0, 'ct': 324, 'frac': 0.4444444444444444, 'nice_nnz': 3321, 'nonvac': [(1, 135), (1, 135), (1, 135)], 'rk_per_group': [108, 108, 108], 'sum_rk': 324, 'rankE_F3span': 216}
+    {'t': 1, 'ct': 324, 'frac': 0.4444444444444444, 'nice_nnz': 3321, 'nonvac': [(1, 135), (1, 135), (1, 135)], 'rk_per_group': [108, 108, 108], 'sum_rk': 324, 'rankE_F3span': 216}
+    {'t': 2, 'ct': 324, 'frac': 0.4444444444444444, 'nice_nnz': 2025, 'nonvac': [(1, 135), (1, 135), (1, 135)], 'rk_per_group': [108, 108, 108], 'sum_rk': 324, 'rankE_F3span': 324}
+r=3 Q=3 m=3 shift=3 blocks=[[0, 1, 2], [3]] D=729 deg=2 badpairs=3 accidentally_good=1 max c_t/D=0.1111 (1/m=0.3333) time=0.4s
+    {'t': 0, 'ct': 81, 'frac': 0.1111111111111111, 'nice_nnz': 2835, 'nonvac': [(1, 216), (1, 216), (1, 216)], 'rk_per_group': [27, 27, 27], 'sum_rk': 81, 'rankE_F3span': 27}
+    {'t': 1, 'ct': 81, 'frac': 0.1111111111111111, 'nice_nnz': 2835, 'nonvac': [(1, 216), (1, 216), (1, 216)], 'rk_per_group': [27, 27, 27], 'sum_rk': 81, 'rankE_F3span': 27}
+    {'t': 2, 'ct': 81, 'frac': 0.1111111111111111, 'nice_nnz': 2673, 'nonvac': [(0, 216), (0, 216), (0, 216)], 'rk_per_group': [27, 27, 27], 'sum_rk': 81, 'rankE_F3span': 81}
+== r=3 Q=3 m=3: best shift max c_t/D = 0.1111  <= 1/m ? True
+
+real	0m3.094s
+user	0m1.762s
+sys	0m0.232s
