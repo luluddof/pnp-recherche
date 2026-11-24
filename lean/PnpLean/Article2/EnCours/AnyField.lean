@@ -154,28 +154,28 @@ theorem core (ℓ d ma mc : ℕ) (J : Matrix (Fin ℓ → Bool) (Fin ℓ → Boo
       rw [hb x, natDegree_mul (pow_ne_zero _ X_ne_zero) hbx] at this
       omega
   -- Step 2: the test polynomial `Ψ = (∑ x, b x * J x (¬x₁)) * pref x₁`.
-  obtain ⟨S, hS⟩ : ∃ S : F[X], S = ∑ x, b x * J x (SqrtLog.SqrtLog.compl x₁) := ⟨_, rfl⟩
+  obtain ⟨S, hS⟩ : ∃ S : F[X], S = ∑ x, b x * J x (SqrtLog.compl x₁) := ⟨_, rfl⟩
   obtain ⟨Ψ, hΨ⟩ : ∃ Ψ : F[X], Ψ = S * pref τ x₁ := ⟨_, rfl⟩
   have hΨdeg : Ψ.natDegree ≤ ma + d + mc := by
     rw [hΨ]
     refine natDegree_mul_le_of_le ?_ ((natDegree_pref_le τ x₁).trans hw)
     rw [hS]
     refine natDegree_sum_le_of_forall_le _ _ fun x _ => ?_
-    exact natDegree_mul_le_of_le (hbdeg x) (hd x (SqrtLog.SqrtLog.compl x₁))
+    exact natDegree_mul_le_of_le (hbdeg x) (hd x (SqrtLog.compl x₁))
   -- Step 3: `Ψ` vanishes at every `τ k`.
   have hΨroot : ∀ k, Ψ.eval (τ k) = 0 := by
     intro k
     rw [hΨ, eval_mul]
     by_cases hk : x₁ k = true
     · rw [pref_eval τ x₁ k (hτ0 k) hk, mul_zero]
-    · have hy : SqrtLog.SqrtLog.compl x₁ k = true := by simp [SqrtLog.compl, hk]
+    · have hy : SqrtLog.compl x₁ k = true := by simp [SqrtLog.compl, hk]
       have hJ : ∀ x y, (J x y).eval (τ k) = K k x y + E k x y := by
         intro x y
         have := congrFun (congrFun (hdec k) x) y
         simpa using this
       have h1 : τ k ^ v * S.eval (τ k)
-          = ∑ x, (a x).eval (τ k) * K k x (SqrtLog.SqrtLog.compl x₁)
-            + ∑ x, E k x (SqrtLog.SqrtLog.compl x₁) * (a x).eval (τ k) := by
+          = ∑ x, (a x).eval (τ k) * K k x (SqrtLog.compl x₁)
+            + ∑ x, E k x (SqrtLog.compl x₁) * (a x).eval (τ k) := by
         rw [hS]
         simp only [eval_finsetSum, eval_mul, hJ, Finset.mul_sum]
         rw [← Finset.sum_add_distrib]
@@ -183,13 +183,13 @@ theorem core (ℓ d ma mc : ℕ) (J : Matrix (Fin ℓ → Bool) (Fin ℓ → Boo
         rw [hb x]
         simp only [eval_mul, eval_pow, eval_X]
         ring
-      have h2 : ∀ x, (a x).eval (τ k) * K k x (SqrtLog.SqrtLog.compl x₁) = 0 := by
+      have h2 : ∀ x, (a x).eval (τ k) * K k x (SqrtLog.compl x₁) = 0 := by
         intro x
         by_cases hx : x k = true
         · rw [hvan k x hx, zero_mul]
-        · rw [hnice k x (SqrtLog.SqrtLog.compl x₁) (by rw [hy]; exact hx), mul_zero]
-      have h3 : ∑ x, E k x (SqrtLog.SqrtLog.compl x₁) * (a x).eval (τ k) = 0 := by
-        have := congrFun (hker k) (SqrtLog.SqrtLog.compl x₁)
+        · rw [hnice k x (SqrtLog.compl x₁) (by rw [hy]; exact hx), mul_zero]
+      have h3 : ∑ x, E k x (SqrtLog.compl x₁) * (a x).eval (τ k) = 0 := by
+        have := congrFun (hker k) (SqrtLog.compl x₁)
         simpa [Matrix.mulVec, dotProduct] using this
       have h4 : τ k ^ v * S.eval (τ k) = 0 := by
         rw [h1, h3]
@@ -208,7 +208,7 @@ theorem core (ℓ d ma mc : ℕ) (J : Matrix (Fin ℓ → Bool) (Fin ℓ → Boo
     rw [Finset.sum_eq_single x₁]
     · simp
     · intro x _ hx
-      have hne : SqrtLog.SqrtLog.compl x₁ ≠ SqrtLog.compl x := fun h => hx (by
+      have hne : SqrtLog.compl x₁ ≠ SqrtLog.compl x := fun h => hx (by
         have := congrArg SqrtLog.compl h
         simpa using this.symm)
       simp [hne]
@@ -260,9 +260,8 @@ theorem natDegree_avec_le (τ : Fin ℓ → F) (ma mc : ℕ)
 theorem avec_eq_zero_of_weight (τ : Fin ℓ → F) (ma mc : ℕ)
     (p : ∀ x : Fin ℓ → Bool, Fin (dimAt ma mc x) → F) (x : Fin ℓ → Bool)
     (h : mc < weight x) : avec τ ma mc p x = 0 := by
-  have : dimAt ma mc x = 0 := by
-    unfold dimAt
-    rw [if_neg (by omega)]
+  have hlt : ¬ weight x ≤ mc := by omega
+  have : dimAt ma mc x = 0 := by simp [dimAt, hlt]
   simp [avec, rpoly_eq_zero_of_dimAt ma mc p x this]
 
 theorem coeff_rpoly (ma mc : ℕ) (p : ∀ x : Fin ℓ → Bool, Fin (dimAt ma mc x) → F)
@@ -291,7 +290,8 @@ noncomputable def evA (τ : Fin ℓ → F) (ma mc : ℕ) (k : Fin ℓ) :
 theorem finrank_params (ℓ ma mc : ℕ) :
     finrank F (∀ x : Fin ℓ → Bool, Fin (dimAt ma mc x) → F) = N2 ℓ ma mc := by
   rw [Module.finrank_pi_fintype]
-  simp [N2, dimAt]
+  simp only [Module.finrank_fin_fun]
+  rfl
 
 /-! ### Main theorems -/
 

@@ -1,0 +1,22 @@
+C1 (D.10) exact on grids: True
+C1b (D.10) for arbitrary valuation-dependent profiles: True
+C2 taper LP: min max_i Lambda_i (M=1);  columns: a,u, LPopt*u, paper taper max Lambda*u (h=3/u), bound 1/(4u)*u
+   a=  4 u=  2  LP*u=3.2217   taper*u=8.2500   proved floor*u=0.4844
+   a=  6 u=  3  LP*u=4.2098   taper*u=12.3750   proved floor*u=0.4961
+   a=  8 u=  4  LP*u=4.7894   taper*u=14.9062   proved floor*u=0.4990
+   a= 12 u=  6  LP*u=5.3156   taper*u=17.0947   proved floor*u=0.4999
+   a= 16 u=  8  LP*u=5.5185   taper*u=17.7356   proved floor*u=0.5000
+   a= 20 u= 10  LP*u=5.6202   taper*u=17.9232   proved floor*u=0.5000
+   a= 24 u= 12  LP*u=5.6830   taper*u=17.9780   proved floor*u=0.5000
+   a= 40 u= 20  LP*u=5.8064   taper*u=17.9999   proved floor*u=0.5000
+   a= 60 u= 30  LP*u=5.8696   taper*u=18.0000   proved floor*u=0.5000
+   a= 40 u= 40  LP*u=4.8689   taper*u=18.0000   proved floor*u=0.5000
+   a= 30 u= 30  LP*u=4.5811   taper*u=18.0000   proved floor*u=0.5000
+C3 W(0)=I, W(t)=c_t*shift_t, surviving pairs differ in bit v2(t), agree below: True
+C5 tuples: n modes per weight, budget p: log2(count), floor sqrt(np)-n, Meinardus 2sqrt(zeta2 n p)/ln2
+   n=  1 p=   50  log2=    20.06  floor=    6.07  Meinardus=    26.17
+   n=  2 p=  100  log2=    43.14  floor=   12.14  Meinardus=    52.34
+   n=  4 p=  200  log2=    89.82  floor=   24.28  Meinardus=   104.67
+   n=  4 p=  800  log2=   192.09  floor=   52.57  Meinardus=   209.34
+   n=  8 p= 1600  log2=   388.66  floor=  105.14  Meinardus=   418.68
+   n= 16 p= 1600  log2=   541.20  floor=  144.00  Meinardus=   592.11

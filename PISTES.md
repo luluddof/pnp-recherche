@@ -28,7 +28,6 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 |---|---|---|---|
 | G14a | 🔄 **Échappatoires restantes de l'article 2** (piste « corps fini » FERMÉE : le théorème vaut sur tout corps, G13a) | Borne de degré D < nd (permise par O'Donnell) ; effondrement de rang par L, R′ ; autres décompositions | G13a |
 | G15L | 🔄 **Lean : théorème de l'article 2 sur tout corps** | `Article2/EnCours/AnyField.lean`, forme à deux paramètres (ma, mc) | G13a |
-| G14b | 🔄 **Limites de la contraction de tenseurs d'OpenAI** | La voie la plus forte de la prépublication, jamais analysée : modèle abstrait et borne inférieure | G4c, G9d |
 | G14c | 🔄 **Un modèle de coût DP valide** | Modèle sur le graphe des lignes, non dégénéré, qui résiste à l'élimination ligne par ligne ; borne inférieure | G7b, G10a |
 | G14d | 🔄 **Compléter le théorème de l'article 2** | Multiplicités inégales (y a-t-il une échappatoire ?), écart d'un facteur log ℓ, asymptotique rigoureuse | G11b |
 | G14e | 🔄 **Termes « intriqués » (non produits)** | Plus petit cas (grille 2×3, λ = 1) : l'intrication aide-t-elle ? | G9d |
@@ -43,7 +42,7 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 | 🆕 **Problème de Naslund / Hurwitz** | Prouver P(N) ≥ N^(1+ε) ; équivaut à un plancher ρ > 1/2 dans l'algorithme de Claude | Très difficile (circuits non commutatifs) | N1, G5b |
 | ❌ **Tests de parité économiques (Q2)** — fausse sur la famille de référence (G8b, lemme CA) | Tests avec O(n·2^O(k)) incidences au total dans l'annexe D de Claude | Technique | G6c |
 | 🆕 **Valeur exacte dans le cas général à petit (ℓ, d)** | T_gen(4,1) ∈ {10, 11} (certificat exact manquant) ; (5,2) non déterminé ; relecture des théorèmes A et B′ de G11c | Moyenne | G11c |
-| 🆕 **Forme parité et contraction de tenseurs (Limits)** | Analyser les limites de ces deux voies d'OpenAI, non couvertes par Limits ni par notre note | Difficile | G4c, G6a |
+| 🆕 **Contraction de tenseurs : N_DF ≥ 2^(cM/u)** | Étendre le plancher ρ_d ≥ 1/d aux termes intriqués ; prouvé 2^(2M/4^u), atteint 2^(O(M/√u)) ; relecture adverse des théorèmes A et B de G14b ; plusieurs niveaux de récursion | Difficile (lié à Naslund pour u = 2) | G14b |
 | 🆕 **Sparsification avec variables d'extension** | Échappatoire à la proposition L de G6c | Moyenne | G6c, G7d |
 | 🆕 **Lemme 4 en Lean** | Graphes aléatoires | Très difficile (peu de choses dans Mathlib) | G9L |
 
@@ -80,6 +79,7 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | Piste | Résultat |
 |---|---|
+| ✅ Limites de la contraction de tenseurs (G14b) | Annexe D reconstruite ; √log optimal pour les effilages dépendant de la valuation (théorème B, non relu) ; base possible d'un article 3 |
 | ✅ Relecture + nouveauté du théorème de l'article 2 (G13a) | Confirmé ; vaut sur tout corps ; semble nouveau |
 | ✅ Lean : compléments (G14g) | Article 1 sans l'hypothèse n ≤ M ; schéma trivial ; conséquences finies de l'article 2 |
 | ✅ **Pré-version 3 (brouillon)** (G12W) | `resultats/brouillons/pre-v3/` : 41 pages, marqué DRAFT ; section F\*, section Lean à jour, section « Scope of the claims » avec 8 questions ; à faire vérifier par une autre IA (voir `LISEZ-MOI.md`) |
