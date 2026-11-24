@@ -1,0 +1,1 @@
+N=7 (p,q)=(8,8) best tail=8.609e-27 max|G|=1.7 restarts=2 lowest=[(8.61e-27, 2.0), (0.0229, 43.0)] -> FEASIBLE(num)

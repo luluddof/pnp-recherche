@@ -1,0 +1,2 @@
+N=4 (p,q)=(5,3) best_resid=1.798e-15 max|z|=1.21 restarts=2 lowest5=[(1.8e-15, 1.0), (0.001, 36.0)] -> FEASIBLE(num)
+N=4 (p,q)=(5,1) best_resid=1.732e+00 max|z|=38.30 restarts=2 lowest5=[(1.73, 38.0), (1.73, 36.0)] -> not found

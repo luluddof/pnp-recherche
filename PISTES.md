@@ -40,7 +40,7 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
-| G19b | 🔄 **Paires réalisables exactes et profil en escalier** | Frontière exacte (p, q) pour N = 2, 3, 4 ; droite ou cercle ? P(3) = 3 ou 4 ? Lien entre le profil en escalier (G18h) et la courbe T(θ) (G18g). | G18g, G18h |
+| — | *Aucun agent en cours. La génération 19 est terminée (24/11).* | | |
 
 Dossiers de travail de la génération 18 : `scratchpad/gen18/g18a` à `g18i`.
 
@@ -103,7 +103,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Question précise | Origine |
 |---|---|---|
-| Profil en escalier | Construire ou exclure des pièces dont le profil de dimension est N sur [h₁, 3h₁] puis N² au-dessus. Coût dans le compte : ρ = 1/2 exactement, même avec (V). | G18h |
+| Profil en escalier (après G19b) | Tel que défini par G18h : exclu par le théorème 2. Réparé : équivaut à « L linéaire sans (V) », c'est-à-dire à toute la droite. Objet à construire ou exclure : pour tout θ, un sous-espace de M_N de codimension N^(2−θ+o(1)) où la transposition est une somme de N^(θ+o(1)) multiplications des deux côtés. Calcul suivant : b(N) pour N = 9 à 12. | G18h, G19b |
 | Opérateurs presque commutants à croissance exponentielle | Familles N×N sur un espace gradué avec log dim ~ E (pas √E) et une fenêtre H = o(E₀). Sans l'hypothèse (V), le compte donne ρ ≥ 2^(−α). | G18h |
 | Identité de localité à D directions | Une identité sur un espace avec log dim ~ E^((D−1)/D). Donnerait ρ(D) ≈ D^(−(D−1)/D) (spéculatif). Petits cas : D = 3 : 1/2 ; D = 4 : 3/8. | G18h, G18c |
 
@@ -130,6 +130,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Résultat |
 |---|---|
+| ⚠️ **Paires réalisables exactes, profil en escalier** (G19b) | Rien sous le cercle, rien au-dessus de la droite dans l'exposant. Le profil en escalier de G18h tel que défini est exclu ; réparé, il couvre toute la droite. Frontière exacte pour N ≤ 3, partielle pour N = 4 à 6 ; P(3) = 4, P(4) ≥ 6. Théorèmes 3, 4, 5 : gains de constante seulement. Droite contre cercle : indécidable à ces tailles. Les petits gains ne se multiplient pas. `code/gen19/g19b/notes.md` |
 | ❌ **Termes intriqués, le coin ouvert à N = 3** (G19c) | Aucun gain (numérique, étalonné). Seuil r* = 27 = (N(N−1)/2)³ : la valeur du point produit. r = 26 : 0 succès sur 6. Le « gain » à N = 2 est un accident. Même seuil produit sur trois cas à dimensions mixtes. `code/gen19/g19c/notes.md` |
 | ✅ **Lean : théorème A″** (G19d) | `lean/PnpLean/Article3/DFRank.lean` : A″ sous trois formes, plus la forme modulo un idéal propre. Niveau L. Reste sur papier : lemme de restriction, constante 1/√π, lien avec l'annexe D. |
 | ✅ **Relecture et antériorité du théorème F et du théorème 2** (G19e) | Les deux sont justes et sont un seul théorème (théorème C, échange avec spectateur) : r ≥ kQ(n − kb), constante exacte 2/9, plus (c) b < mn ⇒ r ≥ Q (nouveau). Flanders inutile. Quatre errata dans G18f. P(3) = 4 sur F₂. Antériorité : problème 12 de Naslund ; cas k = 1 connu (Karam) ; probablement du niveau « folklore ». Ce théorème ne peut jamais passer la droite. `code/gen19/g19e/notes.md` |

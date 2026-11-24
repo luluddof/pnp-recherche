@@ -1,0 +1,5 @@
+N=4 diagonal family: q=1: least p = 6;  support A=(0,) coefficients=['1']
+N=4 diagonal family: q=2: least p = 6;  support A=(0, 1) coefficients=['0', '1']
+N=4 diagonal family: q=3: least p = 6;  support A=(0, 1, 2) coefficients=['0', '1', '0']
+N=4 diagonal family: q=4: least p = 4;  support A=(0, 1, 2, 3) coefficients=['1/2', '1/2', '-1/2', '1/2']
+N=4 diagonal family: q=5: least p = 4;  support A=(0, 1, 2, 3, 4) coefficients=['1/2', '1/2', '-1/2', '1/2', '0']

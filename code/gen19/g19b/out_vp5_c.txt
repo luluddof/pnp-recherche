@@ -1,0 +1,4 @@
+N=5 (p,q)=(6,5) best tail=1.890e-04 max|G|=4.8 restarts=39 lowest=[(0.000189, 5.0), (0.000249, 7.0), (0.000279, 13.0), (0.000281, 7.0), (0.000304, 6.0), (0.000312, 10.0)] -> border?
+N=5 (p,q)=(7,5) best tail=6.647e-27 max|G|=3.2 restarts=2 lowest=[(6.65e-27, 3.0), (4.61e-06, 5.0)] -> FEASIBLE(num)
+N=5 (p,q)=(7,6) best tail=4.778e-27 max|G|=1.2 restarts=1 lowest=[(4.78e-27, 1.0)] -> FEASIBLE(num)
+N=5 (p,q)=(8,4) best tail=7.418e-28 max|G|=1.4 restarts=10 lowest=[(7.42e-28, 1.0), (1.15e-07, 2.0), (1.86e-07, 3.0), (3.8e-07, 2.0), (2.23e-06, 4.0), (3.94e-06, 3.0)] -> FEASIBLE(num)

@@ -113,6 +113,7 @@ Ce fichier liste **tout ce qui peut entrer dans un article**, présent ou futur.
 | **Résultat** | Théorème C : P est l'échange E⊗G⊗W → G⊗E⊗W avec un spectateur (dimensions m, n, Q). Si P = A + B avec rang A ≤ r et rang de Schmidt d'opérateur de B ≤ b, alors pour tout entier k ≤ m : (a) r ≥ k·Q·(n − k·b) ; (b) b·Q ≥ k·(n·Q − k·r) ; (c) b < m·n ⇒ r ≥ Q. Corollaire : r·b ≥ (2/9)·Q·M². Tout corps. |
 | **Niveau** | **P+** depuis G19e. Deux preuves indépendantes (G18g, G18f), unifiées et refaites par le relecteur ; environ 15 000 décompositions exactes sans violation. Énoncé prêt pour Lean, pas encore formalisé. |
 | **Fichiers** | `code/gen19/g19e/notes.md` (énoncé commun, preuve courte, errata) ; `code/gen18/g18g/notes.md`, `code/gen18/g18f/notes.md` |
+| **Compléments (G19b, niveau P, non relus)** | Théorème 3 : q = 1 ⇒ p ≥ N(N−1)/2 (optimal). Théorème 4 : q = 2 ⇒ p ≥ N, donc P(3) = 4. Théorème 5 : p·q ≥ (N²/4)·q/(q − ½). Table exacte des paires réalisables pour N ≤ 3, partielle pour N = 4 à 6, avec des décompositions à coefficients dans {0, ±1} vérifiées sur ℚ. Valables pour les décompositions exactes en caractéristique ≠ 2, pas au sens « bord ». `code/gen19/g19b/notes.md` |
 | **Conséquences** | Aucun gain par termes intriqués sur un seul croisement. La courbe des paires réalisables de l'algorithme de Claude est au-dessus de la droite T = 2 − θ. P(3) = 4 sur F₂. |
 | **Antériorité (G19e)** | L'objet est le problème 12 de Naslund (arXiv:1701.04475). Le cas k = 1 (r + s ≥ n) est noté par Karam (arXiv:2310.11356). La forme produit et la partie (c) ne sont pas trouvées dans la littérature. **Avis du relecteur : probablement du niveau « folklore », une remarque au plus.** Deux articles proches n'ont pas été lus (Hrubeš-Wigderson-Yehudayoff 2011, Hrubeš 2024) : la nouveauté n'est pas certifiée. |
 | **Avis honnête** | **Pas un article seul.** C'est un lemme propre, à mettre dans l'article 3 ou dans une courte note, après lecture des deux articles manquants. Sa limite est prouvée : ce théorème ne peut jamais passer la droite, donc il ne peut pas donner ρ > 1/2. |
@@ -145,7 +146,7 @@ Ce fichier liste **tout ce qui peut entrer dans un article**, présent ou futur.
 | Résultat | Pourquoi ce n'est pas un article | Fichier |
 |---|---|---|
 | Dictionnaire commun des deux algorithmes de 2026 ; loi « gain = 1/√D » ; six hybrides sans gain | Loi heuristique, pas un théorème. Calculs sur de très petits cas. Utile comme section d'exposé dans l'article 3, pas seul. | `code/gen18/g18c/notes.md` |
-| Diagnostic du plancher 1/√2 (hypothèse (V), profil de croissance) | Aucun objet construit, aucun plancher nouveau prouvé. C'est une carte pour la recherche. | `code/gen18/g18h/notes.md` |
+| Diagnostic du plancher 1/√2 (hypothèse (V), profil de croissance) | Aucun objet construit, aucun plancher nouveau prouvé. Le profil en escalier tel que défini est exclu (G19b). C'est une carte pour la recherche. | `code/gen18/g18h/notes.md`, `code/gen19/g19b/notes.md` |
 | Reformulation du problème de Hurwitz-Naslund (droite contre cercle) | Aucune borne améliorée. La partie prouvée est dans B2. | `code/gen18/g18g/notes.md` |
 | Question E1 (termes intriqués) | Non tranchée en général. La partie prouvée est dans B2. Le plus petit cas ouvert (N = 3) ne montre aucun gain, mais c'est un résultat numérique, pas une preuve. | `code/gen18/g18f/notes.md`, `code/gen19/g19c/notes.md` |
 | Corollaire sur le problème de Hurwitz (borne N^√2) | **Déjà publié** par d'autres (Siemaszko, Debnath). | `JOURNAL.md`, résultat G4a |
@@ -159,6 +160,7 @@ Ce fichier liste **tout ce qui peut entrer dans un article**, présent ou futur.
 | Date | Changement |
 |---|---|
 | 24/11/2026 | Création du registre après la génération 18. Articles 1, 2, 3 ; candidats B1 à B4. |
+| 24/11/2026 | G19b : compléments au candidat B2 (théorèmes 3 à 5, table exacte). Génération 19 terminée : aucun nouveau candidat d'article. |
 | 24/11/2026 | G19d : le théorème A″ (article 3) est vérifié par Lean. |
 | 24/11/2026 | G19e : le candidat B2 devient le théorème C (P+). Avis : un lemme, pas un article seul. |
 | 24/11/2026 | G19a : quatre éléments ajoutés à l'article 3 (origine des charges, inégalité de séparateur, théorème E, limite de l'aplatissement). |
