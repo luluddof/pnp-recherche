@@ -38,7 +38,7 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
-| G17e | 🔄 **Les deux points ouverts de l'article 2** | (A) L'écart O(log ℓ) entre la borne et la construction : optimums exacts à petite taille, argument à deux moitiés (blocs 01 et 10). (B) Degré certifié par annulation : deg P = Θ(nd) est-il forcé ? | G14d, G14a |
+| — | *Aucun agent en cours. La génération 17 est terminée (24/11).* | | |
 
 Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g18d` (erreur de numéro au lancement ; la génération est bien la 17).
 
@@ -101,6 +101,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Résultat |
 |---|---|
+| ❌ **Les deux points ouverts de l'article 2** (G17e) | Aucun n'est fermé. Écart log ℓ : ouvert dans la fenêtre ; optimum à 1,1–2,3 fois la borne sur de petits cas ; l'argument à deux moitiés n'aide pas ; nouveaux lemmes (dualité de quadrature, élagage). Degré par annulation : générique mais pas forcé ; un exemple d'annulation existe. `code/gen17/g17e/notes.md` |
 | ⚠️ **Relecture adverse de G14b** (G17a) | Reconstruction de l'annexe D fidèle. Théorème A confirmé mais très faible. Théorème B en partie : axiome du modèle VT réfuté. Nouveau lemme : précision Θ(M·D_t/u) optimale pour la reconstruction boîte noire. Potentiel « réel mais modeste » : pas une barrière. `code/gen17/g17a/rapport.md` |
 | ✅ **Relecture adverse de G14a + Lean** (G17d) | Théorème au niveau de la sortie confirmé et formalisé (`Article2/OutputLevel.lean`) : rang de A(0)[budget] ≤ Σ rang E_k, tout corps, sans factorisation. L'hypothèse « mineur non singulier » est nécessaire en général (contre-exemple), mais se retire à coût 1/(2Δ−1) pour les matrices creuses (papier). Degré réduit confirmé. |
 | ⚠️ **Article 2 contre la prépublication d'OpenAI** (G17c) | Le cadre existe dans la prépublication (après traduction ; vérifié exactement pour Q ≤ 6). Nouveauté confirmée. **Mais** le coût de l'erreur diffère (tuples de mesures, pas n^rang), et l'annexe D échappe au cadre (modes 2-adiques, récursion). L'énoncé « perte optimale » vaut seulement dans le « cadre X » à un niveau sur un corps : `code/gen17/g17c/rapport.md` |

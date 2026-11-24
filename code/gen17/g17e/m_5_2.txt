@@ -1,0 +1,2 @@
+(l,d)=(5,2) tau=int mode=total U=30.0: |B|=14 per_dir=[2, 3, 5, 3, 1] max=5 milp_status=1 dual_bound=8.000 exact_dual_ok=True rank=14 primal_ok=True bound=8 layered=25 max|w|=2.00 300s
+   B = [(0, 3), (3, 2), (5, 1), (5, 4), (8, 1), (8, 2), (17, 1), (17, 2), (18, 0), (18, 2), (19, 3), (22, 3), (27, 2), (30, 0)]
