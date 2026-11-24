@@ -114,9 +114,10 @@ Ce fichier liste **tout ce qui peut entrer dans un article**, présent ou futur.
 | **Niveau** | **L** depuis G20g : `lean/PnpLean/Outils/SwapRank.lean` (parties (a), (b), (c), formes miroirs, forme produit). Avant : deux preuves indépendantes (G18g, G18f), unifiées par G19e ; environ 15 000 décompositions exactes sans violation. |
 | **Fichiers** | `code/gen19/g19e/notes.md` (énoncé commun, preuve courte, errata) ; `code/gen18/g18g/notes.md`, `code/gen18/g18f/notes.md` |
 | **Compléments (G19b, relus par G20f : niveau P+)** | Théorème 3 : q = 1 ⇒ p ≥ N(N−1)/2 (optimal). Théorème 4 : q = 2 ⇒ p ≥ N, donc P(3) = 4. Théorème 5 (corrigé : il faut 1 ≤ k ≤ N) : p·q ≥ (1 − o(1))·(N²/4)·q/(q − ½). Les quatre décompositions nouvelles sont des identités sur ℤ. Table exacte des paires réalisables pour N ≤ 3, partielle pour N = 4 à 6, avec des décompositions à coefficients dans {0, ±1} vérifiées sur ℚ. Valables pour les décompositions exactes en caractéristique ≠ 2, pas au sens « bord ». `code/gen19/g19b/notes.md` |
+| **Barrière associée (G20d, niveau P, non relue)** | Théorème B : aucune méthode de rang de classe B (aplatissement, puis multiplications à gauche et à droite, sommes par blocs) ne peut exclure une paire avec p·q ≥ N²/4, pour aucun opérateur, exact ou au bord (caractéristique 0). Le théorème C est donc optimal dans sa classe, à la constante près (2/9 contre 1/4). Frontière générique calculée pour N ≤ 4 : l'opérateur d'échange est spécial, pas générique. `code/gen20/g20d/notes.md` |
 | **Conséquences** | Aucun gain par termes intriqués sur un seul croisement. La courbe des paires réalisables de l'algorithme de Claude est au-dessus de la droite T = 2 − θ. P(3) = 4 sur F₂. |
 | **Antériorité (G19e)** | L'objet est le problème 12 de Naslund (arXiv:1701.04475). Le cas k = 1 (r + s ≥ n) est noté par Karam (arXiv:2310.11356). La forme produit et la partie (c) ne sont pas trouvées dans la littérature. **Avis du relecteur : probablement du niveau « folklore », une remarque au plus.** Deux articles proches n'ont pas été lus (Hrubeš-Wigderson-Yehudayoff 2011, Hrubeš 2024) : la nouveauté n'est pas certifiée. |
-| **Avis honnête** | **Pas un article seul.** C'est un lemme propre, à mettre dans l'article 3 ou dans une courte note, après lecture des deux articles manquants. Sa limite est prouvée : ce théorème ne peut jamais passer la droite, donc il ne peut pas donner ρ > 1/2. |
+| **Avis honnête** | Le théorème C seul est un lemme. **Avec la barrière de G20d, l'ensemble « borne + barrière qui lui correspond + frontière générique » a la forme d'une courte note cohérente** — à deux conditions : la barrière doit être relue, et l'antériorité doit être certifiée (deux articles non lus). Limite prouvée : ces méthodes ne peuvent jamais donner ρ > 1/2. |
 | **Ce qui manque** | Lire les deux articles manquants (Hrubeš-Wigderson-Yehudayoff 2011, Hrubeš 2024) pour certifier l'antériorité. |
 
 ### B3 — Réfutations algébriques sous-exponentielles et carte de la réfutation des 3-CNF aléatoires
@@ -160,6 +161,7 @@ Ce fichier liste **tout ce qui peut entrer dans un article**, présent ou futur.
 | Date | Changement |
 |---|---|
 | 24/11/2026 | Création du registre après la génération 18. Articles 1, 2, 3 ; candidats B1 à B4. |
+| 24/11/2026 | G20d : une barrière (théorème B, non relue) est ajoutée au candidat B2, qui devient une note possible sous conditions. |
 | 24/11/2026 | G20g : le théorème C (candidat B2) est vérifié par Lean ; la bibliothèque B4 a 17 énoncés. |
 | 24/11/2026 | G20f : les éléments de G19a (article 3) et de G19b (candidat B2) passent au niveau P+ ; le théorème 5 est corrigé. |
 | 24/11/2026 | G19b : compléments au candidat B2 (théorèmes 3 à 5, table exacte). Génération 19 terminée : aucun nouveau candidat d'article. |

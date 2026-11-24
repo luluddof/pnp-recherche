@@ -43,7 +43,6 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 | G20a | 🔄 **Pièces à D = 3 directions au-delà du plus petit cas** | La loi « gain = D^(−1/2) » est-elle battue pour D = 3 à N = 3, 4 ? Compromis de rang à trois coupes ; frontière des triplets réalisables ; solveur étalonné. | G18h, G18g, G19c |
 | G20b | 🔄 **Frontière b(N) pour N = 7 à 12, contre l'annexe B à N fini** | Valeurs exactes de la construction de Claude à N fini (jamais calculées) ; famille derrière les nouveaux points {0, ±1} de G19b ; droite ou cercle ? | G19b |
 | G20c | 🔄 **Constructions algébriques pour la droite** | Sous-espaces partiellement symétriques ; groupes ; Clifford : la transposition est un caractère quadratique sur F_2^(2n) — lien avec la non-rigidité des matrices de Walsh-Hadamard (Alman-Williams). Un point sous le cercle ? | G19b, G19e |
-| G20d | 🔄 **Barrière pour les méthodes de rang** | Prouver qu'aucune méthode de rang ne peut donner p·q ≥ N^(2+ε) ; frontière générique (dimension du joint) ; l'opérateur d'échange est-il générique ou spécial ? Cas « au bord ». | G19e, G19a |
 | G20e | 🔄 **Pièces adaptées à l'instance** | Les deux algorithmes ne regardent pas l'instance. Les vrais tenseurs de coupe d'une 3-CNF sont-ils l'échange complet ? Étiquetage adapté ; branchement pour détruire l'expansion. | nouvelle |
 
 Dossiers de travail de la génération 18 : `scratchpad/gen18/g18a` à `g18i`.
@@ -119,6 +118,14 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 |---|---|---|
 | **Le « paquet en escalier » (reste de la piste des charges non uniformes, G19a)** | Étiquetage circulaire : u faisceaux entre classes antipodales sur le 2u-cycle. Encadrement prouvé : φ′M/(2u) − u ≤ log₂ N ≤ min_i M_i. Quel est N ? u = 2 est le problème de Hurwitz ; u = 3 à 3 fils : N = 4 dans le sous-modèle GF(2). Une identité à 2^(o(M)) termes sur un expanseur serait l'échelon 2 ; une borne 2^Ω(M) fermerait la piste. Il faut une méthode autre que l'aplatissement. | G19a |
 
+**Nouvelles pistes issues de G20d (24/11) :**
+
+| Piste | Question précise | Origine |
+|---|---|---|
+| Témoin au-delà des méthodes de rang, à N = 3 | Calculer l'équation GL₃-covariante de plus bas degré des sommes avec p = q = 2 qui ne s'annule pas sur l'échange ; est-ce un mineur d'un aplatissement général (Young) ? | G20d |
+| Barrière pour les aplatissements de Young | Étendre le théorème B aux applications linéaires générales (annulation entre blocs), ou trouver un contre-exemple (qui prouverait ρ > 1/2). | G20d |
+| Relecture adverse du théorème B | Lemme de moyenne de Haar ; hypothèse caractéristique 0 ; classe B exacte. | G20d |
+
 ## 3. En attente
 
 | Piste | Raison de l'attente |
@@ -136,6 +143,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Résultat |
 |---|---|
+| ⚠️ **Barrière pour les méthodes de rang** (G20d) | Théorème B (papier, non relu) : aucune méthode de rang de classe B (aplatissements suivis de multiplications) n'exclut une paire avec p·q ≥ N²/4. Le théorème C est donc optimal pour sa classe. L'échange est spécial, pas générique (frontière générique : p + q ≈ 0,59·N²). Non couvert : aplatissements de Young. `code/gen20/g20d/notes.md` |
 | ✅ **Lean : théorème C** (G20g) | `lean/PnpLean/Outils/SwapRank.lean` : parties (a), (b), (c), formes miroirs et forme produit 2·Q·M² ≤ 9·r·b, tout corps. Niveau L. |
 | ✅ **Relecture adverse de G19a et G19b** (G20f) | Dix affirmations confirmées (niveau P+). Théorème E : preuve complète. Théorème 5 : faux tel qu'écrit (q = 1, N = 2, k = 3), corrigé avec 1 ≤ k ≤ N. Les quatre décompositions nouvelles sont des identités sur ℤ. Cinq candidats pour Lean. `code/gen20/g20f/notes.md` |
 | ⚠️ **Paires réalisables exactes, profil en escalier** (G19b) | Rien sous le cercle, rien au-dessus de la droite dans l'exposant. Le profil en escalier de G18h tel que défini est exclu ; réparé, il couvre toute la droite. Frontière exacte pour N ≤ 3, partielle pour N = 4 à 6 ; P(3) = 4, P(4) ≥ 6. Théorèmes 3, 4, 5 : gains de constante seulement. Droite contre cercle : indécidable à ces tailles. Les petits gains ne se multiplient pas. `code/gen19/g19b/notes.md` |
