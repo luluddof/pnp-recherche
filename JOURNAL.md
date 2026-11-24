@@ -229,7 +229,7 @@ Fichier : `lean/PnpLean/WitnessDet.lean` (234 lignes, Lean 4.37.0-rc1 + Mathlib)
 
 Simplification proposée : l'hypothèse M ≥ n peut être supprimée.
 
-**Auteur humain de la note :** Lucas Requena, étudiant en informatique (décision du 24 novembre 2026), avec une mention claire du travail fait par les agents IA.
+**Auteur humain de la note :** Lucas Requena, étudiant en informatique, contact dans la note : l.requena@outlook.fr (décision du 24 novembre 2026), avec une mention claire du travail fait par les agents IA.
 
 **Génération 8 (en cours) :** G8a (terminer Limits §9), G8b (compter les ensembles indépendants), G8c (réfutations Extended Frege / TC⁰-Frege), G8d (Turán sur l'hypercube). Liste complète des pistes : `PISTES.md`.
 
