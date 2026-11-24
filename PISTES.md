@@ -22,14 +22,13 @@ Légende : 🔄 en cours · 🆕 pas encore explorée · ⏸️ en attente · �
 
 Priorité recommandée : pistes A et B, puis Q1\*.
 
-## 1. En cours (générations 10 et 11)
+## 1. En cours (génération 11)
 
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
 | G11a | 🔄 **Relecture adverse du théorème sep(F\*)** | Nécessaire avant la version 3 de l'article 1 | G10f |
 | G11b | 🔄 **Article 2, résultat final : compromis (I′) et (II)** | Prouver l'optimalité de √log n dans la classe commutative, ou trouver une construction qui la contredit | G8d |
 | G11c | 🔄 **Article 2 : cas non commutatif** | Étendre le lemme Q_{d+2} et la réduction « rang = mauvaises arêtes » au cas général | G6d, G10b |
-| G10d | 🔄 **Relecture de G9c** | Théorèmes A et B sur le comptage des ensembles indépendants | G9c |
 
 **Consigne de l'utilisateur (24/11) :** dès que les générations 8 et 9 sont terminées, lancer une **génération 10** sur les pistes « pas encore explorées » (section 2) et « en attente » (section 3).
 
@@ -79,6 +78,7 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | Piste | Résultat |
 |---|---|
+| ✅ Relecture de G9c (G10d) | Théorèmes A et B confirmés (relativement à l'annexe D de Claude) ; 2 résumés d'obstructions à corriger |
 | ✅ **Lean : théorème B sans hypothèse** (G10e) | Lemme 2 (anti-concentration, espérance du déficit) et identité de moyenne prouvés ; `theoremB_unconditional` |
 | ✅ Relecture + nouveauté de G9e (G10c) | Preuve confirmée ; Steiner déjà revendiqué (Wu-Wang) ; plus long chemin/cycle : semble nouveau |
 | ✅ Relecture + Lean des lemmes « erreurs par point » (G10b) | Lemme de G6d et lemme Q_{d+2} confirmés et **prouvés en Lean** (`lean/PnpLean/Article2/`) ; la conséquence (c) de G6d n'est pas prouvée en général |

@@ -1,0 +1,44 @@
+d=      3 alpha/n=0.45906 nbar/n=0.66729 U_A/n(exact mixing)=3.675 U_A/n(prover form)=4.288  asym 2ln d/d=0.73241
+d=      4 alpha/n=0.42061 nbar/n=0.77592 U_A/n(exact mixing)=4.579 U_A/n(prover form)=5.349  asym 2ln d/d=0.69315
+d=      8 alpha/n=0.32001 nbar/n=0.98535 U_A/n(exact mixing)=7.107 U_A/n(prover form)=8.180  asym 2ln d/d=0.51986
+d=     16 alpha/n=0.22570 nbar/n=1.08436 U_A/n(exact mixing)=9.690 U_A/n(prover form)=10.835  asym 2ln d/d=0.34657
+d=     32 alpha/n=0.14932 nbar/n=1.06395 U_A/n(exact mixing)=11.694 U_A/n(prover form)=12.680  asym 2ln d/d=0.21661
+d=     48 alpha/n=0.11439 nbar/n=1.00855 U_A/n(exact mixing)=12.421 U_A/n(prover form)=13.255  asym 2ln d/d=0.16130
+d=     56 alpha/n=0.10294 nbar/n=0.98157 U_A/n(exact mixing)=12.602 U_A/n(prover form)=13.375  asym 2ln d/d=0.14376
+d=     64 alpha/n=0.09380 nbar/n=0.95621 U_A/n(exact mixing)=12.717 U_A/n(prover form)=13.437  asym 2ln d/d=0.12997
+d=     72 alpha/n=0.08630 nbar/n=0.93258 U_A/n(exact mixing)=12.787 U_A/n(prover form)=13.460  asym 2ln d/d=0.11880
+d=     80 alpha/n=0.08003 nbar/n=0.91062 U_A/n(exact mixing)=12.825 U_A/n(prover form)=13.458  asym 2ln d/d=0.10955
+d=    128 alpha/n=0.05661 nbar/n=0.80694 U_A/n(exact mixing)=12.741 U_A/n(prover form)=13.204  asym 2ln d/d=0.07581
+d=    256 alpha/n=0.03315 nbar/n=0.65253 U_A/n(exact mixing)=12.008 U_A/n(prover form)=12.279  asym 2ln d/d=0.04332
+d=   1024 alpha/n=0.01069 nbar/n=0.39681 U_A/n(exact mixing)=9.459 U_A/n(prover form)=9.535  asym 2ln d/d=0.01354
+d=   4096 alpha/n=0.00327 nbar/n=0.23055 U_A/n(exact mixing)=6.779 U_A/n(prover form)=6.797  asym 2ln d/d=0.00406
+d=  65536 alpha/n=0.00028 nbar/n=0.07425 U_A/n(exact mixing)=3.020 U_A/n(prover form)=3.021  asym 2ln d/d=0.00034
+d=1048576 alpha/n=0.00002 nbar/n=0.02313 U_A/n(exact mixing)=1.204 U_A/n(prover form)=1.204  asym 2ln d/d=0.00003
+max over grid of prover-form U_A/n: 13.462 at d=76
+B1/B4 threshold: (h*/n) log2(4m/h*) at alpha/n = 1/(log 2d loglog 4d)
+  d=2^1     alpha/n=0.3155 h/n=0.8994  exponent/(e n)=1.936
+  d=2^2     alpha/n=0.1667 h/n=0.6500  exponent/(e n)=2.354
+  d=2^4     alpha/n=0.0774 h/n=0.3928  exponent/(e n)=2.494
+  d=2^8     alpha/n=0.0334 h/n=0.2114  exponent/(e n)=2.377
+  d=2^16    alpha/n=0.0141 h/n=0.1069  exponent/(e n)=2.163
+  d=2^32    alpha/n=0.0060 h/n=0.0526  exponent/(e n)=1.959
+  d=2^64    alpha/n=0.0025 h/n=0.0256  exponent/(e n)=1.800
+  d=2^256   alpha/n=0.0005 h/n=0.0060  exponent/(e n)=1.599
+  d=2^1000  alpha/n=0.0001 h/n=0.0015  exponent/(e n)=1.491
+B2: (h*/n) log(4m/h*) at alpha/n = lam/(d+lam), lam = d/log^2 d
+  d=2^4    alpha/n=0.05882  exponent/(e n)=2.140
+  d=2^8    alpha/n=0.01538  exponent/(e n)=1.390
+  d=2^16   alpha/n=0.00389  exponent/(e n)=0.800
+  d=2^32   alpha/n=0.00098  exponent/(e n)=0.441
+  d=2^64   alpha/n=0.00024  exponent/(e n)=0.240
+  d=2^256  alpha/n=0.00002  exponent/(e n)=0.072
+H1 growth: log2(x)*D/log2(D), x^(D+1)=x^D+1
+  D=     2  1.1029
+  D=     3  0.8801
+  D=     4  0.8114
+  D=     8  0.7434
+  D=    16  0.7252
+  D=    64  0.7279
+  D=   256  0.7432
+  D=  1024  0.7599
+  D= 65536  0.8028

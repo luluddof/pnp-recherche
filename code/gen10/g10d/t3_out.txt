@@ -1,0 +1,47 @@
+reg12_3 n=12 Delta=3 k=0: 177 >= 69   k=n//2: 10 >= 10
+reg14_3 n=14 Delta=3 k=0: 427 >= 131   k=n//2: 14 >= 14
+reg14_4 n=14 Delta=4 k=0: 264 >= 80   k=n//2: 11 >= 11
+reg15_4 n=15 Delta=4 k=0: 365 >= 106   k=n//2: 15 >= 15
+reg16_5 n=16 Delta=5 k=0: 348 >= 92   k=n//2: 12 >= 12
+reg16_3 n=16 Delta=3 k=0: 937 >= 250   k=n//2: 19 >= 19
+gnp13_0.20 n=13 Delta=4 k=0: 466 >= 60   k=n//2: 12 >= 11
+gnp14_0.35 n=14 Delta=7 k=0: 201 >= 36   k=n//2: 8 >= 8
+gnp15_0.15 n=15 Delta=7 k=0: 1872 >= 44   k=n//2: 19 >= 9
+gnp14_0.60 n=14 Delta=13 k=0: 85 >= 15   k=n//2: 8 >= 8
+star13 n=13 Delta=12 k=0: 4097 >= 14   k=n//2: 65 >= 8
+path14 n=14 Delta=2 k=0: 987 >= 277   k=n//2: 19 >= 19
+cycle15 n=15 Delta=2 k=0: 1364 >= 406   k=n//2: 28 >= 28
+K7 n=7 Delta=6 k=0: 8 >= 8   k=n//2: 5 >= 5
+K44 n=8 Delta=4 k=0: 31 >= 15   k=n//2: 5 >= 5
+petersen n=10 Delta=3 k=0: 76 >= 36   k=n//2: 7 >= 7
+empty10 n=10 Delta=0 k=0: 1024 >= 1024   k=n//2: 32 >= 32
+5K3 n=15 Delta=2 k=0: 1024 >= 406   k=n//2: 29 >= 28
+3K5 n=15 Delta=4 k=0: 216 >= 106   k=n//2: 16 >= 15
+H1: 269 (graph,k) cases, all >= F: True ; equality in 162
+F(j) >= x^(j-Delta) verified for Delta in {1,2,3,5,8}, j<400
+Gottlieb: rank DISJ(s,s') = C(N,min(s,s')) for all N<=8, s+s'<=N: True
+PropS n=600 d=8 K=8 random     smax=75 lam=5.30 inc=2769 lb=465 inc+=1585 lb+=-334 inc/(nd)=0.577
+PropS n=600 d=8 K=8 bfs        smax=75 lam=5.30 inc=2497 lb=465 inc+=1455 lb+=-334 inc/(nd)=0.520
+PropS n=600 d=8 K=8 unbalanced smax=593 lam=5.30 inc=63 lb=-180 inc+=36 lb+=-495 inc/(nd)=0.013
+PropS n=600 d=8 K=30 random     smax=20 lam=5.26 inc=4131 lb=691 inc+=2146 lb+=-277 inc/(nd)=0.861
+PropS n=600 d=8 K=30 bfs        smax=20 lam=5.26 inc=3810 lb=691 inc+=2015 lb+=-277 inc/(nd)=0.794
+PropS n=600 d=8 K=30 unbalanced smax=571 lam=5.26 inc=261 lb=-166 inc+=167 lb+=-492 inc/(nd)=0.054
+PropS n=600 d=8 K=100 random     smax=6 lam=5.24 inc=4610 lb=766 inc+=2329 lb+=-258 inc/(nd)=0.960
+PropS n=600 d=8 K=100 bfs        smax=6 lam=5.24 inc=4269 lb=766 inc+=2183 lb+=-258 inc/(nd)=0.889
+PropS n=600 d=8 K=100 unbalanced smax=501 lam=5.24 inc=891 lb=-125 inc+=495 lb+=-481 inc/(nd)=0.186
+PropS n=900 d=16 K=16 random     smax=57 lam=7.72 inc=8765 lb=2137 inc+=5064 lb+=-141 inc/(nd)=0.609
+PropS n=900 d=16 K=16 bfs        smax=57 lam=7.72 inc=8248 lb=2137 inc+=4786 lb+=-141 inc/(nd)=0.573
+PropS n=900 d=16 K=16 unbalanced smax=885 lam=7.72 inc=255 lb=-160 inc+=127 lb+=-715 inc/(nd)=0.018
+PropS n=900 d=16 K=60 random     smax=15 lam=7.68 inc=12626 lb=2740 inc+=6571 lb+=10 inc/(nd)=0.877
+PropS n=900 d=16 K=60 bfs        smax=15 lam=7.68 inc=11991 lb=2740 inc+=6313 lb+=10 inc/(nd)=0.833
+PropS n=900 d=16 K=60 unbalanced smax=841 lam=7.68 inc=1003 lb=-127 inc+=444 lb+=-707 inc/(nd)=0.070
+PropS n=900 d=16 K=300 random     smax=3 lam=7.65 inc=14122 lb=2980 inc+=7098 lb+=70 inc/(nd)=0.981
+PropS n=900 d=16 K=300 bfs        smax=3 lam=7.65 inc=13645 lb=2980 inc+=6909 lb+=70 inc/(nd)=0.948
+PropS n=900 d=16 K=300 unbalanced smax=601 lam=7.65 inc=5083 lb=104 inc+=2649 lb+=-649 inc/(nd)=0.353
+PropS n=800 d=6 K=3 random     smax=267 lam=4.46 inc=1456 lb=103 inc+=984 lb+=-574 inc/(nd)=0.303
+PropS n=800 d=6 K=3 bfs        smax=267 lam=4.46 inc=1244 lb=103 inc+=809 lb+=-574 inc/(nd)=0.259
+PropS n=800 d=6 K=3 unbalanced smax=798 lam=4.46 inc=14 lb=-284 inc+=10 lb+=-671 inc/(nd)=0.003
+PropS n=800 d=6 K=40 random     smax=20 lam=4.47 inc=4406 lb=580 inc+=2249 lb+=-455 inc/(nd)=0.918
+PropS n=800 d=6 K=40 bfs        smax=20 lam=4.47 inc=3945 lb=580 inc+=2049 lb+=-455 inc/(nd)=0.822
+PropS n=800 d=6 K=40 unbalanced smax=761 lam=4.47 inc=273 lb=-269 inc+=161 lb+=-667 inc/(nd)=0.057
+Prop S bounds hold: True
