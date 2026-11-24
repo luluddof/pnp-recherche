@@ -40,13 +40,21 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
-| — | *Aucun agent en cours. La génération 19 est terminée (24/11).* | | |
+| G20a | 🔄 **Pièces à D = 3 directions au-delà du plus petit cas** | La loi « gain = D^(−1/2) » est-elle battue pour D = 3 à N = 3, 4 ? Compromis de rang à trois coupes ; frontière des triplets réalisables ; solveur étalonné. | G18h, G18g, G19c |
+| G20b | 🔄 **Frontière b(N) pour N = 7 à 12, contre l'annexe B à N fini** | Valeurs exactes de la construction de Claude à N fini (jamais calculées) ; famille derrière les nouveaux points {0, ±1} de G19b ; droite ou cercle ? | G19b |
+| G20c | 🔄 **Constructions algébriques pour la droite** | Sous-espaces partiellement symétriques ; groupes ; Clifford : la transposition est un caractère quadratique sur F_2^(2n) — lien avec la non-rigidité des matrices de Walsh-Hadamard (Alman-Williams). Un point sous le cercle ? | G19b, G19e |
+| G20d | 🔄 **Barrière pour les méthodes de rang** | Prouver qu'aucune méthode de rang ne peut donner p·q ≥ N^(2+ε) ; frontière générique (dimension du joint) ; l'opérateur d'échange est-il générique ou spécial ? Cas « au bord ». | G19e, G19a |
+| G20e | 🔄 **Pièces adaptées à l'instance** | Les deux algorithmes ne regardent pas l'instance. Les vrais tenseurs de coupe d'une 3-CNF sont-ils l'échange complet ? Étiquetage adapté ; branchement pour détruire l'expansion. | nouvelle |
+| G20f | 🔄 **Relecture adverse de G19a et G19b** | Théorème E, inégalité de séparateur, étiquetage circulaire ; théorèmes 3, 4, 5 ; vérification indépendante des décompositions. | G19a, G19b |
+| G20g | 🔄 **Lean : théorème C** | `lean/PnpLean/Outils/EnCours/SwapRank.lean` : r ≥ kQ(n − kb) pour l'échange avec spectateur. | G19e |
 
 Dossiers de travail de la génération 18 : `scratchpad/gen18/g18a` à `g18i`.
 
 **État (24/11) :** la génération 18 est terminée : onze rapports (G18a à G18i, relecteurs G18R et G18S).
 
 Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g18d` (erreur de numéro au lancement ; la génération est bien la 17).
+
+**Consigne de l'utilisateur (24/11, génération 20) : les sous-agents utilisent le modèle Opus 5.5.** Le modèle Fable sert seulement quand il est absolument nécessaire. L'auteur laisse le coordinateur choisir les pistes vers l'échelon 2.
 
 **Consigne de l'utilisateur (24/11) :** dès que les générations 8 et 9 sont terminées, lancer une **génération 10** sur les pistes « pas encore explorées » (section 2) et « en attente » (section 3).
 
