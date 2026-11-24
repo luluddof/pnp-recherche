@@ -46,7 +46,6 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 |---|---|---|---|
 | G23a | 🔄 **Ansatz de groupe dans le modèle monomial** | Le point (8,8) à N = 8 est invariant par Q8 et atteint la borne du modèle. Encodage par orbites (SAT) pour les groupes d'ordre 16, 27, 32, 64 ; une famille sous N^√2 serait un nouveau record pour le problème général. | G22b-bis |
 | G23e | 🔄 **Lean : lemme clé et comptage du modèle monomial** | Énoncés de G23b (coloriage, palette, intercalates ; C(h,2) ≤ couleurs de l'autre palette ; N² ≤ q·g*(p) + p·g*(q)). Combinatoire finie. | G23b |
-| G23c | 🔄 **Creux des algèbres de sommets avec le vrai rang de l'appariement** | Évaluateur exact du rang de l'appariement ; balayage des réseaux regradués et des orbifolds ; règle de sélection qui neutralise les creux ? | G22e |
 | G23d | 🔄 **Prouver la loi de distance pour q = 1** | Prouver c(N;1,1) = 4 pour tout N, puis d²(N;p,1) = N² − m² − 2j ; premier outil prouvé au-delà des méthodes de rang. | G22d |
 
 Dossiers de travail de la génération 18 : `scratchpad/gen18/g18a` à `g18i`.
@@ -143,8 +142,6 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Question précise | Origine |
 |---|---|---|
-| Regraduations à flot spectral et orbifolds | Chercher une algèbre où le vrai rang de l'appariement égale la dimension pleine dans une graduation dont le profil a un creux (route R1 : le réseau A1 regradué donne 2,8157 < 2√2 avec la borne lâche, 3,030 avec le vrai rang). | G22e |
-| Modèles minimaux non unitaires et secteurs tordus d'orbifolds | Balayer les paramètres de croissance (σ, κ) pour un module avec creux dont le vide croît aussi vite (route R2 : sl₂ donne 2,81 seul, 2,90 en vraie paire). | G22e |
 
 **Piste issue de G22d (24/11) :**
 
@@ -159,6 +156,12 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 | Ansatz de groupe d'ordre g^(3/2) dans le modèle monomial | Le point (8,8) à N = 8 est invariant par Q8 et atteint la borne du modèle. Un groupe d'ordre g^(3/2) avec des blocs 2+2 atteindrait la borne N^(4/3) (par exemple (128,128) à N = 64) : ce serait sous √2. Encodage direct ≈ 10⁹ clauses : il faut un encodage par orbites. Q8×Q8 échoue. | G22b-bis |
 | Relecture adverse de la borne du modèle monomial | Lemme clé (une couleur T de taille h force |S| ≥ h(h−1)/2) ; comptage ; usage du lemme 7.4 de HWY. | G22b-bis |
 | Décider N = 12 (18,18) et N = 16 (28,28) dans le modèle ST | SAT arrêté à 600 s. | G22b-bis |
+
+**Piste issue de G23c (24/11) :**
+
+| Piste | Question précise | Origine |
+|---|---|---|
+| Constructions à plusieurs canaux sur le bord de Voronoï | Dans une famille de puissances tensorielles d'un réseau, avec ξ sur le bord de la cellule de Voronoï, une construction non produit qui combine plusieurs canaux peut-elle passer sous 2√2 ? Borne : 2,799 ; meilleur réalisé : 3,030. Premier pas : recherche exacte sur deux copies de A1 avec l'évaluateur trank.py. | G23c |
 
 ## 3. En attente
 
@@ -177,6 +180,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Résultat |
 |---|---|
+| ❌ **Creux des algèbres de sommets, vrai rang** (G23c) | Aucune valeur sous 2√2 avec le vrai rang. Règle de sélection (ξ intérieur) et dichotomie (ξ sur le bord) prouvées sur papier : elles tuent les creux pour toute algèbre fixe. Reste ouvert : constructions à plusieurs canaux dans des familles de puissances tensorielles (écart 2,799 – 3,030). `code/gen23/g23c/notes.md` |
 | ✅ **Relecture du modèle monomial** (G23b) | Tout confirmé (P+) ; hypothèse inutile retirée ; énumérations exhaustives sans échec ; les optimums exacts à N = 5 sont hors du modèle. `code/gen23/g23b/notes.md` |
 | ✅ **Modèle monomial** (G22b, G22b-bis) | Correspondance exacte avec les matrices d'intercalates de HWY (formules entières de sommes de carrés). **Borne dans le modèle au-delà de la droite : p²·q ≳ N⁴/8 ; point équilibré ≥ N^(4/3)/2** (papier, non relu). Meilleur connu dans le modèle : exposant 2. Le modèle n'est pas exclu pour battre √2 (4/3 < √2). `code/gen22/g22b/notes.md` |
 | ⚠️ **Distance de l'échange à J(p, q)** (G22d) | La distance (masse captée c = N² − d², toujours entière) dépasse les méthodes de rang à tous les points calculés ; loi exacte pour q = 1 : d² = N² − m² − 2j. Théorème C quantitatif prouvé (faible). Pour gagner un exposant il faudrait c(p, q) sous-linéaire en p·q : non prouvé ; q = 1 est linéaire. `code/gen22/g22d/notes.md` |

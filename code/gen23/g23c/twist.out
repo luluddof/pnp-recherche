@@ -1,0 +1,7 @@
+A1, g=-1, ground 1               TRUE (pairs in V conf) 2.9259 at e=3.00 v=3.00 | M as its own anchor (not a valid bound) 2.8930 at e=3.00 v=3.00
+A2, g=-1, ground 2               TRUE (pairs in V conf) 2.9526 at e=5.30 v=6.00 | M as its own anchor (not a valid bound) 2.8309 at e=6.00 v=6.00
+A2, g=order 3, ground 1          TRUE (pairs in V conf) 2.9081 at e=6.00 v=6.00 | M as its own anchor (not a valid bound) 2.8794 at e=6.00 v=6.00
+D4, g=-1, ground 4               TRUE (pairs in V conf) 2.9129 at e=8.26 v=9.36 | M as its own anchor (not a valid bound) 2.8309 at e=12.00 v=12.00
+D4, g=order 3 fpf, ground 3      TRUE (pairs in V conf) 2.9155 at e=8.26 v=9.36 | M as its own anchor (not a valid bound) 2.8301 at e=12.00 v=12.00
+E8, g=-1, ground 16              TRUE (pairs in V conf) 2.8532 at e=24.00 v=24.00 | M as its own anchor 2.8309 at e=24.00 v=24.00
+E8, g=order 3 fpf, ground 9      TRUE (pairs in V conf) 2.8516 at e=24.00 v=24.00 | M as its own anchor 2.8301 at e=24.00 v=24.00

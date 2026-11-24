@@ -1,0 +1,10 @@
+A1 V                               xi=[0.0]                  |S|=1  LOOSE 2.9099 (e=3.00,v=3.00)  B0 2.9099  SC   -     
+A1 V                               xi=[0.125]                |S|=1  LOOSE 2.9056 (e=3.00,v=3.00)  B0 2.9139  SC   -     
+A1 V                               xi=[0.25]                 |S|=1  LOOSE 2.8930 (e=3.00,v=3.00)  B0 2.9259  SC   -     
+A1 V                               xi=[0.375]                |S|=1  LOOSE 2.8192 (e=0.13,v=0.13)  B0 2.9460  SC   -     DIP-LOOSE<2sqrt2
+A1 V                               xi=[0.45]                 |S|=1  LOOSE 2.8118 (e=0.67,v=0.67)  B0 2.9454  SC   -     DIP-LOOSE<2sqrt2
+A1 V                               xi=[0.5]                  |S|=2  LOOSE 2.8170 (e=1.11,v=1.11)  B0 2.9322  SC 2.9078 ((1,), 0.5)  DIP-LOOSE<2sqrt2
+A1 M=V_{a/2+L}                     xi=[0.0]                  |S|=1  LOOSE 2.9099 (e=3.00,v=3.00)  B0 2.9099  SC   -     
+A1 M=V_{a/2+L}                     xi=[0.25]                 |S|=1  LOOSE 2.8930 (e=3.00,v=3.00)  B0 2.9259  SC   -     
+A1 M=V_{a/2+L}                     xi=[0.5]                  |S|=2  LOOSE 2.8170 (e=1.11,v=1.11)  B0 2.9322  SC 2.9078 ((1,), 0.5)  DIP-LOOSE<2sqrt2
+A1(x)2 = sqrt(4)Z? no: Z (odd, VOSA) xi=[0.5]                  |S|=2  LOOSE 2.8382 (e=3.00,v=3.00)  B0 2.8591  SC 2.8382 ((1,), 0.5)  
