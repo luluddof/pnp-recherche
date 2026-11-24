@@ -30,7 +30,6 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 | G9b | 🔄 **B – Décider au lieu de compter** | Compter modulo 2 (Valiant-Vazirani) ; identités sur GF(2) et GF(3) | Idée du 24/11 |
 | G9c | 🔄 **C – Q1\*** | Compter les ensembles indépendants d'un graphe presque creux en 2^O(n/√log n) ; idées : hybride, autre encodage, identité de l'étoile | G8b |
 | G9d | 🔄 **D – Sortir de la structure produit** | Gadgets à 3 parties (rang du tenseur triangle, multiplication de matrices), instances non cliques, conjecture du rang asymptotique | G4b |
-| G9e | 🔄 **E – Conséquences de la chute de l'ETH** | Nouveaux algorithmes plus rapides pour d'autres problèmes, avec le suivi exact des réductions | Article de Claude §7 |
 | G9W | 🔄 **Version 2 de l'article** (LaTeX + PDF) | Réécriture selon le rapport G8R | G7c, G8R |
 
 **Consigne de l'utilisateur (24/11) :** dès que les générations 8 et 9 sont terminées, lancer une **génération 10** sur les pistes « pas encore explorées » (section 2) et « en attente » (section 3).
@@ -58,6 +57,8 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | 🆕 **Compromis (I′) et (II) pour la méthode d'OpenAI** | (I′) ρ(Cδ², δ) ≥ δ^(−a) ; (II) ρ(ℓ₁+ℓ₂, d₁+d₂) ≥ ρ(ℓ₁,d₁)·ρ(ℓ₂,d₂). Ensemble : √log n optimal à (log n)^o(1) près | Difficile | G8d |
 
+| 🆕 **Relecture et nouveauté de G9e** | Vérifier la preuve (encodage CNF, identité Σ p^cc) et lire les articles voisins (arXiv 2611.00994, 2611.02548, 2611.02650, dépôt eth-hamiltonicity) pour savoir si Steiner / plus long chemin sont déjà revendiqués | Facile à moyenne | G9e |
+
 ## 3. En attente
 
 | Piste | Raison de l'attente |
@@ -75,6 +76,7 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 | ✅ Partie déterministe en Lean (G9L) | Schéma, lemme 1 complet, fait R, lemme 3, théorème A (sans condition), théorème B (avec le lemme 2 en hypothèse) ; sans `sorry` |
 | ✅ Hurwitz P(N) ≤ N^√2 (G4a) | Correct, mais déjà publié par d'autres |
 | ✅ Réfutations Extended Frege (G8c) | **Conditionnel :** sous (S) et des preuves EF courtes de « Pin_F(b) », EF réfute F en taille 2s + poly(n)·2^(δn). Le calcul de l'algorithme est de **profondeur constante** (nouveau) : le certificat IPS peut être une formule de profondeur constante. Pas de route vers TC⁰-Frege (descente séquentielle). |
+| ✅ Conséquences de la chute de l'ETH (G9e) | Arbre de Steiner, plus long cycle/chemin sur graphes creux en 2^(O(m log log m/√log m)) (conditionnel, non relu, nouveauté non établie) |
 | ✅ Système de preuve IPS (G4d) | Réfutations IPS de taille 2^O(n/√log n) |
 | ✅ Plancher ρ_d ≥ 1/d (G6b) | Confirmé sous conditions |
 
