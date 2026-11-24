@@ -1,0 +1,84 @@
+/tmp/claude-0/-home-user-pnp-recherche/2d12e629-e6d2-542b-bfc0-8b766f57383f/scratchpad/g14a/AnyField.lean:89:2: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/tmp/claude-0/-home-user-pnp-recherche/2d12e629-e6d2-542b-bfc0-8b766f57383f/scratchpad/g14a/AnyField.lean:104:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/tmp/claude-0/-home-user-pnp-recherche/2d12e629-e6d2-542b-bfc0-8b766f57383f/scratchpad/g14a/AnyField.lean:133:15: error(lean.unknownIdentifier): Unknown identifier `eval_finset_sum`
+/tmp/claude-0/-home-user-pnp-recherche/2d12e629-e6d2-542b-bfc0-8b766f57383f/scratchpad/g14a/AnyField.lean:133:4: error: `simp` made no progress
+
+Note: The target expression is not type-correct under the `implicit` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  function expected
+    J x
+/tmp/claude-0/-home-user-pnp-recherche/2d12e629-e6d2-542b-bfc0-8b766f57383f/scratchpad/g14a/AnyField.lean:164:15: error(lean.unknownIdentifier): Unknown identifier `eval_finset_sum`
+/tmp/claude-0/-home-user-pnp-recherche/2d12e629-e6d2-542b-bfc0-8b766f57383f/scratchpad/g14a/AnyField.lean:164:4: error: `simp` made no progress
+
+Note: The target expression is not type-correct under the `implicit` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  function expected
+    J x
+/tmp/claude-0/-home-user-pnp-recherche/2d12e629-e6d2-542b-bfc0-8b766f57383f/scratchpad/g14a/AnyField.lean:203:20: error(lean.unknownIdentifier): Unknown identifier `finset_sum_coeff`
+/tmp/claude-0/-home-user-pnp-recherche/2d12e629-e6d2-542b-bfc0-8b766f57383f/scratchpad/g14a/AnyField.lean:206:2: error: unsolved goals
+case h₀
+ℓ : ℕ
+F : Type u_1
+inst✝ : Field F
+m : ℕ
+p : (x : Fin ℓ → Bool) → Fin (m + 1 - weight x) → F
+x : Fin ℓ → Bool
+i j : Fin (m + 1 - weight x)
+a✝ : j ∈ Finset.univ
+hj : j ≠ i
+this : ↑i ≠ ↑j
+⊢ p x j = 0
+/tmp/claude-0/-home-user-pnp-recherche/2d12e629-e6d2-542b-bfc0-8b766f57383f/scratchpad/g14a/AnyField.lean:203:38: warning: This simp argument is unused:
+  coeff_C_mul_X_pow
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [rpoly, finset_sum_coeff]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/claude-0/-home-user-pnp-recherche/2d12e629-e6d2-542b-bfc0-8b766f57383f/scratchpad/g14a/AnyField.lean:208:10: warning: This simp argument is unused:
+  this
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/claude-0/-home-user-pnp-recherche/2d12e629-e6d2-542b-bfc0-8b766f57383f/scratchpad/g14a/AnyField.lean:216:23: error(lean.unknownIdentifier): Unknown identifier `eval_finset_sum`
+/tmp/claude-0/-home-user-pnp-recherche/2d12e629-e6d2-542b-bfc0-8b766f57383f/scratchpad/g14a/AnyField.lean:219:23: error(lean.unknownIdentifier): Unknown identifier `eval_finset_sum`
+/tmp/claude-0/-home-user-pnp-recherche/2d12e629-e6d2-542b-bfc0-8b766f57383f/scratchpad/g14a/AnyField.lean:220:4: error: Type mismatch
+  Finset.sum_congr rfl fun i x => ?m.74
+has type
+  Finset.sum ?m.71 ?m.68 = Finset.sum ?m.71 ?m.69
+but is expected to have type
+  eval (τ k) (∑ i, pref τ x * (C c * C (p x i) * X ^ ↑i)) = c * eval (τ k) (∑ i, pref τ x * (C (p x i) * X ^ ↑i))
+/tmp/claude-0/-home-user-pnp-recherche/2d12e629-e6d2-542b-bfc0-8b766f57383f/scratchpad/g14a/AnyField.lean:240:2: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/tmp/claude-0/-home-user-pnp-recherche/2d12e629-e6d2-542b-bfc0-8b766f57383f/scratchpad/g14a/AnyField.lean:253:4: error: Type mismatch: After simplification, term
+  h2
+ has type
+  ((fun x => eval (τ k) (avec τ m p x)) ᵥ* E k) y = 0
+but is expected to have type
+  ∑ x, E k x y * eval (τ k) (avec τ m p x) = 0
+/tmp/claude-0/-home-user-pnp-recherche/2d12e629-e6d2-542b-bfc0-8b766f57383f/scratchpad/g14a/AnyField.lean:253:14: warning: declaration uses `sorry`
+'AnyField.core' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'AnyField.sum_rank_ge_N' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+
+real	0m7.652s
+user	0m4.947s
+sys	0m1.153s

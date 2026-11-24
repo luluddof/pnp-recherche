@@ -1,0 +1,29 @@
+(l,d,p)=(4,2,7): 3 tau classes
+  tau=(1, 2, 3, 4): T=4 per=[1, 0, 2, 1] iters=12 0.9s
+  tau=(1, 2, 3, 5): T=4 per=[1, 2, 0, 1] iters=10 0.9s
+  tau=(1, 2, 5, 6): T=4 per=[2, 0, 1, 1] iters=17 2.0s
+MIN over tau classes (l,d,p)=(4,2,7): (4, (1, 2, 3, 4), [1, 0, 2, 1])
+(l,d,p)=(4,2,11): 22 tau classes
+  tau=(1, 2, 3, 4): T=4 per=[2, 1, 1, 0] iters=14 1.4s
+  tau=(1, 2, 3, 5): T=4 per=[0, 2, 2, 0] iters=16 1.7s
+  tau=(1, 2, 3, 6): T=4 per=[0, 2, 0, 2] iters=5 0.3s
+  tau=(1, 2, 3, 7): T=4 per=[2, 1, 1, 0] iters=14 1.4s
+  tau=(1, 2, 3, 8): T=4 per=[1, 1, 1, 1] iters=11 1.3s
+  tau=(1, 2, 3, 9): T=4 per=[1, 0, 2, 1] iters=12 1.4s
+  tau=(1, 2, 3, 10): T=4 per=[1, 2, 0, 1] iters=10 1.0s
+  tau=(1, 2, 4, 5): T=4 per=[1, 0, 1, 2] iters=22 4.2s
+  tau=(1, 2, 4, 7): T=4 per=[1, 1, 2, 0] iters=19 3.7s
+  tau=(1, 2, 4, 9): T=4 per=[2, 0, 1, 1] iters=13 1.3s
+  tau=(1, 2, 4, 10): T=4 per=[2, 1, 1, 0] iters=14 1.3s
+  tau=(1, 2, 5, 7): T=4 per=[2, 2, 0, 0] iters=4 0.2s
+  tau=(1, 2, 5, 9): T=4 per=[0, 2, 2, 0] iters=16 1.7s
+  tau=(1, 2, 5, 10): T=4 per=[2, 0, 1, 1] iters=17 2.2s
+  tau=(1, 2, 7, 8): T=4 per=[0, 2, 2, 0] iters=16 2.5s
+  tau=(1, 2, 7, 10): T=4 per=[1, 0, 1, 2] iters=22 4.5s
+  tau=(1, 2, 8, 9): T=4 per=[1, 0, 1, 2] iters=22 3.9s
+  tau=(1, 2, 8, 10): T=4 per=[1, 0, 2, 1] iters=12 1.2s
+  tau=(1, 2, 9, 10): T=4 per=[1, 1, 2, 0] iters=19 2.8s
+  tau=(1, 3, 4, 5): T=4 per=[0, 2, 2, 0] iters=16 2.4s
+  tau=(1, 3, 4, 10): T=4 per=[0, 2, 0, 2] iters=5 0.5s
+  tau=(1, 3, 8, 10): T=4 per=[2, 1, 1, 0] iters=14 2.3s
+MIN over tau classes (l,d,p)=(4,2,11): (4, (1, 2, 3, 4), [2, 1, 1, 0])

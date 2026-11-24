@@ -1,0 +1,2 @@
+(l,d)=(4,1) GF(2^3) tau=[1, 2, 3, 4] profile=[2, 2, 2, 2] sum=8: SAT 39.5s
+   verified (r01,r10) per k: [(2, 2), (2, 2), (2, 2), (2, 2)]  sum max = 8

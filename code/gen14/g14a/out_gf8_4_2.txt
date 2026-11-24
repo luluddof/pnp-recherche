@@ -1,0 +1,40 @@
+(l,d)=(4,2) GF(2^3) tau=[1, 2, 3, 4] profile=[1, 1, 1, 0] sum=3: SAT 1.0s
+   verified (r01,r10) per k: [(1, 1), (1, 1), (1, 1), (0, 0)]  sum max = 3
+(l,d)=(4,2) GF(2^3) tau=[1, 2, 4, 3] profile=[1, 1, 1, 0] sum=3: SAT 0.9s
+   verified (r01,r10) per k: [(1, 1), (1, 1), (1, 1), (0, 0)]  sum max = 3
+(l,d)=(4,2) GF(2^3) tau=[1, 2, 3, 5] profile=[1, 1, 1, 0] sum=3: SAT 0.8s
+   verified (r01,r10) per k: [(1, 1), (1, 1), (1, 1), (0, 0)]  sum max = 3
+(l,d)=(4,2) GF(2^3) tau=[1, 2, 4, 7] profile=[1, 1, 1, 0] sum=3: SAT 0.7s
+   verified (r01,r10) per k: [(1, 1), (1, 1), (1, 1), (0, 0)]  sum max = 3
+(l,d)=(4,2) GF(2^3) tau=[1, 2, 3, 6] profile=[1, 1, 1, 0] sum=3: SAT 0.2s
+   verified (r01,r10) per k: [(1, 1), (1, 1), (1, 1), (0, 0)]  sum max = 3
+(l,d)=(4,2) GF(2^3) tau=[1, 2, 3, 4] profile=[0, 1, 1, 1] sum=3: SAT 0.8s
+   verified (r01,r10) per k: [(0, 0), (1, 1), (1, 1), (1, 1)]  sum max = 3
+(l,d)=(4,2) GF(2^3) tau=[1, 2, 4, 3] profile=[0, 1, 1, 1] sum=3: SAT 1.1s
+   verified (r01,r10) per k: [(0, 0), (1, 1), (1, 1), (1, 1)]  sum max = 3
+(l,d)=(4,2) GF(2^3) tau=[1, 2, 3, 5] profile=[0, 1, 1, 1] sum=3: SAT 0.9s
+   verified (r01,r10) per k: [(0, 0), (1, 1), (1, 1), (1, 1)]  sum max = 3
+(l,d)=(4,2) GF(2^3) tau=[1, 2, 4, 7] profile=[0, 1, 1, 1] sum=3: SAT 0.7s
+   verified (r01,r10) per k: [(0, 0), (1, 1), (1, 1), (1, 1)]  sum max = 3
+(l,d)=(4,2) GF(2^3) tau=[1, 2, 3, 6] profile=[0, 1, 1, 1] sum=3: SAT 0.3s
+   verified (r01,r10) per k: [(0, 0), (1, 1), (1, 1), (1, 1)]  sum max = 3
+(l,d)=(4,2) GF(2^3) tau=[1, 2, 3, 4] profile=[1, 1, 0, 1] sum=3: SAT 0.5s
+   verified (r01,r10) per k: [(1, 1), (1, 1), (0, 0), (1, 1)]  sum max = 3
+(l,d)=(4,2) GF(2^3) tau=[1, 2, 4, 3] profile=[1, 1, 0, 1] sum=3: SAT 0.8s
+   verified (r01,r10) per k: [(1, 1), (1, 1), (0, 0), (1, 1)]  sum max = 3
+(l,d)=(4,2) GF(2^3) tau=[1, 2, 3, 5] profile=[1, 1, 0, 1] sum=3: SAT 0.9s
+   verified (r01,r10) per k: [(1, 1), (1, 1), (0, 0), (1, 1)]  sum max = 3
+(l,d)=(4,2) GF(2^3) tau=[1, 2, 4, 7] profile=[1, 1, 0, 1] sum=3: SAT 0.5s
+   verified (r01,r10) per k: [(1, 1), (1, 1), (0, 0), (1, 1)]  sum max = 3
+(l,d)=(4,2) GF(2^3) tau=[1, 2, 3, 6] profile=[1, 1, 0, 1] sum=3: SAT 0.3s
+   verified (r01,r10) per k: [(1, 1), (1, 1), (0, 0), (1, 1)]  sum max = 3
+(l,d)=(4,2) GF(2^3) tau=[1, 2, 3, 4] profile=[1, 0, 1, 1] sum=3: SAT 0.3s
+   verified (r01,r10) per k: [(1, 1), (0, 0), (1, 1), (1, 1)]  sum max = 3
+(l,d)=(4,2) GF(2^3) tau=[1, 2, 4, 3] profile=[1, 0, 1, 1] sum=3: SAT 1.0s
+   verified (r01,r10) per k: [(1, 1), (0, 0), (1, 1), (1, 1)]  sum max = 3
+(l,d)=(4,2) GF(2^3) tau=[1, 2, 3, 5] profile=[1, 0, 1, 1] sum=3: SAT 0.4s
+   verified (r01,r10) per k: [(1, 1), (0, 0), (1, 1), (1, 1)]  sum max = 3
+(l,d)=(4,2) GF(2^3) tau=[1, 2, 4, 7] profile=[1, 0, 1, 1] sum=3: SAT 0.4s
+   verified (r01,r10) per k: [(1, 1), (0, 0), (1, 1), (1, 1)]  sum max = 3
+(l,d)=(4,2) GF(2^3) tau=[1, 2, 3, 6] profile=[1, 0, 1, 1] sum=3: SAT 0.5s
+   verified (r01,r10) per k: [(1, 1), (0, 0), (1, 1), (1, 1)]  sum max = 3
