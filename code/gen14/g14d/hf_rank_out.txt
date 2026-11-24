@@ -1,0 +1,17 @@
+l=3 d=1: |B_layered|=6  rank(ev_B on W_D')=5  lambda in span: True  dim W_D'=5  new bound=2
+l=4 d=1: |B_layered|=16  rank(ev_B on W_D')=14  lambda in span: True  dim W_D'=17  new bound=7
+l=4 d=2: |B_layered|=8  rank(ev_B on W_D')=4  lambda in span: True  dim W_D'=6  new bound=2
+l=5 d=1: |B_layered|=40  rank(ev_B on W_D')=38  lambda in span: True  dim W_D'=49  new bound=14
+l=5 d=2: |B_layered|=25  rank(ev_B on W_D')=16  lambda in span: True  dim W_D'=23  new bound=8
+l=5 d=3: |B_layered|=10  rank(ev_B on W_D')=4  lambda in span: True  dim W_D'=7  new bound=2
+l=6 d=2: |B_layered|=60  rank(ev_B on W_D')=44  lambda in span: True  dim W_D'=72  new bound=16
+l=6 d=3: |B_layered|=36  rank(ev_B on W_D')=18  lambda in span: True  dim W_D'=30  new bound=9
+l=7 d=2: |B_layered|=147  rank(ev_B on W_D')=129  lambda in span: True  dim W_D'=201  new bound=47
+l=7 d=3: |B_layered|=84  rank(ev_B on W_D')=50  lambda in span: True  dim W_D'=102  new bound=18
+l=7 d=4: |B_layered|=49  rank(ev_B on W_D')=20  lambda in span: True  dim W_D'=38  new bound=10
+l=8 d=3: |B_layered|=224  rank(ev_B on W_D')=158  lambda in span: True  dim W_D'=303  new bound=57
+l=8 d=4: |B_layered|=112  rank(ev_B on W_D')=56  lambda in span: True  dim W_D'=140  new bound=20
+l=9 d=3: |B_layered|=504  rank(ev_B on W_D')=390  lambda in span: True  dim W_D'=825  new bound=114
+l=9 d=4: |B_layered|=324  rank(ev_B on W_D')=190  lambda in span: True  dim W_D'=443  new bound=68
+l=10 d=4: |B_layered|=720  rank(ev_B on W_D')=472  lambda in span: True  dim W_D'=1268  new bound=136
+l=10 d=5: |B_layered|=450  rank(ev_B on W_D')=225  lambda in span: True  dim W_D'=630  new bound=80

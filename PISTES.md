@@ -16,7 +16,7 @@ Légende : 🔄 en cours · 🆕 pas encore explorée · ⏸️ en attente · �
 | Article | Sujet | État | Portée |
 |---|---|---|---|
 | **1** | Schémas « produit de clauses » (question du §9 de Dias-Lima) | Version 2 envoyée à F. Dias ; pré-version 3 en brouillon | Borne 2^Ω(n^(2/3)) dans le **modèle de coût produit** ; rien sur la programmation dynamique (sauf : modèle dégénéré), ni sur les autres voies |
-| **2** | Erreurs par point dans la voie « interpolation » d'OpenAI | **En attente** (accord de l'auteur requis ; attendre G14a et G14d, puis la validation de l'article 1). Théorème prouvé en Lean sur tout corps | Σ_k rang(E_k) ≥ N(ℓ, m) pour un point par direction ; √log n optimal **dans le modèle de coût de l'exposé d'O'Donnell** ; ne couvre pas : contraction de tenseurs, degré d'interpolation réduit (D < nd), effondrement de rang par L/R′, multiplicités inégales |
+| **2** | Erreurs par point dans la voie « interpolation » d'OpenAI | **En attente** (accord de l'auteur requis ; attendre G14a et G14d, puis la validation de l'article 1). Théorème prouvé en Lean sur tout corps | Σ_k rang(E_k) ≥ N(ℓ, m) pour un point par direction ; √log n optimal **dans le modèle de coût de l'exposé d'O'Donnell** ; ne couvre pas : contraction de tenseurs, degré d'interpolation réduit (D < nd), effondrement de rang par L/R′. **Multiplicités inégales : couvertes par G14d (non relu)** : aucune échappatoire par le placement des points |
 | **3** (futur) | Limites de la voie « contraction de tenseurs » d'OpenAI (annexe D) | **Idée seulement** : résultats de G14b non relus, un seul niveau de récursion | Visé : le √log est optimal pour la famille des « effilages » dépendant de la valuation ; borne d'aplatissement dans le modèle DF. Ne couvrirait pas : d'autres règles de reconstruction, plusieurs niveaux, l'algorithme de Claude |
 
 Avec les trois articles, les trois voies de la prépublication d'OpenAI seraient étudiées. Aucun ne dit rien sur P vs NP ni sur la validité de la prépublication.
@@ -40,7 +40,7 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 |---|---|---|---|
 | G14a | 🔄 **Échappatoires restantes de l'article 2** (piste « corps fini » FERMÉE : le théorème vaut sur tout corps, G13a) | Borne de degré D < nd (permise par O'Donnell) ; effondrement de rang par L, R′ ; autres décompositions | G13a |
 | G14c | 🔄 **Un modèle de coût DP valide** | Modèle sur le graphe des lignes, non dégénéré, qui résiste à l'élimination ligne par ligne ; borne inférieure | G7b, G10a |
-| G14d | 🔄 **Compléter le théorème de l'article 2** | Multiplicités inégales (y a-t-il une échappatoire ?), écart d'un facteur log ℓ, asymptotique rigoureuse | G11b |
+| G16L | 🔄 **Relecture + Lean du théorème à plusieurs points** (G14d) | Σ rang ≥ Σ_x max(0, N − d − 2μ(x)), tout corps ; placement équilibré optimal | G14d |
 | G14e | 🔄 **Termes « intriqués » (non produits)** | Plus petit cas (grille 2×3, λ = 1) : l'intrication aide-t-elle ? | G9d |
 | G14f | 🔄 **Noyau de Q1\* : graphes bipartis** | Encodages (somme sur un côté, caractères) et obstruction | G9c |
 
@@ -74,6 +74,8 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | 🆕 **Noyau de Q1\* : graphes bipartis d-réguliers aléatoires** | Compter les ensembles indépendants de taille entre n/(log d·log log d) et n/2 ; toutes les méthodes connues paient n·log log n/√log n ; reformulation : un bit partagé par r groupes doit coûter O(1) | Difficile | G9c |
 
+| 🆕 **Fermer l'écart d'un facteur log ℓ (article 2)** | Construction non symétrique en poids qui remplit les bandes, ou preuve qu'il n'en existe pas | Moyenne à difficile | G14d |
+
 ## 3. En attente
 
 | Piste | Raison de l'attente |
@@ -90,6 +92,7 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | Piste | Résultat |
 |---|---|
+| ✅ Théorème à plusieurs points pour l'article 2 (G14d) | Borne doublée, tout corps ; pas d'échappatoire par placement ; écart log ℓ non fermé (non relu) |
 | ✅ Limites de la contraction de tenseurs (G14b) | Annexe D reconstruite ; √log optimal pour les effilages dépendant de la valuation (théorème B, non relu) ; base possible d'un article 3 |
 | ✅ Relecture + nouveauté du théorème de l'article 2 (G13a) | Confirmé ; vaut sur tout corps ; semble nouveau |
 | ✅ **Lean : théorème de l'article 2 sur tout corps** (G15L) | `AnyField.sum_rank_ge_N2`, forme à deux paramètres |

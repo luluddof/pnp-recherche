@@ -1,0 +1,42 @@
+== B. minimum over ALL placements (m_c) of N points on l directions: attained at the balanced placement?
+balanced placement minimises both bounds for all l<=5, N<=12, d<N; real relaxation <= integer value: True
+== C. general-class check on genuine matrices: multi-point layered J (deg_t = D*max m_c), r_k = rank J(tau_k)[x_c=0, y_c=1] (exact over Q)
+l=2 D=1 m_c=(2, 1) N=3 d=2: sum rank B01 = 3 (sum max(B01,B10) = 3), new bound 1, old 1  OK
+l=2 D=1 m_c=(2, 2) N=4 d=2: sum rank B01 = 4 (sum max(B01,B10) = 4), new bound 2, old 1  OK
+l=3 D=1 m_c=(2, 1, 1) N=4 d=2: sum rank B01 = 8 (sum max(B01,B10) = 8), new bound 2, old 1  OK
+l=3 D=1 m_c=(2, 2, 1) N=5 d=2: sum rank B01 = 10 (sum max(B01,B10) = 10), new bound 4, old 3  OK
+l=3 D=1 m_c=(2, 2, 2) N=6 d=2: sum rank B01 = 12 (sum max(B01,B10) = 12), new bound 4, old 2  OK
+l=3 D=2 m_c=(1, 1, 1) N=3 d=2: sum rank B01 = 3 (sum max(B01,B10) = 3), new bound 1, old 1  OK
+l=3 D=2 m_c=(2, 1, 0) N=3 d=4: sum rank B01 = 3 (sum max(B01,B10) = 3), new bound 0, old 0  OK
+l=3 D=1 m_c=(3, 1, 1) N=5 d=3: sum rank B01 = 10 (sum max(B01,B10) = 10), new bound 2, old 1  OK
+l=4 D=1 m_c=(2, 1, 1, 1) N=5 d=2: sum rank B01 = 20 (sum max(B01,B10) = 20), new bound 6, old 5  OK
+l=4 D=2 m_c=(1, 1, 1, 1) N=4 d=2: sum rank B01 = 8 (sum max(B01,B10) = 8), new bound 2, old 1  OK
+l=4 D=1 m_c=(1, 1, 1, 1) N=4 d=1: sum rank B01 = 16 (sum max(B01,B10) = 16), new bound 7, old 6  OK
+l=4 D=3 m_c=(1, 1, 1, 1) N=4 d=3: sum rank B01 = 4 (sum max(B01,B10) = 4), new bound 1, old 1  OK
+l=4 D=2 m_c=(2, 2, 1, 1) N=6 d=4: sum rank B01 = 12 (sum max(B01,B10) = 12), new bound 2, old 1  OK
+l=4 D=1 m_c=(2, 2, 2, 2) N=8 d=2: sum rank B01 = 32 (sum max(B01,B10) = 32), new bound 14, old 7  OK
+l=4 D=1 m_c=(3, 0, 2, 1) N=6 d=3: sum rank B01 = 24 (sum max(B01,B10) = 24), new bound 8, old 6  OK
+C all OK: True
+== D1. check explicit inequality (*): E[(S-delta)_+] >= (w^2/4)(2l)^(-1/2) exp(-(delta+2w)^2/2l - (delta+2w)^4/6l^3), w>=2, delta+2w<=l/sqrt2
+(*) holds on grid: True  min ratio true/(*) = 12.295
+== D2. threshold degree d*(l, l^-C): smallest d with bound <= l^-C  (old G11b | new G14d | layered UB | formula sqrt((2C-1) l ln l - 2 l lnln l))
+C=1 l=100: old 6 | new 10 | layered 20 | main-term formula 12.5 | sqrt((2C-1) l ln l) = 21.5
+C=1 l=400: old 20 | new 26 | layered 47 | main-term formula 31.1 | sqrt((2C-1) l ln l) = 49.0
+C=1 l=1000: old 38 | new 47 | layered 80 | main-term formula 55.2 | sqrt((2C-1) l ln l) = 83.1
+C=1 l=4000: old 94 | new 112 | layered 177 | main-term formula 127.5 | sqrt((2C-1) l ln l) = 182.1
+C=2 l=100: old 26 | new 28 | layered 36 | main-term formula 32.8 | sqrt((2C-1) l ln l) = 37.2
+C=2 l=400: old 64 | new 66 | layered 83 | main-term formula 75.9 | sqrt((2C-1) l ln l) = 84.8
+C=2 l=1000: old 110 | new 116 | layered 142 | main-term formula 129.8 | sqrt((2C-1) l ln l) = 144.0
+C=2 l=4000: old 252 | new 262 | layered 312 | main-term formula 287.4 | sqrt((2C-1) l ln l) = 315.5
+C=3 l=100: old 38 | new 39 | layered 46 | main-term formula 44.7 | sqrt((2C-1) l ln l) = 48.0
+C=3 l=400: old 90 | new 93 | layered 108 | main-term formula 102.7 | sqrt((2C-1) l ln l) = 109.5
+C=3 l=1000: old 158 | new 161 | layered 184 | main-term formula 175.1 | sqrt((2C-1) l ln l) = 185.8
+C=3 l=4000: old 354 | new 361 | layered 404 | main-term formula 385.9 | sqrt((2C-1) l ln l) = 407.3
+== D3. ratio layered/new bound vs 2 d^2/l
+1000 83 17.36 13.78  old ratio 31.52
+1000 118 29.74 27.85  old ratio 59.49
+1000 144 41.11 41.47  old ratio 82.22
+4000 252 35.0 31.75  old ratio 70.01
+4000 354 62.79 62.66  old ratio 125.57
+== D4. explicit corollary: rho_avg <= l^-C and sqrt(l) <= delta <= sqrt(l)*sqrt(l)/5  =>  delta^2 >= (2C-1) l ln l - 2 l ln(2C ln l) - 11.5 l - 108 C^2 ln^2 l
+corollary consistent with exact thresholds: True

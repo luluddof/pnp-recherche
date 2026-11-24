@@ -1,0 +1,76 @@
+== A. exact commutative optimum T vs bounds (old=G11b, new=G14d). 'T' exact (infeasibility of smaller bad sets mod 2^61-1, l=1,2 exact over Q)
+l=1 N=1 d=0 m_c=(1,): old=1 new=1 T_comm=1 profile=[1] OK
+l=1 N=2 d=0 m_c=(2,): old=1 new=2 T_comm=2 profile=[1, 1] OK
+l=1 N=2 d=1 m_c=(2,): old=1 new=1 T_comm=1 profile=[1, 0] OK
+l=1 N=3 d=0 m_c=(3,): old=2 new=3 T_comm=3 profile=[1, 1, 1] OK
+l=1 N=3 d=1 m_c=(3,): old=1 new=2 T_comm=2 profile=[1, 1, 0] OK
+l=1 N=3 d=2 m_c=(3,): old=1 new=1 T_comm=1 profile=[1, 0, 0] OK
+l=1 N=4 d=0 m_c=(4,): old=2 new=4 T_comm=4 profile=[1, 1, 1, 1] OK
+l=1 N=4 d=1 m_c=(4,): old=2 new=3 T_comm=3 profile=[1, 1, 1, 0] OK
+l=1 N=4 d=2 m_c=(4,): old=1 new=2 T_comm=2 profile=[1, 1, 0, 0] OK
+l=1 N=4 d=3 m_c=(4,): old=1 new=1 T_comm=1 profile=[1, 0, 0, 0] OK
+l=1 N=5 d=0 m_c=(5,): old=3 new=5 T_comm=5 profile=[1, 1, 1, 1, 1] OK
+l=1 N=5 d=1 m_c=(5,): old=2 new=4 T_comm=4 profile=[1, 1, 1, 1, 0] OK
+l=1 N=5 d=2 m_c=(5,): old=2 new=3 T_comm=3 profile=[1, 1, 1, 0, 0] OK
+l=1 N=5 d=3 m_c=(5,): old=1 new=2 T_comm=2 profile=[1, 1, 0, 0, 0] OK
+l=1 N=5 d=4 m_c=(5,): old=1 new=1 T_comm=1 profile=[1, 0, 0, 0, 0] OK
+l=1 N=6 d=0 m_c=(6,): old=3 new=6 T_comm=6 profile=[1, 1, 1, 1, 1, 1] OK
+l=1 N=6 d=1 m_c=(6,): old=3 new=5 T_comm=5 profile=[1, 1, 1, 1, 1, 0] OK
+l=1 N=6 d=2 m_c=(6,): old=2 new=4 T_comm=4 profile=[1, 1, 1, 1, 0, 0] OK
+l=1 N=6 d=3 m_c=(6,): old=2 new=3 T_comm=3 profile=[1, 1, 1, 0, 0, 0] OK
+l=1 N=6 d=4 m_c=(6,): old=1 new=2 T_comm=2 profile=[1, 1, 0, 0, 0, 0] OK
+l=1 N=6 d=5 m_c=(6,): old=1 new=1 T_comm=1 profile=[1, 0, 0, 0, 0, 0] OK
+l=2 N=1 d=0 m_c=(1, 0): old=2 new=2 T_comm=2 profile=[2] OK
+l=2 N=2 d=0 m_c=(1, 1): old=1 new=2 T_comm=4 profile=[2, 2] OK
+l=2 N=2 d=1 m_c=(1, 1): old=1 new=1 T_comm=1 profile=[1, 0] OK
+l=2 N=2 d=0 m_c=(2, 0): old=2 new=4 T_comm=4 profile=[2, 2] OK
+l=2 N=2 d=1 m_c=(2, 0): old=2 new=2 T_comm=2 profile=[2, 0] OK
+l=2 N=3 d=0 m_c=(2, 1): old=3 new=4 T_comm=6 profile=[2, 2, 2] OK
+l=2 N=3 d=1 m_c=(2, 1): old=1 new=2 T_comm=3 profile=[2, 1, 0] OK
+l=2 N=3 d=2 m_c=(2, 1): old=1 new=1 T_comm=1 profile=[1, 0, 0] OK
+l=2 N=3 d=0 m_c=(3, 0): old=4 new=6 T_comm=6 profile=[2, 2, 2] OK
+l=2 N=3 d=1 m_c=(3, 0): old=2 new=4 T_comm=4 profile=[2, 2, 0] OK
+l=2 N=3 d=2 m_c=(3, 0): old=2 new=2 T_comm=2 profile=[2, 0, 0] OK
+l=2 N=4 d=0 m_c=(2, 2): old=2 new=4 T_comm=8 profile=[2, 2, 2, 2] OK
+l=2 N=4 d=1 m_c=(2, 2): old=2 new=3 T_comm=5 profile=[2, 1, 2, 0] OK
+l=2 N=4 d=2 m_c=(2, 2): old=1 new=2 T_comm=2 profile=[1, 1, 0, 0] OK
+l=2 N=4 d=3 m_c=(2, 2): old=1 new=1 T_comm=1 profile=[1, 0, 0, 0] OK
+l=2 N=4 d=0 m_c=(3, 1): old=3 new=6 T_comm=8 profile=[2, 2, 2, 2] OK
+l=2 N=4 d=1 m_c=(3, 1): old=3 new=4 T_comm=5 profile=[2, 2, 1, 0] OK
+l=2 N=4 d=2 m_c=(3, 1): old=1 new=2 T_comm=3 profile=[2, 1, 0, 0] OK
+l=2 N=4 d=3 m_c=(3, 1): old=1 new=1 T_comm=1 profile=[1, 0, 0, 0] OK
+l=2 N=4 d=0 m_c=(4, 0): old=4 new=8 T_comm=8 profile=[2, 2, 2, 2] OK
+l=2 N=4 d=1 m_c=(4, 0): old=4 new=6 T_comm=6 profile=[2, 2, 2, 0] OK
+l=2 N=4 d=2 m_c=(4, 0): old=2 new=4 T_comm=4 profile=[2, 2, 0, 0] OK
+l=2 N=4 d=3 m_c=(4, 0): old=2 new=2 T_comm=2 profile=[2, 0, 0, 0] OK
+l=2 N=5 d=0 m_c=(3, 2): old=4 new=6 T_comm=10 profile=[2, 2, 2, 2, 2] OK
+l=2 N=5 d=1 m_c=(3, 2): old=2 new=4 T_comm=7 profile=[2, 2, 1, 2, 0] OK
+l=2 N=5 d=2 m_c=(3, 2): old=2 new=3 T_comm=4 profile=[2, 1, 1, 0, 0] OK
+l=2 N=5 d=3 m_c=(3, 2): old=1 new=2 T_comm=2 profile=[1, 1, 0, 0, 0] OK
+l=2 N=5 d=4 m_c=(3, 2): old=1 new=1 T_comm=1 profile=[1, 0, 0, 0, 0] OK
+l=2 N=5 d=0 m_c=(4, 1): old=5 new=8 T_comm=10 profile=[2, 2, 2, 2, 2] OK
+l=2 N=5 d=1 m_c=(4, 1): old=3 new=6 T_comm=7 profile=[2, 2, 2, 1, 0] OK
+l=2 N=5 d=2 m_c=(4, 1): old=3 new=4 T_comm=5 profile=[2, 2, 1, 0, 0] OK
+l=2 N=5 d=3 m_c=(4, 1): old=1 new=2 T_comm=3 profile=[2, 1, 0, 0, 0] OK
+l=2 N=5 d=4 m_c=(4, 1): old=1 new=1 T_comm=1 profile=[1, 0, 0, 0, 0] OK
+l=2 N=5 d=0 m_c=(5, 0): old=6 new=10 T_comm=10 profile=[2, 2, 2, 2, 2] OK
+l=2 N=5 d=1 m_c=(5, 0): old=4 new=8 T_comm=8 profile=[2, 2, 2, 2, 0] OK
+l=2 N=5 d=2 m_c=(5, 0): old=4 new=6 T_comm=6 profile=[2, 2, 2, 0, 0] OK
+l=2 N=5 d=3 m_c=(5, 0): old=2 new=4 T_comm=4 profile=[2, 2, 0, 0, 0] OK
+l=2 N=5 d=4 m_c=(5, 0): old=2 new=2 T_comm=2 profile=[2, 0, 0, 0, 0] OK
+l=3 N=3 d=1 m_c=(1, 1, 1): old=1 new=2 T_comm=4 profile=[2, 2, 0] OK
+l=3 N=3 d=2 m_c=(1, 1, 1): old=1 new=1 T_comm=1 profile=[1, 0, 0] OK
+l=3 N=4 d=1 m_c=(2, 1, 1): old=4 new=5 T_comm=8 profile=[4, 2, 2, 0] OK
+l=3 N=4 d=2 m_c=(2, 1, 1): old=1 new=2 T_comm=4 profile=[3, 1, 0, 0] OK
+l=3 N=4 d=2 m_c=(2, 2, 0): old=2 new=4 T_comm=4 profile=[2, 2, 0, 0] OK
+l=3 N=4 d=3 m_c=(2, 1, 1): old=1 new=1 T_comm=1 profile=[1, 0, 0, 0] OK
+l=3 N=4 d=1 m_c=(4, 0, 0): old=8 new=12 T_comm=>11 profile=None OK
+l=3 N=5 d=3 m_c=(2, 2, 1): old=1 new=2 T_comm=3 profile=[2, 1, 0, 0, 0] OK
+l=3 N=5 d=4 m_c=(2, 2, 1): old=1 new=1 T_comm=1 profile=[1, 0, 0, 0, 0] OK
+l=3 N=5 d=2 m_c=(3, 1, 1): old=4 new=5 T_comm=8 profile=[4, 3, 1, 0, 0] OK
+l=3 N=4 d=1 m_c=(2, 2, 0): old=4 new=6 T_comm=10 profile=[4, 2, 4, 0] OK
+l=3 N=5 d=3 m_c=(5, 0, 0): old=4 new=8 T_comm=8 profile=[4, 4, 0, 0, 0] OK
+l=3 N=5 d=3 m_c=(3, 2, 0): old=2 new=4 T_comm=4 profile=[2, 2, 0, 0, 0] OK
+l=3 N=6 d=4 m_c=(2, 2, 2): old=1 new=2 T_comm=2 profile=[1, 1, 0, 0, 0, 0] OK
+l=3 N=6 d=5 m_c=(2, 2, 2): old=1 new=1 T_comm=1 profile=[1, 0, 0, 0, 0, 0] OK
+ALL OK
