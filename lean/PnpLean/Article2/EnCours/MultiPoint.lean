@@ -35,7 +35,14 @@ form: `W` is a complement of the space `V_D` of annihilators, because the lowest
 coefficient of an element of `V_D` of `X`-adic valuation `v` is supported on `v < μ x ≤ D - v`.)
 
 The weaker "one-parameter" form `∑ x, (m + 1 - μ x) ≤ ∑ k, rank (E k)` for `2 m + d + 1 ≤ N`
-is `MultiPoint.sum_rank_ge_simple`; one point per direction is `MultiPoint.sum_rank_ge_one`.
+is `MultiPoint.sum_rank_ge_simple`; one point per direction is `MultiPoint.sum_rank_ge_one`;
+points indexed by `Fin N` is `MultiPoint.sum_rank_ge_fin`.
+
+Theorem 2 of the notes (no loophole from the placement of the points), in its averaged form:
+`ℓ * ∑ x, max(0, n - 2 μ x) ≥ ∑ x, max(0, ℓ n - 2 N |x|)` for every placement
+(`MultiPoint.placement_le`, by averaging over the `ℓ` cyclic shifts of the cube), hence
+`ℓ * ∑ k, rank (E k) ≥ ∑ x, max(0, ℓ (N - d) - 2 N |x|)` (`MultiPoint.sum_rank_ge_balanced`).
+(The integer statement "the balanced integer placement minimises the bound" is not formalized.)
 -/
 
 open Polynomial Matrix Module
@@ -401,6 +408,90 @@ theorem sum_rank_ge_one (ℓ d : ℕ) (J : Matrix (Fin ℓ → Bool) (Fin ℓ �
   have := sum_rank_ge ℓ d J hd h0 τ hτ hτ0 (fun k => k) K E hdec hnice
   simpa [mu_id] using this
 
+/-- Points indexed by . -/
+theorem sum_rank_ge_fin (ℓ d N : ℕ) (J : Matrix (Fin ℓ → Bool) (Fin ℓ → Bool) F[X])
+    (hd : ∀ x y, (J x y).natDegree ≤ d) (h0 : J.map (eval 0) = XtensorF F ℓ)
+    (τ : Fin N → F) (hτ : Function.Injective τ) (hτ0 : ∀ k, τ k ≠ 0) (c : Fin N → Fin ℓ)
+    (K E : Fin N → Matrix (Fin ℓ → Bool) (Fin ℓ → Bool) F)
+    (hdec : ∀ k, J.map (eval (τ k)) = K k + E k)
+    (hnice : ∀ k x y, x (c k) ≠ y (c k) → K k x y = 0) :
+    ∑ x : Fin ℓ → Bool, (N - d - 2 * mu c x) ≤ ∑ k, (E k).rank := by
+  simpa using sum_rank_ge ℓ d J hd h0 τ hτ hτ0 c K E hdec hnice
+
+/-! ### Theorem 2: the placement of the points gives no loophole -/
+
+/-- Truncated subtraction is superadditive: `|s| * n - ∑ a ≤ ∑ (n - a)`. -/
+theorem card_mul_sub_sum_le {α : Type*} [DecidableEq α] (s : Finset α) (n : ℕ) (a : α → ℕ) :
+    s.card * n - ∑ j ∈ s, a j ≤ ∑ j ∈ s, (n - a j) := by
+  induction s using Finset.induction_on with
+  | empty => simp
+  | insert i s hi ih =>
+    rw [Finset.sum_insert hi, Finset.sum_insert hi, Finset.card_insert_of_notMem hi]
+    have : (s.card + 1) * n = s.card * n + n := by ring
+    omega
+
+/-- Cyclic shift of the cube `{0,1}^(L+1)`. -/
+def shift {L : ℕ} (j : Fin (L + 1)) : (Fin (L + 1) → Bool) ≃ (Fin (L + 1) → Bool) where
+  toFun x := fun i => x (i + j)
+  invFun x := fun i => x (i - j)
+  left_inv x := by funext i; simp
+  right_inv x := by funext i; simp
+
+theorem sum_mu_shift {L : ℕ} (c : ι → Fin (L + 1)) (x : Fin (L + 1) → Bool) :
+    ∑ j, mu c (shift j x) = Fintype.card ι * SqrtLog.weight x := by
+  classical
+  have h1 : ∀ j, mu c (shift j x) = ∑ k : ι, if x (c k + j) = true then 1 else 0 := by
+    intro j
+    rw [mu, Finset.card_filter]
+    rfl
+  have h2 : ∀ k : ι, (∑ j : Fin (L + 1), if x (c k + j) = true then 1 else 0)
+      = SqrtLog.weight x := by
+    intro k
+    rw [SqrtLog.weight, Finset.card_filter]
+    exact Equiv.sum_comp (Equiv.addLeft (c k)) (fun j => if x j = true then 1 else 0)
+  simp_rw [h1]
+  rw [Finset.sum_comm]
+  simp_rw [h2]
+  simp
+
+/-- **Theorem 2 (combinatorial part).** For every placement `c` of the points,
+`ℓ * ∑ x, max(0, n - 2 μ x) ≥ ∑ x, max(0, ℓ n - 2 N |x|)`: the bound of Theorem 1 is at least
+its value at the (real) balanced placement `N / ℓ` points per direction. -/
+theorem placement_le (c : ι → Fin ℓ) (n : ℕ) :
+    ∑ x : Fin ℓ → Bool, (ℓ * n - 2 * (Fintype.card ι * SqrtLog.weight x))
+      ≤ ℓ * ∑ x : Fin ℓ → Bool, (n - 2 * mu c x) := by
+  classical
+  cases ℓ with
+  | zero => simp
+  | succ L =>
+    have h1 : (L + 1) * ∑ x : Fin (L + 1) → Bool, (n - 2 * mu c x)
+        = ∑ x : Fin (L + 1) → Bool, ∑ j : Fin (L + 1), (n - 2 * mu c (shift j x)) := by
+      rw [Finset.sum_comm]
+      have : ∀ j : Fin (L + 1), ∑ x : Fin (L + 1) → Bool, (n - 2 * mu c (shift j x))
+          = ∑ x : Fin (L + 1) → Bool, (n - 2 * mu c x) :=
+        fun j => Equiv.sum_comp (shift j) (fun x => n - 2 * mu c x)
+      simp [this]
+    rw [h1]
+    refine Finset.sum_le_sum fun x _ => ?_
+    have h2 := card_mul_sub_sum_le (Finset.univ : Finset (Fin (L + 1))) n
+      (fun j => 2 * mu c (shift j x))
+    rw [← Finset.mul_sum, sum_mu_shift] at h2
+    simpa using h2
+
+/-- **Theorem 2 (no loophole from the placement).** Whatever the placement `c` of the `N` points
+on the `ℓ` directions, `ℓ * ∑ k, rank (E k) ≥ ∑ x, max(0, ℓ (N - d) - 2 N |x|)`; dividing by
+`ℓ N 2^ℓ` this is `(1/N) ∑ k, ρ k ≥ (1/ℓ) E[(S_ℓ - d ℓ / N)_+]`. -/
+theorem sum_rank_ge_balanced (ℓ d : ℕ) (J : Matrix (Fin ℓ → Bool) (Fin ℓ → Bool) F[X])
+    (hd : ∀ x y, (J x y).natDegree ≤ d) (h0 : J.map (eval 0) = XtensorF F ℓ)
+    (τ : ι → F) (hτ : Function.Injective τ) (hτ0 : ∀ k, τ k ≠ 0) (c : ι → Fin ℓ)
+    (K E : ι → Matrix (Fin ℓ → Bool) (Fin ℓ → Bool) F)
+    (hdec : ∀ k, J.map (eval (τ k)) = K k + E k)
+    (hnice : ∀ k x y, x (c k) ≠ y (c k) → K k x y = 0) :
+    ∑ x : Fin ℓ → Bool, (ℓ * (Fintype.card ι - d) - 2 * (Fintype.card ι * SqrtLog.weight x))
+      ≤ ℓ * ∑ k, (E k).rank :=
+  (placement_le c (Fintype.card ι - d)).trans
+    (Nat.mul_le_mul_left ℓ (sum_rank_ge ℓ d J hd h0 τ hτ hτ0 c K E hdec hnice))
+
 end MultiPoint
 
 #print axioms MultiPoint.core
@@ -409,3 +500,6 @@ end MultiPoint
 #print axioms MultiPoint.sum_rank_block01_ge
 #print axioms MultiPoint.sum_rank_ge_simple
 #print axioms MultiPoint.sum_rank_ge_one
+#print axioms MultiPoint.sum_rank_ge_fin
+#print axioms MultiPoint.placement_le
+#print axioms MultiPoint.sum_rank_ge_balanced
