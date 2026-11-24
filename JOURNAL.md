@@ -208,6 +208,23 @@ Fichier : `lean/PnpLean/WitnessDet.lean` (234 lignes, Lean 4.37.0-rc1 + Mathlib)
 
 **Non formalisé :** le passage du schéma de la note (polynômes P_o, carte témoin ω) à ces matrices. C'est une traduction directe, mais elle reste vérifiée seulement à la main. Les lemmes 2 à 4 (probabilités, séparateurs, 3-SAT aléatoire) ne sont pas formalisés.
 
+## 4 septies. Relecture indépendante de la note (G8R) et génération 8
+
+**Rapport G8R** (`resultats/rapport_relecture_G8R.md`) : **révision majeure**. Les mathématiques tiennent (toutes les preuves refaites ligne par ligne ; c₀ = 0,21617, c₃ = 0,033967). Corrections obligatoires principales :
+1. Le modèle DP de Dias-Lima est **dégénéré** (pas « ouvert ») : un schéma trivial coûte 2^√n (confirme la prop. O1 de G7b).
+2. La borne 2^Ω(n^(2/3)) porte sur F lui-même, pas sur F\* ni sur les feuilles de la sparsification ; comparer avec le théorème 8.1, le lemme 8.2 et le théorème 7.1(ii) de Dias-Lima.
+3. Énoncés trop forts : le titre (« cannot absorb ») et « ils résolvent le cas d'une ligne ».
+4. Fidélité à la source : arêtes du graphe d'interaction, réserves du modèle de coût, définition de p_{e,v,v'}.
+5. Vérifications numériques : 18 tests réels et non 36 ; l'étape de moyenne du théorème B n'est jamais vraiment testée ; pas de commandes reproductibles.
+6. Il faut un auteur humain responsable.
+7. Sections manquantes : introduction avec contributions, travaux liés, conclusion, bibliographie.
+8. Retirer le matériel interne (« Issues found », références au journal).
+9. Conflits de notation (X, Pr, Φ, w).
+
+Simplification proposée : l'hypothèse M ≥ n peut être supprimée.
+
+**Génération 8 (en cours) :** G8a (terminer Limits §9), G8b (compter les ensembles indépendants), G8c (réfutations Extended Frege / TC⁰-Frege), G8d (Turán sur l'hypercube). Liste complète des pistes : `PISTES.md`.
+
 ## 4 bis. Pistes restantes pour chercher plus loin
 
 | Piste | Pourquoi elle reste ouverte | Première expérience simple |
