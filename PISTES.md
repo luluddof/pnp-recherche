@@ -40,7 +40,6 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
-| G20a | 🔄 **Pièces à D = 3 directions au-delà du plus petit cas** | La loi « gain = D^(−1/2) » est-elle battue pour D = 3 à N = 3, 4 ? Compromis de rang à trois coupes ; frontière des triplets réalisables ; solveur étalonné. | G18h, G18g, G19c |
 | G21a | 🔄 **Modules à espace fondamental dégénéré** (modèle Fable) | Construire l'objet qui ferait baisser ρ sous 1/√2 : secteur de Ramond, modules tordus, modes zéro ; profil affine avec ordonnée à l'origine (cible ρ = 2/3 ou mieux). Ou un théorème d'obstruction. | G20c, G18h |
 | G21b | 🔄 **Caractéristique p** | Pour la décision, on peut travailler sur F_p. La frontière sur F_2, F_3 est-elle meilleure que sur ℚ ? Fock p-restreint, Frobenius, non-rigidité sur les corps finis (Dvir-Edelman). | G9b, G18b, G20c |
 | G21c | 🔄 **L'échelon 2 par d'autres problèmes ouverts** | k-Clique en N^(O(k/log k)) ; Marx « Can you beat treewidth? » ; conjecture du rang asymptotique de Strassen et ω = 2 (Björklund-Kaski, Pratt) ; théorèmes conditionnels exacts. | nouvelle |
@@ -151,6 +150,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Résultat |
 |---|---|
+| ⚠️ **Pièces à D = 3 directions** (G20a) | Aucun signe que D = 3 bat D^(−1/2) au-delà du plus petit cas : exposants 0,40 → 0,50 → 0,65 pour N = 2, 3, 4 (sphère : 0,577 ; plancher : 0,333). La frontière des triplets est nécessaire mais pas suffisante. Théorème G (généralise le théorème C, non relu) : exposant 1/4 seulement au point équilibré. Solveur non fiable à l'intérieur. `code/gen20/g20a/notes.md` |
 | ⚠️ **Annexe B à N fini et frontière b(N) jusqu'à N = 12** (G20b) | L'annexe B de Claude est triviale (b = N²) pour N ≤ 256 ; son exposant passe sous 1,6 vers N ≈ 6·10¹¹. Les petits cas ne disent donc rien sur le cercle. b(N) = N + O(1) jusqu'à N = 8, saut à N = 9 (motif de Hurwitz). Aucune famille d'exposant < √2. Non tranché. `code/gen20/g20b/notes.md` |
 | ❌ **Constructions algébriques sous le cercle** (G20c) | Aucune. Sept familles testées, toutes au-dessus du cercle ou dominées. La non-rigidité d'Alman-Williams ne donne rien (la partie C coûte la parcimonie de Fourier, pas le rang). Dans le cadre gradué avec profil concave : ρ ≥ 2/3, atteint seulement par un profil « à coude » (N, N^(4/3), N²) qu'aucune algèbre connue ne réalise. `code/gen20/g20c/notes.md` |
 | ❌ **Pièces adaptées à l'instance** (G20e) | Pas de gain au-delà d'une constante sur les expanseurs. Le croisement restreint aux états atteignables est encore un échange complet (proposition R), donc le théorème C s'applique. Conductance mesurée ≥ 0,115. Brancher d'abord ne gagne rien. `code/gen20/g20e/notes.md` |
