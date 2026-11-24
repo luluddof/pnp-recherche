@@ -130,6 +130,16 @@ Ce fichier liste **tout ce qui peut entrer dans un article**, présent ou futur.
 | **Limites** | Conditionnel à la prépublication de Claude. Nouveauté établie par une seule recherche. Rien pour Frege ni Extended Frege. |
 | **Ce qui manque** | Contrôler l'étape (a). Une vraie recherche d'antériorité. Sans cela : une remarque, pas un article. |
 
+### B5 — « Battre la largeur arborescente » après 2026, et ce que la conjecture du rang asymptotique ne donne pas
+
+| | |
+|---|---|
+| **Résultat** | (T1) Conditionnel à la prépublication de Claude : #CSP binaire pondéré sur un graphe de degré max Δ à v variables et domaine s en temps s^(O(Δ·v/√log v)) ; sur les expanseurs de degré borné : s^(O(tw/√log tw)). (T2, T3) La capacité de liaison est O(k·log Δ/log k) ; le facteur log tw laissé ouvert par le théorème de Marx est une quantité de routage, et le fermer ne donnerait rien pour 3-SAT. (Théorème R) Tout développement du tenseur de croisement en termes de rang un sur les colonnes a au moins 2^(S/2) termes : la conjecture du rang asymptotique et ω = 2 changent seulement une constante. (Circuits) 3-SAT en 2^(O(V/a(V))) ⇒ E^NP sans circuits de taille c·n·a(n). |
+| **Niveau** | T1 : E (esquisse, conditionnelle, constantes non contrôlées). T2, T3, R, circuits : P (non relus). |
+| **Fichiers** | `code/gen21/g21c/notes.md` |
+| **Limites** | Nouveauté non établie : T2 est sans doute du folklore ; l'article de Marx n'a pas été lu (hôte bloqué) ; plusieurs références citées de mémoire ou lues dans les résumés seulement. T3 couvre une seule famille de réductions. |
+| **Avis honnête** | Matière réelle mais mince et non relue. Aujourd'hui : des remarques à mettre dans la section « travaux reliés » d'un autre article. Un article seul demanderait une relecture, la lecture des sources, et un contrôle de T1. |
+
 ### B4 — Bibliothèque Lean d'outils génériques
 
 | | |
@@ -164,6 +174,7 @@ Ce fichier liste **tout ce qui peut entrer dans un article**, présent ou futur.
 | Date | Changement |
 |---|---|
 | 24/11/2026 | Création du registre après la génération 18. Articles 1, 2, 3 ; candidats B1 à B4. |
+| 24/11/2026 | G21c : nouveau candidat B5 (largeur arborescente après 2026 ; limites de la conjecture du rang asymptotique), classé « remarques » pour le moment. |
 | 24/11/2026 | G20b : valeurs exactes de l'annexe B à N fini, ajoutées à la partie C. |
 | 24/11/2026 | G20c, G20e : résultats négatifs, ajoutés à la partie C. Aucun nouveau candidat. |
 | 24/11/2026 | G20d : une barrière (théorème B, non relue) est ajoutée au candidat B2, qui devient une note possible sous conditions. |

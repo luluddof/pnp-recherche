@@ -25,6 +25,8 @@ Avec les trois articles, les trois voies de la prépublication d'OpenAI seraient
 
 ## 0. L'échelle vers P = NP (temps pour 3-SAT)
 
+**Précision d'échelle (G21c, 24/11) :** les deux prépublications donnent 2^(O(m/√log m)) en le nombre de clauses m. En le nombre de variables n, la borne générale est 2^(O(n·loglog n/√log n)) ; elle est 2^(O(n/√log n)) seulement à densité bornée. Dans ce fichier, « n/√log n » et « n/log n » se lisent à densité bornée (ou en m).
+
 | Marche | Temps | État |
 |---|---|---|
 | 0 | 2^(0,39 n) | Record avant octobre 2026 |
@@ -42,7 +44,6 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 |---|---|---|---|
 | G21a | 🔄 **Modules à espace fondamental dégénéré** (modèle Fable) | Construire l'objet qui ferait baisser ρ sous 1/√2 : secteur de Ramond, modules tordus, modes zéro ; profil affine avec ordonnée à l'origine (cible ρ = 2/3 ou mieux). Ou un théorème d'obstruction. | G20c, G18h |
 | G21b | 🔄 **Caractéristique p** | Pour la décision, on peut travailler sur F_p. La frontière sur F_2, F_3 est-elle meilleure que sur ℚ ? Fock p-restreint, Frobenius, non-rigidité sur les corps finis (Dvir-Edelman). | G9b, G18b, G20c |
-| G21c | 🔄 **L'échelon 2 par d'autres problèmes ouverts** | k-Clique en N^(O(k/log k)) ; Marx « Can you beat treewidth? » ; conjecture du rang asymptotique de Strassen et ω = 2 (Björklund-Kaski, Pratt) ; théorèmes conditionnels exacts. | nouvelle |
 | G21d | 🔄 **Équation au-delà des méthodes de rang** | À N = 3, trouver un témoin algébrique que l'échange n'est pas dans le joint J(2,2) ; reformulation symétrique à trois aplatissements ; se généralise-t-il ? | G20d |
 | G21e | 🔄 **Relecture adverse du théorème B (barrière) et de la borne ρ ≥ 2/3** | Deux affirmations non relues qui dirigent maintenant le projet. | G20d, G20c |
 
@@ -150,6 +151,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Résultat |
 |---|---|
+| ❌ **L'échelon 2 par d'autres problèmes ouverts** (G21c) | Aucune route. Fermé : conjecture du rang asymptotique et ω = 2 (théorème R : constante seulement) ; le log de Marx est une quantité de routage sans lien avec l'échelon 2 (T2, T3) ; k-Clique est le pire cas des algorithmes de 2026. Positif conditionnel : CSP en s^(O(tw/√log tw)) sur les expanseurs de degré borné (T1, esquisse). Correction : les bornes de 2026 sont en m ; en n elles ont un facteur loglog n. `code/gen21/g21c/notes.md` |
 | ⚠️ **Pièces à D = 3 directions** (G20a) | Aucun signe que D = 3 bat D^(−1/2) au-delà du plus petit cas : exposants 0,40 → 0,50 → 0,65 pour N = 2, 3, 4 (sphère : 0,577 ; plancher : 0,333). La frontière des triplets est nécessaire mais pas suffisante. Théorème G (généralise le théorème C, non relu) : exposant 1/4 seulement au point équilibré. Solveur non fiable à l'intérieur. `code/gen20/g20a/notes.md` |
 | ⚠️ **Annexe B à N fini et frontière b(N) jusqu'à N = 12** (G20b) | L'annexe B de Claude est triviale (b = N²) pour N ≤ 256 ; son exposant passe sous 1,6 vers N ≈ 6·10¹¹. Les petits cas ne disent donc rien sur le cercle. b(N) = N + O(1) jusqu'à N = 8, saut à N = 9 (motif de Hurwitz). Aucune famille d'exposant < √2. Non tranché. `code/gen20/g20b/notes.md` |
 | ❌ **Constructions algébriques sous le cercle** (G20c) | Aucune. Sept familles testées, toutes au-dessus du cercle ou dominées. La non-rigidité d'Alman-Williams ne donne rien (la partie C coûte la parcimonie de Fourier, pas le rang). Dans le cadre gradué avec profil concave : ρ ≥ 2/3, atteint seulement par un profil « à coude » (N, N^(4/3), N²) qu'aucune algèbre connue ne réalise. `code/gen20/g20c/notes.md` |
