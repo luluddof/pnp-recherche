@@ -40,7 +40,6 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 |---|---|---|---|
 | G14c | 🔄 **Un modèle de coût DP valide** | Modèle sur le graphe des lignes, non dégénéré, qui résiste à l'élimination ligne par ligne ; borne inférieure | G7b, G10a |
 | G16L | 🔄 **Relecture + Lean du théorème à plusieurs points** (G14d) | Σ rang ≥ Σ_x max(0, N − d − 2μ(x)), tout corps ; placement équilibré optimal | G14d |
-| G14e | 🔄 **Termes « intriqués » (non produits)** | Plus petit cas (grille 2×3, λ = 1) : l'intrication aide-t-elle ? | G9d |
 
 **Consigne de l'utilisateur (24/11) :** dès que les générations 8 et 9 sont terminées, lancer une **génération 10** sur les pistes « pas encore explorées » (section 2) et « en attente » (section 3).
 
@@ -66,7 +65,7 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | 🆕 **Pièces hors du cadre « un seul espace gradué »** | Seule façon restante d'obtenir ρ < 1/√2 : des pièces qui ne passent pas par les composantes graduées d'un seul espace (ou des profils de croissance non concaves). Lié au problème de Hurwitz : P(N) ≤ N^(1+ε) | Très difficile | G9a |
 
-| 🆕 **Termes non produits (« intriqués »)** | Seule hypothèse non testée du mur 2^(m/log m). Il faut E1 : décomposition jointe d'un tenseur de grille 4×h (termes colonnes ≤ (1/2+o(1))·S bits, termes lignes de rang 2^o(S)) et E2 : évaluation récursive des parties fusionnées. Aucune borne connue n'exclut 2^(S^(1−ε)) dans la classe générale | Très difficile ; c'est la question centrale pour la marche 3 | G9d |
+| 🆕 **Termes « intriqués » : question E1 précise** | Un développement avec 2^o(S) termes et κ_r + κ_c < 1, qui couvre plusieurs rectangles (g ou h ≥ 3). Plus petits cas (2×3, λ = 1) : aucun gain (numérique) ; λ = 1 ne peut pas trancher. Il faut λ ≥ 2 ou une idée structurelle | Très difficile ; calculs lourds | G9d, G14e |
 
 | 🆕 **Pièces sur un corps fini fixe avec ρ < 1/√2** | Seule liberté propre à la décision. Sur GF(2) : meilleur connu 0,811 (classe restreinte) ; recherche exhaustive à λ = 2 non terminée | Difficile | G9b |
 
@@ -133,6 +132,7 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 | ❌ D – Gadgets à 3 parties, multiplication rapide de matrices, conjecture du rang asymptotique, instances non cliques, réutilisation des égalités (G9d) | Gain constant au mieux ; « loi harmonique » : tout schéma à termes produits reste à 2^Ω(m/log m) (esquisse, dans le modèle) |
 | ❌ B – Décider au lieu de compter (G9b) | Les meilleures pièces ne marchent qu'en grande caractéristique ; sur GF(2) le meilleur ρ connu est 0,811 > 1/√2 ; Valiant-Vazirani et le hachage n'aident pas |
 | ❌ Encodages directs pour Q1\* (CSP à un côté, Fourier, gadgets) (G14f) | Coût ≥ 2N(d−1) ; rang ≥ C(s+s′, s) pour toute fonction ayant le support du test de conflit |
+| ❌ Intrication sur les plus petits cas (grille 2×3, λ = 1) (G14e) | Faisabilité exactement sur la frontière produit (numérique) ; la question reste ouverte pour λ ≥ 2 |
 | ❌ Erreurs par point sur un corps fini (piste 1 de la génération 14) | Le théorème de l'article 2 vaut sur tout corps (G13a) : pas de faille |
 | ❌ Géométries de récursion (grilles, boîtes de dimension d) | 2^Ω(m/log m) dans le modèle (G4b, G6b) |
 | ❌ Structures non produit pour OpenAI (expanseurs, codes) | Rang ≥ K/2 (G5a) |

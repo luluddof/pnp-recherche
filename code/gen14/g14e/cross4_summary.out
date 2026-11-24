@@ -1,0 +1,8 @@
+N=4 (r,c)=(1,5): best residual^2=3.00e+00  lowest local minima [3.0]  -> not found
+N=4 (r,c)=(2,4): best residual^2=3.00e+00  lowest local minima [3.001, 3.002, 3.003, 4.0]  -> not found
+N=4 (r,c)=(2,5): best residual^2=1.02e+00  lowest local minima [1.016, 2.0]  -> not found
+N=4 (r,c)=(2,3): best residual^2=5.00e+00  lowest local minima [5.0]  -> not found
+N=4 (r,c)=(4,2): best residual^2=3.00e+00  lowest local minima [3.001, 3.003, 3.01, 3.997]  -> not found
+N=4 (r,c)=(1,6): best residual^2=4.18e-29  lowest local minima [0.0]  -> FEASIBLE
+N=4 (r,c)=(3,3): best residual^2=9.92e-05  lowest local minima [0.0, 2.0]  -> not found
+N=4 (r,c)=(4,1): best residual^2=5.00e+00  lowest local minima [5.0]  -> not found

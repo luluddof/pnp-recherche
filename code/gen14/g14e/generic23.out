@@ -1,0 +1,6 @@
+T: row rank 64 col cut ranks [np.int64(16), np.int64(16), np.int64(16)]
+r= 4 bonds=(2, 2, 2) cost r+prod(D)= 12: best residual^2=4.596e+01 not found
+r=10 bonds=(3, 3, 3) cost r+prod(D)= 37: best residual^2=1.263e+01 not found
+r=13 bonds=(2, 2, 2) cost r+prod(D)= 21: best residual^2=2.324e+01 not found
+r= 8 bonds=(2, 2, 4) cost r+prod(D)= 24: best residual^2=2.793e+01 not found
+r= 1 bonds=(3, 3, 3) cost r+prod(D)= 28: best residual^2=2.724e+01 not found

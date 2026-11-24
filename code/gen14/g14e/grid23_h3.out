@@ -1,0 +1,24 @@
+h=3: 12 qubits, 10395 matchings; T has r=6, c=6
+dim span(matchings) = 132
+
+(i) max-own-bits feasibility: T in span{M: r(M)<=R} + span{M: c(M)<=C} ?   (rows R=0..,cols C=0..)  1=yes
+   R=-1: . . . . . . . 1
+   R= 0: . . . . . 1 1 1
+   R= 1: . . . . . 1 1 1
+   R= 2: . . . 1 1 1 1 1
+   R= 3: . . . 1 1 1 1 1
+   R= 4: . 1 1 1 1 1 1 1
+   R= 5: . 1 1 1 1 1 1 1
+   R= 6: 1 1 1 1 1 1 1 1
+   product (one-bit identity per rectangle): terms (r,c)=(2i,2(3-i)); feasible iff some i has R>=2i and C>=2(3-i-1)
+
+(ii) LP (weighted l1): status=0, objective=24.0000; support size 6; true cost sum_supp min(2^r,2^c) = 24   [trivial 64]
+     coef +1.0000  (r,c)=(np.int64(2), np.int64(4))  pairs=[((0, 0), (0, 1)), ((0, 0), (0, 2)), ((0, 1), (1, 1)), ((0, 2), (1, 2)), ((1, 0), (1, 1)), ((1, 0), (1, 2))]
+     coef +1.0000  (r,c)=(np.int64(2), np.int64(4))  pairs=[((0, 0), (0, 1)), ((0, 0), (1, 0)), ((0, 1), (0, 2)), ((0, 2), (1, 2)), ((1, 0), (1, 1)), ((1, 1), (1, 2))]
+     coef -1.0000  (r,c)=(np.int64(4), np.int64(2))  pairs=[((0, 0), (0, 1)), ((0, 0), (1, 0)), ((0, 1), (1, 1)), ((0, 2), (1, 2)), ((0, 2), (1, 2)), ((1, 0), (1, 1))]
+     coef -1.0000  (r,c)=(np.int64(4), np.int64(2))  pairs=[((0, 0), (1, 0)), ((0, 0), (0, 2)), ((0, 1), (1, 1)), ((0, 1), (1, 1)), ((0, 2), (1, 2)), ((1, 0), (1, 2))]
+     coef +1.0000  (r,c)=(np.int64(6), np.int64(2))  pairs=[((0, 0), (1, 0)), ((0, 0), (1, 0)), ((0, 1), (1, 1)), ((0, 1), (1, 2)), ((0, 2), (1, 2)), ((0, 2), (1, 1))]
+     coef +1.0000  (r,c)=(np.int64(2), np.int64(6))  pairs=[((0, 0), (1, 1)), ((0, 0), (0, 2)), ((0, 1), (1, 0)), ((0, 1), (0, 2)), ((1, 0), (1, 2)), ((1, 1), (1, 2))]
+   check A+B=T: 1.021405182655144e-14  grouped: row-rank(A)= 10  column single-cut ranks of B= [np.int64(7), np.int64(7), np.int64(7)]  | T: row-rank 64 col cut ranks [np.int64(16), np.int64(16), np.int64(16)]
+
+[exited with code 0]
