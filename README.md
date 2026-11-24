@@ -8,6 +8,7 @@ chercher un algorithme polynomial pour 3-SAT, et comprendre pourquoi chaque voie
 
 - **`resultats/article/Requena_determinant_bound_clause_product_schemes.pdf`** : l'article (version 2, 26 pages, en anglais ; source `main.tex` à côté). Preuves complètes, section Lean, section sur l'usage de l'IA. **Pas encore relu par des experts humains.**
 - **`resultats/article/Requena_borne_determinant_schemas_produit_de_clauses.pdf`** : la version française de l'article (28 pages ; source `main_fr.tex`). La version anglaise fait foi.
+- `resultats/brouillons/pre-v3/` : **brouillon** d'une future version 3 (pas l'article officiel), fait pour une vérification de la portée par une IA indépendante. Voir `LISEZ-MOI.md` dans ce dossier.
 - `resultats/note_limits_s9.md` (version 1, remplacée par l'article) : note mathématique (en anglais) sur le seul résultat nouveau confirmé, une réponse négative à la question ouverte du §9 de Dias-Lima (arXiv:2611.00517). **Pas encore relue par des experts humains.**
 - `lean/` : vérifications Lean 4 + Mathlib, **classées par article** (`lean/README.md`). `PnpLean/Article1/` : partie déterministe de l'article 1, sans `sorry` (`cd lean && lake exe cache get && lake build`). `PnpLean/Article2/EnCours/` : travail en cours pour un futur article 2.
 - `PISTES.md` : toutes les pistes de recherche (en cours, pas encore explorées, fermées). **À consulter en premier pour savoir où on en est.**

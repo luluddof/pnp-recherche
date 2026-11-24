@@ -33,7 +33,6 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 | G14e | 🔄 **Termes « intriqués » (non produits)** | Plus petit cas (grille 2×3, λ = 1) : l'intrication aide-t-elle ? | G9d |
 | G14f | 🔄 **Noyau de Q1\* : graphes bipartis** | Encodages (somme sur un côté, caractères) et obstruction | G9c |
 | G14g | 🔄 **Lean : conséquences de l'article 2 et restes de l'article 1** | Forme max/moyenne, enlever l'hypothèse n ≤ M | G13b, G10e |
-| G12W | 🔄 **Pré-version 3 (brouillon, pas l'article officiel)** | Essai séparé dans `resultats/brouillons/pre-v3/`, à faire vérifier par une autre IA pour la portée ; l'article officiel (version 2) ne change pas | Demande de l'auteur (24/11) |
 | G13a | 🔄 **Relecture adverse + nouveauté du théorème de G11b** | Σ rang(E_k) ≥ N_m : chaque étape, le corps, le cadre exact, la conséquence sur le temps, la littérature | G11b |
 
 **Consigne de l'utilisateur (24/11) :** dès que les générations 8 et 9 sont terminées, lancer une **génération 10** sur les pistes « pas encore explorées » (section 2) et « en attente » (section 3).
@@ -82,6 +81,7 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | Piste | Résultat |
 |---|---|
+| ✅ **Pré-version 3 (brouillon)** (G12W) | `resultats/brouillons/pre-v3/` : 41 pages, marqué DRAFT ; section F\*, section Lean à jour, section « Scope of the claims » avec 8 questions ; à faire vérifier par une autre IA (voir `LISEZ-MOI.md`) |
 | ✅ Cas général des erreurs par point (G11c) | Lemme Q_{d+2} étendu ; la classe commutative n'est pas optimale (11 contre 12 à (4,1), numérique) |
 | ✅ **Lean : théorème principal candidat de l'article 2** (G13b) | `sum_rank_ge_N` : Σ rang(E_k) ≥ N(ℓ, m), prouvé sur ℚ sans hypothèse ajoutée |
 | ✅ Relecture du théorème sep(F\*) (G11a) | Confirmé ; la définition de F\* doit être énoncée comme hypothèse ; 6 corrections listées |
