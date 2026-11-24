@@ -328,10 +328,9 @@ theorem sum_rank_ge_half (ℓ d : ℕ) (J : Matrix (Fin ℓ → Bool) (Fin ℓ �
     simpa [L, evA, Matrix.mulVec_transpose] using this
   have hzero := core ℓ d D J hd h0 τ hτ hτ0 c K E hdec hnice (by omega) (avec τ D c p)
     (natDegree_avec_le τ D c p)
-    (fun x => Dvd.intro_left (pref τ c x) (by rw [avec]; ring_nf) |>.trans
-      (dvd_refl _) |> fun h => by
-        rw [avec]
-        exact Dvd.dvd.mul_left (Dvd.intro _ rfl) _)
+    (fun x => by
+      rw [avec]
+      exact Dvd.dvd.mul_left (Dvd.intro _ rfl) _)
     (fun k x hx => by rw [avec, eval_mul, pref_eval τ c x k (hτ0 k) hx, zero_mul]) hker
   apply hp
   funext x i
