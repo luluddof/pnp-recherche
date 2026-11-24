@@ -44,7 +44,7 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
-| G22b | 🔄 **Anatomie des petites solutions exactes → un principe de construction** (modèle Fable) | Les solutions exactes pour N ≤ 8 ont toutes la « forme d'appariement » (permutations partielles signées). Formule exacte du rang par la structure en cycles et les holonomies de signes ; borne extrémale pour cette forme ; famille pour N = 9 à 16. | G19b, G20b |
+| G22b-bis | 🔄 **Le « modèle monomial » des petites solutions (suite de G22b sur Opus 5.5)** | G22b (Fable, arrêté par la limite Fable jusqu'au 26/11) a trouvé que les solutions exactes sont des matrices d'intercalates signées = formules entières de sommes de carrés [N, N, p+q]. Suite : théorème de correspondance ; borne de HWY Ω(N^(6/5)) dans ce modèle ; adapter le comptage d'intercalates au compromis p·q. | G22b, G22a |
 | G22d | 🔄 **Borne inférieure par un invariant analytique (distance)** | À N = 3 l'échange est à distance² = 2 de J(2,2). Loi exacte de la distance ; version quantitative du théorème C ; excès au-delà des méthodes de rang ; certificat. | G21d |
 | G22e | 🔄 **Barrière de Cardy pour les constructions de type algèbre de sommets** | Prouver que √2 est optimal pour toute construction d'une classe précise (croissance modulaire) ; ou trouver où le théorème échoue (algèbres non unitaires, non rationnelles). | G21a |
 
@@ -53,6 +53,8 @@ Dossiers de travail de la génération 18 : `scratchpad/gen18/g18a` à `g18i`.
 **État (24/11) :** la génération 18 est terminée : onze rapports (G18a à G18i, relecteurs G18R et G18S).
 
 Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g18d` (erreur de numéro au lancement ; la génération est bien la 17).
+
+**Consigne de l'utilisateur (24/11, soir) : continuer les tâches sans le modèle Fable** (limite Fable atteinte jusqu'au 26/11). Tous les sous-agents sont sur Opus 5.5.
 
 **Consigne de l'utilisateur (24/11, génération 22) : attaquer de front le problème de Hurwitz et Naslund, puisque toutes les routes vers l'échelon 2 s'y réduisent.** Le coordinateur a recommandé d'arrêter et de consolider ; l'auteur a choisi de continuer.
 
