@@ -1,0 +1,5 @@
+N=4 p=2 rank(G)=1: min rank(F-G(x)G') = 15  (count 32768)
+N=4 p=2 rank(G)=2: min rank(F-G(x)G') = 13  (count 4096)
+N=4 p=2 rank(G)=3: min rank(F-G(x)G') = 10  (count 128)
+N=4 p=2 rank(G)=4: min rank(F-G(x)G') = 6  (count 1)
+N=4 p=2: exact min p at q=1 is 6; Theorem-2 bound 4; N(N-1)/2 = 6

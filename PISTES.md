@@ -43,7 +43,6 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 | G19b | 🔄 **Paires réalisables exactes et profil en escalier** | Frontière exacte (p, q) pour N = 2, 3, 4 ; droite ou cercle ? P(3) = 3 ou 4 ? Lien entre le profil en escalier (G18h) et la courbe T(θ) (G18g). | G18g, G18h |
 | G19c | 🔄 **Le coin ouvert des termes intriqués à N = 3** | r minimal pour « trois étoiles + rang r » sur la grille 2×3, avec un optimiseur étalonné. | G18f |
 | G19d | 🔄 **Lean : théorème A″** | `lean/PnpLean/Article3/EnCours/DFRank.lean`. Résultat central du futur article 3. | G18S |
-| G19e | 🔄 **Relecture adverse et antériorité du théorème F et du théorème 2** | Même inégalité trouvée deux fois. Juste ? Déjà connue (rang de la transposée partielle, Flanders) ? Énoncé commun prêt pour Lean. | G18f, G18g |
 
 Dossiers de travail de la génération 18 : `scratchpad/gen18/g18a` à `g18i`.
 
@@ -134,6 +133,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Résultat |
 |---|---|
+| ✅ **Relecture et antériorité du théorème F et du théorème 2** (G19e) | Les deux sont justes et sont un seul théorème (théorème C, échange avec spectateur) : r ≥ kQ(n − kb), constante exacte 2/9, plus (c) b < mn ⇒ r ≥ Q (nouveau). Flanders inutile. Quatre errata dans G18f. P(3) = 4 sur F₂. Antériorité : problème 12 de Naslund ; cas k = 1 connu (Karam) ; probablement du niveau « folklore ». Ce théorème ne peut jamais passer la droite. `code/gen19/g19e/notes.md` |
 | ⚠️ **Charges non uniformes sur une instance difficile** (G19a) | L'ouverture « Hamming 1 » est fermée sur les expanseurs (inégalité de séparateur : coût ≥ 2^(φ′M)). Théorème E : log₂ N ≥ min_i M_i/(2u) − u pour tout étiquetage. Mais l'aplatissement ne peut pas donner M/√u en général (étiquetage circulaire : A″ = M/u exactement). Ouvert : le « paquet en escalier ». `code/gen19/g19a/notes.md` |
 | ✅ **Borne de rang dans le modèle DF** (G18e, relu par G18S) | Théorème A′ confirmé (P+), forme plus forte A″ : N ≥ 2^((0,564−o(1))·M/√u) pour des charges presque uniformes. Avec la borne supérieure de l'annexe D : 2^Θ(M/√u). « √log est optimal » est un théorème (côté inférieur) dans une famille précise. **Faux pour des charges non uniformes : N = 2^(M/u) est alors atteint.** Énoncé prêt pour Lean. `code/gen18/g18e/`, `code/gen18/g18s/` |
 | ⚠️ **Termes intriqués, question E1** (G18f) | Non tranchée. Théorème F (papier, non relu) : r ≥ s·Q·(M − b·s) ; négatif pour un croisement (ferme le point ouvert de G14e) et pour 2×3 hors d'un coin. E1 n'est pas une question de rang asymptotique. Le calcul λ = 2 n'est pas fait (jours de calcul). Plus petit cas ouvert : P_N = (rang ≤ N^(2−δ)) + trois étoiles. `code/gen18/g18f/notes.md` |

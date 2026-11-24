@@ -105,16 +105,17 @@ Ce fichier liste **tout ce qui peut entrer dans un article**, présent ou futur.
 | **Limites** | Conditionnel aux deux prépublications. Résultat modeste. La conséquence pour l'arbre de Steiner est déjà revendiquée par Wu et Wang (arXiv:2611.02548), à citer. |
 | **État** | En attente : décision de l'auteur. |
 
-### B2 — Compromis de rang pour l'opérateur d'échange (théorème 2 de G18g, théorème F de G18f)
+### B2 — Compromis de rang pour l'opérateur d'échange (théorème C)
 
 | | |
 |---|---|
-| **Résultat** | Si le croisement (l'opérateur d'échange) s'écrit R + C, avec un rang par lignes ≤ p pour R et un rang par colonnes ≤ q pour C, alors p ≥ k(N − kq), donc p·q ≥ 3N²/16. Forme générale pour une grille 2×h : r ≥ s·Q·(M − b·s). |
-| **Niveau** | P. Deux preuves indépendantes de la même forme ; relecture adverse et recherche d'antériorité en cours (G19e). |
-| **Fichiers** | `code/gen18/g18g/notes.md`, `code/gen18/g18f/notes.md` |
-| **Pourquoi c'est un candidat** | L'énoncé est court, sans SAT, et vaut sur tout corps. Il a deux conséquences : aucun gain par termes intriqués sur un seul croisement ; la courbe des paires réalisables est au-dessus d'une droite. |
-| **Risque principal** | **C'est peut-être un résultat déjà connu** (l'auteur de la preuve le dit lui-même). Sans le résultat de G19e, ce n'est pas un candidat sûr. |
-| **Ce qui manque** | La recherche d'antériorité. Une relecture. Lean (l'énoncé est fini). |
+| **Résultat** | Théorème C : P est l'échange E⊗G⊗W → G⊗E⊗W avec un spectateur (dimensions m, n, Q). Si P = A + B avec rang A ≤ r et rang de Schmidt d'opérateur de B ≤ b, alors pour tout entier k ≤ m : (a) r ≥ k·Q·(n − k·b) ; (b) b·Q ≥ k·(n·Q − k·r) ; (c) b < m·n ⇒ r ≥ Q. Corollaire : r·b ≥ (2/9)·Q·M². Tout corps. |
+| **Niveau** | **P+** depuis G19e. Deux preuves indépendantes (G18g, G18f), unifiées et refaites par le relecteur ; environ 15 000 décompositions exactes sans violation. Énoncé prêt pour Lean, pas encore formalisé. |
+| **Fichiers** | `code/gen19/g19e/notes.md` (énoncé commun, preuve courte, errata) ; `code/gen18/g18g/notes.md`, `code/gen18/g18f/notes.md` |
+| **Conséquences** | Aucun gain par termes intriqués sur un seul croisement. La courbe des paires réalisables de l'algorithme de Claude est au-dessus de la droite T = 2 − θ. P(3) = 4 sur F₂. |
+| **Antériorité (G19e)** | L'objet est le problème 12 de Naslund (arXiv:1701.04475). Le cas k = 1 (r + s ≥ n) est noté par Karam (arXiv:2310.11356). La forme produit et la partie (c) ne sont pas trouvées dans la littérature. **Avis du relecteur : probablement du niveau « folklore », une remarque au plus.** Deux articles proches n'ont pas été lus (Hrubeš-Wigderson-Yehudayoff 2011, Hrubeš 2024) : la nouveauté n'est pas certifiée. |
+| **Avis honnête** | **Pas un article seul.** C'est un lemme propre, à mettre dans l'article 3 ou dans une courte note, après lecture des deux articles manquants. Sa limite est prouvée : ce théorème ne peut jamais passer la droite, donc il ne peut pas donner ρ > 1/2. |
+| **Ce qui manque** | Lire les deux articles manquants. Lean (l'énoncé est fini et court). |
 
 ### B3 — Réfutations algébriques sous-exponentielles et carte de la réfutation des 3-CNF aléatoires
 
@@ -157,4 +158,5 @@ Ce fichier liste **tout ce qui peut entrer dans un article**, présent ou futur.
 | Date | Changement |
 |---|---|
 | 24/11/2026 | Création du registre après la génération 18. Articles 1, 2, 3 ; candidats B1 à B4. |
+| 24/11/2026 | G19e : le candidat B2 devient le théorème C (P+). Avis : un lemme, pas un article seul. |
 | 24/11/2026 | G19a : quatre éléments ajoutés à l'article 3 (origine des charges, inégalité de séparateur, théorème E, limite de l'aplatissement). |

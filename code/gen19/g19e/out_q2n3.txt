@@ -1,0 +1,15 @@
+rank(G1)=1: histogram of rank(F-C): 0 0 0 336 16464 435168 3303552 25978368 75971584 28512256
+rank(G1)=2: histogram of rank(F-C): 0 0 0 336 1568 252720 3286560 28199360 74461056 28016128
+rank(G1)=3: histogram of rank(F-C): 0 0 0 1868 6860 311136 3310312 27941312 74259808 28386432
+N=3, F_2, q<=2: exact min p = 3
+
+real	3m53.167s
+user	2m20.231s
+sys	0m0.105s
+N=4 p=2 rank(G)=1: min rank(F-G(x)G') = 15  (count 32768)
+N=4 p=2 rank(G)=2: min rank(F-G(x)G') = 13  (count 4096)
+N=4 p=2 rank(G)=3: min rank(F-G(x)G') = 10  (count 128)
+N=4 p=2 rank(G)=4: min rank(F-G(x)G') = 6  (count 1)
+N=4 p=2: exact min p at q=1 is 6; Theorem-2 bound 4; N(N-1)/2 = 6
+
+[exited with code 0]

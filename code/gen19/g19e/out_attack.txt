@@ -1,0 +1,5 @@
+(N,h)=(2,3) b<=1: best rank found 28 over 445 starts in 70s; proven bound 16
+(N,h)=(2,3) b<=2: best rank found 60 over 217 starts in 50s; proven bound 8
+(N,h)=(4,2) b<=2: best rank found 6 over 1938 starts in 50s; proven bound 2
+(N,h)=(5,2) b<=1: best rank found 10 over 1164 starts in 30s; proven bound 6
+(N,h)=(3,2) b<=2: best rank found 3 over 2156 starts in 20s; proven bound 1
