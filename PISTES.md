@@ -46,7 +46,7 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 |---|---|---|---|
 | G25-B1 | 🔄 **Brainstorming : constructions** | 8 à 12 idées nouvelles (algèbre, codes de rang, information quantique, dessins combinatoires…) pour passer sous le cercle ; un premier test pour chacune. | consigne de l'auteur |
 | G25-B2 | 🔄 **Brainstorming : techniques de preuve** | Idées pour dépasser la droite hors de la classe de la barrière (Schur-Weyl, géométrie, entropie, SDP, rigidité…). | consigne de l'auteur |
-| G25-B3 | 🔄 **Brainstorming : autres routes et échelons intermédiaires** | Routes vers l'échelon 2 sans le compromis du croisement ; résultats intermédiaires prouvables (classes spéciales, comptage contre décision, sparsification à ε = 1/log n). | consigne de l'auteur |
+| G25-B3 | ✅ **Brainstorming : autres routes** (fini) | 10 idées ; top 3 : sparsification pour la décision seule (enlèverait le facteur loglog en n) ; quotient par grappes ; hypercliques récents comme gadgets à 3 directions. `code/gen25/b3/notes.md` | consigne de l'auteur |
 | G25-B4 | 🔄 **Brainstorming : « rang inférieur »** | Améliorations concrètes des deux algorithmes : meilleures pièces à chaque taille (l'annexe B est triviale pour N ≤ 256), constantes explicites de l'annexe D, taille de croisement avec la force brute et PPSZ. | consigne de l'auteur |
 
 Dossiers de travail de la génération 18 : `scratchpad/gen18/g18a` à `g18i`.
