@@ -6,7 +6,7 @@ Lean 4.37.0-rc1 + Mathlib. Chaque dossier correspond à un article.
 cd lean && lake exe cache get && lake build
 ```
 
-Cette commande compile tout ce qui est **vérifié** (les dossiers `Article1/` et `Article2/`). Les dossiers `EnCours/` contiennent du travail non terminé : ils ne font pas partie de la cible par défaut.
+Cette commande compile tout ce qui est **vérifié** (les dossiers `Article1/`, `Article2/` et `Article3/`). Les dossiers `EnCours/` contiennent du travail non terminé : ils ne font pas partie de la cible par défaut.
 
 **Règle :** un fichier hors de `EnCours/` ne contient ni `sorry`, ni `admit`, ni `axiom`, ni `native_decide`. Ses théorèmes dépendent seulement des axiomes standards de Lean (`propext`, `Classical.choice`, `Quot.sound`).
 
@@ -61,6 +61,24 @@ Cibles : `lake build PnpLean.Article2.MultiPoint`, `PnpLean.Article2.AnyField`, 
 ### Non formalisé
 
 Les conséquences asymptotiques avec logarithmes (seuil sur d, temps de calcul dans le modèle de coût), l'énoncé entier « le placement équilibré est le minimum » (énuméré seulement), la moyenne sur les ensembles de symboles S et le lemme glouton 1/(2Δ−1) du théorème au niveau de la sortie, la réduction de la classe commutative (rang E_k = nombre de mauvaises arêtes), les corollaires (a) et (b) de G6d, la borne ρ_moy ≥ 2^(−d)/(d+2), la restriction du lemme Q_{d+2} à un sous-cube d'un cube plus grand, et le lien avec l'algorithme d'OpenAI lui-même.
+
+---
+
+## Article 3 (futur) — limites de la route « contraction de tenseurs » d'OpenAI (annexe D)
+
+Pas encore d'article. Sources : `code/gen14/g14b/`, `code/gen18/g18e/`, `code/gen18/g18s/` ; formalisation : G19d.
+
+### Vérifié : `PnpLean/Article3/`
+
+| Fichier | Contenu | Énoncé |
+|---|---|---|
+| `DFRank.lean` | `rank_term_le`, **`df_flattening`**, `df_flattening_smul`, **`df_flattening_min`**, `df_card_le_mul`, `df_log_bound`, `df_log_bound_sup`, **`df_log_bound_abs`**, `two_mul_cExp`, `det_ne_zero_of_sub_one_mem`, `det_map_ne_zero_of_sub_one_mem_fractionRing`, **`df_flattening_mod`** | **Théorème A″ (borne sur le nombre de termes d'une identité factorisée par direction).** Corps K, fils W, pour chaque direction i des groupes G i et les groupes ρ i e, γ i e des deux extrémités de chaque fil. Si A = Σ_k κ_k·∏_g τ_k,g, où chaque table τ_k,g lit seulement les bits du groupe g dans la direction dir k, et si det A ≠ 0, alors 2^\|W\| ≤ Σ_k 2^(c(dir k)) avec c = Σ_g min(e1(g), e2(g)). Forme logarithmique : si 2D ≤ Σ_g \|e1(g) − e2(g)\| pour chaque terme, alors D ≤ log₂ N. `df_flattening_mod` : la même conclusion pour une identité vraie **modulo un idéal propre** (par exemple modulo 2^p), grâce au lemme « une matrice ≡ 1 modulo un idéal propre a un déterminant non nul ». |
+
+Cible : `lake build PnpLean.Article3.DFRank`.
+
+### Non formalisé
+
+Le lemme de restriction (mettre à 0 les bits des extrémités non choisies donne ce cadre), l'identité de comptage du corollaire (constante 1/√π sur des charges uniformes), le lien avec l'annexe D de la prépublication, le théorème E et l'inégalité de séparateur de G19a.
 
 ---
 

@@ -65,9 +65,9 @@ Ce fichier liste **tout ce qui peut entrer dans un article**, présent ou futur.
 
 | | |
 |---|---|
-| **État** | Pas de texte. Le résultat central existe depuis la génération 18. |
-| **Fichiers** | `code/gen14/g14b/`, `code/gen17/g17a/`, `code/gen18/g18a/`, `code/gen18/g18d/`, `code/gen18/g18e/`, `code/gen18/g18s/` ; Lean en cours (G19d) |
-| **Résultat central** | Théorème A″ : dans le modèle DF, log₂ N ≥ min_i ½·Σ_g |e1_i(g) − e2_i(g)|. Pour des charges presque uniformes : N ≥ 2^((0,564 − o(1))·M/√u). **Niveau P+.** Formalisation Lean lancée. |
+| **État** | Pas de texte. Le résultat central existe depuis la génération 18 et il est vérifié par Lean depuis la génération 19. |
+| **Fichiers** | `code/gen14/g14b/`, `code/gen17/g17a/`, `code/gen18/g18a/`, `code/gen18/g18d/`, `code/gen18/g18e/`, `code/gen18/g18s/`, `code/gen19/g19a/` ; `lean/PnpLean/Article3/DFRank.lean` |
+| **Résultat central** | Théorème A″ : dans le modèle DF, log₂ N ≥ min_i ½·Σ_g |e1_i(g) − e2_i(g)|. **Niveau L** (y compris la forme modulo un idéal propre). Corollaire pour des charges presque uniformes : N ≥ 2^((0,564 − o(1))·M/√u), **niveau P+** (identité de comptage sur papier). |
 
 **Matière disponible :**
 
@@ -75,7 +75,8 @@ Ce fichier liste **tout ce qui peut entrer dans un article**, présent ou futur.
 |---|---|---|
 | Reconstruction fidèle de l'annexe D ; modèle DF | P+ | `code/gen14/g14b/`, `code/gen17/g17a/` |
 | Théorème A (ancien, 2^(2M/4^u)) | P+ | `code/gen17/g17a/rapport.md` |
-| Théorèmes A′ et A″ | P+ | `code/gen18/g18e/`, `code/gen18/g18s/` |
+| Théorèmes A′ et A″ (trois formes, et la forme modulo un idéal propre) | **L** | `lean/PnpLean/Article3/DFRank.lean` |
+| Corollaire : constante 1/√π sur des charges uniformes ; lemme de restriction | P+ | `code/gen18/g18s/notes.md` |
 | Famille précise où « √log est optimal » est un théorème (côté inférieur) | P+ | `code/gen18/g18s/notes.md` |
 | Contre-exemple : avec des charges non uniformes, N = 2^(M/u) est atteint | P+ (petits cas exacts) | `code/gen18/g18s/notes.md` |
 | Précision Θ(M·D_t/u) optimale pour la reconstruction boîte noire (constante ≈ 12) | P+ | `code/gen17/g17a/rapport.md` |
@@ -89,7 +90,7 @@ Ce fichier liste **tout ce qui peut entrer dans un article**, présent ou futur.
 | Théorème E : log₂ N ≥ min_i M_i/(2u) − u pour tout étiquetage | P | `code/gen19/g19a/notes.md` |
 | Limite de la méthode : sur l'étiquetage circulaire, A″ = M/u exactement ; l'aplatissement ne donne pas M/√u en général | P + N | `code/gen19/g19a/notes.md` |
 
-**Ce qui manque.** La vérification Lean de A″ (G19d en cours). Une borne 2^Ω(M/√u) pour les étiquetages non uniformes : G19a prouve seulement M/(2u) − u, et montre que l'aplatissement ne peut pas faire mieux en général (problème ouvert du « paquet en escalier »). Les schémas à plusieurs niveaux et la re-sommation non énumérative. La borne supérieure de l'annexe D n'est pas vérifiée.
+**Ce qui manque.** Une borne 2^Ω(M/√u) pour les étiquetages non uniformes : G19a prouve seulement M/(2u) − u, et montre que l'aplatissement ne peut pas faire mieux en général (problème ouvert du « paquet en escalier »). Les schémas à plusieurs niveaux et la re-sommation non énumérative. La borne supérieure de l'annexe D n'est pas vérifiée.
 
 ---
 
@@ -158,5 +159,6 @@ Ce fichier liste **tout ce qui peut entrer dans un article**, présent ou futur.
 | Date | Changement |
 |---|---|
 | 24/11/2026 | Création du registre après la génération 18. Articles 1, 2, 3 ; candidats B1 à B4. |
+| 24/11/2026 | G19d : le théorème A″ (article 3) est vérifié par Lean. |
 | 24/11/2026 | G19e : le candidat B2 devient le théorème C (P+). Avis : un lemme, pas un article seul. |
 | 24/11/2026 | G19a : quatre éléments ajoutés à l'article 3 (origine des charges, inégalité de séparateur, théorème E, limite de l'aplatissement). |

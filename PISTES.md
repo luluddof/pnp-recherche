@@ -19,7 +19,7 @@ Légende : 🔄 en cours · 🆕 pas encore explorée · ⏸️ en attente · �
 |---|---|---|---|
 | **1** | Schémas « produit de clauses » (question du §9 de Dias-Lima) | Version 2 envoyée à F. Dias ; pré-version 3 en brouillon | Borne 2^Ω(n^(2/3)) dans le **modèle de coût produit** ; rien sur la programmation dynamique (sauf : modèle dégénéré), ni sur les autres voies |
 | **2** | Erreurs par point dans la voie « interpolation » d'OpenAI | **En attente** (accord de l'auteur requis ; attendre G14a et G14d, puis la validation de l'article 1). Théorème prouvé en Lean sur tout corps | Σ_k rang(E_k) ≥ N(ℓ, m) pour un point par direction ; √log n optimal **dans le modèle de coût de l'exposé d'O'Donnell** ; **État des échappatoires :** corps finis : fermé (Lean) ; multiplicités inégales : fermé (**Lean**, G16L) ; effondrement de rang par L/R′ : fermé sur papier (G14a, non relu) ; degré réduit D < nd : fermé en partie (reste : degré certifié par annulation). Ne couvre pas : la contraction de tenseurs (futur article 3), l'algorithme de Claude **Ajout possible (G18b/G18R) :** borne supérieure en loglog n par un évaluateur modulo 3, contre borne inférieure en √loglog n pour une charge constante. |
-| **3** (futur) | Limites de la voie « contraction de tenseurs » d'OpenAI (annexe D) | **Résultat central obtenu (G18e + G18S, 24/11) : théorème A″, N ≥ 2^(0,564·M/√u), niveau P+, prêt pour Lean.** Avant (G17a) : idée seulement : théorème A confirmé mais très faible ; théorème B en partie (axiome du modèle VT réfuté) ; un lemme propre (précision optimale en boîte noire) ; il manque une borne de rang 2^(M/√u) dans le modèle DF | Visé : le √log est optimal pour la famille des « effilages » dépendant de la valuation ; borne d'aplatissement dans le modèle DF. Ne couvrirait pas : d'autres règles de reconstruction, plusieurs niveaux, l'algorithme de Claude |
+| **3** (futur) | Limites de la voie « contraction de tenseurs » d'OpenAI (annexe D) | **Résultat central obtenu et vérifié par Lean (G18e + G18S + G19d, 24/11) : théorème A″ ; corollaire N ≥ 2^(0,564·M/√u) sur papier (P+).** Avant (G17a) : idée seulement : théorème A confirmé mais très faible ; théorème B en partie (axiome du modèle VT réfuté) ; un lemme propre (précision optimale en boîte noire) ; il manque une borne de rang 2^(M/√u) dans le modèle DF | Visé : le √log est optimal pour la famille des « effilages » dépendant de la valuation ; borne d'aplatissement dans le modèle DF. Ne couvrirait pas : d'autres règles de reconstruction, plusieurs niveaux, l'algorithme de Claude |
 
 Avec les trois articles, les trois voies de la prépublication d'OpenAI seraient étudiées. Aucun ne dit rien sur P vs NP ni sur la validité de la prépublication.
 
@@ -42,7 +42,6 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 |---|---|---|---|
 | G19b | 🔄 **Paires réalisables exactes et profil en escalier** | Frontière exacte (p, q) pour N = 2, 3, 4 ; droite ou cercle ? P(3) = 3 ou 4 ? Lien entre le profil en escalier (G18h) et la courbe T(θ) (G18g). | G18g, G18h |
 | G19c | 🔄 **Le coin ouvert des termes intriqués à N = 3** | r minimal pour « trois étoiles + rang r » sur la grille 2×3, avec un optimiseur étalonné. | G18f |
-| G19d | 🔄 **Lean : théorème A″** | `lean/PnpLean/Article3/EnCours/DFRank.lean`. Résultat central du futur article 3. | G18S |
 
 Dossiers de travail de la génération 18 : `scratchpad/gen18/g18a` à `g18i`.
 
@@ -114,7 +113,6 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 | Piste | Question précise | Origine |
 |---|---|---|
 | **Le « paquet en escalier » (reste de la piste des charges non uniformes, G19a)** | Étiquetage circulaire : u faisceaux entre classes antipodales sur le 2u-cycle. Encadrement prouvé : φ′M/(2u) − u ≤ log₂ N ≤ min_i M_i. Quel est N ? u = 2 est le problème de Hurwitz ; u = 3 à 3 fils : N = 4 dans le sous-modèle GF(2). Une identité à 2^(o(M)) termes sur un expanseur serait l'échelon 2 ; une borne 2^Ω(M) fermerait la piste. Il faut une méthode autre que l'aplatissement. | G19a |
-| Lean : théorème A″ | Énoncé prêt (corps K, fils, groupes par direction, det ≠ 0 ⇒ 2^|W| ≤ Σ_k 2^(…)). Résultat central du futur article 3. | G18S |
 
 ## 3. En attente
 
@@ -133,6 +131,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Résultat |
 |---|---|
+| ✅ **Lean : théorème A″** (G19d) | `lean/PnpLean/Article3/DFRank.lean` : A″ sous trois formes, plus la forme modulo un idéal propre. Niveau L. Reste sur papier : lemme de restriction, constante 1/√π, lien avec l'annexe D. |
 | ✅ **Relecture et antériorité du théorème F et du théorème 2** (G19e) | Les deux sont justes et sont un seul théorème (théorème C, échange avec spectateur) : r ≥ kQ(n − kb), constante exacte 2/9, plus (c) b < mn ⇒ r ≥ Q (nouveau). Flanders inutile. Quatre errata dans G18f. P(3) = 4 sur F₂. Antériorité : problème 12 de Naslund ; cas k = 1 connu (Karam) ; probablement du niveau « folklore ». Ce théorème ne peut jamais passer la droite. `code/gen19/g19e/notes.md` |
 | ⚠️ **Charges non uniformes sur une instance difficile** (G19a) | L'ouverture « Hamming 1 » est fermée sur les expanseurs (inégalité de séparateur : coût ≥ 2^(φ′M)). Théorème E : log₂ N ≥ min_i M_i/(2u) − u pour tout étiquetage. Mais l'aplatissement ne peut pas donner M/√u en général (étiquetage circulaire : A″ = M/u exactement). Ouvert : le « paquet en escalier ». `code/gen19/g19a/notes.md` |
 | ✅ **Borne de rang dans le modèle DF** (G18e, relu par G18S) | Théorème A′ confirmé (P+), forme plus forte A″ : N ≥ 2^((0,564−o(1))·M/√u) pour des charges presque uniformes. Avec la borne supérieure de l'annexe D : 2^Θ(M/√u). « √log est optimal » est un théorème (côté inférieur) dans une famille précise. **Faux pour des charges non uniformes : N = 2^(M/u) est alors atteint.** Énoncé prêt pour Lean. `code/gen18/g18e/`, `code/gen18/g18s/` |
