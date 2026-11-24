@@ -86,9 +86,9 @@ Ce fichier liste **tout ce qui peut entrer dans un article**, présent ou futur.
 | Invariants de Smith des blocs de Cauchy : 2^((a−i+1)+2k+2v₂(k!)) | N (23 cas exacts) ; conjecture C1 | `code/gen18/g18d/notes.md` |
 | Gain constant possible sur l'annexe D (modes 4 fois redondants, effilage 1/√3) | E, non vérifié | `code/gen18/g18d/notes.md` |
 | Les contraintes de charge viennent de la conception (lemme D.3, (D.6)), pas de l'instance | lecture de la source | `code/gen19/g19a/notes.md` |
-| Inégalité de séparateur : sur un expanseur, les charges « Hamming 1 » coûtent ≥ 2^(φ′M) | P | `code/gen19/g19a/notes.md` |
-| Théorème E : log₂ N ≥ min_i M_i/(2u) − u pour tout étiquetage | P | `code/gen19/g19a/notes.md` |
-| Limite de la méthode : sur l'étiquetage circulaire, A″ = M/u exactement ; l'aplatissement ne donne pas M/√u en général | P + N | `code/gen19/g19a/notes.md` |
+| Inégalité de séparateur : chaque direction coupe ≥ φ·M·min(1, 2(1−β)) fils (le coût 2^(φ′M) vaut pour l'identité de conditionnement) | P+ (G20f) | `code/gen19/g19a/notes.md` |
+| Théorème E : log₂ N ≥ min_i M_i/(2u) − u pour tout étiquetage (preuve complète ; forme plus forte par direction) | P+ (G20f) | `code/gen19/g19a/notes.md` |
+| Limite de la méthode : sur l'étiquetage circulaire, A″ = M/u exactement ; l'aplatissement ne donne pas M/√u en général | P+ (G20f) | `code/gen19/g19a/notes.md` |
 
 **Ce qui manque.** Une borne 2^Ω(M/√u) pour les étiquetages non uniformes : G19a prouve seulement M/(2u) − u, et montre que l'aplatissement ne peut pas faire mieux en général (problème ouvert du « paquet en escalier »). Les schémas à plusieurs niveaux et la re-sommation non énumérative. La borne supérieure de l'annexe D n'est pas vérifiée.
 
@@ -113,7 +113,7 @@ Ce fichier liste **tout ce qui peut entrer dans un article**, présent ou futur.
 | **Résultat** | Théorème C : P est l'échange E⊗G⊗W → G⊗E⊗W avec un spectateur (dimensions m, n, Q). Si P = A + B avec rang A ≤ r et rang de Schmidt d'opérateur de B ≤ b, alors pour tout entier k ≤ m : (a) r ≥ k·Q·(n − k·b) ; (b) b·Q ≥ k·(n·Q − k·r) ; (c) b < m·n ⇒ r ≥ Q. Corollaire : r·b ≥ (2/9)·Q·M². Tout corps. |
 | **Niveau** | **P+** depuis G19e. Deux preuves indépendantes (G18g, G18f), unifiées et refaites par le relecteur ; environ 15 000 décompositions exactes sans violation. Énoncé prêt pour Lean, pas encore formalisé. |
 | **Fichiers** | `code/gen19/g19e/notes.md` (énoncé commun, preuve courte, errata) ; `code/gen18/g18g/notes.md`, `code/gen18/g18f/notes.md` |
-| **Compléments (G19b, niveau P, non relus)** | Théorème 3 : q = 1 ⇒ p ≥ N(N−1)/2 (optimal). Théorème 4 : q = 2 ⇒ p ≥ N, donc P(3) = 4. Théorème 5 : p·q ≥ (N²/4)·q/(q − ½). Table exacte des paires réalisables pour N ≤ 3, partielle pour N = 4 à 6, avec des décompositions à coefficients dans {0, ±1} vérifiées sur ℚ. Valables pour les décompositions exactes en caractéristique ≠ 2, pas au sens « bord ». `code/gen19/g19b/notes.md` |
+| **Compléments (G19b, relus par G20f : niveau P+)** | Théorème 3 : q = 1 ⇒ p ≥ N(N−1)/2 (optimal). Théorème 4 : q = 2 ⇒ p ≥ N, donc P(3) = 4. Théorème 5 (corrigé : il faut 1 ≤ k ≤ N) : p·q ≥ (1 − o(1))·(N²/4)·q/(q − ½). Les quatre décompositions nouvelles sont des identités sur ℤ. Table exacte des paires réalisables pour N ≤ 3, partielle pour N = 4 à 6, avec des décompositions à coefficients dans {0, ±1} vérifiées sur ℚ. Valables pour les décompositions exactes en caractéristique ≠ 2, pas au sens « bord ». `code/gen19/g19b/notes.md` |
 | **Conséquences** | Aucun gain par termes intriqués sur un seul croisement. La courbe des paires réalisables de l'algorithme de Claude est au-dessus de la droite T = 2 − θ. P(3) = 4 sur F₂. |
 | **Antériorité (G19e)** | L'objet est le problème 12 de Naslund (arXiv:1701.04475). Le cas k = 1 (r + s ≥ n) est noté par Karam (arXiv:2310.11356). La forme produit et la partie (c) ne sont pas trouvées dans la littérature. **Avis du relecteur : probablement du niveau « folklore », une remarque au plus.** Deux articles proches n'ont pas été lus (Hrubeš-Wigderson-Yehudayoff 2011, Hrubeš 2024) : la nouveauté n'est pas certifiée. |
 | **Avis honnête** | **Pas un article seul.** C'est un lemme propre, à mettre dans l'article 3 ou dans une courte note, après lecture des deux articles manquants. Sa limite est prouvée : ce théorème ne peut jamais passer la droite, donc il ne peut pas donner ρ > 1/2. |
@@ -160,6 +160,7 @@ Ce fichier liste **tout ce qui peut entrer dans un article**, présent ou futur.
 | Date | Changement |
 |---|---|
 | 24/11/2026 | Création du registre après la génération 18. Articles 1, 2, 3 ; candidats B1 à B4. |
+| 24/11/2026 | G20f : les éléments de G19a (article 3) et de G19b (candidat B2) passent au niveau P+ ; le théorème 5 est corrigé. |
 | 24/11/2026 | G19b : compléments au candidat B2 (théorèmes 3 à 5, table exacte). Génération 19 terminée : aucun nouveau candidat d'article. |
 | 24/11/2026 | G19d : le théorème A″ (article 3) est vérifié par Lean. |
 | 24/11/2026 | G19e : le candidat B2 devient le théorème C (P+). Avis : un lemme, pas un article seul. |

@@ -1,6 +1,20 @@
 import Mathlib.Tactic
 import Mathlib.LinearAlgebra.Matrix.Rank
 
+/-!
+# Theorem C (swap with a spectator: rank vs operator-Schmidt rank) — G20g
+
+Source: `code/gen19/g19e/notes.md` §1 (statement and proofs) and §6 (Lean statement, kept verbatim:
+`swapW`, `realign`, `swap_rank_osr_tradeoff`, `swap_rank_osr_product`).
+
+* `part_a`  : `k Q n ≤ r + k² Q b` for `k ≤ m` (compression to `k` values of the `E` index on both
+  sides; the compressed `B` factors through `ρ × k × k × Q`, `ρ = rank (realign B)`).
+* `part_b`  : `k n Q ≤ b Q + k² r` for `k ≤ m` (`Ψ = ker`, of codim `≤ k r`; `1_k ⊗ Ψ`).
+* `part_a'`, `part_b'` : the mirror forms (`k ≤ n`), by transposition.
+* `part_c`  : `b < m n → Q ≤ r` (contraction of site 0 with a functional killing `B`).
+* `swap_rank_osr_product` : `m = n = M`, `1 ≤ b < M²` ⇒ `2 Q M² ≤ 9 r b`.
+-/
+
 open Matrix Module
 
 namespace SwapRank
@@ -409,8 +423,7 @@ theorem part_c (m n Q r b : ℕ)
     rw [Finset.sum_comm]
     refine Finset.sum_congr rfl fun g _ => ?_
     -- remaining: collapse the delta sums
-    simp [Finset.sum_ite_eq, Finset.sum_ite_eq', ite_and, mul_comm, mul_left_comm, mul_assoc,
-      Finset.mul_sum, Finset.sum_mul]
+    simp [Finset.sum_ite_eq', ite_and, mul_comm, mul_left_comm, mul_assoc]
   have hLt : ∀ t, (Lt t * A * Rt t).rank ≤ r := fun t =>
     (rank_mul_le_left _ _).trans ((rank_mul_le_right _ _).trans hA)
   have hAr : (Φ A).rank ≤ ρ * r := by
@@ -434,6 +447,91 @@ theorem part_c (m n Q r b : ℕ)
   rw [← h, hΦadd, hΦB, add_zero] at hkr
   exact Nat.le_of_mul_le_mul_left (hkr.trans hAr) hρpos
 
+/-- **Theorem C**, all parts, in the form of `g19e/notes.md` §6. -/
+theorem swap_rank_osr_tradeoff (m n Q r b : ℕ)
+    (A B : Matrix (Fin n × Fin m × Fin Q) (Fin m × Fin n × Fin Q) K)
+    (h : A + B = swapW K m n Q) (hA : A.rank ≤ r) (hB : (realign K B).rank ≤ b) :
+    (∀ k ≤ m, k * Q * n ≤ r + k * k * Q * b ∧ k * n * Q ≤ b * Q + k * k * r) ∧
+    (∀ k ≤ n, k * Q * m ≤ r + k * k * Q * b ∧ k * m * Q ≤ b * Q + k * k * r) ∧
+    (b < m * n → Q ≤ r) :=
+  ⟨fun k hk => ⟨part_a K m n Q r b A B h hA hB k hk, part_b K m n Q r b A B h hA hB k hk⟩,
+   fun k hk => ⟨part_a' K m n Q r b A B h hA hB k hk, part_b' K m n Q r b A B h hA hB k hk⟩,
+   part_c K m n Q r b A B h hA hB⟩
+
 end Swap
 
+/-! ### Arithmetic corollary -/
+
+theorem exists_ceil_mul (M d : ℕ) (hd : 0 < d) : ∃ k, M ≤ d * k ∧ d * k < M + d := by
+  refine ⟨(M + d - 1) / d, ?_, ?_⟩
+  · have h1 := Nat.div_add_mod (M + d - 1) d
+    have h2 := Nat.mod_lt (M + d - 1) hd
+    omega
+  · have h1 := Nat.div_mul_le_self (M + d - 1) d
+    rw [Nat.mul_comm]
+    omega
+
+theorem arith_cor (M Q r b : ℕ) (hb1 : 1 ≤ b) (hQr : Q ≤ r)
+    (ha : ∀ k ≤ M, k * Q * M ≤ r + k * k * Q * b)
+    (hb : ∀ k ≤ M, k * M * Q ≤ b * Q + k * k * r) : 2 * Q * M ^ 2 ≤ 9 * (r * b) := by
+  rcases Nat.eq_zero_or_pos Q with hQ | hQ
+  · simp [hQ]
+  rcases Nat.eq_zero_or_pos M with hM | hM
+  · simp [hM]
+  by_cases h1 : b * Q ≤ r
+  · by_cases h2 : 3 * b ≤ M
+    · obtain ⟨k, hk1, hk2⟩ := exists_ceil_mul M (3 * b) (by omega)
+      have hkM : k ≤ M := by nlinarith
+      have hak := ha k hkM
+      have hu2 : 3 * b * k ≤ 2 * M := by omega
+      zify at *
+      nlinarith [mul_nonneg (mul_nonneg (sub_nonneg.2 hk1) (sub_nonneg.2 hu2)) hQ.le]
+    · have ha1 := ha 1 (by omega)
+      by_cases h3 : 3 * b ≤ 2 * M
+      · zify at *
+        nlinarith [mul_nonneg (mul_nonneg (sub_nonneg.2 (le_of_lt (not_le.1 h2)))
+          (sub_nonneg.2 h3)) hQ.le]
+      · zify at *
+        nlinarith
+  · push Not at h1
+    have hr : 0 < r := lt_of_lt_of_le hQ hQr
+    suffices hs : Q * (2 * Q * M ^ 2) ≤ Q * (9 * (r * b)) from Nat.le_of_mul_le_mul_left hs hQ
+    by_cases h2 : 3 * r ≤ M * Q
+    · obtain ⟨k, hk1, hk2⟩ := exists_ceil_mul (M * Q) (3 * r) (by omega)
+      have hkM : k ≤ M := by
+        by_contra hc
+        push Not at hc
+        nlinarith
+      have hbk := hb k hkM
+      have hu2 : 3 * r * k ≤ 2 * (M * Q) := by omega
+      zify at *
+      nlinarith [mul_nonneg (sub_nonneg.2 hk1) (sub_nonneg.2 hu2)]
+    · have hb1' := hb 1 (by omega)
+      by_cases h3 : 3 * r ≤ 2 * (M * Q)
+      · zify at *
+        nlinarith [mul_nonneg (sub_nonneg.2 (le_of_lt (not_le.1 h2))) (sub_nonneg.2 h3)]
+      · have h3' : 2 * (M * Q) < 3 * r := not_le.1 h3
+        have e1 : r * r < r * (b * Q) := Nat.mul_lt_mul_of_pos_left h1 hr
+        have e2 : (2 * (M * Q)) * (2 * (M * Q)) < (3 * r) * (3 * r) :=
+          Nat.mul_self_lt_mul_self h3'
+        zify at *
+        nlinarith
+
+/-- arithmetic corollary (`m = n = M`): `r b ≥ (2/9) Q M²` for `1 ≤ b < M²`. -/
+theorem swap_rank_osr_product (K : Type*) [Field K] (M Q r b : ℕ)
+    (A B : Matrix (Fin M × Fin M × Fin Q) (Fin M × Fin M × Fin Q) K)
+    (h : A + B = swapW K M M Q) (hA : A.rank ≤ r) (hB : (realign K B).rank ≤ b)
+    (hb : 1 ≤ b) (hb' : b < M * M) : 2 * Q * M ^ 2 ≤ 9 * (r * b) :=
+  arith_cor M Q r b hb (part_c K M M Q r b A B h hA hB hb')
+    (fun k hk => part_a K M M Q r b A B h hA hB k hk)
+    (fun k hk => part_b K M M Q r b A B h hA hB k hk)
+
 end SwapRank
+
+#print axioms SwapRank.part_a
+#print axioms SwapRank.part_b
+#print axioms SwapRank.part_a'
+#print axioms SwapRank.part_b'
+#print axioms SwapRank.part_c
+#print axioms SwapRank.swap_rank_osr_tradeoff
+#print axioms SwapRank.swap_rank_osr_product
