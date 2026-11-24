@@ -46,7 +46,7 @@ Légende : 🔄 en cours · 🆕 pas encore explorée · ⏸️ en attente · �
 | Piste | Résultat |
 |---|---|
 | ✅ Limits §9, modèle produit (G6a) | Réponse négative, 2^Ω(n^(2/3)) ; confirmée par relecture adverse ; note rédigée |
-| ✅ Auteur humain de la note | **Lucas Requena** (avec une mention claire du travail fait par les agents IA) |
+| ✅ Auteur humain de la note | **Lucas Requena**, étudiant en informatique (« Computer Science student ») (avec une mention claire du travail fait par les agents IA) |
 | ✅ Lemme 1 en Lean (G8L) | Prouvé sans `sorry` |
 | ✅ Partie déterministe en Lean (G9L) | Schéma, lemme 1 complet, fait R, lemme 3, théorème A (sans condition), théorème B (avec le lemme 2 en hypothèse) ; sans `sorry` |
 | ✅ Hurwitz P(N) ≤ N^√2 (G4a) | Correct, mais déjà publié par d'autres |
