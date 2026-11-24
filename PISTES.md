@@ -45,7 +45,6 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
 | G24b | 🔄 **Constructions à plusieurs canaux sur le bord de Voronoï** | Recherche exacte sur deux et trois copies de A1 ; argument de filtration au niveau des taux. Fermer le dernier cas ouvert des algèbres de sommets (écart 2,799 – 3,030). | G23c |
-| G24c | 🔄 **Distance pour q ≥ 2 et près de p·q ≈ N²** | Étendre le théorème A (indépendant de N) à q ≥ 2 ; premières données près de la réalisabilité (N = 4, 5, 6) : croissance additive ou en p·q ? | G23d |
 | G24d | 🔄 **Décider les petits cas ouverts par SAT** | Modèle ST : (18,18) à N = 12, (28,28) à N = 16, valeurs exactes pour N = 9 à 16 ; problème général sur GF(2) : (3,3) et (5,2) à N = 4. Encodages avec brisure de symétrie ; preuves DRAT. | G22b-bis, G21b |
 
 Dossiers de travail de la génération 18 : `scratchpad/gen18/g18a` à `g18i`.
@@ -163,6 +162,12 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 |---|---|---|
 | Constructions à plusieurs canaux sur le bord de Voronoï | Dans une famille de puissances tensorielles d'un réseau, avec ξ sur le bord de la cellule de Voronoï, une construction non produit qui combine plusieurs canaux peut-elle passer sous 2√2 ? Borne : 2,799 ; meilleur réalisé : 3,030. Premier pas : recherche exacte sur deux copies de A1 avec l'évaluateur trank.py. | G23c |
 
+**Question décisive issue de G24c (24/11) :**
+
+| Piste | Question précise | Origine |
+|---|---|---|
+| **(N, N) est-il réalisable ?** | Réalisable (au bord) pour N ≤ 6 ; numériquement non à N = 9 (b(9) ≈ 14, G20b). Rendre exact (6,6) à N = 6 ; tester (7,7) à N = 7 et (8,8) à N = 8 dans le problème général (pas seulement le modèle monomial) ; comprendre le saut à N = 9. Si b(N) = N^(1+o(1)) : ρ ≤ 0,683 (progrès sur l'algorithme de Claude). Sinon : où est la vraie courbe ? | G24c, G20b |
+
 ## 3. En attente
 
 | Piste | Raison de l'attente |
@@ -180,6 +185,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Résultat |
 |---|---|
+| ⚠️ **Distance pour q ≥ 2** (G24c) | Borne indépendante de N seulement pour une sous-classe (c ≤ 13p + 4q) ; lemme L2 manquant. Données : (6,6) réalisable numériquement à N = 6 (b(6) = 6 ?). Question décisive : (N, N) reste-t-il réalisable ? Si oui, la droite est la vérité et ρ ≤ 0,683. `code/gen24/g24c/notes.md` |
 | ❌ **Pièces de Hrubeš, lecture non symétrique** (G24a) | Courbe exacte θ = 1 + 2H(b), T = 1 + 2H(0,110 − b) : strictement hors du cercle partout. Limites prouvées du cadre de Clifford : θ, T ≥ 1 et max(θ, T) ≥ 1,5. L'hybride avec l'annexe B ne gagne rien. `code/gen24/g24a/notes.md` |
 | ❌ **Ansatz de groupe dans le modèle monomial** (G23a) | Aucune famille invariante par un groupe ne passe sous la somme directe N²/8 (N = 16, 27, 32, 64). Obstruction prouvée (non relue) : l'ansatz ZT force une forme anisotrope, donc des blocs de taille ≤ 4 (Chevalley-Warning). Le point Q8 est un accident de la taille 8. `code/gen23/g23a/notes.md` |
 | ⚠️ **Loi de distance pour q = 1** (G23d) | c(N;1,1) = 4 non prouvé ; prouvé : c(N;1,1) ≤ 8,081 pour tout N, et c(N;p,1) ≤ 11,7·p + O(√p) (indépendant de N). Rien pour q ≥ 2. `code/gen23/g23d/notes.md` |
