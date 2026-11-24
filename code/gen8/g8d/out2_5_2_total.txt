@@ -1,0 +1,4 @@
+  it 1: relax value 10 max 2 dual_bound 10.000 status 0 rows 50 0s
+  it 2: relax value 10 max 2 dual_bound 10.000 status 0 rows 530 7s
+  it 3: relax value 12 max 4 dual_bound 12.000 status 0 rows 2450 423s
+  it 4: relax value 12 max 4 dual_bound 12.000 status 0 rows 6290 862s

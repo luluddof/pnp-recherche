@@ -1,0 +1,1 @@
+  it 1: relax value 28 max 6 dual_bound 28.000 status 0 rows 120 0s

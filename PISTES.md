@@ -22,7 +22,7 @@ Légende : 🔄 en cours · 🆕 pas encore explorée · ⏸️ en attente · �
 
 Priorité recommandée : pistes A et B, puis Q1\*.
 
-## 1. En cours (générations 8 et 9)
+## 1. En cours (génération 9)
 
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
@@ -32,7 +32,6 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 | G9d | 🔄 **D – Sortir de la structure produit** | Gadgets à 3 parties (rang du tenseur triangle, multiplication de matrices), instances non cliques, conjecture du rang asymptotique | G4b |
 | G9e | 🔄 **E – Conséquences de la chute de l'ETH** | Nouveaux algorithmes plus rapides pour d'autres problèmes, avec le suivi exact des réductions | Article de Claude §7 |
 | G9W | 🔄 **Version 2 de l'article** (LaTeX + PDF) | Réécriture selon le rapport G8R | G7c, G8R |
-| G8d | 🔄 **Turán sur l'hypercube** | Prouver ρ(∞, d) ≥ poly(1/d) dans la méthode d'OpenAI (√log n optimal) | G7a |
 
 **Consigne de l'utilisateur (24/11) :** dès que les générations 8 et 9 sont terminées, lancer une **génération 10** sur les pistes « pas encore explorées » (section 2) et « en attente » (section 3).
 
@@ -56,6 +55,8 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 | 🆕 **Dépasser n^(2/3) dans le modèle produit** | La méthode du déterminant témoin est limitée à n^(2/3) (prop. S de G8a). Il faut une contrainte nouvelle qui couple les points ou qui utilise la structure polynomiale. Ou construire un schéma de coût n^(2/3) : il a besoin de Ω(n^(2/3)) points | Difficile | G8a |
 | 🆕 **Borne de Rado pour le modèle DP corrigé** | nullité ≥ max_S(\|S\| − dim Σ U_ω(v)) contient le lemme 1 et le lemme H ; pourrait enlever l'hypothèse de régularité | Moyenne | G8a |
 | 🆕 **Relecture adverse de G8a** (théorème B2, prop. S, lemme H) | Niveau P pour l'instant | Facile à lancer | G8a |
+
+| 🆕 **Compromis (I′) et (II) pour la méthode d'OpenAI** | (I′) ρ(Cδ², δ) ≥ δ^(−a) ; (II) ρ(ℓ₁+ℓ₂, d₁+d₂) ≥ ρ(ℓ₁,d₁)·ρ(ℓ₂,d₂). Ensemble : √log n optimal à (log n)^o(1) près | Difficile | G8d |
 
 ## 3. En attente
 
