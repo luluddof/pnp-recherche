@@ -1,0 +1,9 @@
+# output of: python3 lm.py "2,1,1,r;3,3,1,r;3,1,3,r;3,2,1,r;3,1,2,r;3,2,1,c;3,2,2,r;3,2,2,c"  (copied from the run)
+N=2 (p,q)=(1,1) field=R bound_ok=True best_resid=1.47e-16 restarts=1 max|coef|=1.1 -> FEASIBLE(num)
+N=3 (p,q)=(3,1) field=R bound_ok=True best_resid=7.50e-16 restarts=1 max|coef|=2.3 -> FEASIBLE(num)
+N=3 (p,q)=(1,3) field=R bound_ok=True best_resid=2.90e-15 restarts=1 max|coef|=4.2 -> FEASIBLE(num)
+N=3 (p,q)=(2,1) field=R bound_ok=True best_resid=1.73e+00 restarts=22 max|coef|=24.4 -> not found
+N=3 (p,q)=(1,2) field=R bound_ok=True best_resid=1.73e+00 restarts=35 max|coef|=19.7 -> not found
+N=3 (p,q)=(2,1) field=C bound_ok=True best_resid=1.73e+00 restarts=11 max|coef|=18.5 -> not found
+N=3 (p,q)=(2,2) field=R bound_ok=True best_resid=1.41e+00 restarts=24 max|coef|=7.5 -> not found
+N=3 (p,q)=(2,2) field=C bound_ok=True best_resid=1.41e+00 restarts=7 max|coef|=4.2 -> not found

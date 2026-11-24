@@ -41,12 +41,11 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 | G18R | 🔄 **Relecture adverse de G18b** | G18b annonce un gain d'un facteur loglog n sur la route d'interpolation (décision / #F mod 3, occurrences bornées), par un évaluateur modulo 3. Esquisse. La caractéristique 3 casse-t-elle un lemme de la prépublication ? Test complet indépendant. | G18b (`code/gen18/g18b/`) |
 | G18S | 🔄 **Relecture adverse de G18e** | G18e annonce le théorème A′ : N ≥ 2^(0,399·M/√u) dans le modèle DF, donc 2^Θ(M/√u) avec la borne supérieure de l'annexe D. C'était la condition manquante pour l'article 3. Juste ? Charges non uniformes ? Énoncé prêt pour Lean. | G18e (`code/gen18/g18e/`) |
 | G18f | 🔄 **Termes intriqués, λ = 2** (question E1) | Seule piste vers 2^(n^(1−ε)). Calcul à λ = 2 ou question réduite ; E1 est-elle une question de rang asymptotique d'un tenseur explicite ? | G9d, G14e |
-| G18g | 🔄 **Problème de Hurwitz et Naslund** | P(N) ≤ N^(1+o(1)) ou P(N) ≥ N^(1+ε) ? Variante exacte utile à l'algorithme ; état de l'art 2026 ; une tentative originale. | N1, G4a, G5b |
 | G18i | 🔄 **Réfutation des 3-CNF aléatoires à densité constante** | Carte temps contre densité avec les algorithmes de 2026 ; lecture en complexité des preuves ; une idée nouvelle testée. | obstacle central |
 
 Dossiers de travail de la génération 18 : `scratchpad/gen18/g18a` à `g18i`.
 
-**État (24/11, 10 h 45 UTC) :** les neuf agents se sont arrêtés à cause de la limite d'utilisation, presque au début. Relance en deux vagues. **En marche :** G18f, G18g, G18i, G18R, G18S. **Terminés :** G18a, G18b (à relire), G18c, G18d, G18e (à relire), G18h.
+**État (24/11, 10 h 45 UTC) :** les neuf agents se sont arrêtés à cause de la limite d'utilisation, presque au début. Relance en deux vagues. **En marche :** G18f, G18i, G18R, G18S. **Terminés :** G18a, G18b (à relire), G18c, G18d, G18e (à relire), G18g, G18h.
 
 Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g18d` (erreur de numéro au lancement ; la génération est bien la 17).
 
@@ -56,7 +55,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Question précise | Difficulté | Origine |
 |---|---|---|---|
-| 🆕 **Problème de Naslund / Hurwitz** | Prouver P(N) ≥ N^(1+ε) ; équivaut à un plancher ρ > 1/2 dans l'algorithme de Claude | Très difficile (circuits non commutatifs) | N1, G5b |
+| **Problème de Naslund / Hurwitz (reformulé par G18g)** | Courbe T(θ) des paires réalisables : entre la droite 2 − θ (prouvé) et le cercle √(4 − θ²) (annexe B de Claude). Cible : une borne déséquilibrée p·q ≥ N^(2+ε) en un seul θ (donne ρ > 1/2), ou une construction sous le cercle (donne ρ < 1/√2). Petit cas : P(3) = 4 ? | Très difficile (circuits non commutatifs) | N1, G5b |
 | ❌ **Tests de parité économiques (Q2)** — fausse sur la famille de référence (G8b, lemme CA) | Tests avec O(n·2^O(k)) incidences au total dans l'annexe D de Claude | Technique | G6c |
 | 🆕 **Valeur exacte dans le cas général à petit (ℓ, d)** | T_gen(4,1) ∈ {10, 11} (certificat exact manquant) ; (5,2) non déterminé ; relecture des théorèmes A et B′ de G11c | Moyenne | G11c |
 | 🆕 **Contraction de tenseurs : N_DF ≥ 2^(cM/u)** | Étendre le plancher ρ_d ≥ 1/d aux termes intriqués ; prouvé 2^(2M/4^u), atteint 2^(O(M/√u)) ; relecture adverse des théorèmes A et B de G14b ; plusieurs niveaux de récursion | Difficile (lié à Naslund pour u = 2) | G14b |
@@ -126,6 +125,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Résultat |
 |---|---|
+| ⚠️ **Problème de Hurwitz et Naslund** (G18g) | Aucune borne améliorée. Reformulation : la variante utile est « paires réalisables (p, q) », pas les sommes de carrés ; 4ρ* = sup_θ (θ + T(θ)). Borne élémentaire p·q ≥ 3N²/16. Notre ancienne « équivalence » avec P(N) ≥ N^(1+ε) est corrigée : un plancher ρ > 1/2 suit d'une borne déséquilibrée p·q ≥ N^(2+ε) en un seul θ. `code/gen18/g18g/notes.md` |
 | ⚠️ **Pièces hors du cadre** (G18h) | Aucune famille avec ρ < 1/√2. Mais le plancher 1/√2 vient de l'hypothèse (V) et de la forme du profil de croissance, pas de « un seul espace gradué ». Seul plancher prouvé en général : 1/2. Trois objets donneraient un gain (opérateurs presque commutants à croissance exponentielle ; profil en escalier ; identité à D directions). `code/gen18/g18h/notes.md` |
 | ❌ **Précision 2-adique des vrais noyaux** (G18a) | Pas de gain au-delà d'une constante. Rang plein ⇒ même précision que la boîte noire (17 cas). Le « 4 contre 14 » de G17a est un effet de nœud de coupe sur peu de paquets. Constante de l'exposant : facteur 2 à 3,5 possible (κ = 24 → 2 à 5,9). Numérique seulement. `code/gen18/g18a/notes.md` |
 | ⚠️ **Limite de l'interpolation récursive** (G18d) | n/√log n dans toutes les familles analysées. La récursion ne compose pas les gains : la racine domine. La profondeur achète seulement √loglog. Gain constant possible (modes 4 fois redondants). Borne inférieure seulement « au niveau de la conception » ; famille générale : ouvert. Conjecture C1 (formule de Smith des blocs de Cauchy). `code/gen18/g18d/notes.md` |
