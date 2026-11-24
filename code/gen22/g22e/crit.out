@@ -1,0 +1,72 @@
+== Heisenberg (partitions) Emax 400.0
+  E=   25.0  L=    9.137  A*sqrt(E)=   12.825  ratio=0.7124
+  E=  100.0  L=   21.220  A*sqrt(E)=   25.651  ratio=0.8272
+  E=  400.0  L=   46.150  A*sqrt(E)=   51.302  ratio=0.8996
+  min_w R(w) = 2.9673 at w=100.0  (barrier 2sqrt2=2.8284)
+  L/sqrtE: first 0.693, last 2.308, sign changes of increments: 0
+== Heisenberg rank 8 Emax 400.0
+  E=   25.0  L=   24.797  A*sqrt(E)=   36.276  ratio=0.6836
+  E=  100.0  L=   58.026  A*sqrt(E)=   72.552  ratio=0.7998
+  E=  400.0  L=  127.490  A*sqrt(E)=  145.104  ratio=0.8786
+  min_w R(w) = 2.9827 at w=100.0  (barrier 2sqrt2=2.8284)
+  L/sqrtE: first 2.197, last 6.374, sign changes of increments: 0
+== NS fermion n=1 (half units) Emax 400.0
+  E=   25.0  L=    7.101  A*sqrt(E)=    9.069  ratio=0.7830
+  E=  100.0  L=   15.797  A*sqrt(E)=   18.138  ratio=0.8709
+  E=  400.0  L=   33.575  A*sqrt(E)=   36.276  ratio=0.9255
+  min_w R(w) = 2.0000 at w=0.5  (barrier 2sqrt2=2.8284)
+  L/sqrtE: first 0.980, last 1.679, sign changes of increments: 1
+== NS fermions n=8 Emax 400.0
+  E=   25.0  L=   23.154  A*sqrt(E)=   25.651  ratio=0.9027
+  E=  100.0  L=   48.437  A*sqrt(E)=   51.302  ratio=0.9442
+  E=  400.0  L=   99.381  A*sqrt(E)=  102.604  ratio=0.9686
+  min_w R(w) = 2.8700 at w=100.0  (barrier 2sqrt2=2.8284)
+  L/sqrtE: first 3.107, last 4.969, sign changes of increments: 0
+== E8 lattice Emax 400.0
+  E=   25.0  L=   33.663  A*sqrt(E)=   36.276  ratio=0.9280
+  E=  100.0  L=   69.547  A*sqrt(E)=   72.552  ratio=0.9586
+  E=  400.0  L=  141.726  A*sqrt(E)=  145.104  ratio=0.9767
+  min_w R(w) = 2.8588 at w=100.0  (barrier 2sqrt2=2.8284)
+  L/sqrtE: first 5.517, last 7.086, sign changes of increments: 0
+== Leech lattice VOA Emax 300.0
+  E=   18.8  L=   49.582  A*sqrt(E)=   54.414  ratio=0.9112
+  E=   75.0  L=  105.182  A*sqrt(E)=  108.828  ratio=0.9665
+  E=  300.0  L=  213.860  A*sqrt(E)=  217.656  ratio=0.9826
+  min_w R(w) = 2.8561 at w=75.0  (barrier 2sqrt2=2.8284)
+  L/sqrtE: first 3.219, last 12.347, sign changes of increments: 0
+== Moonshine V# Emax 300.0
+  E=   18.8  L=   49.582  A*sqrt(E)=   54.414  ratio=0.9112
+  E=   75.0  L=  105.182  A*sqrt(E)=  108.828  ratio=0.9665
+  E=  300.0  L=  213.860  A*sqrt(E)=  217.656  ratio=0.9826
+  min_w R(w) = 2.8561 at w=75.0  (barrier 2sqrt2=2.8284)
+  L/sqrtE: first 0.000, last 12.347, sign changes of increments: 0
+== Yang-Lee vacuum M(2,5) Emax 400.0
+  E=   25.0  L=    5.620  A*sqrt(E)=    8.112  ratio=0.6929
+  E=  100.0  L=   13.329  A*sqrt(E)=   16.223  ratio=0.8216
+  E=  400.0  L=   29.176  A*sqrt(E)=   32.446  ratio=0.8992
+  min_w R(w) = 2.9796 at w=100.0  (barrier 2sqrt2=2.8284)
+  L/sqrtE: first 0.000, last 1.459, sign changes of increments: 0
+== Yang-Lee module h=-1/5 Emax 400.0
+  E=   25.0  L=    6.073  A*sqrt(E)=    8.112  ratio=0.7487
+  E=  100.0  L=   13.795  A*sqrt(E)=   16.223  ratio=0.8503
+  E=  400.0  L=   29.649  A*sqrt(E)=   32.446  ratio=0.9138
+  min_w R(w) = 2.9472 at w=100.0  (barrier 2sqrt2=2.8284)
+  L/sqrtE: first 0.693, last 1.482, sign changes of increments: 0
+== M(2,7) vacuum Emax 400.0
+  E=   25.0  L=    4.431  A*sqrt(E)=    9.695  ratio=0.4570
+  E=  100.0  L=   10.875  A*sqrt(E)=   19.390  ratio=0.5609
+  E=  400.0  L=   24.210  A*sqrt(E)=   38.781  ratio=0.6243
+  min_w R(w) = 3.0094 at w=100.0  (barrier 2sqrt2=2.8284)
+  L/sqrtE: first 0.000, last 1.211, sign changes of increments: 2
+== symplectic fermions (prod(1+q^k)^2) Emax 400.0
+  E=   25.0  L=   10.088  A*sqrt(E)=   12.825  ratio=0.7866
+  E=  100.0  L=   22.494  A*sqrt(E)=   25.651  ratio=0.8769
+  E=  400.0  L=   47.760  A*sqrt(E)=   51.302  ratio=0.9310
+  min_w R(w) = 2.9273 at w=100.0  (barrier 2sqrt2=2.8284)
+  L/sqrtE: first 1.099, last 2.388, sign changes of increments: 0
+== Ramond n=8 (no ground factor) Emax 400.0
+  E=   25.0  L=   20.748  A*sqrt(E)=   25.651  ratio=0.8089
+  E=  100.0  L=   45.853  A*sqrt(E)=   51.302  ratio=0.8938
+  E=  400.0  L=   96.704  A*sqrt(E)=  102.604  ratio=0.9425
+  min_w R(w) = 2.9167 at w=100.0  (barrier 2sqrt2=2.8284)
+  L/sqrtE: first 2.197, last 4.835, sign changes of increments: 0

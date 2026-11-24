@@ -1,0 +1,12 @@
+sl2 k=1 M=L(0.5), own profile      b_min 0.237 eps_max 29.1 | psi sign changes [(0.83, -1, 1)] | min r = 2.8161 at eps=1.15 (r at eps_max/4 2.8507)
+     -> min r=2.8161 at eps=1.15
+sl2 k=2 M=L(1), own profile        b_min 0.265 eps_max 34.8 | psi sign changes [(0.795, -1, 1)] | min r = 2.8117 at eps=1.91 (r at eps_max/4 2.8569)
+     -> min r=2.8117 at eps=1.91
+sl2 k=4 M=L(2), own profile        b_min 0.287 eps_max 39.1 | psi sign changes [(0.688, -1, 1)] | min r = 2.8108 at eps=3.2 (r at eps_max/4 2.8570)
+     -> min r=2.8108 at eps=3.2
+sl2 k=8 M=L(4), own profile        b_min 0.302 eps_max 41.4 | psi sign changes [(0.55, -1, 1)] | min r = 2.8117 at eps=5.93 (r at eps_max/4 2.8400)
+     -> min r=2.8117 at eps=5.93
+sl2 k=8 M=L(2), own profile        b_min 0.303 eps_max 42.4 | psi sign changes [(0.806, -1, 1)] | min r = 2.8164 at eps=3.03 (r at eps_max/4 2.8479)
+     -> min r=2.8164 at eps=3.03
+[(0.3, np.float64(-0.2216)), (0.5, np.float64(-0.1382)), (0.7, np.float64(-0.0549)), (0.83, np.float64(-0.0009)), (1, np.float64(0.069)), (1.5, np.float64(0.2573)), (2, np.float64(0.4003)), (4, np.float64(0.6322)), (8, np.float64(0.6908))]
+eps, s_V, s_M: [(0.1, 0.44, 1.042), (0.5, 1.4, 1.809), (1, 2.166, 2.473), (2, 3.243, 3.465), (5, 5.365, 5.507), (10, 7.748, 7.849)]

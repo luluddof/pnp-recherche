@@ -166,6 +166,7 @@ Ce fichier liste **tout ce qui peut entrer dans un article**, présent ou futur.
 | Théorème abstrait de l'annexe B pour les modules, et neuf familles de modules (Fock, tordus, Neveu-Schwarz, Ramond, symplectiques) | Résultat négatif : tous au-dessus du cercle. Le théorème abstrait (axiomes A1 à A4) et la pénalité d'espace fondamental sont propres, mais reposent sur des faits standards non refaits. Le contrôle exact « Ramond n = 8 = identité des huit carrés » est une remarque. | `code/gen21/g21a/notes.md` |
 | Caractéristique p : la récursion de Claude sur F_{p^k} pour la décision ; annexe B p-restreinte ; Frobenius ; Dvir-Edelman | Résultat négatif : même cercle. La réparation de l'annexe B en caractéristique p (base duale modulo p, d = 1) est propre et vérifiée sur quatre cas, mais elle ne donne aucun gain : une remarque. | `code/gen21/g21b/notes.md` |
 | Familles structurées pour le compromis (Cayley-Dickson jusqu'à N = 256, Clifford, groupes, Paley, tournois) | Résultat négatif : exposant 2. La mesure « le défaut des sédénions a un rang Θ(N²) » est un fait exact, une remarque. | `code/gen22/g22c/notes.md` |
+| Barrière de Cardy (G22e) : √2 optimal pour toute algèbre de sommets fixe ; théorème abstrait corrigé ; carte des échappatoires | Résultat négatif partiel, propre, non relu. Le théorème A (élémentaire) et la remarque « pas de barrière combinatoire au-delà de la droite » pourraient former une section d'un article sur la construction de Claude, après relecture. Pas un article seul. | `code/gen22/g22e/notes.md` |
 | Question E1 (termes intriqués) | Non tranchée en général. La partie prouvée est dans B2. Le plus petit cas ouvert (N = 3) ne montre aucun gain, mais c'est un résultat numérique, pas une preuve. | `code/gen18/g18f/notes.md`, `code/gen19/g19c/notes.md` |
 | Corollaire sur le problème de Hurwitz (borne N^√2) | **Déjà publié** par d'autres (Siemaszko, Debnath). | `JOURNAL.md`, résultat G4a |
 | Conséquence pour l'arbre de Steiner | **Déjà revendiquée** par Wu et Wang (arXiv:2611.02548). | `code/gen9/g9e/` |
@@ -178,6 +179,7 @@ Ce fichier liste **tout ce qui peut entrer dans un article**, présent ou futur.
 | Date | Changement |
 |---|---|
 | 24/11/2026 | Création du registre après la génération 18. Articles 1, 2, 3 ; candidats B1 à B4. |
+| 24/11/2026 | G22e : barrière de Cardy (algèbres fixes), partie C. |
 | 24/11/2026 | G22a : antériorité du candidat B2 contrôlée sur neuf articles : le théorème C et la question du compromis semblent nouveaux. G22c : résultat négatif (familles structurées), partie C. |
 | 24/11/2026 | G21d : un élément ajouté au candidat B2 (pas de témoin de bas degré à N = 3). Génération 21 terminée : aucun nouveau résultat positif. |
 | 24/11/2026 | G21b : résultat négatif (caractéristique p), ajouté à la partie C. |

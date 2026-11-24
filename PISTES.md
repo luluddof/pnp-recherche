@@ -46,7 +46,6 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 |---|---|---|---|
 | G22b-bis | 🔄 **Le « modèle monomial » des petites solutions (suite de G22b sur Opus 5.5)** | G22b (Fable, arrêté par la limite Fable jusqu'au 26/11) a trouvé que les solutions exactes sont des matrices d'intercalates signées = formules entières de sommes de carrés [N, N, p+q]. Suite : théorème de correspondance ; borne de HWY Ω(N^(6/5)) dans ce modèle ; adapter le comptage d'intercalates au compromis p·q. | G22b, G22a |
 | G22d | 🔄 **Borne inférieure par un invariant analytique (distance)** | À N = 3 l'échange est à distance² = 2 de J(2,2). Loi exacte de la distance ; version quantitative du théorème C ; excès au-delà des méthodes de rang ; certificat. | G21d |
-| G22e | 🔄 **Barrière de Cardy pour les constructions de type algèbre de sommets** | Prouver que √2 est optimal pour toute construction d'une classe précise (croissance modulaire) ; ou trouver où le théorème échoue (algèbres non unitaires, non rationnelles). | G21a |
 
 Dossiers de travail de la génération 18 : `scratchpad/gen18/g18a` à `g18i`.
 
@@ -138,6 +137,13 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 |---|---|---|
 | **Profil à plateau (après G21e et G21a)** | Les contraintes de dimension permettent ρ → 1/2 (G21e), mais l'objet qu'il faut est un seul module cyclique avec dim ≈ N^(1+o(1)) sur [E0, E0 + H] : aussi fort que P(N) = N^(1+o(1)) (problème de Hurwitz-Naslund). Ni construit, ni exclu. Restes non testés : familles non unitaires avec c < 0 ; étiquettes de poids mixtes ; algèbres non libres (W-algèbres, affines à niveau fractionnaire). | G21e, G21a |
 
+**Pistes issues de G22e (24/11) :**
+
+| Piste | Question précise | Origine |
+|---|---|---|
+| Regraduations à flot spectral et orbifolds | Chercher une algèbre où le vrai rang de l'appariement égale la dimension pleine dans une graduation dont le profil a un creux (route R1 : le réseau A1 regradué donne 2,8157 < 2√2 avec la borne lâche, 3,030 avec le vrai rang). | G22e |
+| Modèles minimaux non unitaires et secteurs tordus d'orbifolds | Balayer les paramètres de croissance (σ, κ) pour un module avec creux dont le vide croît aussi vite (route R2 : sl₂ donne 2,81 seul, 2,90 en vraie paire). | G22e |
+
 ## 3. En attente
 
 | Piste | Raison de l'attente |
@@ -155,6 +161,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Résultat |
 |---|---|
+| ⚠️ **Barrière de Cardy** (G22e) | Théorème A (papier, non relu) : √2 est optimal pour toute algèbre de sommets fixe avec croissance √E. Pour les familles : ouvert. Échappement possible seulement avec un « creux » de L(E)/√E et un nombre de paires aussi grand que la borne lâche. Deux routes (regraduation du réseau A1 ; modules de sl₂) donnent 2,81 < 2√2 sous la borne lâche, mais 2,90 à 3,03 avec les vraies bornes. `code/gen22/g22e/notes.md` |
 | ✅ **Littérature Hurwitz-Naslund lue** (G22a) | Notre problème = problème 12 de Naslund = question 1.2 de Karam = largeur de HWY = PT-rank de Rossman-Zhu. Record : √2 (annexe B) ; publié : 1,62 (Hrubeš). **Le théorème C n'est dans aucun article lu ; la question du compromis (p, q) est nouvelle.** Techniques non essayées : comptage d'intercalates de HWY, pièces de Hrubeš, caractéristique 2. `code/gen22/g22a/notes.md` |
 | ❌ **Familles structurées jusqu'à N = 256** (G22c) | Aucune ne bat l'exposant 2 ni la somme directe (N²/8). Sédénions : défaut de rang Θ(N²). Groupes, Paley, tournois : N² − O(N). `code/gen22/g22c/notes.md` |
 | ❌ **Équation au-delà des méthodes de rang** (G21d) | Aucun témoin. À N = 3 : aucune équation de J(2,2) en degré ≤ 6, aucun aplatissement de Koszul/Young (168 testés), aucune équation séparante en degré 7. Séparer l'échange est un phénomène de degré ≥ 8. Distance² de l'échange à J(2,2) = 2 (numérique). Reformulation symétrique à trois aplatissements. `code/gen21/g21d/notes.md` |

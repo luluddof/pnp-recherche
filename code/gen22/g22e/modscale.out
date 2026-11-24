@@ -1,0 +1,24 @@
+sl2 level 1, M=L(0)                  min 4rho = 2.8792 at (u,v)=(6.62,6.62)  [2sqrt2=2.8284]  s_M(0)=0.000
+sl2 level 1, M=L(0.5)                min 4rho = 2.9029 at (u,v)=(3.39,3.66)  [2sqrt2=2.8284]  s_M(0)=0.693
+sl2 level 2, M=L(0)                  min 4rho = 2.9050 at (u,v)=(7.98,7.98)  [2sqrt2=2.8284]  s_M(0)=0.000
+sl2 level 2, M=L(0.5)                min 4rho = 2.9525 at (u,v)=(7.36,7.94)  [2sqrt2=2.8284]  s_M(0)=0.693
+sl2 level 2, M=L(1)                  min 4rho = 2.9126 at (u,v)=(6.81,7.34)  [2sqrt2=2.8284]  s_M(0)=1.099
+sl2 level 4, M=L(0)                  min 4rho = 2.9427 at (u,v)=(9.03,9.03)  [2sqrt2=2.8284]  s_M(0)=0.000
+sl2 level 4, M=L(0.5)                min 4rho = 3.0076 at (u,v)=(7.72,9)  [2sqrt2=2.8284]  s_M(0)=0.693
+sl2 level 4, M=L(1)                  min 4rho = 3.0018 at (u,v)=(7.73,9.01)  [2sqrt2=2.8284]  s_M(0)=1.099
+sl2 level 4, M=L(1.5)                min 4rho = 2.9999 at (u,v)=(7.67,8.94)  [2sqrt2=2.8284]  s_M(0)=1.386
+sl2 level 4, M=L(2)                  min 4rho = 2.9624 at (u,v)=(6.05,7.04)  [2sqrt2=2.8284]  s_M(0)=1.609
+sl2 level 8, M=L(0)                  min 4rho = 2.9860 at (u,v)=(9.77,9.77)  [2sqrt2=2.8284]  s_M(0)=0.000
+sl2 level 8, M=L(0.5)                min 4rho = 3.0528 at (u,v)=(9.03,9.75)  [2sqrt2=2.8284]  s_M(0)=0.693
+sl2 level 8, M=L(1)                  min 4rho = 3.0662 at (u,v)=(8.34,9.73)  [2sqrt2=2.8284]  s_M(0)=1.099
+sl2 level 8, M=L(1.5)                min 4rho = 3.0579 at (u,v)=(7.69,9.69)  [2sqrt2=2.8284]  s_M(0)=1.386
+sl2 level 8, M=L(2)                  min 4rho = 3.0890 at (u,v)=(7.65,9.64)  [2sqrt2=2.8284]  s_M(0)=1.609
+sl2 level 8, M=L(2.5)                min 4rho = 3.0713 at (u,v)=(7.04,9.57)  [2sqrt2=2.8284]  s_M(0)=1.792
+sl2 level 8, M=L(3)                  min 4rho = 3.0539 at (u,v)=(7.03,9.56)  [2sqrt2=2.8284]  s_M(0)=1.946
+sl2 level 8, M=L(3.5)                min 4rho = 3.0458 at (u,v)=(6.97,9.48)  [2sqrt2=2.8284]  s_M(0)=2.079
+sl2 level 8, M=L(4)                  min 4rho = 3.0043 at (u,v)=(7.49,9.44)  [2sqrt2=2.8284]  s_M(0)=2.197
+Ising, M=sigma                       min 4rho = 3.0892 at (u,v)=(3.75,4.64)  [2sqrt2=2.8284]  s_M(0)=0.000
+Ising, M=eps                         min 4rho = 3.0402 at (u,v)=(3.94,4.54)  [2sqrt2=2.8284]  s_M(0)=0.000
+Yang-Lee, M=phi(-1/5)                min 4rho = 3.1161 at (u,v)=(3.09,4.08)  [2sqrt2=2.8284]  s_M(0)=0.000
+NS fermion, M=Ramond (x sqrt2)       min 4rho = 2.8412 at (u,v)=(4.64,4.64)  [2sqrt2=2.8284]  s_M(0)=0.347
+Heisenberg, M=V                      min 4rho = 2.9738 at (u,v)=(6.3,6.3)  [2sqrt2=2.8284]  s_M(0)=0.000
