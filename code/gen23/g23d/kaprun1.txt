@@ -1,0 +1,5 @@
+RESULT N=3 p=2 kappa_max=3.99998933  law p+m=4
+RESULT N=3 p=3 kappa_max=6.00000000  law p+m=6
+RESULT N=4 p=1 kappa_max=3.00000000  law p+m=3
+RESULT N=4 p=2 kappa_max=3.99997741  law p+m=4
+RESULT N=4 p=4 kappa_max=6.99806514  law p+m=7

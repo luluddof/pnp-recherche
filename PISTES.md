@@ -45,7 +45,6 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
 | G23a | 🔄 **Ansatz de groupe dans le modèle monomial** | Le point (8,8) à N = 8 est invariant par Q8 et atteint la borne du modèle. Encodage par orbites (SAT) pour les groupes d'ordre 16, 27, 32, 64 ; une famille sous N^√2 serait un nouveau record pour le problème général. | G22b-bis |
-| G23d | 🔄 **Prouver la loi de distance pour q = 1** | Prouver c(N;1,1) = 4 pour tout N, puis d²(N;p,1) = N² − m² − 2j ; premier outil prouvé au-delà des méthodes de rang. | G22d |
 
 Dossiers de travail de la génération 18 : `scratchpad/gen18/g18a` à `g18i`.
 
@@ -146,7 +145,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Question précise | Origine |
 |---|---|---|
-| Masse captée c(p, q) | Prouver c(N; 1, 1) = 4 pour tout N, puis la loi q = 1 (d² = N² − m² − 2j), puis une borne supérieure sur c(p, q). Une borne sous-linéaire en p·q donnerait un exposant au-delà de la droite ; une borne linéaire κ·p·q seulement une constante. | G22d |
+| Masse captée c(p, q) (après G23d) | Prouvé : c(N;1,1) ≤ 8,081 et c(N;p,1) ≤ 11,7p + O(√p) pour tout N. Reste : la valeur exacte 4 (reformulée en une inégalité matricielle explicite) ; et surtout q ≥ 2, où la preuve ne s'étend pas (les vecteurs singuliers ne sont plus des produits). Sans une borne sous-linéaire en p·q au point équilibré, pas de gain d'exposant. | G22d, G23d |
 
 **Pistes issues de G22b-bis (24/11) :**
 
@@ -179,6 +178,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Résultat |
 |---|---|
+| ⚠️ **Loi de distance pour q = 1** (G23d) | c(N;1,1) = 4 non prouvé ; prouvé : c(N;1,1) ≤ 8,081 pour tout N, et c(N;p,1) ≤ 11,7·p + O(√p) (indépendant de N). Rien pour q ≥ 2. `code/gen23/g23d/notes.md` |
 | ✅ **Lean : borne du modèle monomial** (G23e) | `lean/PnpLean/Outils/Intercalate.lean` : lemme clé, comptage, compromis réel. Niveau L (modèle ST). |
 | ❌ **Creux des algèbres de sommets, vrai rang** (G23c) | Aucune valeur sous 2√2 avec le vrai rang. Règle de sélection (ξ intérieur) et dichotomie (ξ sur le bord) prouvées sur papier : elles tuent les creux pour toute algèbre fixe. Reste ouvert : constructions à plusieurs canaux dans des familles de puissances tensorielles (écart 2,799 – 3,030). `code/gen23/g23c/notes.md` |
 | ✅ **Relecture du modèle monomial** (G23b) | Tout confirmé (P+) ; hypothèse inutile retirée ; énumérations exhaustives sans échec ; les optimums exacts à N = 5 sont hors du modèle. `code/gen23/g23b/notes.md` |
