@@ -22,10 +22,17 @@ Légende : 🔄 en cours · 🆕 pas encore explorée · ⏸️ en attente · �
 
 Priorité recommandée : pistes A et B, puis Q1\*.
 
-## 1. En cours (générations 11 à 13)
+## 1. En cours (générations 12 à 14)
 
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
+| G14a | 🔄 **Erreurs par point sur un corps fini** | Le théorème de l'article 2 utilise une somme de carrés positive, qui échoue sur les corps finis : chercher des contre-exemples et un algorithme plus rapide pour compter modulo p (donc décider) | G11b, G9b |
+| G14b | 🔄 **Limites de la contraction de tenseurs d'OpenAI** | La voie la plus forte de la prépublication, jamais analysée : modèle abstrait et borne inférieure | G4c, G9d |
+| G14c | 🔄 **Un modèle de coût DP valide** | Modèle sur le graphe des lignes, non dégénéré, qui résiste à l'élimination ligne par ligne ; borne inférieure | G7b, G10a |
+| G14d | 🔄 **Compléter le théorème de l'article 2** | Multiplicités inégales (y a-t-il une échappatoire ?), écart d'un facteur log ℓ, asymptotique rigoureuse | G11b |
+| G14e | 🔄 **Termes « intriqués » (non produits)** | Plus petit cas (grille 2×3, λ = 1) : l'intrication aide-t-elle ? | G9d |
+| G14f | 🔄 **Noyau de Q1\* : graphes bipartis** | Encodages (somme sur un côté, caractères) et obstruction | G9c |
+| G14g | 🔄 **Lean : conséquences de l'article 2 et restes de l'article 1** | Forme max/moyenne, enlever l'hypothèse n ≤ M | G13b, G10e |
 | G12W | 🔄 **Pré-version 3 (brouillon, pas l'article officiel)** | Essai séparé dans `resultats/brouillons/pre-v3/`, à faire vérifier par une autre IA pour la portée ; l'article officiel (version 2) ne change pas | Demande de l'auteur (24/11) |
 | G13a | 🔄 **Relecture adverse + nouveauté du théorème de G11b** | Σ rang(E_k) ≥ N_m : chaque étape, le corps, le cadre exact, la conséquence sur le temps, la littérature | G11b |
 
