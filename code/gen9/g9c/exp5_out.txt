@@ -1,0 +1,33 @@
+  n  d   k  minleaves  F_d(n-k) ok
+ 16  3   0       1070       250 True
+ 16  3   4         83        69 True
+ 16  3   8         19        19 True
+ 18  3   0       2303       476 True
+ 18  3   4        175       131 True
+ 18  3   9         26        26 True
+ 16  4   0        566       140 True
+ 16  4   4         53        45 True
+ 16  4   8         15        15 True
+ 18  4   0       1211       245 True
+ 18  4   4        104        80 True
+ 18  4   9         20        20 True
+ 16  5   0        351        92 True
+ 16  5   4         39        34 True
+ 16  5   8         12        12 True
+growth rate log2(x_d)*d/log2(d), x^(d+1)=x^d+1 :
+4 0.8114  log2 x = 0.405685
+16 0.7252  log2 x = 0.181297
+64 0.7279  log2 x = 0.068245
+256 0.7432  log2 x = 0.023224
+1024 0.7599  log2 x = 0.007421
+65536 0.8028  log2 x = 0.000196
+hybrid tree + Prop.R leaves at e*d = 1, units n/d: min_k max{(1-k) W(d)/ln2, k log2(d k/2)}
+16 1.248  ratio to log2 d: 0.312
+64 2.104  ratio to log2 d: 0.351
+256 2.985  ratio to log2 d: 0.373
+1024 3.891  ratio to log2 d: 0.389
+65536 6.692  ratio to log2 d: 0.418
+
+real	0m4.899s
+user	0m4.723s
+sys	0m0.140s

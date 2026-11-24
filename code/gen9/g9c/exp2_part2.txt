@@ -1,0 +1,7 @@
+Part 2: actual random d-regular graphs, n = 60
+  d alpha  log2 i   lam2  h=logC(n,a+1) nbar_spec nbar_heur logC(m,nbar_spec) logC(m,nbar_heur)    m
+  4    24   34.70   3.24           55.5        44        38             110.0             104.4  120
+  6    20   30.39   3.88           52.8        48        41             146.7             135.5  180
+  8    18   26.94   4.95           50.9        56        47             184.1             167.3  240
+ 12    14   22.76   5.47           45.6        53        43             212.9             186.0  360
+ 16    13   19.93   5.99           44.0        58        47             251.1             217.9  480

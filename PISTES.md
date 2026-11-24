@@ -26,7 +26,6 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
-| G9c | 🔄 **C – Q1\*** | Compter les ensembles indépendants d'un graphe presque creux en 2^O(n/√log n) ; idées : hybride, autre encodage, identité de l'étoile | G8b |
 
 **Consigne de l'utilisateur (24/11) :** dès que les générations 8 et 9 sont terminées, lancer une **génération 10** sur les pistes « pas encore explorées » (section 2) et « en attente » (section 3).
 
@@ -61,6 +60,8 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | 🆕 **Pièces sur un corps fini fixe avec ρ < 1/√2** | Seule liberté propre à la décision. Sur GF(2) : meilleur connu 0,811 (classe restreinte) ; recherche exhaustive à λ = 2 non terminée | Difficile | G9b |
 
+| 🆕 **Noyau de Q1\* : graphes bipartis d-réguliers aléatoires** | Compter les ensembles indépendants de taille entre n/(log d·log log d) et n/2 ; toutes les méthodes connues paient n·log log n/√log n ; reformulation : un bit partagé par r groupes doit coûter O(1) | Difficile | G9c |
+
 ## 3. En attente
 
 | Piste | Raison de l'attente |
@@ -85,6 +86,7 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 | ✅ Hurwitz P(N) ≤ N^√2 (G4a) | Correct, mais déjà publié par d'autres |
 | ✅ Réfutations Extended Frege (G8c) | **Conditionnel :** sous (S) et des preuves EF courtes de « Pin_F(b) », EF réfute F en taille 2s + poly(n)·2^(δn). Le calcul de l'algorithme est de **profondeur constante** (nouveau) : le certificat IPS peut être une formule de profondeur constante. Pas de route vers TC⁰-Frege (descente séquentielle). |
 | ✅ Conséquences de la chute de l'ETH (G9e) | Arbre de Steiner, plus long cycle/chemin sur graphes creux en 2^(O(m log log m/√log m)) (conditionnel, non relu, nouveauté non établie) |
+| ✅ #IS sans log d sur des familles (G9c) | Graphes à petit α, graphes (n,d,λ), d-réguliers aléatoires : 2^(O(en)) (niveau P, non relu) |
 | ✅ Système de preuve IPS (G4d) | Réfutations IPS de taille 2^O(n/√log n) |
 | ✅ Plancher ρ_d ≥ 1/d (G6b) | Confirmé sous conditions |
 

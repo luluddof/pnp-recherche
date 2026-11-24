@@ -1,0 +1,46 @@
+{'n': 12, 'd': 3, 'm': 18, 'alpha': 5, 'i': 179, 'thmA_ok': True, 'thmA_fail_with_nbar_minus_1': 5, 'rowsA(t,i_t,nbar,logC(m,nbar))': [(0, 1, 0, 0), (1, 12, 0, 0), (2, 48, 1, 4.2), (3, 74, 3, 9.7), (4, 40, 4, 11.6), (5, 4, 6, 14.2), (6, 0, 8, 15.4)], 'thmB_ok': True}
+    {'t': 2, 'nbar': 1, 'h': 6.0, 'nu': 8, 'X0': 0, 'r': 0, 'Mprime': 7, 'F_mod': 48, 'i_t': 48, 'ok': True}
+    {'t': 2, 'nbar': 2, 'h': 6.0, 'nu': 8, 'X0': 0, 'r': 0, 'Mprime': 7, 'F_mod': 48, 'i_t': 48, 'ok': True}
+    {'t': 3, 'nbar': 1, 'h': 7.8, 'nu': 9, 'X0': 36, 'r': 3, 'Mprime': 11, 'F_mod': 74, 'i_t': 74, 'ok': True}
+    {'t': 3, 'nbar': 2, 'h': 7.8, 'nu': 9, 'X0': 2, 'r': 1, 'Mprime': 9, 'F_mod': 74, 'i_t': 74, 'ok': True}
+    {'t': 4, 'nbar': 1, 'h': 9.0, 'nu': 10, 'X0': 441, 'r': 5, 'Mprime': 14, 'F_mod': 40, 'i_t': 40, 'ok': True}
+    {'t': 4, 'nbar': 2, 'h': 9.0, 'nu': 10, 'X0': 96, 'r': 4, 'Mprime': 13, 'F_mod': 40, 'i_t': 40, 'ok': True}
+    {'t': 5, 'nbar': 1, 'h': 9.6, 'nu': 11, 'X0': 2232, 'r': 6, 'Mprime': 16, 'F_mod': 4, 'i_t': 4, 'ok': True}
+    {'t': 5, 'nbar': 2, 'h': 9.6, 'nu': 11, 'X0': 1098, 'r': 6, 'Mprime': 16, 'F_mod': 4, 'i_t': 4, 'ok': True}
+    {'t': 6, 'nbar': 1, 'h': 9.9, 'nu': 11, 'X0': 6300, 'r': 6, 'Mprime': 16, 'F_mod': 0, 'i_t': 0, 'ok': True}
+    {'t': 6, 'nbar': 2, 'h': 9.9, 'nu': 11, 'X0': 5500, 'r': 7, 'Mprime': 17, 'F_mod': 0, 'i_t': 0, 'ok': True}
+{'n': 14, 'd': 4, 'm': 28, 'alpha': 5, 'i': 246, 'thmA_ok': True, 'thmA_fail_with_nbar_minus_1': 5, 'rowsA(t,i_t,nbar,logC(m,nbar))': [(0, 1, 0, 0), (1, 14, 0, 0), (2, 63, 1, 4.8), (3, 104, 3, 11.7), (4, 55, 5, 16.6), (5, 9, 8, 21.6), (6, 0, 9, 22.7)], 'thmB_ok': True}
+    {'t': 2, 'nbar': 1, 'h': 6.5, 'nu': 8, 'X0': 0, 'r': 0, 'Mprime': 7, 'F_mod': 63, 'i_t': 63, 'ok': True}
+    {'t': 2, 'nbar': 2, 'h': 6.5, 'nu': 8, 'X0': 0, 'r': 0, 'Mprime': 7, 'F_mod': 63, 'i_t': 63, 'ok': True}
+    {'t': 3, 'nbar': 1, 'h': 8.5, 'nu': 10, 'X0': 84, 'r': 4, 'Mprime': 13, 'F_mod': 104, 'i_t': 104, 'ok': True}
+    {'t': 3, 'nbar': 2, 'h': 8.5, 'nu': 10, 'X0': 8, 'r': 2, 'Mprime': 11, 'F_mod': 104, 'i_t': 104, 'ok': True}
+    {'t': 4, 'nbar': 1, 'h': 10.0, 'nu': 11, 'X0': 1218, 'r': 6, 'Mprime': 16, 'F_mod': 55, 'i_t': 55, 'ok': True}
+    {'t': 4, 'nbar': 2, 'h': 10.0, 'nu': 11, 'X0': 372, 'r': 5, 'Mprime': 15, 'F_mod': 55, 'i_t': 55, 'ok': True}
+    {'t': 5, 'nbar': 1, 'h': 11.0, 'nu': 12, 'X0': 7560, 'r': 7, 'Mprime': 18, 'F_mod': 9, 'i_t': 9, 'ok': True}
+    {'t': 5, 'nbar': 2, 'h': 11.0, 'nu': 12, 'X0': 4816, 'r': 7, 'Mprime': 18, 'F_mod': 9, 'i_t': 9, 'ok': True}
+    {'t': 6, 'nbar': 1, 'h': 11.6, 'nu': 13, 'X0': 27090, 'r': 9, 'Mprime': 21, 'F_mod': 0, 'i_t': 0, 'ok': True}
+    {'t': 6, 'nbar': 2, 'h': 11.6, 'nu': 13, 'X0': 29372, 'r': 9, 'Mprime': 21, 'F_mod': 0, 'i_t': 0, 'ok': True}
+{'n': 16, 'd': 4, 'm': 32, 'alpha': 6, 'i': 572, 'thmA_ok': True, 'thmA_fail_with_nbar_minus_1': 6, 'rowsA(t,i_t,nbar,logC(m,nbar))': [(0, 1, 0, 0), (1, 16, 0, 0), (2, 88, 1, 5.0), (3, 202, 3, 12.3), (4, 191, 5, 17.6), (5, 66, 7, 21.7), (6, 8, 9, 24.7), (7, 0, 11, 26.9)], 'thmB_ok': True}
+    {'t': 2, 'nbar': 1, 'h': 6.9, 'nu': 8, 'X0': 0, 'r': 0, 'Mprime': 7, 'F_mod': 88, 'i_t': 88, 'ok': True}
+    {'t': 2, 'nbar': 2, 'h': 6.9, 'nu': 8, 'X0': 0, 'r': 0, 'Mprime': 7, 'F_mod': 88, 'i_t': 88, 'ok': True}
+    {'t': 3, 'nbar': 1, 'h': 9.1, 'nu': 11, 'X0': 96, 'r': 4, 'Mprime': 14, 'F_mod': 202, 'i_t': 202, 'ok': True}
+    {'t': 3, 'nbar': 2, 'h': 9.1, 'nu': 11, 'X0': 6, 'r': 2, 'Mprime': 12, 'F_mod': 202, 'i_t': 202, 'ok': True}
+    {'t': 4, 'nbar': 1, 'h': 10.8, 'nu': 12, 'X0': 1648, 'r': 7, 'Mprime': 18, 'F_mod': 191, 'i_t': 191, 'ok': True}
+    {'t': 4, 'nbar': 2, 'h': 10.8, 'nu': 12, 'X0': 412, 'r': 5, 'Mprime': 16, 'F_mod': 191, 'i_t': 191, 'ok': True}
+    {'t': 5, 'nbar': 1, 'h': 12.1, 'nu': 14, 'X0': 12288, 'r': 8, 'Mprime': 21, 'F_mod': 66, 'i_t': 66, 'ok': True}
+    {'t': 5, 'nbar': 2, 'h': 12.1, 'nu': 14, 'X0': 6606, 'r': 8, 'Mprime': 21, 'F_mod': 66, 'i_t': 66, 'ok': True}
+    {'t': 6, 'nbar': 1, 'h': 13.0, 'nu': 14, 'X0': 53856, 'r': 10, 'Mprime': 23, 'F_mod': 8, 'i_t': 8, 'ok': True}
+    {'t': 6, 'nbar': 2, 'h': 13.0, 'nu': 14, 'X0': 49680, 'r': 9, 'Mprime': 22, 'F_mod': 8, 'i_t': 8, 'ok': True}
+    {'t': 7, 'nbar': 1, 'h': 13.5, 'nu': 15, 'X0': 156640, 'r': 10, 'Mprime': 24, 'F_mod': 0, 'i_t': 0, 'ok': True}
+    {'t': 7, 'nbar': 2, 'h': 13.5, 'nu': 15, 'X0': 219820, 'r': 10, 'Mprime': 24, 'F_mod': 0, 'i_t': 0, 'ok': True}
+{'n': 16, 'd': 6, 'm': 48, 'alpha': 5, 'i': 229, 'thmA_ok': True, 'thmA_fail_with_nbar_minus_1': 5, 'rowsA(t,i_t,nbar,logC(m,nbar))': [(0, 1, 0, 0), (1, 16, 0, 0), (2, 72, 1, 5.6), (3, 101, 3, 14.1), (4, 37, 6, 23.5), (5, 2, 8, 28.5), (6, 0, 11, 34.4)], 'thmB_ok': True}
+    {'t': 2, 'nbar': 1, 'h': 6.9, 'nu': 8, 'X0': 0, 'r': 0, 'Mprime': 7, 'F_mod': 72, 'i_t': 72, 'ok': True}
+    {'t': 2, 'nbar': 2, 'h': 6.9, 'nu': 8, 'X0': 0, 'r': 0, 'Mprime': 7, 'F_mod': 72, 'i_t': 72, 'ok': True}
+    {'t': 3, 'nbar': 1, 'h': 9.1, 'nu': 11, 'X0': 240, 'r': 5, 'Mprime': 15, 'F_mod': 101, 'i_t': 101, 'ok': True}
+    {'t': 3, 'nbar': 2, 'h': 9.1, 'nu': 11, 'X0': 27, 'r': 3, 'Mprime': 13, 'F_mod': 101, 'i_t': 101, 'ok': True}
+    {'t': 4, 'nbar': 1, 'h': 10.8, 'nu': 12, 'X0': 4008, 'r': 6, 'Mprime': 17, 'F_mod': 37, 'i_t': 37, 'ok': True}
+    {'t': 4, 'nbar': 2, 'h': 10.8, 'nu': 12, 'X0': 1790, 'r': 7, 'Mprime': 18, 'F_mod': 37, 'i_t': 37, 'ok': True}
+    {'t': 5, 'nbar': 1, 'h': 12.1, 'nu': 14, 'X0': 29376, 'r': 9, 'Mprime': 22, 'F_mod': 2, 'i_t': 2, 'ok': True}
+    {'t': 5, 'nbar': 2, 'h': 12.1, 'nu': 14, 'X0': 27135, 'r': 9, 'Mprime': 22, 'F_mod': 2, 'i_t': 2, 'ok': True}
+    {'t': 6, 'nbar': 1, 'h': 13.0, 'nu': 14, 'X0': 127248, 'r': 10, 'Mprime': 23, 'F_mod': 0, 'i_t': 0, 'ok': True}
+    {'t': 6, 'nbar': 2, 'h': 13.0, 'nu': 14, 'X0': 196136, 'r': 9, 'Mprime': 22, 'F_mod': 0, 'i_t': 0, 'ok': True}
