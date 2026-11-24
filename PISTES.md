@@ -17,7 +17,6 @@ Légende : 🔄 en cours · 🆕 pas encore explorée · ⏸️ en attente · �
 | G8b | 🔄 **Compter les ensembles indépendants** (Q1′) | Compter les ensembles indépendants d'un graphe de degré moyen d en temps 2^(O(n/d)) | G7d |
 | G8c | 🔄 **Réfutations dans un système faible** | 3-SAT aléatoire a-t-il des réfutations de taille 2^o(n) en Extended Frege ou TC⁰-Frege ? | G4d |
 | G8d | 🔄 **Turán sur l'hypercube** | Prouver ρ(∞, d) ≥ poly(1/d) dans la méthode d'OpenAI (√log n optimal) | G7a |
-| G9L | 🔄 **Vérification Lean** | Partie déterministe de la note : schéma, lemme 1 complet, fait R, théorème B conditionnel, lemme 3 | G8L |
 
 ## 2. Pas encore explorées
 
@@ -31,6 +30,7 @@ Légende : 🔄 en cours · 🆕 pas encore explorée · ⏸️ en attente · �
 | 🆕 **Erreurs par point, cas non commutatif** | Étendre le lemme de G6d au-delà de la classe commutative | Moyenne | G6d, G7a |
 | 🆕 **Forme parité et contraction de tenseurs (Limits)** | Analyser les limites de ces deux voies d'OpenAI, non couvertes par Limits ni par notre note | Difficile | G4c, G6a |
 | 🆕 **Sparsification avec variables d'extension** | Échappatoire à la proposition L de G6c | Moyenne | G6c, G7d |
+| 🆕 **Égalité « moyenne sur les cartes témoins = choix indépendants » en Lean** | Comptage sur un produit | Facile | G9L |
 | 🆕 **Lemme 2 en Lean** | Anti-concentration avec constante explicite | Difficile (probabilités) | G9L |
 | 🆕 **Lemme 4 en Lean** | Graphes aléatoires | Très difficile (peu de choses dans Mathlib) | G9L |
 
@@ -38,7 +38,7 @@ Légende : 🔄 en cours · 🆕 pas encore explorée · ⏸️ en attente · �
 
 | Piste | Raison de l'attente |
 |---|---|
-| ⏸️ **Réécriture de la note** selon le rapport G8R (révision majeure) | Attendre G8a et G9L pour intégrer leurs résultats |
+| ⏸️ **Réécriture de la note** selon le rapport G8R (révision majeure) | Attendre G8a pour intégrer son résultat (G9L est terminé) |
 | ⏸️ **Relecture adverse de G7b** (modèle DP trop généreux, prop. O1) | Le rapport G8R confirme déjà la prop. O1 sur le texte source ; relecture complète à faire avec G8a |
 | ⏸️ **Auteur humain de la note** | arXiv demande un auteur humain responsable |
 
@@ -48,6 +48,7 @@ Légende : 🔄 en cours · 🆕 pas encore explorée · ⏸️ en attente · �
 |---|---|
 | ✅ Limits §9, modèle produit (G6a) | Réponse négative, 2^Ω(n^(2/3)) ; confirmée par relecture adverse ; note rédigée |
 | ✅ Lemme 1 en Lean (G8L) | Prouvé sans `sorry` |
+| ✅ Partie déterministe en Lean (G9L) | Schéma, lemme 1 complet, fait R, lemme 3, théorème A (sans condition), théorème B (avec le lemme 2 en hypothèse) ; sans `sorry` |
 | ✅ Hurwitz P(N) ≤ N^√2 (G4a) | Correct, mais déjà publié par d'autres |
 | ✅ Système de preuve IPS (G4d) | Réfutations IPS de taille 2^O(n/√log n) |
 | ✅ Plancher ρ_d ≥ 1/d (G6b) | Confirmé sous conditions |

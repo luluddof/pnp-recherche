@@ -317,6 +317,44 @@ theorem theoremB (hM : n ≤ M I) (c0 W : ℝ) (hc0 : 0 ≤ c0) (hL2 : S.Lemma2H
   · refine min_le_of_right_le ?_
     exact le_trans h2.le ((le_max_left _ _).trans hL)
 
+theorem wt_anti (d b : ℕ) (hd : 2 ≤ d) (hdb : d ≤ b) : wt b ≤ wt d := by
+  unfold wt
+  have hd' : (2 : ℝ) ≤ d := by exact_mod_cast hd
+  have hdb' : (d : ℝ) ≤ b := by exact_mod_cast hdb
+  rw [div_le_div_iff₀ (pow_pos (by linarith) 2) (pow_pos (by linarith) 2)]
+  have h1 : 0 ≤ ((b : ℝ) - d) * (((d : ℝ) - 1) * ((b : ℝ) - 1) - 1) := by
+    apply mul_nonneg <;> nlinarith
+  nlinarith [h1]
+
+/-- **Theorem B, bounded occurrences**: with all `d_v ≤ b` and `sepLB ≤ sep(F)`,
+some `t ∈ X` has `ρ_t + q_t + 1 > min (c_b · sep(F)/√s_t, 2n/3 - s_t)`,
+`c_b = c0 (b-1) / (√2 b²)`. -/
+theorem theoremB_bounded (hM : n ≤ M I) (c0 : ℝ) (hc0 : 0 ≤ c0) (hL2 : S.Lemma2Hyp c0)
+    (b : ℕ) (hb : 2 ≤ b) (hdb : ∀ v, dOcc I v ≤ b) (sepLB : ℕ)
+    (hsep : ∀ Y : Finset (Fin n), IsSep I Y → sepLB ≤ Y.card) :
+    ∃ t ∈ S.pts, min (c0 * ((b : ℝ) - 1) / (Real.sqrt 2 * (b : ℝ) ^ 2) * sepLB /
+        Real.sqrt (S.s t)) ((2 * n / 3 : ℝ) - S.s t) < (S.ρ t : ℝ) + S.q t + 1 := by
+  have hW : ∀ Y : Finset (Fin n), IsSep I Y → (∀ v ∈ Y, 2 ≤ dOcc I v) →
+      wt b * sepLB ≤ ∑ v ∈ Y, wt (dOcc I v) := by
+    intro Y hY h2
+    have hwb : 0 ≤ wt b := by
+      unfold wt
+      have : (2 : ℝ) ≤ b := by exact_mod_cast hb
+      apply div_nonneg <;> nlinarith
+    calc wt b * sepLB ≤ wt b * Y.card :=
+          mul_le_mul_of_nonneg_left (by exact_mod_cast hsep Y hY) hwb
+      _ = ∑ v ∈ Y, wt b := by rw [Finset.sum_const, nsmul_eq_mul, mul_comm]
+      _ ≤ ∑ v ∈ Y, wt (dOcc I v) :=
+          Finset.sum_le_sum fun v hv => wt_anti _ _ (h2 v hv) (hdb v)
+  obtain ⟨t, ht, h⟩ := S.theoremB hM c0 (wt b * sepLB) hc0 hL2 hW
+  refine ⟨t, ht, ?_⟩
+  convert h using 3
+  have hb2 : (2 : ℝ) ≤ b := by exact_mod_cast hb
+  have hb0 : (b : ℝ) ≠ 0 := by linarith
+  have hs2 : Real.sqrt 2 ≠ 0 := by positivity
+  unfold wt
+  field_simp
+
 end Scheme
 
 end ClauseScheme
@@ -325,3 +363,4 @@ end ClauseScheme
 #print axioms ClauseScheme.Scheme.exists_point
 #print axioms ClauseScheme.Scheme.lemma3
 #print axioms ClauseScheme.Scheme.theoremB
+#print axioms ClauseScheme.Scheme.theoremB_bounded

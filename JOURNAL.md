@@ -206,7 +206,13 @@ Fichier : `lean/PnpLean/WitnessDet.lean` (234 lignes, Lean 4.37.0-rc1 + Mathlib)
 | `sum_nullity_le` | **Σ_{t∈T} dim ker Φ(t) ≤ nR** pour tout ensemble fini T |
 | `deficiency_le_nullity_add` | borne de rang par blocs : Σ_γ (a_γ − \|I_γ\|)₊ ≤ dim ker A + Σ_γ dim R_γ (déficience − ρ ≤ dim ker) |
 
-**Non formalisé :** le passage du schéma de la note (polynômes P_o, carte témoin ω) à ces matrices. C'est une traduction directe, mais elle reste vérifiée seulement à la main. Les lemmes 2 à 4 (probabilités, séparateurs, 3-SAT aléatoire) ne sont pas formalisés.
+**Extension G9L ✅ (partie déterministe, vérifiée par le coordinateur) :** fichiers `Scheme.lean`, `TheoremB.lean`, `TheoremA.lean` (1 001 lignes au total avec WitnessDet). `lake build PnpLean.TheoremA` réussit ; aucun `sorry`, `admit`, `axiom` ni `native_decide` ; tous les théorèmes dépendent seulement de [propext, Classical.choice, Quot.sound].
+- Structure `Scheme` fidèle à la définition 5.1 (déformations P, points, ordres q, fonctionnelle Λ de reconstruction d'Hermite, groupes, α, sous-espaces R, condition (3)).
+- `lemma1` (complet, avec la traduction schéma → matrices), `factR`, `avg_lemma1` (moyenne sur toutes les cartes témoins), `exists_point`, **`lemma3` (prouvé)**, `theoremB` et `theoremB_bounded` (avec le **lemme 2 comme hypothèse explicite**, énoncé exactement comme dans la note), **`theoremA` (sans condition)**.
+- Écarts mineurs : groupes indexés par un type fini fixe ; sep(F) et W(F) donnés comme bornes inférieures valables pour tout séparateur (équivalent) ; l'égalité « moyenne uniforme sur les cartes témoins = choix indépendants » est argumentée, pas prouvée en Lean.
+- **Reste hors de Lean :** le lemme 2 (anti-concentration), le lemme 4 (3-SAT aléatoire), le corollaire C (asymptotique).
+
+**Non formalisé dans la première version :** le passage du schéma de la note (polynômes P_o, carte témoin ω) à ces matrices (fait ensuite par G9L, voir ci-dessus). C'est une traduction directe, mais elle reste vérifiée seulement à la main. Les lemmes 2 à 4 (probabilités, séparateurs, 3-SAT aléatoire) ne sont pas formalisés.
 
 ## 4 septies. Relecture indépendante de la note (G8R) et génération 8
 
