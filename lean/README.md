@@ -52,8 +52,9 @@ Pas encore d'article. Sources : `code/gen6/g6d/`, `code/gen7/g7a/`, `code/gen8/g
 | `QdPlus2.lean` | `two_splittings`, `four_le_card_bad`, **`qd2_lemma`** | Lemme Q_{d+2} : sur le cube de dimension d+2, avec des polynômes de sommet de degré ≤ d valant 1 en 0 et des points τ distincts non nuls, il y a au moins 4 mauvaises arêtes. |
 | `SqrtLog.lean` | **`sum_rank_ge_N`**, `core`, `N_eq` | **Théorème principal (candidat) de l'article 2 :** pour J de degré ≤ d avec J(0) = X^{⊗ℓ}, des points τ_k distincts non nuls (un par direction) et J(τ_k) = K_k + E_k avec K_k[x,y] = 0 si x_k ≠ y_k : si 2m + d + 1 ≤ ℓ, alors N(ℓ, m) ≤ Σ_k rang(E_k), avec N(ℓ, m) = Σ_{j≤m} Σ_{i≤j} C(ℓ, i). Sur ℚ. |
 | `Consequences.lean` | `exists_rank_ge`, `avg_le_max_rank`, `sum_choose_le_mul_of_rank_le`, `degree_ge_of_rank_le`, `N_one`, `N_two`, `sum_rank_ge_add_two` | Conséquences finies du théorème principal : forme max/moyenne, bornes sur N, et « si tous les rangs sont ≤ r et ℓ·r < Σ_{i≤m} C(ℓ,i), alors ℓ ≤ 2m + d » |
+| `AnyField.lean` | **`sum_rank_ge_N2`**, `sum_rank_ge_N` (tout corps), `sum_rank_ge_N_rat` | **Le théorème principal sur un corps quelconque**, sous la forme à deux paramètres : si ma + mc + d + 1 ≤ ℓ, alors N2(ℓ, ma, mc) = Σ_{|x| ≤ mc} (ma + 1 − |x|) ≤ Σ_k rang(E_k). La preuve n'utilise pas de positivité (un seul vecteur test). Le cas ℚ de `SqrtLog.lean` en est un cas particulier. |
 
-Cibles : `lake build PnpLean.Article2.Consequences` et `PnpLean.Article2.QdPlus2`. En cours (`Article2/EnCours/`) : la version sur un corps quelconque. `PerPoint.lean` importe `PnpLean.Article1.WitnessDet` (même argument de déterminant).
+Cibles : `lake build PnpLean.Article2.AnyField`, `PnpLean.Article2.Consequences` et `PnpLean.Article2.QdPlus2`. `PerPoint.lean` importe `PnpLean.Article1.WitnessDet` (même argument de déterminant).
 
 ### Non formalisé
 

@@ -27,7 +27,6 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
 | G14a | 🔄 **Échappatoires restantes de l'article 2** (piste « corps fini » FERMÉE : le théorème vaut sur tout corps, G13a) | Borne de degré D < nd (permise par O'Donnell) ; effondrement de rang par L, R′ ; autres décompositions | G13a |
-| G15L | 🔄 **Lean : théorème de l'article 2 sur tout corps** | `Article2/EnCours/AnyField.lean`, forme à deux paramètres (ma, mc) | G13a |
 | G14c | 🔄 **Un modèle de coût DP valide** | Modèle sur le graphe des lignes, non dégénéré, qui résiste à l'élimination ligne par ligne ; borne inférieure | G7b, G10a |
 | G14d | 🔄 **Compléter le théorème de l'article 2** | Multiplicités inégales (y a-t-il une échappatoire ?), écart d'un facteur log ℓ, asymptotique rigoureuse | G11b |
 | G14e | 🔄 **Termes « intriqués » (non produits)** | Plus petit cas (grille 2×3, λ = 1) : l'intrication aide-t-elle ? | G9d |
@@ -68,7 +67,7 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 | Piste | Raison de l'attente |
 |---|---|
 | ⏸️ **Version 3 de l'article 1** | **EN ATTENTE — décision de l'auteur (24/11) : ne pas faire la version 3 avant le retour de F. Dias**, à qui la version 2 a été envoyée pour vérification. Contenu préparé pour la version 3 (à compléter avec ses remarques) : (1) section Lean mise à jour : théorème principal prouvé sans hypothèse (G10e) ; (2) corrections de G10f : facteur b superflu, dire que la borne de Dias-Lima est meilleure pour les petits groupes, précisions de l'annexe A, 4 attributions à adoucir ; (3) théorème sep(F\*) ≥ c·n\* et son corollaire, si la relecture G11a le confirme ; (4) nouveaux chemins Lean (`lean/PnpLean/Article1/`) |
-| ⏸️ **Rédaction de l'article 2** (erreurs par point) | Condition de l'auteur : un résultat final. **État (24/11) : théorème prouvé en Lean (ℚ), confirmé par relecture adverse, valable sur tout corps (P+), nouveauté : semble nouveau (technique classique).** Réserves à écrire : vaut dans un modèle de coût ; ne couvre pas la contraction de tenseurs ni D < nd ni L/R′ ni les multiplicités inégales (G14a, G14d en cours). **En attente de l'accord de l'auteur pour rédiger.** |
+| ⏸️ **Rédaction de l'article 2** (erreurs par point) | Condition de l'auteur : un résultat final. **État (24/11) : théorème prouvé en Lean sur tout corps, confirmé par relecture adverse, nouveauté : semble nouveau (technique classique).** Réserves à écrire : vaut dans un modèle de coût ; ne couvre pas la contraction de tenseurs ni D < nd ni L/R′ ni les multiplicités inégales (G14a, G14d en cours). **En attente de l'accord de l'auteur pour rédiger.** |
 | ⏸️ **Note « plus long chemin / plus long cycle en 2^o(n) sur les graphes creux »** (candidat article 4) | Preuve confirmée par G10c ; conditionnel aux prépublications ; doit citer Wu-Wang (arXiv 2611.02548) ; résultat modeste. Décision de l'auteur |
 | ⏸️ **Relecture de l'article 1 par un expert humain** | **En cours : l'auteur a envoyé la version 2 à F. Dias (24/11).** Attendre sa réponse. |
 
@@ -81,6 +80,7 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 |---|---|
 | ✅ Limites de la contraction de tenseurs (G14b) | Annexe D reconstruite ; √log optimal pour les effilages dépendant de la valuation (théorème B, non relu) ; base possible d'un article 3 |
 | ✅ Relecture + nouveauté du théorème de l'article 2 (G13a) | Confirmé ; vaut sur tout corps ; semble nouveau |
+| ✅ **Lean : théorème de l'article 2 sur tout corps** (G15L) | `AnyField.sum_rank_ge_N2`, forme à deux paramètres |
 | ✅ Lean : compléments (G14g) | Article 1 sans l'hypothèse n ≤ M ; schéma trivial ; conséquences finies de l'article 2 |
 | ✅ **Pré-version 3 (brouillon)** (G12W) | `resultats/brouillons/pre-v3/` : 41 pages, marqué DRAFT ; section F\*, section Lean à jour, section « Scope of the claims » avec 8 questions ; à faire vérifier par une autre IA (voir `LISEZ-MOI.md`) |
 | ✅ Cas général des erreurs par point (G11c) | Lemme Q_{d+2} étendu ; la classe commutative n'est pas optimale (11 contre 12 à (4,1), numérique) |
