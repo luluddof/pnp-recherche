@@ -1,0 +1,12 @@
+(1) tightness: c blocks of D ones (image exactly (D+1)^c); identity (image 2^c)
+  blocks c=2 D=8: cols=16 rows=2 rank=2 rank_3=2 maxnorm=8 | log2#Z=6.34  [rank=2 <= . <= basis-norm bound 6.34 <= rank*log2(D+1)=6.34; box rows*log2(2D+1)=8.2] | log2 #mod3 = 3.17 <= rank_3*log2(3) = 3.17
+  blocks c=3 D=6: cols=18 rows=3 rank=3 rank_3=3 maxnorm=6 | log2#Z=8.42  [rank=3 <= . <= basis-norm bound 8.42 <= rank*log2(D+1)=8.42; box rows*log2(2D+1)=11.1] | log2 #mod3 = 4.75 <= rank_3*log2(3) = 4.75
+  blocks c=4 D=4: cols=16 rows=4 rank=4 rank_3=4 maxnorm=4 | log2#Z=9.29  [rank=4 <= . <= basis-norm bound 9.29 <= rank*log2(D+1)=9.29; box rows*log2(2D+1)=12.7] | log2 #mod3 = 6.34 <= rank_3*log2(3) = 6.34
+  identity c=6: cols=6 rows=6 rank=6 rank_3=6 maxnorm=1 | log2#Z=6.00  [rank=6 <= . <= basis-norm bound 6.00 <= rank*log2(D+1)=6.00; box rows*log2(2D+1)=9.5] | log2 #mod3 = 6.00 <= rank_3*log2(3) = 9.51
+  signed blocks c=2 (+5,-5): cols=20 rows=2 rank=2 rank_3=2 maxnorm=10 | log2#Z=6.92  [rank=2 <= . <= basis-norm bound 6.92 <= rank*log2(D+1)=6.92; box rows*log2(2D+1)=8.8] | log2 #mod3 = 3.17 <= rank_3*log2(3) = 3.17
+(2) auxiliary rows, r=2, group 0 at t=0, dense sub-box of coordinates (all positions s>=1 in {01,10,00,11})
+  Q=4 m=3 per-point bad rows, box 16 coords: cols=16 rows=6 rank=6 rank_3=6 maxnorm=8 | log2#Z=12.04  [rank=6 <= . <= basis-norm bound 19.02 <= rank*log2(D+1)=19.02; box rows*log2(2D+1)=24.5] | log2 #mod3 = 9.51 <= rank_3*log2(3) = 9.51
+  Q=4 m=3 per-point bad rows, box 18 coords: cols=18 rows=5 rank=5 rank_3=5 maxnorm=8 | log2#Z=10.67  [rank=5 <= . <= basis-norm bound 14.15 <= rank*log2(D+1)=15.85; box rows*log2(2D+1)=20.4] | log2 #mod3 = 7.92 <= rank_3*log2(3) = 7.92
+  Q=5 m=3 per-point bad rows, box 16 coords: cols=16 rows=6 rank=6 rank_3=6 maxnorm=16 | log2#Z=12.04  [rank=6 <= . <= basis-norm bound 24.52 <= rank*log2(D+1)=24.52; box rows*log2(2D+1)=30.3] | log2 #mod3 = 9.51 <= rank_3*log2(3) = 9.51
+  Q=5 m=3 per-point bad rows, box 16 coords: cols=16 rows=6 rank=6 rank_3=6 maxnorm=16 | log2#Z=12.04  [rank=6 <= . <= basis-norm bound 24.52 <= rank*log2(D+1)=24.52; box rows*log2(2D+1)=30.3] | log2 #mod3 = 9.51 <= rank_3*log2(3) = 9.51
+  Q=5 m=3 per-point bad rows, box 12 coords: cols=12 rows=4 rank=4 rank_3=4 maxnorm=8 | log2#Z=8.34  [rank=4 <= . <= basis-norm bound 11.83 <= rank*log2(D+1)=12.68; box rows*log2(2D+1)=16.3] | log2 #mod3 = 6.34 <= rank_3*log2(3) = 6.34

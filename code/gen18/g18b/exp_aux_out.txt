@@ -1,0 +1,26 @@
+=== r=2 Q=3 block length m=3 (degree <= 2), field F_9, nodes=[(1, 0), (2, 0), (0, 1)]
+  D = 64 ; max deg_T P_z = 2 ; blocks [[0, 1, 2], [3]]
+  P(0)=I  OK
+  t=0: |bad|=2 (pred 2) c_t=4 rho_t=0.0625  nonzero rows per group [3, 3]  rank_Q per group [2, 2]  rank_3 per group [2, 2]   kernel condition (Def 3.1(4)) over F_9: OK
+  t=1: |bad|=2 (pred 2) c_t=4 rho_t=0.0625  nonzero rows per group [3, 3]  rank_Q per group [2, 2]  rank_3 per group [2, 2]   kernel condition (Def 3.1(4)) over F_9: OK
+  t=2: |bad|=0 (pred 2) c_t=0 rho_t=0.0000  nonzero rows per group [0, 0]  rank_Q per group [0, 0]  rank_3 per group [0, 0]   kernel condition (Def 3.1(4)) over F_9: OK
+=== r=2 Q=4 block length m=3 (degree <= 2), field F_9, nodes=[(1, 0), (2, 0), (0, 1), (0, 2)]
+  D = 256 ; max deg_T P_z = 2 ; blocks [[0, 1, 2], [3, 4]]
+  P(0)=I  OK
+  t=0: |bad|=6 (pred 6) c_t=36 rho_t=0.1406  nonzero rows per group [27, 27]  rank_Q per group [18, 18]  rank_3 per group [18, 18]   kernel condition (Def 3.1(4)) over F_9: OK
+  t=1: |bad|=6 (pred 6) c_t=36 rho_t=0.1406  nonzero rows per group [27, 27]  rank_Q per group [18, 18]  rank_3 per group [18, 18]   kernel condition (Def 3.1(4)) over F_9: OK
+  t=2: |bad|=6 (pred 6) c_t=36 rho_t=0.1406  nonzero rows per group [27, 27]  rank_Q per group [18, 18]  rank_3 per group [18, 18]   kernel condition (Def 3.1(4)) over F_9: OK
+  t=3: |bad|=6 (pred 6) c_t=36 rho_t=0.1406  nonzero rows per group [27, 27]  rank_Q per group [18, 18]  rank_3 per group [18, 18]   kernel condition (Def 3.1(4)) over F_9: OK
+=== r=2 Q=5 block length m=3 (degree <= 2), field F_9, nodes=[(1, 0), (2, 0), (0, 1), (0, 2), (1, 1)]
+  D = 1024 ; max deg_T P_z = 2 ; blocks [[0, 1, 2], [3, 4, 5]]
+  P(0)=I  OK
+  t=0: |bad|=6 (pred 12) c_t=108 rho_t=0.1055  nonzero rows per group [81, 81]  rank_Q per group [54, 54]  rank_3 per group [54, 54]   kernel condition (Def 3.1(4)) over F_9: OK
+  t=1: |bad|=6 (pred 12) c_t=108 rho_t=0.1055  nonzero rows per group [81, 81]  rank_Q per group [54, 54]  rank_3 per group [54, 54]   kernel condition (Def 3.1(4)) over F_9: OK
+  t=2: |bad|=6 (pred 12) c_t=108 rho_t=0.1055  nonzero rows per group [81, 81]  rank_Q per group [54, 54]  rank_3 per group [54, 54]   kernel condition (Def 3.1(4)) over F_9: OK
+  t=3: |bad|=6 (pred 12) c_t=108 rho_t=0.1055  nonzero rows per group [81, 81]  rank_Q per group [54, 54]  rank_3 per group [54, 54]   kernel condition (Def 3.1(4)) over F_9: OK
+  t=4: |bad|=12 (pred 12) c_t=216 rho_t=0.2109  nonzero rows per group [162, 162]  rank_Q per group [108, 108]  rank_3 per group [108, 108]   kernel condition (Def 3.1(4)) over F_9: OK
+=== reachable measurement vectors (group 0 at t=0)
+  Q=3 m=3 filled=16: nonzero rows=3 rank_Q=2 rank_3=2 | log2 #reachable over Z = 2.58 (2^rank: 2, basis-norm bound: 2.58, cube: 16, P's box (2D+1)^rows: 21) | log3 #reachable mod 3 = 1.63 (<= rank_3 = 2)
+  Q=4 m=3 filled=18: nonzero rows=13 rank_Q=6 rank_3=6 | log2 #reachable over Z = 7.17 (2^rank: 6, basis-norm bound: 7.17, cube: 18, P's box (2D+1)^rows: 117) | log3 #reachable mod 3 = 4.52 (<= rank_3 = 6)
+  Q=4 m=3 filled=20: nonzero rows=16 rank_Q=7 rank_3=7 | log2 #reachable over Z = 8.58 (2^rank: 7, basis-norm bound: 8.58, cube: 20, P's box (2D+1)^rows: 144) | log3 #reachable mod 3 = 5.15 (<= rank_3 = 7)
+  Q=5 m=3 filled=20: nonzero rows=36 rank_Q=14 rank_3=14 | log2 #reachable over Z = 14.00 (2^rank: 14, basis-norm bound: 14.00, cube: 20, P's box (2D+1)^rows: 396) | log3 #reachable mod 3 = 8.83 (<= rank_3 = 14)

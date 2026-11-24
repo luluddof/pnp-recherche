@@ -1,0 +1,15 @@
+seed 1: n=10, 9 clauses, h=1, #sat=360; H_w(0) = weighted count in F_9: OK
+  t=0: rows per group [9, 15] rank_3 [2, 6] | tuples mod 3: 256 <= 3^(sum rank) = 6561; reachable over Z: 256; group sizes [3, 7] | forms depend only on (x_g, y_-g mod 3): OK | evaluator == brute H_w(t): OK
+  t=1: rows per group [13, 10] rank_3 [4, 3] | tuples mod 3: 128 <= 3^(sum rank) = 2187; reachable over Z: 128; group sizes [5, 5] | forms depend only on (x_g, y_-g mod 3): OK | evaluator == brute H_w(t): OK
+  t=2: rows per group [3, 11] rank_3 [2, 4] | tuples mod 3: 64 <= 3^(sum rank) = 729; reachable over Z: 64; group sizes [4, 6] | forms depend only on (x_g, y_-g mod 3): OK | evaluator == brute H_w(t): OK
+  t=3: rows per group [12, 5] rank_3 [5, 3] | tuples mod 3: 384 <= 3^(sum rank) = 6561; reachable over Z: 384; group sizes [5, 5] | forms depend only on (x_g, y_-g mod 3): OK | evaluator == brute H_w(t): OK
+seed 2: n=10, 9 clauses, h=2, #sat=287; H_w(0) = weighted count in F_9: OK
+  t=0: rows per group [6, 20] rank_3 [4, 4] | tuples mod 3: 384 <= 3^(sum rank) = 6561; reachable over Z: 384; group sizes [6, 4] | forms depend only on (x_g, y_-g mod 3): OK | evaluator == brute H_w(t): OK
+  t=1: rows per group [2, 28] rank_3 [1, 7] | tuples mod 3: 256 <= 3^(sum rank) = 6561; reachable over Z: 256; group sizes [1, 9] | forms depend only on (x_g, y_-g mod 3): OK | evaluator == brute H_w(t): OK
+  t=2: rows per group [13, 17] rank_3 [6, 3] | tuples mod 3: 512 <= 3^(sum rank) = 19683; reachable over Z: 512; group sizes [6, 4] | forms depend only on (x_g, y_-g mod 3): OK | evaluator == brute H_w(t): OK
+  t=3: rows per group [16, 12] rank_3 [3, 5] | tuples mod 3: 256 <= 3^(sum rank) = 6561; reachable over Z: 256; group sizes [5, 5] | forms depend only on (x_g, y_-g mod 3): OK | evaluator == brute H_w(t): OK
+seed 3: n=10, 9 clauses, h=3, #sat=364; H_w(0) = weighted count in F_9: OK
+  t=0: rows per group [13, 14] rank_3 [3, 5] | tuples mod 3: 256 <= 3^(sum rank) = 6561; reachable over Z: 256; group sizes [5, 5] | forms depend only on (x_g, y_-g mod 3): OK | evaluator == brute H_w(t): OK
+  t=1: rows per group [11, 13] rank_3 [6, 3] | tuples mod 3: 512 <= 3^(sum rank) = 19683; reachable over Z: 512; group sizes [6, 4] | forms depend only on (x_g, y_-g mod 3): OK | evaluator == brute H_w(t): OK
+  t=2: rows per group [6, 22] rank_3 [3, 5] | tuples mod 3: 256 <= 3^(sum rank) = 6561; reachable over Z: 256; group sizes [3, 7] | forms depend only on (x_g, y_-g mod 3): OK | evaluator == brute H_w(t): OK
+  t=3: rows per group [18, 5] rank_3 [5, 3] | tuples mod 3: 256 <= 3^(sum rank) = 6561; reachable over Z: 256; group sizes [7, 3] | forms depend only on (x_g, y_-g mod 3): OK | evaluator == brute H_w(t): OK
