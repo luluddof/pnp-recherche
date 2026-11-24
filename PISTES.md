@@ -42,12 +42,11 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 | G18S | 🔄 **Relecture adverse de G18e** | G18e annonce le théorème A′ : N ≥ 2^(0,399·M/√u) dans le modèle DF, donc 2^Θ(M/√u) avec la borne supérieure de l'annexe D. C'était la condition manquante pour l'article 3. Juste ? Charges non uniformes ? Énoncé prêt pour Lean. | G18e (`code/gen18/g18e/`) |
 | G18f | 🔄 **Termes intriqués, λ = 2** (question E1) | Seule piste vers 2^(n^(1−ε)). Calcul à λ = 2 ou question réduite ; E1 est-elle une question de rang asymptotique d'un tenseur explicite ? | G9d, G14e |
 | G18g | 🔄 **Problème de Hurwitz et Naslund** | P(N) ≤ N^(1+o(1)) ou P(N) ≥ N^(1+ε) ? Variante exacte utile à l'algorithme ; état de l'art 2026 ; une tentative originale. | N1, G4a, G5b |
-| G18h | 🔄 **Pièces hors du cadre « un seul espace gradué »** | Le plancher sur ρ est-il une vraie limite ? Retirer chaque hypothèse du cadre, une par une. | G9a, G9b |
 | G18i | 🔄 **Réfutation des 3-CNF aléatoires à densité constante** | Carte temps contre densité avec les algorithmes de 2026 ; lecture en complexité des preuves ; une idée nouvelle testée. | obstacle central |
 
 Dossiers de travail de la génération 18 : `scratchpad/gen18/g18a` à `g18i`.
 
-**État (24/11, 10 h 45 UTC) :** les neuf agents se sont arrêtés à cause de la limite d'utilisation, presque au début. Relance en deux vagues. **En marche :** G18f, G18g, G18h, G18i, G18R, G18S. **Terminés :** G18a, G18b (à relire), G18c, G18d, G18e (à relire).
+**État (24/11, 10 h 45 UTC) :** les neuf agents se sont arrêtés à cause de la limite d'utilisation, presque au début. Relance en deux vagues. **En marche :** G18f, G18g, G18i, G18R, G18S. **Terminés :** G18a, G18b (à relire), G18c, G18d, G18e (à relire), G18h.
 
 Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g18d` (erreur de numéro au lancement ; la génération est bien la 17).
 
@@ -102,6 +101,14 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 | Gain constant sur l'annexe D | Modes 4 fois redondants (facteur 2), effilage optimal (1/√3) : écrire l'algorithme amélioré et vérifier le gain total (≈ 1/5 de l'exposant, non vérifié). | G18d |
 | Pièces à D directions avec ρ(D) < D^(−1/2) | Loi commune des deux algorithmes : gain = D^(−1/2). Le plancher 1/D donnerait n/log n. | G18c |
 
+**Nouvelles pistes issues de G18h (24/11) — les trois objets qui passeraient sous 1/√2 :**
+
+| Piste | Question précise | Origine |
+|---|---|---|
+| Profil en escalier | Construire ou exclure des pièces dont le profil de dimension est N sur [h₁, 3h₁] puis N² au-dessus. Coût dans le compte : ρ = 1/2 exactement, même avec (V). | G18h |
+| Opérateurs presque commutants à croissance exponentielle | Familles N×N sur un espace gradué avec log dim ~ E (pas √E) et une fenêtre H = o(E₀). Sans l'hypothèse (V), le compte donne ρ ≥ 2^(−α). | G18h |
+| Identité de localité à D directions | Une identité sur un espace avec log dim ~ E^((D−1)/D). Donnerait ρ(D) ≈ D^(−(D−1)/D) (spéculatif). Petits cas : D = 3 : 1/2 ; D = 4 : 3/8. | G18h, G18c |
+
 ## 3. En attente
 
 | Piste | Raison de l'attente |
@@ -119,6 +126,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Résultat |
 |---|---|
+| ⚠️ **Pièces hors du cadre** (G18h) | Aucune famille avec ρ < 1/√2. Mais le plancher 1/√2 vient de l'hypothèse (V) et de la forme du profil de croissance, pas de « un seul espace gradué ». Seul plancher prouvé en général : 1/2. Trois objets donneraient un gain (opérateurs presque commutants à croissance exponentielle ; profil en escalier ; identité à D directions). `code/gen18/g18h/notes.md` |
 | ❌ **Précision 2-adique des vrais noyaux** (G18a) | Pas de gain au-delà d'une constante. Rang plein ⇒ même précision que la boîte noire (17 cas). Le « 4 contre 14 » de G17a est un effet de nœud de coupe sur peu de paquets. Constante de l'exposant : facteur 2 à 3,5 possible (κ = 24 → 2 à 5,9). Numérique seulement. `code/gen18/g18a/notes.md` |
 | ⚠️ **Limite de l'interpolation récursive** (G18d) | n/√log n dans toutes les familles analysées. La récursion ne compose pas les gains : la racine domine. La profondeur achète seulement √loglog. Gain constant possible (modes 4 fois redondants). Borne inférieure seulement « au niveau de la conception » ; famille générale : ouvert. Conjecture C1 (formule de Smith des blocs de Cauchy). `code/gen18/g18d/notes.md` |
 | ❌ **Hybride des deux algorithmes de 2026** (G18c) | Aucun gain sur six substitutions. Les deux algorithmes suivent la même loi heuristique : gain = (nombre de directions)^(−1/2). Un vrai gain demande des pièces à D directions avec ρ(D) < D^(−1/2) (plancher 1/D → échelon 2). `code/gen18/g18c/notes.md` |
