@@ -44,7 +44,10 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
-| — | *Aucun agent en cours. La génération 23 est terminée (24/11).* | | |
+| G24a | 🔄 **Pièces de Hrubeš lues de façon non symétrique** | Technique de la littérature jamais essayée (record publié 1,62). Profil (rang par lignes, rang par colonnes) de chaque pièce ; courbe de compromis exacte contre le cercle ; un hybride avec la graduation de l'annexe B. | G22a |
+| G24b | 🔄 **Constructions à plusieurs canaux sur le bord de Voronoï** | Recherche exacte sur deux et trois copies de A1 ; argument de filtration au niveau des taux. Fermer le dernier cas ouvert des algèbres de sommets (écart 2,799 – 3,030). | G23c |
+| G24c | 🔄 **Distance pour q ≥ 2 et près de p·q ≈ N²** | Étendre le théorème A (indépendant de N) à q ≥ 2 ; premières données près de la réalisabilité (N = 4, 5, 6) : croissance additive ou en p·q ? | G23d |
+| G24d | 🔄 **Décider les petits cas ouverts par SAT** | Modèle ST : (18,18) à N = 12, (28,28) à N = 16, valeurs exactes pour N = 9 à 16 ; problème général sur GF(2) : (3,3) et (5,2) à N = 4. Encodages avec brisure de symétrie ; preuves DRAT. | G22b-bis, G21b |
 
 Dossiers de travail de la génération 18 : `scratchpad/gen18/g18a` à `g18i`.
 
