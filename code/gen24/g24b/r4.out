@@ -1,0 +1,13 @@
+MODE A1 MSHIFT 0.0
+  loose            min 4rho = 2.8160 at u=1.154 v=1.154
+  loose+flattening min 4rho = 2.8449 at u=40.000 v=40.000  (loose rate 15.9192, flat rate 15.9066)
+  grid points with loose<2sqrt2: 6 ; min over them of loose+flat = 2.8864 at u=1.422 v=1.422
+MODE A1A1c MSHIFT 0.0
+  loose            min 4rho = 2.7989 at u=0.330 v=0.330
+  loose+flattening min 4rho = 2.8535 at u=40.000 v=40.000  (loose rate 22.2977, flat rate 22.2797)
+  grid points with loose<2sqrt2: 11 ; min over them of loose+flat = 3.0224 at u=0.407 v=0.407
+MODE A1 MSHIFT 0.5
+  loose            min 4rho = 2.4164 at u=0.116 v=0.030
+  loose+flattening min 4rho = 2.6740 at u=0.094 v=0.030  (loose rate 0.4208, flat rate 0.3889)
+  grid points with loose<2sqrt2: 259 ; min over them of loose+flat = 2.6740 at u=0.094 v=0.030
+  coset, loose restricted to shifted u>=0.28 (G23c scan grid): 2.5262 at u=0.297 v=0.033

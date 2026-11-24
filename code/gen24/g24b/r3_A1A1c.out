@@ -1,0 +1,10 @@
+MODE A1A1c MSHIFT 0.0
+  loose            min 4rho = 2.7989 at u=0.330 v=0.330
+  loose+flattening min 4rho = 2.8535 at u=40.000 v=40.000  (loose rate 22.2977, flat rate 22.2797)
+   u=v=0.30: lab 1.7826 pair 1.7826 flat 1.6393
+   u=v=0.60: lab 2.4830 pair 2.4830 flat 2.3606
+   u=v=1.00: lab 3.2251 pair 3.2251 flat 3.1219
+   u=v=1.11: lab 3.4057 pair 3.4057 flat 3.3067
+   u=v=1.50: lab 3.9901 pair 3.9901 flat 3.9025
+   u=v=2.00: lab 4.6467 pair 4.6467 flat 4.5694
+   u=v=3.00: lab 5.7622 pair 5.7622 flat 5.6984

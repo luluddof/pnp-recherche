@@ -1,0 +1,8 @@
+S3 size 8
+3copy e=0 ha=0 hb=0 dims(V_ha,M_e)=(8,8) maxSC=2 sqrt(rkF)=2.83 rkF=8 blockbound=14 (0s)
+3copy e=1 ha=1 hb=1 dims(V_ha,M_e)=(24,24) maxSC=6 sqrt(rkF)=11.22 rkF=126 blockbound=126 (1s)
+3copy e=2 ha=1 hb=1 dims(V_ha,M_e)=(24,96) maxSC=21 sqrt(rkF)=25.81 rkF=666 blockbound=666 (2s)
+3copy e=1 ha=2 hb=2 dims(V_ha,M_e)=(96,24) maxSC=21 sqrt(rkF)=25.81 rkF=666 blockbound=666 (2s)
+3copy e=2 ha=2 hb=2 dims(V_ha,M_e)=(96,96) maxSC=32 sqrt(rkF)=56.18 rkF=3156 blockbound=3168 (9s)
+3copy e=3 ha=1 hb=1 dims(V_ha,M_e)=(24,248) maxSC=24 sqrt(rkF)=42.28 rkF=1788 blockbound=1788 (6s)
+3copy e=3 ha=2 hb=2 dims(V_ha,M_e)=(96,248) maxSC=58 sqrt(rkF)=91.55 rkF=8382 blockbound=8394 (51s)
