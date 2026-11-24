@@ -101,7 +101,7 @@ theorem Xtensor_apply (ℓ : ℕ) (x y : Fin ℓ → Bool) :
     simp
   · have : ∃ i, x i = y i := by
       by_contra hne
-      push_neg at hne
+      push Not at hne
       apply h
       funext i
       have := hne i
