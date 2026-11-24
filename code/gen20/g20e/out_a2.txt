@@ -1,0 +1,33 @@
+n m  how  cross |dA| |dB| suppA/2^dA suppB/2^dB  rankC (2^c bound)  rank_restr  log2rC log2rR bits  Z
+16 68 random 54 8 8 160/256 56/256 17 (2^54) 1 4.09 0.00 8 1 float-check True True
+16 68 random 57 8 8 108/256 140/256 6 (2^57) 4 2.58 2.00 8 11 float-check True True
+16 68 random 53 8 8 107/256 82/256 11 (2^53) 2 3.46 1.00 8 10 float-check True True
+16 68 random 52 8 8 92/256 89/256 7 (2^52) 1 2.81 0.00 8 1 float-check True True
+24 72 kl boundary too large 12 12
+24 72 kl boundary too large 12 12
+24 72 kl boundary too large 12 12
+24 72 kl boundary too large 12 12
+24 48 kl boundary too large 12 12
+24 48 kl boundary too large 11 11
+24 48 kl boundary too large 11 11
+24 48 kl boundary too large 11 10
+32 64 kl boundary too large 15 15
+32 64 kl boundary too large 14 15
+32 64 kl boundary too large 15 16
+32 64 kl boundary too large 14 15
+32 48 kl boundary too large 13 13
+32 48 kl boundary too large 14 12
+32 48 kl boundary too large 13 14
+32 48 kl boundary too large 14 13
+40 60 kl boundary too large 16 16
+40 60 kl boundary too large 17 19
+40 60 kl boundary too large 16 16
+40 60 kl boundary too large 17 15
+40 40 kl boundary too large 11 11
+40 40 kl boundary too large 11 12
+40 40 kl boundary too large 10 12
+40 40 kl boundary too large 13 12
+48 48 kl boundary too large 14 14
+48 48 kl boundary too large 11 14
+48 48 kl boundary too large 14 14
+48 48 kl boundary too large 14 14

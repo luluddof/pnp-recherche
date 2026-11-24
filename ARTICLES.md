@@ -149,6 +149,8 @@ Ce fichier liste **tout ce qui peut entrer dans un article**, présent ou futur.
 | Dictionnaire commun des deux algorithmes de 2026 ; loi « gain = 1/√D » ; six hybrides sans gain | Loi heuristique, pas un théorème. Calculs sur de très petits cas. Utile comme section d'exposé dans l'article 3, pas seul. | `code/gen18/g18c/notes.md` |
 | Diagnostic du plancher 1/√2 (hypothèse (V), profil de croissance) | Aucun objet construit, aucun plancher nouveau prouvé. Le profil en escalier tel que défini est exclu (G19b). C'est une carte pour la recherche. | `code/gen18/g18h/notes.md`, `code/gen19/g19b/notes.md` |
 | Reformulation du problème de Hurwitz-Naslund (droite contre cercle) | Aucune borne améliorée. La partie prouvée est dans B2. | `code/gen18/g18g/notes.md` |
+| Sept familles de constructions sous le cercle (Pauli, Clifford, fenêtre d'Alman-Williams, Weyl, Hrubeš) | Résultat négatif : aucune ne passe sous le cercle. Le lien exact avec la non-rigidité (H = G + H·D·H) est propre, mais c'est une remarque. La borne « ρ ≥ 2/3 pour un profil concave » n'est pas relue. | `code/gen20/g20c/notes.md` |
+| Pièces adaptées à l'instance ; mesures d'expansion des 3-CNF aléatoires | Résultat négatif attendu. La proposition R (le croisement restreint reste un échange complet) est une remarque utile pour la portée de l'article 3 ou de la note B2. | `code/gen20/g20e/notes.md` |
 | Question E1 (termes intriqués) | Non tranchée en général. La partie prouvée est dans B2. Le plus petit cas ouvert (N = 3) ne montre aucun gain, mais c'est un résultat numérique, pas une preuve. | `code/gen18/g18f/notes.md`, `code/gen19/g19c/notes.md` |
 | Corollaire sur le problème de Hurwitz (borne N^√2) | **Déjà publié** par d'autres (Siemaszko, Debnath). | `JOURNAL.md`, résultat G4a |
 | Conséquence pour l'arbre de Steiner | **Déjà revendiquée** par Wu et Wang (arXiv:2611.02548). | `code/gen9/g9e/` |
@@ -161,6 +163,7 @@ Ce fichier liste **tout ce qui peut entrer dans un article**, présent ou futur.
 | Date | Changement |
 |---|---|
 | 24/11/2026 | Création du registre après la génération 18. Articles 1, 2, 3 ; candidats B1 à B4. |
+| 24/11/2026 | G20c, G20e : résultats négatifs, ajoutés à la partie C. Aucun nouveau candidat. |
 | 24/11/2026 | G20d : une barrière (théorème B, non relue) est ajoutée au candidat B2, qui devient une note possible sous conditions. |
 | 24/11/2026 | G20g : le théorème C (candidat B2) est vérifié par Lean ; la bibliothèque B4 a 17 énoncés. |
 | 24/11/2026 | G20f : les éléments de G19a (article 3) et de G19b (candidat B2) passent au niveau P+ ; le théorème 5 est corrigé. |

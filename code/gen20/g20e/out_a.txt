@@ -1,0 +1,7 @@
+n m  how  cross |dA| |dB| suppA/2^dA suppB/2^dB  rankC (2^c bound)  rank_restr  log2rC log2rR bits  Z
+16 68 kl 48 8 8 86/256 56/256 16 (2^48) 1 4.00 0.00 8 2 float-check True True
+16 68 kl 47 8 8 62/256 85/256 19 (2^47) 2 4.25 1.00 8 4 float-check True True
+16 68 kl 48 8 8 73/256 34/256 16 (2^48) 1 4.00 0.00 8 1 float-check True True
+20 85 kl 56 10 10 188/1024 90/1024 50 (2^56) 2 5.64 1.00 10 24 float-check True True
+20 85 kl 56 10 10 94/1024 172/1024 35 (2^56) 0 5.13 0.00 10 0 float-check True True
+20 85 kl 59 10 10 146/1024 147/1024 20 (2^59) 0 4.32 0.00 10 0 float-check True True
