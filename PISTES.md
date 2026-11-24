@@ -40,7 +40,7 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 |---|---|---|---|
 | G18a | 🔄 **Précision réelle des noyaux 2-adiques** | L'analyse d'OpenAI paie 40 bits là où 10 suffisent (14 contre 4 sur un paquet creux). Le gain dépasse-t-il une constante ? Effet sur l'exposant. | G17a |
 | G18R | 🔄 **Relecture adverse de G18b** | G18b annonce un gain d'un facteur loglog n sur la route d'interpolation (décision / #F mod 3, occurrences bornées), par un évaluateur modulo 3. Esquisse. La caractéristique 3 casse-t-elle un lemme de la prépublication ? Test complet indépendant. | G18b (`code/gen18/g18b/`) |
-| G18e | 🔄 **Borne de rang dans le modèle DF** | Prouvé 2^(M/4^u), atteint 2^(M/√u). Meilleure borne, ou meilleur schéma ; minimums exacts pour u = 2, 3. | G14b, G17a |
+| G18S | 🔄 **Relecture adverse de G18e** | G18e annonce le théorème A′ : N ≥ 2^(0,399·M/√u) dans le modèle DF, donc 2^Θ(M/√u) avec la borne supérieure de l'annexe D. C'était la condition manquante pour l'article 3. Juste ? Charges non uniformes ? Énoncé prêt pour Lean. | G18e (`code/gen18/g18e/`) |
 | G18f | 🔄 **Termes intriqués, λ = 2** (question E1) | Seule piste vers 2^(n^(1−ε)). Calcul à λ = 2 ou question réduite ; E1 est-elle une question de rang asymptotique d'un tenseur explicite ? | G9d, G14e |
 | G18g | 🔄 **Problème de Hurwitz et Naslund** | P(N) ≤ N^(1+o(1)) ou P(N) ≥ N^(1+ε) ? Variante exacte utile à l'algorithme ; état de l'art 2026 ; une tentative originale. | N1, G4a, G5b |
 | G18h | 🔄 **Pièces hors du cadre « un seul espace gradué »** | Le plancher sur ρ est-il une vraie limite ? Retirer chaque hypothèse du cadre, une par une. | G9a, G9b |
@@ -48,7 +48,7 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 Dossiers de travail de la génération 18 : `scratchpad/gen18/g18a` à `g18i`.
 
-**État (24/11, 10 h 45 UTC) :** les neuf agents se sont arrêtés à cause de la limite d'utilisation, presque au début. Relance en deux vagues. **En marche :** G18a, G18e, G18f, G18g, G18h, G18R. **Terminés :** G18b (à relire), G18c, G18d. **À relancer :** G18i.
+**État (24/11, 10 h 45 UTC) :** les neuf agents se sont arrêtés à cause de la limite d'utilisation, presque au début. Relance en deux vagues. **En marche :** G18a, G18f, G18g, G18h, G18i, G18R, G18S. **Terminés :** G18b (à relire), G18c, G18d, G18e (à relire).
 
 Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g18d` (erreur de numéro au lancement ; la génération est bien la 17).
 

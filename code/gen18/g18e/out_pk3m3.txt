@@ -1,0 +1,19 @@
+pk3m3 profile (0, 0, 2) N=2: best residual^2 = 6.000e+00 after 20 starts 
+pk3m3 profile (0, 1, 1) N=2: best residual^2 = 4.000e+00 after 20 starts 
+pk3m3 profile (0, 2, 0) N=2: best residual^2 = 6.000e+00 after 20 starts 
+pk3m3 profile (1, 0, 1) N=2: best residual^2 = 4.000e+00 after 20 starts 
+pk3m3 profile (1, 1, 0) N=2: best residual^2 = 4.000e+00 after 20 starts 
+pk3m3 profile (2, 0, 0) N=2: best residual^2 = 6.000e+00 after 20 starts 
+pk3m3 profile (0, 0, 3) N=3: best residual^2 = 5.000e+00 after 20 starts 
+pk3m3 profile (0, 1, 2) N=3: best residual^2 = 3.000e+00 after 20 starts 
+pk3m3 profile (0, 2, 1) N=3: best residual^2 = 3.000e+00 after 20 starts 
+pk3m3 profile (0, 3, 0) N=3: best residual^2 = 5.000e+00 after 20 starts 
+pk3m3 profile (1, 0, 2) N=3: best residual^2 = 3.000e+00 after 20 starts 
+pk3m3 profile (1, 1, 1) N=3: best residual^2 = 2.000e+00 after 20 starts 
+pk3m3 profile (1, 2, 0) N=3: best residual^2 = 3.000e+00 after 20 starts 
+pk3m3 profile (2, 0, 1) N=3: best residual^2 = 3.000e+00 after 20 starts 
+pk3m3 profile (2, 1, 0) N=3: best residual^2 = 3.000e+00 after 20 starts 
+pk3m3 profile (3, 0, 0) N=3: best residual^2 = 5.000e+00 after 20 starts 
+pk3m3 profile (2, 2, 0) N=4: best residual^2 = 1.092e-30 after 1 starts FOUND
+pk3m3 profile (2, 0, 2) N=4: best residual^2 = 5.968e-31 after 1 starts FOUND
+pk3m3 profile (0, 2, 2) N=4: best residual^2 = 9.785e-31 after 1 starts FOUND

@@ -1,0 +1,31 @@
+pk3m4 profile (1, 1, 0) N=2: best residual^2 = 1.200e+01 after 12 starts 
+pk3m4 profile (2, 0, 0) N=2: best residual^2 = 1.400e+01 after 12 starts 
+pk3m4 profile (1, 1, 1) N=3: best residual^2 = 9.831e+00 after 12 starts 
+pk3m4 profile (2, 1, 0) N=3: best residual^2 = 1.000e+01 after 12 starts 
+pk3m4 profile (3, 0, 0) N=3: best residual^2 = 1.300e+01 after 12 starts 
+pk3m4 profile (2, 1, 1) N=4: best residual^2 = 5.000e+00 after 12 starts 
+Traceback (most recent call last):
+  File "/tmp/claude-0/-home-user-pnp-recherche/2d12e629-e6d2-542b-bfc0-8b766f57383f/scratchpad/gen18/g18e/search.py", line 70, in <module>
+    c, x, t = solve(wires, u, prof, tries=tries)
+              ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/claude-0/-home-user-pnp-recherche/2d12e629-e6d2-542b-bfc0-8b766f57383f/scratchpad/gen18/g18e/search.py", line 47, in solve
+    s = least_squares(res, x0, jac=jac, method='trf', xtol=1e-15, ftol=1e-15, gtol=1e-15, max_nfev=maxnfev)
+  File "/root/.local/lib/python3.13/site-packages/scipy/_lib/_util.py", line 662, in inner
+    return func(*args, **kwargs)
+  File "/root/.local/lib/python3.13/site-packages/scipy/optimize/_lsq/least_squares.py", line 1019, in least_squares
+    result = trf(vector_fun.fun, vector_fun.jac, x0, f0, J0, lb, ub, ftol, xtol,
+                 gtol, max_nfev, x_scale, loss_function, tr_solver,
+                 tr_options.copy(), verbose, callback=callback_wrapped)
+  File "/root/.local/lib/python3.13/site-packages/scipy/optimize/_lsq/trf.py", line 120, in trf
+    return trf_no_bounds(
+        fun, jac, x0, f0, J0, ftol, xtol, gtol, max_nfev, x_scale,
+        loss_function, tr_solver, tr_options, verbose, callback=callback)
+  File "/root/.local/lib/python3.13/site-packages/scipy/optimize/_lsq/trf.py", line 482, in trf_no_bounds
+    U, s, V = svd(J_h, full_matrices=False)
+              ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.local/lib/python3.13/site-packages/scipy/linalg/_decomp_svd.py", line 207, in svd
+    _format_emit_errors_warnings(err_lst, lapack_driver)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.local/lib/python3.13/site-packages/scipy/linalg/_decomp_svd.py", line 26, in _format_emit_errors_warnings
+    raise LinAlgError(f"SVD did not converge for slice = {num}.")
+numpy.linalg.LinAlgError: SVD did not converge for slice = 0.

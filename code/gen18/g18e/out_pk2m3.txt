@@ -1,0 +1,4 @@
+pk2m3 profile (2, 1) N=3: best residual^2 = 3.000e+00 after 10 starts 
+pk2m3 profile (1, 2) N=3: best residual^2 = 3.000e+00 after 10 starts 
+pk2m3 profile (3, 0) N=3: best residual^2 = 5.000e+00 after 10 starts 
+pk2m3 profile (2, 2) N=4: best residual^2 = 1.038e-30 after 1 starts FOUND

@@ -1,0 +1,6 @@
+u=2 a=2 slots{00,01}      : M=2 u=2 terms=2  rank-1 across groups for every term: True  sum == I exactly: True
+u=2 a=2 slots{00,11,01}   : M=3 u=2 terms=4  rank-1 across groups for every term: True  sum == I exactly: True
+u=2 a=2 full packet (M=4) : M=4 u=2 terms=7  rank-1 across groups for every term: True  sum == I exactly: True
+u=3 a=3 three pairs       : M=3 u=3 terms=4  rank-1 across groups for every term: True  sum == I exactly: True
+u=3 a=3 four pairs (M=4)  : M=4 u=3 terms=7  rank-1 across groups for every term: True  sum == I exactly: True
+ALL OK

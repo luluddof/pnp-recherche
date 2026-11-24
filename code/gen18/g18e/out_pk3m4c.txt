@@ -1,0 +1,10 @@
+pk3m4 (3, 1, 1) seed 0 max_nfev 250: residual^2 = 1.039e+00  max|param| = 1.192e+02
+pk3m4 (3, 1, 1) seed 0 max_nfev 1000: residual^2 = 1.014e+00  max|param| = 3.363e+02
+pk3m4 (3, 1, 1) seed 0 max_nfev 3000: residual^2 = 1.007e+00  max|param| = 6.065e+02
+pk3m4 (3, 1, 1) seed 1 max_nfev 250: residual^2 = 4.033e+00  max|param| = 3.444e+02
+pk3m4 (3, 1, 1) seed 1 max_nfev 1000: residual^2 = 4.013e+00  max|param| = 1.067e+03
+pk3m4 (3, 1, 1) seed 1 max_nfev 3000: residual^2 = 4.006e+00  max|param| = 2.889e+03
+pk3m4 (3, 1, 1) seed 2 max_nfev 250: residual^2 = 1.639e-05  max|param| = 2.265e+01
+pk3m4 (3, 1, 1) seed 2 max_nfev 1000: residual^2 = 5.944e-09  max|param| = 1.640e+02
+pk3m4 (3, 1, 1) seed 2 max_nfev 3000: residual^2 = 1.350e-10  max|param| = 4.216e+02
+pk3m4 (3, 1, 1) seed 3 max_nfev 250: residual^2 = 8.168e-05  max|param| = 1.587e+01
