@@ -41,6 +41,7 @@ Ce journal est un **résumé**. Un résumé ne permet pas de vérifier une preuv
 | G8a théorème B2, prop. S, lemme H | Modèle produit et modèle DP corrigé ; (a) et (b) restent ouverts | P | `code/gen8/g8a/notes.md` |
 | G8d lemme Q_{d+2}, ρ ≥ 2^(−d)/(d+2) | Classe commutative, un point par direction | P (+ N pour d ≤ 3) | `code/gen8/g8d/notes.md` |
 | G9e conséquences de la chute de l'ETH (Steiner, plus long chemin…) | **Conditionnel** aux prépublications d'OpenAI et de Claude ; graphes creux ; comptage modulo p seulement | P (+ N sur 6 graphes) | `code/gen9/g9e/consequences.md` |
+| G9a obstruction A (α ≥ 1/2 dans le cadre de l'annexe B) | Pièces qui passent par les composantes graduées d'un seul espace | P (+ N) | `code/gen9/g9a/notes.md` |
 | G8b lemme CA, échec de Q2 | Tests construits sur les clauses d'arêtes seulement | P (+ N) | `code/gen8/g8b/` |
 | G8c réfutations EF | **Conditionnel** à l'hypothèse (S) non vérifiée | E | `code/gen8/g8c/` |
 | G4b, G4c, G5a (murs des méthodes de 2026) | Chaque mur vaut **seulement dans le modèle étudié** | E à P | `code/gen4/`, `code/gen5/` |
@@ -279,6 +280,7 @@ Simplification proposée : l'hypothèse M ≥ n peut être supprimée.
 
 **Génération 9 :**
 - **G9e ⚠️ (niveau P, non relu ; tout est CONDITIONNEL aux deux prépublications non validées) :** conséquences nouvelles de la chute de l'ETH. Règle : une réduction vers M clauses garde un gain seulement si M = n·o(√log n). **Meilleur candidat :** problèmes de connexité sur les graphes creux par comptage — nombre d'arbres de Steiner à ℓ arêtes, de cycles et de chemins de longueur ℓ modulo p en 2^(O(m log p/√log m)) (déterministe) ; arbre de Steiner, plus long cycle, plus long chemin (décision) en 2^(O(m log log m/√log m)) (aléatoire, erreur d'un seul côté). Le cycle hamiltonien est déjà revendiqué par d'autres (dépôt xennygrimmato/eth-hamiltonicity) ; Steiner et plus long chemin semblent nouveaux (nouveauté **non établie** : articles voisins non lus). Autres : taux explicites pour #CNF-SAT de largeur non bornée, #CSP, Vertex Cover paramétré, Max-Cut. Gain perdu pour : k-Clique, nombre chromatique, subset sum, etc. Identité de comptage testée sur 6 petits graphes seulement. Dossier : `code/gen9/g9e/`.
+- **G9a ❌ (piste A ; niveau P, non relu) :** pas d'amélioration sous ρ = 1/√2. Dans le cadre de l'annexe B, α = 1/2 (les partitions) est **optimal** parmi les croissances en loi de puissance. **Obstruction A (comptage de rang, prouvée) :** le croisement a un rang N², ce qui force L(4h) ≥ 2·L(h), donc α ≥ 1/2 ; en général ρ ≥ max(2^(α−1), 2^(−α)) ≥ 1/√2. La phrase de l'article (« ρ = 2^(α−1) ») est juste comme calcul, mais un α < 1/2 est impossible : carrés, puissances k-ièmes, puissances de 2, parts bornées sont tous exclus. **Obstruction B :** la localité (lemme 9) se casse si on restreint les modes (prouvé pour un oscillateur). Tests : identité fausse dans les 23 cas restreints. Reste non exclu (spéculatif) : des profils de croissance non concaves « en escalier ». Dossier : `code/gen9/g9a/`.
 
 ## 4 bis. Pistes restantes pour chercher plus loin
 
