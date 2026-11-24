@@ -34,11 +34,10 @@ Avec les trois articles, les trois voies de la prépublication d'OpenAI seraient
 
 Priorité recommandée : pistes A et B, puis Q1\*.
 
-## 1. En cours (générations 12 à 14)
+## 1. En cours
 
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
-| G14c | 🔄 **Un modèle de coût DP valide** | Modèle sur le graphe des lignes, non dégénéré, qui résiste à l'élimination ligne par ligne ; borne inférieure | G7b, G10a |
 | G16L | 🔄 **Relecture + Lean du théorème à plusieurs points** (G14d) | Σ rang ≥ Σ_x max(0, N − d − 2μ(x)), tout corps ; placement équilibré optimal | G14d |
 
 **Consigne de l'utilisateur (24/11) :** dès que les générations 8 et 9 sont terminées, lancer une **génération 10** sur les pistes « pas encore explorées » (section 2) et « en attente » (section 3).
@@ -58,7 +57,7 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 
 | 🆕 **Dépasser n^(2/3) dans le modèle produit** | La méthode du déterminant témoin est limitée à n^(2/3) (prop. S de G8a). Il faut une contrainte nouvelle qui couple les points ou qui utilise la structure polynomiale. Ou construire un schéma de coût n^(2/3) : il a besoin de Ω(n^(2/3)) points | Difficile | G8a |
-| 🆕 **Un modèle DP valide** | Le modèle corrigé de G7b (largeur W_t) ne minore que l'élimination par groupes entiers (G10a) ; il faut un modèle qui résiste au découpage ligne par ligne, par exemple une largeur sur le graphe des lignes | Moyenne | G10a |
+| 🆕 **Dépasser √n pour les vrais programmes dynamiques** | Le modèle « rang d'interface » de G14c est valide et non dégénéré, mais la borne est √n (comme Dias-Lima). Il faut une distribution de témoins non produit, ou une inégalité de rang sur des coupes emboîtées. Relecture adverse de G14c à faire | Difficile | G14c |
 | 🆕 **Borne de Rado pour le modèle DP corrigé** | nullité ≥ max_S(\|S\| − dim Σ U_ω(v)) contient le lemme 1 et le lemme H ; pourrait enlever l'hypothèse de régularité | Moyenne | G8a |
 
 
@@ -92,6 +91,7 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | Piste | Résultat |
 |---|---|
+| ✅ Modèle DP valide (G14c) | Modèle « rang d'interface » : valide pour les DP à tables d'interface, non dégénéré ; borne 2^Ω(√n) seulement (non relu) |
 | ✅ Échappatoires de l'article 2 (G14a) | Corps finis : fermé ; L/R′ : fermé sur papier ; D < nd : en partie ; la caractéristique 2 gagne seulement une constante sur de petits cas |
 | ✅ Théorème à plusieurs points pour l'article 2 (G14d) | Borne doublée, tout corps ; pas d'échappatoire par placement ; écart log ℓ non fermé (non relu) |
 | ✅ Limites de la contraction de tenseurs (G14b) | Annexe D reconstruite ; √log optimal pour les effilages dépendant de la valuation (théorème B, non relu) ; base possible d'un article 3 |

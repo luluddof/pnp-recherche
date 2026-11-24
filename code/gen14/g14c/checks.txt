@@ -1,0 +1,67 @@
+PART 1  interface-table DP: correctness and table size >= 2^kappa  (soundness (c))
+  DP value == brute-force H(t) in all runs; 1120 node tables checked, size >= 2^kappa always (min ratio size/2^kappa = 1.00)
+   [1s]
+PART 2  cut inequality (*) and multi-cut inequality (Lemma 1/Thm 3), exact ranks
+  n=6 cut_uniform   : (*) checked on 860160 (cut,omega) pairs at t=1,2 (all 4096 cuts), tight in 41412; multi-cut: 3420 cases; max_omega sum_t nullity = 12 <= nR = 12 (all 729 omegas)
+  n=6 cut_clausedep : (*) checked on 860160 (cut,omega) pairs at t=1,2 (all 4096 cuts), tight in 6008; multi-cut: 3420 cases; max_omega sum_t nullity = 12 <= nR = 12 (all 729 omegas)
+  n=6 global_sum    : (*) checked on 860160 (cut,omega) pairs at t=1,2 (all 4096 cuts), tight in 13282; multi-cut: 3420 cases; max_omega sum_t nullity = 9 <= nR = 12 (all 729 omegas)
+  n=6 random_dense  : (*) checked on 860160 (cut,omega) pairs at t=1,2 (all 4096 cuts), tight in 100643; multi-cut: 3420 cases; max_omega sum_t nullity = 1 <= nR = 12 (all 729 omegas)
+  n=6 cut_uniform   : (*) checked on 860160 (cut,omega) pairs at t=1,2 (all 4096 cuts), tight in 41432; multi-cut: 3420 cases; max_omega sum_t nullity = 12 <= nR = 12 (all 729 omegas)
+  n=6 cut_clausedep : (*) checked on 860160 (cut,omega) pairs at t=1,2 (all 4096 cuts), tight in 6422; multi-cut: 3420 cases; max_omega sum_t nullity = 12 <= nR = 12 (all 729 omegas)
+  n=6 global_sum    : (*) checked on 860160 (cut,omega) pairs at t=1,2 (all 4096 cuts), tight in 16108; multi-cut: 3420 cases; max_omega sum_t nullity = 9 <= nR = 12 (all 729 omegas)
+  n=6 random_dense  : (*) checked on 860160 (cut,omega) pairs at t=1,2 (all 4096 cuts), tight in 101396; multi-cut: 3420 cases; max_omega sum_t nullity = 1 <= nR = 12 (all 729 omegas)
+   [6s]
+PART 3  exact branch-width bw_t (IR model) vs DL parameters and the row graph
+   columns: s_t, rho'_t, w_t=tw(I_t), tw(G_M')+1, rtw=row-treewidth+1 (natural reduced basis), bw_t (exact)
+  n=6 seed=21: tw(Pr F)=4;  TRIVIAL scheme: bw=4  [(b): (2/3)(tw+1)=3.33 <= bw],  DL DP-type exponent = ceil(sqrt n) = 3   (0s)
+     cut_uniform    t=1: s=3 rho'=3 w=1 tw(G_M')+1=2 rtw=3 bw=3
+     cut_uniform    t=2: s=3 rho'=4 w=1 tw(G_M')+1=2 rtw=4 bw=4
+     cut_clausedep  t=1: s=3 rho'=0 w=0 tw(G_M')+1=0 rtw=0 bw=2
+     cut_clausedep  t=2: s=3 rho'=0 w=0 tw(G_M')+1=0 rtw=0 bw=3
+     global_sum     t=1: s=3 rho'=2 w=1 tw(G_M')+1=2 rtw=2 bw=3
+     global_sum     t=2: s=3 rho'=3 w=1 tw(G_M')+1=2 rtw=3 bw=4
+     random_dense   t=1: s=3 rho'=6 w=1 tw(G_M')+1=2 rtw=6 bw=6
+     random_dense   t=2: s=3 rho'=6 w=1 tw(G_M')+1=2 rtw=6 bw=6
+  n=6 seed=22: tw(Pr F)=4;  TRIVIAL scheme: bw=4  [(b): (2/3)(tw+1)=3.33 <= bw],  DL DP-type exponent = ceil(sqrt n) = 3   (0s)
+     cut_uniform    t=1: s=2 rho'=2 w=2 tw(G_M')+1=2 rtw=2 bw=3
+     cut_uniform    t=2: s=2 rho'=3 w=2 tw(G_M')+1=3 rtw=3 bw=3
+     cut_clausedep  t=1: s=2 rho'=2 w=1 tw(G_M')+1=2 rtw=2 bw=3
+     cut_clausedep  t=2: s=2 rho'=4 w=2 tw(G_M')+1=2 rtw=4 bw=3
+     global_sum     t=1: s=2 rho'=6 w=2 tw(G_M')+1=3 rtw=6 bw=4
+     global_sum     t=2: s=2 rho'=5 w=2 tw(G_M')+1=3 rtw=5 bw=5
+     random_dense   t=1: s=2 rho'=6 w=2 tw(G_M')+1=3 rtw=6 bw=6
+     random_dense   t=2: s=2 rho'=6 w=2 tw(G_M')+1=3 rtw=6 bw=6
+  n=7 seed=23: tw(Pr F)=4;  TRIVIAL scheme: bw=4  [(b): (2/3)(tw+1)=3.33 <= bw],  DL DP-type exponent = ceil(sqrt n) = 3   (1s)
+     cut_uniform    t=1: s=4 rho'=1 w=1 tw(G_M')+1=1 rtw=1 bw=3
+     cut_uniform    t=2: s=4 rho'=3 w=1 tw(G_M')+1=2 rtw=3 bw=3
+     cut_clausedep  t=1: s=4 rho'=2 w=1 tw(G_M')+1=2 rtw=2 bw=2
+     cut_clausedep  t=2: s=4 rho'=2 w=1 tw(G_M')+1=2 rtw=2 bw=3
+     global_sum     t=1: s=4 rho'=2 w=1 tw(G_M')+1=2 rtw=2 bw=3
+     global_sum     t=2: s=4 rho'=5 w=1 tw(G_M')+1=2 rtw=5 bw=4
+     random_dense   t=1: s=4 rho'=7 w=1 tw(G_M')+1=2 rtw=7 bw=7
+     random_dense   t=2: s=4 rho'=7 w=1 tw(G_M')+1=2 rtw=7 bw=7
+  n=7 seed=24: tw(Pr F)=4;  TRIVIAL scheme: bw=4  [(b): (2/3)(tw+1)=3.33 <= bw],  DL DP-type exponent = ceil(sqrt n) = 3   (1s)
+     cut_uniform    t=1: s=3 rho'=0 w=0 tw(G_M')+1=0 rtw=0 bw=2
+     cut_uniform    t=2: s=3 rho'=4 w=2 tw(G_M')+1=3 rtw=4 bw=3
+     cut_clausedep  t=1: s=3 rho'=3 w=2 tw(G_M')+1=2 rtw=3 bw=3
+     cut_clausedep  t=2: s=3 rho'=4 w=1 tw(G_M')+1=2 rtw=4 bw=3
+     global_sum     t=1: s=3 rho'=5 w=2 tw(G_M')+1=3 rtw=5 bw=4
+     global_sum     t=2: s=3 rho'=7 w=2 tw(G_M')+1=3 rtw=7 bw=5
+     random_dense   t=1: s=3 rho'=7 w=2 tw(G_M')+1=3 rtw=7 bw=7
+     random_dense   t=2: s=3 rho'=7 w=2 tw(G_M')+1=3 rtw=7 bw=7
+   [27s]
+PART 4  aggregate-reading example: the row model (A) is NOT sound for evaluators with derived variables
+  4 satellite groups x 2 vars: row-model width lw >= 4 (charge 2^4); IR model: explicit tree of width 2; honest partial-sum table has <= 9 values per cut
+  6 satellite groups x 2 vars: row-model width lw >= 6 (charge 2^6); IR model: explicit tree of width 2; honest partial-sum table has <= 13 values per cut
+  8 satellite groups x 3 vars: row-model width lw >= 8 (charge 2^8); IR model: explicit tree of width 3; honest partial-sum table has <= 25 values per cut
+  12 satellite groups x 3 vars: row-model width lw >= 12 (charge 2^12); IR model: explicit tree of width 3; honest partial-sum table has <= 37 values per cut
+   [27s]
+PART 5  Theorem 2 ingredients: balanced edge / balanced node always exists; anticoncentration on cuts
+  800 random trees: balanced edge (case 1) in 800, balanced node (case 2) in 0, none: 0; anticoncentration E|X-a| >= c0*min(V,sqrt V) on all case-1 cuts (min slack 0.448)
+  value-count lemma |B{0,1}^s| >= 2^rank(B): 300 random integer matrices pass
+   [27s]
+PART 6  DL's 2^{w_t} is design-dependent: path formula, trivial fully-measured scheme, scattered groups
+  path n=8, 4 groups: w_t = tw(I_t) = 3, s_t = 2;  IR: explicit caterpillar width 2 (tw(Pr F) = 1); so 2^(w_t) is not a lower bound for DP evaluators here, 2^(bw_t) <= 2^2
+  path n=15, 5 groups: w_t = tw(I_t) = 4, s_t = 3;  IR: explicit caterpillar width 2 (tw(Pr F) = 1); so 2^(w_t) is not a lower bound for DP evaluators here, 2^(bw_t) <= 2^2
+   [28s]
+ALL CHECKS PASSED
