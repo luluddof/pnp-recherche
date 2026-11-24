@@ -296,6 +296,8 @@ Simplification proposée : l'hypothèse M ≥ n peut être supprimée.
 
 **Décision de l'auteur (24 novembre) :** l'article 2 (erreurs par point) ne sera écrit que s'il y a un **résultat final** ; pas de note de résultats partiels.
 
+**Relecture humaine (24 novembre) :** l'auteur a envoyé la version 2 de l'article 1 à F. Dias pour vérification. **La version 3 ne sera faite qu'après son retour.** Les corrections et ajouts prévus sont listés dans `PISTES.md` (section « En attente »).
+
 **Génération 10 :**
 - **G10f ✅ Relecture des points non relus de l'article + borne pour F\* :**
   - (a) Note sur le théorème 7.1(ii) de Dias-Lima : **correcte**, mais deux corrections d'équité à faire : le facteur b est superflu (q_t + μ_t·s_t ≥ sep(F)) ; la borne de Dias-Lima est **meilleure que la nôtre pour les petits groupes** (s_t ≲ 867 pour b = 3), et l'article doit le dire.
