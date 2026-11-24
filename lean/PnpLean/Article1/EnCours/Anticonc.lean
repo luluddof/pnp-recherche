@@ -414,7 +414,8 @@ theorem bernoulli_anticonc (a : ℝ) :
     have h6 : Real.sqrt V / 4 ≤ E := by
       by_contra h
       push Not at h
-      nlinarith [mul_nonneg (sub_nonneg.2 h.le) (add_nonneg (div_nonneg hs0 (by norm_num : (0:ℝ) ≤ 4)) hE0)]
+      have h4 : (0 : ℝ) ≤ Real.sqrt V / 4 := div_nonneg hs0 (by norm_num)
+      nlinarith [mul_nonneg (sub_nonneg.2 h.le) (add_nonneg h4 hE0)]
     calc c0 * min V (Real.sqrt V) ≤ c0 * Real.sqrt V :=
           mul_le_mul_of_nonneg_left (min_le_right _ _) hc.le
       _ ≤ 1 / 4 * Real.sqrt V := mul_le_mul_of_nonneg_right c0_le hs0
