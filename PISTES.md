@@ -44,7 +44,6 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
-| G24g | 🔄 **Lemme d'échange fort pour q petit** | rang(Échange − K) ≥ N²/2 − c·r·N pour K de rang de Schmidt r ? Données exactes : r = 2 donne la même valeur que r = 1 à N = 4, 5. Fermerait la fenêtre du module de classe (E0 = 2, 3) et renforcerait le compromis près de l'extrémité. | G24f, G19b |
 | G25-B1 | 🔄 **Brainstorming : constructions** | 8 à 12 idées nouvelles (algèbre, codes de rang, information quantique, dessins combinatoires…) pour passer sous le cercle ; un premier test pour chacune. | consigne de l'auteur |
 | G25-B2 | 🔄 **Brainstorming : techniques de preuve** | Idées pour dépasser la droite hors de la classe de la barrière (Schur-Weyl, géométrie, entropie, SDP, rigidité…). | consigne de l'auteur |
 | G25-B3 | 🔄 **Brainstorming : autres routes et échelons intermédiaires** | Routes vers l'échelon 2 sans le compromis du croisement ; résultats intermédiaires prouvables (classes spéciales, comptage contre décision, sparsification à ε = 1/log n). | consigne de l'auteur |
@@ -165,7 +164,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Question précise | Origine |
 |---|---|---|
-| **Étiquettes dans un module de classe (après G24f)** | Bande E0 = 1 fermée (4ρ ≥ 4). Ouvert : E0 ≥ 2, H < 0,83·E0. Le lemme manquant est une forme forte de notre théorème C : rang(Échange − K) ≥ N²/2 − c·r·N pour K de rang de Schmidt r. Il fermerait E0 = 2 et 3. | G24b, G24f |
+| **Étiquettes dans un module de classe (après G24g)** | Bande E0 = 1 fermée. Pour fermer toute la fenêtre H = 0 : vérifier si la famille réelle {E_m} (ou {C_m}) de G24f se triangularise par un même couple (X, Y) (lemme T de G24g) — par exemple grâce à la graduation. Calcul court. | G24f, G24g |
 
 **Question décisive issue de G24c (24/11) :**
 
@@ -189,6 +188,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Résultat |
 |---|---|
+| ✅ **Lemme d'échange fort** (G24g) | **Théorème 1 : f(N,2) = f(N,1) = N(N−1)/2 pour tout N, tout corps** (deux produits = un seul). Lemme de triangularisation T. r ≥ 3 ouvert. Critère pour fermer la fenêtre du module de classe : la famille de G24f se triangularise-t-elle ? `code/gen24/g24g/notes.md` |
 | ✅ **Petits cas par SAT** (G24d) | Nouveaux UNSAT avec preuves DRAT : ST (7,7) à N = 7, ST (10,10) à N = 9, GF(2) (3,3) et (5,2) à N = 4 (pas de gain en caractéristique 2). Encadrements ST pour N = 9 à 16. Grandes tailles non décidées. `code/gen24/g24d/notes.md` |
 | ❌ **(N, N) réalisable ?** (G24e) | Non au-delà de 8 (numérique) : (7,7) à N = 7 non réalisable ; saut net après N = 8 (motif de Hurwitz). (5,5) à N = 5 et (6,6) à N = 6 : seulement au bord. Bornes exactes inchangées. `code/gen24/g24e/notes.md` |
 | ⚠️ **Fenêtre du module de classe** (G24f) | Aucune construction sous 2√2. Bande E0 = 1 fermée par une preuve (4ρ ≥ 4 ; lemme d'échange = théorème 3 de G19b). Reste ouvert : E0 ≥ 2 avec H < 0,83·E0 ; il faudrait le lemme d'échange avec un terme de rang de Schmidt r (c'est notre théorème C dans une autre forme). Heuristique : toute la fenêtre à 4ρ ≥ 4. `code/gen24/g24f/notes.md` |
