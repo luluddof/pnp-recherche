@@ -39,8 +39,6 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
 | G17a | 🔄 **Relecture adverse de G14b** (contraction de tenseurs) | Reconstruction de l'annexe D, modèles DF et VT, théorèmes A et B : le potentiel est-il réel ? | G14b |
-| G17b | 🔄 **Article 1 contre le préprint d'OpenAI lui-même** | Nos hypothèses (F\* « une copie par occurrence », feuilles de la sparsification, définition 5.1, modèles de coût) correspondent-elles au texte réel du préprint ? Liste de corrections pour la v3. | préprint disponible depuis G14b |
-| G17c | 🔄 **Article 2 contre le préprint d'OpenAI lui-même** | Le cadre du théorème (J(0) = X^{⊗ℓ}, directions, partie « agréable » + erreur de petit rang, modèle de coût H1–H4) est-il celui du préprint, ou seulement celui de l'exposé d'O'Donnell ? Définition exacte du « cadre X ». | G6d, G14d |
 | G17d | 🔄 **Relecture adverse de G14a, puis Lean** | Théorème au niveau de la sortie (effondrement par L, R′) et degré réduit : justes ? L'hypothèse « mineurs non singuliers » cache-t-elle la difficulté ? Si juste : `Article2/EnCours/OutputLevel.lean`. | G14a |
 | G17e | 🔄 **Les deux points ouverts de l'article 2** | (A) L'écart O(log ℓ) entre la borne et la construction : optimums exacts à petite taille, argument à deux moitiés (blocs 01 et 10). (B) Degré certifié par annulation : deg P = Θ(nd) est-il forcé ? | G14d, G14a |
 
@@ -81,13 +79,21 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 | 🆕 **Relecture adverse des théorèmes de G14a** (niveau sortie, degré réduit) et de G14b (contraction de tenseurs) | Niveau P ; à faire avant les articles 2 et 3 | Facile à lancer | G14a, G14b |
 | 🆕 **Degré certifié par annulation (article 2)** | Dernière échappatoire ouverte : 1_F comme produit de o(n) facteurs creux (polynômes probabilistes) | Difficile | G14a |
 
+**Nouvelles pistes issues de G17c (24/11) :**
+
+| Piste | Question précise | Origine |
+|---|---|---|
+| Théorème 4 avec le coût de la prépublication | Refaire le théorème du temps de calcul avec la charge réelle (2D+1)^lignes et la base de la prépublication. La borne reste-t-elle Ω(n(loglog n)²/√log n), ou tombe-t-elle à Ω(n√(loglog n/log n)) ? | G17c, Q2 et Q5 |
+| Borne pour l'interpolation à plusieurs niveaux (annexe D) | Notre borne est vide pour l'annexe D. Existe-t-il une borne pour les modes 2-adiques et la récursion ? C'est la vraie question pour l'échelon 2. | G17c, Q3 |
+
 ## 3. En attente
 
 | Piste | Raison de l'attente |
 |---|---|
-| ⏸️ **Version 3 de l'article 1** | **EN ATTENTE — décision de l'auteur (24/11) : ne pas faire la version 3 avant le retour de F. Dias**, à qui la version 2 a été envoyée pour vérification. Contenu préparé pour la version 3 (à compléter avec ses remarques) : (1) section Lean mise à jour : théorème principal prouvé sans hypothèse (G10e) ; (2) corrections de G10f : facteur b superflu, dire que la borne de Dias-Lima est meilleure pour les petits groupes, précisions de l'annexe A, 4 attributions à adoucir ; (3) théorème sep(F\*) ≥ c·n\* et son corollaire, si la relecture G11a le confirme ; (4) nouveaux chemins Lean (`lean/PnpLean/Article1/`) |
+| ⏸️ **Version 3 de l'article 1** | **EN ATTENTE — décision de l'auteur (24/11) : ne pas faire la version 3 avant le retour de F. Dias**, à qui la version 2 a été envoyée pour vérification. Contenu préparé pour la version 3 (à compléter avec ses remarques) : (1) section Lean mise à jour : théorème principal prouvé sans hypothèse (G10e) ; (2) corrections de G10f : facteur b superflu, dire que la borne de Dias-Lima est meilleure pour les petits groupes, précisions de l'annexe A, 4 attributions à adoucir ; (3) théorème sep(F\*) ≥ c·n\* et son corollaire, si la relecture G11a le confirme ; (4) nouveaux chemins Lean (`lean/PnpLean/Article1/`) **Ajout G17b :** 7 corrections tirées de la prépublication elle-même (`code/gen17/g17b/rapport.md`). |
 | ⏸️ **Rédaction de l'article 2** (erreurs par point) | Condition de l'auteur : un résultat final. **État (24/11) : théorème prouvé en Lean sur tout corps, confirmé par relecture adverse, nouveauté : semble nouveau (technique classique).** Réserves à écrire : vaut dans un modèle de coût ; ne couvre pas la contraction de tenseurs ni D < nd ni L/R′ ni les multiplicités inégales (G14a, G14d en cours). **En attente de l'accord de l'auteur pour rédiger.** |
 | ⏸️ **Note « plus long chemin / plus long cycle en 2^o(n) sur les graphes creux »** (candidat article 4) | Preuve confirmée par G10c ; conditionnel aux prépublications ; doit citer Wu-Wang (arXiv 2611.02548) ; résultat modeste. Décision de l'auteur |
+| ⏸️ **Licence du dépôt** | Sans licence, personne n'a le droit de réutiliser la bibliothèque `PnpLean.Outils`. Décision de l'auteur (Mathlib utilise Apache 2.0). |
 | ⏸️ **Relecture de l'article 1 par un expert humain** | **En cours : l'auteur a envoyé la version 2 à F. Dias (24/11).** Attendre sa réponse. |
 
 | Piste | Raison de l'attente |
@@ -97,6 +103,9 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Résultat |
 |---|---|
+| ⚠️ **Article 2 contre la prépublication d'OpenAI** (G17c) | Le cadre existe dans la prépublication (après traduction ; vérifié exactement pour Q ≤ 6). Nouveauté confirmée. **Mais** le coût de l'erreur diffère (tuples de mesures, pas n^rang), et l'annexe D échappe au cadre (modes 2-adiques, récursion). L'énoncé « perte optimale » vaut seulement dans le « cadre X » à un niveau sur un corps : `code/gen17/g17c/rapport.md` |
+| ✅ **Article 1 contre la prépublication d'OpenAI** (G17b) | Aucune hypothèse contredite. Règle de copie = §2.8 ; elle s'applique aux feuilles de la sparsification, pas à F. Définition 5.1 = généralisation fidèle. Coût réel = type produit. Le plan réel n'est pas uniforme en la variable. Sur le plan réel, le théorème B est vrai par q seul : il contraint les nouveaux plans à petits groupes. 7 corrections pour la v3 : `code/gen17/g17b/rapport.md` |
+| ✅ **Bibliothèque d'outils réutilisables** | `lean/PnpLean/Outils.lean` : 11 énoncés génériques vérifiés par Lean et absents de Mathlib. Reste : généraliser de ℚ à tout corps, remplacer `uavg` par `Finset.expect`, licence (décision de l'auteur). Voir `lean/OUTILS.md` |
 | ✅ **Lean : théorème à plusieurs points** (G16L) | `MultiPoint.sum_rank_ge` : forme la plus forte du théorème de l'article 2 (borne doublée, tout corps, placement quelconque) |
 | ✅ Modèle DP valide (G14c) | Modèle « rang d'interface » : valide pour les DP à tables d'interface, non dégénéré ; borne 2^Ω(√n) seulement (non relu) |
 | ✅ Échappatoires de l'article 2 (G14a) | Corps finis : fermé ; L/R′ : fermé sur papier ; D < nd : en partie ; la caractéristique 2 gagne seulement une constante sur de petits cas |

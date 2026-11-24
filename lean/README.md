@@ -63,6 +63,12 @@ Les conséquences asymptotiques avec logarithmes (seuil sur d, temps de calcul d
 
 ---
 
+## Outils réutilisables — `PnpLean/Outils.lean`
+
+Un seul fichier rassemble les résultats génériques (sans SAT, sans les articles) sous l'espace de noms `PnpOutils` : matrices de polynômes (dimension du noyau contre degré du déterminant), anti-concentration avec constante explicite, théorèmes de somme des rangs sur le cube. Chaque nom est un `alias` d'un théorème vérifié. Liste, limites et exclusions : **`OUTILS.md`**. Cible : `lake build PnpLean.Outils`.
+
+---
+
 ## Compatibilité avec la version 2 de l'article 1
 
 La version 2 de l'article (envoyée en relecture le 24 novembre 2026) cite `lean/PnpLean/` et la commande `lake build PnpLean.TheoremA`. Les fichiers `PnpLean/WitnessDet.lean`, `Scheme.lean`, `TheoremB.lean` et `TheoremA.lean` sont de simples renvois vers `PnpLean/Article1/`, pour que cette commande marche toujours. L'état exact du dépôt pour la version 2 est le commit `d597db3`.
