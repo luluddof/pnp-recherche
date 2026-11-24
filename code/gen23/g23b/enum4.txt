@@ -1,0 +1,5 @@
+N=4: sign-free valid ST structures (canonical labels): 612736  [19.4s]
+  signable: 612736; key-lemma failures: 0; counting-inequality failures: 0
+  exact ST frontier q -> min p: {0: 16, 1: 6, 2: 9, 3: 5, 4: 4, 5: 3, 6: 1, 7: 3, 8: 3, 9: 2, 10: 1, 11: 3, 12: 2, 13: 1, 14: 2, 15: 1, 16: 0}
+  counting bound   q -> p_min: {0: 16, 1: 6, 2: 5, 3: 3, 4: 3, 5: 2, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1, 13: 1, 14: 1, 15: 1, 16: 0}
+  tight (slack 0) signable arrays by (p,q): {(0, 16): 1, (1, 6): 24, (6, 1): 24, (16, 0): 1}

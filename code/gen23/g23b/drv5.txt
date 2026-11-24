@@ -1,0 +1,13 @@
+N=5 S<=4 T<=7 U<=0 cap=None: UNSAT 2.3s
+N=5 S<=3 T<=6 U<=1 cap=None: UNSAT 0.9s
+N=5 S<=2 T<=5 U<=2 cap=None: UNSAT 0.2s
+N=5 S<=1 T<=4 U<=3 cap=None: UNSAT 0.1s
+N=5 S<=0 T<=3 U<=4 cap=None: UNSAT 0.0s
+N=5 S<=6 T<=6 U<=0 cap=None: UNSAT 20.0s
+N=5 S<=5 T<=5 U<=1 cap=None: UNSAT 11.8s
+N=5 S<=4 T<=4 U<=2 cap=None: UNSAT 2.3s
+N=5 S<=3 T<=3 U<=3 cap=None: UNSAT 0.4s
+N=5 S<=2 T<=2 U<=4 cap=None: UNSAT 0.1s
+N=5 S<=1 T<=1 U<=5 cap=None: UNSAT 0.0s
+N=5 S<=0 T<=0 U<=6 cap=None: UNSAT 0.0s
+N=5 S<=7 T<=7 U<=0 cap=None: SAT 0.0s used S,T,U=7,6,0 pred=True R+C=X True rk(R)=6 rk(C)=7

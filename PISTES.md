@@ -45,7 +45,7 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
 | G23a | 🔄 **Ansatz de groupe dans le modèle monomial** | Le point (8,8) à N = 8 est invariant par Q8 et atteint la borne du modèle. Encodage par orbites (SAT) pour les groupes d'ordre 16, 27, 32, 64 ; une famille sous N^√2 serait un nouveau record pour le problème général. | G22b-bis |
-| G23b | 🔄 **Relecture adverse de la borne du modèle monomial** | Correspondance avec les intercalates ; lemme clé ; comptage ; usage du lemme 7.4 de HWY ; énoncés pour Lean. | G22b-bis |
+| G23e | 🔄 **Lean : lemme clé et comptage du modèle monomial** | Énoncés de G23b (coloriage, palette, intercalates ; C(h,2) ≤ couleurs de l'autre palette ; N² ≤ q·g*(p) + p·g*(q)). Combinatoire finie. | G23b |
 | G23c | 🔄 **Creux des algèbres de sommets avec le vrai rang de l'appariement** | Évaluateur exact du rang de l'appariement ; balayage des réseaux regradués et des orbifolds ; règle de sélection qui neutralise les creux ? | G22e |
 | G23d | 🔄 **Prouver la loi de distance pour q = 1** | Prouver c(N;1,1) = 4 pour tout N, puis d²(N;p,1) = N² − m² − 2j ; premier outil prouvé au-delà des méthodes de rang. | G22d |
 
@@ -177,6 +177,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Résultat |
 |---|---|
+| ✅ **Relecture du modèle monomial** (G23b) | Tout confirmé (P+) ; hypothèse inutile retirée ; énumérations exhaustives sans échec ; les optimums exacts à N = 5 sont hors du modèle. `code/gen23/g23b/notes.md` |
 | ✅ **Modèle monomial** (G22b, G22b-bis) | Correspondance exacte avec les matrices d'intercalates de HWY (formules entières de sommes de carrés). **Borne dans le modèle au-delà de la droite : p²·q ≳ N⁴/8 ; point équilibré ≥ N^(4/3)/2** (papier, non relu). Meilleur connu dans le modèle : exposant 2. Le modèle n'est pas exclu pour battre √2 (4/3 < √2). `code/gen22/g22b/notes.md` |
 | ⚠️ **Distance de l'échange à J(p, q)** (G22d) | La distance (masse captée c = N² − d², toujours entière) dépasse les méthodes de rang à tous les points calculés ; loi exacte pour q = 1 : d² = N² − m² − 2j. Théorème C quantitatif prouvé (faible). Pour gagner un exposant il faudrait c(p, q) sous-linéaire en p·q : non prouvé ; q = 1 est linéaire. `code/gen22/g22d/notes.md` |
 | ⚠️ **Barrière de Cardy** (G22e) | Théorème A (papier, non relu) : √2 est optimal pour toute algèbre de sommets fixe avec croissance √E. Pour les familles : ouvert. Échappement possible seulement avec un « creux » de L(E)/√E et un nombre de paires aussi grand que la borne lâche. Deux routes (regraduation du réseau A1 ; modules de sl₂) donnent 2,81 < 2√2 sous la borne lâche, mais 2,90 à 3,03 avec les vraies bornes. `code/gen22/g22e/notes.md` |

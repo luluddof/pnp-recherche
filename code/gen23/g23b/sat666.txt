@@ -1,0 +1,1 @@
+N=6 S<=6 T<=6 U<=0 cap=None: UNSAT 65.6s
