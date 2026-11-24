@@ -15,7 +15,6 @@ Légende : 🔄 en cours · 🆕 pas encore explorée · ⏸️ en attente · �
 |---|---|---|---|
 | G8a | 🔄 **Terminer Limits §9** | (a) Modèle DP corrigé : enlever l'hypothèse de régularité. (b) La borne n^(2/3) du modèle produit est-elle optimale ? | G6a, G7b |
 | G8b | 🔄 **Compter les ensembles indépendants** (Q1′) | Compter les ensembles indépendants d'un graphe de degré moyen d en temps 2^(O(n/d)) | G7d |
-| G8c | 🔄 **Réfutations dans un système faible** | 3-SAT aléatoire a-t-il des réfutations de taille 2^o(n) en Extended Frege ou TC⁰-Frege ? | G4d |
 | G8d | 🔄 **Turán sur l'hypercube** | Prouver ρ(∞, d) ≥ poly(1/d) dans la méthode d'OpenAI (√log n optimal) | G7a |
 
 ## 2. Pas encore explorées
@@ -34,6 +33,8 @@ Légende : 🔄 en cours · 🆕 pas encore explorée · ⏸️ en attente · �
 | 🆕 **Lemme 2 en Lean** | Anti-concentration avec constante explicite | Difficile (probabilités) | G9L |
 | 🆕 **Lemme 4 en Lean** | Graphes aléatoires | Très difficile (peu de choses dans Mathlib) | G9L |
 
+| 🆕 **Formes closes aux niveaux profonds (suite de G8c)** | La valeur des sous-appels de l'algorithme de Claude sur une entrée « épinglée » a une forme close calculable en temps polynomial au niveau 1 (vérifié). Si cela reste vrai aux niveaux profonds, Extended Frege réfuterait toute 3-CNF creuse insatisfaisable en taille 2^(δn). Vérifier aussi l'hypothèse (S) : degré ≤ 1 en chaque table de poids | Moyenne à difficile | G8c |
+
 ## 3. En attente
 
 | Piste | Raison de l'attente |
@@ -50,6 +51,7 @@ Légende : 🔄 en cours · 🆕 pas encore explorée · ⏸️ en attente · �
 | ✅ Lemme 1 en Lean (G8L) | Prouvé sans `sorry` |
 | ✅ Partie déterministe en Lean (G9L) | Schéma, lemme 1 complet, fait R, lemme 3, théorème A (sans condition), théorème B (avec le lemme 2 en hypothèse) ; sans `sorry` |
 | ✅ Hurwitz P(N) ≤ N^√2 (G4a) | Correct, mais déjà publié par d'autres |
+| ✅ Réfutations Extended Frege (G8c) | **Conditionnel :** sous (S) et des preuves EF courtes de « Pin_F(b) », EF réfute F en taille 2s + poly(n)·2^(δn). Le calcul de l'algorithme est de **profondeur constante** (nouveau) : le certificat IPS peut être une formule de profondeur constante. Pas de route vers TC⁰-Frege (descente séquentielle). |
 | ✅ Système de preuve IPS (G4d) | Réfutations IPS de taille 2^O(n/√log n) |
 | ✅ Plancher ρ_d ≥ 1/d (G6b) | Confirmé sous conditions |
 

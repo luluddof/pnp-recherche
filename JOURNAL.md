@@ -233,6 +233,8 @@ Simplification proposée : l'hypothèse M ≥ n peut être supprimée.
 
 **Génération 8 (en cours) :** G8a (terminer Limits §9), G8b (compter les ensembles indépendants), G8c (réfutations Extended Frege / TC⁰-Frege), G8d (Turán sur l'hypercube). Liste complète des pistes : `PISTES.md`.
 
+- **G8c ✅ (conditionnel) :** aucune borne 2^o(n) prouvée en EF, TC⁰-Frege ou Frege. Observation nouvelle : pour δ fixé, la récursion de Claude a une profondeur constante ; Count(F) est une formule arithmétique de profondeur constante c(δ,Δ) et de taille 2^(δn)·poly(n). Énoncé conditionnel : sous l'hypothèse (S) (degré ≤ 1 en chaque table de poids, à vérifier) et des preuves EF de taille s de Pin_F(b), EF réfute F en taille 2s + poly(n)·2^(δn). Point ouvert : les formes closes des sous-appels aux niveaux profonds (vérifié au niveau 1 : 2 000 cas + les 4 096 cas de l'identité des huit carrés). Dossier : `code/gen8/g8c/`.
+
 ## 4 bis. Pistes restantes pour chercher plus loin
 
 | Piste | Pourquoi elle reste ouverte | Première expérience simple |
