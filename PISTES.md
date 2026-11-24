@@ -27,7 +27,6 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
 | G12W | 🔄 **Pré-version 3 (brouillon, pas l'article officiel)** | Essai séparé dans `resultats/brouillons/pre-v3/`, à faire vérifier par une autre IA pour la portée ; l'article officiel (version 2) ne change pas | Demande de l'auteur (24/11) |
-| G11a | 🔄 **Relecture adverse du théorème sep(F\*)** | Prépare la version 3 de l'article 1 (qui attend le retour de F. Dias) | G10f |
 | G11b | 🔄 **Article 2, résultat final : compromis (I′) et (II)** | Prouver l'optimalité de √log n dans la classe commutative, ou trouver une construction qui la contredit | G8d |
 | G11c | 🔄 **Article 2 : cas non commutatif** | Étendre le lemme Q_{d+2} et la réduction « rang = mauvaises arêtes » au cas général | G6d, G10b |
 
@@ -67,7 +66,6 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 | Piste | Raison de l'attente |
 |---|---|
 | ⏸️ **Version 3 de l'article 1** | **EN ATTENTE — décision de l'auteur (24/11) : ne pas faire la version 3 avant le retour de F. Dias**, à qui la version 2 a été envoyée pour vérification. Contenu préparé pour la version 3 (à compléter avec ses remarques) : (1) section Lean mise à jour : théorème principal prouvé sans hypothèse (G10e) ; (2) corrections de G10f : facteur b superflu, dire que la borne de Dias-Lima est meilleure pour les petits groupes, précisions de l'annexe A, 4 attributions à adoucir ; (3) théorème sep(F\*) ≥ c·n\* et son corollaire, si la relecture G11a le confirme ; (4) nouveaux chemins Lean (`lean/PnpLean/Article1/`) |
-| ⏸️ **Relecture adverse du théorème sep(F\*)** (G10f) | Niveau P pour l'instant |
 | ⏸️ **Rédaction de l'article 2** (erreurs par point) | **Décision de l'auteur (24/11) : attendre un résultat final** (pas de note de résultats partiels). Résultat final visé : l'optimalité de √log n pour la méthode d'OpenAI (pistes (I′) et (II)), ou au contraire une construction qui bat √log n. Les deux lemmes centraux sont déjà relus et en Lean (`lean/PnpLean/Article2/`) |
 | ⏸️ **Note « plus long chemin / plus long cycle en 2^o(n) sur les graphes creux »** (candidat article 4) | Preuve confirmée par G10c ; conditionnel aux prépublications ; doit citer Wu-Wang (arXiv 2611.02548) ; résultat modeste. Décision de l'auteur |
 | ⏸️ **Relecture de l'article 1 par un expert humain** | **En cours : l'auteur a envoyé la version 2 à F. Dias (24/11).** Attendre sa réponse. |
@@ -79,6 +77,7 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | Piste | Résultat |
 |---|---|
+| ✅ Relecture du théorème sep(F\*) (G11a) | Confirmé ; la définition de F\* doit être énoncée comme hypothèse ; 6 corrections listées |
 | ✅ Relecture de G9c (G10d) | Théorèmes A et B confirmés (relativement à l'annexe D de Claude) ; 2 résumés d'obstructions à corriger |
 | ✅ **Lean : théorème B sans hypothèse** (G10e) | Lemme 2 (anti-concentration, espérance du déficit) et identité de moyenne prouvés ; `theoremB_unconditional` |
 | ✅ Relecture + nouveauté de G9e (G10c) | Preuve confirmée ; Steiner déjà revendiqué (Wu-Wang) ; plus long chemin/cycle : semble nouveau |
