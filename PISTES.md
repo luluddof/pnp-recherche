@@ -44,7 +44,10 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
-| — | *Aucun agent en cours. La génération 22 est terminée (24/11).* | | |
+| G23a | 🔄 **Ansatz de groupe dans le modèle monomial** | Le point (8,8) à N = 8 est invariant par Q8 et atteint la borne du modèle. Encodage par orbites (SAT) pour les groupes d'ordre 16, 27, 32, 64 ; une famille sous N^√2 serait un nouveau record pour le problème général. | G22b-bis |
+| G23b | 🔄 **Relecture adverse de la borne du modèle monomial** | Correspondance avec les intercalates ; lemme clé ; comptage ; usage du lemme 7.4 de HWY ; énoncés pour Lean. | G22b-bis |
+| G23c | 🔄 **Creux des algèbres de sommets avec le vrai rang de l'appariement** | Évaluateur exact du rang de l'appariement ; balayage des réseaux regradués et des orbifolds ; règle de sélection qui neutralise les creux ? | G22e |
+| G23d | 🔄 **Prouver la loi de distance pour q = 1** | Prouver c(N;1,1) = 4 pour tout N, puis d²(N;p,1) = N² − m² − 2j ; premier outil prouvé au-delà des méthodes de rang. | G22d |
 
 Dossiers de travail de la génération 18 : `scratchpad/gen18/g18a` à `g18i`.
 
