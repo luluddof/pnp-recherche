@@ -44,7 +44,7 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
-| G22b-bis | 🔄 **Le « modèle monomial » des petites solutions (suite de G22b sur Opus 5.5)** | G22b (Fable, arrêté par la limite Fable jusqu'au 26/11) a trouvé que les solutions exactes sont des matrices d'intercalates signées = formules entières de sommes de carrés [N, N, p+q]. Suite : théorème de correspondance ; borne de HWY Ω(N^(6/5)) dans ce modèle ; adapter le comptage d'intercalates au compromis p·q. | G22b, G22a |
+| — | *Aucun agent en cours. La génération 22 est terminée (24/11).* | | |
 
 Dossiers de travail de la génération 18 : `scratchpad/gen18/g18a` à `g18i`.
 
@@ -149,6 +149,14 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 |---|---|---|
 | Masse captée c(p, q) | Prouver c(N; 1, 1) = 4 pour tout N, puis la loi q = 1 (d² = N² − m² − 2j), puis une borne supérieure sur c(p, q). Une borne sous-linéaire en p·q donnerait un exposant au-delà de la droite ; une borne linéaire κ·p·q seulement une constante. | G22d |
 
+**Pistes issues de G22b-bis (24/11) :**
+
+| Piste | Question précise | Origine |
+|---|---|---|
+| Ansatz de groupe d'ordre g^(3/2) dans le modèle monomial | Le point (8,8) à N = 8 est invariant par Q8 et atteint la borne du modèle. Un groupe d'ordre g^(3/2) avec des blocs 2+2 atteindrait la borne N^(4/3) (par exemple (128,128) à N = 64) : ce serait sous √2. Encodage direct ≈ 10⁹ clauses : il faut un encodage par orbites. Q8×Q8 échoue. | G22b-bis |
+| Relecture adverse de la borne du modèle monomial | Lemme clé (une couleur T de taille h force |S| ≥ h(h−1)/2) ; comptage ; usage du lemme 7.4 de HWY. | G22b-bis |
+| Décider N = 12 (18,18) et N = 16 (28,28) dans le modèle ST | SAT arrêté à 600 s. | G22b-bis |
+
 ## 3. En attente
 
 | Piste | Raison de l'attente |
@@ -166,6 +174,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Résultat |
 |---|---|
+| ✅ **Modèle monomial** (G22b, G22b-bis) | Correspondance exacte avec les matrices d'intercalates de HWY (formules entières de sommes de carrés). **Borne dans le modèle au-delà de la droite : p²·q ≳ N⁴/8 ; point équilibré ≥ N^(4/3)/2** (papier, non relu). Meilleur connu dans le modèle : exposant 2. Le modèle n'est pas exclu pour battre √2 (4/3 < √2). `code/gen22/g22b/notes.md` |
 | ⚠️ **Distance de l'échange à J(p, q)** (G22d) | La distance (masse captée c = N² − d², toujours entière) dépasse les méthodes de rang à tous les points calculés ; loi exacte pour q = 1 : d² = N² − m² − 2j. Théorème C quantitatif prouvé (faible). Pour gagner un exposant il faudrait c(p, q) sous-linéaire en p·q : non prouvé ; q = 1 est linéaire. `code/gen22/g22d/notes.md` |
 | ⚠️ **Barrière de Cardy** (G22e) | Théorème A (papier, non relu) : √2 est optimal pour toute algèbre de sommets fixe avec croissance √E. Pour les familles : ouvert. Échappement possible seulement avec un « creux » de L(E)/√E et un nombre de paires aussi grand que la borne lâche. Deux routes (regraduation du réseau A1 ; modules de sl₂) donnent 2,81 < 2√2 sous la borne lâche, mais 2,90 à 3,03 avec les vraies bornes. `code/gen22/g22e/notes.md` |
 | ✅ **Littérature Hurwitz-Naslund lue** (G22a) | Notre problème = problème 12 de Naslund = question 1.2 de Karam = largeur de HWY = PT-rank de Rossman-Zhu. Record : √2 (annexe B) ; publié : 1,62 (Hrubeš). **Le théorème C n'est dans aucun article lu ; la question du compromis (p, q) est nouvelle.** Techniques non essayées : comptage d'intercalates de HWY, pièces de Hrubeš, caractéristique 2. `code/gen22/g22a/notes.md` |
