@@ -40,7 +40,6 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 |---|---|---|---|
 | G18a | 🔄 **Précision réelle des noyaux 2-adiques** | L'analyse d'OpenAI paie 40 bits là où 10 suffisent (14 contre 4 sur un paquet creux). Le gain dépasse-t-il une constante ? Effet sur l'exposant. | G17a |
 | G18b | 🔄 **Évaluateur qui paie 2^rang** | OpenAI paie (2D+1)^lignes pour l'erreur. Un évaluateur moins cher donne-t-il n·√(loglog n)/√log n ? Vérifier l'estimation de G17c. | G17c |
-| G18c | 🔄 **Hybride des deux algorithmes de 2026** | Dictionnaire commun ; pièces de Claude comme noyaux d'OpenAI, troncature 2-adique dans la récursion de Claude. Les gains se composent-ils ? | nouvelle |
 | G18d | 🔄 **Limite de l'interpolation à plusieurs niveaux** | Récurrence exacte de l'annexe D ; exposant optimal à k niveaux ; borne inférieure pour la famille récursive 2-adique. Le mur est-il à n/√log n ou à n/log n ? | G17c, G17a |
 | G18e | 🔄 **Borne de rang dans le modèle DF** | Prouvé 2^(M/4^u), atteint 2^(M/√u). Meilleure borne, ou meilleur schéma ; minimums exacts pour u = 2, 3. | G14b, G17a |
 | G18f | 🔄 **Termes intriqués, λ = 2** (question E1) | Seule piste vers 2^(n^(1−ε)). Calcul à λ = 2 ou question réduite ; E1 est-elle une question de rang asymptotique d'un tenseur explicite ? | G9d, G14e |
@@ -50,7 +49,7 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 Dossiers de travail de la génération 18 : `scratchpad/gen18/g18a` à `g18i`.
 
-**État (24/11, 10 h 45 UTC) :** les neuf agents se sont arrêtés à cause de la limite d'utilisation, presque au début. Relance en deux vagues. **Vague 1 (relancée) :** G18a, G18b, G18c, G18d, G18f. **Vague 2 (à relancer quand la vague 1 finit) :** G18e, G18g, G18h, G18i.
+**État (24/11, 10 h 45 UTC) :** les neuf agents se sont arrêtés à cause de la limite d'utilisation, presque au début. Relance en deux vagues. **En marche :** G18a, G18b, G18d, G18e, G18f. **Terminé :** G18c. **À relancer :** G18g, G18h, G18i.
 
 Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g18d` (erreur de numéro au lancement ; la génération est bien la 17).
 
@@ -113,6 +112,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Résultat |
 |---|---|
+| ❌ **Hybride des deux algorithmes de 2026** (G18c) | Aucun gain sur six substitutions. Les deux algorithmes suivent la même loi heuristique : gain = (nombre de directions)^(−1/2). Un vrai gain demande des pièces à D directions avec ρ(D) < D^(−1/2) (plancher 1/D → échelon 2). `code/gen18/g18c/notes.md` |
 | ❌ **Les deux points ouverts de l'article 2** (G17e) | Aucun n'est fermé. Écart log ℓ : ouvert dans la fenêtre ; optimum à 1,1–2,3 fois la borne sur de petits cas ; l'argument à deux moitiés n'aide pas ; nouveaux lemmes (dualité de quadrature, élagage). Degré par annulation : générique mais pas forcé ; un exemple d'annulation existe. `code/gen17/g17e/notes.md` |
 | ⚠️ **Relecture adverse de G14b** (G17a) | Reconstruction de l'annexe D fidèle. Théorème A confirmé mais très faible. Théorème B en partie : axiome du modèle VT réfuté. Nouveau lemme : précision Θ(M·D_t/u) optimale pour la reconstruction boîte noire. Potentiel « réel mais modeste » : pas une barrière. `code/gen17/g17a/rapport.md` |
 | ✅ **Relecture adverse de G14a + Lean** (G17d) | Théorème au niveau de la sortie confirmé et formalisé (`Article2/OutputLevel.lean`) : rang de A(0)[budget] ≤ Σ rang E_k, tout corps, sans factorisation. L'hypothèse « mineur non singulier » est nécessaire en général (contre-exemple), mais se retire à coût 1/(2Δ−1) pour les matrices creuses (papier). Degré réduit confirmé. |
