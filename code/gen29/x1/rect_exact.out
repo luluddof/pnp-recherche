@@ -1,0 +1,15 @@
+rect_2x3_q1: best rank found 3 (target 3); exact rank_rows(T-C) = {'Q': 3, 1000003: 3, 998244353: 3} exact OSR(C) = {'Q': 1, 1000003: 1, 998244353: 1}
+rect_2x4_q1: best rank found 5 (target 5); exact rank_rows(T-C) = {'Q': 5, 1000003: 5, 998244353: 5} exact OSR(C) = {'Q': 1, 1000003: 1, 998244353: 1}
+rect_2x4_q1: best rank found 5 (target 4); exact rank_rows(T-C) = {'Q': 5, 1000003: 5, 998244353: 5} exact OSR(C) = {'Q': 1, 1000003: 1, 998244353: 1}
+rect_2x4_q2: best rank found 2 (target 2); exact rank_rows(T-C) = {'Q': 2, 1000003: 2, 998244353: 2} exact OSR(C) = {'Q': 2, 1000003: 2, 998244353: 2}
+rect_2x4_q5: best rank found 3 (target 1); exact rank_rows(T-C) = {'Q': 3, 1000003: 3, 998244353: 3} exact OSR(C) = {'Q': 4, 1000003: 4, 998244353: 4}
+rect_3x4_q1: best rank found 6 (target 6); exact rank_rows(T-C) = {'Q': 6, 1000003: 6, 998244353: 6} exact OSR(C) = {'Q': 1, 1000003: 1, 998244353: 1}
+rect_3x4_q2: best rank found 5 (target 5); exact rank_rows(T-C) = {'Q': 5, 1000003: 5, 998244353: 5} exact OSR(C) = {'Q': 2, 1000003: 2, 998244353: 2}
+rect_3x4_q3: best rank found 4 (target 4); exact rank_rows(T-C) = {'Q': 4, 1000003: 4, 998244353: 4} exact OSR(C) = {'Q': 3, 1000003: 3, 998244353: 3}
+rect_3x4_q4: best rank found 7 (target 3); exact rank_rows(T-C) = {'Q': 7, 1000003: 7, 998244353: 7} exact OSR(C) = {'Q': 4, 1000003: 4, 998244353: 4}
+rect_3x4_q5: best rank found 11 (target 2); exact rank_rows(T-C) = {'Q': 11, 1000003: 11, 998244353: 11} exact OSR(C) = {'Q': 5, 1000003: 5, 998244353: 5}
+rect_3x4_q6: best rank found 11 (target 1); exact rank_rows(T-C) = {'Q': 11, 1000003: 11, 998244353: 11} exact OSR(C) = {'Q': 6, 1000003: 6, 998244353: 6}
+rect_2x5_q1: best rank found 7 (target 7); exact rank_rows(T-C) = {'Q': 7, 1000003: 7, 998244353: 7} exact OSR(C) = {'Q': 1, 1000003: 1, 998244353: 1}
+rect_2x5_q2: best rank found 4 (target 4); exact rank_rows(T-C) = {'Q': 4, 1000003: 4, 998244353: 4} exact OSR(C) = {'Q': 2, 1000003: 2, 998244353: 2}
+rect_2x5_q3: best rank found 3 (target 3); exact rank_rows(T-C) = {'Q': 3, 1000003: 3, 998244353: 3} exact OSR(C) = {'Q': 3, 1000003: 3, 998244353: 3}
+rect_2x5_q4: best rank found 4 (target 2); exact rank_rows(T-C) = {'Q': 4, 1000003: 4, 998244353: 4} exact OSR(C) = {'Q': 4, 1000003: 4, 998244353: 4}

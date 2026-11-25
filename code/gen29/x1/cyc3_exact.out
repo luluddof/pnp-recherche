@@ -1,0 +1,7 @@
+cyc3_N3_b111: best rank found 16 (target 7); exact rank_rows(T-C) = {'Q': 16, 1000003: 16, 998244353: 16}
+cyc3_N3_b113: best rank found 18 (target 7); exact rank_rows(T-C) = {'Q': 18, 1000003: 18, 998244353: 18}
+cyc3_N3_b119: best rank found 23 (target 7); exact rank_rows(T-C) = {'Q': 23, 1000003: 23, 998244353: 23}
+cyc3_N3_b122: best rank found 20 (target 5); exact rank_rows(T-C) = {'Q': 20, 1000003: 20, 998244353: 20}
+cyc3_N3_b133: best rank found 25 (target 3); exact rank_rows(T-C) = {'Q': 25, 1000003: 25, 998244353: 25}
+cyc3_N3_b222: best rank found 25 (target 2); exact rank_rows(T-C) = {'Q': 25, 1000003: 25, 998244353: 25}
+cyc3_N3_b123: best rank found 23 (target 3); exact rank_rows(T-C) = {'Q': 23, 1000003: 23, 998244353: 23}
