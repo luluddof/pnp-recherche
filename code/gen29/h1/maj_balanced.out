@@ -1,0 +1,16 @@
+k= 3 N=8: Majorana bal 8 (p=8,q=8) exp 1.000 | singlet 10 exp 1.107 | HR 8 | N^2/8 8
+k= 4 N=16: Majorana bal 46 (p=10,q=46) exp 1.381 | singlet 67 exp 1.517 | HR 32 | N^2/8 32
+k= 5 N=32: Majorana bal 67 (p=67,q=67) exp 1.213 | singlet 106 exp 1.346 | HR 128 | N^2/8 128
+k= 6 N=64: Majorana bal 378 (p=300,q=378) exp 1.427 | singlet 694 exp 1.573 | HR 384 | N^2/8 512
+k= 7 N=128: Majorana bal 576 (p=576,q=576) exp 1.310 | singlet 1156 exp 1.454 | HR 1024 | N^2/8 2048
+k= 8 N=256: Majorana bal 3214 (p=834,q=3214) exp 1.456 | singlet 7459 exp 1.608 | HR 4096 | N^2/8 8192
+k= 9 N=512: Majorana bal 5036 (p=5036,q=5036) exp 1.366 | singlet 12826 exp 1.516 | HR 14848 | N^2/8 32768
+k=10 N=1024: Majorana bal 27896 (p=21911,q=27896) exp 1.477 | singlet 79735 exp 1.628 | HR 53248 | N^2/8 131072
+k=11 N=2048: Majorana bal 44552 (p=44552,q=44552) exp 1.404 | singlet 143980 exp 1.558 | HR 176128 | N^2/8 524288
+k=12 N=4096: Majorana bal 245506 (p=68406,q=245506) exp 1.492 | singlet 770563 exp 1.630 | HR 671744 | N^2/8 2097152
+k=13 N=8192: Majorana bal 397594 (p=397594,q=397594) exp 1.431 | singlet 1630084 exp 1.587 | HR 2588672 | N^2/8 8388608
+k=14 N=16384: Majorana bal 2182396 (p=1707376,q=2182396) exp 1.504 | singlet 7550413 exp 1.632 | HR 9601024 | N^2/8 33554432
+k=15 N=32768: Majorana bal 3572224 (p=3572224,q=3572224) exp 1.451 | singlet 18575560 exp 1.610 | HR 33554432 | N^2/8 134217728
+k=20 N=1048576: Majorana bal 1594831736 (p=473732328,q=1594831736) exp 1.529 | singlet 7821214999 exp 1.643 | HR 26818379776 | N^2/8 137438953472
+k=24 N=16777216: Majorana bal 132224930146 (p=39961195310,q=132224930146) exp 1.539 | singlet 871851485971 exp 1.653 | HR 5744401317888 | N^2/8 35184372088832
+k=31 N=2147483648: Majorana bal 173427623923712 (p=173427623923712,q=173427623923712) exp 1.526 | singlet 6002687656302736 exp 1.691 | HR 72057594037927936 | N^2/8 576460752303423488

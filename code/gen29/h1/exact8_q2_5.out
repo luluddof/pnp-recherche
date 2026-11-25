@@ -1,0 +1,17 @@
+q=2: 2 orbit reps (S containing 0, mod O(Q)); 0s
+q=2: EXACT p_min = 28 (S=(np.int64(0), np.int64(1))) 0s
+q=3: 6 orbit reps (S containing 0, mod O(Q)); 1s
+q=3: EXACT p_min = 28 (S=(np.int64(0), np.int64(1), np.int64(2))) 1s
+q=4: 24 orbit reps (S containing 0, mod O(Q)); 4s
+q=4: EXACT p_min = 24 (S=(np.int64(0), np.int64(1), np.int64(8), np.int64(9))) 11s
+q=5: 110 orbit reps (S containing 0, mod O(Q)); 16s
+Traceback (most recent call last):
+  File "/tmp/claude-0/-home-user-pnp-recherche/2d12e629-e6d2-542b-bfc0-8b766f57383f/scratchpad/gen29/h1/exact8.py", line 84, in <module>
+    a,_=max_agree(S); p=n-a
+        ~~~~~~~~~^^^
+  File "/tmp/claude-0/-home-user-pnp-recherche/2d12e629-e6d2-542b-bfc0-8b766f57383f/scratchpad/gen29/h1/exact8.py", line 72, in max_agree
+    x=[Fraction(int(y[t]),int(y[q])) for t in range(q)]
+       ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/fractions.py", line 298, in __new__
+    raise ZeroDivisionError('Fraction(%s, 0)' % numerator)
+ZeroDivisionError: Fraction(0, 0)

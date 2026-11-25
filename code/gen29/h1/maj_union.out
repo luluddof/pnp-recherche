@@ -1,0 +1,5 @@
+k=5 d=1 frames=2 seed=1: |S|=23 -> exact p=402, nnz=23
+k=5 d=1 frames=2 seed=2: |S|=23 -> exact p=396, nnz=23
+k=5 d=1 frames=2 seed=3: |S|=23 -> exact p=396, nnz=23
+k=5 d=1 frames=3 seed=1: |S|=34 -> exact p=514, nnz=34
+k=5 d=1 frames=3 seed=2: |S|=33 -> exact p=511, nnz=33

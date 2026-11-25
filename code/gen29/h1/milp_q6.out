@@ -1,0 +1,2 @@
+q=6 part 0/2: 289 reps, best p=(19, [0, 1, 8, 11, 25, 27]), min over reps of MILP lower bound = 19.0, non-optimal solves 0, 390s
+q=6 part 1/2: 288 reps, best p=(19, [0, 1, 8, 27, 47, 61]), min over reps of MILP lower bound = 19.0, non-optimal solves 0, 402s
