@@ -50,6 +50,7 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 | G25-B4 | ✅ **Brainstorming : rang inférieur** (fini) | « Meilleures pièces à chaque taille » : ne gagne rien (λ ≥ 10⁴ dans l'algorithme). Gains réels dans la comptabilité de la récursion : base de balayage + constantes exactes (seuil log₂ m* : 1,37·10⁵ → 2,4·10⁴) ; annexe D : 4·10¹⁰ → 1,6·10⁶. Reste astronomique. `code/gen25/b4/notes.md` | consigne de l'auteur |
 | G25-P8 | 🔄 **Relecture adverse du théorème A explicite de Claude (P2)** | Lemme de balayage refait avec un code indépendant ; corrections de comptabilité contre le texte du papier ; constantes et seuils recalculés. | P2 |
 | G25-P9 | 🔄 **Le balayage à chaque niveau : changer la puissance du logarithme ?** | D'où vient √log m dans le théorème A ; quels paramètres changent la puissance (pas seulement la constante) ; balayage dans chaque niveau, croissance de K, tables réutilisées. | P2, consigne de l'auteur |
+| G25-P10 | 🔄 **Synthèse : combiner les résultats déjà prouvés** | Balayage appliqué à l'annexe D ; théorème « 2 produits = 1 » + modèle monomial ; distance + théorème 1 ; constantes explicites dans les conséquences (plus long chemin, CSP, Max-3-SAT) ; évaluateur modulo 3 + annexe D explicite ; autre route pour la fenêtre du module de classe. | consigne de l'auteur |
 
 Dossiers de travail de la génération 18 : `scratchpad/gen18/g18a` à `g18i`.
 
