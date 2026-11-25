@@ -44,6 +44,7 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
+| G26-P16 | 🔄 **Relecture courte des lemmes de G26-P4** | Contrôler Σ|E_l|·|C_l| ≥ N² − p, CORE, le lemme en escalier, le corollaire, et la relaxation GF(2). | B2 |
 | G25-B1 | ✅ **Brainstorming : constructions** (fini) | 12 idées, 7 tuées par calcul ; rien près du cercle. Restes : profil à saut convexe (2 %), familles au bord en ε (1,5 %), catalyseurs (1 %). La barrière de Cardy s'étendrait aux familles c → ∞ (argument non relu). `code/gen25/b1/notes.md` | consigne de l'auteur |
 | G25-B2 | ✅ **Brainstorming : techniques de preuve** (fini) | 13 idées. Prouvé : N² ≤ p‖R‖_op + q‖Fl2 C‖_op. Top 3 : conjecture d'étalement (donnerait 2θ + T ≥ 4, donc ρ ≥ 2/3 comme mur) ; modèle à blocs ; angle de Friedrichs. `code/gen25/b2/notes.md` | consigne de l'auteur |
 | G25-B3 | ✅ **Brainstorming : autres routes** (fini) | 10 idées ; top 3 : sparsification pour la décision seule (enlèverait le facteur loglog en n) ; quotient par grappes ; hypercliques récents comme gadgets à 3 directions. `code/gen25/b3/notes.md` | consigne de l'auteur |
