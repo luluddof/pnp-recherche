@@ -49,6 +49,7 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 | G25-B3 | ✅ **Brainstorming : autres routes** (fini) | 10 idées ; top 3 : sparsification pour la décision seule (enlèverait le facteur loglog en n) ; quotient par grappes ; hypercliques récents comme gadgets à 3 directions. `code/gen25/b3/notes.md` | consigne de l'auteur |
 | G25-B4 | ✅ **Brainstorming : rang inférieur** (fini) | « Meilleures pièces à chaque taille » : ne gagne rien (λ ≥ 10⁴ dans l'algorithme). Gains réels dans la comptabilité de la récursion : base de balayage + constantes exactes (seuil log₂ m* : 1,37·10⁵ → 2,4·10⁴) ; annexe D : 4·10¹⁰ → 1,6·10⁶. Reste astronomique. `code/gen25/b4/notes.md` | consigne de l'auteur |
 | G26-P4 | 🔄 **Recherche SAT exacte dans le modèle monomial-C** | Encoder supports + factorisation de rang p ; reproduire (6,6) à N = 5 ; décider (5,5) à N = 5 et (11,3) à N = 6. | B5 |
+| G26-P14 | 🔄 **Relecture adverse de G26-P13** | Covariance (E) par énumération exacte, découpage (C) dans la prop. 3 / lemme 8, concentration (B), recalcul de c1 = 3,166. | B6 |
 | G26-P11 | 🔄 **Conception spectrale de constructions** | Utiliser le lemme clé de P3 (Θ_s = identité sur ker(1 − Θ), ‖Θ_s‖ ≤ Q) comme principe : profil spectral nécessaire ; spectres des optimums ; recherche numérique réelle (facteurs de grande norme) à N = 6 à 10. | B2, étape 2 |
 
 Dossiers de travail de la génération 18 : `scratchpad/gen18/g18a` à `g18i`.
