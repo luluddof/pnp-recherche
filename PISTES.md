@@ -49,7 +49,6 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 | G25-B3 | ✅ **Brainstorming : autres routes** (fini) | 10 idées ; top 3 : sparsification pour la décision seule (enlèverait le facteur loglog en n) ; quotient par grappes ; hypercliques récents comme gadgets à 3 directions. `code/gen25/b3/notes.md` | consigne de l'auteur |
 | G25-B4 | ✅ **Brainstorming : rang inférieur** (fini) | « Meilleures pièces à chaque taille » : ne gagne rien (λ ≥ 10⁴ dans l'algorithme). Gains réels dans la comptabilité de la récursion : base de balayage + constantes exactes (seuil log₂ m* : 1,37·10⁵ → 2,4·10⁴) ; annexe D : 4·10¹⁰ → 1,6·10⁶. Reste astronomique. `code/gen25/b4/notes.md` | consigne de l'auteur |
 | G26-P4 | 🔄 **Recherche SAT exacte dans le modèle monomial-C** | Encoder supports + factorisation de rang p ; reproduire (6,6) à N = 5 ; décider (5,5) à N = 5 et (11,3) à N = 6. | B5 |
-| G26-P5 | 🔄 **Constante de Claude : version de Freedman et plancher** | Lemme de regroupement sensible à la variance (≈ 3,84 heuristique) ; plancher de cette conception (≈ 3,6 ?) et pourquoi ; changement de structure au niveau supérieur ou de base. | B7, P2 |
 | G26-P9 | 🔄 **Relecture adverse de G26-P3** | Vérifier le lemme clé, le théorème A et deux certificats, l'extension aux facteurs de norme bornée, les théorèmes B et G (code indépendant). | B2 |
 | G26-P8 | 🔄 **Seuils d'OpenAI avec les modes de Smith ; tentative sur C1′** | Recalculer exactement λ* (variante H, contre 2^n et PPSZ, densités 4,26 et 1) avec le modèle complet de P3 ; essayer de prouver C1′ (au moins la borne inférieure) pour les blocs de Cauchy. | B6, Article 3 |
 | G26-P1 | 🔄 **Enveloppe de l'annexe B à grand h (ansatz structuré)** | Écrire le système par x avec ρ, κ polynômes en les opérateurs b[r] (poly(h) inconnues) ; tester W + W′ = 4h − 1 − k pour h ≤ 10 à 15. Seul un k linéaire en h changerait θ. | B6 |
@@ -194,6 +193,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Résultat |
 |---|---|
+| ✅ **Constante de Claude : Freedman et plancher** (G26-P5) | c1 4,05 → 3,82 (R2F + R3″) ; structure S2 : ≈ 3,23 (en partie esquissée). Seuil contre 2^n : 1 943, puis 1 419. Plancher des lemmes uniformes ≈ 3,36 ; α ≥ 1 pour toute conception. Non relu. `code/gen26/p5/notes.md` |
 | ⚠️ **Au-delà de la droite dans le modèle monomial-C** (G26-P3) | Pas de gain d'exposant. Nouveau : p ≥ (1/2 − o(1))·N² si q = o(log N) ; p ≥ c·N²·ln N/q ; théorème de groupe ; gain d'exposant conditionnel (énergie des mots de longueur 4) ; la méthode des polynômes est limitée à N²·log N/q. Non relu. `code/gen26/p3/notes.md` |
 | ✅ **Relecture de la formule de Smith** (G26-P7) | Théorèmes 1 et 2 et réfutation de C1 confirmés (P+). Constante d'OpenAI 37,5 rigoureuse relativement à l'annexe D et aux lignes A-G de P3. `code/gen26/p7/notes.md` |
 | ✅ **Formule de Smith des blocs de Cauchy** (G26-P6) | Prouvée (non relue). Constante d'OpenAI 75 → 37,5 rigoureuse (relativement à l'annexe D). La conjecture C1 de G18d est fausse telle qu'écrite ; C1′ proposée. `code/gen26/p6/notes.md` |

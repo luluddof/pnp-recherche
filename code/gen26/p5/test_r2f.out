@@ -1,0 +1,25 @@
+(1) max Var/bound 0.573  max Delta/(4 zmax+3P/g) 0.416  max Lambda-sum/(2P/K) 0.232  (all must be <= 1)
+(2) K=16 t=64 unif  : max excess/N +0.0165 (x t = +1.06)  R2F 0.2871  R2 0.5393  lnK/(2t)=0.0217
+(2) K=16 t=64 bern  : max excess/N +0.0204 (x t = +1.30)  R2F 0.2871  R2 0.5393  lnK/(2t)=0.0217
+(2) K=16 t=64 hetero: max excess/N +0.0014 (x t = +0.09)  R2F 0.2871  R2 0.5393  lnK/(2t)=0.0217
+(2) K=16 t=64 rank2 : max excess/N +0.0449 (x t = +2.88)  R2F 0.2871  R2 0.5393  lnK/(2t)=0.0217
+(2) K=16 t=64 star  : max excess/N +0.0001 (x t = +0.00)  R2F 0.2871  R2 0.5393  lnK/(2t)=0.0217
+(2) K=16 t=64 blocks: max excess/N +0.0017 (x t = +0.11)  R2F 0.2871  R2 0.5393  lnK/(2t)=0.0217
+(2) K=32 t=32 unif  : max excess/N +0.0324 (x t = +1.04)  R2F 0.5956  R2 1.0727  lnK/(2t)=0.0542
+(2) K=32 t=32 bern  : max excess/N +0.0470 (x t = +1.50)  R2F 0.5956  R2 1.0727  lnK/(2t)=0.0542
+(2) K=32 t=32 hetero: max excess/N +0.0038 (x t = +0.12)  R2F 0.5956  R2 1.0727  lnK/(2t)=0.0542
+(2) K=32 t=32 rank2 : max excess/N +0.0830 (x t = +2.66)  R2F 0.5956  R2 1.0727  lnK/(2t)=0.0542
+(2) K=32 t=32 star  : max excess/N +0.0001 (x t = +0.00)  R2F 0.5956  R2 1.0727  lnK/(2t)=0.0542
+(2) K=32 t=32 blocks: max excess/N +0.0028 (x t = +0.09)  R2F 0.5956  R2 1.0727  lnK/(2t)=0.0542
+(2) K=64 t=16 unif  : max excess/N +0.0685 (x t = +1.10)  R2F 1.5213  R2 2.2581  lnK/(2t)=0.1300
+(2) K=64 t=16 bern  : max excess/N +0.1131 (x t = +1.81)  R2F 1.5213  R2 2.2581  lnK/(2t)=0.1300
+(2) K=64 t=16 hetero: max excess/N +0.0094 (x t = +0.15)  R2F 1.5213  R2 2.2581  lnK/(2t)=0.1300
+(2) K=64 t=16 rank2 : max excess/N +0.1963 (x t = +3.14)  R2F 1.5213  R2 2.2581  lnK/(2t)=0.1300
+(2) K=64 t=16 star  : max excess/N +0.0001 (x t = +0.00)  R2F 1.5213  R2 2.2581  lnK/(2t)=0.1300
+(2) K=64 t=16 blocks: max excess/N +0.0087 (x t = +0.14)  R2F 1.5213  R2 2.2581  lnK/(2t)=0.1300
+(2) K=8 t=256 unif  : max excess/N +0.0032 (x t = +0.83)  R2F 0.1866  R2 0.2511  lnK/(2t)=0.0041
+(2) K=8 t=256 bern  : max excess/N +0.0045 (x t = +1.15)  R2F 0.1866  R2 0.2511  lnK/(2t)=0.0041
+(2) K=8 t=256 hetero: max excess/N +0.0003 (x t = +0.07)  R2F 0.1866  R2 0.2511  lnK/(2t)=0.0041
+(2) K=8 t=256 rank2 : max excess/N +0.0064 (x t = +1.65)  R2F 0.1866  R2 0.2511  lnK/(2t)=0.0041
+(2) K=8 t=256 star  : max excess/N +0.0000 (x t = +0.01)  R2F 0.1866  R2 0.2511  lnK/(2t)=0.0041
+(2) K=8 t=256 blocks: max excess/N +0.0006 (x t = +0.15)  R2F 0.1866  R2 0.2511  lnK/(2t)=0.0041
