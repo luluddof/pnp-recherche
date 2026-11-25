@@ -44,6 +44,10 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
+| G28-C1 | 🔄 **Coin : constructions du type de l'annexe B, asymétriques** | Généraliser les pièces de l'annexe B avec une croissance asymétrique (côté bon marché au coin d'exposant > 1/2) ; calculer δ(η) exactement pour la famille paramétrée. | G27-B2, R1 |
+| G28-C2 | 🔄 **Coin : bornes inférieures** | Étendre le théorème S hors du modèle de Bell ; chercher δ ≤ C·η² dans des modèles plus larges (Q grand, non par blocs) ; ou montrer que c'est aussi dur qu'une borne au-delà de la droite. | G27-T3 |
+| G28-O1 | 🔄 **Critère du coin côté OpenAI et côté Claude « réel »** | L'annexe D (racine dominante) a-t-elle un analogue au déséquilibre ? Le critère du coin survit-il aux constantes réelles (tailles où le coin compte) ? | G27-B2 |
+| G28-R1 | 🔄 **Relecture de G27-T3** | Modèle de Bell, famille du nombre de singulets (formules de p et q), théorème S, preuve courte p ≥ N²/(4q). | G27-T3 |
 | G27-B1 | ❌ **Brainstorming : constructions** (fini) | Rien dans le cercle ; aucun coin. Ansatz d'orbite Z2^k (découpage en N blocs) ; nouveau point numérique (62,12)@16, non exact. Dans les modèles par blocs, un coin demande Q ≥ N^((1+2δ)/3). `code/gen27/b1/notes.md` | Étape 2 |
 | G27-B2 | ✅ **Routes hors du point équilibré** (fini, relu par G27-R1 : P+ avec corrections) | **ρ → 1/2 n'est pas nécessaire : étape 2 ⇔ pente finie au coin θ = 2** (niveaux déséquilibrés, formule α*). Nouveau problème : rigidité de rang de Kronecker du swap, δ(η) ≥ c·η ? `code/gen27/b2/notes.md` | Étape 2 |
 | G27-T2 | ⚠️ **Frontière exacte à N = 10 à 12** (fini tôt) | Cinq nouveaux points exacts dont (25,5)@10 et (19,6)@8 ; famille A_a ⊗ A_b. Tendance indéterminée ; le coin n'est pas échantillonné aux petits N. `code/gen27/t2/notes.md` | G26-P11 |
