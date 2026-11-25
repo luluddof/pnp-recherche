@@ -48,13 +48,17 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 | G25-B2 | ✅ **Brainstorming : techniques de preuve** (fini) | 13 idées. Prouvé : N² ≤ p‖R‖_op + q‖Fl2 C‖_op. Top 3 : conjecture d'étalement (donnerait 2θ + T ≥ 4, donc ρ ≥ 2/3 comme mur) ; modèle à blocs ; angle de Friedrichs. `code/gen25/b2/notes.md` | consigne de l'auteur |
 | G25-B3 | ✅ **Brainstorming : autres routes** (fini) | 10 idées ; top 3 : sparsification pour la décision seule (enlèverait le facteur loglog en n) ; quotient par grappes ; hypercliques récents comme gadgets à 3 directions. `code/gen25/b3/notes.md` | consigne de l'auteur |
 | G25-B4 | ✅ **Brainstorming : rang inférieur** (fini) | « Meilleures pièces à chaque taille » : ne gagne rien (λ ≥ 10⁴ dans l'algorithme). Gains réels dans la comptabilité de la récursion : base de balayage + constantes exactes (seuil log₂ m* : 1,37·10⁵ → 2,4·10⁴) ; annexe D : 4·10¹⁰ → 1,6·10⁶. Reste astronomique. `code/gen25/b4/notes.md` | consigne de l'auteur |
-| — | *Aucun agent en cours. La génération 25 est terminée (25/11).* | | |
+| G26-B5 | 🔄 **Brainstorming : arbre des sous-problèmes, puis attaque des plus petits** | Arbre explicite des sous-problèmes de l'étape 2 et de la constante de l'étape 1 ; attaque de 2-3 feuilles jamais essayées. | consigne de l'auteur |
+| G26-B6 | 🔄 **Brainstorming : perturber l'annexe B au point milieu** | Une petite perturbation non issue d'une algèbre de sommets peut-elle courber la frontière vers l'intérieur à θ = √2 ? Tests exacts à h ≤ 9. | consigne de l'auteur |
+| G26-B7 | 🔄 **Brainstorming : rang inférieur, deuxième tour** | Compromis temps-mémoire du balayage ; lemme d'ordre conjectural (4,17) ; surcoûts ; conjecture de Smith (37,5 rigoureux pour OpenAI) ; décision moins chère que le comptage ? | consigne de l'auteur |
 
 Dossiers de travail de la génération 18 : `scratchpad/gen18/g18a` à `g18i`.
 
 **État (24/11) :** la génération 18 est terminée : onze rapports (G18a à G18i, relecteurs G18R et G18S).
 
 Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g18d` (erreur de numéro au lancement ; la génération est bien la 17).
+
+**Consigne de l'utilisateur (25/11, nuit) : nouveau brainstorming, traiter les sous-problèmes. Fenêtres d'utilisation : travailler jusqu'à la limite, reprendre à 2h40 (heure de France, 01:40 UTC) et continuer (brainstorming, voies prometteuses pour améliorer les algorithmes de Claude ou d'OpenAI, ou pour l'étape 2) ; à la réinitialisation suivante (7h40 France, 06:40 UTC), NE RIEN lancer : pause jusqu'au retour de l'auteur.** Rappels programmés à 01:42 UTC et 05:50 UTC.
 
 **Consigne de l'utilisateur (génération 25) : faire un brainstorming d'agents ; si l'attaque principale bloque, chercher un meilleur algorithme ou une meilleure résolution au « rang inférieur », pour construire les étapes de calcul.** Fiche commune des agents : `code/gen25/BRIEF.md`.
 
