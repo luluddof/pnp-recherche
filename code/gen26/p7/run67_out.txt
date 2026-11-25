@@ -1,0 +1,2 @@
+a 6 cases 76 fails 0 time 1.4469654560089111
+a 7 cases 80 fails 0 time 14.079963207244873

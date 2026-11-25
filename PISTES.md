@@ -51,7 +51,6 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 | G26-P3 | 🔄 **Au-delà de la droite dans le modèle monomial-C ?** | Le modèle MC contient tous les optimums exacts connus (N ≤ 8). Lemme MC2 : p·q ≳ ½·N²·ln q. Peut-on obtenir N^(2+ε) (cycles pairs, ensembles acycliques) ? | B5 |
 | G26-P4 | 🔄 **Recherche SAT exacte dans le modèle monomial-C** | Encoder supports + factorisation de rang p ; reproduire (6,6) à N = 5 ; décider (5,5) à N = 5 et (11,3) à N = 6. | B5 |
 | G26-P5 | 🔄 **Constante de Claude : version de Freedman et plancher** | Lemme de regroupement sensible à la variance (≈ 3,84 heuristique) ; plancher de cette conception (≈ 3,6 ?) et pourquoi ; changement de structure au niveau supérieur ou de base. | B7, P2 |
-| G26-P7 | 🔄 **Relecture adverse de P6 (formule de Smith, théorème 2)** | Preuve de la valuation des mineurs de Cauchy ; segments initiaux ; borne (D.15) avec n_t/4 ; contre-exemple à C1. | P6 |
 | G26-P1 | 🔄 **Enveloppe de l'annexe B à grand h (ansatz structuré)** | Écrire le système par x avec ρ, κ polynômes en les opérateurs b[r] (poly(h) inconnues) ; tester W + W′ = 4h − 1 − k pour h ≤ 10 à 15. Seul un k linéaire en h changerait θ. | B6 |
 
 Dossiers de travail de la génération 18 : `scratchpad/gen18/g18a` à `g18i`.
@@ -194,6 +193,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Résultat |
 |---|---|
+| ✅ **Relecture de la formule de Smith** (G26-P7) | Théorèmes 1 et 2 et réfutation de C1 confirmés (P+). Constante d'OpenAI 37,5 rigoureuse relativement à l'annexe D et aux lignes A-G de P3. `code/gen26/p7/notes.md` |
 | ✅ **Formule de Smith des blocs de Cauchy** (G26-P6) | Prouvée (non relue). Constante d'OpenAI 75 → 37,5 rigoureuse (relativement à l'annexe D). La conjecture C1 de G18d est fausse telle qu'écrite ; C1′ proposée. `code/gen26/p6/notes.md` |
 | ✅ **Relecture de B7** (G26-P2) | R1 à R4 confirmés (P+). Constante de Claude 4,05 (constantes du relecteur). Seuil contre la force brute à densité 4,26 : log₂ m* = 2 237 (papier : 276 000). Mémoire polynomiale : 6,16, seuil 5 123. `code/gen26/p2/notes.md` |
 | ⚠️ **Arbre des sous-problèmes** (G26-B5) | Nouveau modèle monomial-C qui contient tous les optimums exacts ; lemme MC2 : p·q ≳ ½·N²·ln q (au-delà de la droite d'un log). Pas de gain linéaire à q = 3 (numérique, k ≤ 5). `code/gen26/b5/notes.md` |
