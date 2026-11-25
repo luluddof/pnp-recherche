@@ -1,0 +1,2 @@
+[sol14_R3pp_splitiii_1.02_epcb1.json top=S2q] r=4.26: 2^n: 1368 (x_top=670.0, e=0.04220, lt=7.0, d=0.4, log2lam=30.9) | 1.6423^n: 2685 (x_top=1328.0, e=0.03020, lt=7.0, d=0.4, log2lam=31.9) | 1.30704^n: 9275 (x_top=4622.0, e=0.01629, lt=7.0, d=0.4, log2lam=33.7)
+[sol14_R3pp_splitiii_1.02_epcb1.json top=S2q] r=1.0: 2^n: 50 (x_top=16.0, e=0.22332, lt=3.5, d=0.4, log2lam=20.1) | 1.6423^n: 79.72 (x_top=27.0, e=0.17808, lt=7.5, d=0.4, log2lam=27.7) | 1.30704^n: 258.5 (x_top=116.0, e=0.09585, lt=7.0, d=0.4, log2lam=28.5)

@@ -1,0 +1,5 @@
+bases done 24s; q of row-sweep bases: min 0.4651 max 0.7906
+Q0=1.0 EPC=3.7 EPB=3.7 base=R3pp mode=splitiii ratio=1.02 time 98s
+  q of level solvers with x>100: min 0.3183 median 0.4125 max 0.4253
+  a=2: [1000,2000] 3.191; [2000,4000] 3.210; [4000,8000] 3.212; [8000,16000] 3.205
+  a=4: [1000,2000] 4.513; [2000,4000] 4.540; [4000,8000] 4.542; [8000,16000] 4.532

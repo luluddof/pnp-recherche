@@ -1,0 +1,2 @@
+level: max(q_exact - q_P13) = 3.26e-10 (must be <= ~0);  |e_P13 - cost(0)| max 5.55e-17
+  q_P13 range 0.000..0.749; q_exact range 0.000..0.749; mean gap 0.000

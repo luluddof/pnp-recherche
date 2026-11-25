@@ -1,0 +1,25 @@
+lg=6 dd=0.0: q13=0.7906  fine-grid sup chord=0.7044  sup on (1e-10,1e-5)=0.6932
+lg=6 dd=1.0: q13=0.7142  fine-grid sup chord=0.6361  sup on (1e-10,1e-5)=0.6361
+lg=6 dd=4.0: q13=0.5843  fine-grid sup chord=0.5204  sup on (1e-10,1e-5)=0.5204
+lg=8 dd=0.0: q13=0.6040  fine-grid sup chord=0.5380  sup on (1e-10,1e-5)=0.5329
+lg=8 dd=1.0: q13=0.5698  fine-grid sup chord=0.5075  sup on (1e-10,1e-5)=0.5074
+lg=8 dd=4.0: q13=0.5332  fine-grid sup chord=0.4749  sup on (1e-10,1e-5)=0.4749
+lg=10 dd=0.0: q13=0.5116  fine-grid sup chord=0.4557  sup on (1e-10,1e-5)=0.4539
+lg=10 dd=1.0: q13=0.5000  fine-grid sup chord=0.4453  sup on (1e-10,1e-5)=0.4449
+lg=10 dd=4.0: q13=0.4888  fine-grid sup chord=0.4354  sup on (1e-10,1e-5)=0.4354
+lg=12 dd=0.0: q13=0.4790  fine-grid sup chord=0.4266  sup on (1e-10,1e-5)=0.4261
+lg=12 dd=1.0: q13=0.4756  fine-grid sup chord=0.4235  sup on (1e-10,1e-5)=0.4233
+lg=12 dd=4.0: q13=0.4723  fine-grid sup chord=0.4206  sup on (1e-10,1e-5)=0.4206
+lg=16 dd=0.0: q13=0.4662  fine-grid sup chord=0.4152  sup on (1e-10,1e-5)=0.4152
+lg=16 dd=1.0: q13=0.4659  fine-grid sup chord=0.4150  sup on (1e-10,1e-5)=0.4149
+lg=16 dd=4.0: q13=0.4657  fine-grid sup chord=0.4147  sup on (1e-10,1e-5)=0.4147
+lg=20 dd=0.0: q13=0.4652  fine-grid sup chord=0.4143  sup on (1e-10,1e-5)=0.4143
+lg=20 dd=1.0: q13=0.4652  fine-grid sup chord=0.4143  sup on (1e-10,1e-5)=0.4143
+lg=20 dd=4.0: q13=0.4651  fine-grid sup chord=0.4143  sup on (1e-10,1e-5)=0.4143
+lg=24 dd=0.0: q13=0.4651  fine-grid sup chord=0.4142  sup on (1e-10,1e-5)=0.4142
+lg=24 dd=1.0: q13=0.4651  fine-grid sup chord=0.4142  sup on (1e-10,1e-5)=0.4142
+lg=24 dd=4.0: q13=0.4651  fine-grid sup chord=0.4142  sup on (1e-10,1e-5)=0.4142
+lg=30 dd=0.0: q13=0.4651  fine-grid sup chord=0.4142  sup on (1e-10,1e-5)=0.4142
+lg=30 dd=1.0: q13=0.4651  fine-grid sup chord=0.4142  sup on (1e-10,1e-5)=0.4142
+lg=30 dd=4.0: q13=0.4651  fine-grid sup chord=0.4142  sup on (1e-10,1e-5)=0.4142
+max(fine - q13) = 0.00e+00

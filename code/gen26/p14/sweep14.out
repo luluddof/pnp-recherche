@@ -1,0 +1,4 @@
+K=4: s=5, hill-climb max q_needed = 0.2000; star q = 0.2000 (formula K(K-1)/(2s)-1 = 0.2000)
+K=5: s=8, hill-climb max q_needed = 0.2500; star q = 0.2500 (formula K(K-1)/(2s)-1 = 0.2500)
+K=6: s=11, hill-climb max q_needed = 0.3636; star q = 0.3636 (formula K(K-1)/(2s)-1 = 0.3636)
+K=7: s=15, hill-climb max q_needed = 0.4000; star q = 0.4000 (formula K(K-1)/(2s)-1 = 0.4000)

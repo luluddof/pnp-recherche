@@ -1,0 +1,30 @@
+K=4 t=2 unif  : max Var(Y-Y')/(VarY+VarY') = 1.8206 (bound 1+eps=8.000); max E|Y-Y'|/(E|Y-m|+E|Y'-m|) = 0.9884; max E|Y-Y'|/(sqrt2 sigma) = 1.2235 (lemma: 2.828); |mean diff| max 8.9e-16
+K=4 t=2 bern  : max Var(Y-Y')/(VarY+VarY') = 1.7221 (bound 1+eps=8.000); max E|Y-Y'|/(E|Y-m|+E|Y'-m|) = 1.0000; max E|Y-Y'|/(sqrt2 sigma) = 1.1500 (lemma: 2.828); |mean diff| max 0.0e+00
+K=4 t=2 rank1 : max Var(Y-Y')/(VarY+VarY') = 1.9964 (bound 1+eps=8.000); max E|Y-Y'|/(E|Y-m|+E|Y'-m|) = 1.0000; max E|Y-Y'|/(sqrt2 sigma) = 1.3436 (lemma: 2.828); |mean diff| max 4.4e-16
+K=4 t=2 star  : max Var(Y-Y')/(VarY+VarY') = 2.0000 (bound 1+eps=8.000); max E|Y-Y'|/(E|Y-m|+E|Y'-m|) = 1.0000; max E|Y-Y'|/(sqrt2 sigma) = 1.4142 (lemma: 2.828); |mean diff| max 0.0e+00
+K=4 t=2 block : max Var(Y-Y')/(VarY+VarY') = 2.0000 (bound 1+eps=8.000); max E|Y-Y'|/(E|Y-m|+E|Y'-m|) = 1.0000; max E|Y-Y'|/(sqrt2 sigma) = 1.4142 (lemma: 2.828); |mean diff| max 0.0e+00
+K=4 t=2 sparse: max Var(Y-Y')/(VarY+VarY') = 1.5000 (bound 1+eps=8.000); max E|Y-Y'|/(E|Y-m|+E|Y'-m|) = 0.7843; max E|Y-Y'|/(sqrt2 sigma) = 1.0000 (lemma: 2.828); |mean diff| max 0.0e+00
+K=4 t=3 unif  : max Var(Y-Y')/(VarY+VarY') = 1.5971 (bound 1+eps=8.000); max E|Y-Y'|/(E|Y-m|+E|Y'-m|) = 0.9088; max E|Y-Y'|/(sqrt2 sigma) = 1.0255 (lemma: 2.828); |mean diff| max 1.8e-15
+K=4 t=3 bern  : max Var(Y-Y')/(VarY+VarY') = 1.5000 (bound 1+eps=8.000); max E|Y-Y'|/(E|Y-m|+E|Y'-m|) = 0.9266; max E|Y-Y'|/(sqrt2 sigma) = 1.0076 (lemma: 2.828); |mean diff| max 0.0e+00
+K=4 t=3 rank1 : max Var(Y-Y')/(VarY+VarY') = 1.9883 (bound 1+eps=8.000); max E|Y-Y'|/(E|Y-m|+E|Y'-m|) = 1.0000; max E|Y-Y'|/(sqrt2 sigma) = 1.2011 (lemma: 2.828); |mean diff| max 8.9e-16
+K=4 t=3 star  : max Var(Y-Y')/(VarY+VarY') = 2.0000 (bound 1+eps=8.000); max E|Y-Y'|/(E|Y-m|+E|Y'-m|) = 1.0000; max E|Y-Y'|/(sqrt2 sigma) = 1.4142 (lemma: 2.828); |mean diff| max 0.0e+00
+K=4 t=3 block : max Var(Y-Y')/(VarY+VarY') = 2.0000 (bound 1+eps=8.000); max E|Y-Y'|/(E|Y-m|+E|Y'-m|) = 1.0000; max E|Y-Y'|/(sqrt2 sigma) = 1.4142 (lemma: 2.828); |mean diff| max 0.0e+00
+K=4 t=3 sparse: max Var(Y-Y')/(VarY+VarY') = 1.4924 (bound 1+eps=8.000); max E|Y-Y'|/(E|Y-m|+E|Y'-m|) = 0.7914; max E|Y-Y'|/(sqrt2 sigma) = 0.9645 (lemma: 2.828); |mean diff| max 0.0e+00
+K=5 t=2 unif  : max Var(Y-Y')/(VarY+VarY') = 1.3216 (bound 1+eps=4.000); max E|Y-Y'|/(E|Y-m|+E|Y'-m|) = 0.8105; max E|Y-Y'|/(sqrt2 sigma) = 0.9395 (lemma: 2.000); |mean diff| max 4.4e-16
+K=5 t=2 bern  : max Var(Y-Y')/(VarY+VarY') = 1.4106 (bound 1+eps=4.000); max E|Y-Y'|/(E|Y-m|+E|Y'-m|) = 0.8468; max E|Y-Y'|/(sqrt2 sigma) = 0.9937 (lemma: 2.000); |mean diff| max 0.0e+00
+K=5 t=2 rank1 : max Var(Y-Y')/(VarY+VarY') = 1.6568 (bound 1+eps=4.000); max E|Y-Y'|/(E|Y-m|+E|Y'-m|) = 0.9313; max E|Y-Y'|/(sqrt2 sigma) = 1.1808 (lemma: 2.000); |mean diff| max 6.7e-16
+K=5 t=2 star  : max Var(Y-Y')/(VarY+VarY') = 1.6667 (bound 1+eps=4.000); max E|Y-Y'|/(E|Y-m|+E|Y'-m|) = 1.0000; max E|Y-Y'|/(sqrt2 sigma) = 1.1918 (lemma: 2.000); |mean diff| max 0.0e+00
+K=5 t=2 block : max Var(Y-Y')/(VarY+VarY') = 1.5487 (bound 1+eps=4.000); max E|Y-Y'|/(E|Y-m|+E|Y'-m|) = 0.8865; max E|Y-Y'|/(sqrt2 sigma) = 0.9407 (lemma: 2.000); |mean diff| max 0.0e+00
+K=5 t=2 sparse: max Var(Y-Y')/(VarY+VarY') = 1.3357 (bound 1+eps=4.000); max E|Y-Y'|/(E|Y-m|+E|Y'-m|) = 0.6944; max E|Y-Y'|/(sqrt2 sigma) = 0.8193 (lemma: 2.000); |mean diff| max 0.0e+00
+K=5 t=3 unif  : max Var(Y-Y')/(VarY+VarY') = 1.1971 (bound 1+eps=4.000); max E|Y-Y'|/(E|Y-m|+E|Y'-m|) = 0.7777; max E|Y-Y'|/(sqrt2 sigma) = 0.8871 (lemma: 2.000); |mean diff| max 1.8e-15
+K=5 t=3 bern  : max Var(Y-Y')/(VarY+VarY') = 1.1872 (bound 1+eps=4.000); max E|Y-Y'|/(E|Y-m|+E|Y'-m|) = 0.7521; max E|Y-Y'|/(sqrt2 sigma) = 0.8534 (lemma: 2.000); |mean diff| max 0.0e+00
+K=5 t=3 rank1 : max Var(Y-Y')/(VarY+VarY') = 1.6461 (bound 1+eps=4.000); max E|Y-Y'|/(E|Y-m|+E|Y'-m|) = 0.9114; max E|Y-Y'|/(sqrt2 sigma) = 1.0500 (lemma: 2.000); |mean diff| max 4.4e-16
+K=5 t=3 star  : max Var(Y-Y')/(VarY+VarY') = 1.6667 (bound 1+eps=4.000); max E|Y-Y'|/(E|Y-m|+E|Y'-m|) = 0.9722; max E|Y-Y'|/(sqrt2 sigma) = 1.1918 (lemma: 2.000); |mean diff| max 0.0e+00
+K=5 t=3 block : max Var(Y-Y')/(VarY+VarY') = 1.4243 (bound 1+eps=4.000); max E|Y-Y'|/(E|Y-m|+E|Y'-m|) = 0.8998; max E|Y-Y'|/(sqrt2 sigma) = 0.9485 (lemma: 2.000); |mean diff| max 0.0e+00
+K=5 t=3 sparse: max Var(Y-Y')/(VarY+VarY') = 1.2294 (bound 1+eps=4.000); max E|Y-Y'|/(E|Y-m|+E|Y'-m|) = 0.6649; max E|Y-Y'|/(sqrt2 sigma) = 0.8121 (lemma: 2.000); |mean diff| max 0.0e+00
+K=6 t=2 unif  : max Var(Y-Y')/(VarY+VarY') = 1.1550 (bound 1+eps=2.833); max E|Y-Y'|/(E|Y-m|+E|Y'-m|) = 0.7546; max E|Y-Y'|/(sqrt2 sigma) = 0.8707 (lemma: 1.683); |mean diff| max 4.4e-16
+K=6 t=2 bern  : max Var(Y-Y')/(VarY+VarY') = 1.2253 (bound 1+eps=2.833); max E|Y-Y'|/(E|Y-m|+E|Y'-m|) = 0.7436; max E|Y-Y'|/(sqrt2 sigma) = 0.8658 (lemma: 1.683); |mean diff| max 0.0e+00
+K=6 t=2 rank1 : max Var(Y-Y')/(VarY+VarY') = 1.4897 (bound 1+eps=2.833); max E|Y-Y'|/(E|Y-m|+E|Y'-m|) = 0.8784; max E|Y-Y'|/(sqrt2 sigma) = 1.0032 (lemma: 1.683); |mean diff| max 1.1e-16
+K=6 t=2 star  : max Var(Y-Y')/(VarY+VarY') = 1.5000 (bound 1+eps=2.833); max E|Y-Y'|/(E|Y-m|+E|Y'-m|) = 0.8654; max E|Y-Y'|/(sqrt2 sigma) = 1.0534 (lemma: 1.683); |mean diff| max 0.0e+00
+K=6 t=2 block : max Var(Y-Y')/(VarY+VarY') = 1.4336 (bound 1+eps=2.833); max E|Y-Y'|/(E|Y-m|+E|Y'-m|) = 0.9052; max E|Y-Y'|/(sqrt2 sigma) = 0.9313 (lemma: 1.683); |mean diff| max 0.0e+00
+K=6 t=2 sparse: max Var(Y-Y')/(VarY+VarY') = 1.1250 (bound 1+eps=2.833); max E|Y-Y'|/(E|Y-m|+E|Y'-m|) = 0.5632; max E|Y-Y'|/(sqrt2 sigma) = 0.6515 (lemma: 1.683); |mean diff| max 0.0e+00
