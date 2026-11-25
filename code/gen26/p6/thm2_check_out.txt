@@ -1,0 +1,14 @@
+max ratio G/(zeta2/(4th)) over m<=18, th grid: 0.9990342203276648
+P(K) <= (K/2)log2 K for K < 2^20: True
+p=2: R_p(F)=1  Smith-monomials=1
+p=3: R_p(F)=1  Smith-monomials=1
+p=4: R_p(F)=1  Smith-monomials=1
+p=5: R_p(F)=3  Smith-monomials=3
+p=6: R_p(F)=3  Smith-monomials=3
+p=7: R_p(F)=5  Smith-monomials=5
+p=8: R_p(F)=5  Smith-monomials=5
+p=9: R_p(F)=6  Smith-monomials=8
+p=10: R_p(F)=8  Smith-monomials=8
+p=11: R_p(F)=14  Smith-monomials=14
+p=12: R_p(F)=14  Smith-monomials=14
+p=13: R_p(F)=17  Smith-monomials=23

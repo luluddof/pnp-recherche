@@ -1,0 +1,13 @@
+a=1 done: ok=20 bad=0
+a=2 done: ok=80 bad=0
+a=3 done: ok=220 bad=0
+a=4 done: ok=520 bad=0
+a=5 done: ok=768 bad=0
+a=6 done: ok=812 bad=0
+a=7 done: ok=856 bad=0
+brute-force minors ok 3 1
+brute-force minors ok 3 2
+brute-force minors ok 3 4
+brute-force minors ok 4 2
+brute-force minors ok 4 4
+brute-force minors ok 4 6

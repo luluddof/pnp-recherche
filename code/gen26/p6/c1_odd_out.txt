@@ -1,0 +1,2 @@
+first invariants of F: [0, 4, 4, 6, 6, 8, 9, 9, 10, 10, 10, 10, 10, 10, 12, 12, 12, 13, 13, 13]
+R_9(F) = 6 ; Smith-monomial count of weight < 9 = 8 (1, Z0,Z0',Z1,Z1', Z0^2, Z0Z0', Z0'^2)

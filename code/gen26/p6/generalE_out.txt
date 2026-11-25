@@ -1,0 +1,6 @@
+upper-side violation (Smith > sqfree): 3 [2, 2, 4] [0, 2, 2, 4, 4, 5, 8, 11] [0, 2, 2, 4, 4, 6, 6, 8]
+upper-side violation (Smith > sqfree): 5 [0, 0, 1, 1, 4] [0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 3, 3, 3, 3, 3, 3, 5, 5, 7, 7] [0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6]
+upper-side violation (Smith > sqfree): 4 [1, 2, 3, 5] [0, 1, 2, 3, 3, 4, 5, 5, 6, 6, 7, 8, 8, 9, 10, 16] [0, 1, 2, 3, 3, 4, 5, 5, 6, 6, 7, 8, 8, 9, 10, 11]
+upper-side violation (Smith > sqfree): 2 [0, 5] [0, 0, 1, 6] [0, 0, 5, 5]
+upper-side violation (Smith > sqfree): 3 [0, 4, 5] [0, 0, 2, 4, 5, 6, 8, 10] [0, 0, 4, 4, 5, 5, 9, 9]
+trials 300 violations of Smith<=sqfree: 93  violations of Smith>=full: 0

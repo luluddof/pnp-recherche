@@ -83,7 +83,7 @@ Ce fichier liste **tout ce qui peut entrer dans un article**, présent ou futur.
 | La structure des noyaux n'ajoute rien à la précision (rang plein ⇒ même besoin) | N (17 cas) | `code/gen18/g18a/notes.md` |
 | Récurrence de l'annexe D : la racine domine ; la profondeur achète √loglog | P | `code/gen18/g18d/notes.md` |
 | Proposition B′ (borne au niveau de la conception), lemme T | P | `code/gen18/g18d/notes.md` |
-| Invariants de Smith des blocs de Cauchy : 2^((a−i+1)+2k+2v₂(k!)) | N (23 cas exacts) ; conjecture C1 | `code/gen18/g18d/notes.md` |
+| Invariants de Smith des blocs de Cauchy : 2^((a−i+1)+v₂(ζ)+2k+2v₂(k!)) | **P (prouvé par G26-P6, non relu)** ; la conjecture C1 est fausse telle qu'écrite, remplacée par C1′ | `code/gen18/g18d/notes.md`, `code/gen26/p6/notes.md` |
 | Gain constant possible sur l'annexe D (modes 4 fois redondants, effilage 1/√3) | E, non vérifié | `code/gen18/g18d/notes.md` |
 | Les contraintes de charge viennent de la conception (lemme D.3, (D.6)), pas de l'instance | lecture de la source | `code/gen19/g19a/notes.md` |
 | Inégalité de séparateur : chaque direction coupe ≥ φ·M·min(1, 2(1−β)) fils (le coût 2^(φ′M) vaut pour l'identité de conditionnement) | P+ (G20f) | `code/gen19/g19a/notes.md` |
@@ -150,7 +150,7 @@ Ce fichier liste **tout ce qui peut entrer dans un article**, présent ou futur.
 
 | | |
 |---|---|
-| **Résultat** | (Claude, G25-P2 puis G25-P9) Théorème A′ : #3-SAT en 2^((c1 + o(1))·W/√log₂ m) avec c1 = 10,6 (déterministe) ou 7,47 (Las Vegas), contre 42,4 dans le papier ; avec le lemme RS et des niveaux déséquilibrés (G25-P9) : 6,81 / 4,82 ; **puis (G26-B7, relu par G26-P2 : P+) c1 = 4,05 à 4,12 déterministe et Las Vegas (regroupement stratifié, lemme d'ordre aléatoire, dérandomisation), et 6,16 en mémoire polynomiale ; compromis temps-mémoire du balayage (1 − M)/3 ; seuil contre la force brute à densité 4,26 : log₂ m* = 2 237 (papier : 276 000)** ; **et une explication de structure : la loi « de Pythagore » (Prop. P) montre qu'aucun arbre de niveaux ne change la puissance du logarithme** ; lemme de balayage nouveau (base e0 ≤ 1/4 + 1/(2K0)) ; seuils explicites contre la force brute, le meilleur #3-SAT et PPSZ. (OpenAI, G25-P3) annexe D avec constantes explicites : E ≤ 75·k·m/√log₂ s (rigoureux si l'annexe D est juste), ε légal 1/960 au lieu de 2⁻¹⁷, seuil 780 fois plus bas ; corrections de formulation de (D.5). **Conséquences explicites (G25-P10, sous une hypothèse non vérifiée) :** Max-Cut, spectre de Max-3-SAT, #CSP binaire, plus long cycle / chemin à degré borné (constante 5,3). |
+| **Résultat** | (Claude, G25-P2 puis G25-P9) Théorème A′ : #3-SAT en 2^((c1 + o(1))·W/√log₂ m) avec c1 = 10,6 (déterministe) ou 7,47 (Las Vegas), contre 42,4 dans le papier ; avec le lemme RS et des niveaux déséquilibrés (G25-P9) : 6,81 / 4,82 ; **puis (G26-B7, relu par G26-P2 : P+) c1 = 4,05 à 4,12 déterministe et Las Vegas (regroupement stratifié, lemme d'ordre aléatoire, dérandomisation), et 6,16 en mémoire polynomiale ; compromis temps-mémoire du balayage (1 − M)/3 ; seuil contre la force brute à densité 4,26 : log₂ m* = 2 237 (papier : 276 000)** ; **et une explication de structure : la loi « de Pythagore » (Prop. P) montre qu'aucun arbre de niveaux ne change la puissance du logarithme** ; lemme de balayage nouveau (base e0 ≤ 1/4 + 1/(2K0)) ; seuils explicites contre la force brute, le meilleur #3-SAT et PPSZ. (OpenAI, G25-P3 puis G26-P6) annexe D avec constantes explicites : E ≤ 75·k·m/√log₂ s (rigoureux si l'annexe D est juste), **puis 37,5·k·m/√log₂ s grâce à la formule de Smith des blocs de Cauchy, prouvée par G26-P6 (non relue)**, ε légal 1/960 au lieu de 2⁻¹⁷, seuil 780 fois plus bas ; corrections de formulation de (D.5). **Conséquences explicites (G25-P10, sous une hypothèse non vérifiée) :** Max-Cut, spectre de Max-3-SAT, #CSP binaire, plus long cycle / chemin à degré borné (constante 5,3). |
 | **Niveau** | P+ pour le théorème A′ de Claude (relu par G25-P8, code indépendant) ; P pour G25-P3 et G25-P9 ; conditionnel aux deux prépublications. Réserve : avec le balayage, la mémoire devient exponentielle (≈ 2^(0,95 × temps)). |
 | **Fichiers** | `code/gen25/p2/`, `code/gen25/p3/`, `code/gen25/b4/` |
 | **Avis honnête** | Contribution modeste mais propre et vérifiable : elle corrige et précise les constantes, et montre que les algorithmes restent sans effet pratique (seuils astronomiques). Utile comme section d'un article ou comme note technique ; les auteurs des prépublications seraient les premiers intéressés. |
@@ -195,6 +195,7 @@ Ce fichier liste **tout ce qui peut entrer dans un article**, présent ou futur.
 | Date | Changement |
 |---|---|
 | 24/11/2026 | Création du registre après la génération 18. Articles 1, 2, 3 ; candidats B1 à B4. |
+| 25/11/2026 | G26-P6 : formule de Smith prouvée (article 3 et B6). |
 | 25/11/2026 | G26-P2 : B7 relu (P+) ; seuil 2 237. |
 | 25/11/2026 | G26-B7 : c1 = 4,12 et version à mémoire polynomiale ajoutées à B6 (non relues). |
 | 25/11/2026 | G25-P10 : encadrement ajouté à l'article 3 ; conséquences explicites ajoutées à B6 ; génération 25 terminée. |
