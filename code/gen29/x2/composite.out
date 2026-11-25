@@ -1,0 +1,12 @@
+N=2 SWAP(p=1,q=1) -> P3: rank(P3-C)=4  (bound 2pN=4); ring bonds (12,23,31)=(1,1,1): osr site1|23=1, site3|12=1; X1 lower bound N^3/(4*1*q)=2.0; C=I gives 4; trivial ring N^3=8
+N=3 SWAP(p=3,q=1) -> P3: rank(P3-C)=16  (bound 2pN=18); ring bonds (12,23,31)=(1,1,1): osr site1|23=1, site3|12=1; X1 lower bound N^3/(4*1*q)=6.8; C=I gives 16; trivial ring N^3=27
+N=4 SWAP(p=6,q=1) -> P3: rank(P3-C)=40  (bound 2pN=48); ring bonds (12,23,31)=(1,1,1): osr site1|23=1, site3|12=1; X1 lower bound N^3/(4*1*q)=16.0; C=I gives 40; trivial ring N^3=64
+N=5 SWAP(p=10,q=1) -> P3: rank(P3-C)=80  (bound 2pN=100); ring bonds (12,23,31)=(1,1,1): osr site1|23=1, site3|12=1; X1 lower bound N^3/(4*1*q)=31.2; C=I gives 80; trivial ring N^3=125
+N=6 SWAP(p=8,q=6) -> P3: rank(P3-C)=94  (bound 2pN=96); ring bonds (12,23,31)=(6,6,1): osr site1|23=6, site3|12=6; X1 lower bound N^3/(4*1*q)=9.0; C=I gives 140; trivial ring N^3=216
+N=7 SWAP(p=11,q=7) -> P3: rank(P3-C)=148  (bound 2pN=154); ring bonds (12,23,31)=(7,7,1): osr site1|23=7, site3|12=7; X1 lower bound N^3/(4*1*q)=12.2; C=I gives 224; trivial ring N^3=343
+N=7 SWAP(p=12,q=6) -> P3: rank(P3-C)=161  (bound 2pN=168); ring bonds (12,23,31)=(6,6,1): osr site1|23=6, site3|12=6; X1 lower bound N^3/(4*1*q)=14.3; C=I gives 224; trivial ring N^3=343
+N=7 SWAP(p=14,q=5) -> P3: rank(P3-C)=185  (bound 2pN=196); ring bonds (12,23,31)=(5,5,1): osr site1|23=5, site3|12=5; X1 lower bound N^3/(4*1*q)=17.1; C=I gives 224; trivial ring N^3=343
+N=7 SWAP(p=17,q=4) -> P3: rank(P3-C)=210  (bound 2pN=238); ring bonds (12,23,31)=(4,4,1): osr site1|23=4, site3|12=4; X1 lower bound N^3/(4*1*q)=21.4; C=I gives 224; trivial ring N^3=343
+N=7 SWAP(p=20,q=3) -> P3: rank(P3-C)=238  (bound 2pN=280); ring bonds (12,23,31)=(3,3,1): osr site1|23=3, site3|12=3; X1 lower bound N^3/(4*1*q)=28.6; C=I gives 224; trivial ring N^3=343
+N=8 SWAP(p=20,q=6) -> P3: rank(P3-C)=294  (bound 2pN=320); ring bonds (12,23,31)=(6,6,1): osr site1|23=6, site3|12=6; X1 lower bound N^3/(4*1*q)=21.3; C=I gives 336; trivial ring N^3=512
+N=8 SWAP(p=22,q=5) -> P3: rank(P3-C)=311  (bound 2pN=352); ring bonds (12,23,31)=(5,5,1): osr site1|23=5, site3|12=5; X1 lower bound N^3/(4*1*q)=25.6; C=I gives 336; trivial ring N^3=512

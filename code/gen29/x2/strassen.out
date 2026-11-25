@@ -1,0 +1,8 @@
+Strassen terms as local operators: row ranks [8, 1, 1, 1, 1, 1, 1]
+term 1 == identity operator: True ; rank(sigma - I) = 4
+k=1 N=2 N^3=8: C = sum_(j<=m) G_j -> (m, #CP terms of C, rank(sigma-C)): [(0, 1, 4), (1, 7, 0)]  row ranks of G_j: [8, 4]
+k=2 N=4 N^3=64: C = sum_(j<=m) G_j -> (m, #CP terms of C, rank(sigma-C)): [(0, 1, 40), (1, 13, 16), (2, 49, 0)]  row ranks of G_j: [64, 48, 16]
+k=3 N=8 N^3=512: C = sum_(j<=m) G_j -> (m, #CP terms of C, rank(sigma-C)): [(0, 1, 336), (1, 19, 256), (2, 127, 64), (3, 343, 0)]  row ranks of G_j: [512, 448, 256, 64]
+flattening ranks node|rest: sigma_2 [4, 4, 4]  I [1, 1, 1]  T6 [4, 4, 4]
+k=2: flattening ranks of C_m: [[1, 1, 1], [7, 7, 7], [16, 16, 16]]  N^2 = 16
+k=3: flattening ranks of C_m: [[1, 1, 1], [10, 10, 10], [37, 37, 37], [64, 64, 64]]  N^2 = 64
