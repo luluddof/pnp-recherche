@@ -1,0 +1,12 @@
+h=6 D=9 n=11 rows=1331 T=1331: b-operators 0s
+  mu 0/97 0s
+  mu 20/97 2s
+  mu 40/97 3s
+  mu 60/97 5s
+  mu 80/97 7s
+h=6: done 2529 cols, e=0 two-route failures 0, 8s
+compress: m=1331 ncols=2540 r_all=560  (1s)
+r_all = 560  (T = 1331; faithful w.h.p. iff r_all < T)
+h=6 W=11: deficiency (number of missing l's) by k: k0:0 k1:0 k2:0 k3:0 k4:3 k5:6 k6:8 k7:8 k8:9 k9:11
+h=6 W=6: deficiency (number of missing l's) by k: k0:0 k1:0 k2:0 k3:0 k4:3 k5:6 k6:9 k7:9 k8:11 k9:11
+h=6 W=17: deficiency (number of missing l's) by k: k0:0 k1:0 k2:0 k3:0 k4:3 k5:6 k6:7

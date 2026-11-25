@@ -1,0 +1,13 @@
+h=3 D=3 c=3 rows=27 cols=84
+W=  0: min W'=  6  k = 5   (feasible check True, rank 21, cols 56)  0s
+W=  1: min W'=  5  k = 5   (feasible check True, rank 21, cols 56)  0s
+W=  2: min W'=  4  k = 5   (feasible check True, rank 21, cols 56)  0s
+W=  3: min W'=  4  k = 4   (feasible check True, rank 21, cols 63)  0s
+W=  4: min W'=  4  k = 3   (feasible check True, rank 21, cols 70)  0s
+W=  5: min W'=  1  k = 5   (feasible check True, rank 21, cols 56)  0s
+W=  6: min W'=  0  k = 5   (feasible check True, rank 21, cols 56)  0s
+W=  7: min W'=  0  k = 4   (feasible check True, rank 21, cols 63)  0s
+W=  8: min W'=  0  k = 3   (feasible check True, rank 21, cols 70)  0s
+W=  9: min W'=  0  k = 2   (feasible check True, rank 21, cols 76)  0s
+W= 10: min W'=  0  k = 1   (feasible check True, rank 21, cols 81)  0s
+W= 11: min W'=  0  k = 0   (feasible check True, rank 21, cols 84)  0s

@@ -1,0 +1,5 @@
+h=8: b-operators built 1.5s
+h=8: F built for 67 monomials, 2091 columns, 27.9s; checks e=0 consistency True, outside-support True
+Lemma 9(c) check sum_e F_e = (t^mu[-h] t^nu) Id: failures 0
+compress: m=10648 ncols=2113 r_all=628  (10s)
+F_h8_D8_c22_P16777213_cmp.pkl

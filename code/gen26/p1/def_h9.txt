@@ -1,0 +1,1 @@
+h=9 W=17: deficiency (number of missing l's) by k: k0:0 k1:0 k2:0 k3:0 k4:4 k5:12 k6:18 k7:22 k8:25 k9:27 k10:27 k11:28

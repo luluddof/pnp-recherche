@@ -198,6 +198,7 @@ Ce fichier liste **tout ce qui peut entrer dans un article**, présent ou futur.
 | Date | Changement |
 |---|---|
 | 24/11/2026 | Création du registre après la génération 18. Articles 1, 2, 3 ; candidats B1 à B4. |
+| 25/11/2026 | G26-P1 : enveloppe de l'annexe B, k borné par 3 dans l'ansatz structuré (résultat négatif, pas de nouvel élément d'article). |
 | 25/11/2026 | G26-P8 : seuils d'OpenAI (ligne H) recalculés : 2,25e5 ; théorèmes U et A2 vers C1′ (article 3), non relus. |
 | 25/11/2026 | G26-P10 : P5 relu ; c1 = 3,82 (P+), seuil 1 943 ; S2 corrigé : 3,31, seuil 1 514. |
 | 25/11/2026 | G26-P9 : bornes du modèle monomial-C (G26-P3) relues (P+), avec réserves. |

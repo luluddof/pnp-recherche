@@ -1,0 +1,7 @@
+h=11 sectors ['Fpar_h11_D11_p0_T2000_cmp.pkl', 'Fpar_h11_D11_p1_T2000_cmp.pkl'] r_all [1088, 1168]
+  W= 21 W'= 20 k=2: feasible=True  deficiency per sector [0, 0]  [9s]
+  W= 21 W'= 19 k=3: feasible=True  deficiency per sector [0, 0]  [9s]
+  W= 21 W'= 18 k=4: feasible=False  deficiency per sector [2, 3]  [10s]
+  W= 21 W'= 17 k=5: feasible=False  deficiency per sector [8, 11]  [10s]
+  W= 21 W'= 16 k=6: feasible=False  deficiency per sector [14, 16]  [11s]
+  W= 21 W'= 15 k=7: feasible=False  deficiency per sector [18, 20]  [9s]

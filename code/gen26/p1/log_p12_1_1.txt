@@ -1,0 +1,2 @@
+h=12 D=12 pi=1 chunk 1/24: 6 of 135 monomials, rows 228253, T=2200; b-ops 24s
+  0/6 79s

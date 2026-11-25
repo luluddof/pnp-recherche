@@ -1,0 +1,17 @@
+h=4 D=4 c=5 rows=125 cols=190
+W=  0: min W'= 12  k = 3   (feasible check True, rank 62, cols 167)  0s
+W=  1: min W'= 11  k = 3   (feasible check True, rank 62, cols 167)  0s
+W=  2: min W'= 10  k = 3   (feasible check True, rank 62, cols 167)  0s
+W=  3: min W'=  9  k = 3   (feasible check True, rank 62, cols 167)  0s
+W=  4: min W'=  8  k = 3   (feasible check True, rank 62, cols 167)  0s
+W=  5: min W'=  8  k = 2   (feasible check True, rank 62, cols 177)  0s
+W=  6: min W'=  7  k = 2   (feasible check True, rank 62, cols 177)  0s
+W=  7: min W'=  5  k = 3   (feasible check True, rank 62, cols 167)  0s
+W=  8: min W'=  4  k = 3   (feasible check True, rank 62, cols 167)  0s
+W=  9: min W'=  3  k = 3   (feasible check True, rank 62, cols 167)  0s
+W= 10: min W'=  2  k = 3   (feasible check True, rank 62, cols 167)  0s
+W= 11: min W'=  1  k = 3   (feasible check True, rank 62, cols 167)  0s
+W= 12: min W'=  0  k = 3   (feasible check True, rank 62, cols 167)  0s
+W= 13: min W'=  0  k = 2   (feasible check True, rank 62, cols 177)  0s
+W= 14: min W'=  0  k = 1   (feasible check True, rank 62, cols 185)  0s
+W= 15: min W'=  0  k = 0   (feasible check True, rank 62, cols 190)  0s

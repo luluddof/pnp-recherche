@@ -1,0 +1,11 @@
+h=10 D=10 n=42 rows=74088 T=2600: b-operators 19s
+  mu 0/139 20s
+  mu 20/139 47s
+  mu 40/139 76s
+  mu 60/139 107s
+  mu 80/139 165s
+  mu 100/139 241s
+  mu 120/139 298s
+h=10: done 5415 cols, e=0 two-route failures 0, 369s
+compress: m=2600 ncols=5457 r_all=1528  (10s)
+r_all = 1528  (T = 2600; faithful w.h.p. iff r_all < T)

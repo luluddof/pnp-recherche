@@ -1,0 +1,3 @@
+h=7: b-operators built 0.3s
+h=7: F built for 45 monomials, 1230 columns, 0.6s; checks e=0 consistency True, outside-support True
+Lemma 9(c) check sum_e F_e = (t^mu[-h] t^nu) Id: failures 0

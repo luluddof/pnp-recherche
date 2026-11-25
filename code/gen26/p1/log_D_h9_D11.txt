@@ -1,0 +1,4 @@
+h=9 D=11 n=30 rows=27000 T=2600: b-operators 12s
+  mu 0/195 14s
+  mu 20/195 67s
+  mu 40/195 118s

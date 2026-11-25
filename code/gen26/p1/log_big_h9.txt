@@ -1,0 +1,9 @@
+h=9 D=9 n=30 rows=27000 T=1500: b-operators 6s
+  mu 0/97 6s
+  mu 20/97 9s
+  mu 40/97 13s
+  mu 60/97 18s
+  mu 80/97 22s
+h=9: done 3402 cols, e=0 two-route failures 0, 25s
+compress: m=1500 ncols=3432 r_all=974  (3s)
+r_all = 974  (T = 1500; faithful w.h.p. iff r_all < T)

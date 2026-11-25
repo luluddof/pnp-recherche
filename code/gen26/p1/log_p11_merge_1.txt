@@ -1,0 +1,2 @@
+compress: m=2000 ncols=4227 r_all=1168  (9s)
+merged h=11 D=11 pi=1: 4198 cols, failures 0, leaks 0, r_all=1168 (T=2000)

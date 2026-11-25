@@ -1,0 +1,4 @@
+h=11 D=11 pi=0 chunk 3/8: 12 of 97 monomials, rows 87804, T=2000; b-ops 4s
+  0/12 20s
+  10/12 145s
+done chunk 3: two-route failures 0, parity leaks 0, 155s
