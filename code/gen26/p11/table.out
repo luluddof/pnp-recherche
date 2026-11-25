@@ -1,0 +1,16 @@
+file N p q | m #ev(Ts)>=1 #ev>1 #ev<0 #ev=0 | ||Ts|| ||K|| Q trTheta symTheta | Theta-eigs(non-1)
+exact_4_5_3.json   4  5 3 | 11 11 0  3 2 | 2.00 2.00 3.0 7 True | {np.float64(-2.0): 1, np.float64(-1.0): 2, np.float64(0.0): 2}
+exact_5_7_4.json   5  7 4 | 18 18 4  7 0 | 2.00 2.00 4.0 10 False | {np.float64(-2.0): 1, np.float64(-1.0): 6}
+exact_5_6_6.json   5  6 6 | 19 19 2  6 0 | 2.08 2.29 6.0 12 False | {np.float64(-2.0): 2, np.float64(-1.0): 3, np.float64(-0.0): 1}
+exact_6_7_7.json   6  7 7 | 29 29 0  7 0 | 2.00 2.00 7.0 18 True | {np.float64(-2.0): 4, np.float64(-1.0): 3}
+exact_6_12_3.json  6 12 3 | 24 25 1 11 0 | 2.00 2.00 3.0 12 True | {np.float64(-2.0): 3, np.float64(-1.0): 8, np.float64(2.0): 1}
+exact_6_8_6.json   6  8 6 | 28 28 0  8 0 | 2.00 2.00 6.0 16 True | {np.float64(-2.0): 4, np.float64(-1.0): 4}
+exact_7_11_7.json  7 11 7 | 38 38 1 10 0 | 2.03 2.14 7.0 21 False | {np.float64(-2.0): 8, np.float64(-1.0): 2}
+exact_7_12_6.json  7 12 6 | 37 38 1 10 0 | 2.11 2.11 6.0 21 True | {np.float64(-2.11): 1, np.float64(-2.0): 7, np.float64(-1.0): 2, np.float64(0.25): 1, np.float64(1.86): 1}
+exact_7_14_5.json  7 14 5 | 35 35 0 14 0 | 2.00 2.00 5.0 17 True | {np.float64(-2.0): 4, np.float64(-1.0): 10}
+exact_7_17_4.json  7 17 4 | 32 32 8 17 0 | 2.00 2.00 4.0 14 False | {np.float64(-2.0): 1, np.float64(-1.0): 16}
+exact_7_20_3.json  7 20 3 | 29 30 1 15 4 | 2.00 2.00 3.0 13 True | {np.float64(-2.0): 3, np.float64(-1.0): 12, np.float64(0.0): 4, np.float64(2.0): 1}
+exact_8_20_6.json  8 20 6 | 44 44 7 18 1 | 2.34 2.78 8.6 22 False | {np.float64(-2.0): 9, np.float64(-1.53): 1, np.float64(-1.0): 4, np.float64(-0.35): 1, np.float64(0.0): 4, np.float64(1.88): 1}
+exact_8_22_5.json  8 22 5 | 42 43 10 19 1 | 2.59 2.95 7.3 21 False | {np.float64(-2.0): 8, np.float64(-1.81): 2, np.float64(-1.0): 4, np.float64(-0.5): 1, np.float64(0.0): 5, np.float64(0.76): 1, np.float64(2.37): 1}
+exact_9_22_6.json  9 22 6 | 59 60 1 20 1 | 2.56 2.56 6.0 27 True | {np.float64(-2.0): 14, np.float64(-1.56): 1, np.float64(-1.0): 5, np.float64(0.0): 1, np.float64(2.56): 1}
+q8_8_8_8.json      8  8 8 | 56 56 0  8 0 | 3.00 3.00 8.0 32 True | {np.float64(-3.0): 8}

@@ -1,0 +1,35 @@
+== exact_4_5_3.json q=3 N=4 p=5 m=11 trTheta=7.0 ||Ts||=2.0 ||K||=2.0 Q=3.0
+  #ev>1+e 0 #ev=1 11 #ev in(0,1) 0 #ev=0 2 #ev<0 3
+  Ts eigen multiset (non-1): [(np.float64(-2.0), 1), (np.float64(-1.0), 2), (np.float64(0.0), 2)]
+  sum(rest)= -4.0   -(n-p-#extra1) check; odd moments rest j=1,3,5: [-4.0, -10.0, -34.0] tr Ts^j: [7.0, 1.0, -23.0]
+  Theta eigen multiset: [(np.complex128(1+0j), 11), (np.complex128(-1+0j), 2), (np.complex128(0j), 2), (np.complex128(-2+0j), 1)]
+  sv(1-Theta) nonzero: [3. 2. 2. 1. 1. 0.]
+  sv(K) multiset: [(np.float64(2.0), 1), (np.float64(1.0), 13), (np.float64(0.0), 2)]
+== exact_5_7_4.json q=4 N=5 p=7 m=18 trTheta=10.0 ||Ts||=2.0 ||K||=2.0 Q=4.0
+  #ev>1+e 4 #ev=1 14 #ev in(0,1) 0 #ev=0 0 #ev<0 7
+  Ts eigen multiset (non-1): [(np.float64(-2.0), 1), (np.float64(-1.118), 4), (np.float64(-1.0), 2), (np.float64(1.118), 4)]
+  sum(rest)= -4.0   -(n-p-#extra1) check; odd moments rest j=1,3,5: [-4.0, -10.0, -34.0] tr Ts^j: [10.0, 4.0, -20.0]
+  Theta eigen multiset: [(np.complex128(1+0j), 18), (np.complex128(-1+0j), 6), (np.complex128(-2+0j), 1)]
+  sv(1-Theta) nonzero: [3.    2.236 2.236 2.236 2.236 2.    2.    0.   ]
+  sv(K) multiset: [(np.float64(2.0), 1), (np.float64(1.618), 4), (np.float64(1.0), 16), (np.float64(0.618), 4)]
+== exact_5_6_6.json q=6 N=5 p=6 m=19 trTheta=12.0 ||Ts||=2.081 ||K||=2.288 Q=6.0
+  #ev>1+e 2 #ev=1 17 #ev in(0,1) 0 #ev=0 0 #ev<0 6
+  Ts eigen multiset (non-1): [(np.float64(-2.081), 1), (np.float64(-2.0), 1), (np.float64(-1.0), 3), (np.float64(-0.207), 1), (np.float64(1.081), 1), (np.float64(1.207), 1)]
+  sum(rest)= -5.0   -(n-p-#extra1) check; odd moments rest j=1,3,5: [-5.0, -17.0, -70.0] tr Ts^j: [12.0, -0.0, -53.0]
+  Theta eigen multiset: [(np.complex128(1+0j), 19), (np.complex128(-1+0j), 3), (np.complex128(-2+0j), 2), (np.complex128(-0+0j), 1)]
+  sv(1-Theta) nonzero: [3.162 3.    2.    2.    2.    1.414 0.   ]
+  sv(K) multiset: [(np.float64(2.288), 1), (np.float64(2.0), 1), (np.float64(1.414), 1), (np.float64(1.0), 20), (np.float64(0.874), 1), (np.float64(0.0), 1)]
+== exact_6_7_7.json q=7 N=6 p=7 m=29 trTheta=18.0 ||Ts||=2.0 ||K||=2.0 Q=7.0
+  #ev>1+e 0 #ev=1 29 #ev in(0,1) 0 #ev=0 0 #ev<0 7
+  Ts eigen multiset (non-1): [(np.float64(-2.0), 4), (np.float64(-1.0), 3)]
+  sum(rest)= -11.0   -(n-p-#extra1) check; odd moments rest j=1,3,5: [-11.0, -35.0, -131.0] tr Ts^j: [18.0, -6.0, -102.0]
+  Theta eigen multiset: [(np.complex128(1+0j), 29), (np.complex128(-2+0j), 4), (np.complex128(-1+0j), 3)]
+  sv(1-Theta) nonzero: [3. 3. 3. 3. 2. 2. 2. 0.]
+  sv(K) multiset: [(np.float64(2.0), 4), (np.float64(1.0), 32)]
+== exact_6_12_3.json q=3 N=6 p=12 m=24 trTheta=12.0 ||Ts||=2.0 ||K||=2.0 Q=3.0
+  #ev>1+e 1 #ev=1 24 #ev in(0,1) 0 #ev=0 0 #ev<0 11
+  Ts eigen multiset (non-1): [(np.float64(-2.0), 3), (np.float64(-1.0), 8), (np.float64(2.0), 1)]
+  sum(rest)= -12.0   -(n-p-#extra1) check; odd moments rest j=1,3,5: [-12.0, -24.0, -72.0] tr Ts^j: [12.0, 0.0, -48.0]
+  Theta eigen multiset: [(np.complex128(1+0j), 24), (np.complex128(-1+0j), 8), (np.complex128(-2+0j), 3), (np.complex128(2+0j), 1)]
+  sv(1-Theta) nonzero: [3. 3. 3. 2. 2. 2. 2. 2. 2. 2. 2. 1. 0.]
+  sv(K) multiset: [(np.float64(2.0), 4), (np.float64(1.0), 32)]
