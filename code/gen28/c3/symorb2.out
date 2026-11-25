@@ -1,0 +1,12 @@
+h= 40 M=   1 log2N=  15.2  theta_end=2.860  jump T*=1.920  balanced=1.961
+h= 40 M=   2 log2N=  22.1  theta_end=2.653  jump T*=1.558  balanced=1.791
+h= 40 M=   4 log2N=  28.9  theta_end=2.673  jump T*=1.476  balanced=1.754
+h= 40 M=  10 log2N=  33.3  theta_end=3.067  jump T*=1.695  balanced=1.856
+h= 40 M=  40 log2N=  33.4  theta_end=3.312  jump T*=1.773  balanced=1.888
+h= 40 M= 162 log2N=  33.4  theta_end=3.312  jump T*=1.773  balanced=1.888
+h= 64 M=   1 log2N=  20.7  theta_end=2.692  jump T*=1.702  balanced=1.858
+h= 64 M=   2 log2N=  30.1  theta_end=2.528  jump T*=1.391  balanced=1.722
+h= 64 M=   4 log2N=  40.2  theta_end=2.528  jump T*=1.312  balanced=1.685
+h= 64 M=  16 log2N=  49.8  theta_end=3.114  jump T*=1.668  balanced=1.841
+h= 64 M=  64 log2N=  49.9  theta_end=3.263  jump T*=1.699  balanced=1.853
+h= 64 M= 258 log2N=  49.9  theta_end=3.263  jump T*=1.699  balanced=1.853

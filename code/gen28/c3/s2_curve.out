@@ -1,0 +1,29 @@
+k=20
+  d=  1 eta=0.079  delta_bound=0.0827 (/eta^2=13.163)   singlet delta at same q=0.0163
+  d=  2 eta=0.158  delta_bound=0.1109 (/eta^2=4.417)   singlet delta at same q=0.0163
+  d=  3 eta=0.238  delta_bound=0.1449 (/eta^2=2.564)   singlet delta at same q=0.0163
+  d=  4 eta=0.317  delta_bound=0.1850 (/eta^2=1.841)   singlet delta at same q=0.0359
+  d=  5 eta=0.396  delta_bound=0.2316 (/eta^2=1.475)   singlet delta at same q=0.0359
+k=40
+  d=  1 eta=0.040  delta_bound=0.0360 (/eta^2=22.916)   singlet delta at same q=0.0056
+  d=  3 eta=0.119  delta_bound=0.0551 (/eta^2=3.900)   singlet delta at same q=0.0056
+  d=  5 eta=0.198  delta_bound=0.0799 (/eta^2=2.034)   singlet delta at same q=0.0121
+  d=  7 eta=0.277  delta_bound=0.1107 (/eta^2=1.439)   singlet delta at same q=0.0121
+  d=  9 eta=0.357  delta_bound=0.1480 (/eta^2=1.164)   singlet delta at same q=0.0194
+  d= 11 eta=0.436  delta_bound=0.1923 (/eta^2=1.012)   singlet delta at same q=0.0194
+k=80
+  d=  1 eta=0.020  delta_bound=0.0162 (/eta^2=41.379)   singlet delta at same q=0.0020
+  d=  5 eta=0.099  delta_bound=0.0297 (/eta^2=3.030)   singlet delta at same q=0.0041
+  d=  9 eta=0.178  delta_bound=0.0489 (/eta^2=1.538)   singlet delta at same q=0.0041
+  d= 13 eta=0.258  delta_bound=0.0743 (/eta^2=1.120)   singlet delta at same q=0.0065
+  d= 17 eta=0.337  delta_bound=0.1064 (/eta^2=0.938)   singlet delta at same q=0.0090
+  d= 21 eta=0.416  delta_bound=0.1454 (/eta^2=0.840)   singlet delta at same q=0.0148
+  d= 25 eta=0.495  delta_bound=0.1918 (/eta^2=0.782)   singlet delta at same q=0.0181
+k=160
+  d=  1 eta=0.010  delta_bound=0.0075 (/eta^2=76.821)   singlet delta at same q=nan
+  d=  9 eta=0.089  delta_bound=0.0175 (/eta^2=2.198)   singlet delta at same q=nan
+  d= 17 eta=0.168  delta_bound=0.0332 (/eta^2=1.171)   singlet delta at same q=nan
+  d= 25 eta=0.248  delta_bound=0.0554 (/eta^2=0.904)   singlet delta at same q=nan
+  d= 33 eta=0.327  delta_bound=0.0845 (/eta^2=0.790)   singlet delta at same q=nan
+  d= 41 eta=0.406  delta_bound=0.1207 (/eta^2=0.732)   singlet delta at same q=nan
+  d= 49 eta=0.485  delta_bound=0.1644 (/eta^2=0.698)   singlet delta at same q=nan
