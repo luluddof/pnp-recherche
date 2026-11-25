@@ -44,6 +44,9 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
+| G29-H1 | 🔄 **Rigidité de Hadamard à petit rang et coin de Bell** | Bornes supérieures connues de R_H(r) pour r = N^η (énoncés exacts) ; constructions (méthode polynomiale d'Alman-Williams adaptée, structures de Kronecker) ; sont-elles creuses en Fourier (valides dans Bell) ? Calculs à N = 16, 32, 64. | G28-C2, R2 |
+| G29-X1 | 🔄 **Autres opérateurs de croisement** | La disposition de l'algorithme de Claude impose-t-elle le SWAP ? D'autres dispositions (3 registres, permutations cycliques, croisements partiels) donnent-elles un opérateur à coin meilleur ? | Nouveau |
+| G29-U1 | 🔄 **Seconde relecture indépendante du lemme U et du critère du coin** | Simulation directe de la récurrence de coût de l'algorithme avec niveaux déséquilibrés ; base du candidat B7. | G27-B2, R1 |
 | G28-C1 | ❌ **Coin : constructions du type de l'annexe B** (fini) | Mécanisme prouvé (coupure de poids côté C ; bord × croissance √ ⇒ γ = 1/2). Loi γ = b_C/a_R : un coin linéaire demande une croissance de Hagedorn côté C, impossible dans une identité de localité. Heisenberg multicolore : saut avant le coin. `code/gen28/c1/notes.md` | G27-B2 |
 | G28-O2 | ❌ **Pénalité d'entropie** (fini, non relu) | Réelle (lemme 2(b) : binôme) ; la fusion donne un petit gain exact (N² → N² − p), mais aucune pièce connue ne bat le cercle. Seule faille : grands blocs de Jordan en 0 (cas connus minuscules). `code/gen28/o2/notes.md` | G28-O1 |
 | G28-C3 | ❌ **Coin : Hagedorn et chaînes de projecteurs** (fini) | Aucun coin. Théorème S″ (U(n) local : δ ≤ 0,574·η²), formules exactes. Couronnes : p + q ≈ N²/2 (une grande symétrie nuit). Hagedorn : extrémité pire. Ouvert : Bell complet, modèles abéliens invariants par translation. `code/gen28/c3/notes.md` | G28-C1 |
