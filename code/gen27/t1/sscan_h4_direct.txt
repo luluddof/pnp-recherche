@@ -1,0 +1,21 @@
+ weight 0: total mode-span dim 2 / 6840 (full Hom); saturated blocks 0/64  0s
+ weight 1: total mode-span dim 32 / 6840 (full Hom); saturated blocks 0/64  0s
+ weight 2: total mode-span dim 62 / 6840 (full Hom); saturated blocks 0/64  0s
+ weight 3: total mode-span dim 94 / 6840 (full Hom); saturated blocks 2/64  0s
+ weight 4: total mode-span dim 156 / 6840 (full Hom); saturated blocks 6/64  0s
+h=4 D=4: W0:12/k3 W1:11/k3 W2:10/k3 W3:9/k3 W4:8/k3 W5:8/k2 W6:7/k2 W7:5/k3 W8:4/k3 W9:3/k3 W10:2/k3 W11:1/k3 W12:0/k3 W13:-1/k3 W14:-1/k2 W15:-1/k1
+ weight 5: total mode-span dim 214 / 6840 (full Hom); saturated blocks 8/64  0s
+h=4 D=5: W0:12/k3 W1:11/k3 W2:10/k3 W3:9/k3 W4:8/k3 W5:8/k2 W6:7/k2 W7:5/k3 W8:4/k3 W9:3/k3 W10:2/k3 W11:1/k3 W12:0/k3 W13:-1/k3 W14:-1/k2 W15:-1/k1
+ weight 6: total mode-span dim 324 / 6840 (full Hom); saturated blocks 12/64  1s
+h=4 D=6: W0:11/k4 W1:11/k3 W2:10/k3 W3:9/k3 W4:8/k3 W5:7/k3 W6:6/k3 W7:5/k3 W8:4/k3 W9:3/k3 W10:2/k3 W11:-1/k5 W12:-1/k4 W13:-1/k3 W14:-1/k2 W15:-1/k1
+ weight 7: total mode-span dim 426 / 6840 (full Hom); saturated blocks 16/64  1s
+h=4 D=7: W0:10/k5 W1:9/k5 W2:9/k4 W3:8/k4 W4:7/k4 W5:6/k4 W6:5/k4 W7:4/k4 W8:3/k4 W9:1/k5 W10:-1/k6 W11:-1/k5 W12:-1/k4 W13:-1/k3 W14:-1/k2 W15:-1/k1
+ weight 8: total mode-span dim 590 / 6840 (full Hom); saturated blocks 16/64  2s
+h=4 D=8: W0:8/k7 W1:8/k6 W2:7/k6 W3:6/k6 W4:5/k6 W5:5/k5 W6:3/k6 W7:2/k6 W8:-1/k8 W9:-1/k7 W10:-1/k6 W11:-1/k5 W12:-1/k4 W13:-1/k3 W14:-1/k2 W15:-1/k1
+ weight 9: total mode-span dim 772 / 6840 (full Hom); saturated blocks 16/64  2s
+h=4 D=9: W0:7/k8 W1:7/k7 W2:6/k7 W3:6/k6 W4:5/k6 W5:5/k5 W6:2/k7 W7:-1/k9 W8:-1/k8 W9:-1/k7 W10:-1/k6 W11:-1/k5 W12:-1/k4 W13:-1/k3 W14:-1/k2 W15:-1/k1
+ weight 10: total mode-span dim 1024 / 6840 (full Hom); saturated blocks 18/64  3s
+h=4 D=10: W0:6/k9 W1:6/k8 W2:6/k7 W3:6/k6 W4:5/k6 W5:5/k5 W6:0/k9 W7:-1/k9 W8:-1/k8 W9:-1/k7 W10:-1/k6 W11:-1/k5 W12:-1/k4 W13:-1/k3 W14:-1/k2 W15:-1/k1
+ weight 11: total mode-span dim 1298 / 6840 (full Hom); saturated blocks 22/64  4s
+h=4 D=11: W0:6/k9 W1:6/k8 W2:6/k7 W3:6/k6 W4:5/k6 W5:5/k5 W6:0/k9 W7:-1/k9 W8:-1/k8 W9:-1/k7 W10:-1/k6 W11:-1/k5 W12:-1/k4 W13:-1/k3 W14:-1/k2 W15:-1/k1
+h=4 D=inf: W0:6/k9 W1:6/k8 W2:6/k7 W3:6/k6 W4:5/k6 W5:5/k5 W6:0/k9 W7:-1/k9 W8:-1/k8 W9:-1/k7 W10:-1/k6 W11:-1/k5 W12:-1/k4 W13:-1/k3 W14:-1/k2 W15:-1/k1

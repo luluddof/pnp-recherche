@@ -1,0 +1,15 @@
+  p2q x=1e+02 e=3.3400e-01 e*x=33.4 best y=23
+  p2q x=1e+03 e=7.2596e-02 e*x=72.6 best y=15
+  p2q x=1e+04 e=1.0581e-02 e*x=105.8 best y=64
+  p2q x=1e+05 e=1.2678e-03 e*x=126.8 best y=64
+  p2q x=2e+05 e=6.6227e-04 e*x=132.5 best y=135
+  p2q x=3e+05 e=4.5166e-04 e*x=135.5 best y=135
+  p2q x=4e+05 e=3.4382e-04 e*x=137.5 best y=135
+  p2q x=5e+05 e=2.7811e-04 e*x=139.1 best y=135
+  p2q x=6e+05 e=2.3379e-04 e*x=140.3 best y=135
+  p2q x=7e+05 e=2.0183e-04 e*x=141.3 best y=135
+  p2q x=8e+05 e=1.7768e-04 e*x=142.1 best y=135
+  p2q x=9e+05 e=1.5878e-04 e*x=142.9 best y=135
+  p2q x=1e+06 e=1.4357e-04 e*x=143.6 best y=135
+p2q ovh 1
+  

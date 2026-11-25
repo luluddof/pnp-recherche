@@ -1,0 +1,22 @@
+ weight 0: total mode-span dim 2 / 62610 (full Hom); saturated blocks 0/80  2s
+ weight 1: total mode-span dim 40 / 62610 (full Hom); saturated blocks 0/80  2s
+ weight 2: total mode-span dim 78 / 62610 (full Hom); saturated blocks 0/80  2s
+ weight 3: total mode-span dim 118 / 62610 (full Hom); saturated blocks 0/80  2s
+ weight 4: total mode-span dim 198 / 62610 (full Hom); saturated blocks 0/80  2s
+ weight 5: total mode-span dim 278 / 62610 (full Hom); saturated blocks 0/80  3s
+ weight 6: total mode-span dim 438 / 62610 (full Hom); saturated blocks 0/80  4s
+ weight 7: total mode-span dim 596 / 62610 (full Hom); saturated blocks 6/80  4s
+h=7 D=7: W8:16/k3 W9:15/k3 W10:14/k3 W11:13/k3 W12:12/k3 W13:11/k3 W14:10/k3 W15:9/k3 W16:8/k3 W17:7/k3 W18:6/k3 W19:5/k3
+ weight 8: total mode-span dim 850 / 62610 (full Hom); saturated blocks 8/80  25s
+ weight 9: total mode-span dim 1136 / 62610 (full Hom); saturated blocks 10/80  28s
+ weight 10: total mode-span dim 1544 / 62610 (full Hom); saturated blocks 10/80  33s
+h=7 D=10: W8:16/k3 W9:15/k3 W10:14/k3 W11:13/k3 W12:12/k3 W13:11/k3 W14:10/k3 W15:9/k3 W16:8/k3 W17:7/k3 W18:6/k3 W19:5/k3
+ weight 11: total mode-span dim 1998 / 62610 (full Hom); saturated blocks 14/80  101s
+ weight 12: total mode-span dim 2660 / 62610 (full Hom); saturated blocks 16/80  109s
+h=7 D=12: W8:16/k3 W9:15/k3 W10:14/k3 W11:13/k3 W12:12/k3 W13:11/k3 W14:10/k3 W15:9/k3 W16:8/k3 W17:7/k3 W18:6/k3 W19:5/k3
+ weight 13: total mode-span dim 3374 / 62610 (full Hom); saturated blocks 18/80  233s
+h=7 D=13: W8:16/k3 W9:15/k3 W10:14/k3 W11:13/k3 W12:12/k3 W13:11/k3 W14:10/k3 W15:9/k3 W16:8/k3 W17:7/k3 W18:6/k3 W19:5/k3
+ weight 14: total mode-span dim 4332 / 62610 (full Hom); saturated blocks 22/80  434s
+h=7 D=14: W8:16/k3 W9:15/k3 W10:14/k3 W11:13/k3 W12:12/k3 W13:11/k3 W14:10/k3 W15:9/k3 W16:8/k3 W17:7/k3 W18:6/k3 W19:5/k3
+ weight 15: total mode-span dim 5442 / 62610 (full Hom); saturated blocks 24/80  14s
+h=7 D=15: W8:16/k3 W9:15/k3 W10:14/k3 W11:13/k3 W12:12/k3 W13:11/k3 W14:10/k3 W15:9/k3 W16:8/k3 W17:7/k3 W18:6/k3 W19:5/k3

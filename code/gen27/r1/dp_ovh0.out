@@ -1,0 +1,40 @@
+p2q ovh 0
+  x=1e2: e=2.469e-02 e*x=2.47 locslope=0.911
+  x=1e3: e=3.442e-03 e*x=3.44 locslope=0.858
+  x=1e4: e=4.519e-04 e*x=4.52 locslope=0.876
+  x=1e6: e=8.776e-06 e*x=8.78 locslope=0.868
+  x=1e8: e=1.668e-07 e*x=16.7 locslope=0.864
+  x=1e12: e=6.095e-11 e*x=61 locslope=0.861
+  x=1e16: e=2.222e-14 e*x=222 locslope=0.860
+  x=1e20: e=8.097e-18 e*x=810 locslope=0.860
+  x=1e30: e=2.034e-26 e*x=2.03e+04 locslope=0.860
+circ+lin0.3 ovh 0
+  x=1e2: e=6.502e-02 e*x=6.5 locslope=0.586
+  x=1e3: e=1.330e-02 e*x=13.3 locslope=0.691
+  x=1e4: e=3.265e-03 e*x=32.6 locslope=0.606
+  x=1e6: e=1.753e-04 e*x=175 locslope=0.621
+  x=1e8: e=9.373e-06 e*x=937 locslope=0.629
+  x=1e12: e=2.741e-08 e*x=2.74e+04 locslope=0.633
+  x=1e16: e=8.041e-11 e*x=8.04e+05 locslope=0.633
+  x=1e20: e=2.360e-13 e*x=2.36e+07 locslope=0.633
+  x=1e30: e=1.094e-19 e*x=1.09e+11 locslope=0.633
+lp1.5 ovh 0
+  x=1e2: e=3.786e-02 e*x=3.79 locslope=0.721
+  x=1e3: e=8.156e-03 e*x=8.16 locslope=0.668
+  x=1e4: e=1.740e-03 e*x=17.4 locslope=0.667
+  x=1e6: e=8.135e-05 e*x=81.3 locslope=0.667
+  x=1e8: e=3.755e-06 e*x=375 locslope=0.667
+  x=1e12: e=8.103e-09 e*x=8.1e+03 locslope=0.667
+  x=1e16: e=1.749e-11 e*x=1.75e+05 locslope=0.667
+  x=1e20: e=3.775e-14 e*x=3.78e+06 locslope=0.667
+  x=1e30: e=8.116e-21 e*x=8.12e+09 locslope=0.667
+pow0.75 ovh 0
+  x=1e2: e=5.984e-02 e*x=5.98 locslope=0.622
+  x=1e3: e=1.415e-02 e*x=14.1 locslope=0.628
+  x=1e4: e=3.436e-03 e*x=34.4 locslope=0.611
+  x=1e6: e=2.054e-04 e*x=205 locslope=0.611
+  x=1e8: e=1.212e-05 e*x=1.21e+03 locslope=0.612
+  x=1e12: e=4.276e-08 e*x=4.28e+04 locslope=0.613
+  x=1e16: e=1.509e-10 e*x=1.51e+06 locslope=0.613
+  x=1e20: e=5.329e-13 e*x=5.33e+07 locslope=0.613
+  x=1e30: e=3.925e-19 e*x=3.93e+11 locslope=0.613

@@ -1,0 +1,18 @@
+h=4 D=14 P=16777213: n=5 rows=125 cols=12453 two-route failures 0  8s
+  r_all = 125 (of n^3=125); compressed 0s
+  W=  0: min W'=  6 k=  9  rank(allowed)=122 (r_all 125); at W'-1 deficiency 2  2s
+  W=  1: min W'=  6 k=  8  rank(allowed)=124 (r_all 125); at W'-1 deficiency 2  4s
+  W=  2: min W'=  6 k=  7  rank(allowed)=125 (r_all 125); at W'-1 deficiency 2  5s
+  W=  3: min W'=  6 k=  6  rank(allowed)=125 (r_all 125); at W'-1 deficiency 2  7s
+  W=  4: min W'=  5 k=  6  rank(allowed)=125 (r_all 125); at W'-1 deficiency 5  8s
+  W=  5: min W'=  5 k=  5  rank(allowed)=125 (r_all 125); at W'-1 deficiency 1  10s
+  W=  6: min W'=  0 k=  9  rank(allowed)=122 (r_all 125); at W'-1 deficiency 2  11s
+  W=  7: min W'= -1 k=  9  rank(allowed)=125 (r_all 125); at W'-1 deficiency 0  13s
+  W=  8: min W'= -1 k=  8  rank(allowed)=125 (r_all 125); at W'-1 deficiency 0  14s
+  W=  9: min W'= -1 k=  7  rank(allowed)=125 (r_all 125); at W'-1 deficiency 0  15s
+  W= 10: min W'= -1 k=  6  rank(allowed)=125 (r_all 125); at W'-1 deficiency 0  16s
+  W= 11: min W'= -1 k=  5  rank(allowed)=125 (r_all 125); at W'-1 deficiency 0  18s
+  W= 12: min W'= -1 k=  4  rank(allowed)=125 (r_all 125); at W'-1 deficiency 0  19s
+  W= 13: min W'= -1 k=  3  rank(allowed)=125 (r_all 125); at W'-1 deficiency 0  20s
+  W= 14: min W'= -1 k=  2  rank(allowed)=125 (r_all 125); at W'-1 deficiency 0  21s
+  W= 15: min W'= -1 k=  1  rank(allowed)=125 (r_all 125); at W'-1 deficiency 0  22s

@@ -1,0 +1,11 @@
+ weight 17: rho mode-span dim 4204 / 31305; saturated 15/40  36s
+h=7 D=17: W9:13/k5 W10:12/k5 W11:11/k5 W12:10/k5 W13:9/k5 W14:8/k5 W15:6/k6
+ weight 18: rho mode-span dim 5202 / 31305; saturated 17/40  188s
+h=7 D=18: W9:11/k7 W10:10/k7 W11:9/k7 W12:8/k7 W13:7/k7 W14:4/k9 W15:-1/k13
+ weight 19: rho mode-span dim 6300 / 31305; saturated 18/40  316s
+h=7 D=19: W9:11/k7 W10:10/k7 W11:9/k7 W12:7/k8 W13:3/k11 W14:-1/k14 W15:-1/k13
+ weight 20: rho mode-span dim 7620 / 31305; saturated 18/40  425s
+h=7 D=20: W9:10/k8 W10:10/k7 W11:8/k8 W12:5/k10 W13:-1/k15 W14:-1/k14 W15:-1/k13
+ weight 21: rho mode-span dim 9102 / 31305; saturated 18/40  538s
+h=7 D=21: W9:10/k8 W10:9/k8 W11:8/k8 W12:-1/k16 W13:-1/k15 W14:-1/k14 W15:-1/k13
+h=7 D=inf: W9:10/k8 W10:9/k8 W11:7/k9 W12:-1/k16 W13:-1/k15 W14:-1/k14 W15:-1/k13

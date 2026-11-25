@@ -160,6 +160,16 @@ Ce fichier liste **tout ce qui peut entrer dans un article**, présent ou futur.
 | **Troisième tour (G26-P5 ; relu par G26-P10 : R2F, R3″, c1 = 3,82 et seuils au niveau P+ ; S2 corrigé)** | Lemme de regroupement de Freedman (R2F) : ζ ≈ (2 + 0,85·√(L·L2))/t au lieu de (4 + √(8·L·L2))/t ; gain gratuit au niveau de base (R3″ : Hoeffding-Azuma sur intervalle, facteur de Serfling). c1 : 4,05 → 3,92 → **3,82** (déterministe = Las Vegas). Seuils à densité 4,26 : **1 943** contre 2^n (avant 2 237), 3 821 contre 1,6423^n, 13 410 contre 1,30704^n ; densité 1 : 59,3 / 93,0 / 355. Mémoire polynomiale : 6,16 → 5,88. Plancher de cette conception : regroupement aléatoire stratifié ≈ 3,73 (esquisse) ; tout lemme de regroupement uniforme ≈ 3,36 (comptage, asymptotique) ; toute conception de regroupement : α ≥ 1. Changement de structure S2 (cliques filles pondérées par arête ; esquisse) : P5 donnait 3,23, mais G26-P10 trouve une erreur d'un facteur 2 dans le coût de remplissage (les deux diagonales sont remplies) : **c1 ≈ 3,31** corrigé, seuils 1 514 / 2 911 / 10 020, mémoire polynomiale 4,85 ; seulement 0,05 sous le plancher 3,36. **G26-P13 (relu par G26-P14 : E, C, D confirmés ; B confirmé avec correction) :** S2 écrit en entier (le second ordre est réglé par un placement aléatoire : les plafonds se concentrent ; c1 = 3,312 entièrement compté) ; nouveau « découper au lieu de remplir » et borne de covariance (iii) prouvée : **c1 = 3,166**, seuils 1 352 / 2 683 / 9 269 à densité 4,26 (termes d'ordre inférieur négligés comme dans P2/P5/P10). **Correction de P14 :** le terme de concentration ε_pl = C·√(ln g/h) n'est pas négligeable aux bases (g, h ≈ 2^8 à 2^12) ; avec C = 1 à 3,7 : **c1 ≈ 3,18 à 3,21**, seuils ≈ 1 368 à 1 393 contre 2^n (P+ pour cette fourchette ; la constante C exacte n'est pas fixée). `code/gen26/p5/notes.md` |
 | **Avis honnête** | Contribution modeste mais propre et vérifiable : elle corrige et précise les constantes, et montre que les algorithmes restent sans effet pratique (seuils astronomiques). Utile comme section d'un article ou comme note technique ; les auteurs des prépublications seraient les premiers intéressés. |
 
+### B7 — Critère du « coin » : l'étape 2 dépend de la pente de la frontière près de θ = 2, pas du point équilibré
+
+| | |
+|---|---|
+| **Résultat** | Dans le modèle de conception M de l'algorithme de Claude, avec des niveaux g × h déséquilibrés (lemme U) : α* = inf{α : h_F(μ) ≥ ‖(μ, 1 − μ)‖_{1/(1−α)} pour tout μ}, h_F = fonction support de la frontière de croisement. Donc α* ≥ max(log₂(1/ρ), γ) et **α* = 1 ⇔ γ = 1** (γ = exposant de coin de l'enveloppe concave). Une pente finie c au coin donne e(x) ≤ O(c·log x/x), soit un temps 2^(O(c·m·log log m/log m)). Exemple : la frontière p²q = N⁴ (ρ équilibré = 2/3) donne α* = 1. La loi de Pythagore de G25-P9 est le cas du cercle. |
+| **Niveau** | P+ (G27-B2, relu par G27-R1 avec trois corrections : étape de preuve ajoutée, équivalence corrigée — « pente finie ⇒ étape 2 » seulement dans ce sens —, vitesse plus forte que B2). Niveau conception seulement ; dépend du lemme U (esquisse de G25-P9, confirmé par R1) et de la prépublication de Claude. |
+| **Fichiers** | `code/gen27/b2/notes.md`, `code/gen27/r1/notes.md` |
+| **Limites** | Aucune famille de pièces connue n'a de pente finie au coin (l'annexe B donne δ = η²/4, γ = 1/2). Ce n'est pas une borne inférieure pour les algorithmes. Gains seulement à des tailles astronomiques. |
+| **Avis honnête** | Changement de cible important pour le projet : le problème ouvert devient « rigidité de rang de Kronecker du swap » au coin, et non plus le problème 12 de Naslund au point équilibré. Aujourd'hui : une section d'un article ou une note courte, seulement si une relecture humaine confirme le lemme U. |
+
 ### B4 — Bibliothèque Lean d'outils génériques
 
 | | |
@@ -200,6 +210,8 @@ Ce fichier liste **tout ce qui peut entrer dans un article**, présent ou futur.
 | Date | Changement |
 |---|---|
 | 24/11/2026 | Création du registre après la génération 18. Articles 1, 2, 3 ; candidats B1 à B4. |
+| 25/11/2026 | G27-B2 + G27-R1 : nouveau candidat B7 (critère du coin), P+. |
+| 25/11/2026 | G27-B1 : point numérique (62,12)@16 (non exact). |
 | 25/11/2026 | G26-P16 : lemmes de P4 et relaxation GF(2) confirmés (P+). |
 | 25/11/2026 | G26-P4 : calculs SAT exacts dans le modèle MC ; (9,3)@5 et (6,4)@5 impossibles ; non relu. |
 | 25/11/2026 | G26-P14 : P13 relu ; c1 ≈ 3,18 à 3,21 avec le terme de concentration gardé (P+) ; seuil ≈ 1 370 à 1 400. |

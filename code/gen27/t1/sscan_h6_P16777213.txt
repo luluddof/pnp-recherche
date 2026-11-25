@@ -1,0 +1,29 @@
+ weight 0: total mode-span dim 2 / 35134 (full Hom); saturated blocks 0/76  1s
+ weight 1: total mode-span dim 38 / 35134 (full Hom); saturated blocks 0/76  1s
+ weight 2: total mode-span dim 74 / 35134 (full Hom); saturated blocks 0/76  1s
+ weight 3: total mode-span dim 112 / 35134 (full Hom); saturated blocks 0/76  1s
+ weight 4: total mode-span dim 188 / 35134 (full Hom); saturated blocks 0/76  1s
+ weight 5: total mode-span dim 264 / 35134 (full Hom); saturated blocks 0/76  1s
+ weight 6: total mode-span dim 414 / 35134 (full Hom); saturated blocks 6/76  1s
+h=6 D=6: W0:- W1:- W2:18/k3 W3:17/k3 W4:16/k3 W5:15/k3 W6:14/k3 W7:13/k3 W8:12/k3 W9:12/k2 W10:10/k3 W11:9/k3 W12:8/k3 W13:7/k3 W14:6/k3 W15:5/k3 W16:4/k3 W17:3/k3 W18:2/k3
+ weight 7: total mode-span dim 552 / 35134 (full Hom); saturated blocks 8/76  8s
+h=6 D=7: W0:- W1:- W2:18/k3 W3:17/k3 W4:16/k3 W5:15/k3 W6:14/k3 W7:13/k3 W8:12/k3 W9:12/k2 W10:10/k3 W11:9/k3 W12:8/k3 W13:7/k3 W14:6/k3 W15:5/k3 W16:4/k3 W17:3/k3 W18:2/k3
+ weight 8: total mode-span dim 788 / 35134 (full Hom); saturated blocks 10/76  16s
+h=6 D=8: W0:- W1:- W2:18/k3 W3:17/k3 W4:16/k3 W5:15/k3 W6:14/k3 W7:13/k3 W8:12/k3 W9:12/k2 W10:10/k3 W11:9/k3 W12:8/k3 W13:7/k3 W14:6/k3 W15:5/k3 W16:4/k3 W17:3/k3 W18:2/k3
+ weight 9: total mode-span dim 1044 / 35134 (full Hom); saturated blocks 12/76  31s
+h=6 D=9: W0:- W1:- W2:18/k3 W3:17/k3 W4:16/k3 W5:15/k3 W6:14/k3 W7:13/k3 W8:12/k3 W9:12/k2 W10:10/k3 W11:9/k3 W12:8/k3 W13:7/k3 W14:6/k3 W15:5/k3 W16:4/k3 W17:3/k3 W18:2/k3
+ weight 10: total mode-span dim 1408 / 35134 (full Hom); saturated blocks 12/76  48s
+h=6 D=10: W0:- W1:- W2:18/k3 W3:17/k3 W4:16/k3 W5:15/k3 W6:14/k3 W7:13/k3 W8:12/k3 W9:12/k2 W10:10/k3 W11:9/k3 W12:8/k3 W13:7/k3 W14:6/k3 W15:5/k3 W16:4/k3 W17:3/k3 W18:2/k3
+ weight 11: total mode-span dim 1820 / 35134 (full Hom); saturated blocks 14/76  73s
+h=6 D=11: W0:- W1:- W2:18/k3 W3:17/k3 W4:16/k3 W5:15/k3 W6:14/k3 W7:13/k3 W8:12/k3 W9:12/k2 W10:10/k3 W11:9/k3 W12:8/k3 W13:7/k3 W14:6/k3 W15:5/k3 W16:4/k3 W17:3/k3 W18:2/k3
+ weight 12: total mode-span dim 2404 / 35134 (full Hom); saturated blocks 18/76  104s
+h=6 D=12: W0:- W1:18/k4 W2:18/k3 W3:17/k3 W4:16/k3 W5:15/k3 W6:14/k3 W7:13/k3 W8:12/k3 W9:12/k2 W10:10/k3 W11:9/k3 W12:8/k3 W13:7/k3 W14:6/k3 W15:5/k3 W16:4/k3 W17:3/k3 W18:1/k4
+ weight 13: total mode-span dim 3028 / 35134 (full Hom); saturated blocks 22/76  150s
+h=6 D=13: W0:17/k6 W1:17/k5 W2:17/k4 W3:16/k4 W4:16/k3 W5:15/k3 W6:14/k3 W7:13/k3 W8:12/k3 W9:11/k3 W10:10/k3 W11:9/k3 W12:8/k3 W13:7/k3 W14:6/k3 W15:5/k3 W16:3/k4 W17:-1/k7 W18:-1/k6
+ weight 14: total mode-span dim 3868 / 35134 (full Hom); saturated blocks 24/76  217s
+h=6 D=14: W0:14/k9 W1:14/k8 W2:14/k7 W3:13/k7 W4:13/k6 W5:13/k5 W6:12/k5 W7:11/k5 W8:10/k5 W9:9/k5 W10:8/k5 W11:7/k5 W12:6/k5 W13:4/k6 W14:-1/k10 W15:-1/k9 W16:-1/k8 W17:-1/k7 W18:-1/k6
+ weight 15: total mode-span dim 4828 / 35134 (full Hom); saturated blocks 26/76  293s
+h=6 D=15: W0:12/k11 W1:12/k10 W2:12/k9 W3:12/k8 W4:12/k7 W5:11/k7 W6:11/k6 W7:10/k6 W8:9/k6 W9:8/k6 W10:7/k6 W11:5/k7 W12:1/k10 W13:-1/k11 W14:-1/k10 W15:-1/k9 W16:-1/k8 W17:-1/k7 W18:-1/k6
+ weight 16: total mode-span dim 6012 / 35134 (full Hom); saturated blocks 32/76  363s
+h=6 D=16: W0:11/k12 W1:11/k11 W2:11/k10 W3:11/k9 W4:11/k8 W5:10/k8 W6:10/k7 W7:9/k7 W8:8/k7 W9:7/k7 W10:6/k7 W11:-1/k13 W12:-1/k12 W13:-1/k11 W14:-1/k10 W15:-1/k9 W16:-1/k8 W17:-1/k7 W18:-1/k6
+h=6 D=inf: W0:10/k13 W1:10/k12 W2:10/k11 W3:10/k10 W4:10/k9 W5:10/k8 W6:10/k7 W7:9/k7 W8:8/k7 W9:7/k7 W10:4/k9 W11:-1/k13 W12:-1/k12 W13:-1/k11 W14:-1/k10 W15:-1/k9 W16:-1/k8 W17:-1/k7 W18:-1/k6

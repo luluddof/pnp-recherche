@@ -1,0 +1,8 @@
+h=7 n=15 Wmax=19 W'max=19 P=16777213: setup 2s
+ resumed from checkpoint, weights < 15 done
+ weight 15: total mode-span dim 5442 / 62610 (full Hom); saturated blocks 24/80  14s
+   [15] sector 0 done, rank Rho(Wmax)=1338 Kap(Wpmax)=1338 rows 1687  139s
+   [15] sector 1 done, rank Rho(Wmax)=1380 Kap(Wpmax)=1381 rows 1688  376s
+h=7 D=15: W8:16/k3 W9:15/k3 W10:14/k3 W11:13/k3 W12:12/k3 W13:11/k3 W14:10/k3 W15:9/k3 W16:8/k3 W17:7/k3 W18:6/k3 W19:5/k3
+ weight 16: total mode-span dim 6834 / 62610 (full Hom); saturated blocks 28/80  416s
+   [16] sector 0 done, rank Rho(Wmax)=1687 Kap(Wpmax)=1687 rows 1687  309s

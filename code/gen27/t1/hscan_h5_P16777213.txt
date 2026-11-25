@@ -1,0 +1,15 @@
+ weight 0: rho mode-span dim 1 / 14609; saturated 0/40  1s
+ weight 1: rho mode-span dim 20 / 14609; saturated 0/40  1s
+ weight 2: rho mode-span dim 39 / 14609; saturated 0/40  1s
+ weight 3: rho mode-span dim 59 / 14609; saturated 0/40  1s
+ weight 4: rho mode-span dim 99 / 14609; saturated 1/40  1s
+ weight 5: rho mode-span dim 138 / 14609; saturated 3/40  1s
+ weight 6: rho mode-span dim 211 / 14609; saturated 4/40  1s
+ weight 7: rho mode-span dim 282 / 14609; saturated 6/40  1s
+ weight 8: rho mode-span dim 400 / 14609; saturated 8/40  2s
+ weight 9: rho mode-span dim 527 / 14609; saturated 8/40  2s
+h=5 D=9: W2:13/k4 W4:11/k4 W5:10/k4 W6:9/k4 W7:8/k4 W9:6/k4 W12:3/k4
+ weight 10: rho mode-span dim 707 / 14609; saturated 8/40  4s
+ weight 11: rho mode-span dim 910 / 14609; saturated 9/40  6s
+h=5 D=11: W2:9/k8 W4:8/k7 W5:7/k7 W6:6/k7 W7:5/k7 W9:0/k10 W12:-1/k8
+h=5 D=inf: W2:8/k9 W4:7/k8 W5:7/k7 W6:6/k7 W7:4/k8 W9:-1/k11 W12:-1/k8

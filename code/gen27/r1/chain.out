@@ -1,0 +1,4 @@
+c=1.0: x=1e3: e*x=36.9 e*x/log2x=3.66 | x=1e4: e*x=50.5 e*x/log2x=3.8 | x=1e5: e*x=64.1 e*x/log2x=3.86 | x=1e6: e*x=77.5 e*x/log2x=3.89 | x=1e7: e*x=90.9 e*x/log2x=3.91 | x=1e8: e*x=104 e*x/log2x=3.92 | x=1e9: e*x=118 e*x/log2x=3.93
+c=2.0: x=1e3: e*x=68.6 e*x/log2x=6.87 | x=1e4: e*x=100 e*x/log2x=7.54 | x=1e5: e*x=128 e*x/log2x=7.71 | x=1e6: e*x=155 e*x/log2x=7.78 | x=1e7: e*x=182 e*x/log2x=7.82 | x=1e8: e*x=208 e*x/log2x=7.84 | x=1e9: e*x=235 e*x/log2x=7.86
+c=6.6: x=1e3: e*x=183 e*x/log2x=18.3 | x=1e4: e*x=322 e*x/log2x=24.2 | x=1e5: e*x=424 e*x/log2x=25.5 | x=1e6: e*x=515 e*x/log2x=25.8 | x=1e7: e*x=604 e*x/log2x=26 | x=1e8: e*x=692 e*x/log2x=26 | x=1e9: e*x=780 e*x/log2x=26.1
+c=50.0: x=1e3: e*x=460 e*x/log2x=46.2 | x=1e4: e*x=1.85e+03 e*x/log2x=139 | x=1e5: e*x=3.14e+03 e*x/log2x=189 | x=1e6: e*x=3.95e+03 e*x/log2x=198 | x=1e7: e*x=4.64e+03 e*x/log2x=199 | x=1e8: e*x=5.31e+03 e*x/log2x=200 | x=1e9: e*x=5.97e+03 e*x/log2x=200

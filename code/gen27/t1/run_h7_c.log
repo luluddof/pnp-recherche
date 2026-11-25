@@ -1,0 +1,98 @@
+h=7 n=15 Wmax=19 rows/sector 1687,1688: setup 3s
+ resumed, weights < 17 done
+ weight 17: rho mode-span dim 4204 / 31305; saturated 15/40  36s
+   [17] sector 0 W=9: rank Rho=611/1687; min W'=13; deficiency from W'=-1: [7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 6, 5, 0]  25s
+   [17] sector 0 W=10: rank Rho=756/1687; min W'=12; deficiency from W'=-1: [7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 6, 5, 0]  37s
+   [17] sector 0 W=11: rank Rho=902/1687; min W'=11; deficiency from W'=-1: [7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 6, 5, 0]  47s
+   [17] sector 0 W=12: rank Rho=1048/1687; min W'=10; deficiency from W'=-1: [7, 7, 7, 7, 7, 7, 7, 7, 7, 6, 5, 0]  55s
+   [17] sector 0 W=13: rank Rho=1194/1687; min W'=9; deficiency from W'=-1: [7, 7, 7, 7, 7, 7, 6, 6, 6, 5, 0]  63s
+   [17] sector 0 W=14: rank Rho=1340/1687; min W'=8; deficiency from W'=-1: [7, 7, 7, 7, 7, 6, 5, 5, 5, 0]  71s
+   [17] sector 0 W=15: rank Rho=1486/1687; min W'=6; deficiency from W'=-1: [7, 7, 7, 7, 6, 5, 5, 0]  77s
+   [17] sector 1 W=9: rank Rho=605/1688; min W'=13; deficiency from W'=-1: [8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 7, 6, 5, 0]  97s
+   [17] sector 1 W=10: rank Rho=755/1688; min W'=12; deficiency from W'=-1: [8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 7, 6, 5, 0]  107s
+   [17] sector 1 W=11: rank Rho=906/1688; min W'=11; deficiency from W'=-1: [8, 8, 8, 8, 8, 8, 8, 8, 8, 7, 6, 5, 0]  115s
+   [17] sector 1 W=12: rank Rho=1057/1688; min W'=10; deficiency from W'=-1: [8, 8, 8, 8, 8, 8, 8, 7, 7, 6, 5, 0]  121s
+   [17] sector 1 W=13: rank Rho=1208/1688; min W'=9; deficiency from W'=-1: [8, 8, 8, 8, 8, 8, 7, 6, 6, 5, 0]  125s
+   [17] sector 1 W=14: rank Rho=1359/1688; min W'=7; deficiency from W'=-1: [8, 8, 8, 8, 8, 7, 6, 6, 0]  129s
+   [17] sector 1 W=15: rank Rho=1510/1688; min W'=6; deficiency from W'=-1: [8, 8, 8, 8, 7, 6, 6, 0]  133s
+h=7 D=17: W9:13/k5 W10:12/k5 W11:11/k5 W12:10/k5 W13:9/k5 W14:8/k5 W15:6/k6
+ weight 18: rho mode-span dim 5202 / 31305; saturated 17/40  188s
+   [18] sector 0 W=9: rank Rho=656/1687; min W'=11; deficiency from W'=-1: [7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 0]  16s
+   [18] sector 0 W=10: rank Rho=840/1687; min W'=10; deficiency from W'=-1: [7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 0]  23s
+   [18] sector 0 W=11: rank Rho=1034/1687; min W'=9; deficiency from W'=-1: [7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 0]  30s
+   [18] sector 0 W=12: rank Rho=1228/1687; min W'=8; deficiency from W'=-1: [7, 7, 7, 7, 7, 7, 7, 7, 7, 0]  36s
+   [18] sector 0 W=13: rank Rho=1423/1687; min W'=7; deficiency from W'=-1: [7, 7, 7, 7, 7, 7, 6, 6, 0]  41s
+   [18] sector 0 W=14: rank Rho=1617/1687; min W'=4; deficiency from W'=-1: [7, 7, 7, 7, 7, 0]  44s
+   [18] sector 0 W=15: rank Rho=1687/1687; min W'=-1; deficiency from W'=-1: [0]  47s
+   [18] sector 1 W=9: rank Rho=660/1688; min W'=11; deficiency from W'=-1: [8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 7, 0]  64s
+   [18] sector 1 W=10: rank Rho=848/1688; min W'=10; deficiency from W'=-1: [8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 7, 0]  73s
+   [18] sector 1 W=11: rank Rho=1037/1688; min W'=9; deficiency from W'=-1: [8, 8, 8, 8, 8, 8, 8, 8, 8, 7, 0]  79s
+   [18] sector 1 W=12: rank Rho=1227/1688; min W'=8; deficiency from W'=-1: [8, 8, 8, 8, 8, 8, 8, 7, 7, 0]  84s
+   [18] sector 1 W=13: rank Rho=1417/1688; min W'=7; deficiency from W'=-1: [8, 8, 8, 8, 8, 8, 7, 6, 0]  89s
+   [18] sector 1 W=14: rank Rho=1607/1688; min W'=4; deficiency from W'=-1: [8, 8, 8, 8, 8, 0]  93s
+   [18] sector 1 W=15: rank Rho=1688/1688; min W'=-1; deficiency from W'=-1: [0]  95s
+h=7 D=18: W9:11/k7 W10:10/k7 W11:9/k7 W12:8/k7 W13:7/k7 W14:4/k9 W15:-1/k13
+ weight 19: rho mode-span dim 6300 / 31305; saturated 18/40  316s
+   [19] sector 0 W=9: rank Rho=688/1687; min W'=11; deficiency from W'=-1: [7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 0]  17s
+   [19] sector 0 W=10: rank Rho=918/1687; min W'=10; deficiency from W'=-1: [7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 0]  26s
+   [19] sector 0 W=11: rank Rho=1159/1687; min W'=9; deficiency from W'=-1: [7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 0]  33s
+   [19] sector 0 W=12: rank Rho=1400/1687; min W'=7; deficiency from W'=-1: [7, 7, 7, 7, 7, 7, 7, 7, 0]  37s
+   [19] sector 0 W=13: rank Rho=1642/1687; min W'=3; deficiency from W'=-1: [7, 7, 7, 7, 0]  40s
+   [19] sector 0 W=14: rank Rho=1687/1687; min W'=-1; deficiency from W'=-1: [0]  43s
+   [19] sector 0 W=15: rank Rho=1687/1687; min W'=-1; deficiency from W'=-1: [0]  45s
+   [19] sector 1 W=9: rank Rho=688/1688; min W'=11; deficiency from W'=-1: [8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 7, 0]  61s
+   [19] sector 1 W=10: rank Rho=917/1688; min W'=10; deficiency from W'=-1: [8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 7, 0]  66s
+   [19] sector 1 W=11: rank Rho=1154/1688; min W'=9; deficiency from W'=-1: [8, 8, 8, 8, 8, 8, 8, 8, 8, 7, 0]  71s
+   [19] sector 1 W=12: rank Rho=1401/1688; min W'=7; deficiency from W'=-1: [8, 8, 8, 8, 8, 8, 8, 7, 0]  75s
+   [19] sector 1 W=13: rank Rho=1648/1688; min W'=3; deficiency from W'=-1: [8, 8, 8, 8, 0]  77s
+   [19] sector 1 W=14: rank Rho=1688/1688; min W'=-1; deficiency from W'=-1: [0]  79s
+   [19] sector 1 W=15: rank Rho=1688/1688; min W'=-1; deficiency from W'=-1: [0]  81s
+h=7 D=19: W9:11/k7 W10:10/k7 W11:9/k7 W12:7/k8 W13:3/k11 W14:-1/k14 W15:-1/k13
+ weight 20: rho mode-span dim 7620 / 31305; saturated 18/40  425s
+   [20] sector 0 W=9: rank Rho=689/1687; min W'=10; deficiency from W'=-1: [7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 0]  15s
+   [20] sector 0 W=10: rank Rho=962/1687; min W'=10; deficiency from W'=-1: [7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 1, 0]  22s
+   [20] sector 0 W=11: rank Rho=1258/1687; min W'=8; deficiency from W'=-1: [7, 7, 7, 7, 7, 7, 7, 7, 7, 0]  28s
+   [20] sector 0 W=12: rank Rho=1563/1687; min W'=5; deficiency from W'=-1: [7, 7, 7, 7, 7, 7, 0]  31s
+   [20] sector 0 W=13: rank Rho=1687/1687; min W'=-1; deficiency from W'=-1: [0]  34s
+   [20] sector 0 W=14: rank Rho=1687/1687; min W'=-1; deficiency from W'=-1: [0]  36s
+   [20] sector 0 W=15: rank Rho=1687/1687; min W'=-1; deficiency from W'=-1: [0]  39s
+   [20] sector 1 W=9: rank Rho=689/1688; min W'=10; deficiency from W'=-1: [8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 0]  54s
+   [20] sector 1 W=10: rank Rho=971/1688; min W'=9; deficiency from W'=-1: [8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 0]  59s
+   [20] sector 1 W=11: rank Rho=1269/1688; min W'=8; deficiency from W'=-1: [8, 8, 8, 8, 8, 8, 8, 8, 8, 0]  63s
+   [20] sector 1 W=12: rank Rho=1577/1688; min W'=5; deficiency from W'=-1: [8, 8, 8, 8, 8, 8, 0]  66s
+   [20] sector 1 W=13: rank Rho=1688/1688; min W'=-1; deficiency from W'=-1: [0]  69s
+   [20] sector 1 W=14: rank Rho=1688/1688; min W'=-1; deficiency from W'=-1: [0]  71s
+   [20] sector 1 W=15: rank Rho=1688/1688; min W'=-1; deficiency from W'=-1: [0]  74s
+h=7 D=20: W9:10/k8 W10:10/k7 W11:8/k8 W12:5/k10 W13:-1/k15 W14:-1/k14 W15:-1/k13
+ weight 21: rho mode-span dim 9102 / 31305; saturated 18/40  538s
+   [21] sector 0 W=9: rank Rho=689/1687; min W'=10; deficiency from W'=-1: [7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 0]  13s
+   [21] sector 0 W=10: rank Rho=979/1687; min W'=9; deficiency from W'=-1: [7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 0]  17s
+   [21] sector 0 W=11: rank Rho=1341/1687; min W'=8; deficiency from W'=-1: [7, 7, 7, 7, 7, 7, 7, 7, 7, 0]  20s
+   [21] sector 0 W=12: rank Rho=1687/1687; min W'=-1; deficiency from W'=-1: [0]  22s
+   [21] sector 0 W=13: rank Rho=1687/1687; min W'=-1; deficiency from W'=-1: [0]  24s
+   [21] sector 0 W=14: rank Rho=1687/1687; min W'=-1; deficiency from W'=-1: [0]  26s
+   [21] sector 0 W=15: rank Rho=1687/1687; min W'=-1; deficiency from W'=-1: [0]  28s
+   [21] sector 1 W=9: rank Rho=689/1688; min W'=10; deficiency from W'=-1: [8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 0]  40s
+   [21] sector 1 W=10: rank Rho=982/1688; min W'=9; deficiency from W'=-1: [8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 0]  43s
+   [21] sector 1 W=11: rank Rho=1335/1688; min W'=8; deficiency from W'=-1: [8, 8, 8, 8, 8, 8, 8, 8, 8, 0]  46s
+   [21] sector 1 W=12: rank Rho=1688/1688; min W'=-1; deficiency from W'=-1: [0]  48s
+   [21] sector 1 W=13: rank Rho=1688/1688; min W'=-1; deficiency from W'=-1: [0]  51s
+   [21] sector 1 W=14: rank Rho=1688/1688; min W'=-1; deficiency from W'=-1: [0]  53s
+   [21] sector 1 W=15: rank Rho=1688/1688; min W'=-1; deficiency from W'=-1: [0]  55s
+h=7 D=21: W9:10/k8 W10:9/k8 W11:8/k8 W12:-1/k16 W13:-1/k15 W14:-1/k14 W15:-1/k13
+   [inf] sector 0 W=9: rank Rho=690/1687; min W'=10; deficiency from W'=-1: [7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 0]  25s
+   [inf] sector 0 W=10: rank Rho=981/1687; min W'=9; deficiency from W'=-1: [7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 0]  27s
+   [inf] sector 0 W=11: rank Rho=1365/1687; min W'=7; deficiency from W'=-1: [7, 7, 7, 7, 7, 7, 7, 7, 0]  29s
+   [inf] sector 0 W=12: rank Rho=1687/1687; min W'=-1; deficiency from W'=-1: [0]  31s
+   [inf] sector 0 W=13: rank Rho=1687/1687; min W'=-1; deficiency from W'=-1: [0]  33s
+   [inf] sector 0 W=14: rank Rho=1687/1687; min W'=-1; deficiency from W'=-1: [0]  37s
+   [inf] sector 0 W=15: rank Rho=1687/1687; min W'=-1; deficiency from W'=-1: [0]  40s
+   [inf] sector 1 W=9: rank Rho=690/1688; min W'=10; deficiency from W'=-1: [8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 0]  68s
+   [inf] sector 1 W=10: rank Rho=984/1688; min W'=9; deficiency from W'=-1: [8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 0]  71s
+   [inf] sector 1 W=11: rank Rho=1365/1688; min W'=7; deficiency from W'=-1: [8, 8, 8, 8, 8, 8, 8, 8, 0]  74s
+   [inf] sector 1 W=12: rank Rho=1688/1688; min W'=-1; deficiency from W'=-1: [0]  76s
+   [inf] sector 1 W=13: rank Rho=1688/1688; min W'=-1; deficiency from W'=-1: [0]  79s
+   [inf] sector 1 W=14: rank Rho=1688/1688; min W'=-1; deficiency from W'=-1: [0]  83s
+   [inf] sector 1 W=15: rank Rho=1688/1688; min W'=-1; deficiency from W'=-1: [0]  86s
+h=7 D=inf: W9:10/k8 W10:9/k8 W11:7/k9 W12:-1/k16 W13:-1/k15 W14:-1/k14 W15:-1/k13
+total 680s

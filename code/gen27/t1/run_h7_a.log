@@ -1,0 +1,31 @@
+h=7 n=15 Wmax=19 W'max=19 P=16777213: setup 2s
+ weight 0: total mode-span dim 2 / 62610 (full Hom); saturated blocks 0/80  2s
+ weight 1: total mode-span dim 40 / 62610 (full Hom); saturated blocks 0/80  2s
+ weight 2: total mode-span dim 78 / 62610 (full Hom); saturated blocks 0/80  2s
+ weight 3: total mode-span dim 118 / 62610 (full Hom); saturated blocks 0/80  2s
+ weight 4: total mode-span dim 198 / 62610 (full Hom); saturated blocks 0/80  2s
+ weight 5: total mode-span dim 278 / 62610 (full Hom); saturated blocks 0/80  3s
+ weight 6: total mode-span dim 438 / 62610 (full Hom); saturated blocks 0/80  4s
+ weight 7: total mode-span dim 596 / 62610 (full Hom); saturated blocks 6/80  4s
+   [7] sector 0 done, rank Rho(Wmax)=140 Kap(Wpmax)=140 rows 1687  9s
+   [7] sector 1 done, rank Rho(Wmax)=158 Kap(Wpmax)=158 rows 1688  18s
+h=7 D=7: W8:16/k3 W9:15/k3 W10:14/k3 W11:13/k3 W12:12/k3 W13:11/k3 W14:10/k3 W15:9/k3 W16:8/k3 W17:7/k3 W18:6/k3 W19:5/k3
+ weight 8: total mode-span dim 850 / 62610 (full Hom); saturated blocks 8/80  25s
+ weight 9: total mode-span dim 1136 / 62610 (full Hom); saturated blocks 10/80  28s
+ weight 10: total mode-span dim 1544 / 62610 (full Hom); saturated blocks 10/80  33s
+   [10] sector 0 done, rank Rho(Wmax)=403 Kap(Wpmax)=403 rows 1687  31s
+   [10] sector 1 done, rank Rho(Wmax)=369 Kap(Wpmax)=369 rows 1688  61s
+h=7 D=10: W8:16/k3 W9:15/k3 W10:14/k3 W11:13/k3 W12:12/k3 W13:11/k3 W14:10/k3 W15:9/k3 W16:8/k3 W17:7/k3 W18:6/k3 W19:5/k3
+ weight 11: total mode-span dim 1998 / 62610 (full Hom); saturated blocks 14/80  101s
+ weight 12: total mode-span dim 2660 / 62610 (full Hom); saturated blocks 16/80  109s
+   [12] sector 0 done, rank Rho(Wmax)=687 Kap(Wpmax)=687 rows 1687  59s
+   [12] sector 1 done, rank Rho(Wmax)=643 Kap(Wpmax)=643 rows 1688  113s
+h=7 D=12: W8:16/k3 W9:15/k3 W10:14/k3 W11:13/k3 W12:12/k3 W13:11/k3 W14:10/k3 W15:9/k3 W16:8/k3 W17:7/k3 W18:6/k3 W19:5/k3
+ weight 13: total mode-span dim 3374 / 62610 (full Hom); saturated blocks 18/80  233s
+   [13] sector 0 done, rank Rho(Wmax)=825 Kap(Wpmax)=825 rows 1687  84s
+   [13] sector 1 done, rank Rho(Wmax)=862 Kap(Wpmax)=862 rows 1688  185s
+h=7 D=13: W8:16/k3 W9:15/k3 W10:14/k3 W11:13/k3 W12:12/k3 W13:11/k3 W14:10/k3 W15:9/k3 W16:8/k3 W17:7/k3 W18:6/k3 W19:5/k3
+ weight 14: total mode-span dim 4332 / 62610 (full Hom); saturated blocks 22/80  434s
+   [14] sector 0 done, rank Rho(Wmax)=1099 Kap(Wpmax)=1099 rows 1687  117s
+   [14] sector 1 done, rank Rho(Wmax)=1065 Kap(Wpmax)=1065 rows 1688  214s
+h=7 D=14: W8:16/k3 W9:15/k3 W10:14/k3 W11:13/k3 W12:12/k3 W13:11/k3 W14:10/k3 W15:9/k3 W16:8/k3 W17:7/k3 W18:6/k3 W19:5/k3
