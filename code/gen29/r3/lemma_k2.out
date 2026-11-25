@@ -1,0 +1,7 @@
+N=4 q=1: p_min=6  (N^2/4=4)
+N=4 q=2: p_min=6  (N^2/4=4)
+N=4 q=3: p_min=6  (N^2/4=4)
+N=4 q=4: p_min=4  (N^2/4=4)
+N=4 q=5: p_min=4  (N^2/4=4)
+
+[exited with code 0]

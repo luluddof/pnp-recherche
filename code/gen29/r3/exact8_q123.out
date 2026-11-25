@@ -1,0 +1,9 @@
+q=1: 64 supports, 1 orbits
+q=1: p_min = 28 (support [0]); orbit p-values: [28]; 0.3s
+  orbit-member check p: [28, 28, 28, 28, 28]
+q=2: 2016 supports, 2 orbits
+q=2: p_min = 28 (support [0, 1]); orbit p-values: [28]; 0.3s
+  orbit-member check p: [28, 28, 28, 28, 28]
+q=3: 41664 supports, 4 orbits
+q=3: p_min = 28 (support [0, 1, 2]); orbit p-values: [28]; 0.3s
+  orbit-member check p: [28, 28, 28, 28, 28]

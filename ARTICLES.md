@@ -210,7 +210,7 @@ Ce fichier liste **tout ce qui peut entrer dans un article**, présent ou futur.
 | Date | Changement |
 |---|---|
 | 24/11/2026 | Création du registre après la génération 18. Articles 1, 2, 3 ; candidats B1 à B4. |
-| 25/11/2026 | G29-H1 : famille de Majorana (meilleures paires équilibrées connues pour N = 2^k, k = 5 à 31 ; B2) ; coin de Bell = cas ouvert de Servedio-Viola. G29-X1, X2 : autres croisements, P_3 ; aucun gain. Non relus. |
+| 25/11/2026 | G29-H1 (relu par G29-R3, P+) : famille de Majorana (meilleures paires équilibrées connues pour N = 2^k, k = 5 à 31 sauf k = 18 ; B2) ; coin de Bell = cas ouvert de Servedio-Viola. G29-X1, X2 : autres croisements, P_3 ; aucun gain. Non relus. |
 | 25/11/2026 | G29-U1 : seconde relecture indépendante du critère du coin (B7) : confirmé. |
 | 25/11/2026 | G28-R2 : théorème S′ relu (P+) et renforcé ; réduction vers la rigidité de Hadamard confirmée. |
 | 25/11/2026 | G28-C1, C2, O1 : coin ; théorème S′ (classes symétriques et locales quadratiques) ; lien avec la rigidité de Walsh-Hadamard ; non relus. |
