@@ -48,7 +48,8 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 | G25-B2 | ✅ **Brainstorming : techniques de preuve** (fini) | 13 idées. Prouvé : N² ≤ p‖R‖_op + q‖Fl2 C‖_op. Top 3 : conjecture d'étalement (donnerait 2θ + T ≥ 4, donc ρ ≥ 2/3 comme mur) ; modèle à blocs ; angle de Friedrichs. `code/gen25/b2/notes.md` | consigne de l'auteur |
 | G25-B3 | ✅ **Brainstorming : autres routes** (fini) | 10 idées ; top 3 : sparsification pour la décision seule (enlèverait le facteur loglog en n) ; quotient par grappes ; hypercliques récents comme gadgets à 3 directions. `code/gen25/b3/notes.md` | consigne de l'auteur |
 | G25-B4 | ✅ **Brainstorming : rang inférieur** (fini) | « Meilleures pièces à chaque taille » : ne gagne rien (λ ≥ 10⁴ dans l'algorithme). Gains réels dans la comptabilité de la récursion : base de balayage + constantes exactes (seuil log₂ m* : 1,37·10⁵ → 2,4·10⁴) ; annexe D : 4·10¹⁰ → 1,6·10⁶. Reste astronomique. `code/gen25/b4/notes.md` | consigne de l'auteur |
-| G26-B5 | 🔄 **Brainstorming : arbre des sous-problèmes, puis attaque des plus petits** | Arbre explicite des sous-problèmes de l'étape 2 et de la constante de l'étape 1 ; attaque de 2-3 feuilles jamais essayées. | consigne de l'auteur |
+| G26-P3 | 🔄 **Au-delà de la droite dans le modèle monomial-C ?** | Le modèle MC contient tous les optimums exacts connus (N ≤ 8). Lemme MC2 : p·q ≳ ½·N²·ln q. Peut-on obtenir N^(2+ε) (cycles pairs, ensembles acycliques) ? | B5 |
+| G26-P4 | 🔄 **Recherche SAT exacte dans le modèle monomial-C** | Encoder supports + factorisation de rang p ; reproduire (6,6) à N = 5 ; décider (5,5) à N = 5 et (11,3) à N = 6. | B5 |
 | G26-P1 | 🔄 **Enveloppe de l'annexe B à grand h (ansatz structuré)** | Écrire le système par x avec ρ, κ polynômes en les opérateurs b[r] (poly(h) inconnues) ; tester W + W′ = 4h − 1 − k pour h ≤ 10 à 15. Seul un k linéaire en h changerait θ. | B6 |
 | G26-P2 | 🔄 **Relecture adverse de B7 (R1, R2, R3, R4) et recalcul des seuils** | Martingale de Doob et Azuma avec temps d'arrêt ; Σ r_k ≤ P ; remplissage dans R3 ; dérandomisation R1 ; compromis temps-mémoire ; seuils m* avec la machinerie complète de P2. | B7 |
 
@@ -192,6 +193,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Résultat |
 |---|---|
+| ⚠️ **Arbre des sous-problèmes** (G26-B5) | Nouveau modèle monomial-C qui contient tous les optimums exacts ; lemme MC2 : p·q ≳ ½·N²·ln q (au-delà de la droite d'un log). Pas de gain linéaire à q = 3 (numérique, k ≤ 5). `code/gen26/b5/notes.md` |
 | ✅ **Rang inférieur, deuxième tour** (G26-B7) | Constante de Claude c1 = 4,12 (déterministe et Las Vegas ; papier : 42,4) ; mémoire polynomiale : 6,16 ; compromis temps-mémoire (1 − M)/3. Non relu. `code/gen26/b7/notes.md` |
 | ❌ **Perturbations de l'annexe B** (G26-B6) | Rien ne courbe la frontière. Lemme 1-D : le seuillage est optimal pour une paire ; un gain demande des relations entre paires. Enveloppe exacte jusqu'à N = 15 : sur la droite triviale. `code/gen26/b6/notes.md` |
 | ✅ **Synthèse des résultats** (G25-P10) | Encadrement pour l'article 3 (écart constant 22,7 avec P3) ; conséquences explicites (Max-Cut, Max-3-SAT, #CSP, plus long chemin : constante 5,3) ; **la fenêtre du module de classe se réduit à Hurwitz-Naslund** ; « pinceau + petit rang ». `code/gen25/p10/notes.md` |
