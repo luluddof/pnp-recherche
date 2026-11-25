@@ -1,0 +1,4 @@
+a=5 t=1 i=0 zeta=1 k=3 size=560: (A) True; min slack 5; #ties 0; maxSmith 158; 244s
+a=5 t=2 i=1 zeta=1 k=3 size=560: (A) True; min slack 0; #ties 1; maxSmith 77; 168s
+a=5 t=4 i=2 zeta=1 k=3 size=560: (A) True; min slack 0; #ties 156; maxSmith 36; 143s
+a=5 t=8 i=3 zeta=1 k=3 size=560: (A) True; min slack 0; #ties 448; maxSmith 15; 80s

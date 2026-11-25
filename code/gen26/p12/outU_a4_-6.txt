@@ -1,0 +1,4 @@
+a=4 t=-6 zeta=1 b=0 n=8 min v2 gamma-factor=2 U=True A=True C1'right=True maxSmith=44
+a=4 t=-6 zeta=1 b=1 n=8 min v2 gamma-factor=2 U=True A=True C1'right=True maxSmith=44
+a=4 t=-6 zeta=-5/3 b=0 n=8 min v2 gamma-factor=2 U=True A=True C1'right=True maxSmith=44
+a=4 t=-6 zeta=2 b=0 n=8 min v2 gamma-factor=3 U=True A=True C1'right=True maxSmith=50

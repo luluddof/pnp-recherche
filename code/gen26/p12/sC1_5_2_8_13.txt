@@ -1,0 +1,1 @@
+a=5 t=2 nsub=8: tried 156, (A) violated in 54, C1'-right violated in 0

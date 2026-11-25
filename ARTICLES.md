@@ -84,7 +84,7 @@ Ce fichier liste **tout ce qui peut entrer dans un article**, présent ou futur.
 | Récurrence de l'annexe D : la racine domine ; la profondeur achète √loglog | P | `code/gen18/g18d/notes.md` |
 | Proposition B′ (borne au niveau de la conception), lemme T | P | `code/gen18/g18d/notes.md` |
 | Invariants de Smith des blocs de Cauchy : 2^((a−i+1)+v₂(ζ)+2k+2v₂(k!)) | **P+ (prouvé par G26-P6, relu par G26-P7)** ; la conjecture C1 est fausse telle qu'écrite, remplacée par C1′ | `code/gen18/g18d/notes.md`, `code/gen26/p6/notes.md` |
-| Théorème U (G26-P8) : Smith(M(E)) = union disjointe sur k de Smith(Per_k(E)) (fractions partielles, Γ unitriangulaire sur O) ; donc C1′ (côté droit) ⟸ (A) : Smith(Per_k E) ≤ Smith(C_k E) terme à terme. (A) vrai dans 120 cas (a ≤ 5), faux pour E générique. Théorème A2 : C1′ (côté droit) prouvé au niveau i = a − 2. L'optimalité de l'énumération des modes à √2 près reste conditionnelle à (A) (les niveaux prouvés, m = 1, 2, ne sont pas les niveaux dominants, m ≈ 11 à 18) | P (non relu) | `code/gen26/p8/notes.md` |
+| Théorème U (G26-P8, relu par G26-P12 : P+, hypothèse v₂ ζ ≥ −2 explicite) : Smith(M(E)) = union disjointe sur k de Smith(Per_k(E)) (Γ unitriangulaire pour l'inclusion, det Γ = 1). Théorème A2 (C1′ côté droit au niveau a − 2) : P+. **(A) est RÉFUTÉ** (G26-P12 : a = 6, i = 1, k = 2, invariant 115 > 114) ; C1′ (côté droit) est faux pour des sous-blocs de Cauchy (6 sur 156), donc une preuve doit utiliser tout l'ensemble d'indices du bloc de croisement ; pour les blocs complets à a ≥ 5 : ouvert. Prouvé : (A) au niveau a − 2 pour tout k ; forme faible de (A) pour k = 2 à tous les niveaux. L'optimalité de l'énumération des modes à √2 près reste une conjecture | P+ (U, A2) ; P (le reste) | `code/gen26/p8/notes.md`, `code/gen26/p12/notes.md` |
 | Gain constant possible sur l'annexe D (modes 4 fois redondants, effilage 1/√3) | E, non vérifié | `code/gen18/g18d/notes.md` |
 | Les contraintes de charge viennent de la conception (lemme D.3, (D.6)), pas de l'instance | lecture de la source | `code/gen19/g19a/notes.md` |
 | Inégalité de séparateur : chaque direction coupe ≥ φ·M·min(1, 2(1−β)) fils (le coût 2^(φ′M) vaut pour l'identité de conditionnement) | P+ (G20f) | `code/gen19/g19a/notes.md` |
@@ -198,6 +198,7 @@ Ce fichier liste **tout ce qui peut entrer dans un article**, présent ou futur.
 | Date | Changement |
 |---|---|
 | 24/11/2026 | Création du registre après la génération 18. Articles 1, 2, 3 ; candidats B1 à B4. |
+| 25/11/2026 | G26-P12 : théorèmes U et A2 relus (P+) ; (A) réfuté ; C1′ reste ouvert pour les blocs complets. |
 | 25/11/2026 | G26-P1 : enveloppe de l'annexe B, k borné par 3 dans l'ansatz structuré (résultat négatif, pas de nouvel élément d'article). |
 | 25/11/2026 | G26-P8 : seuils d'OpenAI (ligne H) recalculés : 2,25e5 ; théorèmes U et A2 vers C1′ (article 3), non relus. |
 | 25/11/2026 | G26-P10 : P5 relu ; c1 = 3,82 (P+), seuil 1 943 ; S2 corrigé : 3,31, seuil 1 514. |

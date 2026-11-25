@@ -1,0 +1,1 @@
+a=6 t=2 nsub=9: tried 25, (A) violated in 6, C1'-right violated in 0
