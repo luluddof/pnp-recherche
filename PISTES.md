@@ -51,6 +51,7 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 | G26-P3 | 🔄 **Au-delà de la droite dans le modèle monomial-C ?** | Le modèle MC contient tous les optimums exacts connus (N ≤ 8). Lemme MC2 : p·q ≳ ½·N²·ln q. Peut-on obtenir N^(2+ε) (cycles pairs, ensembles acycliques) ? | B5 |
 | G26-P4 | 🔄 **Recherche SAT exacte dans le modèle monomial-C** | Encoder supports + factorisation de rang p ; reproduire (6,6) à N = 5 ; décider (5,5) à N = 5 et (11,3) à N = 6. | B5 |
 | G26-P5 | 🔄 **Constante de Claude : version de Freedman et plancher** | Lemme de regroupement sensible à la variance (≈ 3,84 heuristique) ; plancher de cette conception (≈ 3,6 ?) et pourquoi ; changement de structure au niveau supérieur ou de base. | B7, P2 |
+| G26-P8 | 🔄 **Seuils d'OpenAI avec les modes de Smith ; tentative sur C1′** | Recalculer exactement λ* (variante H, contre 2^n et PPSZ, densités 4,26 et 1) avec le modèle complet de P3 ; essayer de prouver C1′ (au moins la borne inférieure) pour les blocs de Cauchy. | B6, Article 3 |
 | G26-P1 | 🔄 **Enveloppe de l'annexe B à grand h (ansatz structuré)** | Écrire le système par x avec ρ, κ polynômes en les opérateurs b[r] (poly(h) inconnues) ; tester W + W′ = 4h − 1 − k pour h ≤ 10 à 15. Seul un k linéaire en h changerait θ. | B6 |
 
 Dossiers de travail de la génération 18 : `scratchpad/gen18/g18a` à `g18i`.
