@@ -49,7 +49,7 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 | G25-B3 | ✅ **Brainstorming : autres routes** (fini) | 10 idées ; top 3 : sparsification pour la décision seule (enlèverait le facteur loglog en n) ; quotient par grappes ; hypercliques récents comme gadgets à 3 directions. `code/gen25/b3/notes.md` | consigne de l'auteur |
 | G25-B4 | ✅ **Brainstorming : rang inférieur** (fini) | « Meilleures pièces à chaque taille » : ne gagne rien (λ ≥ 10⁴ dans l'algorithme). Gains réels dans la comptabilité de la récursion : base de balayage + constantes exactes (seuil log₂ m* : 1,37·10⁵ → 2,4·10⁴) ; annexe D : 4·10¹⁰ → 1,6·10⁶. Reste astronomique. `code/gen25/b4/notes.md` | consigne de l'auteur |
 | G26-B5 | 🔄 **Brainstorming : arbre des sous-problèmes, puis attaque des plus petits** | Arbre explicite des sous-problèmes de l'étape 2 et de la constante de l'étape 1 ; attaque de 2-3 feuilles jamais essayées. | consigne de l'auteur |
-| G26-B6 | 🔄 **Brainstorming : perturber l'annexe B au point milieu** | Une petite perturbation non issue d'une algèbre de sommets peut-elle courber la frontière vers l'intérieur à θ = √2 ? Tests exacts à h ≤ 9. | consigne de l'auteur |
+| G26-P1 | 🔄 **Enveloppe de l'annexe B à grand h (ansatz structuré)** | Écrire le système par x avec ρ, κ polynômes en les opérateurs b[r] (poly(h) inconnues) ; tester W + W′ = 4h − 1 − k pour h ≤ 10 à 15. Seul un k linéaire en h changerait θ. | B6 |
 | G26-B7 | 🔄 **Brainstorming : rang inférieur, deuxième tour** | Compromis temps-mémoire du balayage ; lemme d'ordre conjectural (4,17) ; surcoûts ; conjecture de Smith (37,5 rigoureux pour OpenAI) ; décision moins chère que le comptage ? | consigne de l'auteur |
 
 Dossiers de travail de la génération 18 : `scratchpad/gen18/g18a` à `g18i`.
@@ -192,6 +192,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Résultat |
 |---|---|
+| ❌ **Perturbations de l'annexe B** (G26-B6) | Rien ne courbe la frontière. Lemme 1-D : le seuillage est optimal pour une paire ; un gain demande des relations entre paires. Enveloppe exacte jusqu'à N = 15 : sur la droite triviale. `code/gen26/b6/notes.md` |
 | ✅ **Synthèse des résultats** (G25-P10) | Encadrement pour l'article 3 (écart constant 22,7 avec P3) ; conséquences explicites (Max-Cut, Max-3-SAT, #CSP, plus long chemin : constante 5,3) ; **la fenêtre du module de classe se réduit à Hurwitz-Naslund** ; « pinceau + petit rang ». `code/gen25/p10/notes.md` |
 | ✅ **Relecture du théorème A explicite** (G25-P8) | Tout confirmé (P+). Le balayage est un ordre d'élimination optimal. Réserve : mémoire exponentielle (≈ 2^(0,95 × temps)). `code/gen25/p8/notes.md` |
 | ⚠️ **Balayage à chaque niveau** (G25-P9) | Aucun levier ne change la puissance du logarithme : loi de Pythagore 1/e′² ≤ 1/e_a² + 1/e_b² pour tout arbre de niveaux (Prop. P). Changer la puissance demande ρ < 1/√2 (Hurwitz-Naslund encore) ou une feuille avec e0 = o(1/√log K0). Constante : 7,47 → 4,82 (Las Vegas), 10,6 → 6,81 (déterministe). `code/gen25/p9/notes.md` |
