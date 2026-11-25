@@ -1,0 +1,7 @@
+circ_pow0.75 honest=True X=10000 (146s)
+   x=    100 e=3.1087e-01 x*e=31.087 sqrt(x)*e=3.109 choice x_b=8
+   x=    300 e=1.9578e-01 x*e=58.735 sqrt(x)*e=3.391 choice x_b=11
+   x=   1000 e=9.9065e-02 x*e=99.065 sqrt(x)*e=3.133 choice x_b=11
+   x=   3000 e=4.9906e-02 x*e=149.717 sqrt(x)*e=2.733 choice x_b=49
+   x=  10000 e=2.2339e-02 x*e=223.388 sqrt(x)*e=2.234 choice x_b=57
+   local alpha: [100-300] 0.421 [300-1000] 0.566 [1000-3000] 0.624 [3000-10000] 0.668

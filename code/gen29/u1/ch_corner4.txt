@@ -1,0 +1,6 @@
+x=1.001e+05  x*e=210.998  x*e/log2x=12.7024  x*e/(log2 x)^0.5=51.770  chosen x_b=49 zeta=1.5e-05 delta=96.2
+x=1.002e+06  x*e=243.680  x*e/log2x=12.2241  x*e/(log2 x)^0.5=54.578  chosen x_b=49 zeta=1.9e-06 delta=114.8
+x=1.001e+07  x*e=274.375  x*e/log2x=11.7985  x*e/(log2 x)^0.5=56.897  chosen x_b=49 zeta=2.4e-07 delta=133.4
+x=1.000e+08  x*e=304.866  x*e/log2x=11.4716  x*e/(log2 x)^0.5=59.138  chosen x_b=49 zeta=3.0e-08 delta=152.1
+x=1.001e+09  x*e=334.632  x*e/log2x=11.1920  x*e/(log2 x)^0.5=61.198  chosen x_b=97 zeta=1.9e-09 delta=174.7
+x=1.000e+10  x*e=344.179  x*e/log2x=10.3607  x*e/(log2 x)^0.5=59.715  chosen x_b=47 zeta=1.2e-10 delta=197.4
