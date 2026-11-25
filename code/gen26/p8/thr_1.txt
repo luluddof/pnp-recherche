@@ -1,0 +1,2 @@
+alpha=1.0 row G vs 2^n: lam*=4.922e+04  (E/n=0.9986 D=2)  E*sqrt(lam)/(km)=73.85  [189s]
+alpha=1.0 row G vs PPSZ: lam*=3.29e+05  (E/n=0.3859 D=2)  E*sqrt(lam)/(km)=73.80  [374s]

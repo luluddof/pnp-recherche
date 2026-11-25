@@ -1,0 +1,123 @@
+a=4 i=0 k=1: Smith(Per_k)<=k-sqfree termwise: True
+   Per: [5, 7, 11, 13, 19, 21, 25, 27]
+   sqf: [5, 7, 11, 13, 19, 21, 25, 27]
+a=4 i=0 k=2: Smith(Per_k)<=k-sqfree termwise: True
+   Per: [11, 12, 15, 16, 18, 18, 20, 23, 24, 24, 26, 26, 27, 28, 30, 30, 32, 32, 34, 35, 35, 38, 39, 39, 42, 44, 47, 50]
+   sqf: [12, 16, 18, 18, 20, 24, 24, 26, 26, 28, 30, 30, 32, 32, 32, 32, 34, 34, 36, 38, 38, 40, 40, 44, 46, 46, 48, 52]
+a=4 i=0 k=3: Smith(Per_k)<=k-sqfree termwise: True
+   Per: [16, 18, 20, 22, 22, 23, 24, 25, 26, 28, 28, 29, 30, 30, 31, 31, 32, 33, 34, 34, 35, 36, 36, 37, 37, 37, 38, 39, 39, 40, 41, 41, 42, 42, 43, 43, 43, 44, 44, 45]
+   sqf: [23, 25, 29, 31, 31, 33, 35, 37, 37, 37, 37, 39, 39, 39, 39, 41, 41, 43, 43, 43, 43, 45, 45, 45, 45, 45, 47, 47, 49, 49, 51, 51, 51, 51, 51, 53, 53, 53, 53, 55]
+a=4 i=0 k=4: Smith(Per_k)<=k-sqfree termwise: True
+   Per: [23, 23, 26, 27, 27, 29, 29, 31, 31, 31, 34, 34, 34, 35, 36, 36, 37, 38, 38, 39, 39, 39, 41, 41, 42, 42, 42, 42, 42, 44, 44, 45, 45, 45, 46, 46, 46, 47, 48, 48]
+   sqf: [36, 42, 44, 44, 46, 48, 48, 50, 50, 50, 50, 52, 52, 52, 54, 56, 56, 56, 56, 58, 58, 58, 58, 58, 60, 60, 60, 62, 62, 62, 62, 64, 64, 64, 64, 64, 64, 64, 64, 66]
+a=4 i=0 k=5: Smith(Per_k)<=k-sqfree termwise: True
+   Per: [28, 30, 31, 33, 34, 34, 36, 36, 37, 39, 39, 41, 41, 41, 43, 43, 43, 45, 45, 45, 46, 47, 47, 48, 48, 49, 50, 50, 51, 51, 52, 53, 53, 55, 55, 56, 57, 58, 58, 59]
+   sqf: [55, 57, 61, 63, 63, 65, 67, 69, 69, 69, 69, 71, 71, 71, 71, 73, 73, 75, 75, 75, 75, 77, 77, 77, 77, 77, 79, 79, 81, 81, 83, 83, 83, 83, 83, 85, 85, 85, 85, 87]
+a=4 i=0 k=6: Smith(Per_k)<=k-sqfree termwise: True
+   Per: [34, 35, 38, 39, 40, 43, 43, 46, 47, 47, 47, 50, 50, 52, 52, 54, 54, 57, 57, 57, 60, 63, 64, 64, 67, 68, 71, 74]
+   sqf: [76, 80, 82, 82, 84, 88, 88, 90, 90, 92, 94, 94, 96, 96, 96, 96, 98, 98, 100, 102, 102, 104, 104, 108, 110, 110, 112, 116]
+a=4 i=0 k=7: Smith(Per_k)<=k-sqfree termwise: True
+   Per: [39, 41, 47, 49, 54, 56, 61, 63]
+   sqf: [101, 103, 107, 109, 115, 117, 121, 123]
+a=4 i=0 k=8: Smith(Per_k)<=k-sqfree termwise: True
+   Per: [47]
+   sqf: [128]
+a=4 i=1 k=1: Smith(Per_k)<=k-sqfree termwise: True
+   Per: [4, 4, 6, 6, 10, 10, 12, 12]
+   sqf: [4, 4, 6, 6, 10, 10, 12, 12]
+a=4 i=1 k=2: Smith(Per_k)<=k-sqfree termwise: True
+   Per: [8, 9, 9, 10, 10, 10, 10, 12, 13, 13, 14, 14, 14, 14, 16, 16, 16, 16, 17, 17, 18, 18, 20, 20, 20, 22, 22, 24]
+   sqf: [8, 10, 10, 10, 10, 12, 14, 14, 14, 14, 16, 16, 16, 16, 16, 16, 16, 16, 18, 18, 18, 18, 20, 22, 22, 22, 22, 24]
+a=4 i=1 k=3: Smith(Per_k)<=k-sqfree termwise: True
+   Per: [13, 13, 13, 13, 14, 14, 15, 15, 15, 15, 16, 16, 17, 17, 18, 18, 19, 19, 19, 19, 20, 20, 20, 20, 20, 20, 21, 21, 21, 22, 22, 22, 22, 22, 22, 23, 23, 23, 24, 24]
+   sqf: [14, 14, 16, 16, 18, 18, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 24, 24, 24, 24, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26]
+a=4 i=1 k=4: Smith(Per_k)<=k-sqfree termwise: True
+   Per: [17, 17, 18, 19, 19, 19, 19, 19, 19, 19, 19, 20, 21, 21, 22, 22, 23, 23, 23, 23, 23, 23, 24, 24, 24, 24, 25, 25, 25, 25, 26, 26, 26, 26, 26, 27, 27, 27, 27, 27]
+   sqf: [20, 24, 24, 24, 24, 26, 26, 26, 26, 26, 26, 26, 26, 28, 28, 28, 28, 28, 30, 30, 30, 30, 30, 30, 30, 30, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32]
+a=4 i=1 k=5: Smith(Per_k)<=k-sqfree termwise: True
+   Per: [22, 22, 23, 23, 23, 23, 24, 24, 25, 25, 25, 25, 26, 26, 27, 27, 28, 28, 29, 29, 29, 29, 29, 30, 30, 30, 30, 30, 30, 31, 31, 31, 32, 32, 32, 32, 33, 33, 33, 34]
+   sqf: [30, 30, 32, 32, 34, 34, 36, 36, 36, 36, 36, 36, 36, 36, 36, 36, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 40, 40, 40, 40, 42, 42, 42, 42, 42, 42, 42, 42, 42, 42]
+a=4 i=1 k=6: Smith(Per_k)<=k-sqfree termwise: True
+   Per: [26, 28, 28, 28, 28, 29, 29, 30, 32, 32, 33, 33, 33, 33, 35, 35, 35, 35, 36, 36, 37, 37, 39, 39, 40, 42, 42, 44]
+   sqf: [40, 42, 42, 42, 42, 44, 46, 46, 46, 46, 48, 48, 48, 48, 48, 48, 48, 48, 50, 50, 50, 50, 52, 54, 54, 54, 54, 56]
+a=4 i=1 k=7: Smith(Per_k)<=k-sqfree termwise: True
+   Per: [32, 32, 34, 34, 39, 39, 41, 41]
+   sqf: [52, 52, 54, 54, 58, 58, 60, 60]
+a=4 i=1 k=8: Smith(Per_k)<=k-sqfree termwise: True
+   Per: [38]
+   sqf: [64]
+a=4 i=2 k=1: Smith(Per_k)<=k-sqfree termwise: True
+   Per: [3, 3, 3, 3, 5, 5, 5, 5]
+   sqf: [3, 3, 3, 3, 5, 5, 5, 5]
+a=4 i=2 k=2: Smith(Per_k)<=k-sqfree termwise: True
+   Per: [6, 6, 6, 6, 6, 6, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 10, 10, 10, 10, 10, 10]
+   sqf: [6, 6, 6, 6, 6, 6, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 10, 10, 10, 10, 10, 10]
+a=4 i=2 k=3: Smith(Per_k)<=k-sqfree termwise: True
+   Per: [9, 9, 9, 9, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12]
+   sqf: [9, 9, 9, 9, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13]
+a=4 i=2 k=4: Smith(Per_k)<=k-sqfree termwise: True
+   Per: [12, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15]
+   sqf: [12, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16]
+a=4 i=2 k=5: Smith(Per_k)<=k-sqfree termwise: True
+   Per: [16, 16, 16, 16, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19]
+   sqf: [17, 17, 17, 17, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21]
+a=4 i=2 k=6: Smith(Per_k)<=k-sqfree termwise: True
+   Per: [20, 20, 20, 20, 20, 20, 21, 21, 21, 21, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 24, 24, 24, 24, 24, 24]
+   sqf: [22, 22, 22, 22, 22, 22, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 26, 26, 26, 26, 26, 26]
+a=4 i=2 k=7: Smith(Per_k)<=k-sqfree termwise: True
+   Per: [24, 24, 24, 24, 26, 26, 26, 26]
+   sqf: [27, 27, 27, 27, 29, 29, 29, 29]
+a=4 i=2 k=8: Smith(Per_k)<=k-sqfree termwise: True
+   Per: [28]
+   sqf: [32]
+a=3 i=0 k=1: Smith(Per_k)<=k-sqfree termwise: True
+   Per: [4, 6, 10, 12]
+   sqf: [4, 6, 10, 12]
+a=3 i=0 k=2: Smith(Per_k)<=k-sqfree termwise: True
+   Per: [9, 10, 13, 14, 17, 20]
+   sqf: [10, 14, 16, 16, 18, 22]
+a=3 i=0 k=3: Smith(Per_k)<=k-sqfree termwise: True
+   Per: [13, 15, 20, 22]
+   sqf: [20, 22, 26, 28]
+a=3 i=0 k=4: Smith(Per_k)<=k-sqfree termwise: True
+   Per: [19]
+   sqf: [32]
+Traceback (most recent call last):
+  File "/tmp/claude-0/-home-user-pnp-recherche/2d12e629-e6d2-542b-bfc0-8b766f57383f/scratchpad/gen26/p8/percomp.py", line 50, in <module>
+    sm=smith_vals(P,600)
+  File "/tmp/claude-0/-home-user-pnp-recherche/2d12e629-e6d2-542b-bfc0-8b766f57383f/scratchpad/gen26/p8/percomp.py", line 11, in smith_vals
+    A=[r[:] for r in A]; rows=set(range(len(A))); cols=list(range(len(A[0]))); out=[]
+                                                                      ~^^^
+IndexError: list index out of range
+a=3 i=1 k=1: Smith(Per_k)<=k-sqfree termwise: True
+   Per: [3, 3, 5, 5]
+   sqf: [3, 3, 5, 5]
+a=3 i=1 k=2: Smith(Per_k)<=k-sqfree termwise: True
+   Per: [6, 7, 7, 8, 8, 10]
+   sqf: [6, 8, 8, 8, 8, 10]
+a=3 i=1 k=3: Smith(Per_k)<=k-sqfree termwise: True
+   Per: [10, 10, 12, 12]
+   sqf: [11, 11, 13, 13]
+a=3 i=1 k=4: Smith(Per_k)<=k-sqfree termwise: True
+   Per: [14]
+   sqf: [16]
+Traceback (most recent call last):
+  File "/tmp/claude-0/-home-user-pnp-recherche/2d12e629-e6d2-542b-bfc0-8b766f57383f/scratchpad/gen26/p8/percomp.py", line 50, in <module>
+    sm=smith_vals(P,600)
+  File "/tmp/claude-0/-home-user-pnp-recherche/2d12e629-e6d2-542b-bfc0-8b766f57383f/scratchpad/gen26/p8/percomp.py", line 11, in smith_vals
+    A=[r[:] for r in A]; rows=set(range(len(A))); cols=list(range(len(A[0]))); out=[]
+                                                                      ~^^^
+IndexError: list index out of range
+a=2 i=0 k=1: Smith(Per_k)<=k-sqfree termwise: True
+   Per: [3, 5]
+   sqf: [3, 5]
+a=2 i=0 k=2: Smith(Per_k)<=k-sqfree termwise: True
+   Per: [7]
+   sqf: [8]
+Traceback (most recent call last):
+  File "/tmp/claude-0/-home-user-pnp-recherche/2d12e629-e6d2-542b-bfc0-8b766f57383f/scratchpad/gen26/p8/percomp.py", line 50, in <module>
+    sm=smith_vals(P,600)
+  File "/tmp/claude-0/-home-user-pnp-recherche/2d12e629-e6d2-542b-bfc0-8b766f57383f/scratchpad/gen26/p8/percomp.py", line 11, in smith_vals
+    A=[r[:] for r in A]; rows=set(range(len(A))); cols=list(range(len(A[0]))); out=[]
+                                                                      ~^^^
+IndexError: list index out of range

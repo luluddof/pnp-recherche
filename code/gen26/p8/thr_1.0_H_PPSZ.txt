@@ -1,0 +1,1 @@
+alpha=1.0 row H vs PPSZ: lam*=8.291e+04  (E/n=0.3859 D=2)  E*sqrt(lam)/(km)=37.04  [397s]

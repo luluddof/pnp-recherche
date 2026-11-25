@@ -1,0 +1,1 @@
+alpha=4.26 row H vs 2^n: lam*=2.251e+05  (E/n=0.9995 D=2)  E*sqrt(lam)/(km)=37.10  [418s]

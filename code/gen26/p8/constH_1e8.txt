@@ -1,0 +1,2 @@
+H lam=1e+08 D=3: E sqrt(lam)/(km) = 37.507  [227s]
+H lam=1e+08 D=4: E sqrt(lam)/(km) = 37.246  [402s]
