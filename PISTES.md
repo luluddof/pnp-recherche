@@ -48,7 +48,6 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 | G25-B2 | ✅ **Brainstorming : techniques de preuve** (fini) | 13 idées. Prouvé : N² ≤ p‖R‖_op + q‖Fl2 C‖_op. Top 3 : conjecture d'étalement (donnerait 2θ + T ≥ 4, donc ρ ≥ 2/3 comme mur) ; modèle à blocs ; angle de Friedrichs. `code/gen25/b2/notes.md` | consigne de l'auteur |
 | G25-B3 | ✅ **Brainstorming : autres routes** (fini) | 10 idées ; top 3 : sparsification pour la décision seule (enlèverait le facteur loglog en n) ; quotient par grappes ; hypercliques récents comme gadgets à 3 directions. `code/gen25/b3/notes.md` | consigne de l'auteur |
 | G25-B4 | ✅ **Brainstorming : rang inférieur** (fini) | « Meilleures pièces à chaque taille » : ne gagne rien (λ ≥ 10⁴ dans l'algorithme). Gains réels dans la comptabilité de la récursion : base de balayage + constantes exactes (seuil log₂ m* : 1,37·10⁵ → 2,4·10⁴) ; annexe D : 4·10¹⁰ → 1,6·10⁶. Reste astronomique. `code/gen25/b4/notes.md` | consigne de l'auteur |
-| G26-P4 | 🔄 **Recherche SAT exacte dans le modèle monomial-C** | Encoder supports + factorisation de rang p ; reproduire (6,6) à N = 5 ; décider (5,5) à N = 5 et (11,3) à N = 6. | B5 |
 
 Dossiers de travail de la génération 18 : `scratchpad/gen18/g18a` à `g18i`.
 
@@ -191,6 +190,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 | Piste | Résultat |
 |---|---|
 | ✅ **Constante de Claude : Freedman et plancher** (G26-P5) | c1 4,05 → 3,82 (R2F + R3″) ; structure S2 : ≈ 3,31 après correction par P10 (esquisse). Seuil contre 2^n : 1 943, puis 1 514. Plancher des lemmes uniformes ≈ 3,36 ; α ≥ 1 pour toute conception. Relu (P+, sauf S2). `code/gen26/p5/notes.md` |
+| ⚠️ **Recherche SAT exacte dans le modèle MC** (G26-P4) | (9,3)@5 et (6,4)@5 impossibles dans MC (en partie kissat seul) ; N = 4 complet avec DRAT ; (12,3)@6 retrouvé ; (5,5)@5 et (11,3)@6 non décidés. Lemmes implicites prouvés. Non relu. `code/gen26/p4/notes.md` |
 | ✅ **Relecture de G26-P13** (G26-P14) | E, C, D confirmés ; B corrigé (terme de concentration aux bases) : c1 ≈ 3,18 à 3,21 (P+), seuil ≈ 1 370 à 1 400. `code/gen26/p14/notes.md` |
 | ✅ **Vérification des 9 points de G26-P11** (G26-P15) | Tous confirmés (rang exact sur ℚ, deux méthodes) ; tous nouveaux et non dominés. `code/gen26/p15/notes.md` |
 | ❌ **Conception spectrale de constructions** (G26-P11) | Aucun point au-delà de la droite. Optimums : spectre {1, −1, −2}, blocs-cliques (p = nombre de blocs). 9 nouveaux points exacts (frontière N = 7 complète). Modèle à blocs-cliques : T ≥ (5 − 2θ)/3. `code/gen26/p11/notes.md` |

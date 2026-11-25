@@ -1,0 +1,6 @@
+MC N=5 (p,q)=(6,4) r=5: 36 cubes, running 1..2, 1 workers, TL 290s, kissat
+  cube 1 [(0, 0)]: UNSAT (blocked 0) [218.2s]
+  cube 2 [(0, 1)]: TIMEOUT (blocked 0) [290.1s]
+SUMMARY N=5 (p,q)=(6,4) r=5 cubes 1..2: {'UNSAT': 1, 'TIMEOUT': 1} [508.7s]
+MC N=5 (p,q)=(6,4) r=5: 36 cubes, running 3..4, 1 workers, TL 290s, kissat
+  cube 3 [(0, 0), (1, 1)]: TIMEOUT (blocked 0) [290.1s]

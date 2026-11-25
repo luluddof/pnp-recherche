@@ -1,0 +1,39 @@
+MC N=5 (p,q)=(6,4) r=4: 73 cubes, running 0..72, 2 workers, TL 280s, kissat
+  cube 30 [(0, 1), (1, 4), (2, 3)]: UNSAT (blocked 0) [112.0s]
+  cube 31 [(0, 0), (1, 1), (4, 4)]: UNSAT (blocked 0) [219.5s]
+  cube 32 [(0, 0), (1, 2), (4, 4)]: UNSAT (blocked 0) [123.4s]
+  cube 33 [(0, 0), (1, 4), (4, 1)]: UNSAT (blocked 0) [128.4s]
+SUMMARY N=5 (p,q)=(6,4) r=4 cubes 0..72: {'UNSAT': 4} [348.4s]
+MC N=5 (p,q)=(6,4) r=4: 73 cubes, running 0..72, 2 workers, TL 280s, kissat
+  cube 35 [(0, 1), (1, 0), (4, 4)]: UNSAT (blocked 0) [62.0s]
+  cube 34 [(0, 0), (1, 4), (4, 2)]: UNSAT (blocked 0) [85.5s]
+  cube 36 [(0, 1), (1, 2), (4, 4)]: UNSAT (blocked 0) [91.8s]
+  cube 37 [(0, 1), (1, 4), (4, 0)]: UNSAT (blocked 0) [106.7s]
+SUMMARY N=5 (p,q)=(6,4) r=4 cubes 0..72: {'UNSAT': 4} [192.6s]
+MC N=5 (p,q)=(6,4) r=4: 73 cubes, running 0..72, 2 workers, TL 280s, kissat
+  cube 38 [(0, 1), (1, 4), (4, 2)]: UNSAT (blocked 0) [70.1s]
+  cube 39 [(0, 1), (2, 3), (4, 4)]: UNSAT (blocked 0) [70.4s]
+  cube 59 [(0, 0), (1, 2), (2, 3), (4, 4)]: UNSAT (blocked 0) [104.6s]
+  cube 40 [(0, 1), (2, 4), (4, 2)]: UNSAT (blocked 0) [107.4s]
+SUMMARY N=5 (p,q)=(6,4) r=4 cubes 0..72: {'UNSAT': 4} [177.8s]
+MC N=5 (p,q)=(6,4) r=4: 73 cubes, running 0..72, 2 workers, TL 280s, kissat
+  cube 60 [(0, 0), (1, 2), (2, 4), (4, 1)]: UNSAT (blocked 0) [154.8s]
+  cube 61 [(0, 0), (1, 2), (2, 4), (4, 3)]: UNSAT (blocked 0) [155.1s]
+  cube 63 [(0, 1), (1, 0), (2, 3), (4, 4)]: UNSAT (blocked 0) [80.7s]
+  cube 62 [(0, 0), (1, 2), (3, 4), (4, 3)]: UNSAT (blocked 0) [115.9s]
+SUMMARY N=5 (p,q)=(6,4) r=4 cubes 0..72: {'UNSAT': 4} [271.4s]
+MC N=5 (p,q)=(6,4) r=4: 73 cubes, running 0..72, 2 workers, TL 280s, kissat
+  cube 65 [(0, 1), (1, 0), (2, 4), (4, 3)]: UNSAT (blocked 0) [56.6s]
+  cube 64 [(0, 1), (1, 0), (2, 4), (4, 2)]: UNSAT (blocked 0) [67.2s]
+  cube 66 [(0, 1), (1, 2), (2, 0), (4, 4)]: UNSAT (blocked 0) [89.3s]
+  cube 67 [(0, 1), (1, 2), (2, 3), (4, 4)]: UNSAT (blocked 0) [99.8s]
+SUMMARY N=5 (p,q)=(6,4) r=4 cubes 0..72: {'UNSAT': 4} [167.6s]
+MC N=5 (p,q)=(6,4) r=4: 73 cubes, running 0..72, 2 workers, TL 280s, kissat
+  cube 69 [(0, 1), (1, 2), (2, 4), (4, 3)]: UNSAT (blocked 0) [115.4s]
+  cube 68 [(0, 1), (1, 2), (2, 4), (4, 0)]: UNSAT (blocked 0) [126.3s]
+  cube 70 [(0, 1), (1, 2), (3, 4), (4, 3)]: UNSAT (blocked 0) [144.9s]
+  cube 71 [(0, 1), (1, 4), (2, 3), (4, 0)]: UNSAT (blocked 0) [147.8s]
+SUMMARY N=5 (p,q)=(6,4) r=4 cubes 0..72: {'UNSAT': 4} [275.0s]
+MC N=5 (p,q)=(6,4) r=4: 73 cubes, running 0..72, 2 workers, TL 280s, kissat
+  cube 72 [(0, 1), (1, 4), (2, 3), (4, 2)]: UNSAT (blocked 0) [83.1s]
+SUMMARY N=5 (p,q)=(6,4) r=4 cubes 0..72: {'UNSAT': 1} [83.7s]

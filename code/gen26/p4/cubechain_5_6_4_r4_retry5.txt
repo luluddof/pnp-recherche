@@ -1,0 +1,3 @@
+MC N=5 (p,q)=(6,4) r=4: 73 cubes, running 0..72, 1 workers, TL 580s, kissat
+  cube 5 [(0, 0), (1, 1)]: UNSAT (blocked 0) [140.5s]
+SUMMARY N=5 (p,q)=(6,4) r=4 cubes 0..72: {'UNSAT': 1} [140.6s]
