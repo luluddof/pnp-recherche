@@ -1,0 +1,21 @@
+base 10 46
+   full t=8 r=23 ok=False res=1.06e+01 (10s)
+   full t=8 r=34 ok=False res=9.23e+00 (20s)
+   full t=8 r=40 ok=False res=7.67e+00 (31s)
+   full t=8 r=43 ok=False res=5.62e+00 (42s)
+   full t=8 r=44 ok=False res=4.93e+00 (52s)
+   full t=8 r=45 ok=False res=6.20e+00 (63s)
+full: q=10+8=18: min rank found 46
+   full t=24 r=23 ok=False res=9.64e+00 (73s)
+   full t=24 r=34 ok=False res=6.09e+00 (83s)
+   full t=24 r=40 ok=True res=3.58e-15 (105s)
+   full t=24 r=37 ok=False res=3.45e+00 (117s)
+   full t=24 r=38 ok=True res=1.07e-13 (125s)
+full: q=10+24=34: min rank found 38
+   full t=36 r=23 ok=True res=3.59e-15 (126s)
+   full t=36 r=11 ok=True res=3.45e-15 (128s)
+   full t=36 r=5 ok=False res=1.27e+01 (138s)
+   full t=36 r=8 ok=False res=1.18e+01 (149s)
+   full t=36 r=9 ok=False res=7.42e+00 (160s)
+   full t=36 r=10 ok=True res=3.41e-15 (162s)
+full: q=10+36=46: min rank found 10

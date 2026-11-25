@@ -1,0 +1,22 @@
+base 10 46
+   bell t=8 r=23 ok=False res=1.20e+01 (11s)
+   bell t=8 r=34 ok=False res=8.55e+00 (22s)
+   bell t=8 r=40 ok=False res=5.89e+00 (32s)
+   bell t=8 r=43 ok=False res=5.60e+00 (44s)
+   bell t=8 r=44 ok=False res=4.82e+00 (54s)
+   bell t=8 r=45 ok=False res=3.55e+00 (65s)
+bell: q=10+8=18: min rank found 46
+   bell t=24 r=23 ok=False res=9.58e+00 (76s)
+   bell t=24 r=34 ok=False res=7.35e+00 (87s)
+   bell t=24 r=40 ok=False res=4.57e+00 (98s)
+   bell t=24 r=43 ok=True res=6.92e-16 (105s)
+   bell t=24 r=41 ok=False res=4.62e+00 (115s)
+   bell t=24 r=42 ok=True res=8.60e-12 (123s)
+bell: q=10+24=34: min rank found 42
+   bell t=36 r=23 ok=True res=3.59e-15 (124s)
+   bell t=36 r=11 ok=True res=3.45e-15 (126s)
+   bell t=36 r=5 ok=False res=1.26e+01 (137s)
+   bell t=36 r=8 ok=False res=1.13e+01 (147s)
+   bell t=36 r=9 ok=False res=9.83e+00 (158s)
+   bell t=36 r=10 ok=True res=3.41e-15 (159s)
+bell: q=10+36=46: min rank found 10

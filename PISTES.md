@@ -44,7 +44,7 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
-| G30-S1 | 🔄 **Coin « SWAP avec registre latéral »** | Dernière relaxation laissée par G29-P3 : Paulis non commutants (hors Bell), projecteurs de codes stabilisateurs à peu de termes, repères de Majorana ; ou réduction au modèle de Bell. | G29-P3 |
+| G30-S1 | ⚠️ **Coin « SWAP avec registre latéral »** (fini, non relu) | Non décidé. En fait : Paulis P1⊗P2 avec P1 ≠ P2 (pas de registre) ; P_3 n'apporte rien de plus que le SWAP. Tous les meilleurs points sont de Bell/Majorana ; idées par codes : échecs prouvés. Le modèle de Bell reste la frontière (Servedio-Viola). `code/gen30/s1/notes.md` | G29-P3 |
 | G29-P3 | ❌ **Coin « anneau bon marché » de P_3** (fini, non relu) | Pas plus facile que le SWAP à ce jour. Théorème S′₃ (classes symétriques et locales : quadratique). Modèle de Pauli : équivaut au coin « SWAP avec registre latéral » (relaxation de Servedio-Viola). Points exacts jusqu'à N = 32. `code/gen29/p3/notes.md` | G29-X2 |
 | G29-R3 | ✅ **Relecture de H1 et X2** (fini) | Majorana confirmé (formes affines) ; records équilibrés vrais sauf k = 18 ; identité SWAP ⇒ P_3 confirmée ; α*(P_3) = 1/2 comme supremum. `code/gen29/r3/notes.md` | G29-H1, X2 |
 | G29-H1 | ⚠️ **Modèle de Bell complet et rigidité de Hadamard** (fini, non relu) | Pas de coin linéaire. Famille de Majorana : meilleures paires équilibrées connues pour N = 2^k, 5 ≤ k ≤ 31 sauf k = 18 (Hrubeš regradué, relecture R3), coin quadratique ; relu (P+). Optimum exact à N = 8 (q ≤ 6). Le coin de Bell = cas ouvert de Servedio-Viola (IP et AC0∘MOD2). `code/gen29/h1/notes.md` | G28-C2, R2 |

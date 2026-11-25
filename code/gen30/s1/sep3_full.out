@@ -1,0 +1,4 @@
+full q=12 r=8: best res 1.66e-15 HIT start,#shifts,#Z (0, 1, 12) 0s
+full q=12 r=7: best res 3.37e+00   6s
+full q=16 r=7: best res 2.92e+00   6s
+full q=16 r=6: best res 3.07e+00   6s
