@@ -1,0 +1,4 @@
+N 5 q 3 best p 10 seed 5
+N 6 q 3 best p 15 seed 6
+N 7 q 3 best p 21 seed 7
+N 8 q 3 best p 28 seed 8

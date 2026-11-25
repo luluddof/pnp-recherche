@@ -1,0 +1,7 @@
+Z3 circulant coeffs{-1,0,1} q<=2: min p=3, bound=3.0 (#prods 676)
+Z4 circulant coeffs{-1,0,1} q<=1: min p=6, bound=6.0 (#prods 6400)
+S3 perm rep (triv+std), K in span{I,J}^(x2) (any q) grid 13^4: min p=3, bound=3
+Z2 on R^4 (m=2,2): random q<=3 int entries: min p=10, bound 4
+Z4 random group-algebra elems q<=4: min p=6 bound=6.0
+Z5 random group-algebra elems q<=4: min p=10 bound=10.0
+S3reg random group-algebra elems q<=4: min p=15 bound=13.0
