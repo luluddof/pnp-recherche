@@ -1,0 +1,10 @@
+d=3 k=1 N=3: SWAP monomial in eigenbasis: True, fixed points 3, p_opt=(N^2-fixed)/2=3, (N^2-N)/2=3
+   heuristic best rank: 3
+d=3 k=1 N=3: SWAP monomial in eigenbasis: True, fixed points 3, p_opt=(N^2-fixed)/2=3, (N^2-N)/2=3
+   heuristic best rank: 3
+d=5 k=1 N=5: SWAP monomial in eigenbasis: True, fixed points 5, p_opt=(N^2-fixed)/2=10, (N^2-N)/2=10
+   heuristic best rank: 10
+d=3 k=2 N=9: SWAP monomial in eigenbasis: True, fixed points 9, p_opt=(N^2-fixed)/2=36, (N^2-N)/2=36
+   heuristic best rank: 36
+d=3 k=2 N=9: SWAP monomial in eigenbasis: True, fixed points 9, p_opt=(N^2-fixed)/2=36, (N^2-N)/2=36
+   heuristic best rank: 36

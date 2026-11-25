@@ -1,0 +1,21 @@
+sector dims {(5,): 6, (4, 1): 16, (3, 2): 10} sum 32
+Lemma2 violations: 0
+u=0 thr=0: |P_X K P_Y|max=3.6e-16 dimY=316 rank(SWAP-K)=1024
+u=0 thr=0: |P_X K P_Y|max=3.6e-16 dimY=316 rank(SWAP-K)=1024
+u=1 thr=0: |P_X K P_Y|max=4.1e+00 dimY=316 rank(SWAP-K)=1024
+u=1 thr=1: |P_X K P_Y|max=2.4e-16 dimY=60 rank(SWAP-K)=1024
+u=1 thr=2: Y empty
+u=2 thr=1: |P_X K P_Y|max=4.5e+00 dimY=60 rank(SWAP-K)=1024
+u=2 thr=2: Y empty
+u=2 thr=4: Y empty
+u=3 thr=2: Y empty
+u=3 thr=3: Y empty
+u=3 thr=6: Y empty
+u=4 thr=3: Y empty
+u=4 thr=4: Y empty
+u=4 thr=8: Y empty
+sector dims {(3,): 20, (2, 1): 40, (1, 1, 1): 4} sum 64
+Lemma2 violations: 0
+u=0 thr=0: |P_X K P_Y|max=3.4e-16 dimY=1040 rank(SWAP-K)=4096
+u=0 thr=0: |P_X K P_Y|max=3.4e-16 dimY=1040 rank(SWAP-K)=4096
+u=1 thr=0: |P_X K P_Y|max=7.8e+00 dimY=1040 rank(SWAP-K)=4096

@@ -1,0 +1,9 @@
+n=2 k=3: p=15 formula 15; osr=64 formula 64
+n=2 k=3: p=3 formula 3; osr=64 formula 64
+n=2 k=3: p=52 formula 52; osr=64 formula 64
+n=2 k=4: p=124 formula 124; osr=256 formula 256
+n=2 k=4: p=163 formula 163; osr=256 formula 256
+n=2 k=4: p=159 formula 159; osr=256 formula 256
+n=3 k=3: p=297 formula 297; osr=729 formula 729
+n=3 k=3: p=351 formula 351; osr=729 formula 729
+n=3 k=3: p=216 formula 216; osr=729 formula 729

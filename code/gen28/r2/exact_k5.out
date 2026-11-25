@@ -1,0 +1,2 @@
+k=5 N=32 prime=1000003: rank(SWAP-K)=452 (pred 452), osr=56, dim commutant=56
+k=5 N=32 prime=998244353: rank(SWAP-K)=452 (pred 452), osr=56, dim commutant=56
