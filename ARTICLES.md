@@ -210,6 +210,7 @@ Ce fichier liste **tout ce qui peut entrer dans un article**, présent ou futur.
 | Date | Changement |
 |---|---|
 | 24/11/2026 | Création du registre après la génération 18. Articles 1, 2, 3 ; candidats B1 à B4. |
+| 25/11/2026 | G27-T2 : cinq nouveaux points exacts (B2), dont (25,5)@10. G27-T1 : annexe B, k borné. |
 | 25/11/2026 | G27-B2 + G27-R1 : nouveau candidat B7 (critère du coin), P+. |
 | 25/11/2026 | G27-B1 : point numérique (62,12)@16 (non exact). |
 | 25/11/2026 | G26-P16 : lemmes de P4 et relaxation GF(2) confirmés (P+). |
