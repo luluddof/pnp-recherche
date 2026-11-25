@@ -1,0 +1,19 @@
+  (a) K=3 lam=1: brute=-18 sweep=-18 equal=True  brute terms=8  sweep terms=11  max edges enumerated in a step=3 (formula floor((K+1)^2/4)-1=3; brute K(K-1)/2=3)
+  (a) K=3 lam=2: brute=-21 sweep=-21 equal=True  brute terms=64  sweep terms=88  max edges enumerated in a step=3 (formula floor((K+1)^2/4)-1=3; brute K(K-1)/2=3)
+  (a) K=5 lam=1: brute=-841 sweep=-841 equal=True  brute terms=1024  sweep terms=488  max edges enumerated in a step=8 (formula floor((K+1)^2/4)-1=8; brute K(K-1)/2=10)
+  (a) K=4 lam=1: brute=-45 sweep=-45 equal=True  brute terms=64  sweep terms=72  max edges enumerated in a step=5 (formula floor((K+1)^2/4)-1=5; brute K(K-1)/2=6)
+  (a) K=5 lam=1: brute=71 sweep=71 equal=True  brute terms=1024  sweep terms=532  max edges enumerated in a step=8 (formula floor((K+1)^2/4)-1=8; brute K(K-1)/2=10)
+  (a) K=4 lam=2: brute=774 sweep=774 equal=True  brute terms=4096  sweep terms=2064  max edges enumerated in a step=5 (formula floor((K+1)^2/4)-1=5; brute K(K-1)/2=6)
+  (a) K=5 lam=1: brute=17 sweep=17 equal=True  brute terms=1024  sweep terms=532  max edges enumerated in a step=8 (formula floor((K+1)^2/4)-1=8; brute K(K-1)/2=10)
+  (a) K=5 lam=1: brute=513 sweep=513 equal=True  brute terms=1024  sweep terms=528  max edges enumerated in a step=8 (formula floor((K+1)^2/4)-1=8; brute K(K-1)/2=10)
+ (a) all 30 random-table instances agree: True
+  (b) n=7 m=5 K=4 L=2: #SAT brute=61 sweep=61 equal=True  sweep terms=368  vs brute-force clique terms 2^(L K(K-1)/2)=4096
+  (b) n=9 m=5 K=4 L=2: #SAT brute=126 sweep=126 equal=True  sweep terms=388  vs brute-force clique terms 2^(L K(K-1)/2)=4096
+  (b) n=9 m=7 K=3 L=4: #SAT brute=112 sweep=112 equal=True  sweep terms=2000  vs brute-force clique terms 2^(L K(K-1)/2)=4096
+  (b) n=6 m=4 K=4 L=1: #SAT brute=37 sweep=37 equal=True  sweep terms=60  vs brute-force clique terms 2^(L K(K-1)/2)=64
+  (b) n=5 m=6 K=4 L=3: #SAT brute=15 sweep=15 equal=True  sweep terms=4964  vs brute-force clique terms 2^(L K(K-1)/2)=262144
+  (b) n=9 m=4 K=3 L=3: #SAT brute=70 sweep=70 equal=True  sweep terms=124  vs brute-force clique terms 2^(L K(K-1)/2)=512
+  (b) n=5 m=5 K=4 L=3: #SAT brute=15 sweep=15 equal=True  sweep terms=2886  vs brute-force clique terms 2^(L K(K-1)/2)=262144
+  (b) n=7 m=4 K=3 L=2: #SAT brute=78 sweep=78 equal=True  sweep terms=88  vs brute-force clique terms 2^(L K(K-1)/2)=64
+ (b) all 24 random 3-CNF instances agree: True
+ALL OK

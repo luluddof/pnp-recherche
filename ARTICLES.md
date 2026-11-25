@@ -144,6 +144,15 @@ Ce fichier liste **tout ce qui peut entrer dans un article**, présent ou futur.
 | **Limites** | Nouveauté non établie : T2 est sans doute du folklore ; l'article de Marx n'a pas été lu (hôte bloqué) ; plusieurs références citées de mémoire ou lues dans les résumés seulement. T3 couvre une seule famille de réductions. |
 | **Avis honnête** | Matière réelle mais mince et non relue. Aujourd'hui : des remarques à mettre dans la section « travaux reliés » d'un autre article. Un article seul demanderait une relecture, la lecture des sources, et un contrôle de T1. |
 
+### B6 — Version explicite et réoptimisée des deux algorithmes de 2026 (« rang inférieur »)
+
+| | |
+|---|---|
+| **Résultat** | (Claude, G25-P2) Théorème A′ : #3-SAT en 2^((c1 + o(1))·W/√log₂ m) avec c1 = 10,6 (déterministe) ou 7,47 (Las Vegas), contre 42,4 dans le papier ; lemme de balayage nouveau (base e0 ≤ 1/4 + 1/(2K0)) ; seuils explicites contre la force brute, le meilleur #3-SAT et PPSZ. (OpenAI, G25-P3, en cours) constantes explicites de l'annexe D. |
+| **Niveau** | P (preuves sur papier non relues ; lemme de balayage vérifié par calcul) ; conditionnel aux deux prépublications. |
+| **Fichiers** | `code/gen25/p2/`, `code/gen25/b4/` |
+| **Avis honnête** | Contribution modeste mais propre et vérifiable : elle corrige et précise les constantes, et montre que les algorithmes restent sans effet pratique (seuils astronomiques). Utile comme section d'un article ou comme note technique ; les auteurs des prépublications seraient les premiers intéressés. |
+
 ### B4 — Bibliothèque Lean d'outils génériques
 
 | | |
@@ -184,6 +193,7 @@ Ce fichier liste **tout ce qui peut entrer dans un article**, présent ou futur.
 | Date | Changement |
 |---|---|
 | 24/11/2026 | Création du registre après la génération 18. Articles 1, 2, 3 ; candidats B1 à B4. |
+| 25/11/2026 | G25-P2 : nouveau candidat B6 (versions explicites des algorithmes de 2026). |
 | 24/11/2026 | G25-P6 : f(N,2) = N(N−1)/2 vérifié par Lean ; bibliothèque B4 : 23 énoncés. |
 | 24/11/2026 | G24g : théorème f(N,2) = N(N−1)/2 ajouté au candidat B2. |
 | 24/11/2026 | G24d : valeurs exactes du modèle ST avec preuves DRAT, ajoutées au candidat B2. |
