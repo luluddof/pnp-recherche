@@ -44,6 +44,10 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
+| G27-B1 | 🔄 **Brainstorming : constructions dans le cercle avec les leçons de la génération 26** | Spectre étalé des deux côtés, grandes normes minimales sur la jauge, états de grand poids (algèbre de vertex de Heisenberg), blocs-cliques plus grands. Idées testées par calcul. | Étape 2 |
+| G27-B2 | 🔄 **Brainstorming : routes vers l'étape 2 hors du compromis de croisement** | ρ → 1/2 est-il vraiment nécessaire ? Plusieurs croisements par niveau, autres structures de récursion, côté OpenAI (nombre de directions), autres problèmes ouverts. | Étape 2 |
+| G27-T1 | 🔄 **Annexe B : système complet avec états de grand poids (D ≫ h)** | Seule porte laissée ouverte par G26-P1 : k croît-il si D n'est pas borné, à h = 6 à 9 ? Calcul exact. | G26-P1 |
+| G27-T2 | 🔄 **Frontière exacte à N = 10 à 12 et tendance de l'exposant** | Recherche constructive (blocs-cliques plus grands, structures des 9 nouveaux points) ; ajustement de log_N p + log_N q sur les données exactes. | G26-P11 |
 | G25-B1 | ✅ **Brainstorming : constructions** (fini) | 12 idées, 7 tuées par calcul ; rien près du cercle. Restes : profil à saut convexe (2 %), familles au bord en ε (1,5 %), catalyseurs (1 %). La barrière de Cardy s'étendrait aux familles c → ∞ (argument non relu). `code/gen25/b1/notes.md` | consigne de l'auteur |
 | G25-B2 | ✅ **Brainstorming : techniques de preuve** (fini) | 13 idées. Prouvé : N² ≤ p‖R‖_op + q‖Fl2 C‖_op. Top 3 : conjecture d'étalement (donnerait 2θ + T ≥ 4, donc ρ ≥ 2/3 comme mur) ; modèle à blocs ; angle de Friedrichs. `code/gen25/b2/notes.md` | consigne de l'auteur |
 | G25-B3 | ✅ **Brainstorming : autres routes** (fini) | 10 idées ; top 3 : sparsification pour la décision seule (enlèverait le facteur loglog en n) ; quotient par grappes ; hypercliques récents comme gadgets à 3 directions. `code/gen25/b3/notes.md` | consigne de l'auteur |
