@@ -167,7 +167,7 @@ Ce fichier liste **tout ce qui peut entrer dans un article**, présent ou futur.
 | **Résultat** | Dans le modèle de conception M de l'algorithme de Claude, avec des niveaux g × h déséquilibrés (lemme U) : α* = inf{α : h_F(μ) ≥ ‖(μ, 1 − μ)‖_{1/(1−α)} pour tout μ}, h_F = fonction support de la frontière de croisement. Donc α* ≥ max(log₂(1/ρ), γ) et **α* = 1 ⇔ γ = 1** (γ = exposant de coin de l'enveloppe concave). Une pente finie c au coin donne e(x) ≤ O(c·log x/x), soit un temps 2^(O(c·m·log log m/log m)). Exemple : la frontière p²q = N⁴ (ρ équilibré = 2/3) donne α* = 1. La loi de Pythagore de G25-P9 est le cas du cercle. |
 | **Niveau** | P+ (G27-B2, relu par G27-R1 avec trois corrections : étape de preuve ajoutée, équivalence corrigée — « pente finie ⇒ étape 2 » seulement dans ce sens —, vitesse plus forte que B2). Niveau conception seulement ; dépend du lemme U (esquisse de G25-P9, confirmé par R1) et de la prépublication de Claude. |
 | **Fichiers** | `code/gen27/b2/notes.md`, `code/gen27/r1/notes.md` |
-| **Limites** | Aucune famille de pièces connue n'a de pente finie au coin (l'annexe B donne δ = η²/4, γ = 1/2 ; G27-T3, G28-C1 : toutes les familles testées ont un coin quadratique). Côté OpenAI : pas d'analogue (G28-O1). Si un coin de pente c ≤ 4 existait, il compterait dès log₂ m ≈ 100 à 900 (G28-O1, non relu). Ce n'est pas une borne inférieure pour les algorithmes. Gains seulement à des tailles astronomiques. |
+| **Limites** | Aucune famille de pièces connue n'a de pente finie au coin (l'annexe B donne δ = η²/4, γ = 1/2 ; G27-T3, G28-C1 : toutes les familles testées ont un coin quadratique). Côté OpenAI : pas d'analogue (G28-O1). Théorème S′ (G28-C2, non relu) : toute construction symétrique, locale ou en bande a un coin quadratique ; un coin linéaire de Bell serait un nouveau résultat de non-rigidité de Walsh-Hadamard. Si un coin de pente c ≤ 4 existait, il compterait dès log₂ m ≈ 100 à 900 (G28-O1, non relu). Ce n'est pas une borne inférieure pour les algorithmes. Gains seulement à des tailles astronomiques. |
 | **Avis honnête** | Changement de cible important pour le projet : le problème ouvert devient « rigidité de rang de Kronecker du swap » au coin, et non plus le problème 12 de Naslund au point équilibré. Aujourd'hui : une section d'un article ou une note courte, seulement si une relecture humaine confirme le lemme U. |
 
 ### B4 — Bibliothèque Lean d'outils génériques
@@ -210,6 +210,7 @@ Ce fichier liste **tout ce qui peut entrer dans un article**, présent ou futur.
 | Date | Changement |
 |---|---|
 | 24/11/2026 | Création du registre après la génération 18. Articles 1, 2, 3 ; candidats B1 à B4. |
+| 25/11/2026 | G28-C1, C2, O1 : coin ; théorème S′ (classes symétriques et locales quadratiques) ; lien avec la rigidité de Walsh-Hadamard ; non relus. |
 | 25/11/2026 | G28-R1 : G27-T3 relu (P+) ; point (106,106)@32 ; pavage de Hurwitz-Radon (s, s) avec s = N·⌈N/ρ(N)⌉ : meilleur que N²/8 pour N ≥ 64. |
 | 25/11/2026 | G27-T3 : problème du coin, aucune famille à coin linéaire ; théorème S (esquisse). |
 | 25/11/2026 | G27-T2 : cinq nouveaux points exacts (B2), dont (25,5)@10. G27-T1 : annexe B, k borné. |
