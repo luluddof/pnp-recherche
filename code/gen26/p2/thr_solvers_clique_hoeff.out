@@ -1,0 +1,2 @@
+[solvers_clique.json top=hoeff] r=4.26: 2^n: 2988 (x_top=1460.0, e=0.04195, lt=25.5, d=0.2, log2lam=70.9) | 1.6423^n: 5756 (x_top=2837.0, e=0.03033, lt=33.0, d=0.4, log2lam=85.0) | 1.30704^n: 2.018e+04 (x_top=10052.0, e=0.01622, lt=28.5, d=0.2, log2lam=79.7)
+[solvers_clique.json top=hoeff] r=1.0: 2^n: 99.04 (x_top=30.0, e=0.22328, lt=14.0, d=0.4, log2lam=41.2) | 1.6423^n: 164.7 (x_top=52.0, e=0.17811, lt=23.5, d=0.2, log2lam=62.7) | 1.30704^n: 559.6 (x_top=250.0, e=0.09519, lt=23.0, d=0.4, log2lam=61.6)

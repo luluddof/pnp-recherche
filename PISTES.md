@@ -51,7 +51,6 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 | G26-P3 | 🔄 **Au-delà de la droite dans le modèle monomial-C ?** | Le modèle MC contient tous les optimums exacts connus (N ≤ 8). Lemme MC2 : p·q ≳ ½·N²·ln q. Peut-on obtenir N^(2+ε) (cycles pairs, ensembles acycliques) ? | B5 |
 | G26-P4 | 🔄 **Recherche SAT exacte dans le modèle monomial-C** | Encoder supports + factorisation de rang p ; reproduire (6,6) à N = 5 ; décider (5,5) à N = 5 et (11,3) à N = 6. | B5 |
 | G26-P1 | 🔄 **Enveloppe de l'annexe B à grand h (ansatz structuré)** | Écrire le système par x avec ρ, κ polynômes en les opérateurs b[r] (poly(h) inconnues) ; tester W + W′ = 4h − 1 − k pour h ≤ 10 à 15. Seul un k linéaire en h changerait θ. | B6 |
-| G26-P2 | 🔄 **Relecture adverse de B7 (R1, R2, R3, R4) et recalcul des seuils** | Martingale de Doob et Azuma avec temps d'arrêt ; Σ r_k ≤ P ; remplissage dans R3 ; dérandomisation R1 ; compromis temps-mémoire ; seuils m* avec la machinerie complète de P2. | B7 |
 
 Dossiers de travail de la génération 18 : `scratchpad/gen18/g18a` à `g18i`.
 
@@ -193,6 +192,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Résultat |
 |---|---|
+| ✅ **Relecture de B7** (G26-P2) | R1 à R4 confirmés (P+). Constante de Claude 4,05 (constantes du relecteur). Seuil contre la force brute à densité 4,26 : log₂ m* = 2 237 (papier : 276 000). Mémoire polynomiale : 6,16, seuil 5 123. `code/gen26/p2/notes.md` |
 | ⚠️ **Arbre des sous-problèmes** (G26-B5) | Nouveau modèle monomial-C qui contient tous les optimums exacts ; lemme MC2 : p·q ≳ ½·N²·ln q (au-delà de la droite d'un log). Pas de gain linéaire à q = 3 (numérique, k ≤ 5). `code/gen26/b5/notes.md` |
 | ✅ **Rang inférieur, deuxième tour** (G26-B7) | Constante de Claude c1 = 4,12 (déterministe et Las Vegas ; papier : 42,4) ; mémoire polynomiale : 6,16 ; compromis temps-mémoire (1 − M)/3. Non relu. `code/gen26/b7/notes.md` |
 | ❌ **Perturbations de l'annexe B** (G26-B6) | Rien ne courbe la frontière. Lemme 1-D : le seuillage est optimal pour une paire ; un gain demande des relations entre paires. Enveloppe exacte jusqu'à N = 15 : sur la droite triviale. `code/gen26/b6/notes.md` |

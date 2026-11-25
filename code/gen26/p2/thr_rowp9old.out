@@ -1,0 +1,2 @@
+[solvers_rowp9old.json top=hoeff] r=4.26: 2^n: 3118 (x_top=1523.0, e=0.04217, lt=28.0, d=0.4, log2lam=74.1) | 1.6423^n: 6158 (x_top=3042.0, e=0.03017, lt=28.0, d=0.2, log2lam=77.0) | 1.30704^n: 2.133e+04 (x_top=10627.0, e=0.01629, lt=30.0, d=0.2, log2lam=82.8)
+[solvers_rowp9old.json top=hoeff] r=1.0: 2^n: 81.76 (x_top=21.5, e=0.22580, lt=14.0, d=0.4, log2lam=40.9) | 1.6423^n: 147.6 (x_top=43.5, e=0.17826, lt=24.5, d=0.4, log2lam=62.6) | 1.30704^n: 556.6 (x_top=246.0, e=0.09595, lt=25.5, d=0.4, log2lam=66.6)
