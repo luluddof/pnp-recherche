@@ -1,0 +1,48 @@
+h=2 N=2 pieces 0.1s
+max |coef| of pieces (normalised by h!): 36.0
+s0= -4 N=   2 p=     0 q=     4 |R|op=         0 |C|op=         1 L=        1 N2/(p|R|+q|C|)=1.0000 frob=1.0000 rhoR=0 rhoC=1 Linv=1
+s0= -3 N=   2 p=     1 q=     3 |R|op=     4.472 |C|op=     3.414 L=    3.414 N2/(p|R|+q|C|)=0.2718 frob=0.3509 rhoR=4 rhoC=2.732 Linv=2.732
+s0= -2 N=   2 p=     2 q=     4 |R|op=     10.77 |C|op=     9.153 L=    6.472 N2/(p|R|+q|C|)=0.0688 frob=0.0934 rhoR=10 rhoC=8 Linv=5.657
+s0= -1 N=   2 p=     3 q=     4 |R|op=     13.06 |C|op=     13.06 L=    7.541 N2/(p|R|+q|C|)=0.0437 frob=0.0679 rhoR=12.9 rhoC=10 Linv=6.449
+s0=  0 N=   2 p=     3 q=     4 |R|op=     17.76 |C|op=     18.44 L=    10.65 N2/(p|R|+q|C|)=0.0315 frob=0.0570 rhoR=17.31 rhoC=18 Linv=10.39
+s0=  1 N=   2 p=     4 q=     4 |R|op=     22.33 |C|op=     17.33 L=    11.17 N2/(p|R|+q|C|)=0.0252 frob=0.0446 rhoR=20.85 rhoC=17.21 Linv=10.42
+s0=  2 N=   2 p=     3 q=     4 |R|op=     22.36 |C|op=     20.43 L=     11.8 N2/(p|R|+q|C|)=0.0269 frob=0.0397 rhoR=22 rhoC=20 Linv=11.55
+s0=  3 N=   2 p=     4 q=     2 |R|op=     22.85 |C|op=     24.08 L=    16.16 N2/(p|R|+q|C|)=0.0287 frob=0.0454 rhoR=22.85 rhoC=24 Linv=16.16
+s0=  4 N=   2 p=     3 q=     1 |R|op=         8 |C|op=        10 L=        8 N2/(p|R|+q|C|)=0.1176 frob=0.1546 rhoR=8 rhoC=10 Linv=8
+s0=  5 N=   2 p=     4 q=     0 |R|op=         1 |C|op=         0 L=        1 N2/(p|R|+q|C|)=1.0000 frob=1.0000 rhoR=1 rhoC=0 Linv=1
+h=3 N=3 pieces 0.1s
+max |coef| of pieces (normalised by h!): 1080.0
+s0= -6 N=   3 p=     0 q=     9 |R|op=         0 |C|op=         1 L=        1 N2/(p|R|+q|C|)=1.0000 frob=1.0000 rhoR=0 rhoC=1 Linv=1
+s0= -5 N=   3 p=     1 q=     8 |R|op=     20.07 |C|op=     15.09 L=    15.09 N2/(p|R|+q|C|)=0.0639 frob=0.1197 rhoR=16 rhoC=9 Linv=9
+s0= -4 N=   3 p=     2 q=     9 |R|op=     78.04 |C|op=     58.34 L=    41.25 N2/(p|R|+q|C|)=0.0132 frob=0.0248 rhoR=64 rhoC=39 Linv=27.58
+s0= -3 N=   3 p=     4 q=     9 |R|op=     114.2 |C|op=     91.78 L=    45.89 N2/(p|R|+q|C|)=0.0070 frob=0.0126 rhoR=98.38 rhoC=54 Linv=32.79
+s0= -2 N=   3 p=     6 q=     9 |R|op=     117.2 |C|op=     145.8 L=    59.52 N2/(p|R|+q|C|)=0.0045 frob=0.0090 rhoR=108.3 rhoC=87.49 Linv=36.1
+s0= -1 N=   3 p=     8 q=     9 |R|op=     197.4 |C|op=     212.8 L=    75.23 N2/(p|R|+q|C|)=0.0026 frob=0.0065 rhoR=193.7 rhoC=165.5 Linv=64.56
+s0=  0 N=   3 p=     7 q=     9 |R|op=       366 |C|op=     292.5 L=      122 N2/(p|R|+q|C|)=0.0017 frob=0.0042 rhoR=269.1 rhoC=263.9 Linv=99.73
+s0=  1 N=   3 p=     9 q=     9 |R|op=     616.6 |C|op=     498.6 L=    205.5 N2/(p|R|+q|C|)=0.0009 frob=0.0024 rhoR=292.7 rhoC=271.6 Linv=97.57
+s0=  2 N=   3 p=     9 q=     9 |R|op=       685 |C|op=     627.3 L=    228.3 N2/(p|R|+q|C|)=0.0008 frob=0.0020 rhoR=319 rhoC=277.5 Linv=106.3
+s0=  3 N=   3 p=     9 q=     6 |R|op=       586 |C|op=     567.2 L=    239.2 N2/(p|R|+q|C|)=0.0010 frob=0.0020 rhoR=438.1 rhoC=540.6 Linv=180.2
+s0=  4 N=   3 p=     9 q=     4 |R|op=     576.1 |C|op=     741.4 L=      288 N2/(p|R|+q|C|)=0.0011 frob=0.0022 rhoR=567.6 rhoC=737 Linv=283.8
+s0=  5 N=   3 p=     9 q=     2 |R|op=     383.7 |C|op=     490.6 L=    271.3 N2/(p|R|+q|C|)=0.0020 frob=0.0041 rhoR=383.1 rhoC=490 Linv=270.9
+s0=  6 N=   3 p=     8 q=     1 |R|op=        99 |C|op=       126 L=       99 N2/(p|R|+q|C|)=0.0098 frob=0.0188 rhoR=99 rhoC=126 Linv=99
+s0=  7 N=   3 p=     9 q=     0 |R|op=         1 |C|op=         0 L=        1 N2/(p|R|+q|C|)=1.0000 frob=1.0000 rhoR=1 rhoC=0 Linv=1
+h=4 N=5 pieces 0.3s
+max |coef| of pieces (normalised by h!): 38640.0
+s0= -8 N=   5 p=     0 q=    25 |R|op=         0 |C|op=         1 L=        1 N2/(p|R|+q|C|)=1.0000 frob=1.0000 rhoR=0 rhoC=1 Linv=1
+s0= -7 N=   5 p=     1 q=    22 |R|op=     90.45 |C|op=      46.7 L=     46.7 N2/(p|R|+q|C|)=0.0224 frob=0.0488 rhoR=65 rhoC=34 Linv=34
+s0= -6 N=   5 p=     2 q=    25 |R|op=     493.1 |C|op=     292.9 L=    207.1 N2/(p|R|+q|C|)=0.0030 frob=0.0064 rhoR=359 rhoC=186 Linv=131.5
+s0= -5 N=   5 p=     4 q=    25 |R|op=      1590 |C|op=      1128 L=      564 N2/(p|R|+q|C|)=0.0007 frob=0.0017 rhoR=825.3 rhoC=404 Linv=202
+s0= -4 N=   5 p=     7 q=    25 |R|op=      3414 |C|op=      3107 L=     1174 N2/(p|R|+q|C|)=0.0002 frob=0.0007 rhoR=1033 rhoC=688.3 Linv=260.1
+s0= -3 N=   5 p=    11 q=    25 |R|op=      5869 |C|op=      5916 L=     1784 N2/(p|R|+q|C|)=0.0001 frob=0.0004 rhoR=1876 rhoC=1292 Linv=389.7
+s0= -2 N=   5 p=    16 q=    25 |R|op=      9217 |C|op=      8378 L=     2095 N2/(p|R|+q|C|)=0.0001 frob=0.0003 rhoR=3820 rhoC=2948 Linv=764
+s0= -1 N=   5 p=    23 q=    25 |R|op= 1.274e+04 |C|op= 1.054e+04 L=     2548 N2/(p|R|+q|C|)=0.0000 frob=0.0002 rhoR=6209 rhoC=5376 Linv=1242
+s0=  0 N=   5 p=    22 q=    25 |R|op= 1.918e+04 |C|op=  1.45e+04 L=     3837 N2/(p|R|+q|C|)=0.0000 frob=0.0001 rhoR=7734 rhoC=7406 Linv=1579
+s0=  1 N=   5 p=    25 q=    25 |R|op= 2.934e+04 |C|op= 2.101e+04 L=     5867 N2/(p|R|+q|C|)=0.0000 frob=0.0001 rhoR=7673 rhoC=7784 Linv=1557
+s0=  2 N=   5 p=    25 q=    24 |R|op= 3.435e+04 |C|op= 2.833e+04 L=     7011 N2/(p|R|+q|C|)=0.0000 frob=0.0001 rhoR=7718 rhoC=7326 Linv=1575
+s0=  3 N=   5 p=    25 q=    17 |R|op= 2.834e+04 |C|op= 2.802e+04 L=     6873 N2/(p|R|+q|C|)=0.0000 frob=0.0001 rhoR=9955 rhoC=9857 Linv=2414
+s0=  4 N=   5 p=    25 q=    12 |R|op= 1.882e+04 |C|op= 2.198e+04 L=     5434 N2/(p|R|+q|C|)=0.0000 frob=0.0001 rhoR=1.427e+04 rhoC=1.749e+04 Linv=4120
+s0=  5 N=   5 p=    25 q=     7 |R|op= 1.797e+04 |C|op= 2.666e+04 L=     6791 N2/(p|R|+q|C|)=0.0000 frob=0.0001 rhoR=1.767e+04 rhoC=2.499e+04 Linv=6680
+s0=  6 N=   5 p=    25 q=     4 |R|op= 1.445e+04 |C|op= 2.205e+04 L=     7223 N2/(p|R|+q|C|)=0.0001 frob=0.0002 rhoR=1.441e+04 rhoC=2.074e+04 Linv=7205
+s0=  7 N=   5 p=    25 q=     2 |R|op=      6497 |C|op=      9803 L=     4594 N2/(p|R|+q|C|)=0.0001 frob=0.0004 rhoR=6493 rhoC=9247 Linv=4591
+s0=  8 N=   5 p=    22 q=     1 |R|op=      1224 |C|op=      1817 L=     1224 N2/(p|R|+q|C|)=0.0009 frob=0.0024 rhoR=1224 rhoC=1717 Linv=1224
+s0=  9 N=   5 p=    25 q=     4 |R|op=         1 |C|op= 1.819e-12 L=      0.5 N2/(p|R|+q|C|)=1.0000 frob=1.0000 rhoR=1 rhoC=0 Linv=0.5

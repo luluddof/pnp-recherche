@@ -1,0 +1,7 @@
+g19 4_5_3          p=5 q=3 L0=1.732 Linv=1.732 | min over G: 1.732  G+1 move: 1.5  G+2 moves: 1.342  (73s)
+g19 5_7_4          p=7 q=4 L0=1.5 Linv=1.5 | min over G: 1.5  G+1 move: 1.342  G+2 moves: 1.225  (57s)
+g19 5_6_6          p=6 q=6 L0=1.291 Linv=1.225 | min over G: 1.241  G+1 move: 1.149  G+2 moves: 1.075  (37s)
+g19 6_7_7          p=7 q=7 L0=1.134 Linv=1.134 | min over G: 1.134  G+1 move: 1.061  G+2 moves: 1  (297s)
+g24g 6_12_3        p=12 q=3 L0=1.732 Linv=1.732 | min over G: 1.732  G+1 move: 1.5  G+2 moves: 1.342  (98s)
+Q8 8_8_8           p=8 q=8 L0=1.414 Linv=1.414 | min over G: 1.414  G+1 move: 1.333  G+2 moves: 1.265  (11s)
+CD N=8             p=8 q=8 L0=1.414 Linv=1.414 | min over G: 1.414  G+1 move: 1.333  G+2 moves: 1.265  (10s)

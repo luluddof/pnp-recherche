@@ -1,0 +1,11 @@
+N= 2 h=2 bal s0=1 (p,q)=(4,4) |R|=22.3 |C|=17.3 L=11.2 Linv=10.4 N2/(p|R|+q|C|)=2.5e-02 | min/max over s0 of Linv = 2.73 / 16.2
+N= 3 h=3 bal s0=1 (p,q)=(9,9) |R|=617 |C|=499 L=206 Linv=97.6 N2/(p|R|+q|C|)=9.0e-04 | min/max over s0 of Linv = 9 / 284
+N= 5 h=4 bal s0=1 (p,q)=(25,25) |R|=2.93e+04 |C|=2.1e+04 L=5.87e+03 Linv=1.56e+03 N2/(p|R|+q|C|)=2.0e-05 | min/max over s0 of Linv = 34 / 7.2e+03
+N= 7 h=5 bal s0=2 (p,q)=(49,48) |R|=1.93e+06 |C|=1.44e+06 L=2.79e+05 Linv=2.21e+04 N2/(p|R|+q|C|)=3.0e-07 | min/max over s0 of Linv = 125 / 2.04e+05
+N=11 h=6 bal s0=0 (p,q)=(103,106) |R|=7.61e+07 |C|=5.43e+07 L=7.39e+06 Linv=5.28e+05 N2/(p|R|+q|C|)=8.9e-09 | min/max over s0 of Linv = 461 / 5.89e+06
+N=15 h=7 bal s0=1 (p,q)=(225,225) |R|=9.43e+09 |C|=7.04e+09 L=6.29e+08 Linv=6.76e+06 N2/(p|R|+q|C|)=6.1e-11 | min/max over s0 of Linv = 1.72e+03 / 1.8e+08
+local log-log slope N 2->3: bal Linv 5.52  bal L 7.18  min_s0 Linv 2.94  max_s0 Linv 7.07
+local log-log slope N 3->5: bal Linv 5.42  bal L 6.56  min_s0 Linv 2.60  max_s0 Linv 6.33
+local log-log slope N 5->7: bal Linv 7.89  bal L 11.48  min_s0 Linv 3.87  max_s0 Linv 9.93
+local log-log slope N 7->11: bal Linv 7.02  bal L 7.25  min_s0 Linv 2.89  max_s0 Linv 7.44
+local log-log slope N 11->15: bal Linv 8.22  bal L 14.33  min_s0 Linv 4.24  max_s0 Linv 11.02

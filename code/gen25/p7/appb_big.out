@@ -1,0 +1,58 @@
+h=5 N=7 pieces 1.3s
+max |coef| of pieces (normalised by h!): 1732800.0
+s0=-10 N=   7 p=     0 q=    49 |R|op=         0 |C|op=         1 L=        1 N2/(p|R|+q|C|)=1.0000 frob=1.0000 rhoR=0 rhoC=1 Linv=1
+s0= -9 N=   7 p=     1 q=    46 |R|op=     351.4 |C|op=     157.5 L=    157.5 N2/(p|R|+q|C|)=0.0065 frob=0.0179 rhoR=266 rhoC=125 Linv=125
+s0= -8 N=   7 p=     2 q=    49 |R|op=      2456 |C|op=      1471 L=     1040 N2/(p|R|+q|C|)=0.0006 frob=0.0017 rhoR=1874 rhoC=855 Linv=604.6
+s0= -7 N=   7 p=     4 q=    49 |R|op= 1.354e+04 |C|op=      9189 L=     4595 N2/(p|R|+q|C|)=0.0001 frob=0.0003 rhoR=5708 rhoC=2505 Linv=1252
+s0= -6 N=   7 p=     7 q=    49 |R|op= 4.151e+04 |C|op= 4.038e+04 L=1.526e+04 N2/(p|R|+q|C|)=0.0000 frob=0.0001 rhoR=9645 rhoC=4345 Linv=1642
+s0= -5 N=   7 p=    12 q=    49 |R|op= 1.041e+05 |C|op= 1.156e+05 L=3.337e+04 N2/(p|R|+q|C|)=0.0000 frob=0.0000 rhoR=1.229e+04 rhoC=8243 Linv=2379
+s0= -4 N=   7 p=    18 q=    49 |R|op= 2.183e+05 |C|op= 2.346e+05 L=5.529e+04 N2/(p|R|+q|C|)=0.0000 frob=0.0000 rhoR=1.877e+04 rhoC=1.387e+04 Linv=3268
+s0= -3 N=   7 p=    27 q=    49 |R|op= 3.786e+05 |C|op= 3.833e+05 L=7.376e+04 N2/(p|R|+q|C|)=0.0000 frob=0.0000 rhoR=4.169e+04 rhoC=2.461e+04 Linv=5955
+s0= -2 N=   7 p=    40 q=    49 |R|op= 5.674e+05 |C|op= 5.538e+05 L=8.756e+04 N2/(p|R|+q|C|)=0.0000 frob=0.0000 rhoR=7.923e+04 rhoC=5.361e+04 Linv=1.132e+04
+s0= -1 N=   7 p=    46 q=    49 |R|op= 7.731e+05 |C|op= 7.308e+05 L=1.104e+05 N2/(p|R|+q|C|)=0.0000 frob=0.0000 rhoR=1.193e+05 rhoC=9.925e+04 Linv=1.704e+04
+s0=  0 N=   7 p=    46 q=    49 |R|op= 1.113e+06 |C|op= 8.941e+05 L= 1.59e+05 N2/(p|R|+q|C|)=0.0000 frob=0.0000 rhoR=1.397e+05 rhoC=1.337e+05 Linv=1.996e+04
+s0=  1 N=   7 p=    48 q=    49 |R|op= 1.612e+06 |C|op=  1.12e+06 L=2.303e+05 N2/(p|R|+q|C|)=0.0000 frob=0.0000 rhoR=1.413e+05 rhoC=1.406e+05 Linv=2.03e+04
+s0=  2 N=   7 p=    49 q=    48 |R|op= 1.934e+06 |C|op= 1.442e+06 L=2.792e+05 N2/(p|R|+q|C|)=0.0000 frob=0.0000 rhoR=1.534e+05 rhoC=1.453e+05 Linv=2.215e+04
+s0=  3 N=   7 p=    49 q=    39 |R|op= 1.768e+06 |C|op= 1.376e+06 L=2.831e+05 N2/(p|R|+q|C|)=0.0000 frob=0.0000 rhoR=1.958e+05 rhoC=1.994e+05 Linv=3.136e+04
+s0=  4 N=   7 p=    49 q=    30 |R|op= 1.218e+06 |C|op= 1.044e+06 L=2.223e+05 N2/(p|R|+q|C|)=0.0000 frob=0.0000 rhoR=2.806e+05 rhoC=3.24e+05 Linv=5.124e+04
+s0=  5 N=   7 p=    49 q=    19 |R|op= 6.742e+05 |C|op= 7.196e+05 L=1.547e+05 N2/(p|R|+q|C|)=0.0000 frob=0.0000 rhoR=4.395e+05 rhoC=6.176e+05 Linv=1.008e+05
+s0=  6 N=   7 p=    49 q=    12 |R|op= 5.883e+05 |C|op= 9.228e+05 L=1.698e+05 N2/(p|R|+q|C|)=0.0000 frob=0.0000 rhoR=5.832e+05 rhoC=9.019e+05 Linv=1.684e+05
+s0=  7 N=   7 p=    49 q=     7 |R|op= 5.397e+05 |C|op=  8.66e+05 L= 2.04e+05 N2/(p|R|+q|C|)=0.0000 frob=0.0000 rhoR=5.39e+05 rhoC=8.529e+05 Linv=2.037e+05
+s0=  8 N=   7 p=    49 q=     4 |R|op= 3.187e+05 |C|op= 5.085e+05 L=1.593e+05 N2/(p|R|+q|C|)=0.0000 frob=0.0000 rhoR=3.185e+05 rhoC=5.024e+05 Linv=1.593e+05
+s0=  9 N=   7 p=    49 q=     2 |R|op= 1.078e+05 |C|op= 1.698e+05 L=7.622e+04 N2/(p|R|+q|C|)=0.0000 frob=0.0000 rhoR=1.078e+05 rhoC=1.68e+05 Linv=7.621e+04
+s0= 10 N=   7 p=    46 q=     1 |R|op= 1.588e+04 |C|op= 2.464e+04 L=1.588e+04 N2/(p|R|+q|C|)=0.0001 frob=0.0003 rhoR=1.588e+04 rhoC=2.439e+04 Linv=1.588e+04
+s0= 11 N=   7 p=    49 q=     0 |R|op=         1 |C|op= 8.341e-12 L=        1 N2/(p|R|+q|C|)=1.0000 frob=1.0000 rhoR=1 rhoC=0 Linv=1
+h=6 N=11 pieces 16.5s
+max |coef| of pieces (normalised by h!): 119550960.0
+s0=-12 N=  11 p=     0 q=   121 |R|op=         0 |C|op=         1 L=        1 N2/(p|R|+q|C|)=1.0000 frob=1.0000 rhoR=0 rhoC=1 Linv=1
+s0=-11 N=  11 p=     1 q=   111 |R|op=      1852 |C|op=     661.1 L=    661.1 N2/(p|R|+q|C|)=0.0016 frob=0.0057 rhoR=1093 rhoC=461 Linv=461
+s0=-10 N=  11 p=     2 q=   121 |R|op= 3.176e+04 |C|op= 1.555e+04 L=  1.1e+04 N2/(p|R|+q|C|)=0.0001 frob=0.0003 rhoR=9363 rhoC=3823 Linv=2703
+s0= -9 N=  11 p=     4 q=   121 |R|op= 2.377e+05 |C|op= 1.255e+05 L=6.276e+04 N2/(p|R|+q|C|)=0.0000 frob=0.0000 rhoR=3.579e+04 rhoC=1.407e+04 Linv=7034
+s0= -8 N=  11 p=     7 q=   121 |R|op= 8.912e+05 |C|op= 5.957e+05 L=2.252e+05 N2/(p|R|+q|C|)=0.0000 frob=0.0000 rhoR=7.943e+04 rhoC=3.031e+04 Linv=1.146e+04
+s0= -7 N=  11 p=    12 q=   121 |R|op= 2.257e+06 |C|op= 2.077e+06 L=5.997e+05 N2/(p|R|+q|C|)=0.0000 frob=0.0000 rhoR=1.292e+05 rhoC=7.113e+04 Linv=2.053e+04
+s0= -6 N=  11 p=    19 q=   121 |R|op= 5.806e+06 |C|op= 5.344e+06 L=1.226e+06 N2/(p|R|+q|C|)=0.0000 frob=0.0000 rhoR=2.351e+05 rhoC=1.776e+05 Linv=4.075e+04
+s0= -5 N=  11 p=    29 q=   121 |R|op= 1.137e+07 |C|op= 1.054e+07 L=1.957e+06 N2/(p|R|+q|C|)=0.0000 frob=0.0000 rhoR=5.741e+05 rhoC=4.61e+05 Linv=8.56e+04
+s0= -4 N=  11 p=    42 q=   121 |R|op= 1.851e+07 |C|op= 1.682e+07 L=2.595e+06 N2/(p|R|+q|C|)=0.0000 frob=0.0000 rhoR=1.239e+06 rhoC=1.026e+06 Linv=1.584e+05
+s0= -3 N=  11 p=    62 q=   121 |R|op= 2.668e+07 |C|op= 2.374e+07 L=3.015e+06 N2/(p|R|+q|C|)=0.0000 frob=0.0000 rhoR=2.3e+06 rhoC=1.935e+06 Linv=2.457e+05
+s0= -2 N=  11 p=    88 q=   121 |R|op= 3.607e+07 |C|op= 3.292e+07 L= 3.51e+06 N2/(p|R|+q|C|)=0.0000 frob=0.0000 rhoR=3.626e+06 rhoC=3.126e+06 Linv=3.333e+05
+s0= -1 N=  11 p=   106 q=   118 |R|op= 4.997e+07 |C|op= 4.391e+07 L=  4.6e+06 N2/(p|R|+q|C|)=0.0000 frob=0.0000 rhoR=4.823e+06 rhoC=4.373e+06 Linv=4.44e+05
+s0=  0 N=  11 p=   103 q=   106 |R|op= 7.612e+07 |C|op= 5.434e+07 L=7.394e+06 N2/(p|R|+q|C|)=0.0000 frob=0.0000 rhoR=5.438e+06 rhoC=5.269e+06 Linv=5.282e+05
+s0=  1 N=  11 p=   108 q=   115 |R|op= 1.139e+08 |C|op= 8.506e+07 L=1.063e+07 N2/(p|R|+q|C|)=0.0000 frob=0.0000 rhoR=5.394e+06 rhoC=5.536e+06 Linv=5.327e+05
+s0=  2 N=  11 p=   118 q=   113 |R|op= 1.444e+08 |C|op= 1.143e+08 L=1.358e+07 N2/(p|R|+q|C|)=0.0000 frob=0.0000 rhoR=5.158e+06 rhoC=5.473e+06 Linv=5.038e+05
+s0=  3 N=  11 p=   120 q=    92 |R|op= 1.455e+08 |C|op= 1.198e+08 L=1.517e+07 N2/(p|R|+q|C|)=0.0000 frob=0.0000 rhoR=5.594e+06 rhoC=5.977e+06 Linv=5.833e+05
+s0=  4 N=  11 p=   120 q=    67 |R|op= 1.147e+08 |C|op= 9.891e+07 L=1.402e+07 N2/(p|R|+q|C|)=0.0000 frob=0.0000 rhoR=7.332e+06 rhoC=7.988e+06 Linv=8.957e+05
+s0=  5 N=  11 p=   121 q=    45 |R|op= 7.084e+07 |C|op= 6.522e+07 L=1.056e+07 N2/(p|R|+q|C|)=0.0000 frob=0.0000 rhoR=1.067e+07 rhoC=1.292e+07 Linv=1.591e+06
+s0=  6 N=  11 p=   121 q=    30 |R|op= 3.538e+07 |C|op= 3.947e+07 L=6.459e+06 N2/(p|R|+q|C|)=0.0000 frob=0.0000 rhoR=1.579e+07 rhoC=2.293e+07 Linv=2.882e+06
+s0=  7 N=  11 p=   121 q=    19 |R|op=  2.15e+07 |C|op= 3.845e+07 L=4.932e+06 N2/(p|R|+q|C|)=0.0000 frob=0.0000 rhoR=2.055e+07 rhoC=3.394e+07 Linv=4.716e+06
+s0=  8 N=  11 p=   121 q=    12 |R|op= 2.051e+07 |C|op= 3.941e+07 L= 5.92e+06 N2/(p|R|+q|C|)=0.0000 frob=0.0000 rhoR=2.041e+07 rhoC=3.499e+07 Linv=5.891e+06
+s0=  9 N=  11 p=   121 q=     7 |R|op= 1.426e+07 |C|op=  2.75e+07 L=5.388e+06 N2/(p|R|+q|C|)=0.0000 frob=0.0000 rhoR=1.424e+07 rhoC=2.452e+07 Linv=5.383e+06
+s0= 10 N=  11 p=   121 q=     4 |R|op= 6.538e+06 |C|op= 1.248e+07 L=3.269e+06 N2/(p|R|+q|C|)=0.0000 frob=0.0000 rhoR=6.535e+06 rhoC=1.117e+07 Linv=3.268e+06
+s0= 11 N=  11 p=   121 q=     2 |R|op= 1.768e+06 |C|op= 3.325e+06 L= 1.25e+06 N2/(p|R|+q|C|)=0.0000 frob=0.0000 rhoR=1.768e+06 rhoC=2.986e+06 Linv=1.25e+06
+s0= 12 N=  11 p=   111 q=     1 |R|op= 2.134e+05 |C|op= 3.954e+05 L=2.134e+05 N2/(p|R|+q|C|)=0.0000 frob=0.0000 rhoR=2.134e+05 rhoC=3.559e+05 Linv=2.134e+05
+s0= 13 N=  11 p=   121 q=     2 |R|op=         1 |C|op= 1.507e-09 L=   0.7071 N2/(p|R|+q|C|)=1.0000 frob=1.0000 rhoR=1 rhoC=5.041e-11 Linv=0.7071
+h=7 N=15 pieces 200.9s
+Traceback (most recent call last):
+  File "/tmp/claude-0/-home-user-pnp-recherche/2d12e629-e6d2-542b-bfc0-8b766f57383f/scratchpad/gen25/p7/appb1.py", line 5, in <module>
+    F = swapT(N); assert np.abs(sum(A.values()) - F).max() < 1e-9
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

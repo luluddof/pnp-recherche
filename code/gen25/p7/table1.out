@@ -1,0 +1,15 @@
+g19 4_5_3      N=   4 p=     5 q=     3 |R|op=         3 |C|op=         3 L=    1.732 N2/(p|R|+q|C|)=0.6667 frob=0.9474 rhoR=3 rhoC=3 Linv=1.732
+g19 5_7_4      N=   5 p=     7 q=     4 |R|op=         3 |C|op=     3.162 L=      1.5 N2/(p|R|+q|C|)=0.7430 frob=0.9122 rhoR=3 rhoC=3 Linv=1.5
+g19 5_6_6      N=   5 p=     6 q=     6 |R|op=     3.162 |C|op=         3 L=    1.291 N2/(p|R|+q|C|)=0.6762 frob=0.8952 rhoR=3 rhoC=3 Linv=1.225
+g19 6_7_7      N=   6 p=     7 q=     7 |R|op=         3 |C|op=         3 L=    1.134 N2/(p|R|+q|C|)=0.8571 frob=0.9820 rhoR=3 rhoC=3 Linv=1.134
+g24g 6_12_3    N=   6 p=    12 q=     3 |R|op=         3 |C|op=         4 L=    1.732 N2/(p|R|+q|C|)=0.7500 frob=0.9271 rhoR=3 rhoC=4 Linv=1.732
+mono 6_7_7_    N=   6 p=     7 q=     7 |R|op=         3 |C|op=         3 L=    1.134 N2/(p|R|+q|C|)=0.8571 frob=0.9820 rhoR=3 rhoC=3 Linv=1.134
+mono 7_8_8_    N=   7 p=     8 q=     8 |R|op=         4 |C|op=         4 L=    1.414 N2/(p|R|+q|C|)=0.7656 frob=0.9777 rhoR=4 rhoC=4 Linv=1.414
+mono 8_8_8_    N=   8 p=     8 q=     8 |R|op=         4 |C|op=         4 L=    1.414 N2/(p|R|+q|C|)=1.0000 frob=1.0000 rhoR=4 rhoC=4 Linv=1.414
+CD n=2         N=   4 p=     4 q=     4 |R|op=         2 |C|op=         2 L=        1 N2/(p|R|+q|C|)=1.0000 frob=1.0000 rhoR=2 rhoC=2 Linv=1
+CD n=3         N=   8 p=     8 q=     8 |R|op=         4 |C|op=         4 L=    1.414 N2/(p|R|+q|C|)=1.0000 frob=1.0000 rhoR=4 rhoC=4 Linv=1.414
+CD n=4         N=  16 p=   100 q=    16 |R|op=         8 |C|op=         8 L=        2 N2/(p|R|+q|C|)=0.2759 frob=0.5714 rhoR=8 rhoC=8 Linv=2
+CD n=5         N=  32 p=   494 q=    32 |R|op=        16 |C|op=        16 L=    2.828 N2/(p|R|+q|C|)=0.1217 frob=0.4058 rhoR=16 rhoC=16 Linv=2.828
+Hrubes r=3k=2  N=   8 p=    56 q=    56 |R|op=     1.832 |C|op=     1.832 L=   0.2448 N2/(p|R|+q|C|)=0.3119 frob=0.7127 rhoR=1.832 rhoC=1.832 Linv=0.2448
+Hrubes r=4k=2  N=  16 p=   128 q=   128 |R|op=     2.543 |C|op=     2.543 L=   0.2248 N2/(p|R|+q|C|)=0.3932 frob=0.8208 rhoR=2.543 rhoC=2.543 Linv=0.2248
+Hrubes r=5k=2  N=  32 p=   288 q=   288 |R|op=     3.671 |C|op=     3.671 L=   0.2163 N2/(p|R|+q|C|)=0.4843 frob=0.9267 rhoR=3.671 rhoC=3.671 Linv=0.2163
