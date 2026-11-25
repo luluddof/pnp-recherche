@@ -1,0 +1,8 @@
+oct                          N= 8 (p,q)=(8,8) row(n0,n1,ng)=(56, 0, 8) col=(56, 0, 8) eig-in-(0,1)=0,0 semisimple=True,True
+     h(1/2): merged 0.9006  LB 0.9006  O1-entropy 0.9167  mult-free 0.7500  circle 0.7071 | min over interior mu of (h-circle)/(mu(1-mu)): merged +0.6495 LB +0.6500 O1 +0.8346 mult-free +0.1716
+F1_2                         N= 2 (p,q)=(1,1) row(n0,n1,ng)=(3, 0, 1) col=(3, 0, 1) eig-in-(0,1)=0,0 semisimple=True,True
+     h(1/2): merged 0.8962  LB 0.8962  O1-entropy 1.0000  mult-free 0.5000  circle 0.7071 | min over interior mu of (h-circle)/(mu(1-mu)): merged +0.6040 LB +0.6048 O1 +1.1716 mult-free -0.8284
+F1_8                         N= 8 (p,q)=(28,1) row(n0,n1,ng)=(36, 0, 28) col=(63, 0, 1) eig-in-(0,1)=0,0 semisimple=True,True
+     h(1/2): merged 0.9308  LB 0.9308  O1-entropy 0.9422  mult-free 0.9006  circle 0.7071 | min over interior mu of (h-circle)/(mu(1-mu)): merged +0.6023 LB +0.6023 O1 +0.8965 mult-free -0.1172
+exact_7_12_6.json            N= 7 (p,q)=(12,6) row(n0,n1,ng)=(37, 0, 12) col=(43, 0, 6) eig-in-(0,1)=1,0 semisimple=True,True
+     h(1/2): merged 0.9321  LB 0.9321  O1-entropy 0.9567  mult-free 0.8192  circle 0.7071 | min over interior mu of (h-circle)/(mu(1-mu)): merged +0.7281 LB +0.7285 O1 +0.9866 mult-free +0.2627

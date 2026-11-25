@@ -1,0 +1,7 @@
+oct                  N=8 p=8 q=8 | rank M_row^j [64, 8, 8] (M_row-1)^j [64, 64].. | rank M_col^j [64, 8, 8] (M_col-1)^j [64, 64].. | p_s=8 q_s=8 | h_LB(1/2)=0.9006 min (h_LB-circle)/(mu(1-mu)) = +0.6500
+F1_8                 N=8 p=28 q=1 | rank M_row^j [64, 28, 28] (M_row-1)^j [64, 64].. | rank M_col^j [64, 1, 1] (M_col-1)^j [64, 64].. | p_s=28 q_s=1 | h_LB(1/2)=0.9308 min (h_LB-circle)/(mu(1-mu)) = +0.6023
+mc_N4_2_8.json       N=4 p=2 q=8 | rank M_row^j [16, 2, 1, 1] (M_row-1)^j [16, 16].. | rank M_col^j [16, 8, 6, 6] (M_col-1)^j [16, 16].. | p_s=1 q_s=6 | h_LB(1/2)=0.9152 min (h_LB-circle)/(mu(1-mu)) = +0.6062
+mc_N4_5_3.json       N=4 p=5 q=3 | rank M_row^j [16, 5, 5] (M_row-1)^j [16, 14, 14].. | rank M_col^j [16, 3, 3] (M_col-1)^j [16, 16].. | p_s=5 q_s=3 | h_LB(1/2)=0.9468 min (h_LB-circle)/(mu(1-mu)) = +0.7867
+exact_7_11_7.json    N=7 p=11 q=7 | rank M_row^j [49, 11, 10, 10] (M_row-1)^j [49, 49].. | rank M_col^j [49, 7, 7] (M_col-1)^j [49, 49].. | p_s=10 q_s=7 | h_LB(1/2)=0.9279 min (h_LB-circle)/(mu(1-mu)) = +0.7251
+exact_8_22_5.json    N=8 p=22 q=5 | rank M_row^j [64, 22, 22] (M_row-1)^j [64, 60, 59, 59].. | rank M_col^j [64, 5, 5] (M_col-1)^j [64, 64].. | p_s=22 q_s=5 | h_LB(1/2)=0.9431 min (h_LB-circle)/(mu(1-mu)) = +0.7470
+exact_12_24_18.json  N=12 p=24 q=18 | rank M_row^j [144, 24, 24] (M_row-1)^j [144, 144].. | rank M_col^j [144, 18, 18] (M_col-1)^j [144, 144].. | p_s=24 q_s=18 | h_LB(1/2)=0.9296 min (h_LB-circle)/(mu(1-mu)) = +0.7385
