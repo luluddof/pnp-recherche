@@ -190,6 +190,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Résultat |
 |---|---|
+| ⚠️ **Conjecture d'étalement** (G25-P7) | Ni réfutée ni soutenue. L'annexe B est extrêmement non étalée (annulations énormes). L'étalement serait au mieux une propriété des points. Une version limitée à q ≤ N^β reste à tester. `code/gen25/p7/notes.md` |
 | ✅ **Annexe D d'OpenAI explicite** (G25-P3) | ε légal maximal 1/960 (papier : 2⁻¹⁷, 136 fois trop petit). Exposant E ≤ 75·k·m/√log₂ s (rigoureux, densité bornée) ; 37,5 avec une conjecture. Seuil contre 2^n : 7·10¹¹ (papier) → 9·10⁵. Corrections au dossier : b4 sous-estimait le papier d'un facteur 20 ; le gain « effilage LP 1/√3 » venait seulement de la constante 3. `code/gen25/p3/notes.md` |
 | ❌ **Triangularisation pour la fenêtre du module de classe** (G25-P4) | Non : l'hypothèse du lemme T échoue pour de vraies solutions (certificats exacts). La route de preuve tombe, pas la borne. Fenêtre E0 ≥ 2 toujours ouverte. `code/gen25/p4/notes.md` |
 | ✅ **Théorème A de Claude explicite** (G25-P2) | Constante de l'exposant 42,4 → 10,6 (déterministe) / 7,47 (Las Vegas). Lemme de balayage prouvé et vérifié. Seuil contre la force brute ÷ 29 à 58 (densité 4,26 : log₂ m* ≈ 9 375 ; densité 1 : 151). Toujours sans effet aux tailles réalistes. `code/gen25/p2/notes.md` |
