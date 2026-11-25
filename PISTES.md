@@ -44,7 +44,7 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
-| G27-B1 | 🔄 **Brainstorming : constructions dans le cercle avec les leçons de la génération 26** | Spectre étalé des deux côtés, grandes normes minimales sur la jauge, états de grand poids (algèbre de vertex de Heisenberg), blocs-cliques plus grands. Idées testées par calcul. | Étape 2 |
+| G27-B1 | ❌ **Brainstorming : constructions** (fini) | Rien dans le cercle ; aucun coin. Ansatz d'orbite Z2^k (découpage en N blocs) ; nouveau point numérique (62,12)@16, non exact. Dans les modèles par blocs, un coin demande Q ≥ N^((1+2δ)/3). `code/gen27/b1/notes.md` | Étape 2 |
 | G27-B2 | ⚠️ **Routes hors du point équilibré** (fini, non relu) | **ρ → 1/2 n'est pas nécessaire : étape 2 ⇔ pente finie au coin θ = 2** (niveaux déséquilibrés, formule α*). Nouveau problème : rigidité de rang de Kronecker du swap, δ(η) ≥ c·η ? `code/gen27/b2/notes.md` | Étape 2 |
 | G27-R1 | 🔄 **Relecture adverse de G27-B2 (formule α*, coin)** | Lemme U aux déséquilibres extrêmes ; Hölder et récurrence auto-similaire ; « étape 2 ⇔ γ = 1 » exact ou seulement dans un sens ? Accord avec la loi de Pythagore de G25-P9 ? | G27-B2 |
 | G27-T3 | 🔄 **Problème du coin (rigidité de rang de Kronecker du swap)** | Constructions avec δ(η) ≥ c·η (d'abord : sous-ensembles de Pauli + correction de rang, N = 4, 8, 16) ; ou borne δ(η) ≤ C·η² qui fermerait cette route. | G27-B2 |
