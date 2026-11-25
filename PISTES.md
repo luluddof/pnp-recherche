@@ -44,7 +44,6 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
-| G26-P16 | 🔄 **Relecture courte des lemmes de G26-P4** | Contrôler Σ|E_l|·|C_l| ≥ N² − p, CORE, le lemme en escalier, le corollaire, et la relaxation GF(2). | B2 |
 | G25-B1 | ✅ **Brainstorming : constructions** (fini) | 12 idées, 7 tuées par calcul ; rien près du cercle. Restes : profil à saut convexe (2 %), familles au bord en ε (1,5 %), catalyseurs (1 %). La barrière de Cardy s'étendrait aux familles c → ∞ (argument non relu). `code/gen25/b1/notes.md` | consigne de l'auteur |
 | G25-B2 | ✅ **Brainstorming : techniques de preuve** (fini) | 13 idées. Prouvé : N² ≤ p‖R‖_op + q‖Fl2 C‖_op. Top 3 : conjecture d'étalement (donnerait 2θ + T ≥ 4, donc ρ ≥ 2/3 comme mur) ; modèle à blocs ; angle de Friedrichs. `code/gen25/b2/notes.md` | consigne de l'auteur |
 | G25-B3 | ✅ **Brainstorming : autres routes** (fini) | 10 idées ; top 3 : sparsification pour la décision seule (enlèverait le facteur loglog en n) ; quotient par grappes ; hypercliques récents comme gadgets à 3 directions. `code/gen25/b3/notes.md` | consigne de l'auteur |
@@ -191,7 +190,8 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 | Piste | Résultat |
 |---|---|
 | ✅ **Constante de Claude : Freedman et plancher** (G26-P5) | c1 4,05 → 3,82 (R2F + R3″) ; structure S2 : ≈ 3,31 après correction par P10 (esquisse). Seuil contre 2^n : 1 943, puis 1 514. Plancher des lemmes uniformes ≈ 3,36 ; α ≥ 1 pour toute conception. Relu (P+, sauf S2). `code/gen26/p5/notes.md` |
-| ⚠️ **Recherche SAT exacte dans le modèle MC** (G26-P4) | (9,3)@5 et (6,4)@5 impossibles dans MC (en partie kissat seul) ; N = 4 complet avec DRAT ; (12,3)@6 retrouvé ; (5,5)@5 et (11,3)@6 non décidés. Lemmes implicites prouvés. Non relu. `code/gen26/p4/notes.md` |
+| ✅ **Relecture courte des lemmes de G26-P4** (G26-P16) | Quatre lemmes et relaxation GF(2) confirmés (P+) ; aucune violation sur 3 600 instances. |
+| ⚠️ **Recherche SAT exacte dans le modèle MC** (G26-P4) | (9,3)@5 et (6,4)@5 impossibles dans MC (en partie kissat seul) ; N = 4 complet avec DRAT ; (12,3)@6 retrouvé ; (5,5)@5 et (11,3)@6 non décidés. Lemmes implicites relus par P16 (P+). `code/gen26/p4/notes.md` |
 | ✅ **Relecture de G26-P13** (G26-P14) | E, C, D confirmés ; B corrigé (terme de concentration aux bases) : c1 ≈ 3,18 à 3,21 (P+), seuil ≈ 1 370 à 1 400. `code/gen26/p14/notes.md` |
 | ✅ **Vérification des 9 points de G26-P11** (G26-P15) | Tous confirmés (rang exact sur ℚ, deux méthodes) ; tous nouveaux et non dominés. `code/gen26/p15/notes.md` |
 | ❌ **Conception spectrale de constructions** (G26-P11) | Aucun point au-delà de la droite. Optimums : spectre {1, −1, −2}, blocs-cliques (p = nombre de blocs). 9 nouveaux points exacts (frontière N = 7 complète). Modèle à blocs-cliques : T ≥ (5 − 2θ)/3. `code/gen26/p11/notes.md` |
