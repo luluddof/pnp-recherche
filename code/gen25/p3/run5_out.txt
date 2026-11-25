@@ -1,0 +1,8 @@
+G  + a-slack, u_d∝M_d^{2/3}, depth 2-3, r=64 [rigorous]      vs 2^n: 8.97e+05  vs PPSZ: 6.06e+06  E*sqrt(lam)/(km) @lam*: 74.34   [24s]
+H  + Smith modes (nu/4) [conditional]                        vs 2^n: 2.25e+05  vs PPSZ: 1.52e+06  E*sqrt(lam)/(km) @lam*: 37.24   [38s]
+I  + kappa=2 floor (black-box recovery) [open]               vs 2^n: 7.57e+04  vs PPSZ: 5.27e+05  E*sqrt(lam)/(km) @lam*: 21.69   [41s]
+constant E*sqrt(lam)/(km), row G, r=64 best of D=2,3:
+  lam=1e+05: 73.76
+  lam=1e+06: 74.16
+  lam=1e+07: 74.36
+  lam=1e+08: 74.48

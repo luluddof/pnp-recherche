@@ -48,7 +48,8 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 | G25-B2 | ✅ **Brainstorming : techniques de preuve** (fini) | 13 idées. Prouvé : N² ≤ p‖R‖_op + q‖Fl2 C‖_op. Top 3 : conjecture d'étalement (donnerait 2θ + T ≥ 4, donc ρ ≥ 2/3 comme mur) ; modèle à blocs ; angle de Friedrichs. `code/gen25/b2/notes.md` | consigne de l'auteur |
 | G25-B3 | ✅ **Brainstorming : autres routes** (fini) | 10 idées ; top 3 : sparsification pour la décision seule (enlèverait le facteur loglog en n) ; quotient par grappes ; hypercliques récents comme gadgets à 3 directions. `code/gen25/b3/notes.md` | consigne de l'auteur |
 | G25-B4 | ✅ **Brainstorming : rang inférieur** (fini) | « Meilleures pièces à chaque taille » : ne gagne rien (λ ≥ 10⁴ dans l'algorithme). Gains réels dans la comptabilité de la récursion : base de balayage + constantes exactes (seuil log₂ m* : 1,37·10⁵ → 2,4·10⁴) ; annexe D : 4·10¹⁰ → 1,6·10⁶. Reste astronomique. `code/gen25/b4/notes.md` | consigne de l'auteur |
-| G25-P3 | 🔄 **Annexe D d'OpenAI avec constantes explicites** (idée B4 I6) | ε maximal légal (au lieu de 2^(−17)), effilage LP, modes de Smith, précision optimale ; chaque changement justifié lemme par lemme. | B4, G18a, G18d |
+| G25-P8 | 🔄 **Relecture adverse du théorème A explicite de Claude (P2)** | Lemme de balayage refait avec un code indépendant ; corrections de comptabilité contre le texte du papier ; constantes et seuils recalculés. | P2 |
+| G25-P9 | 🔄 **Le balayage à chaque niveau : changer la puissance du logarithme ?** | D'où vient √log m dans le théorème A ; quels paramètres changent la puissance (pas seulement la constante) ; balayage dans chaque niveau, croissance de K, tables réutilisées. | P2, consigne de l'auteur |
 
 Dossiers de travail de la génération 18 : `scratchpad/gen18/g18a` à `g18i`.
 
@@ -189,6 +190,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Résultat |
 |---|---|
+| ✅ **Annexe D d'OpenAI explicite** (G25-P3) | ε légal maximal 1/960 (papier : 2⁻¹⁷, 136 fois trop petit). Exposant E ≤ 75·k·m/√log₂ s (rigoureux, densité bornée) ; 37,5 avec une conjecture. Seuil contre 2^n : 7·10¹¹ (papier) → 9·10⁵. Corrections au dossier : b4 sous-estimait le papier d'un facteur 20 ; le gain « effilage LP 1/√3 » venait seulement de la constante 3. `code/gen25/p3/notes.md` |
 | ❌ **Triangularisation pour la fenêtre du module de classe** (G25-P4) | Non : l'hypothèse du lemme T échoue pour de vraies solutions (certificats exacts). La route de preuve tombe, pas la borne. Fenêtre E0 ≥ 2 toujours ouverte. `code/gen25/p4/notes.md` |
 | ✅ **Théorème A de Claude explicite** (G25-P2) | Constante de l'exposant 42,4 → 10,6 (déterministe) / 7,47 (Las Vegas). Lemme de balayage prouvé et vérifié. Seuil contre la force brute ÷ 29 à 58 (densité 4,26 : log₂ m* ≈ 9 375 ; densité 1 : 151). Toujours sans effet aux tailles réalistes. `code/gen25/p2/notes.md` |
 | ⚠️ **Sparsification pour la décision** (G25-P1) | Pas de construction. Sans restriction, la question équivaut au problème lui-même (Prop. 0). Pour les sparsificateurs modulaires « restriction + sous-formule », le facteur loglog n reste (corollaire de L′). Ouvert : arbres avec autarcies. `code/gen25/p1/notes.md` |

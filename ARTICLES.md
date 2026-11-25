@@ -148,9 +148,9 @@ Ce fichier liste **tout ce qui peut entrer dans un article**, présent ou futur.
 
 | | |
 |---|---|
-| **Résultat** | (Claude, G25-P2) Théorème A′ : #3-SAT en 2^((c1 + o(1))·W/√log₂ m) avec c1 = 10,6 (déterministe) ou 7,47 (Las Vegas), contre 42,4 dans le papier ; lemme de balayage nouveau (base e0 ≤ 1/4 + 1/(2K0)) ; seuils explicites contre la force brute, le meilleur #3-SAT et PPSZ. (OpenAI, G25-P3, en cours) constantes explicites de l'annexe D. |
+| **Résultat** | (Claude, G25-P2) Théorème A′ : #3-SAT en 2^((c1 + o(1))·W/√log₂ m) avec c1 = 10,6 (déterministe) ou 7,47 (Las Vegas), contre 42,4 dans le papier ; lemme de balayage nouveau (base e0 ≤ 1/4 + 1/(2K0)) ; seuils explicites contre la force brute, le meilleur #3-SAT et PPSZ. (OpenAI, G25-P3) annexe D avec constantes explicites : E ≤ 75·k·m/√log₂ s (rigoureux si l'annexe D est juste), ε légal 1/960 au lieu de 2⁻¹⁷, seuil 780 fois plus bas ; corrections de formulation de (D.5). |
 | **Niveau** | P (preuves sur papier non relues ; lemme de balayage vérifié par calcul) ; conditionnel aux deux prépublications. |
-| **Fichiers** | `code/gen25/p2/`, `code/gen25/b4/` |
+| **Fichiers** | `code/gen25/p2/`, `code/gen25/p3/`, `code/gen25/b4/` |
 | **Avis honnête** | Contribution modeste mais propre et vérifiable : elle corrige et précise les constantes, et montre que les algorithmes restent sans effet pratique (seuils astronomiques). Utile comme section d'un article ou comme note technique ; les auteurs des prépublications seraient les premiers intéressés. |
 
 ### B4 — Bibliothèque Lean d'outils génériques

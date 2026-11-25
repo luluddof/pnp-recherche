@@ -1,0 +1,7 @@
+A  paper as written                                                          vs 2^n: 7e+11   vs PPSZ: 4.7e+12   E*sqrt(lam)/n @1e8: 836794.9
+B  + eps at legal max of (D.6)                                               vs 2^n: 5.05e+09   vs PPSZ: 3.42e+10   E*sqrt(lam)/n @1e8: 70446.1
+C1 + Lemma D.5 budget = its proved loss (8hD->6hD, 8M(a+1)->q(a+1))          vs 2^n: 3.79e+09   vs PPSZ: 2.54e+10   E*sqrt(lam)/n @1e8: 61008.8
+C2 + minimal multiplicity step h=ceil(M/(u-1)) (='LP taper')                 vs 2^n: 1.26e+09   vs PPSZ: 8.47e+09   E*sqrt(lam)/n @1e8: 35225.9
+D  + packing slack (nu=2P(1-1/r), child 2PM/r), eps re-optimised             vs 2^n: 3.25e+08   vs PPSZ: 2.18e+09   E*sqrt(lam)/n @1e8: 18017.6
+E  + incidence network M0=km (w 45.1->12.78)                                 vs 2^n: 2.44e+07   vs PPSZ: 1.64e+08   E*sqrt(lam)/n @1e8: 4933.8
+F  + adaptive degree bound Delta_d=max(D0,2L_parent)                         vs 2^n: 2.57e+06   vs PPSZ: 1.7e+07   E*sqrt(lam)/n @1e8: 1591.4
