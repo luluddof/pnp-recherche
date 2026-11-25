@@ -48,7 +48,6 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 | G25-B2 | ✅ **Brainstorming : techniques de preuve** (fini) | 13 idées. Prouvé : N² ≤ p‖R‖_op + q‖Fl2 C‖_op. Top 3 : conjecture d'étalement (donnerait 2θ + T ≥ 4, donc ρ ≥ 2/3 comme mur) ; modèle à blocs ; angle de Friedrichs. `code/gen25/b2/notes.md` | consigne de l'auteur |
 | G25-B3 | ✅ **Brainstorming : autres routes** (fini) | 10 idées ; top 3 : sparsification pour la décision seule (enlèverait le facteur loglog en n) ; quotient par grappes ; hypercliques récents comme gadgets à 3 directions. `code/gen25/b3/notes.md` | consigne de l'auteur |
 | G25-B4 | ✅ **Brainstorming : rang inférieur** (fini) | « Meilleures pièces à chaque taille » : ne gagne rien (λ ≥ 10⁴ dans l'algorithme). Gains réels dans la comptabilité de la récursion : base de balayage + constantes exactes (seuil log₂ m* : 1,37·10⁵ → 2,4·10⁴) ; annexe D : 4·10¹⁰ → 1,6·10⁶. Reste astronomique. `code/gen25/b4/notes.md` | consigne de l'auteur |
-| G26-P3 | 🔄 **Au-delà de la droite dans le modèle monomial-C ?** | Le modèle MC contient tous les optimums exacts connus (N ≤ 8). Lemme MC2 : p·q ≳ ½·N²·ln q. Peut-on obtenir N^(2+ε) (cycles pairs, ensembles acycliques) ? | B5 |
 | G26-P4 | 🔄 **Recherche SAT exacte dans le modèle monomial-C** | Encoder supports + factorisation de rang p ; reproduire (6,6) à N = 5 ; décider (5,5) à N = 5 et (11,3) à N = 6. | B5 |
 | G26-P5 | 🔄 **Constante de Claude : version de Freedman et plancher** | Lemme de regroupement sensible à la variance (≈ 3,84 heuristique) ; plancher de cette conception (≈ 3,6 ?) et pourquoi ; changement de structure au niveau supérieur ou de base. | B7, P2 |
 | G26-P8 | 🔄 **Seuils d'OpenAI avec les modes de Smith ; tentative sur C1′** | Recalculer exactement λ* (variante H, contre 2^n et PPSZ, densités 4,26 et 1) avec le modèle complet de P3 ; essayer de prouver C1′ (au moins la borne inférieure) pour les blocs de Cauchy. | B6, Article 3 |
@@ -194,6 +193,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Résultat |
 |---|---|
+| ⚠️ **Au-delà de la droite dans le modèle monomial-C** (G26-P3) | Pas de gain d'exposant. Nouveau : p ≥ (1/2 − o(1))·N² si q = o(log N) ; p ≥ c·N²·ln N/q ; théorème de groupe ; gain d'exposant conditionnel (énergie des mots de longueur 4) ; la méthode des polynômes est limitée à N²·log N/q. Non relu. `code/gen26/p3/notes.md` |
 | ✅ **Relecture de la formule de Smith** (G26-P7) | Théorèmes 1 et 2 et réfutation de C1 confirmés (P+). Constante d'OpenAI 37,5 rigoureuse relativement à l'annexe D et aux lignes A-G de P3. `code/gen26/p7/notes.md` |
 | ✅ **Formule de Smith des blocs de Cauchy** (G26-P6) | Prouvée (non relue). Constante d'OpenAI 75 → 37,5 rigoureuse (relativement à l'annexe D). La conjecture C1 de G18d est fausse telle qu'écrite ; C1′ proposée. `code/gen26/p6/notes.md` |
 | ✅ **Relecture de B7** (G26-P2) | R1 à R4 confirmés (P+). Constante de Claude 4,05 (constantes du relecteur). Seuil contre la force brute à densité 4,26 : log₂ m* = 2 237 (papier : 276 000). Mémoire polynomiale : 6,16, seuil 5 123. `code/gen26/p2/notes.md` |
