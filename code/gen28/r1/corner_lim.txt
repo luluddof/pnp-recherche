@@ -1,0 +1,8 @@
+tau=1e-01 eta=6.275e-01 delta=9.644e-03 delta/eta^2=0.0245 delta*log2(1/eta)^2/eta^2=0.0111
+tau=1e-02 eta=9.664e-02 delta=9.618e-05 delta/eta^2=0.0103 delta*log2(1/eta)^2/eta^2=0.1170
+tau=1e-03 eta=1.299e-02 delta=9.618e-07 delta/eta^2=0.0057 delta*log2(1/eta)^2/eta^2=0.2237
+tau=1e-04 eta=1.632e-03 delta=9.618e-09 delta/eta^2=0.0036 delta*log2(1/eta)^2/eta^2=0.3098
+tau=1e-06 eta=2.296e-05 delta=9.618e-13 delta/eta^2=0.0018 delta*log2(1/eta)^2/eta^2=0.4333
+tau=1e-08 eta=2.960e-07 delta=8.210e-17 delta/eta^2=0.0009 delta*log2(1/eta)^2/eta^2=0.4406
+tau=1e-12 eta=4.289e-11 delta=0.000e+00 delta/eta^2=0.0000 delta*log2(1/eta)^2/eta^2=0.0000
+predicted limit 2/(3 ln2) = 0.9617966939259757

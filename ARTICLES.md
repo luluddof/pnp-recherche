@@ -210,6 +210,7 @@ Ce fichier liste **tout ce qui peut entrer dans un article**, présent ou futur.
 | Date | Changement |
 |---|---|
 | 24/11/2026 | Création du registre après la génération 18. Articles 1, 2, 3 ; candidats B1 à B4. |
+| 25/11/2026 | G28-R1 : G27-T3 relu (P+) ; point (106,106)@32 ; pavage de Hurwitz-Radon (s, s) avec s = N·⌈N/ρ(N)⌉ : meilleur que N²/8 pour N ≥ 64. |
 | 25/11/2026 | G27-T3 : problème du coin, aucune famille à coin linéaire ; théorème S (esquisse). |
 | 25/11/2026 | G27-T2 : cinq nouveaux points exacts (B2), dont (25,5)@10. G27-T1 : annexe B, k borné. |
 | 25/11/2026 | G27-B2 + G27-R1 : nouveau candidat B7 (critère du coin), P+. |

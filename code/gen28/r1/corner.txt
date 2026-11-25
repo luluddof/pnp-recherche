@@ -1,0 +1,21 @@
+k=300
+  tau=0.0033 eta=0.0327 delta=0.000539 delta/eta^2=0.5035 delta*log2(1/eta)^2/eta^2=12.256  eta^2/4=0.00027
+  tau=0.0100 eta=0.0895 delta=0.001135 delta/eta^2=0.1417 delta*log2(1/eta)^2/eta^2=1.718  eta^2/4=0.00200
+  tau=0.0200 eta=0.1644 delta=0.002140 delta/eta^2=0.0791 delta*log2(1/eta)^2/eta^2=0.537  eta^2/4=0.00676
+  tau=0.0500 eta=0.3549 delta=0.006013 delta/eta^2=0.0477 delta*log2(1/eta)^2/eta^2=0.107  eta^2/4=0.03149
+  tau=0.1000 eta=0.6153 delta=0.015665 delta/eta^2=0.0414 delta*log2(1/eta)^2/eta^2=0.020  eta^2/4=0.09465
+  tau=0.2000 eta=1.0256 delta=0.048331 delta/eta^2=0.0459 delta*log2(1/eta)^2/eta^2=0.000  eta^2/4=0.26296
+k=1000
+  tau=0.0050 eta=0.0508 delta=0.000275 delta/eta^2=0.1063 delta*log2(1/eta)^2/eta^2=1.964  eta^2/4=0.00065
+  tau=0.0100 eta=0.0937 delta=0.000540 delta/eta^2=0.0615 delta*log2(1/eta)^2/eta^2=0.718  eta^2/4=0.00219
+  tau=0.0200 eta=0.1697 delta=0.001174 delta/eta^2=0.0408 delta*log2(1/eta)^2/eta^2=0.267  eta^2/4=0.00720
+  tau=0.0500 eta=0.3616 delta=0.004001 delta/eta^2=0.0306 delta*log2(1/eta)^2/eta^2=0.066  eta^2/4=0.03268
+  tau=0.1000 eta=0.6230 delta=0.012140 delta/eta^2=0.0313 delta*log2(1/eta)^2/eta^2=0.015  eta^2/4=0.09702
+  tau=0.2000 eta=1.0341 delta=0.042513 delta/eta^2=0.0398 delta*log2(1/eta)^2/eta^2=0.000  eta^2/4=0.26732
+k=3000
+  tau=0.0050 eta=0.0522 delta=0.000147 delta/eta^2=0.0540 delta*log2(1/eta)^2/eta^2=0.980  eta^2/4=0.00068
+  tau=0.0100 eta=0.0954 delta=0.000321 delta/eta^2=0.0352 delta*log2(1/eta)^2/eta^2=0.405  eta^2/4=0.00227
+  tau=0.0200 eta=0.1717 delta=0.000778 delta/eta^2=0.0264 delta*log2(1/eta)^2/eta^2=0.170  eta^2/4=0.00737
+  tau=0.0500 eta=0.3640 delta=0.003142 delta/eta^2=0.0237 delta*log2(1/eta)^2/eta^2=0.050  eta^2/4=0.03313
+  tau=0.1000 eta=0.6257 delta=0.010718 delta/eta^2=0.0274 delta*log2(1/eta)^2/eta^2=0.013  eta^2/4=0.09788
+  tau=0.2000 eta=1.0370 delta=0.040361 delta/eta^2=0.0375 delta*log2(1/eta)^2/eta^2=0.000  eta^2/4=0.26886

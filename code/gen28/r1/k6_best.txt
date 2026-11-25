@@ -1,0 +1,8 @@
+k=6 N=64 W=1..1 d=0: rank(SWAP-K) mod p1,p2 = 2080,2080  osr = 1,1  formula (p,q)=(2638,1) MISMATCH
+k=6 N=64 W=1..2 d=1: rank(SWAP-K) mod p1,p2 = 1423,1423  osr = 18,18  formula (p,q)=(1423,19) MISMATCH
+k=6 N=64 W=0..2 d=2: rank(SWAP-K) mod p1,p2 = 694,694  osr = 154,154  formula (p,q)=(694,154) OK
+k=6 N=64 W=0..3 d=3: rank(SWAP-K) mod p1,p2 = 154,154  osr = 694,694  formula (p,q)=(154,694) OK
+k=6 N=64 W=0..4 d=4: rank(SWAP-K) mod p1,p2 = 19,19  osr = 1909,1909  formula (p,q)=(19,1909) OK
+k=6 N=64 W=0..5 d=5: rank(SWAP-K) mod p1,p2 = 1,1  osr = 2016,2016  formula (p,q)=(1,3367) MISMATCH
+k=6 N=64 W=0..6 d=6: rank(SWAP-K) mod p1,p2 = 0,0  osr = 4096,4096  formula (p,q)=(0,4096) OK
+time 46.6s

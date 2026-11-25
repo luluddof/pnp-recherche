@@ -1,0 +1,5 @@
+N=64 rho=12 HR conditions OK; integer SOS [N,N,384] (N^2/8=512)
+SOS identity holds on random vectors
+mod 1000000007: rank R = 384, osr C = 384
+mod 998244353: rank R = 384, osr C = 384
+time 5.4s

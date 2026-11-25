@@ -1,0 +1,6 @@
+q=1: p=6 achievable: True; p=5 achievable: False
+q=3: p=6 achievable: True; p=5 achievable: False
+q=4: p=4 achievable: True; p=3 achievable: False
+q=5: p=4 achievable: True; p=3 achievable: False
+q=6: p=1 achievable: True; p=0 achievable: False
+q=15: p=1 achievable: True; p=0 achievable: False
