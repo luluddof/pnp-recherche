@@ -1,0 +1,25 @@
+n=2 E0=2 dim M_E0=17 rank O_[n] on M_E0 = 6
+identity sum_g beta_g(x,v) U O_g Y = delta_xv I exact: True
+dim M_<E0 = 7 ; dim span{E_m} = 4, dim span{C_m} = 4 ; bound for triangularisable N(N+1)/2 = 3
+VERDICT: E-family NOT triangularisable, C-family NOT triangularisable
+
+n=2 E0=3 dim M_E0=38 rank O_[n] on M_E0 = 14
+identity sum_g beta_g(x,v) U O_g Y = delta_xv I exact: True
+dim M_<E0 = 24 ; dim span{E_m} = 4, dim span{C_m} = 4 ; bound for triangularisable N(N+1)/2 = 3
+VERDICT: E-family NOT triangularisable, C-family NOT triangularisable
+
+n=2 E0=4 dim M_E0=84 rank O_[n] on M_E0 = 34
+identity sum_g beta_g(x,v) U O_g Y = delta_xv I exact: True
+dim M_<E0 = 62 ; dim span{E_m} = 4, dim span{C_m} = 4 ; bound for triangularisable N(N+1)/2 = 3
+VERDICT: E-family NOT triangularisable, C-family NOT triangularisable
+
+n=3 E0=2 dim M_E0=39 rank O_[n] on M_E0 = 6
+identity sum_g beta_g(x,v) U O_g Y = delta_xv I exact: True
+dim M_<E0 = 10 ; dim span{E_m} = 9, dim span{C_m} = 6 ; bound for triangularisable N(N+1)/2 = 6
+VERDICT: E-family NOT triangularisable, C-family inconclusive by dim
+
+n=3 E0=3 dim M_E0=120 rank O_[n] on M_E0 = 20
+identity sum_g beta_g(x,v) U O_g Y = delta_xv I exact: True
+dim M_<E0 = 49 ; dim span{E_m} = 9, dim span{C_m} = 9 ; bound for triangularisable N(N+1)/2 = 6
+VERDICT: E-family NOT triangularisable, C-family NOT triangularisable
+

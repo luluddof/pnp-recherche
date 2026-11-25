@@ -49,7 +49,6 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 | G25-B3 | ✅ **Brainstorming : autres routes** (fini) | 10 idées ; top 3 : sparsification pour la décision seule (enlèverait le facteur loglog en n) ; quotient par grappes ; hypercliques récents comme gadgets à 3 directions. `code/gen25/b3/notes.md` | consigne de l'auteur |
 | G25-B4 | ✅ **Brainstorming : rang inférieur** (fini) | « Meilleures pièces à chaque taille » : ne gagne rien (λ ≥ 10⁴ dans l'algorithme). Gains réels dans la comptabilité de la récursion : base de balayage + constantes exactes (seuil log₂ m* : 1,37·10⁵ → 2,4·10⁴) ; annexe D : 4·10¹⁰ → 1,6·10⁶. Reste astronomique. `code/gen25/b4/notes.md` | consigne de l'auteur |
 | G25-P3 | 🔄 **Annexe D d'OpenAI avec constantes explicites** (idée B4 I6) | ε maximal légal (au lieu de 2^(−17)), effilage LP, modes de Smith, précision optimale ; chaque changement justifié lemme par lemme. | B4, G18a, G18d |
-| G25-P4 | 🔄 **Triangularisation pour fermer la fenêtre du module de classe** | La famille {E_m} de G24f se triangularise-t-elle (lemme T de G24g) ? Si oui, toute la fenêtre H = 0 se ferme. | G24f, G24g |
 
 Dossiers de travail de la génération 18 : `scratchpad/gen18/g18a` à `g18i`.
 
@@ -166,7 +165,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Question précise | Origine |
 |---|---|---|
-| **Étiquettes dans un module de classe (après G24g)** | Bande E0 = 1 fermée. Pour fermer toute la fenêtre H = 0 : vérifier si la famille réelle {E_m} (ou {C_m}) de G24f se triangularise par un même couple (X, Y) (lemme T de G24g) — par exemple grâce à la graduation. Calcul court. | G24f, G24g |
+| **Étiquettes dans un module de classe (après G25-P4)** | E0 = 1 fermé. E0 ≥ 2, H < 0,83·E0 : ouvert. La triangularisation ne marche pas (G25-P4). Restent : montrer que les solutions avec N(N−1)/2 > dim M_{≤E0} ont une famille triangularisable (ou un défaut de drapeau o(N²)), ou un lemme d'échange de rang r qui utilise le couplage E/C. | G24f, G25-P4 |
 
 **Question décisive issue de G24c (24/11) :**
 
@@ -190,6 +189,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Résultat |
 |---|---|
+| ❌ **Triangularisation pour la fenêtre du module de classe** (G25-P4) | Non : l'hypothèse du lemme T échoue pour de vraies solutions (certificats exacts). La route de preuve tombe, pas la borne. Fenêtre E0 ≥ 2 toujours ouverte. `code/gen25/p4/notes.md` |
 | ✅ **Théorème A de Claude explicite** (G25-P2) | Constante de l'exposant 42,4 → 10,6 (déterministe) / 7,47 (Las Vegas). Lemme de balayage prouvé et vérifié. Seuil contre la force brute ÷ 29 à 58 (densité 4,26 : log₂ m* ≈ 9 375 ; densité 1 : 151). Toujours sans effet aux tailles réalistes. `code/gen25/p2/notes.md` |
 | ⚠️ **Sparsification pour la décision** (G25-P1) | Pas de construction. Sans restriction, la question équivaut au problème lui-même (Prop. 0). Pour les sparsificateurs modulaires « restriction + sous-formule », le facteur loglog n reste (corollaire de L′). Ouvert : arbres avec autarcies. `code/gen25/p1/notes.md` |
 | ❌ **Hypercliques de novembre 2026** (G25-P5) | Pas d'identité à 3 directions : Fischer = croisement D = 2 + multiplication rapide de matrices ; Chan-Itakura-Ma-Yu = construction de Hrubeš + symétrie du 4-cycle. Max-3-SAT en 2^(0,99n) (leur résultat). `code/gen25/p5/notes.md` |
