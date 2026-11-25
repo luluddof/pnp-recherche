@@ -1,0 +1,16 @@
+h=3 m=3 N=22 L=6: sum_s A_s == L X exactly: True (5.7s)
+s0= -6 rank R=     0 osr C=   484  counts [0, 484]
+s0= -5 rank R=     1 osr C=   393  counts [1, 484]
+s0= -4 rank R=     4 osr C=   484  counts [4, 484]
+s0= -3 rank R=    13 osr C=   484  counts [13, 484]
+s0= -2 rank R=    32 osr C=   483  counts [35, 484]
+s0= -1 rank R=    79 osr C=   461  counts [86, 484]
+s0=  0 rank R=   123 osr C=   305  counts [194, 415]
+s0=  1 rank R=   335 osr C=   135  counts [415, 194]
+s0=  2 rank R=   461 osr C=    86  counts [484, 86]
+s0=  3 rank R=   483 osr C=    35  counts [484, 35]
+s0=  4 rank R=   484 osr C=    13  counts [484, 13]
+s0=  5 rank R=   484 osr C=     4  counts [484, 4]
+s0=  6 rank R=   393 osr C=     1  counts [484, 1]
+s0=  7 rank R=   484 osr C=     0  counts [484, 0]
+frontier h=3 m=3 N=22: [(0, 484), (1, 393), (4, 484), (13, 484), (32, 483), (79, 461), (123, 305), (335, 135), (393, 1), (461, 86), (483, 35), (484, 0), (484, 4), (484, 13)]  N^2=484

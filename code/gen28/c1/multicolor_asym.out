@@ -1,0 +1,7 @@
+kappa=0.0001: theta_end=2.0109 (2 = corner reachable)  jump T*=0.2078  balanced=1.4186  C-side eta(x=1e-3,1e-2,1e-1)=0.0265,0.0935,0.3101
+kappa=0.001: theta_end=2.0277 (2 = corner reachable)  jump T*=0.3186  balanced=1.4253  C-side eta(x=1e-3,1e-2,1e-1)=0.0213,0.0854,0.3015
+kappa=0.01: theta_end=2.0681 (2 = corner reachable)  jump T*=0.4738  balanced=1.4412  C-side eta(x=1e-3,1e-2,1e-1)=0.0145,0.0708,0.2832
+kappa=0.05: theta_end=2.1242 (2 = corner reachable)  jump T*=0.6221  balanced=1.4628  C-side eta(x=1e-3,1e-2,1e-1)=0.0100,0.0572,0.2617
+kappa=0.2: theta_end=2.2036 (2 = corner reachable)  jump T*=0.7678  balanced=1.4927  C-side eta(x=1e-3,1e-2,1e-1)=0.0070,0.0452,0.2371
+kappa=1: theta_end=2.3489 (2 = corner reachable)  jump T*=0.9647  balanced=1.5452  C-side eta(x=1e-3,1e-2,1e-1)=0.0047,0.0335,0.2044
+kappa=5: theta_end=2.5631 (2 = corner reachable)  jump T*=1.1770  balanced=1.6177  C-side eta(x=1e-3,1e-2,1e-1)=0.0034,0.0255,0.1744

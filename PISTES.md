@@ -44,7 +44,7 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 
 | Id | Piste | Question précise | Origine |
 |---|---|---|---|
-| G28-C1 | 🔄 **Coin : constructions du type de l'annexe B, asymétriques** | Généraliser les pièces de l'annexe B avec une croissance asymétrique (côté bon marché au coin d'exposant > 1/2) ; calculer δ(η) exactement pour la famille paramétrée. | G27-B2, R1 |
+| G28-C1 | ❌ **Coin : constructions du type de l'annexe B** (fini) | Mécanisme prouvé (coupure de poids côté C ; bord × croissance √ ⇒ γ = 1/2). Loi γ = b_C/a_R : un coin linéaire demande une croissance de Hagedorn côté C, impossible dans une identité de localité. Heisenberg multicolore : saut avant le coin. `code/gen28/c1/notes.md` | G27-B2 |
 | G28-C2 | 🔄 **Coin : bornes inférieures** | Étendre le théorème S hors du modèle de Bell ; chercher δ ≤ C·η² dans des modèles plus larges (Q grand, non par blocs) ; ou montrer que c'est aussi dur qu'une borne au-delà de la droite. | G27-T3 |
 | G28-O1 | 🔄 **Critère du coin côté OpenAI et côté Claude « réel »** | L'annexe D (racine dominante) a-t-elle un analogue au déséquilibre ? Le critère du coin survit-il aux constantes réelles (tailles où le coin compte) ? | G27-B2 |
 | G28-R1 | ✅ **Relecture de G27-T3** (fini) | Confirmé (P+) sauf « 1 156 à N = 128 » (le pavage de Hurwitz-Radon donne 1 024). Nouveau à taille finie : (106,106)@32. La référence N²/8 n'est pas la meilleure pour N ≥ 64. `code/gen28/r1/notes.md` | G27-T3 |

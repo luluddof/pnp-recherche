@@ -1,0 +1,16 @@
+h=3 m=2 N=10 L=6: sum_s A_s == L X exactly: True (0.5s)
+s0= -6 rank R=     0 osr C=   100  counts [0, 100]
+s0= -5 rank R=     1 osr C=    85  counts [1, 100]
+s0= -4 rank R=     3 osr C=   100  counts [3, 100]
+s0= -3 rank R=     8 osr C=   100  counts [8, 100]
+s0= -2 rank R=    16 osr C=   100  counts [18, 100]
+s0= -1 rank R=    33 osr C=   100  counts [38, 100]
+s0=  0 rank R=    43 osr C=    79  counts [74, 100]
+s0=  1 rank R=    94 osr C=    50  counts [100, 74]
+s0=  2 rank R=   100 osr C=    38  counts [100, 38]
+s0=  3 rank R=   100 osr C=    18  counts [100, 18]
+s0=  4 rank R=   100 osr C=     8  counts [100, 8]
+s0=  5 rank R=   100 osr C=     3  counts [100, 3]
+s0=  6 rank R=    85 osr C=     1  counts [100, 1]
+s0=  7 rank R=   100 osr C=     0  counts [100, 0]
+frontier h=3 m=2 N=10: [(0, 100), (1, 85), (3, 100), (8, 100), (16, 100), (33, 100), (43, 79), (85, 1), (94, 50), (100, 0), (100, 3), (100, 8), (100, 18), (100, 38)]  N^2=100

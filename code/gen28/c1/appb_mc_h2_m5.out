@@ -1,0 +1,12 @@
+h=2 m=5 N=20 L=2: sum_s A_s == L X exactly: True (0.9s)
+s0= -4 rank R=     0 osr C=   400  counts [0, 400]
+s0= -3 rank R=     1 osr C=   280  counts [1, 400]
+s0= -2 rank R=     6 osr C=   400  counts [6, 400]
+s0= -1 rank R=    21 osr C=   365  counts [26, 400]
+s0=  0 rank R=    31 osr C=   190  counts [91, 281]
+s0=  1 rank R=   215 osr C=    36  counts [281, 91]
+s0=  2 rank R=   330 osr C=    26  counts [400, 26]
+s0=  3 rank R=   400 osr C=     6  counts [400, 6]
+s0=  4 rank R=   280 osr C=     1  counts [400, 1]
+s0=  5 rank R=   400 osr C=     0  counts [400, 0]
+frontier h=2 m=5 N=20: [(0, 400), (1, 280), (6, 400), (21, 365), (31, 190), (215, 36), (280, 1), (330, 26), (400, 0), (400, 6)]  N^2=400

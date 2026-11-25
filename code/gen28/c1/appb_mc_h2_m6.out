@@ -1,0 +1,12 @@
+h=2 m=6 N=27 L=2: sum_s A_s == L X exactly: True (2.6s)
+s0= -4 rank R=     0 osr C=   729  counts [0, 729]
+s0= -3 rank R=     1 osr C=   498  counts [1, 729]
+s0= -2 rank R=     7 osr C=   729  counts [7, 729]
+s0= -1 rank R=    28 osr C=   645  counts [34, 729]
+s0=  0 rank R=    43 osr C=   315  counts [132, 447]
+s0=  1 rank R=   359 osr C=    49  counts [447, 132]
+s0=  2 rank R=   574 osr C=    34  counts [729, 34]
+s0=  3 rank R=   729 osr C=     7  counts [729, 7]
+s0=  4 rank R=   498 osr C=     1  counts [729, 1]
+s0=  5 rank R=   729 osr C=     0  counts [729, 0]
+frontier h=2 m=6 N=27: [(0, 729), (1, 498), (7, 729), (28, 645), (43, 315), (359, 49), (498, 1), (574, 34), (729, 0), (729, 7)]  N^2=729

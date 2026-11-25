@@ -1,0 +1,12 @@
+h=2 m=3 N=9 L=2: sum_s A_s == L X exactly: True (0.1s)
+s0= -4 rank R=     0 osr C=    81  counts [0, 81]
+s0= -3 rank R=     1 osr C=    60  counts [1, 81]
+s0= -2 rank R=     4 osr C=    81  counts [4, 81]
+s0= -1 rank R=    10 osr C=    81  counts [13, 81]
+s0=  0 rank R=    13 osr C=    51  counts [35, 81]
+s0=  1 rank R=    55 osr C=    16  counts [81, 35]
+s0=  2 rank R=    71 osr C=    13  counts [81, 13]
+s0=  3 rank R=    81 osr C=     4  counts [81, 4]
+s0=  4 rank R=    60 osr C=     1  counts [81, 1]
+s0=  5 rank R=    81 osr C=     0  counts [81, 0]
+frontier h=2 m=3 N=9: [(0, 81), (1, 60), (4, 81), (10, 81), (13, 51), (55, 16), (60, 1), (71, 13), (81, 0), (81, 4)]  N^2=81

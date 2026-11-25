@@ -1,0 +1,52 @@
+h=3 m=4 N=40 w0=0: rank R=1249 osr C=1 (eta=0.000, delta=0.0671, N^2-p=351) 1.2s
+h=3 m=4 N=40 w0=1: rank R=1600 osr C=5 (eta=0.436, delta=0.0000, N^2-p=0) 1.3s
+h=3 m=4 N=40 w0=2: rank R=1589 osr C=19 (eta=0.798, delta=0.0019, N^2-p=11) 1.9s
+h=3 m=4 N=40 w0=3: rank R=1565 osr C=59 (eta=1.105, delta=0.0060, N^2-p=35) 2.0s
+h=3 m=4 N=40 w0=4: rank R=1357 osr C=164 (eta=1.382, delta=0.0447, N^2-p=243) 2.5s
+h=3 m=4 N=40 w0=5: rank R=855 osr C=286 (eta=1.533, delta=0.1699, N^2-p=745) 4.2s
+h=3 m=4 N=40 w0=6: rank R=268 osr C=776 (eta=1.804, delta=0.4844, N^2-p=1332) 10.3s
+[27s]
+h=5 m=2 N=36 w0=0: rank R=1160 osr C=1 (eta=0.000, delta=0.0309, N^2-p=136) 0.8s
+h=5 m=2 N=36 w0=1: rank R=1296 osr C=3 (eta=0.307, delta=0.0000, N^2-p=0) 0.9s
+h=5 m=2 N=36 w0=2: rank R=1296 osr C=8 (eta=0.580, delta=0.0000, N^2-p=0) 0.9s
+h=5 m=2 N=36 w0=3: rank R=1296 osr C=18 (eta=0.807, delta=0.0000, N^2-p=0) 1.2s
+h=5 m=2 N=36 w0=4: rank R=1296 osr C=38 (eta=1.015, delta=0.0000, N^2-p=0) 1.4s
+h=5 m=2 N=36 w0=5: rank R=1296 osr C=74 (eta=1.201, delta=0.0000, N^2-p=0) 1.6s
+h=5 m=2 N=36 w0=6: rank R=1296 osr C=139 (eta=1.377, delta=0.0000, N^2-p=0) 1.5s
+h=5 m=2 N=36 w0=7: rank R=1296 osr C=249 (eta=1.540, delta=0.0000, N^2-p=0) 3.1s
+[12s]
+h=7 m=1 N=15 w0=0: rank R=215 osr C=1 (eta=0.000, delta=0.0168, N^2-p=10) 0.0s
+h=7 m=1 N=15 w0=1: rank R=225 osr C=2 (eta=0.256, delta=0.0000, N^2-p=0) 0.0s
+h=7 m=1 N=15 w0=2: rank R=225 osr C=4 (eta=0.512, delta=0.0000, N^2-p=0) 0.0s
+h=7 m=1 N=15 w0=3: rank R=225 osr C=7 (eta=0.719, delta=0.0000, N^2-p=0) 0.0s
+h=7 m=1 N=15 w0=4: rank R=225 osr C=12 (eta=0.918, delta=0.0000, N^2-p=0) 0.0s
+h=7 m=1 N=15 w0=5: rank R=225 osr C=19 (eta=1.087, delta=0.0000, N^2-p=0) 0.0s
+h=7 m=1 N=15 w0=6: rank R=225 osr C=30 (eta=1.256, delta=0.0000, N^2-p=0) 0.0s
+h=7 m=1 N=15 w0=7: rank R=225 osr C=45 (eta=1.406, delta=0.0000, N^2-p=0) 0.0s
+h=7 m=1 N=15 w0=8: rank R=225 osr C=67 (eta=1.553, delta=0.0000, N^2-p=0) 0.1s
+h=7 m=1 N=15 w0=9: rank R=225 osr C=97 (eta=1.689, delta=0.0000, N^2-p=0) 0.1s
+h=7 m=1 N=15 w0=10: rank R=225 osr C=139 (eta=1.822, delta=0.0000, N^2-p=0) 0.1s
+h=7 m=1 N=15 w0=11: rank R=225 osr C=188 (eta=1.934, delta=0.0000, N^2-p=0) 0.1s
+h=7 m=1 N=15 w0=12: rank R=225 osr C=225 (eta=2.000, delta=0.0000, N^2-p=0) 0.1s
+h=7 m=1 N=15 w0=13: rank R=225 osr C=225 (eta=2.000, delta=0.0000, N^2-p=0) 0.1s
+h=7 m=1 N=15 w0=14: rank R=220 osr C=225 (eta=2.000, delta=0.0083, N^2-p=5) 0.1s
+h=7 m=1 N=15 w0=15: rank R=223 osr C=225 (eta=2.000, delta=0.0033, N^2-p=2) 0.1s
+h=7 m=1 N=15 w0=16: rank R=182 osr C=225 (eta=2.000, delta=0.0783, N^2-p=43) 0.2s
+h=7 m=1 N=15 w0=17: rank R=131 osr C=225 (eta=2.000, delta=0.1997, N^2-p=94) 0.3s
+h=7 m=1 N=15 w0=18: rank R=92 osr C=225 (eta=2.000, delta=0.3302, N^2-p=133) 0.5s
+[7s]
+h=4 m=3 N=51 w0=0: rank R=2166 osr C=1 (eta=0.000, delta=0.0465, N^2-p=435) 4.6s
+h=4 m=3 N=51 w0=1: rank R=2601 osr C=4 (eta=0.353, delta=0.0000, N^2-p=0) 4.6s
+h=4 m=3 N=51 w0=2: rank R=2601 osr C=13 (eta=0.652, delta=0.0000, N^2-p=0) 5.6s
+h=4 m=3 N=51 w0=3: rank R=2601 osr C=35 (eta=0.904, delta=0.0000, N^2-p=0) 6.1s
+h=4 m=3 N=51 w0=4: rank R=2601 osr C=86 (eta=1.133, delta=0.0000, N^2-p=0) 8.1s
+h=4 m=3 N=51 w0=5: rank R=2590 osr C=194 (eta=1.340, delta=0.0011, N^2-p=11) 12.8s
+h=4 m=3 N=51 w0=6: rank R=2341 osr C=415 (eta=1.533, delta=0.0268, N^2-p=260) 23.1s
+h=4 m=3 N=51 w0=7: rank R=1487 osr C=701 (eta=1.667, delta=0.1422, N^2-p=1114) 42.6s
+[123s]
+h=2 m=8 N=44 w0=0: rank R=1270 osr C=1 (eta=0.000, delta=0.1114, N^2-p=666) 1.8s
+h=2 m=8 N=44 w0=1: rank R=1908 osr C=9 (eta=0.581, delta=0.0038, N^2-p=28) 1.8s
+h=2 m=8 N=44 w0=2: rank R=1516 osr C=53 (eta=1.049, delta=0.0646, N^2-p=420) 2.6s
+h=2 m=8 N=44 w0=3: rank R=830 osr C=81 (eta=1.161, delta=0.2238, N^2-p=1106) 2.8s
+h=2 m=8 N=44 w0=4: rank R=73 osr C=726 (eta=1.741, delta=0.8662, N^2-p=1863) 9.5s
+[21s]
