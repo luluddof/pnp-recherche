@@ -1,0 +1,8 @@
+(1) K=5: max |E FH|/(rmsF rmsH) = 0.4513  eps_K = 3.0000  ratio 0.150
+(1) K=6: max |E FH|/(rmsF rmsH) = 0.2276  eps_K = 1.8333  ratio 0.124
+(1) K=8: max |E FH|/(rmsF rmsH) = 0.0845  eps_K = 1.0000  ratio 0.084
+(1) K=12: max |E FH|/(rmsF rmsH) = 0.0305  eps_K = 0.5111  ratio 0.060
+(2) K=8 t=8 unif: Var(Ye-Ye')/(VarYe+VarYe') = 0.952 (bound 1+eps = 2.000); E|Ye-Ye'| / (E|Ye-EY|+E|Ye'-EY|) = 0.693
+(2) K=8 t=8 bern: Var(Ye-Ye')/(VarYe+VarYe') = 0.962 (bound 1+eps = 2.000); E|Ye-Ye'| / (E|Ye-EY|+E|Ye'-EY|) = 0.686
+(2) K=8 t=8 rank2: Var(Ye-Ye')/(VarYe+VarYe') = 0.954 (bound 1+eps = 2.000); E|Ye-Ye'| / (E|Ye-EY|+E|Ye'-EY|) = 0.732
+(2) K=16 t=8 bern: Var(Ye-Ye')/(VarYe+VarYe') = 0.984 (bound 1+eps = 1.341); E|Ye-Ye'| / (E|Ye-EY|+E|Ye'-EY|) = 0.704

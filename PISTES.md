@@ -49,7 +49,6 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 | G25-B3 | ✅ **Brainstorming : autres routes** (fini) | 10 idées ; top 3 : sparsification pour la décision seule (enlèverait le facteur loglog en n) ; quotient par grappes ; hypercliques récents comme gadgets à 3 directions. `code/gen25/b3/notes.md` | consigne de l'auteur |
 | G25-B4 | ✅ **Brainstorming : rang inférieur** (fini) | « Meilleures pièces à chaque taille » : ne gagne rien (λ ≥ 10⁴ dans l'algorithme). Gains réels dans la comptabilité de la récursion : base de balayage + constantes exactes (seuil log₂ m* : 1,37·10⁵ → 2,4·10⁴) ; annexe D : 4·10¹⁰ → 1,6·10⁶. Reste astronomique. `code/gen25/b4/notes.md` | consigne de l'auteur |
 | G26-P4 | 🔄 **Recherche SAT exacte dans le modèle monomial-C** | Encoder supports + factorisation de rang p ; reproduire (6,6) à N = 5 ; décider (5,5) à N = 5 et (11,3) à N = 6. | B5 |
-| G26-P13 | 🔄 **Rendre S2 rigoureux (constante de Claude)** | Preuve complète de la variante S2 avec le facteur 2 corrigé et les effets de second ordre (P, plafond par paire) ; recalcul de c1 et des seuils ; tenter la borne de covariance (ζ ≈ 0,85/t). | B6 |
 | G26-P11 | 🔄 **Conception spectrale de constructions** | Utiliser le lemme clé de P3 (Θ_s = identité sur ker(1 − Θ), ‖Θ_s‖ ≤ Q) comme principe : profil spectral nécessaire ; spectres des optimums ; recherche numérique réelle (facteurs de grande norme) à N = 6 à 10. | B2, étape 2 |
 
 Dossiers de travail de la génération 18 : `scratchpad/gen18/g18a` à `g18i`.
@@ -193,6 +192,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 | Piste | Résultat |
 |---|---|
 | ✅ **Constante de Claude : Freedman et plancher** (G26-P5) | c1 4,05 → 3,82 (R2F + R3″) ; structure S2 : ≈ 3,31 après correction par P10 (esquisse). Seuil contre 2^n : 1 943, puis 1 514. Plancher des lemmes uniformes ≈ 3,36 ; α ≥ 1 pour toute conception. Relu (P+, sauf S2). `code/gen26/p5/notes.md` |
+| ✅ **S2 rigoureux, découpage, covariance** (G26-P13) | c1 = 3,312 entièrement compté ; découper + covariance (iii) : **c1 = 3,166**, seuil 1 352 contre 2^n à densité 4,26. Non relu. `code/gen26/p13/notes.md` |
 | ⚠️ **Relecture de G26-P8 ; attaque de (A)** (G26-P12) | Théorèmes U et A2 confirmés (P+). (A) réfuté (a = 6, k = 2). C1′ faux pour des sous-blocs ; ouvert pour les blocs complets (a ≥ 5). Forme faible de (A) pour k = 2 prouvée. `code/gen26/p12/notes.md` |
 | ❌ **Enveloppe de l'annexe B à grand h** (G26-P1) | Dans l'ansatz structuré (degré 1, D = h), k maximal = 3 pour h = 4 à 11 ; loi des fonctionnelles prédite puis confirmée à h = 10, 11. Gain constant, pas linéaire : θ ne change pas. Reste ouvert : états de poids ≫ h. `code/gen26/p1/notes.md` |
 | ✅ **Seuils d'OpenAI avec les modes de Smith ; C1′** (G26-P8) | Seuils ligne H : 2,25e5 (contre 2^n) et 1,52e6 (contre PPSZ) à densité 4,26 ; constante → 37,5. Théorème U : C1′ ⟸ (A) ; théorème A2 : C1′ au niveau a − 2. U et A2 relus (P+) ; (A) réfuté par P12. `code/gen26/p8/notes.md` |

@@ -1,0 +1,5 @@
+bases done 45s; q of row-sweep bases: min 1.0000 max 1.0000
+base=R3pp mode=padiii ratio=1.02 time 167s
+  q of level solvers with x>100: min 1.0000 median 1.0000 max 1.0000
+  a=2: [1000,2000] 3.240; [2000,4000] 3.263; [4000,8000] 3.272; [8000,16000] 3.284
+  a=4: [1000,2000] 4.582; [2000,4000] 4.615; [4000,8000] 4.628; [8000,16000] 4.645

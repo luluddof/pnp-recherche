@@ -1,0 +1,5 @@
+bases done 30s; q of row-sweep bases: min 0.4651 max 0.7906
+base=R3pp mode=split ratio=1.02 time 133s
+  q of level solvers with x>100: min 0.3729 median 0.4117 max 0.4294
+  a=2: [1000,2000] 3.199; [2000,4000] 3.200; [4000,8000] 3.213; [8000,16000] 3.220
+  a=4: [1000,2000] 4.524; [2000,4000] 4.525; [4000,8000] 4.544; [8000,16000] 4.554
