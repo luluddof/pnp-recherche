@@ -1,0 +1,15 @@
+r=4.26 2^n        C  paper-zeta, entry 2/K, brute, paper top log2 m* =   86526.0  x0=5 levels=8 lt=[13, 16.75, 20, 23, 26, 29, 32, 35] log2K_top=9614.0 e_top=0.04244
+r=4.26 2^n        C' split, entry 1/K, brute, paper top      log2 m* =   78466.5  x0=5 levels=8 lt=[11.5, 14.75, 18, 21, 24, 26.75, 29.75, 32.75] log2K_top=8718.5 e_top=0.04244
+r=4.26 2^n        D  + sweep                                 log2 m* =   20695.5  x0=7 levels=6 lt=[12, 15, 18, 20.75, 24, 26.75] log2K_top=2299.5 e_top=0.04243
+r=4.26 2^n        E1 + T4 top (det.)                         log2 m* =    9247.5  x0=7 levels=6 lt=[12, 15, 18, 20.75, 24, 27] log2K_top=2300.0 e_top=0.04241
+r=4.26 2^n        E2 + 8' top (LV)                           log2 m* =    4682.2  x0=7 levels=6 lt=[12, 15, 18, 21, 24, 27] log2K_top=2302.0 e_top=0.04232
+r=4.26 1.6423^n   C  paper-zeta, entry 2/K, brute, paper top log2 m* =  171418.5  x0=5 levels=9 lt=[12.5, 16.75, 20, 23, 26, 29, 32, 34.75, 37.75] log2K_top=19046.5 e_top=0.03038
+r=4.26 1.6423^n   C' split, entry 1/K, brute, paper top      log2 m* =  155695.5  x0=5 levels=9 lt=[11, 15, 18, 20.75, 23.75, 27, 30, 33, 35.75] log2K_top=17299.5 e_top=0.03038
+r=4.26 1.6423^n   D  + sweep                                 log2 m* =   41593.5  x0=7 levels=7 lt=[11.75, 15, 17.75, 21, 23.75, 27, 29.75] log2K_top=4621.5 e_top=0.03038
+r=4.26 1.6423^n   E1 + T4 top (det.)                         log2 m* =   18541.6  x0=7 levels=7 lt=[11.75, 15, 17.75, 21, 23.75, 27.25, 29.75] log2K_top=4622.5 e_top=0.03036
+r=4.26 1.6423^n   E2 + 8' top (LV)                           log2 m* =    9333.7  x0=7 levels=7 lt=[11.75, 15, 17.75, 21, 24, 27, 30] log2K_top=4624.0 e_top=0.03034
+r=4.26 1.30704^n  C  paper-zeta, entry 2/K, brute, paper top log2 m* =  482616.0  x0=8 levels=10 lt=[18.5, 23, 26, 29, 31.75, 34.75, 37.75, 40.75, 44, 47] log2K_top=53624.0 e_top=0.01640
+r=4.26 1.30704^n  C' split, entry 1/K, brute, paper top      log2 m* =  453834.0  x0=8 levels=10 lt=[17.5, 20.75, 24, 26.75, 30, 33, 36, 39, 42, 45] log2K_top=50426.0 e_top=0.01640
+r=4.26 1.30704^n  D  + sweep                                 log2 m* =  118314.0  x0=10 levels=8 lt=[17.75, 21, 24, 26.75, 29.75, 33, 36, 39] log2K_top=13146.0 e_top=0.01640
+r=4.26 1.30704^n  E1 + T4 top (det.)                         log2 m* =   52653.1  x0=10 levels=8 lt=[17.75, 21, 24, 26.75, 30, 32.75, 35.75, 39] log2K_top=13147.0 e_top=0.01640
+r=4.26 1.30704^n  E2 + 8' top (LV)                           log2 m* =   26402.2  x0=10 levels=8 lt=[17.75, 21, 24, 26.75, 30, 33, 36, 39] log2K_top=13150.0 e_top=0.01639

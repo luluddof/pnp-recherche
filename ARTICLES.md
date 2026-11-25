@@ -149,7 +149,7 @@ Ce fichier liste **tout ce qui peut entrer dans un article**, présent ou futur.
 | | |
 |---|---|
 | **Résultat** | (Claude, G25-P2 puis G25-P9) Théorème A′ : #3-SAT en 2^((c1 + o(1))·W/√log₂ m) avec c1 = 10,6 (déterministe) ou 7,47 (Las Vegas), contre 42,4 dans le papier ; avec le lemme RS et des niveaux déséquilibrés (G25-P9) : 6,81 / 4,82 ; **et une explication de structure : la loi « de Pythagore » (Prop. P) montre qu'aucun arbre de niveaux ne change la puissance du logarithme** ; lemme de balayage nouveau (base e0 ≤ 1/4 + 1/(2K0)) ; seuils explicites contre la force brute, le meilleur #3-SAT et PPSZ. (OpenAI, G25-P3) annexe D avec constantes explicites : E ≤ 75·k·m/√log₂ s (rigoureux si l'annexe D est juste), ε légal 1/960 au lieu de 2⁻¹⁷, seuil 780 fois plus bas ; corrections de formulation de (D.5). |
-| **Niveau** | P (preuves sur papier non relues ; lemme de balayage vérifié par calcul) ; conditionnel aux deux prépublications. |
+| **Niveau** | P+ pour le théorème A′ de Claude (relu par G25-P8, code indépendant) ; P pour G25-P3 et G25-P9 ; conditionnel aux deux prépublications. Réserve : avec le balayage, la mémoire devient exponentielle (≈ 2^(0,95 × temps)). |
 | **Fichiers** | `code/gen25/p2/`, `code/gen25/p3/`, `code/gen25/b4/` |
 | **Avis honnête** | Contribution modeste mais propre et vérifiable : elle corrige et précise les constantes, et montre que les algorithmes restent sans effet pratique (seuils astronomiques). Utile comme section d'un article ou comme note technique ; les auteurs des prépublications seraient les premiers intéressés. |
 
@@ -193,6 +193,7 @@ Ce fichier liste **tout ce qui peut entrer dans un article**, présent ou futur.
 | Date | Changement |
 |---|---|
 | 24/11/2026 | Création du registre après la génération 18. Articles 1, 2, 3 ; candidats B1 à B4. |
+| 25/11/2026 | G25-P8 : théorème A′ relu (P+). |
 | 25/11/2026 | G25-P9 : constante 4,82 / 6,81 et loi de Pythagore ajoutées au candidat B6. |
 | 25/11/2026 | G25-P2 : nouveau candidat B6 (versions explicites des algorithmes de 2026). |
 | 24/11/2026 | G25-P6 : f(N,2) = N(N−1)/2 vérifié par Lean ; bibliothèque B4 : 23 énoncés. |

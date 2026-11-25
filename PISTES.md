@@ -48,7 +48,6 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 | G25-B2 | ✅ **Brainstorming : techniques de preuve** (fini) | 13 idées. Prouvé : N² ≤ p‖R‖_op + q‖Fl2 C‖_op. Top 3 : conjecture d'étalement (donnerait 2θ + T ≥ 4, donc ρ ≥ 2/3 comme mur) ; modèle à blocs ; angle de Friedrichs. `code/gen25/b2/notes.md` | consigne de l'auteur |
 | G25-B3 | ✅ **Brainstorming : autres routes** (fini) | 10 idées ; top 3 : sparsification pour la décision seule (enlèverait le facteur loglog en n) ; quotient par grappes ; hypercliques récents comme gadgets à 3 directions. `code/gen25/b3/notes.md` | consigne de l'auteur |
 | G25-B4 | ✅ **Brainstorming : rang inférieur** (fini) | « Meilleures pièces à chaque taille » : ne gagne rien (λ ≥ 10⁴ dans l'algorithme). Gains réels dans la comptabilité de la récursion : base de balayage + constantes exactes (seuil log₂ m* : 1,37·10⁵ → 2,4·10⁴) ; annexe D : 4·10¹⁰ → 1,6·10⁶. Reste astronomique. `code/gen25/b4/notes.md` | consigne de l'auteur |
-| G25-P8 | 🔄 **Relecture adverse du théorème A explicite de Claude (P2)** | Lemme de balayage refait avec un code indépendant ; corrections de comptabilité contre le texte du papier ; constantes et seuils recalculés. | P2 |
 | G25-P10 | 🔄 **Synthèse : combiner les résultats déjà prouvés** | Balayage appliqué à l'annexe D ; théorème « 2 produits = 1 » + modèle monomial ; distance + théorème 1 ; constantes explicites dans les conséquences (plus long chemin, CSP, Max-3-SAT) ; évaluateur modulo 3 + annexe D explicite ; autre route pour la fenêtre du module de classe. | consigne de l'auteur |
 
 Dossiers de travail de la génération 18 : `scratchpad/gen18/g18a` à `g18i`.
@@ -190,6 +189,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Résultat |
 |---|---|
+| ✅ **Relecture du théorème A explicite** (G25-P8) | Tout confirmé (P+). Le balayage est un ordre d'élimination optimal. Réserve : mémoire exponentielle (≈ 2^(0,95 × temps)). `code/gen25/p8/notes.md` |
 | ⚠️ **Balayage à chaque niveau** (G25-P9) | Aucun levier ne change la puissance du logarithme : loi de Pythagore 1/e′² ≤ 1/e_a² + 1/e_b² pour tout arbre de niveaux (Prop. P). Changer la puissance demande ρ < 1/√2 (Hurwitz-Naslund encore) ou une feuille avec e0 = o(1/√log K0). Constante : 7,47 → 4,82 (Las Vegas), 10,6 → 6,81 (déterministe). `code/gen25/p9/notes.md` |
 | ⚠️ **Conjecture d'étalement** (G25-P7) | Ni réfutée ni soutenue. L'annexe B est extrêmement non étalée (annulations énormes). L'étalement serait au mieux une propriété des points. Une version limitée à q ≤ N^β reste à tester. `code/gen25/p7/notes.md` |
 | ✅ **Annexe D d'OpenAI explicite** (G25-P3) | ε légal maximal 1/960 (papier : 2⁻¹⁷, 136 fois trop petit). Exposant E ≤ 75·k·m/√log₂ s (rigoureux, densité bornée) ; 37,5 avec une conjecture. Seuil contre 2^n : 7·10¹¹ (papier) → 9·10⁵. Corrections au dossier : b4 sous-estimait le papier d'un facteur 20 ; le gain « effilage LP 1/√3 » venait seulement de la constante 3. `code/gen25/p3/notes.md` |
