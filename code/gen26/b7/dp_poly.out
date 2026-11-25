@@ -1,0 +1,13 @@
+POLY SPACE unbalanced, clique D&C base
+   x<=   500: best e=0.09214 at x=500.0, mu=0.2356
+   x<=  1000: best e=0.06687 at x=984.0, mu=0.2273
+   x<=  2000: best e=0.04828 at x=1932.0, mu=0.2221
+   x<=  4000: best e=0.03383 at x=3988.0, mu=0.2191
+   x<=  8000: best e=0.02415 at x=7881.0, mu=0.2176
+   x<= 16000: best e=0.01708 at x=15816.0, mu=0.2168
+   a=2 log m/a in [2000,4000]:  max c1 = 6.112   min = 6.006
+   a=2 log m/a in [4000,8000]:  max c1 = 6.142   min = 6.045
+   a=2 log m/a in [8000,16000]:  max c1 = 6.160   min = 6.067
+   a=4 log m/a in [2000,4000]:  max c1 = 8.644   min = 8.493
+   a=4 log m/a in [4000,8000]:  max c1 = 8.686   min = 8.548
+   a=4 log m/a in [8000,16000]:  max c1 = 8.712   min = 8.579

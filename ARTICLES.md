@@ -150,7 +150,7 @@ Ce fichier liste **tout ce qui peut entrer dans un article**, présent ou futur.
 
 | | |
 |---|---|
-| **Résultat** | (Claude, G25-P2 puis G25-P9) Théorème A′ : #3-SAT en 2^((c1 + o(1))·W/√log₂ m) avec c1 = 10,6 (déterministe) ou 7,47 (Las Vegas), contre 42,4 dans le papier ; avec le lemme RS et des niveaux déséquilibrés (G25-P9) : 6,81 / 4,82 ; **et une explication de structure : la loi « de Pythagore » (Prop. P) montre qu'aucun arbre de niveaux ne change la puissance du logarithme** ; lemme de balayage nouveau (base e0 ≤ 1/4 + 1/(2K0)) ; seuils explicites contre la force brute, le meilleur #3-SAT et PPSZ. (OpenAI, G25-P3) annexe D avec constantes explicites : E ≤ 75·k·m/√log₂ s (rigoureux si l'annexe D est juste), ε légal 1/960 au lieu de 2⁻¹⁷, seuil 780 fois plus bas ; corrections de formulation de (D.5). **Conséquences explicites (G25-P10, sous une hypothèse non vérifiée) :** Max-Cut, spectre de Max-3-SAT, #CSP binaire, plus long cycle / chemin à degré borné (constante 5,3). |
+| **Résultat** | (Claude, G25-P2 puis G25-P9) Théorème A′ : #3-SAT en 2^((c1 + o(1))·W/√log₂ m) avec c1 = 10,6 (déterministe) ou 7,47 (Las Vegas), contre 42,4 dans le papier ; avec le lemme RS et des niveaux déséquilibrés (G25-P9) : 6,81 / 4,82 ; **puis (G26-B7, non relu) c1 = 4,12 déterministe et Las Vegas (regroupement stratifié, lemme d'ordre aléatoire, dérandomisation), et 6,16 en mémoire polynomiale ; compromis temps-mémoire du balayage (1 − M)/3** ; **et une explication de structure : la loi « de Pythagore » (Prop. P) montre qu'aucun arbre de niveaux ne change la puissance du logarithme** ; lemme de balayage nouveau (base e0 ≤ 1/4 + 1/(2K0)) ; seuils explicites contre la force brute, le meilleur #3-SAT et PPSZ. (OpenAI, G25-P3) annexe D avec constantes explicites : E ≤ 75·k·m/√log₂ s (rigoureux si l'annexe D est juste), ε légal 1/960 au lieu de 2⁻¹⁷, seuil 780 fois plus bas ; corrections de formulation de (D.5). **Conséquences explicites (G25-P10, sous une hypothèse non vérifiée) :** Max-Cut, spectre de Max-3-SAT, #CSP binaire, plus long cycle / chemin à degré borné (constante 5,3). |
 | **Niveau** | P+ pour le théorème A′ de Claude (relu par G25-P8, code indépendant) ; P pour G25-P3 et G25-P9 ; conditionnel aux deux prépublications. Réserve : avec le balayage, la mémoire devient exponentielle (≈ 2^(0,95 × temps)). |
 | **Fichiers** | `code/gen25/p2/`, `code/gen25/p3/`, `code/gen25/b4/` |
 | **Avis honnête** | Contribution modeste mais propre et vérifiable : elle corrige et précise les constantes, et montre que les algorithmes restent sans effet pratique (seuils astronomiques). Utile comme section d'un article ou comme note technique ; les auteurs des prépublications seraient les premiers intéressés. |
@@ -195,6 +195,7 @@ Ce fichier liste **tout ce qui peut entrer dans un article**, présent ou futur.
 | Date | Changement |
 |---|---|
 | 24/11/2026 | Création du registre après la génération 18. Articles 1, 2, 3 ; candidats B1 à B4. |
+| 25/11/2026 | G26-B7 : c1 = 4,12 et version à mémoire polynomiale ajoutées à B6 (non relues). |
 | 25/11/2026 | G25-P10 : encadrement ajouté à l'article 3 ; conséquences explicites ajoutées à B6 ; génération 25 terminée. |
 | 25/11/2026 | G25-P8 : théorème A′ relu (P+). |
 | 25/11/2026 | G25-P9 : constante 4,82 / 6,81 et loi de Pythagore ajoutées au candidat B6. |

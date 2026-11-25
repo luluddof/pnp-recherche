@@ -1,0 +1,14 @@
+poly space: clique D&C base + R2               mu=0.2152 (x0=8) single c1(a=2)=8.622 no-saw a=2 6.097 a=4 8.622
+poly space: row D&C level1 (zs=2 zs_R3 [H]) + R2 mu=0.2663 (g=2^14.0) single c1(a=2)=7.751 no-saw a=2 5.481 a=4 7.751
+clique base, memory M=0.0156: e0=(1-M)/3+1/K   mu=0.2173 (x0=9) single c1(a=2)=8.581 no-saw a=2 6.068 a=4 8.581
+row level1, memory M=0.0156 (rel. to U) [H]    mu=0.2746 (g=2^14.0) single c1(a=2)=7.633 no-saw a=2 5.398 a=4 7.633
+clique base, memory M=0.0625: e0=(1-M)/3+1/K   mu=0.2392 (x0=9) single c1(a=2)=8.178 no-saw a=2 5.783 a=4 8.178
+row level1, memory M=0.0625 (rel. to U) [H]    mu=0.3018 (g=2^14.0) single c1(a=2)=7.281 no-saw a=2 5.148 a=4 7.281
+clique base, memory M=0.1000: e0=(1-M)/3+1/K   mu=0.2593 (x0=9) single c1(a=2)=7.856 no-saw a=2 5.555 a=4 7.856
+row level1, memory M=0.1000 (rel. to U) [H]    mu=0.3268 (g=2^14.5) single c1(a=2)=6.998 no-saw a=2 4.948 a=4 6.998
+clique base, memory M=0.1500: e0=(1-M)/3+1/K   mu=0.2902 (x0=9) single c1(a=2)=7.426 no-saw a=2 5.251 a=4 7.426
+row level1, memory M=0.1500 (rel. to U) [H]    mu=0.3653 (g=2^14.5) single c1(a=2)=6.618 no-saw a=2 4.680 a=4 6.618
+clique base, memory M=0.2000: e0=(1-M)/3+1/K   mu=0.3269 (x0=9) single c1(a=2)=6.996 no-saw a=2 4.947 a=4 6.996
+row level1, memory M=0.2000 (rel. to U) [H]    mu=0.4110 (g=2^14.5) single c1(a=2)=6.239 no-saw a=2 4.412 a=4 6.239
+clique base, memory M=0.2500: e0=(1-M)/3+1/K   mu=0.3711 (x0=9) single c1(a=2)=6.566 no-saw a=2 4.643 a=4 6.566
+row level1, memory M=0.2500 (rel. to U) [H]    mu=0.4839 (g=2^13.5) single c1(a=2)=5.750 no-saw a=2 4.066 a=4 5.750

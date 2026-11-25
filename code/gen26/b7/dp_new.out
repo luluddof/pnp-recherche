@@ -1,0 +1,26 @@
+unbalanced levels + row-sweep (MODE=new)
+   x<=   500: best e=0.06181 at x=492.0, mu=0.5321
+   x<=  1000: best e=0.04506 at x=965.0, mu=0.5103
+   x<=  2000: best e=0.03194 at x=1967.5, mu=0.4981
+   x<=  4000: best e=0.02267 at x=3953.0, mu=0.4921
+   x<=  8000: best e=0.01603 at x=7960.0, mu=0.4886
+   x<= 16000: best e=0.01142 at x=15743.0, mu=0.4868
+   a=2 log m/a in [2000,4000]:  max c1 = 4.097   min = 4.009
+   a=2 log m/a in [4000,8000]:  max c1 = 4.108   min = 4.033
+   a=2 log m/a in [8000,16000]:  max c1 = 4.117   min = 4.047
+   a=4 log m/a in [2000,4000]:  max c1 = 5.794   min = 5.669
+   a=4 log m/a in [4000,8000]:  max c1 = 5.810   min = 5.704
+   a=4 log m/a in [8000,16000]:  max c1 = 5.823   min = 5.724
+unbalanced levels, clique-sweep base
+   x<=   500: best e=0.07026 at x=492.0, mu=0.4118
+   x<=  1000: best e=0.05095 at x=976.0, mu=0.3947
+   x<=  2000: best e=0.03664 at x=1929.0, mu=0.3862
+   x<=  4000: best e=0.02569 at x=3976.0, mu=0.3811
+   x<=  8000: best e=0.01826 at x=7925.0, mu=0.3785
+   x<= 16000: best e=0.01298 at x=15746.0, mu=0.3771
+   a=2 log m/a in [2000,4000]:  max c1 = 4.634   min = 4.554
+   a=2 log m/a in [4000,8000]:  max c1 = 4.661   min = 4.583
+   a=2 log m/a in [8000,16000]:  max c1 = 4.665   min = 4.598
+   a=4 log m/a in [2000,4000]:  max c1 = 6.554   min = 6.441
+   a=4 log m/a in [4000,8000]:  max c1 = 6.592   min = 6.481
+   a=4 log m/a in [8000,16000]:  max c1 = 6.597   min = 6.503

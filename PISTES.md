@@ -50,7 +50,7 @@ Priorité recommandée : pistes A et B, puis Q1\*.
 | G25-B4 | ✅ **Brainstorming : rang inférieur** (fini) | « Meilleures pièces à chaque taille » : ne gagne rien (λ ≥ 10⁴ dans l'algorithme). Gains réels dans la comptabilité de la récursion : base de balayage + constantes exactes (seuil log₂ m* : 1,37·10⁵ → 2,4·10⁴) ; annexe D : 4·10¹⁰ → 1,6·10⁶. Reste astronomique. `code/gen25/b4/notes.md` | consigne de l'auteur |
 | G26-B5 | 🔄 **Brainstorming : arbre des sous-problèmes, puis attaque des plus petits** | Arbre explicite des sous-problèmes de l'étape 2 et de la constante de l'étape 1 ; attaque de 2-3 feuilles jamais essayées. | consigne de l'auteur |
 | G26-P1 | 🔄 **Enveloppe de l'annexe B à grand h (ansatz structuré)** | Écrire le système par x avec ρ, κ polynômes en les opérateurs b[r] (poly(h) inconnues) ; tester W + W′ = 4h − 1 − k pour h ≤ 10 à 15. Seul un k linéaire en h changerait θ. | B6 |
-| G26-B7 | 🔄 **Brainstorming : rang inférieur, deuxième tour** | Compromis temps-mémoire du balayage ; lemme d'ordre conjectural (4,17) ; surcoûts ; conjecture de Smith (37,5 rigoureux pour OpenAI) ; décision moins chère que le comptage ? | consigne de l'auteur |
+| G26-P2 | 🔄 **Relecture adverse de B7 (R1, R2, R3, R4) et recalcul des seuils** | Martingale de Doob et Azuma avec temps d'arrêt ; Σ r_k ≤ P ; remplissage dans R3 ; dérandomisation R1 ; compromis temps-mémoire ; seuils m* avec la machinerie complète de P2. | B7 |
 
 Dossiers de travail de la génération 18 : `scratchpad/gen18/g18a` à `g18i`.
 
@@ -192,6 +192,7 @@ Note : les dossiers de travail des agents G17b à G17e s'appellent `g18a` à `g1
 
 | Piste | Résultat |
 |---|---|
+| ✅ **Rang inférieur, deuxième tour** (G26-B7) | Constante de Claude c1 = 4,12 (déterministe et Las Vegas ; papier : 42,4) ; mémoire polynomiale : 6,16 ; compromis temps-mémoire (1 − M)/3. Non relu. `code/gen26/b7/notes.md` |
 | ❌ **Perturbations de l'annexe B** (G26-B6) | Rien ne courbe la frontière. Lemme 1-D : le seuillage est optimal pour une paire ; un gain demande des relations entre paires. Enveloppe exacte jusqu'à N = 15 : sur la droite triviale. `code/gen26/b6/notes.md` |
 | ✅ **Synthèse des résultats** (G25-P10) | Encadrement pour l'article 3 (écart constant 22,7 avec P3) ; conséquences explicites (Max-Cut, Max-3-SAT, #CSP, plus long chemin : constante 5,3) ; **la fenêtre du module de classe se réduit à Hurwitz-Naslund** ; « pinceau + petit rang ». `code/gen25/p10/notes.md` |
 | ✅ **Relecture du théorème A explicite** (G25-P8) | Tout confirmé (P+). Le balayage est un ordre d'élimination optimal. Réserve : mémoire exponentielle (≈ 2^(0,95 × temps)). `code/gen25/p8/notes.md` |
