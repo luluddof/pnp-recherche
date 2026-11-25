@@ -1,0 +1,26 @@
+(1) treewidth of the line graph of K_n (exact) vs sweep bag size s(n) = floor((n+1)^2/4)-1
+   n=3: tw(L(K_n)) = 2, tw+1 = 3, s(n) = 3
+   n=4: tw(L(K_n)) = 4, tw+1 = 5, s(n) = 5
+   n=5: tw(L(K_n)) = 7, tw+1 = 8, s(n) = 8
+   n=6: tw(L(K_n)) = 10, tw+1 = 11, s(n) = 11
+(2) row/network sweep == brute force on 12 random Definition-2 networks: ALL OK
+(3) Lemma RS: best of 20 random orders, max_j cut_j / (U/4) and the proved bound / (U/4)
+   g=   64 uniform   : best/(U/4) = 1.0159   bound/(U/4) = 1.7908
+   g=   64 random    : best/(U/4) = 0.9977   bound/(U/4) = 2.5505
+   g=   64 two-block : best/(U/4) = 1.0000   bound/(U/4) = 2.5416
+   g=   64 heavy-half: best/(U/4) = 1.0080   bound/(U/4) = 2.9687
+   g=  256 uniform   : best/(U/4) = 1.0039   bound/(U/4) = 1.4364
+   g=  256 random    : best/(U/4) = 0.9941   bound/(U/4) = 1.8677
+   g=  256 two-block : best/(U/4) = 1.0000   bound/(U/4) = 1.8656
+   g=  256 heavy-half: best/(U/4) = 1.0017   bound/(U/4) = 2.0874
+   g= 1024 uniform   : best/(U/4) = 1.0010   bound/(U/4) = 1.2399
+   g= 1024 random    : best/(U/4) = 1.0002   bound/(U/4) = 1.4782
+   g= 1024 two-block : best/(U/4) = 1.0000   bound/(U/4) = 1.4784
+   g= 1024 heavy-half: best/(U/4) = 1.0007   bound/(U/4) = 1.5986
+(4) App. B frontier: sqrt2*rho_bar(lam) [= max_s (c_row+c_col)/(2 sqrt2 lam)] and r~(lam) = max_s sqrt(c_row^2+c_col^2)/(2 lam)
+   lam=2^10: sqrt2*rho_bar = 1.01750   r~ = 1.01778
+   lam=2^12: sqrt2*rho_bar = 1.00533   r~ = 1.00541
+   lam=2^16: sqrt2*rho_bar = 1.00045   r~ = 1.00046
+   lam=2^20: sqrt2*rho_bar = 1.00004   r~ = 1.00004
+   lam=2^30: sqrt2*rho_bar = 1.00000   r~ = 1.00000
+   lam=2^40: sqrt2*rho_bar = 1.00000   r~ = 1.00000
