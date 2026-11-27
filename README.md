@@ -6,6 +6,21 @@ chercher un algorithme polynomial pour 3-SAT, et comprendre pourquoi chaque voie
 **Résultat honnête : P vs NP n'est pas résolu.** Chaque voie testée échoue, et la cause de chaque
 échec est mesurée ou expliquée par un théorème.
 
+## À propos : pourquoi ce projet ?
+
+**Ce projet est une forme de veille informatique sur les IA.** Je ne prétends pas résoudre P vs NP :
+c'est l'un des plus grands problèmes ouverts des mathématiques et de l'informatique.
+
+L'idée est de **confier à une IA une tâche a priori impossible, pour voir jusqu'où elle peut aller**.
+Un problème ouvert est un bon terrain d'essai : la réponse n'existe nulle part, donc l'IA ne peut pas la recopier.
+On voit alors ce qu'elle sait vraiment faire : explorer des pistes, écrire et tester du code, organiser des sous-agents,
+rédiger un article, et surtout **reconnaître quand une piste échoue**.
+
+Ce que j'observe en particulier :
+- **la fiabilité** : chaque affirmation est vérifiée par des tests chiffrés ou par l'assistant de preuve **Lean 4**, pour ne pas croire l'IA sur parole ;
+- **l'honnêteté des résultats** : les échecs sont documentés autant que les réussites ;
+- **les limites** : ce que l'IA ne sait pas faire seule, et où un regard humain reste indispensable (les articles ne sont pas encore relus par des experts).
+
 - **`resultats/article/Requena_determinant_bound_clause_product_schemes.pdf`** : l'article (version 2, 26 pages, en anglais ; source `main.tex` à côté). Preuves complètes, section Lean, section sur l'usage de l'IA. **Pas encore relu par des experts humains.**
 - **`resultats/article/Requena_borne_determinant_schemas_produit_de_clauses.pdf`** : la version française de l'article (28 pages ; source `main_fr.tex`). La version anglaise fait foi.
 - `resultats/brouillons/pre-v3/` : **brouillon** d'une future version 3 (pas l'article officiel), fait pour une vérification de la portée par une IA indépendante. Voir `LISEZ-MOI.md` dans ce dossier.
